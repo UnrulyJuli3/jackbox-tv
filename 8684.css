@@ -1,3 +1,5 @@
+/* (jbg_modified) modified for dark mode */
+
 .jbg[data-v-2ea0b5fc] {
     background: #fff;
     font-family: Helvetica, Arial, sans-serif;
@@ -64,7 +66,7 @@
     width: 100%;
     margin-bottom: 5px;
     padding: 0 12px;
-    color: #333;
+    color: #e0e0e0;
     font-size: 17px
 }
 
@@ -74,10 +76,10 @@
     height: 34px;
     margin-bottom: 15px;
     padding: 20px 12px;
-    background-color: #e0e0e0;
+    background-color: #333;
     border: 0px solid;
     border-radius: 12px;
-    color: #000;
+    color: #fff;
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase
@@ -173,7 +175,7 @@
 }
 
 .jbg input[data-v-2ea0b5fc] {
-    background: #fff
+    background: #333
 }
 
 .jbg label[data-v-2ea0b5fc],
@@ -1190,7 +1192,7 @@
 .jbg.moderation[data-v-05d701e0] {
     height: 100%;
     overflow-y: scroll;
-    background: #e0e0e0
+    background: #222
 }
 
 .header[data-v-05d701e0] {
