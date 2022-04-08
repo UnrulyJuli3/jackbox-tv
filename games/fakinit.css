@@ -1,0 +1,954 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url("fakinit/post-banner.tjpp7_banner-image.png")
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url("fakinit/post-banner.tjpp6_banner-image.png")
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("fakinit/a4bece5c270c316c1c24.ttf");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("fakinit/2263cf4bbb29e585de1b.ttf");
+    font-weight: 500;
+    font-style: normal
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th {
+    font-weight: 700
+}
+
+.button-primary {
+    background: #000;
+    color: #fff
+}
+
+.button-xlarge {
+    border-width: 0px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 5px;
+    border-radius: 10px
+}
+
+.button-large {
+    border-radius: 10px
+}
+
+.post-banner {
+    cursor: pointer
+}
+
+.button-blue {
+    color: #fff;
+    background: #3e55fe;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.button-blue:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-gray {
+    color: #3e55fe;
+    background: #ccc;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent
+}
+
+.button-gray:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-help-text {
+    display: inline
+}
+
+@media screen and (max-width: 480px) {
+    .button-help-text {
+        display: none
+    }
+}
+
+.button-black {
+    color: #fff;
+    background: #333
+}
+
+.debug {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: .6
+}
+
+.debug span {
+    pointer-events: none;
+    user-select: none
+}
+
+.text-signin {
+    color: #3e55fe
+}
+
+.jbg-input {
+    font-size: 1.3em
+}
+
+.close {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000;
+    background: transparent;
+    border: none !important;
+    text-decoration: none;
+    content: "x";
+    right: 10px;
+    position: absolute
+}
+
+.close:hover {
+    color: #666
+}
+
+.button-yes {
+    background: #1cb841
+}
+
+.button-no {
+    background: #ca3c3c
+}
+
+.image-hand {
+    background: url("fakinit/image-hand.png");
+    cursor: pointer;
+    border: none;
+    width: 126px;
+    height: 700px
+}
+
+canvas {
+    touch-action: none
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url("fakinit/jbgTwitchContent_icon-twitch.svg") no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url("fakinit/jbgTwitchContent_warning.png") no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+@font-face {
+    font-family: "Rowboat Regular";
+    src: url("fakinit/fa9b2c30d96f22e4e0db.eot");
+    src: url("fakinit/c84f252296e9e6d9ffee.woff") format("woff"), url("fakinit/8f46357973979e6df0d6.ttf") format("truetype"), url("fakinit/e34abcbcc19831c5416d.svg#webfont") format("svg")
+}
+
+@font-face {
+    font-family: "Mouse Memoirs Pro Regular";
+    src: url("fakinit/a9f231b7d72aca18342a.eot");
+    src: url("fakinit/33d56ae7a996bdc900fa.woff") format("woff"), url("fakinit/9ddf5e1417528ca6c09e.ttf") format("truetype"), url("fakinit/b40f1aa9466ef209ba06.svg#webfont") format("svg")
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+.fakinit-page {
+    overflow-y: auto
+}
+
+.container {
+    padding: 5px
+}
+
+.page p,
+.page h2,
+.page h3,
+.page h4,
+.page h5,
+.page h6,
+.page td,
+.page th,
+.page span,
+.page button {
+    font-family: "Rowboat Regular";
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 30px;
+    text-align: center;
+    font-kerning: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #797aa8;
+    word-wrap: break-word
+}
+
+button {
+    text-transform: uppercase
+}
+
+h1 {
+    font-family: "Rowboat Regular";
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+    font-kerning: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-transform: lowercase;
+    color: #000;
+    word-wrap: break-word
+}
+
+input {
+    font-family: "Mouse Memoirs Pro Regular";
+    font-size: 24px
+}
+
+.fakinit-input {
+    font-size: 24px;
+    height: 48px;
+    margin: 10px 0px
+}
+
+.fakinit-text {
+    font-family: "Rowboat Regular";
+    color: #000
+}
+
+.page .fakinit-text-instruction,
+span.fakinit-text-instruction,
+p.fakinit-text-instruction,
+div.fakinit-text-instruction {
+    font-weight: 400;
+    font-family: "Mouse Memoirs Pro Regular";
+    color: #fff
+}
+
+.state-lobby .fakinit-text-instruction {
+    color: #000
+}
+
+.fakinit-instruction-box .fakinit-text-instruction {
+    color: #000
+}
+
+.fakinit-title {
+    text-transform: uppercase;
+    font-size: 2.5em;
+    margin: 10px 0px
+}
+
+#player {
+    padding-bottom: 0px
+}
+
+.fakinit-player {
+    background-color: #797aa8;
+    padding-bottom: 0px;
+    padding-top: 5px;
+    text-align: center;
+    width: 100%;
+    background-image: url("fakinit/fakinit-player.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain
+}
+
+.fakinit-angle {
+    width: 0;
+    height: 0;
+    border-bottom: 5px solid #fff;
+    border-right: 100vw solid transparent;
+    padding-top: 10px
+}
+
+.fakinit-player.Shape0 {
+    background-image: url("fakinit/fakinit-player.png")
+}
+
+.fakinit-player.Shape1 {
+    background-image: url("fakinit/fakinit-player.Shape1.png")
+}
+
+.fakinit-player.Shape2 {
+    background-image: url("fakinit/fakinit-player.Shape2.png")
+}
+
+.fakinit-player.Shape3 {
+    background-image: url("fakinit/fakinit-player.Shape3.png")
+}
+
+.fakinit-player.Shape4 {
+    background-image: url("fakinit/fakinit-player.Shape4.png")
+}
+
+.fakinit-player.Shape5 {
+    background-image: url("fakinit/fakinit-player.Shape5.png")
+}
+
+.fakinit-player.Shape6 {
+    background-image: url("fakinit/fakinit-player.Shape6.png")
+}
+
+.fakinit-player.Shape7 {
+    background-image: url("fakinit/fakinit-player.Shape7.png")
+}
+
+.fakinit-player.Shape8 {
+    background-image: url("fakinit/fakinit-player.Shape8.png")
+}
+
+.fakinit-player.Shape9 {
+    background-image: url("fakinit/fakinit-player.Shape9.png")
+}
+
+.fakinit-player.Shape10 {
+    background-image: url("fakinit/fakinit-player.Shape10.png")
+}
+
+.fakinit-category-background {
+    background-color: #797aa8
+}
+
+.fakinit-category-background.handsoftruth {
+    background-color: #ce3535
+}
+
+.fakinit-category-background.makingnoises {
+    background-color: #fd6a09
+}
+
+.fakinit-category-background.facevalue {
+    background-color: #ecb100
+}
+
+.fakinit-category-background.yougottapoint {
+    background-color: #34c834
+}
+
+.fakinit-category-background.numberpressure {
+    background-color: #0494f4
+}
+
+.fakinit-category-background.textyouup {
+    background-color: #8a5b8a
+}
+
+.fakinit-category-background-dark {
+    background-color: #3c3d54
+}
+
+.fakinit-category-background-dark.handsoftruth {
+    background-color: #671a1a
+}
+
+.fakinit-category-background-dark.makingnoises {
+    background-color: #7e3504
+}
+
+.fakinit-category-background-dark.facevalue {
+    background-color: #765800
+}
+
+.fakinit-category-background-dark.yougottapoint {
+    background-color: #1a641a
+}
+
+.fakinit-category-background-dark.numberpressure {
+    background-color: #024a7a
+}
+
+.fakinit-category-background-dark.textyouup {
+    background-color: #452d45
+}
+
+.fakinit-category-color {
+    color: #797aa8
+}
+
+.fakinit-category-color.handsoftruth {
+    color: #ce3535
+}
+
+.fakinit-category-color.makingnoises {
+    color: #fd6a09
+}
+
+.fakinit-category-color.facevalue {
+    color: #ecb100
+}
+
+.fakinit-category-color.yougottapoint {
+    color: #34c834
+}
+
+.fakinit-category-color.numberpressure {
+    color: #0494f4
+}
+
+.fakinit-category-color.textyouup {
+    color: #8a5b8a
+}
+
+.fakinit-text-white {
+    color: #fff
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #fff
+}
+
+.fakinit-page {
+    overflow-y: auto;
+    background-color: #fff;
+    color: #797aa8
+}
+
+.fakinit-logo-image {
+    background-color: #fff;
+    background-image: url("fakinit/fakinit-logo-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 80%;
+    width: 90%;
+    margin: auto
+}
+
+.logo-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px
+}
+
+.fakinit-instruction-box {
+    background-color: #fff;
+    padding: 10px 0px
+}
+
+.fakinit-bar {
+    width: 100vw;
+    padding: 10px 0px
+}
+
+.fakinit-bar .fakinit-title {
+    color: #fff
+}
+
+.fakinit-gameplay-sign {
+    padding-top: 50px
+}
+
+.round-main {
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    display: table
+}
+
+.round-text {
+    font-size: 3em;
+    color: #fff;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center
+}
+
+.audience-score {
+    background-color: #000;
+    border-radius: 5px;
+    font-size: 3em;
+    padding: 10px 25px
+}
+
+.audience-bonus-fact {
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    height: 100%
+}
+
+.button-container button {
+    margin: 5px
+}
+
+#fakinit-lie-input {
+    color: #000;
+    background-color: #a09f9f;
+    line-height: normal;
+    border: 0;
+    border-radius: 0px;
+    outline: none;
+    box-shadow: none
+}
+
+::-webkit-input-placeholder {
+    color: #555
+}
+
+:-moz-placeholder {
+    color: #555
+}
+
+::-moz-placeholder {
+    color: #555
+}
+
+:-ms-input-placeholder {
+    color: #555
+}
+
+.fakinit-button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center
+}
+
+.fakinit-button-group button {
+    border-radius: 0px;
+    margin: 8px 0px;
+    overflow: hidden;
+    min-width: 50px
+}
+
+.fakinit-button-group button:first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px
+}
+
+.fakinit-button-group button:last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px
+}
+
+button.fakinit-button {
+    background-color: #000;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    border-style: solid;
+    color: #fff;
+    font-size: 32px;
+    margin: 5px 0px;
+    padding: 8px 25px;
+    user-select: none;
+    word-wrap: break-word;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none
+}
+
+.fakinit-button:hover {
+    color: #fff;
+    background-color: #161616
+}
+
+.fakinit-button:active {
+    background-color: #fff;
+    color: #000
+}
+
+.fakinit-button:focus {
+    outline: none;
+    color: #fff
+}
+
+.state-lobby .fakinit-button:active {
+    background-color: #797aa8;
+    color: #fff
+}
+
+.fakinit-button.playername {
+    text-transform: lowercase
+}
+
+button[disabled].fakinit-button {
+    opacity: 1
+}
+
+.fakinit-button.selected {
+    background-color: #fff;
+    color: #000
+}
+
+.fakinit-button-lock {
+    width: 50px;
+    height: 50px;
+    background-image: url("fakinit/fakinit-button-lock.png");
+    background-size: contain;
+    background-position: center
+}
+
+.fakinit-button-lock-invert {
+    width: 50px;
+    height: 50px;
+    background-image: url("fakinit/fakinit-button-lock-invert.png");
+    background-size: contain;
+    background-position: center
+}
+
+.fakinit-button-secondary {
+    background-color: #bcbdd4;
+    border-radius: 10px;
+    color: #000;
+    font-size: 24px;
+    padding: 2px 25px
+}
+
+.fakinit-button-secondary:hover {
+    background-color: #797aa8;
+    color: #000
+}
+
+.fakinit-button-secondary:focus {
+    background-color: #bcbdd4;
+    color: #000
+}
+
+.fakinit-button-defib {
+    background-color: #fff;
+    color: #000
+}
+
+.fakinit-button-defib:hover {
+    background-color: #fff;
+    color: #000
+}
+
+.fakinit-button-defib:active {
+    color: #fff;
+    background-color: #000
+}
+
+.defib-icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    bottom: 5px;
+    -ms-transform: scale(2, 2);
+    -webkit-transform: scale(2, 2);
+    transform: scale(2, 2)
+}
+
+.fakinit-button-like {
+    color: #000;
+    background-color: #fdf4b1;
+    vertical-align: middle;
+    word-wrap: break-word
+}
+
+.fakinit-button-like:hover {
+    color: #000;
+    background-color: #fdf4b1
+}
+
+.fakinit-button-like:active {
+    color: #fdf4b1;
+    background-color: #000
+}
+
+.fakinit-button-liked {
+    color: #000;
+    background-color: #fdf4b1;
+    vertical-align: middle;
+    word-wrap: break-word
+}
+
+.fakinit-button-liked:hover {
+    color: #000;
+    background-color: #fdf4b1
+}
+
+.fakinit-button-liked:active {
+    color: #fdf4b1;
+    background-color: #000
+}
+
+.like-checkbox {
+    float: right;
+    padding-left: 15px;
+    text-align: right;
+    vertical-align: middle;
+    word-wrap: break-word
+}
+
+.like-text {
+    width: 100%;
+    float: left;
+    text-align: left;
+    word-wrap: break-word
+}
+
+.fakinit-button-loading {
+    background: url("fakinit/fakinit-button-loading.gif") no-repeat center;
+    background-color: #fff;
+    background-size: contain;
+    color: rgba(0, 0, 0, 0);
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.fakinit-preload {
+    content: url "../images/loading.gif";
+    display: none
+}
+
+.fakinit-category-button {
+    margin: 10px 0px
+}
+
+.fakinit-vote-button {
+    margin: 10px 0px
+}
+
+.fakinit-button-red {
+    background-color: red
+}
+
+.fakinit-censorable {
+    width: 70%
+}
+
+.fakinit-censor-button {
+    width: auto
+}
+
+/*# sourceMappingURL=2987.css.map*/

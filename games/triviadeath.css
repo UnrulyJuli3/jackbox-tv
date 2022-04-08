@@ -1,0 +1,723 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url("triviadeath/post-banner.tjpp7_banner-image.png")
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url("triviadeath/post-banner.tjpp6_banner-image.png")
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("triviadeath/a4bece5c270c316c1c24.ttf");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("triviadeath/2263cf4bbb29e585de1b.ttf");
+    font-weight: 500;
+    font-style: normal
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th {
+    font-weight: 700
+}
+
+.button-primary {
+    background: #000;
+    color: #fff
+}
+
+.button-xlarge {
+    border-width: 0px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 5px;
+    border-radius: 10px
+}
+
+.button-large {
+    border-radius: 10px
+}
+
+.post-banner {
+    cursor: pointer
+}
+
+.button-blue {
+    color: #fff;
+    background: #3e55fe;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.button-blue:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-gray {
+    color: #3e55fe;
+    background: #ccc;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent
+}
+
+.button-gray:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-help-text {
+    display: inline
+}
+
+@media screen and (max-width: 480px) {
+    .button-help-text {
+        display: none
+    }
+}
+
+.button-black {
+    color: #fff;
+    background: #333
+}
+
+.debug {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: .6
+}
+
+.debug span {
+    pointer-events: none;
+    user-select: none
+}
+
+.text-signin {
+    color: #3e55fe
+}
+
+.jbg-input {
+    font-size: 1.3em
+}
+
+.close {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000;
+    background: transparent;
+    border: none !important;
+    text-decoration: none;
+    content: "x";
+    right: 10px;
+    position: absolute
+}
+
+.close:hover {
+    color: #666
+}
+
+.button-yes {
+    background: #1cb841
+}
+
+.button-no {
+    background: #ca3c3c
+}
+
+.image-hand {
+    background: url("triviadeath/image-hand.png");
+    cursor: pointer;
+    border: none;
+    width: 126px;
+    height: 700px
+}
+
+canvas {
+    touch-action: none
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url("triviadeath/jbgTwitchContent_icon-twitch.svg") no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url("triviadeath/jbgTwitchContent_warning.png") no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+@font-face {
+    font-family: "Erased Typewriter 2";
+    src: url("triviadeath/5a10df68ed0875d7196a.eot");
+    src: url("triviadeath/5a10df68ed0875d7196a_2.eot?#iefix") format("embedded-opentype"), url("triviadeath/9ab437c660b975f57391.woff") format("woff"), url("triviadeath/a647f2998328eab80208.ttf") format("truetype"), url("triviadeath/3b2929ff1f2b41bcd29d.svg#webfont") format("svg")
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+.game-page {
+    overflow-y: auto;
+    background-repeat: repeat
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th,
+.game-page span {
+    font-family: "Erased Typewriter 2";
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+    font-kerning: auto;
+    margin: 0 0 0 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.container {
+    max-width: 800px;
+    padding: 5px;
+    padding-bottom: 15px;
+    text-align: center
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    text-align: center
+}
+
+#player {
+    color: #fff
+}
+
+#player h1 {
+    font-weight: bold;
+    font-size: 280%;
+    letter-spacing: 0;
+    margin-bottom: 0
+}
+
+.textured-background.audience {
+    background-image: url("triviadeath/textured-background.audience.png")
+}
+
+.textured-background.blue {
+    background-image: url("triviadeath/textured-background.blue.png")
+}
+
+.textured-background.gray {
+    background-image: url("triviadeath/textured-background.gray.png")
+}
+
+.textured-background.green {
+    background-image: url("triviadeath/textured-background.green.png")
+}
+
+.textured-background.orange {
+    background-image: url("triviadeath/textured-background.orange.png")
+}
+
+.textured-background.pink {
+    background-image: url("triviadeath/textured-background.pink.png")
+}
+
+.textured-background.purple {
+    background-image: url("triviadeath/textured-background.purple.png")
+}
+
+.textured-background.red {
+    background-image: url("triviadeath/textured-background.red.png")
+}
+
+.textured-background.yellow {
+    background-image: url("triviadeath/textured-background.yellow.png")
+}
+
+#lobby-text {
+    color: #fff;
+    text-transform: none
+}
+
+.button-game {
+    background: #000;
+    margin: 5px 0px;
+    font-family: "Erased Typewriter 2";
+    font-size: 2em;
+    font-weight: 500;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+    white-space: normal;
+    word-wrap: break-word
+}
+
+.button-game:hover {
+    color: #fff;
+    background: #1f1f1f
+}
+
+.button-game.white-background:hover {
+    color: #fff;
+    background: #dfdfdf;
+    border-top-color: #fff
+}
+
+.button-game:active,
+.button-game.selected {
+    background: #fff;
+    color: #000
+}
+
+.button-container button {
+    margin: 5px 0px
+}
+
+.button-question-choice {
+    width: 70%
+}
+
+.button-choice {
+    width: 70%;
+    margin: 5px auto
+}
+
+a.gallery-link {
+    text-decoration: none
+}
+
+a.gallery-link img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #fff;
+    border-radius: 15%/30%
+}
+
+.preload {
+    content: url "../images/loading.gif";
+    display: none
+}
+
+.logo-image {
+    background-image: url("triviadeath/logo-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain
+}
+
+.sketchpad {
+    border-color: #000;
+    border-style: solid;
+    border-width: .125em;
+    border-radius: .313em;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer
+}
+
+.make-many-choices-button {
+    width: 70%;
+    font-size: 1.25em;
+    margin: 5px auto
+}
+
+.make-many-choices-checkbox {
+    display: inline-block;
+    margin-bottom: 0px
+}
+
+i.checkbox.box-unchecked {
+    width: 45px;
+    height: 45px;
+    background: url("triviadeath/i.checkbox.box-unchecked.png") 0px 0px/100% 200% no-repeat;
+    background-position: top;
+    margin-top: 0px;
+    vertical-align: middle;
+    margin-bottom: 10px
+}
+
+i.checkbox.box-checked {
+    width: 45px;
+    height: 45px;
+    background: url("triviadeath/i.checkbox.box-unchecked.png") 0px 0px/100% 200% no-repeat;
+    background-position: bottom;
+    margin-top: 0px;
+    vertical-align: middle;
+    margin-bottom: 10px
+}
+
+#make-single-choice-text {
+    padding-top: .5em;
+    padding-bottom: .5em
+}
+
+#make-single-choice-choices {
+    margin-top: .75em
+}
+
+.background-finger {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain
+}
+
+.background-finger-0 {
+    background-image: url("triviadeath/background-finger-0.png")
+}
+
+.background-finger-1 {
+    background-image: url("triviadeath/background-finger-1.png")
+}
+
+.background-finger-2 {
+    background-image: url("triviadeath/background-finger-2.png")
+}
+
+.background-finger-3 {
+    background-image: url("triviadeath/background-finger-3.png")
+}
+
+#make-many-choices-text {
+    padding-top: .5em;
+    padding-bottom: .5em
+}
+
+#make-many-choices-choices {
+    margin-top: .75em
+}
+
+#make-many-choices-submit-button-container {
+    text-align: center
+}
+
+.make-many-choices-button {
+    padding: .1em;
+    font-size: 2em
+}
+
+#make-many-choices-submit-button {
+    display: table-cell
+}
+
+#enter-single-text-text-container {
+    padding-top: .5em;
+    padding-bottom: .5em
+}
+
+#enter-single-text-input-container {
+    padding-top: 1em
+}
+
+#enter-single-drawing-text-container {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-bottom: .5em
+}
+
+#enter-single-drawing-submit-container {
+    padding-bottom: .3em
+}
+
+#grid-main {
+    margin: 0 auto
+}
+
+#grid-submit {
+    margin: 0 auto
+}
+
+#state-game-results #top-text {
+    padding-bottom: .3em
+}
+
+.grid-selected {
+    background-color: #4169e1
+}
+
+.grid-unselected {
+    background-color: #1e90ff
+}
+
+.white-background {
+    background-color: #fff
+}
+
+.black-background {
+    background-color: #000
+}
+
+.white-text {
+    color: #fff
+}
+
+.red-background {
+    background-color: red
+}
+
+.ShortestWord-selected,
+.ShortestWord-unselected {
+    background: url("triviadeath/ShortestWord-selected.png");
+    background-repeat: no-repeat;
+    background-size: 100% 200%
+}
+
+.ShortestWord-selected {
+    color: #000;
+    background-position: bottom
+}
+
+.ShortestWord-unselected {
+    color: #fff;
+    background-position: top
+}
+
+.jbg-grid-cell {
+    cursor: pointer
+}
+
+.MemoryGrid-selected,
+.MemoryGrid-unselected {
+    background: url("triviadeath/MemoryGrid-selected.png");
+    background-repeat: no-repeat;
+    background-size: 100% 200%
+}
+
+.MemoryGrid-selected {
+    color: #fff;
+    background-position: bottom
+}
+
+.MemoryGrid-unselected {
+    color: #000;
+    background-position: top
+}
+
+/*# sourceMappingURL=7342.css.map*/

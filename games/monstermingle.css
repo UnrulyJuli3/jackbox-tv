@@ -1,0 +1,1705 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url("monstermingle/post-banner.tjpp7_banner-image.png")
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url("monstermingle/post-banner.tjpp6_banner-image.png")
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("monstermingle/a4bece5c270c316c1c24.ttf");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("monstermingle/2263cf4bbb29e585de1b.ttf");
+    font-weight: 500;
+    font-style: normal
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+body {
+    color: #000;
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+.page {
+    overflow-y: auto
+}
+
+img {
+    margin: 0px auto
+}
+
+canvas {
+    border: 1px solid #000
+}
+
+.controller-page {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch
+}
+
+.scrollable {
+    overflow-y: auto
+}
+
+.textDescriptions {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden
+}
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+.loadingSpinner {
+    text-align: center;
+    margin: 50px 0px
+}
+
+.playerName {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.playerIcon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    background-size: contain
+}
+
+.playerIcon.none {
+    display: none
+}
+
+.twitchBroadcasterIcon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 13px;
+    bottom: 10px;
+    background-image: url("monstermingle/twitchBroadcasterIcon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.controller-container {
+    display: flex;
+    overflow-y: hidden
+}
+
+#controller-container {
+    display: flex;
+    flex-direction: column
+}
+
+#controller-container>div:last-child {
+    flex-grow: 1
+}
+
+#controller-main {
+    flex: 1 0 auto
+}
+
+.Logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch
+}
+
+.Logo>div {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    text-align: center
+}
+
+div.logo-image {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 600px;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3
+}
+
+.lobbyTitle {
+    text-align: center
+}
+
+.artifactContainer {
+    text-align: center
+}
+
+.artifactButton {
+    background-image: url("monstermingle/artifactButton.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 283px;
+    width: 90%;
+    max-width: 512px;
+    display: inline-block
+}
+
+@media only screen and (max-width: 480px) {
+    .artifactButton {
+        height: 192px
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .artifactButton {
+        height: 128px
+    }
+}
+
+.controller-content {
+    max-width: 768px;
+    margin: 0px auto
+}
+
+.controller-content>div {
+    display: inline-block;
+    width: 100%
+}
+
+.EnterSingleText,
+.MakeSingleChoice,
+.Draw,
+.Lobby,
+.Sortable,
+.UGC {
+    display: inline-block;
+    width: 100%
+}
+
+.Lobby .charactersList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 512px;
+    padding: .5rem;
+    margin: 0px auto
+}
+
+.Lobby .charactersList button.characters {
+    flex: 0 0 25%;
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: stretch;
+    box-sizing: border-box
+}
+
+.Lobby .charactersList button.characters.disabled {
+    cursor: not-allowed
+}
+
+.Lobby .charactersList button.characters.selected {
+    cursor: default
+}
+
+.Lobby .charactersList button.characters:before {
+    content: "";
+    display: table;
+    padding-top: 100%
+}
+
+.Lobby .charactersList button.characters .flex-item {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.choices {
+    text-align: center
+}
+
+.button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.choices .button-group button.choice-button * {
+    pointer-events: none
+}
+
+textarea.form-control {
+    resize: none;
+    overflow: hidden;
+    height: 36px;
+    line-height: 24px;
+    outline: none
+}
+
+textarea:focus {
+    outline: none
+}
+
+.button-group * {
+    border-radius: 0px;
+    margin: 0px;
+    max-width: 100%;
+    min-width: 50px;
+    overflow-wrap: break-word;
+    outline: none;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: normal;
+    word-break: break-word;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.button-group button:not(:only-child):not(:last-child) {
+    border-right-width: 0px
+}
+
+.button-group button:not(:only-child):not(:first-child) {
+    border-left-width: 0px
+}
+
+.button-group :first-child {
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2
+}
+
+.censor-button {
+    width: auto;
+    max-width: 15px;
+    padding: 0px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 35px;
+    flex: 0 1 35px
+}
+
+.double-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.double-nav-middle {
+    flex: 1 0 auto;
+    position: relative;
+    overflow-x: hidden
+}
+
+.double-nav-top,
+.double-nav-bottom {
+    flex: 0 1 auto;
+    width: 100%;
+    z-index: 1030;
+    text-align: center
+}
+
+.double-nav-detail {
+    top: 0px;
+    min-height: 100%;
+    display: absolute
+}
+
+.double-nav-bottom {
+    margin-top: auto
+}
+
+.canvasContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.Draw .nav-tabs {
+    border-width: 0px
+}
+
+li>a.button-color.active {
+    border: 3px solid
+}
+
+li>a.button-color.active[data-color="#000000"] {
+    border-color: #f32938
+}
+
+.Draw canvas.fullLayer {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.Draw .button {
+    height: 33px;
+    min-width: 40px;
+    margin: 2px;
+    padding: 5px
+}
+
+.Draw .submitDrawing {
+    height: auto
+}
+
+.Draw .currentColor {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    margin: 0px auto
+}
+
+.Draw .thickness-circle {
+    border-radius: 50%;
+    background-color: #000;
+    width: 5px;
+    height: 5px;
+    margin: 0px auto
+}
+
+.Draw .colorSwatch {
+    border-radius: 8px;
+    width: 62px;
+    height: 62px;
+    margin: 3px;
+    display: inline-block
+}
+
+.Draw .list .colorSwatch {
+    display: inline-block
+}
+
+.Draw .list .colorSwatch a {
+    padding: 0px;
+    width: 48px;
+    height: 48px
+}
+
+.Draw .colorPaletteRegion {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0)
+}
+
+.Draw .colorPaletteRegion.visible {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.Draw .colorPaletteRegion .colorPalette {
+    border: 8px solid #000;
+    background-color: #fff;
+    border-radius: 18px;
+    width: 230px;
+    padding: 2px
+}
+
+.Draw .picker {
+    position: relative
+}
+
+.Draw .list .colorPalette {
+    margin-bottom: -19px;
+    margin-right: 20px
+}
+
+.Draw .colorPaletteRegion .colorSwatch a {
+    padding: 0px;
+    width: 62px;
+    height: 62px
+}
+
+.Draw .canvasContainer {
+    display: inline-block
+}
+
+.Shoot {
+    height: 100%
+}
+
+.Shoot .health {
+    text-align: right
+}
+
+.Shoot .shoot-container {
+    max-width: 480px
+}
+
+.Shoot button.selected {
+    background: #000;
+    color: #fff
+}
+
+.Shoot div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.Shoot button {
+    width: 100px;
+    height: 50px
+}
+
+.Shoot .RadialView {
+    height: 100%
+}
+
+.Shoot .radial {
+    margin: 0px auto;
+    cursor: pointer
+}
+
+.Shoot .background {
+    stroke: #1797c5;
+    stroke-width: 32;
+    stroke-opacity: .8
+}
+
+.Shoot .health-display {
+    fill-opacity: 0;
+    stroke: #f0f;
+    stroke-width: 2
+}
+
+.Shoot .crosshair-center {
+    stroke: #fff;
+    stroke-width: .8;
+    stroke-dasharray: .3 1.265;
+    fill-opacity: 0
+}
+
+.Shoot .circle-helper {
+    stroke: #00cfe6;
+    stroke-width: 3;
+    fill-opacity: 0
+}
+
+.Shoot .line-helper-left,
+.Shoot .line-helper-right {
+    stroke: #fff;
+    stroke-width: .3
+}
+
+.Shoot .locked-in-line {
+    stroke: #fff;
+    stroke-width: .3;
+    stroke-dasharray: 1.265 .5
+}
+
+.Shoot .left-text,
+.Shoot .right-text {
+    color: #fff
+}
+
+.Shoot .locked-in-fade {
+    stroke: #000;
+    stroke-width: 34;
+    stroke-opacity: .8;
+    fill-opacity: 0
+}
+
+.Shoot .cls-1 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 17px
+}
+
+.Shoot .lockedIn .cls-1 {
+    stroke: #575757
+}
+
+.Camera {
+    position: relative
+}
+
+.Camera .cameraRegion canvas.cameraCanvas {
+    background-color: #000;
+    top: 0px;
+    left: 0px;
+    border: none
+}
+
+.Camera .cameraRegion .cameraVideo {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px
+}
+
+.Camera .cameraRegion .cameraImage {
+    width: 100%;
+    max-width: 100%
+}
+
+.Camera .cameraRegion .cameraImageDiv {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.Camera .cameraRegion .cameraControls {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    height: 60px;
+    text-align: center
+}
+
+.Camera .cameraRegion .buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden
+}
+
+.Camera .cameraRegion .buttons.visible {
+    visibility: visible
+}
+
+.Camera .cameraRegion .button {
+    background-color: #fff;
+    color: #000
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url("monstermingle/twitchBroadcasterIcon.svg") no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url("monstermingle/jbgTwitchContent_warning.png") no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+.debug {
+    position: fixed;
+    left: 0;
+    top: 55px;
+    opacity: .1;
+    z-index: 1031;
+    user-select: none;
+    text-shadow: -1px -1px 0 #ddd, 1px -1px 0 #ddd, -1px 1px 0 #ddd, 1px 1px 0 #ddd
+}
+
+.debug:hover {
+    opacity: 1
+}
+
+.debug button {
+    width: 50px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 1px solid #333 !important;
+    outline: 1px solid #ddd !important;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    box-shadow: none !important
+}
+
+.debug span {
+    position: relative;
+    top: -4px;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+@font-face {
+    font-family: "fidomsmregular";
+    src: url("monstermingle/08a22171772df4acbf60.woff2") format("woff2"), url("monstermingle/048a12d240975cb4909e.woff") format("woff");
+    font-weight: normal;
+    font-style: normal
+}
+
+input,
+button,
+textarea,
+select {
+    -webkit-transform: translate3d(0, 0, 0)
+}
+
+.monstermingle {
+    font: 18px "fidomsmregular";
+    color: #000;
+    background-color: #fff
+}
+
+.monstermingle.chat {
+    color: #000;
+    width: 100%;
+    height: 100%
+}
+
+.monstermingle.swal2-modal,
+.monstermingle.swal2-popup {
+    font: 18px "fidomsmregular";
+    padding: 0px
+}
+
+.unread {
+    width: 64px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative
+}
+
+.unread:after {
+    content: "";
+    position: absolute;
+    background-color: red;
+    -webkit-box-shadow: 2px 2px 0px rgba(0, 0, 0, .5);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, .5);
+    height: 2rem;
+    top: -1rem;
+    right: 5rem;
+    width: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: #fff;
+    border: 0px solid #000
+}
+
+.unread-0:after {
+    display: none;
+    content: "0"
+}
+
+.unread-1:after {
+    content: "1"
+}
+
+.unread-2:after {
+    content: "2"
+}
+
+.unread-3:after {
+    content: "3"
+}
+
+.unread-4:after {
+    content: "4"
+}
+
+.unread-5:after {
+    content: "5"
+}
+
+.unread-6:after {
+    content: "6"
+}
+
+.unread-7:after {
+    content: "7"
+}
+
+.unread-8:after {
+    content: "8"
+}
+
+.unread-9:after {
+    content: "9+"
+}
+
+.chatBack.unread:after {
+    right: -1.5rem
+}
+
+.blocked {
+    background-image: url("monstermingle/blocked.png");
+    background-size: contain;
+    width: 100%;
+    height: 100%
+}
+
+.MakeSingleChoice .controller-content {
+    padding: 5px
+}
+
+.playerTopBar {
+    background-color: #333
+}
+
+.playerTopBar .playerName {
+    color: #fff
+}
+
+.playerTopBar .playerIcon {
+    width: 0px
+}
+
+.Logo,
+.MakeSingleChoice,
+.Lobby {
+    background: url("monstermingle/Logo.png") no-repeat center;
+    background-color: #333;
+    background-position: center;
+    background-size: cover
+}
+
+.logo-image {
+    background: url("monstermingle/logo-image.png") no-repeat center;
+    background-size: contain;
+    width: 90%;
+    margin: auto
+}
+
+.logo-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px
+}
+
+.playerInfo {
+    margin-top: 10px;
+    border-radius: 50%
+}
+
+.playerInfo.focus,
+.playerInfo:active,
+.playerInfo:focus,
+.playerInfo:active:focus {
+    color: #fff;
+    outline-style: none
+}
+
+.summaryCollection {
+    padding: 24px
+}
+
+.playerIcon {
+    background-clip: padding-box
+}
+
+.summaryCollection .playerIcon {
+    margin-right: 15px
+}
+
+.summary {
+    background-image: url("monstermingle/summary.png");
+    background-position: left top;
+    background-repeat: repeat-y
+}
+
+.chatSummaryTop {
+    max-height: 64px;
+    overflow: hidden;
+    background-clip: padding-box;
+    -webkit-border-image: url("monstermingle/chatSummaryTop.svg") 3 3 repeat;
+    -o-border-image: url("monstermingle/chatSummaryTop.svg") 3 3 repeat;
+    border-image: url("monstermingle/chatSummaryTop.svg") 3 3 repeat;
+    border-style: solid;
+    border-width: 0px 0px 3px 0px
+}
+
+.chatSummaryDetail {
+    height: 64px;
+    margin-bottom: 8px
+}
+
+.chatSummaryDetail:active {
+    background-color: rgba(99, 99, 99, .2)
+}
+
+.chatSummaryDetail .playerName {
+    text-transform: uppercase;
+    max-width: 0;
+    white-space: nowrap
+}
+
+.chatSummaryDetail .lastMessage {
+    font-size: 14px;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.chatSummaryDetail .rightArrow {
+    font-size: 2em
+}
+
+.double-nav-top {
+    background-color: #000
+}
+
+.double-nav-bottom .btn-group {
+    color: #fff;
+    font-size: 18px;
+    background-origin: border-box;
+    -webkit-border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    -o-border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    border-style: solid;
+    border-width: 6px
+}
+
+.choices .btn-toolbar {
+    width: 100%
+}
+
+.dateButton,
+.dateButton button {
+    background-color: #000;
+    color: #fff
+}
+
+.dateButton:active {
+    background-color: #fff;
+    color: #000
+}
+
+.dateButton:focus {
+    outline: 0
+}
+
+.closeButton {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    width: 64px;
+    height: 64px;
+    background-image: url("monstermingle/closeButton.png");
+    background-size: 100%
+}
+
+.profileContent {
+    padding-top: 70px
+}
+
+.playerProfile {
+    text-align: center;
+    color: #fff;
+    border-radius: 1px
+}
+
+.playerProfile .titleBar {
+    position: absolute;
+    height: 64px;
+    left: -2px;
+    right: -2px;
+    top: 0px;
+    border-width: 6px;
+    -webkit-border-image: url("monstermingle/chatSummaryTop.svg") 3 3 fill;
+    -o-border-image: url("monstermingle/chatSummaryTop.svg") 3 3 fill;
+    border-image: url("monstermingle/chatSummaryTop.svg") 3 3 fill;
+    border-style: solid;
+    border-style: fill
+}
+
+.playerProfile .playerName {
+    text-transform: uppercase;
+    font-size: 32px;
+    line-height: 48px;
+    padding-right: 60px;
+    white-space: nowrap;
+    color: #fff
+}
+
+.playerProfile .swal2-content {
+    color: #fff !important
+}
+
+.playerProfile .monsterIcon {
+    margin: 0px auto;
+    width: 128px;
+    height: 128px;
+    -webkit-border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    -o-border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    border-style: solid;
+    border-width: 6px
+}
+
+.alertDialog .swal2-title {
+    display: none
+}
+
+.alertDialog .playerName {
+    font-size: 24px
+}
+
+.blockedMessage {
+    color: red;
+    font-size: .8em
+}
+
+.monsterClass {
+    color: #000
+}
+
+.monsterClassName {
+    text-transform: uppercase
+}
+
+.monsterPower {
+    margin: 10px 20px 20px;
+    background-color: #000;
+    background-clip: padding-box;
+    padding: 10px;
+    border-style: solid;
+    border-width: 6px;
+    color: #fff
+}
+
+.monsterPowerIntro {
+    font-size: 24px
+}
+
+.monsterPowerDescription {
+    font-weight: normal
+}
+
+.blockButton {
+    color: #fff;
+    background-color: #600;
+    text-transform: uppercase;
+    display: block;
+    margin: auto;
+    margin-top: -5px;
+    margin-bottom: 5px
+}
+
+.chatMessage {
+    padding: 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row
+}
+
+.chatMessage.chatPlayer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse
+}
+
+div.chatMessageText {
+    flex: 1 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.chatMessage .senderIcon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px
+}
+
+.double-nav-detail {
+    max-height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    position: absolute;
+    left: 0%;
+    -webkit-transition: left .3s, background-color .3s;
+    -o-transition: left .3s, background-color .3s;
+    transition: left .3s, background-color .3s
+}
+
+.double-nav-detail.off-left {
+    left: -100%
+}
+
+.double-nav-detail.off-right {
+    left: 100%
+}
+
+.Lobby .button,
+.MakeSingleChoice .button {
+    margin-top: 10px
+}
+
+#playername {
+    font-size: 28px
+}
+
+.Lobby span.charactersPromptText {
+    display: none
+}
+
+.characters {
+    background-clip: padding-box;
+    background-image: url("monstermingle/characters.png");
+    background-repeat: no-repeat;
+    background-color: #f4d69c;
+    background-origin: border-box;
+    background-size: 100% auto;
+    -webkit-border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    -o-border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #000;
+    padding: 0px;
+    margin: 10px
+}
+
+.characters:not(.disabled):hover {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%)
+}
+
+.characters.disabled:not(.selected):after {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: -1%;
+    top: -1%;
+    width: 102%;
+    height: 102%;
+    opacity: .5;
+    background-color: #000
+}
+
+.characters.selected {
+    border: solid #fff 4px
+}
+
+.chatAvatars {
+    background-clip: padding-box;
+    background-image: url("monstermingle/characters.png");
+    background-repeat: no-repeat;
+    background-color: #f4d69c;
+    background-origin: border-box;
+    background-size: 100% auto;
+    -webkit-border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    -o-border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #000;
+    width: 64px;
+    height: 64px
+}
+
+.chatAvatars svg {
+    fill: blue
+}
+
+.artifactButton {
+    background-image: url("monstermingle/artifactButton_2.png");
+    width: 85%
+}
+
+.chatSummaryTop .playerIcon {
+    height: 64px;
+    width: 64px
+}
+
+.chatBack {
+    margin-top: 10px
+}
+
+.charCountDisplay {
+    position: relative;
+    font-size: 14px;
+    top: -10px
+}
+
+.messageCollection {
+    padding-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px
+}
+
+.inputGroup {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.startChattingButton {
+    margin-top: -50px;
+    visibility: hidden;
+    font-size: 20px;
+    color: #000;
+    background-color: #fff
+}
+
+.startChattingButton.visible {
+    visibility: visible
+}
+
+.inlineSubmitButton {
+    float: right
+}
+
+@media(min-width: 768px) {
+    .messageCollection {
+        width: 730px
+    }
+
+    .inputGroup {
+        width: 730px
+    }
+}
+
+@media(min-width: 992px) {
+    .messageCollection {
+        width: 950px
+    }
+
+    .inputGroup {
+        width: 950px
+    }
+}
+
+@media(min-width: 1200px) {
+    .messageCollection {
+        width: 1150px
+    }
+
+    .inputGroup {
+        width: 1150px
+    }
+}
+
+.chatBubble {
+    position: relative;
+    background-color: #ccc;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 0px 10px;
+    overflow-wrap: break-word;
+    word-break: normal;
+    border-color: transparent
+}
+
+.chatMessage .chatBubble:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    right: auto;
+    left: -10px;
+    top: 8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 10px 5px 0;
+    border-color: inherit
+}
+
+.chatMessage.chatPlayer .chatBubble:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    right: -10px;
+    left: auto;
+    top: 8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 10px;
+    border-color: transparent transparent transparent #fff
+}
+
+.senderName {
+    color: #333;
+    font-size: .7em
+}
+
+.chatMessageDetail {
+    text-align: center;
+    font-size: .7em;
+    color: #000
+}
+
+.hrMessage {
+    height: 30px;
+    font-size: .7em
+}
+
+.chatHR {
+    text-align: center;
+    width: 100%;
+    margin: 0px auto;
+    border-width: 2px;
+    -webkit-border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    -o-border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    border-style: solid
+}
+
+.detail-modal .chatAvatars {
+    height: 128px;
+    width: 128px
+}
+
+.Human0 {
+    background-position: 0px calc(100% / 31 * 0)
+}
+
+.Human1 {
+    background-position: 0px calc(100% / 31 * 1)
+}
+
+.Human2 {
+    background-position: 0px calc(100% / 31 * 2)
+}
+
+.Human3 {
+    background-position: 0px calc(100% / 31 * 3)
+}
+
+.Human4 {
+    background-position: 0px calc(100% / 31 * 4)
+}
+
+.Human5 {
+    background-position: 0px calc(100% / 31 * 5)
+}
+
+.Human6 {
+    background-position: 0px calc(100% / 31 * 6)
+}
+
+.Human7 {
+    background-position: 0px calc(100% / 31 * 7)
+}
+
+.Human8 {
+    background-position: 0px calc(100% / 31 * 8)
+}
+
+.Human9 {
+    background-position: 0px calc(100% / 31 * 9)
+}
+
+.Human10 {
+    background-position: 0px calc(100% / 31 * 10)
+}
+
+.Human11 {
+    background-position: 0px calc(100% / 31 * 11)
+}
+
+.SerialKiller {
+    background-position: 0px calc(100% / 31 * 12)
+}
+
+.Psychic {
+    background-position: 0px calc(100% / 31 * 13)
+}
+
+.VentriloquistPuppet {
+    background-position: 0px calc(100% / 31 * 14)
+}
+
+.TwoFacedCreep {
+    background-position: 0px calc(100% / 31 * 15)
+}
+
+.MonsterHunter {
+    background-position: 0px calc(100% / 31 * 16)
+}
+
+.Werewolf {
+    background-position: 0px calc(100% / 31 * 17)
+}
+
+.Vampire {
+    background-position: 0px calc(100% / 31 * 18)
+}
+
+.Mother {
+    background-position: 0px calc(100% / 31 * 19)
+}
+
+.Leprechaun {
+    background-position: 0px calc(100% / 31 * 20)
+}
+
+.InvisibleMan {
+    background-position: 0px calc(100% / 31 * 21)
+}
+
+.VengefulGhost {
+    background-position: 0px calc(100% / 31 * 22)
+}
+
+.BottomFeeder {
+    background-position: 0px calc(100% / 31 * 23)
+}
+
+.Mummy {
+    background-position: 0px calc(100% / 31 * 24)
+}
+
+.Blob {
+    background-position: 0px calc(100% / 31 * 25)
+}
+
+.Genie {
+    background-position: 0px calc(100% / 31 * 26)
+}
+
+.PodPerson {
+    background-position: 0px calc(100% / 31 * 27)
+}
+
+.Witch {
+    background-position: 0px calc(100% / 31 * 28)
+}
+
+.Robot {
+    background-position: 0px calc(100% / 31 * 29)
+}
+
+.Zombie {
+    background-position: 0px calc(100% / 31 * 30)
+}
+
+.Audience {
+    background-position: 0px calc(100% / 31 * 31)
+}
+
+.chatSummaryTop {
+    background-color: #000;
+    color: #fff
+}
+
+.chatSummaryTop .chatDescription {
+    color: gray;
+    display: inline-block
+}
+
+@media(max-width: 421px) {
+    .chatSummaryTop .chatDescription {
+        font-size: 12px;
+        margin-top: -5px
+    }
+}
+
+.chatDetailTop {
+    min-height: 50px;
+    color: #fff;
+    overflow: hidden;
+    background-clip: padding-box;
+    -webkit-border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    -o-border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    border-image: url("monstermingle/chatSummaryTop.svg") 3 3;
+    border-style: solid;
+    border-width: 0px 0px 3px 0px
+}
+
+.charCountDisplay {
+    width: 20px
+}
+
+.AudienceChoice {
+    overflow: auto;
+    padding-bottom: 5px
+}
+
+.AudienceChoice .chosen {
+    color: #fff
+}
+
+.AudienceChoice .text {
+    color: #fff;
+    font-size: 16px
+}
+
+.AudienceChoice .text div:nth-child(2) {
+    background-color: #fff;
+    color: #000;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px
+}
+
+.AudienceChoice button {
+    min-height: 40px;
+    background: #000;
+    color: #fff;
+    padding: 0px;
+    vertical-align: middle
+}
+
+.AudienceChoice .senderIcon {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-width: 0px
+}
+
+.AudienceChoice .text div:nth-child(2):before {
+    content: " ";
+    display: block;
+    position: absolute;
+    right: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 0 7px 14px;
+    border-color: transparent transparent transparent #fff
+}
+
+/*# sourceMappingURL=6533.css.map*/

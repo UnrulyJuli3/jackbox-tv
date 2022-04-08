@@ -1,0 +1,1307 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url("awshirt/post-banner.tjpp7_banner-image.png")
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url("awshirt/post-banner.tjpp6_banner-image.png")
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("awshirt/a4bece5c270c316c1c24.ttf");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("awshirt/2263cf4bbb29e585de1b.ttf");
+    font-weight: 500;
+    font-style: normal
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th {
+    font-weight: 700
+}
+
+.button-primary {
+    background: #000;
+    color: #fff
+}
+
+.button-xlarge {
+    border-width: 0px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 5px;
+    border-radius: 10px
+}
+
+.button-large {
+    border-radius: 10px
+}
+
+.post-banner {
+    cursor: pointer
+}
+
+.button-blue {
+    color: #fff;
+    background: #3e55fe;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.button-blue:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-gray {
+    color: #3e55fe;
+    background: #ccc;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent
+}
+
+.button-gray:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-help-text {
+    display: inline
+}
+
+@media screen and (max-width: 480px) {
+    .button-help-text {
+        display: none
+    }
+}
+
+.button-black {
+    color: #fff;
+    background: #333
+}
+
+.debug {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: .6
+}
+
+.debug span {
+    pointer-events: none;
+    user-select: none
+}
+
+.text-signin {
+    color: #3e55fe
+}
+
+.jbg-input {
+    font-size: 1.3em
+}
+
+.close {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000;
+    background: transparent;
+    border: none !important;
+    text-decoration: none;
+    content: "x";
+    right: 10px;
+    position: absolute
+}
+
+.close:hover {
+    color: #666
+}
+
+.button-yes {
+    background: #1cb841
+}
+
+.button-no {
+    background: #ca3c3c
+}
+
+.image-hand {
+    background: url("awshirt/image-hand.png");
+    cursor: pointer;
+    border: none;
+    width: 126px;
+    height: 700px
+}
+
+canvas {
+    touch-action: none
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url("awshirt/jbgTwitchContent_icon-twitch.svg") no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url("awshirt/jbgTwitchContent_warning.png") no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+@font-face {
+    font-family: "Chinese Rocks";
+    src: url("awshirt/43951c02f3933fdb7400.eot");
+    src: url("awshirt/43951c02f3933fdb7400_2.eot?#iefix") format("embedded-opentype"), url("awshirt/612f022f0b95c4c85cad.woff") format("woff"), url("awshirt/d64aca61118d3b228a8b.ttf") format("truetype"), url("awshirt/f95bf3471936caa9dd24.svg#webfont") format("svg")
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+body {
+    font-family: "Chinese Rocks";
+    font-size: 28px;
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+.app-root,
+.app-root>.content,
+.app-root>.content>div {
+    height: 100%
+}
+
+fieldset {
+    border-width: 0px
+}
+
+.page {
+    height: 100%;
+    overflow: hidden;
+    background-image: url("awshirt/page.png"), url("awshirt/page_2.png");
+    background-repeat: repeat-x, repeat;
+    background-position: 0px 0px, 0px 14px;
+    background-size: auto, auto
+}
+
+.awshirt-player-avatar-large {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.awshirt-player-avatar-large.baku {
+    background-image: url("awshirt/awshirt-player-avatar-large.baku.png")
+}
+
+.awshirt-player-avatar-large.blueDemon {
+    background-image: url("awshirt/awshirt-player-avatar-large.blueDemon.png")
+}
+
+.awshirt-player-avatar-large.bun {
+    background-image: url("awshirt/awshirt-player-avatar-large.bun.png")
+}
+
+.awshirt-player-avatar-large.cat {
+    background-image: url("awshirt/awshirt-player-avatar-large.cat.png")
+}
+
+.awshirt-player-avatar-large.catfish {
+    background-image: url("awshirt/awshirt-player-avatar-large.catfish.png")
+}
+
+.awshirt-player-avatar-large.crow {
+    background-image: url("awshirt/awshirt-player-avatar-large.crow.png")
+}
+
+.awshirt-player-avatar-large.dog {
+    background-image: url("awshirt/awshirt-player-avatar-large.dog.png")
+}
+
+.awshirt-player-avatar-large.fire {
+    background-image: url("awshirt/awshirt-player-avatar-large.fire.png")
+}
+
+.awshirt-player-avatar-large.fox {
+    background-image: url("awshirt/awshirt-player-avatar-large.fox.png")
+}
+
+.awshirt-player-avatar-large.hair {
+    background-image: url("awshirt/awshirt-player-avatar-large.hair.png")
+}
+
+.awshirt-player-avatar-large.kappa {
+    background-image: url("awshirt/awshirt-player-avatar-large.kappa.png")
+}
+
+.awshirt-player-avatar-large.monkey {
+    background-image: url("awshirt/awshirt-player-avatar-large.monkey.png")
+}
+
+.awshirt-player-avatar-large.raccoon {
+    background-image: url("awshirt/awshirt-player-avatar-large.raccoon.png")
+}
+
+.awshirt-player-avatar-large.redDemon {
+    background-image: url("awshirt/awshirt-player-avatar-large.redDemon.png")
+}
+
+.awshirt-player-avatar-large.snake {
+    background-image: url("awshirt/awshirt-player-avatar-large.snake.png")
+}
+
+.awshirt-player-avatar-large.umbrella {
+    background-image: url("awshirt/awshirt-player-avatar-large.umbrella.png")
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th,
+.awshirt-page span,
+.awshirt-page button,
+input {
+    font-family: "Chinese Rocks";
+    text-align: center;
+    font-weight: 500;
+    font-size: 1em;
+    color: #231f20;
+    letter-spacing: normal
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th,
+.awshirt-page span,
+.awshirt-page button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+#state-shirt .awshirt-canvas-container-box {
+    width: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 15px;
+    margin-bottom: 25px
+}
+
+#state-shirt .glideSlogans,
+#state-shirt .glideShirts {
+    position: relative
+}
+
+#state-shirt .glideShirts {
+    padding-top: 12%;
+    height: 70%
+}
+
+#state-shirt .glideSlogans {
+    padding-bottom: 2%;
+    height: 30%
+}
+
+#state-shirt .awshirt-track {
+    height: 100%;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 17.5%, white 29%, white 71%, transparent 80.5%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, transparent 17.5%, white 29%, white 71%, transparent 80.5%, transparent 100%)
+}
+
+#state-shirt .awshirt-track ul {
+    height: 100%
+}
+
+#state-shirt .awshirt-track li {
+    height: 100%;
+    padding-left: 4%;
+    padding-right: 4%
+}
+
+#state-shirt #awshirt-image-slides,
+#state-shirt #awshirt-slogan-slides {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #fff
+}
+
+#state-shirt .awshirt-slider-controls button {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    font-size: 18px;
+    position: absolute;
+    top: 45%;
+    z-index: 1;
+    margin-top: -9px;
+    width: 50px;
+    height: 50px;
+    transition: all .2s ease-in-out;
+    border: 0
+}
+
+#state-shirt .awshirt-slider-controls .awshirt-slider-right {
+    right: 20%;
+    background-image: url("awshirt/#state-shirt_awshirt-slider-controls_awshirt-slider-right.png")
+}
+
+#state-shirt .awshirt-slider-controls .awshirt-slider-left {
+    left: 18%;
+    background-image: url("awshirt/#state-shirt_awshirt-slider-controls_awshirt-slider-left.png")
+}
+
+#state-shirt .glide__bullets {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+#state-shirt .glide__bullets .glide__bullet {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .4);
+    border: 2px solid #0000;
+    cursor: pointer;
+    line-height: 0;
+    box-shadow: 0 .25em .5em 0 rgba(0, 0, 0, .1);
+    margin: 0 2px;
+    transition: all .3s ease-in-out
+}
+
+#state-shirt .glide__bullets .glide__bullet.glide__bullet--active {
+    background-color: #000
+}
+
+#state-shirt .glide__bullets#awshirt-image-bullets {
+    top: -35px
+}
+
+#state-shirt .glide__bullets#awshirt-slogan-bullets {
+    bottom: -25px
+}
+
+#state-shirt .glide__slide {
+    word-wrap: break-word
+}
+
+#state-shirt .awshirt-button-submit {
+    margin: 20px auto
+}
+
+#state-done-answering {
+    text-align: center
+}
+
+#vote-text {
+    font-size: 2em
+}
+
+.container {
+    padding: 5px;
+    padding-bottom: 15px;
+    text-align: center
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.game button {
+    text-transform: uppercase;
+    font-weight: 400
+}
+
+.awshirt-page {
+    overflow-y: auto;
+    position: relative
+}
+
+.awshirt-text {
+    font-family: "Chinese Rocks";
+    text-align: center
+}
+
+.awshirt-text.instructions {
+    font-size: 1em
+}
+
+#player {
+    color: #000;
+    background-color: transparent;
+    position: absolute
+}
+
+#player h1 {
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 0;
+    margin-bottom: 0
+}
+
+.awshirt-message-panel {
+    display: inline-block
+}
+
+#awshirt-answer-field {
+    margin-left: 20px;
+    margin-right: 20px
+}
+
+.logo-image {
+    background: url("awshirt/logo-image.png") no-repeat center;
+    background-size: contain;
+    height: 80%;
+    width: 90%;
+    margin: auto
+}
+
+.logo-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px
+}
+
+.round-image-container {
+    background: #000;
+    width: 100%;
+    height: 100%
+}
+
+.round-image-container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px
+}
+
+.awshirt-lobby-text {
+    color: #231f20;
+    text-transform: none
+}
+
+.button-container button {
+    margin: 5px
+}
+
+li>a.button-color {
+    border-radius: 50%;
+    border: 3px solid transparent;
+    width: 0px;
+    height: 0px;
+    padding: 12px;
+    margin: 2px;
+    margin-top: 8px
+}
+
+li>a.button-color.active {
+    border: 3px solid
+}
+
+li>a.button-color.active[data-color="#000000"] {
+    border-color: #f32938
+}
+
+#awshirt-answer-input {
+    color: #000;
+    font-family: "Chinese Rocks";
+    font-weight: bold;
+    font-size: 1em;
+    line-height: normal;
+    border-radius: 0px
+}
+
+#state-answer-question {
+    color: #fff
+}
+
+#state-done-answering span {
+    color: #fff
+}
+
+#state-vote {
+    color: #fff
+}
+
+.state-answer-question-audience-text {
+    text-transform: none
+}
+
+.player-title-bar {
+    overflow: auto
+}
+
+.awshirt-avatars {
+    max-width: 320px;
+    margin: 0px auto;
+    display: inline-block
+}
+
+.awshirt-avatars button {
+    background-image: url("awshirt/awshirt-avatars_button.png");
+    background-repeat: no-repeat;
+    background-color: #f4d69c;
+    background-origin: border-box;
+    background-size: 100% auto;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #a41f22;
+    width: 75px;
+    height: 75px
+}
+
+.awshirt-avatars button.used {
+    background-color: #0f0903;
+    background-image: url("awshirt/awshirt-avatars_button.used.png");
+    border-color: #000
+}
+
+.awshirt-avatars button.selected {
+    background-color: green;
+    border-color: #f4d69c
+}
+
+.awshirt-avatars button.selecting {
+    border-style: dashed
+}
+
+.catfish {
+    background-position: 0px calc(100% / 15 * 0)
+}
+
+.hair {
+    background-position: 0px calc(100% / 15 * 1)
+}
+
+.fox {
+    background-position: 0px calc(100% / 15 * 2)
+}
+
+.snake {
+    background-position: 0px calc(100% / 15 * 3)
+}
+
+.cat {
+    background-position: 0px calc(100% / 15 * 4)
+}
+
+.fire {
+    background-position: 0 calc(100% / 15 * 5)
+}
+
+.bun {
+    background-position: 0 calc(100% / 15 * 6)
+}
+
+.monkey {
+    background-position: 0 calc(100% / 15 * 7)
+}
+
+.kappa {
+    background-position: 0 calc(100% / 15 * 8)
+}
+
+.crow {
+    background-position: 0 calc(100% / 15 * 9)
+}
+
+.raccoon {
+    background-position: 0 calc(100% / 15 * 10)
+}
+
+.umbrella {
+    background-position: 0 calc(100% / 15 * 11)
+}
+
+.redDemon {
+    background-position: 0 calc(100% / 15 * 12)
+}
+
+.blueDemon {
+    background-position: 0 calc(100% / 15 * 13)
+}
+
+.dog {
+    background-position: 0 calc(100% / 15 * 14)
+}
+
+.baku {
+    background-position: 0 calc(100% / 15 * 15)
+}
+
+.awshirt-player-avatar {
+    background-image: url("awshirt/awshirt-player-avatar.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 50px;
+    height: 50px
+}
+
+.awshirt-button {
+    color: #231f20;
+    background: #f3fed3;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border: 5px solid #231f20;
+    border-radius: 12px;
+    padding: 2px 16px;
+    font-size: 28px;
+    margin: 5px 0px;
+    outline: none;
+    max-width: 100%
+}
+
+.awshirt-button:hover {
+    color: #000;
+    background-color: #fff
+}
+
+.awshirt-button:active,
+.awshirt-button.selected {
+    background: #c1c1c1;
+    color: #000;
+    border-color: #fff
+}
+
+.awshirt-button-bar {
+    padding: 10px 0px
+}
+
+.awshirt-button-suggestion,
+.awshirt-audience-censor {
+    line-height: 100%;
+    margin: 0px auto;
+    max-width: 600px;
+    overflow: hidden
+}
+
+.awshirt-button-pad {
+    padding: 2.5px 2px
+}
+
+.awshirt-button-submit {
+    background-color: #8dc349;
+    background-image: none;
+    padding: 4px 16px
+}
+
+.awshirt-button-submit[disabled] {
+    opacity: .5;
+    background-color: #000
+}
+
+.awshirt-button[disabled]:hover {
+    color: #231f20;
+    background-color: #000
+}
+
+#awshirt-color-buttons {
+    margin: 0px 0
+}
+
+.awshirt-drawing-buttons {
+    margin-top: 0px
+}
+
+.awshirt-button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch
+}
+
+.awshirt-button-group * {
+    border-radius: 0px;
+    overflow: hidden;
+    min-width: 50px
+}
+
+.awshirt-button-group :first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px
+}
+
+.awshirt-button-group :last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px
+}
+
+.awshirt-taunt-group * {
+    border: 5px solid #000;
+    color: #231f20;
+    font-size: 20px
+}
+
+.awshirt-input-text {
+    font-weight: 700;
+    text-align: left;
+    flex-grow: 2;
+    padding: 5px
+}
+
+.awshirt-input-submit {
+    flex-grow: 0
+}
+
+.awshirt-thickness {
+    height: 35px;
+    margin: 2px 5px
+}
+
+.thickness-circle {
+    border-radius: 50%
+}
+
+#image-container {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain
+}
+
+.awshirt-solid-bg {
+    background-color: #f3fed3
+}
+
+canvas.awshirt-sketchpad {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #231f20;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: inline-block;
+    margin-bottom: -11px
+}
+
+.awshirt-shirtpad {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    border-width: 0px;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: inline-block;
+    margin-bottom: -11px;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.awshirt-shirtslogan-container {
+    color: #fff;
+    border-width: 0px
+}
+
+.awshirt-slogan-container {
+    line-height: .9em;
+    word-break: break-all;
+    overflow-wrap: break-word
+}
+
+span.awshirt-slogan {
+    color: #fff
+}
+
+.canvas-container {
+    display: inline-block;
+    max-width: 98vw
+}
+
+.awshirt-slogan-list {
+    list-style: none;
+    padding-left: 0
+}
+
+.awshirt-text-small {
+    font-size: .5em;
+    line-height: .5em
+}
+
+li.awshirt-text-small {
+    line-height: 40px
+}
+
+ul.nav-tabs {
+    border-width: 0px
+}
+
+.awshirt-nav-colors {
+    border-bottom-width: 0px;
+    padding: 5px 0px
+}
+
+.awshirt-nav-backgrounds {
+    border-bottom-width: 0px;
+    padding-bottom: 10px
+}
+
+.awshirt-background-picker {
+    padding-left: 10px;
+    text-align: left;
+    margin-top: -1px
+}
+
+.awshirt-background-color {
+    border: 5px solid #231f20;
+    border-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 45px;
+    height: 45px;
+    margin: 0px 3px
+}
+
+.awshirt-background-color.active {
+    border-top-width: 0px;
+    padding-top: 5px
+}
+
+.awshirt-drawing-tabs {
+    padding-left: 10px;
+    text-align: left;
+    margin-bottom: -5px
+}
+
+.awshirt-drawing-tab {
+    border: 5px solid #231f20;
+    border-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 45px;
+    height: 45px;
+    margin: 0px 3px;
+    cursor: pointer
+}
+
+.awshirt-drawing-tab.active {
+    border-bottom-width: 0px;
+    padding-bottom: 5px
+}
+
+.awshirt-drawing {
+    height: 100%
+}
+
+#awshirt-submit-answer {
+    font-size: 1em;
+    text-transform: none
+}
+
+#awshirt-submit-alert {
+    display: block;
+    margin-bottom: 0;
+    margin-top: 10px
+}
+
+#question-text {
+    text-transform: none;
+    font-size: 1.25em;
+    line-height: 30px
+}
+
+#awshirt-vote button {
+    font-size: 1.25em
+}
+
+#state-vote {
+    background-size: cover
+}
+
+.awshirt-vote-group {
+    margin: 10px 0px;
+    color: #fff
+}
+
+.awshirt-vote-buttons .awshirt-button {
+    color: #fff;
+    background-color: #000;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word
+}
+
+.awshirt-button-red {
+    background: red !important
+}
+
+.awshirt-censorable {
+    width: 70%
+}
+
+.awshirt-censor-button {
+    width: auto
+}
+
+.awshirt-button-loading {
+    background: url("awshirt/awshirt-button-loading.gif") no-repeat center;
+    background-size: contain;
+    color: rgba(0, 0, 0, 0);
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto
+}
+
+a.gallery-link {
+    color: #000;
+    text-decoration: none
+}
+
+a.gallery-link img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #000;
+    border-radius: 15%/30%
+}
+
+.awshirt-preload {
+    content: url "./../images/loading.gif";
+    display: none
+}
+
+@media only screen and (max-width: 425px) {
+    .awshirt-background-color {
+        width: 28px
+    }
+
+    span.awshirt-lobby-text {
+        font-size: 20px
+    }
+
+    .awshirt-avatars button {
+        width: 60px;
+        height: 60px
+    }
+
+    li>a.button-color {
+        padding: 8px
+    }
+}
+
+@media only screen and (max-width: 362px) {
+    .awshirt-background-color {
+        width: 24px
+    }
+
+    span.awshirt-lobby-text {
+        font-size: 20px
+    }
+
+    .awshirt-avatars button {
+        width: 60px;
+        height: 60px
+    }
+
+    li>a.button-color {
+        padding: 8px;
+        margin: 12px 1px 2px 1px
+    }
+
+    .awshirt-thickness {
+        padding: 2px 6px
+    }
+}
+
+.glide {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box
+}
+
+.glide * {
+    box-sizing: inherit
+}
+
+.glide__track {
+    overflow: hidden
+}
+
+.glide__slides {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    touch-action: pan-Y;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    will-change: transform
+}
+
+.glide__slides--dragging {
+    user-select: none
+}
+
+.glide__slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    white-space: normal;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent
+}
+
+.glide__slide a {
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.glide__arrows {
+    -webkit-touch-callout: none;
+    user-select: none
+}
+
+.glide__bullets {
+    -webkit-touch-callout: none;
+    user-select: none
+}
+
+.glide--rtl {
+    direction: rtl
+}
+
+/*# sourceMappingURL=9039.css.map*/

@@ -1,0 +1,613 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url("auction/post-banner.tjpp7_banner-image.png")
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url("auction/post-banner.tjpp6_banner-image.png")
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("auction/a4bece5c270c316c1c24.ttf");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("auction/2263cf4bbb29e585de1b.ttf");
+    font-weight: 500;
+    font-style: normal
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th {
+    font-weight: 700
+}
+
+.button-primary {
+    background: #000;
+    color: #fff
+}
+
+.button-xlarge {
+    border-width: 0px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 5px;
+    border-radius: 10px
+}
+
+.button-large {
+    border-radius: 10px
+}
+
+.post-banner {
+    cursor: pointer
+}
+
+.button-blue {
+    color: #fff;
+    background: #3e55fe;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.button-blue:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-gray {
+    color: #3e55fe;
+    background: #ccc;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent
+}
+
+.button-gray:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-help-text {
+    display: inline
+}
+
+@media screen and (max-width: 480px) {
+    .button-help-text {
+        display: none
+    }
+}
+
+.button-black {
+    color: #fff;
+    background: #333
+}
+
+.debug {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: .6
+}
+
+.debug span {
+    pointer-events: none;
+    user-select: none
+}
+
+.text-signin {
+    color: #3e55fe
+}
+
+.jbg-input {
+    font-size: 1.3em
+}
+
+.close {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000;
+    background: transparent;
+    border: none !important;
+    text-decoration: none;
+    content: "x";
+    right: 10px;
+    position: absolute
+}
+
+.close:hover {
+    color: #666
+}
+
+.button-yes {
+    background: #1cb841
+}
+
+.button-no {
+    background: #ca3c3c
+}
+
+.image-hand {
+    background: url("auction/image-hand.png");
+    cursor: pointer;
+    border: none;
+    width: 126px;
+    height: 700px
+}
+
+canvas {
+    touch-action: none
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url("auction/jbgTwitchContent_icon-twitch.svg") no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url("auction/jbgTwitchContent_warning.png") no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+@font-face {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 700;
+    src: local("Lato Bold"), local("Lato-Bold"), url(https://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format("woff")
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th,
+span {
+    font-family: "Lato";
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.25em;
+    color: #fff;
+    font-kerning: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 85%
+}
+
+br {
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    content: " "
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #a6a6a6
+}
+
+.game button {
+    text-transform: uppercase
+}
+
+.auction-page {
+    overflow-y: auto
+}
+
+.sketchpad {
+    border-color: #000;
+    border-style: solid;
+    border-width: .125em;
+    border-radius: .313em;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer
+}
+
+.pushed-down-page {
+    padding-top: 1em;
+    padding-bottom: 1em
+}
+
+.big-text {
+    font-weight: 600;
+    font-size: 150%
+}
+
+#player {
+    color: #000
+}
+
+#player h1 {
+    font-weight: 600;
+    padding: 1.25em;
+    font-size: 125%
+}
+
+#available-cash {
+    width: 100%;
+    font-size: 200%;
+    font-weight: 600;
+    text-align: center
+}
+
+#available-cash h1 {
+    font-weight: 600;
+    padding: .35em;
+    font-size: 125%
+}
+
+#auction-money {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.auction-centered-content {
+    width: 100%;
+    margin: 0 auto
+}
+
+.auction-centered-info {
+    width: 99%
+}
+
+#auction-message {
+    width: 100%;
+    padding: .625em;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    bottom: -100px;
+    transition-property: bottom;
+    transition-duration: .5s;
+    transition-timing-function: ease-out
+}
+
+.auction-messager {
+    display: inline-table
+}
+
+.auction-messager img {
+    width: 5em
+}
+
+.auction-info-content {
+    margin: 0 0 .3em auto;
+    width: 99%
+}
+
+.text-content {
+    color: #000;
+    margin-right: auto;
+    padding: .1em;
+    background-color: #fff;
+    border-radius: .5em;
+    text-transform: none;
+    font-size: 125%
+}
+
+.text-content p {
+    color: #000;
+    margin: 0 auto
+}
+
+.message-content {
+    display: inline-table;
+    width: 70%;
+    padding: 1em
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%
+}
+
+.logo-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3.125em
+}
+
+.round-image-container {
+    background: #000;
+    width: 100%;
+    height: 100%
+}
+
+.round-image-container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3.125em
+}
+
+.container {
+    margin: 0px auto;
+    padding: 0px 5px;
+    max-width: 480px
+}
+
+.button-container button {
+    margin: .313em 0px
+}
+
+#auction-submitdrawing {
+    margin-bottom: .625em
+}
+
+#auction-info {
+    position: relative;
+    padding: .5em .5em .5em 1em;
+    margin-bottom: 1em;
+    background-color: rgba(0, 0, 0, .5)
+}
+
+.state-draw {
+    text-align: center
+}
+
+.button-auction {
+    color: #fff;
+    background: #000;
+    padding: .625em 1em;
+    margin: .313em 0px;
+    font-family: "lato";
+    font-size: 1.35em;
+    font-weight: 900;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.button-auction:hover {
+    color: #fff;
+    background: #000;
+    border-top-color: #fff
+}
+
+.button-auction:active {
+    background: #fff;
+    color: #000
+}
+
+.button-auction-loading {
+    background: #fff url("auction/button-auction-loading.gif") no-repeat center;
+    background-size: contain;
+    color: rgba(0, 0, 0, 0);
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.auction-preload {
+    content: url "../images/loading.gif";
+    display: none
+}
+
+#auction-screw-content {
+    display: block;
+    position: relative;
+    width: 100%;
+    font-weight: 600;
+    text-align: center
+}
+
+/*# sourceMappingURL=1571.css.map*/

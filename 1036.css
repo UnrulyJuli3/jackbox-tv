@@ -1,0 +1,224 @@
+.fallback {
+    height: 100%;
+    font-size: 18px;
+    text-align: center;
+    color: #000;
+    background-color: #eaeaea;
+    overflow-y: scroll
+}
+
+.fallback a {
+    color: #194485
+}
+
+.fallback .constrain {
+    padding: 10px 25px
+}
+
+.fallback button {
+    cursor: pointer;
+    margin: 3px 0;
+    width: 100%;
+    height: 48px;
+    border: 3px solid #000;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000
+}
+
+.fallback button:disabled {
+    color: #ccc
+}
+
+.fallback button.invert,
+.fallback button.selected {
+    background: #000;
+    color: #fff
+}
+
+.fallback button.invert.selected {
+    background: #fff;
+    color: #000
+}
+
+.fallback label {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 0 12px;
+    color: #000;
+    text-align: left;
+    font-size: 15px
+}
+
+.fallback input,
+.fallback textarea {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    color: #000;
+    font-size: 14px
+}
+
+.fallback input::placeholder,
+.fallback textarea::placeholder {
+    color: #ccc
+}
+
+.fallback input {
+    height: 34px;
+    padding: 20px 12px;
+    font-size: 18px
+}
+
+.stage {
+    position: relative;
+    width: 100%;
+    border: 2px solid var(--theme-primary)
+}
+
+img {
+    max-width: 100%
+}
+
+label {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 0 12px;
+    color: var(--theme-primary);
+    text-align: left;
+    font-size: 15px
+}
+
+input,
+textarea {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 1px solid var(--theme-primary);
+    border-radius: 12px;
+    color: var(--theme-primary);
+    font-size: 14px
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--theme-primary);
+    opacity: .5
+}
+
+input {
+    height: 34px;
+    padding: 20px 12px;
+    font-size: 18px
+}
+
+h1 {
+    font-size: 48px
+}
+
+h2 {
+    font-size: 36px
+}
+
+h3 {
+    font-size: 32px
+}
+
+h4 {
+    font-size: 24px
+}
+
+h5 {
+    font-size: 18px
+}
+
+p {
+    font-size: 18px
+}
+
+.main {
+    --theme-primary: #000;
+    --theme-secondary: #FFF;
+    --theme-highlight: #333;
+    --theme-background: #FFF;
+    height: 100%;
+    font-size: 18px;
+    text-align: center;
+    color: var(--theme-primary);
+    background-color: var(--theme-background);
+    overflow-y: scroll
+}
+
+.main a {
+    color: var(--theme-background)
+}
+
+.main .small {
+    font-size: 12px
+}
+
+.main .left {
+    text-align: left
+}
+
+.main .right {
+    text-align: right
+}
+
+.constrain {
+    padding: 10px 25px
+}
+
+.player {
+    width: 100%;
+    height: 50px;
+    padding: 6px 0;
+    background-color: var(--theme-primary);
+    font-size: 24px;
+    text-align: center;
+    color: var(--theme-secondary)
+}
+
+.component {
+    margin-top: 15px
+}
+
+.component.divider {
+    padding-top: 15px;
+    border-top: 1px solid var(--theme-primary)
+}
+
+button {
+    cursor: pointer;
+    margin: 3px 0;
+    width: 100%;
+    height: 48px;
+    border: 3px solid var(--theme-primary);
+    background: var(--theme-secondary);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--theme-primary)
+}
+
+button:disabled {
+    opacity: .25
+}
+
+button.invert,
+button.selected {
+    background: var(--theme-primary);
+    color: var(--theme-secondary)
+}
+
+button.invert.selected {
+    background: var(--theme-secondary);
+    color: var(--theme-primary)
+}
+
+/*# sourceMappingURL=1036.css.map*/

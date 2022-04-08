@@ -1,0 +1,2041 @@
+@import url(https://fonts.googleapis.com/css?family=Rokkitt:400,700&display=swap);
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th,
+span,
+button {
+    font-family: "Rokkitt", serif;
+    font-size: 23px;
+    text-align: center;
+    font-weight: 700;
+    font-kerning: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    word-wrap: break-word
+}
+
+.quiplash3 * {
+    box-sizing: border-box
+}
+
+.quiplash3 .controller-page {
+    background-image: url("quiplash3/quiplash3_controller-page.png")
+}
+
+.quiplash3 .playerTopBarView {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    height: 50px;
+    letter-spacing: -0.7pt;
+    margin-bottom: 0;
+    text-transform: uppercase
+}
+
+.quiplash3 .playerTopBarView .playerIcon {
+    height: 30px;
+    position: relative;
+    top: -3px
+}
+
+.quiplash3 .message {
+    vertical-align: bottom;
+    width: 100%
+}
+
+.quiplash3 .messageText {
+    color: #fff;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    font-weight: 700
+}
+
+.quiplash3 .messageText .regular {
+    font-weight: 500;
+    letter-spacing: 0px
+}
+
+.quiplash3 .controller-content {
+    padding: 0px 5px;
+    padding-bottom: 15px
+}
+
+.quiplash3 .artifactButton {
+    background-color: transparent !important;
+    background-image: url("quiplash3/quiplash3_artifactButton.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 17px;
+    height: 257px
+}
+
+.quiplash3 .button {
+    background-color: #636363
+}
+
+.quiplash3 .Lobby {
+    background-color: transparent
+}
+
+.quiplash3 .Lobby .button {
+    margin-bottom: 10px !important
+}
+
+.quiplash3 .Lobby .choices .text {
+    margin-top: 10px
+}
+
+.quiplash3 .Lobby .choices .button-group {
+    width: 100%
+}
+
+.quiplash3 .Lobby .episodesModal {
+    font-family: "Rokkitt", serif
+}
+
+.quiplash3 .Lobby .episodesModal .header {
+    margin-top: 20px
+}
+
+.quiplash3 .Lobby .episodesModal .inlineSubmit {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 100%
+}
+
+.quiplash3 .Lobby .episodesModal .inlineSubmit button {
+    background-color: #000;
+    background-image: none;
+    border: none;
+    color: #fff;
+    height: 36px;
+    padding: 2px 12px
+}
+
+.quiplash3 .Lobby .episodesModal .text {
+    font-size: 14px
+}
+
+.quiplash3 .Lobby .episodesModal textarea {
+    font-size: 26px;
+    padding: 2px 10px
+}
+
+.quiplash3 .Lobby .characters {
+    background-color: transparent !important;
+    border: none
+}
+
+.quiplash3 .Lobby .characters .flex-item {
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.quiplash3 .Lobby .characters.disabled {
+    opacity: .25
+}
+
+.quiplash3 .Lobby .characters.selected {
+    opacity: 1
+}
+
+.quiplash3 .Lobby .episodesModal {
+    background-color: #adadad !important;
+    border-radius: 5px
+}
+
+.quiplash3 .controller-page.Logo {
+    background-color: #4c4267;
+    background-image: url("quiplash3/quiplash3_controller-page.Logo.png") !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
+.quiplash3 .controller-page.Logo .logo-image {
+    background-image: url("quiplash3/quiplash3_controller-page.Logo_logo-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 250px;
+    margin: auto
+}
+
+.quiplash3 .controller-page.Logo.Round0 {
+    background-color: #000 !important;
+    background-image: none !important
+}
+
+.quiplash3 .controller-page.Logo.Round0 .logo-image {
+    background-color: transparent;
+    background-image: url("quiplash3/quiplash3_controller-page.Logo.Round0_logo-image.png");
+    background-size: contain;
+    max-width: 300px;
+    width: 45%
+}
+
+.quiplash3 .controller-page.Logo.Round1 {
+    background-color: #000 !important;
+    background-image: none !important
+}
+
+.quiplash3 .controller-page.Logo.Round1 .logo-image {
+    background-color: transparent;
+    background-image: url("quiplash3/quiplash3_controller-page.Logo.Round1_logo-image.png");
+    background-size: contain;
+    max-width: 300px;
+    width: 56%
+}
+
+.quiplash3 .controller-page.Logo.Round2 {
+    background-color: #000 !important;
+    background-image: none !important
+}
+
+.quiplash3 .controller-page.Logo.Round2 .logo-image {
+    background-color: transparent;
+    background-image: url("quiplash3/quiplash3_controller-page.Logo.Round2_logo-image.png");
+    background-size: contain;
+    max-width: 300px;
+    width: 56%
+}
+
+.quiplash3 .Lobby .prompt,
+.quiplash3 .MakeSingleChoice .prompt,
+.quiplash3 .EnterSingleText .prompt,
+.quiplash3 .Sortable .prompt,
+.quiplash3 .EnterTextList .prompt {
+    font-size: 23px;
+    line-height: 23px;
+    margin-bottom: 10px
+}
+
+.quiplash3 .Lobby .prompt div.header,
+.quiplash3 .MakeSingleChoice .prompt div.header,
+.quiplash3 .EnterSingleText .prompt div.header,
+.quiplash3 .Sortable .prompt div.header,
+.quiplash3 .EnterTextList .prompt div.header {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 15px
+}
+
+.quiplash3 .Lobby .inputGroup .charCountDisplay,
+.quiplash3 .MakeSingleChoice .inputGroup .charCountDisplay,
+.quiplash3 .EnterSingleText .inputGroup .charCountDisplay,
+.quiplash3 .Sortable .inputGroup .charCountDisplay,
+.quiplash3 .EnterTextList .inputGroup .charCountDisplay {
+    line-height: 20px;
+    text-align: right;
+    margin-right: 5px
+}
+
+.quiplash3 .Lobby .inputGroup .charCountDisplay .charCount,
+.quiplash3 .MakeSingleChoice .inputGroup .charCountDisplay .charCount,
+.quiplash3 .EnterSingleText .inputGroup .charCountDisplay .charCount,
+.quiplash3 .Sortable .inputGroup .charCountDisplay .charCount,
+.quiplash3 .EnterTextList .inputGroup .charCountDisplay .charCount {
+    font-size: 18px;
+    font-weight: 500
+}
+
+.quiplash3 .Lobby .button,
+.quiplash3 .MakeSingleChoice .button,
+.quiplash3 .EnterSingleText .button,
+.quiplash3 .Sortable .button,
+.quiplash3 .EnterTextList .button {
+    font-family: "Rokkitt", serif;
+    font-weight: 700;
+    font-size: 23px;
+    letter-spacing: -0.3px;
+    border: 0px solid #000;
+    padding: 6px 28px;
+    margin: 2px;
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, .48);
+    -moz-box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, .48);
+    box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, .48)
+}
+
+.quiplash3 .Lobby .button[type=submit],
+.quiplash3 .MakeSingleChoice .button[type=submit],
+.quiplash3 .EnterSingleText .button[type=submit],
+.quiplash3 .Sortable .button[type=submit],
+.quiplash3 .EnterTextList .button[type=submit] {
+    margin-bottom: 15px
+}
+
+.quiplash3 .Lobby textarea,
+.quiplash3 .MakeSingleChoice textarea,
+.quiplash3 .EnterSingleText textarea,
+.quiplash3 .Sortable textarea,
+.quiplash3 .EnterTextList textarea {
+    border: 2px solid rgba(0, 0, 0, .5);
+    border-radius: 4px;
+    color: #000;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    line-height: normal;
+    padding: 2px 4px
+}
+
+.quiplash3 .Lobby .button:focus,
+.quiplash3 .MakeSingleChoice .button:focus,
+.quiplash3 .EnterSingleText .button:focus,
+.quiplash3 .Sortable .button:focus,
+.quiplash3 .EnterTextList .button:focus {
+    outline: 0px solid #fff;
+    color: #fff
+}
+
+.quiplash3 .Lobby .button:active,
+.quiplash3 .MakeSingleChoice .button:active,
+.quiplash3 .EnterSingleText .button:active,
+.quiplash3 .Sortable .button:active,
+.quiplash3 .EnterTextList .button:active {
+    -webkit-box-shadow: inset 0px 150px 0px 0px rgba(0, 0, 0, .6);
+    -moz-box-shadow: inset 0px 150px 0px 0px rgba(0, 0, 0, .6);
+    box-shadow: inset 0px 150px 0px 0px rgba(0, 0, 0, .6)
+}
+
+.quiplash3 .Lobby .button-group.selected button,
+.quiplash3 .MakeSingleChoice .button-group.selected button,
+.quiplash3 .EnterSingleText .button-group.selected button,
+.quiplash3 .Sortable .button-group.selected button,
+.quiplash3 .EnterTextList .button-group.selected button {
+    background-color: #333;
+    color: #ccc
+}
+
+.quiplash3 .Lobby .button-group .censor-button,
+.quiplash3 .MakeSingleChoice .button-group .censor-button,
+.quiplash3 .EnterSingleText .button-group .censor-button,
+.quiplash3 .Sortable .button-group .censor-button,
+.quiplash3 .EnterTextList .button-group .censor-button {
+    background-color: #000 !important;
+    background-image: url("quiplash3/quiplash3_Lobby_button-group_censor-button.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.quiplash3 .Lobby .button-group .censor-button.isWarned,
+.quiplash3 .MakeSingleChoice .button-group .censor-button.isWarned,
+.quiplash3 .EnterSingleText .button-group .censor-button.isWarned,
+.quiplash3 .Sortable .button-group .censor-button.isWarned,
+.quiplash3 .EnterTextList .button-group .censor-button.isWarned {
+    background-color: #900;
+    background-image: url("quiplash3/quiplash3_Lobby_button-group_censor-button.isWarned.png")
+}
+
+.quiplash3 .EnterTextList .form-group {
+    margin-bottom: 0px
+}
+
+.quiplash3 .EnterSingleText .choices,
+.quiplash3 .EnterTextList .choices {
+    margin-top: 60px
+}
+
+.quiplash3 .EnterSingleText .choices .choice-prompt,
+.quiplash3 .EnterTextList .choices .choice-prompt {
+    margin-top: 19px
+}
+
+.quiplash3 .help-block {
+    color: #000
+}
+
+.quiplash3 .MakeSingleChoice .prompt {
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    letter-spacing: -0.8px
+}
+
+.quiplash3 .MakeSingleChoice .prompt .regular {
+    font-weight: 800;
+    margin-top: 40px
+}
+
+.quiplash3 .MakeSingleChoice .text-danger {
+    display: none
+}
+
+.quiplash3 .MakeSingleChoice .button {
+    font-size: 21px;
+    margin-bottom: 10px !important
+}
+
+.quiplash3 .MakeSingleChoice .thriplash-part {
+    display: block
+}
+
+.quiplash3 .UGC {
+    background-color: transparent;
+    padding: 5px
+}
+
+.quiplash3 .UGC .input.addPrompt .form-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+
+.quiplash3 .UGC .charCountDisplay {
+    flex: 100%;
+    line-height: 18px;
+    text-align: right
+}
+
+.quiplash3 .UGC .charCountDisplay .charCount {
+    font-size: 18px;
+    font-weight: 500
+}
+
+.quiplash3 .UGC .inputGroup {
+    display: flex;
+    flex-direction: row;
+    flex: 100%;
+    margin-bottom: 30px;
+    min-height: 40px
+}
+
+.quiplash3 .UGC .inputGroup .input-group-btn {
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border: none;
+    background: #000;
+    flex: 15%
+}
+
+.quiplash3 .UGC .inputGroup .input-group-btn::before {
+    color: #000;
+    display: inline-block;
+    content: "";
+    background-image: url('data:image/svg+xml,<svg class="bi bi-arrow-up-square" width="1em" height="1em" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/><path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/><path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/></svg>');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+    max-width: 50px;
+    width: 100%;
+    height: 100%
+}
+
+.quiplash3 .UGC .inputGroup .input-group-btn button {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.quiplash3 .UGC .inputGroup textarea {
+    flex: 85%;
+    font-size: 20px;
+    min-height: 40px;
+    padding: 2px 5px
+}
+
+.quiplash3 .UGC #toggleGroup .label {
+    color: #000;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: normal;
+    width: 95px
+}
+
+.quiplash3 .UGC #toggleGroup .toggle {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 23px
+}
+
+.quiplash3 .UGC #toggleGroup .toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0
+}
+
+.quiplash3 .UGC #toggleGroup .slider {
+    border-radius: 34px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #666;
+    -webkit-transition: .4s;
+    transition: .4s
+}
+
+.quiplash3 .UGC #toggleGroup .slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 4px;
+    bottom: 3px;
+    background-color: #fff;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s
+}
+
+.quiplash3 .UGC #toggleGroup input:checked+.slider {
+    background-color: #000
+}
+
+.quiplash3 .UGC #toggleGroup input:focus+.slider {
+    box-shadow: 0 0 1px #000
+}
+
+.quiplash3 .UGC #toggleGroup input:checked+.slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px)
+}
+
+.quiplash3 .UGC button.ugc-toggle-visibility-button {
+    border: 0px solid transparent;
+    background-color: transparent;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 65px;
+    margin-top: 0px;
+    outline: 0px solid transparent;
+    vertical-align: middle;
+    width: 65px
+}
+
+.quiplash3 .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller {
+    background-image: url("quiplash3/quiplash3_UGC_button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller.png")
+}
+
+.quiplash3 .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller.on {
+    background-image: url("quiplash3/quiplash3_UGC_button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller.on.png")
+}
+
+.quiplash3 .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen {
+    background-image: url("quiplash3/quiplash3_UGC_button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen.png")
+}
+
+.quiplash3 .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen.on {
+    background-image: url("quiplash3/quiplash3_UGC_button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen.on.png")
+}
+
+.quiplash3 .UGC button.action-button,
+.quiplash3 .UGC #episodesRegion button.choice-button {
+    background-color: #6644a6;
+    border: none;
+    border-radius: 9px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 100%;
+    -webkit-box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, .48);
+    -moz-box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, .48);
+    box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, .48)
+}
+
+.quiplash3 .UGC #episodesRegion button.choice-button {
+    margin-bottom: 5px;
+    text-transform: none
+}
+
+.quiplash3 .UGC button.action-button:active {
+    -webkit-box-shadow: inset 0px 150px 0px 0px rgba(0, 0, 0, .6);
+    -moz-box-shadow: inset 0px 150px 0px 0px rgba(0, 0, 0, .6);
+    box-shadow: inset 0px 150px 0px 0px rgba(0, 0, 0, .6)
+}
+
+.quiplash3 .UGC .ugc-action-exit {
+    margin-top: 5px
+}
+
+.quiplash3 .UGC .promptsCount {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-transform: uppercase
+}
+
+.quiplash3 .UGC #promptsRegion .button-group button {
+    background-color: #000;
+    border: 7px solid #000;
+    border-radius: 10px;
+    border-right-width: 40px;
+    color: #fff;
+    overflow: inherit;
+    padding: 0px 15px
+}
+
+.quiplash3 .UGC #promptsRegion .button-group button::after {
+    background: url("quiplash3/quiplash3_UGC_#promptsRegion_button-group_button_after.png") 0px 0px/100% 200% no-repeat;
+    content: "";
+    position: absolute;
+    top: calc(50% - 17px);
+    right: -34px;
+    width: 34px;
+    height: 34px
+}
+
+.quiplash3 .UGC #promptsRegion .button-group.thriplash button {
+    padding-left: 40px
+}
+
+.quiplash3 .UGC #promptsRegion .button-group.thriplash button::before {
+    background: #000 url("quiplash3/quiplash3_UGC_#promptsRegion_button-group.thriplash_button_before.png") 0px 0px/100% 100% no-repeat;
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    width: 34px;
+    height: 16px
+}
+
+.quiplash3 .UGC .create_new_name_prompt {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0px 10px
+}
+
+.quiplash3 .UGC .ugcModal {
+    background-color: #dfaa33;
+    border-radius: 12px;
+    font-family: "Rokkitt", serif;
+    font-size: 28px;
+    text-transform: uppercase
+}
+
+.quiplash3 .UGC .ugcModal .swal2-content {
+    color: #000
+}
+
+.quiplash3 .UGC .ugcModal .swal2-actions button {
+    text-transform: uppercase
+}
+
+.quiplash3 .UGC .toggle_prompts_prompt {
+    font-size: 18px;
+    font-weight: 500
+}
+
+.quiplash3 .UGC .tosLink {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    border-radius: 12px;
+    text-align: baseline;
+    padding: 10px 15px 0px 15px
+}
+
+.quiplash3 .UGC .previous_episodes {
+    font-weight: 500
+}
+
+.quiplash3 .UGC .ugc-episode-name {
+    font-weight: 500;
+    margin-bottom: 10px
+}
+
+.quiplash3 .controller-page.Red {
+    background-color: #f26f6f;
+    background-image: url("quiplash3/quiplash3_controller-page.Red.png")
+}
+
+.quiplash3 .playerTopBarView.Red {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Red.png")
+}
+
+.quiplash3 .playerTopBarView.Red .playerIcon.Red {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Red_playerIcon.Red.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Red {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Red_playerIcon.Red.png")
+}
+
+.quiplash3 .Lobby .characters.Red .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Red_playerIcon.Red.png")
+}
+
+.quiplash3 .Lobby .characters.Red.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Red.selected_flex-item.png") !important
+}
+
+.quiplash3 .Red button {
+    background-color: #8a4545
+}
+
+.quiplash3 .controller-page.Orange {
+    background-color: #e09b4a;
+    background-image: url("quiplash3/quiplash3_controller-page.Orange.png")
+}
+
+.quiplash3 .playerTopBarView.Orange {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Orange.png")
+}
+
+.quiplash3 .playerTopBarView.Orange .playerIcon.Orange {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Orange_playerIcon.Orange.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Orange {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Orange_playerIcon.Orange.png")
+}
+
+.quiplash3 .Lobby .characters.Orange .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Orange_playerIcon.Orange.png")
+}
+
+.quiplash3 .Lobby .characters.Orange.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Orange.selected_flex-item.png") !important
+}
+
+.quiplash3 .Orange button {
+    background-color: #785730
+}
+
+.quiplash3 .controller-page.Yellow {
+    background-color: #e0da69;
+    background-image: url("quiplash3/quiplash3_controller-page.Yellow.png")
+}
+
+.quiplash3 .playerTopBarView.Yellow {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Yellow.png")
+}
+
+.quiplash3 .playerTopBarView.Yellow .playerIcon.Yellow {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Yellow_playerIcon.Yellow.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Yellow {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Yellow_playerIcon.Yellow.png")
+}
+
+.quiplash3 .Lobby .characters.Yellow .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Yellow_playerIcon.Yellow.png")
+}
+
+.quiplash3 .Lobby .characters.Yellow.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Yellow.selected_flex-item.png") !important
+}
+
+.quiplash3 .Yellow button {
+    background-color: #73703a
+}
+
+.quiplash3 .controller-page.Star {
+    background-color: #95b758;
+    background-image: url("quiplash3/quiplash3_controller-page.Star.png")
+}
+
+.quiplash3 .playerTopBarView.Star {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Star.png")
+}
+
+.quiplash3 .playerTopBarView.Star .playerIcon.Star {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Star_playerIcon.Star.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Star {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Star_playerIcon.Star.png")
+}
+
+.quiplash3 .Lobby .characters.Star .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Star_playerIcon.Star.png")
+}
+
+.quiplash3 .Lobby .characters.Star.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Star.selected_flex-item.png") !important
+}
+
+.quiplash3 .Star button {
+    background-color: #63802c
+}
+
+.quiplash3 .controller-page.Green {
+    background-color: #6dc979;
+    background-image: url("quiplash3/quiplash3_controller-page.Green.png")
+}
+
+.quiplash3 .playerTopBarView.Green {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Green.png")
+}
+
+.quiplash3 .playerTopBarView.Green .playerIcon.Green {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Green_playerIcon.Green.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Green {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Green_playerIcon.Green.png")
+}
+
+.quiplash3 .Lobby .characters.Green .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Green_playerIcon.Green.png")
+}
+
+.quiplash3 .Lobby .characters.Green.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Green.selected_flex-item.png") !important
+}
+
+.quiplash3 .Green button {
+    background-color: #35613b
+}
+
+.quiplash3 .controller-page.Kitten {
+    background-color: #74beac;
+    background-image: url("quiplash3/quiplash3_controller-page.Kitten.png")
+}
+
+.quiplash3 .playerTopBarView.Kitten {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Kitten.png")
+}
+
+.quiplash3 .playerTopBarView.Kitten .playerIcon.Kitten {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Kitten_playerIcon.Kitten.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Kitten {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Kitten_playerIcon.Kitten.png")
+}
+
+.quiplash3 .Lobby .characters.Kitten .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Kitten_playerIcon.Kitten.png")
+}
+
+.quiplash3 .Lobby .characters.Kitten.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Kitten.selected_flex-item.png") !important
+}
+
+.quiplash3 .Kitten button {
+    background-color: #498c7e
+}
+
+.quiplash3 .controller-page.Teal {
+    background-color: #00d5ff;
+    background-image: url("quiplash3/quiplash3_controller-page.Teal.png")
+}
+
+.quiplash3 .playerTopBarView.Teal {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Teal.png")
+}
+
+.quiplash3 .playerTopBarView.Teal .playerIcon.Teal {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Teal_playerIcon.Teal.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Teal {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Teal_playerIcon.Teal.png")
+}
+
+.quiplash3 .Lobby .characters.Teal .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Teal_playerIcon.Teal.png")
+}
+
+.quiplash3 .Lobby .characters.Teal.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Teal.selected_flex-item.png") !important
+}
+
+.quiplash3 .Teal button {
+    background-color: #2e657a
+}
+
+.quiplash3 .controller-page.Blue {
+    background-color: #5e9df0;
+    background-image: url("quiplash3/quiplash3_controller-page.Blue.png")
+}
+
+.quiplash3 .playerTopBarView.Blue {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Blue.png")
+}
+
+.quiplash3 .playerTopBarView.Blue .playerIcon.Blue {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Blue_playerIcon.Blue.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Blue {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Blue_playerIcon.Blue.png")
+}
+
+.quiplash3 .Lobby .characters.Blue .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Blue_playerIcon.Blue.png")
+}
+
+.quiplash3 .Lobby .characters.Blue.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Blue.selected_flex-item.png") !important
+}
+
+.quiplash3 .Blue button {
+    background-color: #415591
+}
+
+.quiplash3 .controller-page.Purple {
+    background-color: #8c66ff;
+    background-image: url("quiplash3/quiplash3_controller-page.Purple.png")
+}
+
+.quiplash3 .playerTopBarView.Purple {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Purple.png")
+}
+
+.quiplash3 .playerTopBarView.Purple .playerIcon.Purple {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Purple_playerIcon.Purple.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Purple {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Purple_playerIcon.Purple.png")
+}
+
+.quiplash3 .Lobby .characters.Purple .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Purple_playerIcon.Purple.png")
+}
+
+.quiplash3 .Lobby .characters.Purple.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Purple.selected_flex-item.png") !important
+}
+
+.quiplash3 .Purple button {
+    background-color: #4a3396
+}
+
+.quiplash3 .controller-page.Triclops {
+    background-color: #9d6dd2;
+    background-image: url("quiplash3/quiplash3_controller-page.Triclops.png")
+}
+
+.quiplash3 .playerTopBarView.Triclops {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Triclops.png")
+}
+
+.quiplash3 .playerTopBarView.Triclops .playerIcon.Triclops {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Triclops_playerIcon.Triclops.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Triclops {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Triclops_playerIcon.Triclops.png")
+}
+
+.quiplash3 .Lobby .characters.Triclops .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Triclops_playerIcon.Triclops.png")
+}
+
+.quiplash3 .Lobby .characters.Triclops.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Triclops.selected_flex-item.png") !important
+}
+
+.quiplash3 .Triclops button {
+    background-color: #6644a6
+}
+
+.quiplash3 .controller-page.Pink {
+    background-color: #e37df5;
+    background-image: url("quiplash3/quiplash3_controller-page.Pink.png")
+}
+
+.quiplash3 .playerTopBarView.Pink {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Pink.png")
+}
+
+.quiplash3 .playerTopBarView.Pink .playerIcon.Pink {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Pink_playerIcon.Pink.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Pink {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Pink_playerIcon.Pink.png")
+}
+
+.quiplash3 .Lobby .characters.Pink .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Pink_playerIcon.Pink.png")
+}
+
+.quiplash3 .Lobby .characters.Pink.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Pink.selected_flex-item.png") !important
+}
+
+.quiplash3 .Pink button {
+    background-color: #6e426b
+}
+
+.quiplash3 .controller-page.Coffin {
+    background-color: #8f8f8f;
+    background-image: url("quiplash3/quiplash3_controller-page.Coffin.png")
+}
+
+.quiplash3 .playerTopBarView.Coffin {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.png")
+}
+
+.quiplash3 .playerTopBarView.Coffin .playerIcon.Coffin {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Coffin_playerIcon.Coffin.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Coffin {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Coffin_playerIcon.Coffin.png")
+}
+
+.quiplash3 .Lobby .characters.Coffin .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Coffin_playerIcon.Coffin.png")
+}
+
+.quiplash3 .Lobby .characters.Coffin.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Coffin.selected_flex-item.png") !important
+}
+
+.quiplash3 .Coffin button {
+    background-color: #636363
+}
+
+.quiplash3 .controller-page.Cactus {
+    background-color: #629335;
+    background-image: url("quiplash3/quiplash3_controller-page.Cactus.png")
+}
+
+.quiplash3 .playerTopBarView.Cactus {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Cactus.png")
+}
+
+.quiplash3 .playerTopBarView.Cactus .playerIcon.Cactus {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Cactus_playerIcon.Cactus.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Cactus {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Cactus_playerIcon.Cactus.png")
+}
+
+.quiplash3 .Lobby .characters.Cactus .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Cactus_playerIcon.Cactus.png")
+}
+
+.quiplash3 .Lobby .characters.Cactus.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Cactus.selected_flex-item.png") !important
+}
+
+.quiplash3 .Cactus button {
+    background-color: #2b391f
+}
+
+.quiplash3 .controller-page.Moon {
+    background-color: #edaf3f;
+    background-image: url("quiplash3/quiplash3_controller-page.Moon.png")
+}
+
+.quiplash3 .playerTopBarView.Moon {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Moon.png")
+}
+
+.quiplash3 .playerTopBarView.Moon .playerIcon.Moon {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Moon_playerIcon.Moon.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Moon {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Moon_playerIcon.Moon.png")
+}
+
+.quiplash3 .Lobby .characters.Moon .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Moon_playerIcon.Moon.png")
+}
+
+.quiplash3 .Lobby .characters.Moon.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Moon.selected_flex-item.png") !important
+}
+
+.quiplash3 .Moon button {
+    background-color: #684c30
+}
+
+.quiplash3 .controller-page.Tear {
+    background-color: #3962b5;
+    background-image: url("quiplash3/quiplash3_controller-page.Tear.png")
+}
+
+.quiplash3 .playerTopBarView.Tear {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Tear.png")
+}
+
+.quiplash3 .playerTopBarView.Tear .playerIcon.Tear {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Tear_playerIcon.Tear.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Tear {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Tear_playerIcon.Tear.png")
+}
+
+.quiplash3 .Lobby .characters.Tear .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Tear_playerIcon.Tear.png")
+}
+
+.quiplash3 .Lobby .characters.Tear.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Tear.selected_flex-item.png") !important
+}
+
+.quiplash3 .Tear button {
+    background-color: #202954
+}
+
+.quiplash3 .controller-page.Poop {
+    background-color: #8f5c47;
+    background-image: url("quiplash3/quiplash3_controller-page.Poop.png")
+}
+
+.quiplash3 .playerTopBarView.Poop {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Poop.png")
+}
+
+.quiplash3 .playerTopBarView.Poop .playerIcon.Poop {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Poop_playerIcon.Poop.png")
+}
+
+.quiplash3 .playerTopBar .playerIcon.Poop {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Poop_playerIcon.Poop.png")
+}
+
+.quiplash3 .Lobby .characters.Poop .flex-item {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Poop_playerIcon.Poop.png")
+}
+
+.quiplash3 .Lobby .characters.Poop.selected .flex-item {
+    background-image: url("quiplash3/quiplash3_Lobby_characters.Poop.selected_flex-item.png") !important
+}
+
+.quiplash3 .Poop button {
+    background-color: #3b2726
+}
+
+.quiplash3 .controller-page.Audience {
+    background-color: #9d6dd2;
+    background-image: url("quiplash3/quiplash3_controller-page.Triclops.png")
+}
+
+.quiplash3 .playerTopBarView.Audience {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Triclops.png")
+}
+
+.quiplash3 .Lobby .characters.Audience.selected .flex-item {
+    background-image:  !important
+}
+
+.quiplash3 .Audience button {
+    background-color: #6644a6
+}
+
+.quiplash3 .controller-page.UGCView {
+    background-color: #9d6dd2;
+    background-image: url("quiplash3/quiplash3_controller-page.Triclops.png")
+}
+
+.quiplash3 .playerTopBarView.UGCView {
+    background-image: url("quiplash3/quiplash3_playerTopBarView.Triclops.png")
+}
+
+.quiplash3 .Lobby .characters.UGCView.selected .flex-item {
+    background-image:  !important
+}
+
+.quiplash3 .UGCView button {
+    background-color: #6644a6
+}
+
+@keyframes settle {
+    100% {
+        transform: translate(0px, 0px)
+    }
+}
+
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url("quiplash3/post-banner.tjpp7_banner-image.png")
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url("quiplash3/post-banner.tjpp6_banner-image.png")
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("quiplash3/a4bece5c270c316c1c24.ttf");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("quiplash3/2263cf4bbb29e585de1b.ttf");
+    font-weight: 500;
+    font-style: normal
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+body {
+    color: #000;
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+.page {
+    overflow-y: auto
+}
+
+img {
+    margin: 0px auto
+}
+
+canvas {
+    border: 1px solid #000
+}
+
+.controller-page {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch
+}
+
+.scrollable {
+    overflow-y: auto
+}
+
+.textDescriptions {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden
+}
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+.loadingSpinner {
+    text-align: center;
+    margin: 50px 0px
+}
+
+.playerName {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.playerIcon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    background-size: contain
+}
+
+.playerIcon.none {
+    display: none
+}
+
+.twitchBroadcasterIcon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 13px;
+    bottom: 10px;
+    background-image: url("quiplash3/twitchBroadcasterIcon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.controller-container {
+    display: flex;
+    overflow-y: hidden
+}
+
+#controller-container {
+    display: flex;
+    flex-direction: column
+}
+
+#controller-container>div:last-child {
+    flex-grow: 1
+}
+
+#controller-main {
+    flex: 1 0 auto
+}
+
+.Logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch
+}
+
+.Logo>div {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    text-align: center
+}
+
+div.logo-image {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 600px;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3
+}
+
+.lobbyTitle {
+    text-align: center
+}
+
+.artifactContainer {
+    text-align: center
+}
+
+.artifactButton {
+    background-image: url("quiplash3/artifactButton.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 283px;
+    width: 90%;
+    max-width: 512px;
+    display: inline-block
+}
+
+@media only screen and (max-width: 480px) {
+    .artifactButton {
+        height: 192px
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .artifactButton {
+        height: 128px
+    }
+}
+
+.controller-content {
+    max-width: 768px;
+    margin: 0px auto
+}
+
+.controller-content>div {
+    display: inline-block;
+    width: 100%
+}
+
+.EnterSingleText,
+.MakeSingleChoice,
+.Draw,
+.Lobby,
+.Sortable,
+.UGC {
+    display: inline-block;
+    width: 100%
+}
+
+.Lobby .charactersList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 512px;
+    padding: .5rem;
+    margin: 0px auto
+}
+
+.Lobby .charactersList button.characters {
+    flex: 0 0 25%;
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: stretch;
+    box-sizing: border-box
+}
+
+.Lobby .charactersList button.characters.disabled {
+    cursor: not-allowed
+}
+
+.Lobby .charactersList button.characters.selected {
+    cursor: default
+}
+
+.Lobby .charactersList button.characters:before {
+    content: "";
+    display: table;
+    padding-top: 100%
+}
+
+.Lobby .charactersList button.characters .flex-item {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.choices {
+    text-align: center
+}
+
+.button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.choices .button-group button.choice-button * {
+    pointer-events: none
+}
+
+textarea.form-control {
+    resize: none;
+    overflow: hidden;
+    height: 36px;
+    line-height: 24px;
+    outline: none
+}
+
+textarea:focus {
+    outline: none
+}
+
+.button-group * {
+    border-radius: 0px;
+    margin: 0px;
+    max-width: 100%;
+    min-width: 50px;
+    overflow-wrap: break-word;
+    outline: none;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: normal;
+    word-break: break-word;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.button-group button:not(:only-child):not(:last-child) {
+    border-right-width: 0px
+}
+
+.button-group button:not(:only-child):not(:first-child) {
+    border-left-width: 0px
+}
+
+.button-group :first-child {
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2
+}
+
+.censor-button {
+    width: auto;
+    max-width: 15px;
+    padding: 0px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 35px;
+    flex: 0 1 35px
+}
+
+.double-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.double-nav-middle {
+    flex: 1 0 auto;
+    position: relative;
+    overflow-x: hidden
+}
+
+.double-nav-top,
+.double-nav-bottom {
+    flex: 0 1 auto;
+    width: 100%;
+    z-index: 1030;
+    text-align: center
+}
+
+.double-nav-detail {
+    top: 0px;
+    min-height: 100%;
+    display: absolute
+}
+
+.double-nav-bottom {
+    margin-top: auto
+}
+
+.canvasContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.Draw .nav-tabs {
+    border-width: 0px
+}
+
+li>a.button-color.active {
+    border: 3px solid
+}
+
+li>a.button-color.active[data-color="#000000"] {
+    border-color: #f32938
+}
+
+.Draw canvas.fullLayer {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.Draw .button {
+    height: 33px;
+    min-width: 40px;
+    margin: 2px;
+    padding: 5px
+}
+
+.Draw .submitDrawing {
+    height: auto
+}
+
+.Draw .currentColor {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    margin: 0px auto
+}
+
+.Draw .thickness-circle {
+    border-radius: 50%;
+    background-color: #000;
+    width: 5px;
+    height: 5px;
+    margin: 0px auto
+}
+
+.Draw .colorSwatch {
+    border-radius: 8px;
+    width: 62px;
+    height: 62px;
+    margin: 3px;
+    display: inline-block
+}
+
+.Draw .list .colorSwatch {
+    display: inline-block
+}
+
+.Draw .list .colorSwatch a {
+    padding: 0px;
+    width: 48px;
+    height: 48px
+}
+
+.Draw .colorPaletteRegion {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0)
+}
+
+.Draw .colorPaletteRegion.visible {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.Draw .colorPaletteRegion .colorPalette {
+    border: 8px solid #000;
+    background-color: #fff;
+    border-radius: 18px;
+    width: 230px;
+    padding: 2px
+}
+
+.Draw .picker {
+    position: relative
+}
+
+.Draw .list .colorPalette {
+    margin-bottom: -19px;
+    margin-right: 20px
+}
+
+.Draw .colorPaletteRegion .colorSwatch a {
+    padding: 0px;
+    width: 62px;
+    height: 62px
+}
+
+.Draw .canvasContainer {
+    display: inline-block
+}
+
+.Shoot {
+    height: 100%
+}
+
+.Shoot .health {
+    text-align: right
+}
+
+.Shoot .shoot-container {
+    max-width: 480px
+}
+
+.Shoot button.selected {
+    background: #000;
+    color: #fff
+}
+
+.Shoot div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.Shoot button {
+    width: 100px;
+    height: 50px
+}
+
+.Shoot .RadialView {
+    height: 100%
+}
+
+.Shoot .radial {
+    margin: 0px auto;
+    cursor: pointer
+}
+
+.Shoot .background {
+    stroke: #1797c5;
+    stroke-width: 32;
+    stroke-opacity: .8
+}
+
+.Shoot .health-display {
+    fill-opacity: 0;
+    stroke: #f0f;
+    stroke-width: 2
+}
+
+.Shoot .crosshair-center {
+    stroke: #fff;
+    stroke-width: .8;
+    stroke-dasharray: .3 1.265;
+    fill-opacity: 0
+}
+
+.Shoot .circle-helper {
+    stroke: #00cfe6;
+    stroke-width: 3;
+    fill-opacity: 0
+}
+
+.Shoot .line-helper-left,
+.Shoot .line-helper-right {
+    stroke: #fff;
+    stroke-width: .3
+}
+
+.Shoot .locked-in-line {
+    stroke: #fff;
+    stroke-width: .3;
+    stroke-dasharray: 1.265 .5
+}
+
+.Shoot .left-text,
+.Shoot .right-text {
+    color: #fff
+}
+
+.Shoot .locked-in-fade {
+    stroke: #000;
+    stroke-width: 34;
+    stroke-opacity: .8;
+    fill-opacity: 0
+}
+
+.Shoot .cls-1 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 17px
+}
+
+.Shoot .lockedIn .cls-1 {
+    stroke: #575757
+}
+
+.Camera {
+    position: relative
+}
+
+.Camera .cameraRegion canvas.cameraCanvas {
+    background-color: #000;
+    top: 0px;
+    left: 0px;
+    border: none
+}
+
+.Camera .cameraRegion .cameraVideo {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px
+}
+
+.Camera .cameraRegion .cameraImage {
+    width: 100%;
+    max-width: 100%
+}
+
+.Camera .cameraRegion .cameraImageDiv {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.Camera .cameraRegion .cameraControls {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    height: 60px;
+    text-align: center
+}
+
+.Camera .cameraRegion .buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden
+}
+
+.Camera .cameraRegion .buttons.visible {
+    visibility: visible
+}
+
+.Camera .cameraRegion .button {
+    background-color: #fff;
+    color: #000
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url("quiplash3/twitchBroadcasterIcon.svg") no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url("quiplash3/jbgTwitchContent_warning.png") no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+.debug {
+    position: fixed;
+    left: 0;
+    top: 55px;
+    opacity: .1;
+    z-index: 1031;
+    user-select: none;
+    text-shadow: -1px -1px 0 #ddd, 1px -1px 0 #ddd, -1px 1px 0 #ddd, 1px 1px 0 #ddd
+}
+
+.debug:hover {
+    opacity: 1
+}
+
+.debug button {
+    width: 50px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 1px solid #333 !important;
+    outline: 1px solid #ddd !important;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    box-shadow: none !important
+}
+
+.debug span {
+    position: relative;
+    top: -4px;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+/*# sourceMappingURL=6088.css.map*/

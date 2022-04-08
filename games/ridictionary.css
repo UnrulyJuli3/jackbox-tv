@@ -1,0 +1,1584 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url("ridictionary/post-banner.tjpp7_banner-image.png")
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url("ridictionary/post-banner.tjpp6_banner-image.png")
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("ridictionary/a4bece5c270c316c1c24.ttf");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("ridictionary/2263cf4bbb29e585de1b.ttf");
+    font-weight: 500;
+    font-style: normal
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+body {
+    color: #000;
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+.page {
+    overflow-y: auto
+}
+
+img {
+    margin: 0px auto
+}
+
+canvas {
+    border: 1px solid #000
+}
+
+.controller-page {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch
+}
+
+.scrollable {
+    overflow-y: auto
+}
+
+.textDescriptions {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden
+}
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+.loadingSpinner {
+    text-align: center;
+    margin: 50px 0px
+}
+
+.playerName {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.playerIcon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    background-size: contain
+}
+
+.playerIcon.none {
+    display: none
+}
+
+.twitchBroadcasterIcon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 13px;
+    bottom: 10px;
+    background-image: url("ridictionary/twitchBroadcasterIcon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.controller-container {
+    display: flex;
+    overflow-y: hidden
+}
+
+#controller-container {
+    display: flex;
+    flex-direction: column
+}
+
+#controller-container>div:last-child {
+    flex-grow: 1
+}
+
+#controller-main {
+    flex: 1 0 auto
+}
+
+.Logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch
+}
+
+.Logo>div {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    text-align: center
+}
+
+div.logo-image {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 600px;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3
+}
+
+.lobbyTitle {
+    text-align: center
+}
+
+.artifactContainer {
+    text-align: center
+}
+
+.artifactButton {
+    background-image: url("ridictionary/artifactButton.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 283px;
+    width: 90%;
+    max-width: 512px;
+    display: inline-block
+}
+
+@media only screen and (max-width: 480px) {
+    .artifactButton {
+        height: 192px
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .artifactButton {
+        height: 128px
+    }
+}
+
+.controller-content {
+    max-width: 768px;
+    margin: 0px auto
+}
+
+.controller-content>div {
+    display: inline-block;
+    width: 100%
+}
+
+.EnterSingleText,
+.MakeSingleChoice,
+.Draw,
+.Lobby,
+.Sortable,
+.UGC {
+    display: inline-block;
+    width: 100%
+}
+
+.Lobby .charactersList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 512px;
+    padding: .5rem;
+    margin: 0px auto
+}
+
+.Lobby .charactersList button.characters {
+    flex: 0 0 25%;
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: stretch;
+    box-sizing: border-box
+}
+
+.Lobby .charactersList button.characters.disabled {
+    cursor: not-allowed
+}
+
+.Lobby .charactersList button.characters.selected {
+    cursor: default
+}
+
+.Lobby .charactersList button.characters:before {
+    content: "";
+    display: table;
+    padding-top: 100%
+}
+
+.Lobby .charactersList button.characters .flex-item {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.choices {
+    text-align: center
+}
+
+.button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.choices .button-group button.choice-button * {
+    pointer-events: none
+}
+
+textarea.form-control {
+    resize: none;
+    overflow: hidden;
+    height: 36px;
+    line-height: 24px;
+    outline: none
+}
+
+textarea:focus {
+    outline: none
+}
+
+.button-group * {
+    border-radius: 0px;
+    margin: 0px;
+    max-width: 100%;
+    min-width: 50px;
+    overflow-wrap: break-word;
+    outline: none;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: normal;
+    word-break: break-word;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.button-group button:not(:only-child):not(:last-child) {
+    border-right-width: 0px
+}
+
+.button-group button:not(:only-child):not(:first-child) {
+    border-left-width: 0px
+}
+
+.button-group :first-child {
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2
+}
+
+.censor-button {
+    width: auto;
+    max-width: 15px;
+    padding: 0px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 35px;
+    flex: 0 1 35px
+}
+
+.double-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.double-nav-middle {
+    flex: 1 0 auto;
+    position: relative;
+    overflow-x: hidden
+}
+
+.double-nav-top,
+.double-nav-bottom {
+    flex: 0 1 auto;
+    width: 100%;
+    z-index: 1030;
+    text-align: center
+}
+
+.double-nav-detail {
+    top: 0px;
+    min-height: 100%;
+    display: absolute
+}
+
+.double-nav-bottom {
+    margin-top: auto
+}
+
+.canvasContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.Draw .nav-tabs {
+    border-width: 0px
+}
+
+li>a.button-color.active {
+    border: 3px solid
+}
+
+li>a.button-color.active[data-color="#000000"] {
+    border-color: #f32938
+}
+
+.Draw canvas.fullLayer {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.Draw .button {
+    height: 33px;
+    min-width: 40px;
+    margin: 2px;
+    padding: 5px
+}
+
+.Draw .submitDrawing {
+    height: auto
+}
+
+.Draw .currentColor {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    margin: 0px auto
+}
+
+.Draw .thickness-circle {
+    border-radius: 50%;
+    background-color: #000;
+    width: 5px;
+    height: 5px;
+    margin: 0px auto
+}
+
+.Draw .colorSwatch {
+    border-radius: 8px;
+    width: 62px;
+    height: 62px;
+    margin: 3px;
+    display: inline-block
+}
+
+.Draw .list .colorSwatch {
+    display: inline-block
+}
+
+.Draw .list .colorSwatch a {
+    padding: 0px;
+    width: 48px;
+    height: 48px
+}
+
+.Draw .colorPaletteRegion {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0)
+}
+
+.Draw .colorPaletteRegion.visible {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.Draw .colorPaletteRegion .colorPalette {
+    border: 8px solid #000;
+    background-color: #fff;
+    border-radius: 18px;
+    width: 230px;
+    padding: 2px
+}
+
+.Draw .picker {
+    position: relative
+}
+
+.Draw .list .colorPalette {
+    margin-bottom: -19px;
+    margin-right: 20px
+}
+
+.Draw .colorPaletteRegion .colorSwatch a {
+    padding: 0px;
+    width: 62px;
+    height: 62px
+}
+
+.Draw .canvasContainer {
+    display: inline-block
+}
+
+.Shoot {
+    height: 100%
+}
+
+.Shoot .health {
+    text-align: right
+}
+
+.Shoot .shoot-container {
+    max-width: 480px
+}
+
+.Shoot button.selected {
+    background: #000;
+    color: #fff
+}
+
+.Shoot div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.Shoot button {
+    width: 100px;
+    height: 50px
+}
+
+.Shoot .RadialView {
+    height: 100%
+}
+
+.Shoot .radial {
+    margin: 0px auto;
+    cursor: pointer
+}
+
+.Shoot .background {
+    stroke: #1797c5;
+    stroke-width: 32;
+    stroke-opacity: .8
+}
+
+.Shoot .health-display {
+    fill-opacity: 0;
+    stroke: #f0f;
+    stroke-width: 2
+}
+
+.Shoot .crosshair-center {
+    stroke: #fff;
+    stroke-width: .8;
+    stroke-dasharray: .3 1.265;
+    fill-opacity: 0
+}
+
+.Shoot .circle-helper {
+    stroke: #00cfe6;
+    stroke-width: 3;
+    fill-opacity: 0
+}
+
+.Shoot .line-helper-left,
+.Shoot .line-helper-right {
+    stroke: #fff;
+    stroke-width: .3
+}
+
+.Shoot .locked-in-line {
+    stroke: #fff;
+    stroke-width: .3;
+    stroke-dasharray: 1.265 .5
+}
+
+.Shoot .left-text,
+.Shoot .right-text {
+    color: #fff
+}
+
+.Shoot .locked-in-fade {
+    stroke: #000;
+    stroke-width: 34;
+    stroke-opacity: .8;
+    fill-opacity: 0
+}
+
+.Shoot .cls-1 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 17px
+}
+
+.Shoot .lockedIn .cls-1 {
+    stroke: #575757
+}
+
+.Camera {
+    position: relative
+}
+
+.Camera .cameraRegion canvas.cameraCanvas {
+    background-color: #000;
+    top: 0px;
+    left: 0px;
+    border: none
+}
+
+.Camera .cameraRegion .cameraVideo {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px
+}
+
+.Camera .cameraRegion .cameraImage {
+    width: 100%;
+    max-width: 100%
+}
+
+.Camera .cameraRegion .cameraImageDiv {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.Camera .cameraRegion .cameraControls {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    height: 60px;
+    text-align: center
+}
+
+.Camera .cameraRegion .buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden
+}
+
+.Camera .cameraRegion .buttons.visible {
+    visibility: visible
+}
+
+.Camera .cameraRegion .button {
+    background-color: #fff;
+    color: #000
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url("ridictionary/twitchBroadcasterIcon.svg") no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url("ridictionary/jbgTwitchContent_warning.png") no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+.debug {
+    position: fixed;
+    left: 0;
+    top: 55px;
+    opacity: .1;
+    z-index: 1031;
+    user-select: none;
+    text-shadow: -1px -1px 0 #ddd, 1px -1px 0 #ddd, -1px 1px 0 #ddd, 1px 1px 0 #ddd
+}
+
+.debug:hover {
+    opacity: 1
+}
+
+.debug button {
+    width: 50px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 1px solid #333 !important;
+    outline: 1px solid #ddd !important;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    box-shadow: none !important
+}
+
+.debug span {
+    position: relative;
+    top: -4px;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+@font-face {
+    font-family: "Sagona Heavy";
+    src: url("ridictionary/7a83df26cffb8b9cdb02.otf"), url("ridictionary/d078264eaabe9672434c.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Sagona Book";
+    src: url("ridictionary/09f1e9e386263cb4633e.woff2"), url("ridictionary/21eb5366f7fbb938e1a0.woff") format("woff")
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th,
+span,
+button {
+    font-family: "Sagona Heavy", serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    -webkit-font-kerning: auto;
+    font-kerning: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    word-wrap: break-word
+}
+
+.ridictionary {
+    background-color: #fff
+}
+
+.ridictionary * {
+    box-sizing: border-box
+}
+
+.ridictionary textarea,
+.ridictionary select,
+.ridictionary input,
+.ridictionary button {
+    outline: none
+}
+
+.ridictionary .playerTopBarView.Aqua {
+    background-color: #82c4c2
+}
+
+.ridictionary .playerTopBarView.Yellow {
+    background-color: #eac57d
+}
+
+.ridictionary .playerTopBarView.Green {
+    background-color: #97ceaa
+}
+
+.ridictionary .playerTopBarView.Salmon {
+    background-color: #d87668
+}
+
+.ridictionary .playerTopBarView.Blue {
+    background-color: #a4d5f7
+}
+
+.ridictionary .playerTopBarView.Lime {
+    background-color: #dcea8c
+}
+
+.ridictionary .playerTopBarView.DarkBlue {
+    background-color: #6481b5
+}
+
+.ridictionary .playerTopBarView.Gray {
+    background-color: #adadad
+}
+
+.ridictionary .playerTopBarView #player {
+    height: 50px
+}
+
+.ridictionary .playerTopBarView .playerTopBar .playerName {
+    font-family: "Sagona Heavy";
+    font-size: 28px;
+    text-align: center;
+    color: #000;
+    vertical-align: text-top
+}
+
+.ridictionary .playerTopBarView .playerIcon {
+    margin-right: -12px;
+    margin-top: -8px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.png");
+    background-size: cover
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_A {
+    margin-right: -5px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_A.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_B {
+    margin-right: -5px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_B.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_C {
+    margin-right: -7px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_C.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_D {
+    margin-right: -6px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_D.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_E {
+    margin-right: -7px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_E.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_F {
+    margin-right: -16px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_F.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_G {
+    margin-right: -10px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_G.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_H {
+    margin-right: -6px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_H.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_I {
+    margin-right: -13px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_I.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_J {
+    margin-right: -16px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_J.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_K {
+    margin-right: -7px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_K.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_L {
+    margin-right: -13px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_L.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_M {
+    margin-right: -6px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_M.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_N {
+    margin-right: -7px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_N.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_O {
+    margin-right: -8px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_O.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_P {
+    margin-right: -9px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_P.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_Q {
+    margin-right: -10px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_Q.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_R {
+    margin-right: -5px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_R.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_S {
+    margin-right: -10px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_S.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_T {
+    margin-right: -12px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_T.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_U {
+    margin-right: -9px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_U.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_V {
+    margin-right: -4px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_V.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_W {
+    margin-right: -4px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_W.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_X {
+    margin-right: -7px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_X.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_Y {
+    margin-right: -9px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_Y.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_Z {
+    margin-right: -5px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_Z.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_1 {
+    margin-right: -11px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_1.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_2 {
+    margin-right: -11px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_2.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_3 {
+    margin-right: -14px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_3.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_4 {
+    margin-right: -8px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_4.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_5 {
+    margin-right: -12px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_5.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_6 {
+    margin-right: -10px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_6.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_7 {
+    margin-right: -10px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_7.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_8 {
+    margin-right: -4px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_8.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_9 {
+    margin-right: -4px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_9.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_0 {
+    margin-right: -10px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.Avatar_0.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.Avatar_Other {
+    margin-right: -12px;
+    background-image: url("ridictionary/ridictionary_playerTopBarView_playerIcon.png")
+}
+
+.ridictionary .playerTopBarView .playerIcon.none {
+    display: none
+}
+
+.ridictionary .artifactButton {
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("ridictionary/ridictionary_artifactButton.png");
+    border: none
+}
+
+.ridictionary .messageText {
+    margin-top: 0px
+}
+
+.ridictionary .controller-content {
+    padding: 0px 5px
+}
+
+.ridictionary .Logo {
+    background-color: #b1e2ec
+}
+
+.ridictionary .Logo .logo-image {
+    background-image: url("ridictionary/ridictionary_Logo_logo-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: auto
+}
+
+.ridictionary .Lobby .controller-content,
+.ridictionary .MakeSingleChoice .controller-content,
+.ridictionary .EnterSingleText .controller-content,
+.ridictionary .Camera .controller-content {
+    height: 100%;
+    background-image: url("ridictionary/ridictionary_Logo_logo-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain
+}
+
+.ridictionary .Lobby .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.ridictionary .MakeSingleChoice .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.ridictionary .EnterSingleText .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.ridictionary .Camera .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-right-width: 2px
+}
+
+.ridictionary .Lobby.VoteForDefinition,
+.ridictionary .Lobby.ChooseDefinition,
+.ridictionary .Lobby.LikeDefinition,
+.ridictionary .MakeSingleChoice.VoteForDefinition,
+.ridictionary .MakeSingleChoice.ChooseDefinition,
+.ridictionary .MakeSingleChoice.LikeDefinition,
+.ridictionary .EnterSingleText.VoteForDefinition,
+.ridictionary .EnterSingleText.ChooseDefinition,
+.ridictionary .EnterSingleText.LikeDefinition,
+.ridictionary .Camera.VoteForDefinition,
+.ridictionary .Camera.ChooseDefinition,
+.ridictionary .Camera.LikeDefinition {
+    background-color: #b1e2ec
+}
+
+.ridictionary .Lobby.VoteForSynonym,
+.ridictionary .Lobby.ChooseSynonym,
+.ridictionary .Lobby.LikeSynonym,
+.ridictionary .MakeSingleChoice.VoteForSynonym,
+.ridictionary .MakeSingleChoice.ChooseSynonym,
+.ridictionary .MakeSingleChoice.LikeSynonym,
+.ridictionary .EnterSingleText.VoteForSynonym,
+.ridictionary .EnterSingleText.ChooseSynonym,
+.ridictionary .EnterSingleText.LikeSynonym,
+.ridictionary .Camera.VoteForSynonym,
+.ridictionary .Camera.ChooseSynonym,
+.ridictionary .Camera.LikeSynonym {
+    background-color: #bae5ca
+}
+
+.ridictionary .Lobby.VoteForSentence,
+.ridictionary .Lobby.ChooseSentence,
+.ridictionary .Lobby.LikeSentence,
+.ridictionary .MakeSingleChoice.VoteForSentence,
+.ridictionary .MakeSingleChoice.ChooseSentence,
+.ridictionary .MakeSingleChoice.LikeSentence,
+.ridictionary .EnterSingleText.VoteForSentence,
+.ridictionary .EnterSingleText.ChooseSentence,
+.ridictionary .EnterSingleText.LikeSentence,
+.ridictionary .Camera.VoteForSentence,
+.ridictionary .Camera.ChooseSentence,
+.ridictionary .Camera.LikeSentence {
+    background-color: #c0bce0
+}
+
+.ridictionary .Lobby .prompt .text,
+.ridictionary .MakeSingleChoice .prompt .text,
+.ridictionary .EnterSingleText .prompt .text,
+.ridictionary .Camera .prompt .text {
+    font-size: 34px
+}
+
+.ridictionary .Lobby .prompt .text .emphasis,
+.ridictionary .MakeSingleChoice .prompt .text .emphasis,
+.ridictionary .EnterSingleText .prompt .text .emphasis,
+.ridictionary .Camera .prompt .text .emphasis {
+    font-size: 40px;
+    color: #ec6946
+}
+
+.ridictionary .Lobby .prompt .text span.bigger,
+.ridictionary .MakeSingleChoice .prompt .text span.bigger,
+.ridictionary .EnterSingleText .prompt .text span.bigger,
+.ridictionary .Camera .prompt .text span.bigger {
+    font-size: 1.2em;
+    display: block
+}
+
+.ridictionary .Lobby .prompt .text div:nth-child(2),
+.ridictionary .MakeSingleChoice .prompt .text div:nth-child(2),
+.ridictionary .EnterSingleText .prompt .text div:nth-child(2),
+.ridictionary .Camera .prompt .text div:nth-child(2) {
+    margin-bottom: 15px;
+    background-color: #000;
+    color: #fff
+}
+
+.ridictionary .Lobby textarea.jbg-input,
+.ridictionary .MakeSingleChoice textarea.jbg-input,
+.ridictionary .EnterSingleText textarea.jbg-input,
+.ridictionary .Camera textarea.jbg-input {
+    min-height: 56px;
+    padding: 12px;
+    background-color: #fdf8c2;
+    border: 2px solid #000;
+    border-radius: 12px;
+    font-size: 26px;
+    font-family: "Sagona Book";
+    color: #412a17
+}
+
+.ridictionary .Lobby fieldset[disabled] textarea.jbg-input,
+.ridictionary .MakeSingleChoice fieldset[disabled] textarea.jbg-input,
+.ridictionary .EnterSingleText fieldset[disabled] textarea.jbg-input,
+.ridictionary .Camera fieldset[disabled] textarea.jbg-input {
+    background-color: #eee
+}
+
+.ridictionary .Lobby fieldset[disabled] .button[type=submit],
+.ridictionary .MakeSingleChoice fieldset[disabled] .button[type=submit],
+.ridictionary .EnterSingleText fieldset[disabled] .button[type=submit],
+.ridictionary .Camera fieldset[disabled] .button[type=submit] {
+    background-color: #939393;
+    opacity: 1
+}
+
+.ridictionary .Lobby .form-group.has-error .help-block.errorText,
+.ridictionary .MakeSingleChoice .form-group.has-error .help-block.errorText,
+.ridictionary .EnterSingleText .form-group.has-error .help-block.errorText,
+.ridictionary .Camera .form-group.has-error .help-block.errorText {
+    color: #ec6946
+}
+
+.ridictionary .Lobby .form-group.has-error textarea.jbg-input,
+.ridictionary .MakeSingleChoice .form-group.has-error textarea.jbg-input,
+.ridictionary .EnterSingleText .form-group.has-error textarea.jbg-input,
+.ridictionary .Camera .form-group.has-error textarea.jbg-input {
+    border-color: #ec6946
+}
+
+.ridictionary .Lobby .button,
+.ridictionary .MakeSingleChoice .button,
+.ridictionary .EnterSingleText .button,
+.ridictionary .Camera .button {
+    font-family: "Sagona Book";
+    font-size: 18px;
+    border: 2px solid #412a17;
+    padding: 5px 15px;
+    margin: 2px;
+    border-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: #fdf8c2;
+    color: #412a17
+}
+
+.ridictionary .Lobby .button[type=submit],
+.ridictionary .MakeSingleChoice .button[type=submit],
+.ridictionary .EnterSingleText .button[type=submit],
+.ridictionary .Camera .button[type=submit] {
+    font-size: 32px;
+    font-family: "Sagona Heavy";
+    color: #000;
+    background-color: #ec6946;
+    border: 0px solid #000
+}
+
+.ridictionary .Lobby .button[type=submit]:active,
+.ridictionary .Lobby .button[type=submit]:focus,
+.ridictionary .Lobby .button[type=submit]:hover,
+.ridictionary .MakeSingleChoice .button[type=submit]:active,
+.ridictionary .MakeSingleChoice .button[type=submit]:focus,
+.ridictionary .MakeSingleChoice .button[type=submit]:hover,
+.ridictionary .EnterSingleText .button[type=submit]:active,
+.ridictionary .EnterSingleText .button[type=submit]:focus,
+.ridictionary .EnterSingleText .button[type=submit]:hover,
+.ridictionary .Camera .button[type=submit]:active,
+.ridictionary .Camera .button[type=submit]:focus,
+.ridictionary .Camera .button[type=submit]:hover {
+    color: #000;
+    background-color: #ad4b31
+}
+
+.ridictionary .Lobby .like-button,
+.ridictionary .MakeSingleChoice .like-button,
+.ridictionary .EnterSingleText .like-button,
+.ridictionary .Camera .like-button {
+    display: none
+}
+
+@media(hover) {
+
+    .ridictionary .Lobby .button:hover,
+    .ridictionary .MakeSingleChoice .button:hover,
+    .ridictionary .EnterSingleText .button:hover,
+    .ridictionary .Camera .button:hover {
+        background-color: #333;
+        color: #fff
+    }
+}
+
+.ridictionary .Lobby .button:focus,
+.ridictionary .MakeSingleChoice .button:focus,
+.ridictionary .EnterSingleText .button:focus,
+.ridictionary .Camera .button:focus {
+    outline: 0px solid #fff;
+    color: #fff
+}
+
+.ridictionary .Lobby .button:active,
+.ridictionary .MakeSingleChoice .button:active,
+.ridictionary .EnterSingleText .button:active,
+.ridictionary .Camera .button:active {
+    background-color: #fff;
+    color: #000
+}
+
+.ridictionary .Lobby .button-group.selected button,
+.ridictionary .MakeSingleChoice .button-group.selected button,
+.ridictionary .EnterSingleText .button-group.selected button,
+.ridictionary .Camera .button-group.selected button {
+    background-color: #333;
+    color: #ccc
+}
+
+.ridictionary .Lobby .button-group .button.censor-button,
+.ridictionary .MakeSingleChoice .button-group .button.censor-button,
+.ridictionary .EnterSingleText .button-group .button.censor-button,
+.ridictionary .Camera .button-group .button.censor-button {
+    background: url("ridictionary/ridictionary_Lobby_button-group_button.censor-button.png") no-repeat #900 center/cover;
+    border: 2px solid #000;
+    border-radius: 12px
+}
+
+.ridictionary .Lobby.LikeDefinition .controller-content,
+.ridictionary .Lobby.LikeSynonym .controller-content,
+.ridictionary .Lobby.LikeSentence .controller-content,
+.ridictionary .MakeSingleChoice.LikeDefinition .controller-content,
+.ridictionary .MakeSingleChoice.LikeSynonym .controller-content,
+.ridictionary .MakeSingleChoice.LikeSentence .controller-content,
+.ridictionary .EnterSingleText.LikeDefinition .controller-content,
+.ridictionary .EnterSingleText.LikeSynonym .controller-content,
+.ridictionary .EnterSingleText.LikeSentence .controller-content,
+.ridictionary .Camera.LikeDefinition .controller-content,
+.ridictionary .Camera.LikeSynonym .controller-content,
+.ridictionary .Camera.LikeSentence .controller-content {
+    padding-left: 0px;
+    padding-right: 0px
+}
+
+.ridictionary .Lobby.LikeDefinition .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.ridictionary .Lobby.LikeSynonym .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.ridictionary .Lobby.LikeSentence .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.ridictionary .MakeSingleChoice.LikeDefinition .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.ridictionary .MakeSingleChoice.LikeSynonym .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.ridictionary .MakeSingleChoice.LikeSentence .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.ridictionary .EnterSingleText.LikeDefinition .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.ridictionary .EnterSingleText.LikeSynonym .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.ridictionary .EnterSingleText.LikeSentence .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.ridictionary .Camera.LikeDefinition .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.ridictionary .Camera.LikeSynonym .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle),
+.ridictionary .Camera.LikeSentence .btn-group .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right-width: 0px
+}
+
+.ridictionary .Lobby.LikeDefinition .button-group.selected button,
+.ridictionary .Lobby.LikeSynonym .button-group.selected button,
+.ridictionary .Lobby.LikeSentence .button-group.selected button,
+.ridictionary .MakeSingleChoice.LikeDefinition .button-group.selected button,
+.ridictionary .MakeSingleChoice.LikeSynonym .button-group.selected button,
+.ridictionary .MakeSingleChoice.LikeSentence .button-group.selected button,
+.ridictionary .EnterSingleText.LikeDefinition .button-group.selected button,
+.ridictionary .EnterSingleText.LikeSynonym .button-group.selected button,
+.ridictionary .EnterSingleText.LikeSentence .button-group.selected button,
+.ridictionary .Camera.LikeDefinition .button-group.selected button,
+.ridictionary .Camera.LikeSynonym .button-group.selected button,
+.ridictionary .Camera.LikeSentence .button-group.selected button {
+    background-color: #b0b0b0;
+    color: #412a17
+}
+
+.ridictionary .Lobby.LikeDefinition .like-button,
+.ridictionary .Lobby.LikeSynonym .like-button,
+.ridictionary .Lobby.LikeSentence .like-button,
+.ridictionary .MakeSingleChoice.LikeDefinition .like-button,
+.ridictionary .MakeSingleChoice.LikeSynonym .like-button,
+.ridictionary .MakeSingleChoice.LikeSentence .like-button,
+.ridictionary .EnterSingleText.LikeDefinition .like-button,
+.ridictionary .EnterSingleText.LikeSynonym .like-button,
+.ridictionary .EnterSingleText.LikeSentence .like-button,
+.ridictionary .Camera.LikeDefinition .like-button,
+.ridictionary .Camera.LikeSynonym .like-button,
+.ridictionary .Camera.LikeSentence .like-button {
+    background-image: url("ridictionary/ridictionary_Lobby.LikeDefinition_like-button.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99
+}
+
+.ridictionary .Lobby.LikeDefinition .censor-button,
+.ridictionary .Lobby.LikeSynonym .censor-button,
+.ridictionary .Lobby.LikeSentence .censor-button,
+.ridictionary .MakeSingleChoice.LikeDefinition .censor-button,
+.ridictionary .MakeSingleChoice.LikeSynonym .censor-button,
+.ridictionary .MakeSingleChoice.LikeSentence .censor-button,
+.ridictionary .EnterSingleText.LikeDefinition .censor-button,
+.ridictionary .EnterSingleText.LikeSynonym .censor-button,
+.ridictionary .EnterSingleText.LikeSentence .censor-button,
+.ridictionary .Camera.LikeDefinition .censor-button,
+.ridictionary .Camera.LikeSynonym .censor-button,
+.ridictionary .Camera.LikeSentence .censor-button {
+    background-image: url("ridictionary/ridictionary_Lobby.LikeDefinition_censor-button.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 99
+}
+
+.ridictionary .Lobby.LikeDefinition .button,
+.ridictionary .Lobby.LikeSynonym .button,
+.ridictionary .Lobby.LikeSentence .button,
+.ridictionary .MakeSingleChoice.LikeDefinition .button,
+.ridictionary .MakeSingleChoice.LikeSynonym .button,
+.ridictionary .MakeSingleChoice.LikeSentence .button,
+.ridictionary .EnterSingleText.LikeDefinition .button,
+.ridictionary .EnterSingleText.LikeSynonym .button,
+.ridictionary .EnterSingleText.LikeSentence .button,
+.ridictionary .Camera.LikeDefinition .button,
+.ridictionary .Camera.LikeSynonym .button,
+.ridictionary .Camera.LikeSentence .button {
+    background-color: #b0b0b0;
+    border-radius: 0px;
+    border: none
+}
+
+.ridictionary .Lobby.LikeDefinition .choice-button,
+.ridictionary .Lobby.LikeSynonym .choice-button,
+.ridictionary .Lobby.LikeSentence .choice-button,
+.ridictionary .MakeSingleChoice.LikeDefinition .choice-button,
+.ridictionary .MakeSingleChoice.LikeSynonym .choice-button,
+.ridictionary .MakeSingleChoice.LikeSentence .choice-button,
+.ridictionary .EnterSingleText.LikeDefinition .choice-button,
+.ridictionary .EnterSingleText.LikeSynonym .choice-button,
+.ridictionary .EnterSingleText.LikeSentence .choice-button,
+.ridictionary .Camera.LikeDefinition .choice-button,
+.ridictionary .Camera.LikeSynonym .choice-button,
+.ridictionary .Camera.LikeSentence .choice-button {
+    padding-bottom: 60px;
+    height: 100%;
+    z-index: 1
+}
+
+.ridictionary .Lobby.LikeDefinition .choice-liked .like-button,
+.ridictionary .Lobby.LikeSynonym .choice-liked .like-button,
+.ridictionary .Lobby.LikeSentence .choice-liked .like-button,
+.ridictionary .MakeSingleChoice.LikeDefinition .choice-liked .like-button,
+.ridictionary .MakeSingleChoice.LikeSynonym .choice-liked .like-button,
+.ridictionary .MakeSingleChoice.LikeSentence .choice-liked .like-button,
+.ridictionary .EnterSingleText.LikeDefinition .choice-liked .like-button,
+.ridictionary .EnterSingleText.LikeSynonym .choice-liked .like-button,
+.ridictionary .EnterSingleText.LikeSentence .choice-liked .like-button,
+.ridictionary .Camera.LikeDefinition .choice-liked .like-button,
+.ridictionary .Camera.LikeSynonym .choice-liked .like-button,
+.ridictionary .Camera.LikeSentence .choice-liked .like-button {
+    background-image: url("ridictionary/ridictionary_Lobby.LikeDefinition_choice-liked_like-button.png")
+}
+
+.ridictionary.swal2-popup {
+    font-family: "Sagona Heavy";
+    font-size: 14px;
+    border-radius: 12px;
+    border: 2px solid #000;
+    color: #412a17;
+    background-color: #fdf8c2
+}
+
+.ridictionary.swal2-popup h2 {
+    font-family: "Sagona Heavy"
+}
+
+.ridictionary.swal2-popup #swal2-content {
+    font-family: "Sagona Book"
+}
+
+/*# sourceMappingURL=3718.css.map*/

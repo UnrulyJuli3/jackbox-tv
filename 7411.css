@@ -1,0 +1,1012 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url(assets/372b296441e568c4f230.png)
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url(assets/6705b194308b696103dd.png)
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(assets/a4bece5c270c316c1c24.ttf);
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(assets/2263cf4bbb29e585de1b.ttf);
+    font-weight: 500;
+    font-style: normal
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th {
+    font-weight: 700
+}
+
+.button-primary {
+    background: #000;
+    color: #fff
+}
+
+.button-xlarge {
+    border-width: 0px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 5px;
+    border-radius: 10px
+}
+
+.button-large {
+    border-radius: 10px
+}
+
+.post-banner {
+    cursor: pointer
+}
+
+.button-blue {
+    color: #fff;
+    background: #3e55fe;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.button-blue:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-gray {
+    color: #3e55fe;
+    background: #ccc;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent
+}
+
+.button-gray:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-help-text {
+    display: inline
+}
+
+@media screen and (max-width: 480px) {
+    .button-help-text {
+        display: none
+    }
+}
+
+.button-black {
+    color: #fff;
+    background: #333
+}
+
+.debug {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: .6
+}
+
+.debug span {
+    pointer-events: none;
+    user-select: none
+}
+
+.text-signin {
+    color: #3e55fe
+}
+
+.jbg-input {
+    font-size: 1.3em
+}
+
+.close {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000;
+    background: transparent;
+    border: none !important;
+    text-decoration: none;
+    content: "x";
+    right: 10px;
+    position: absolute
+}
+
+.close:hover {
+    color: #666
+}
+
+.button-yes {
+    background: #1cb841
+}
+
+.button-no {
+    background: #ca3c3c
+}
+
+.image-hand {
+    background: url(assets/2bde3c7067c90e15ad3f.png);
+    cursor: pointer;
+    border: none;
+    width: 126px;
+    height: 700px
+}
+
+canvas {
+    touch-action: none
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url(assets/2154fb6d10c0d32f494a.svg) no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url(assets/4afc534f7e5f41737be2.png) no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+@font-face {
+    font-family: "Cutive";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Cutive"), local("Cutive-Regular"), url(https://fonts.gstatic.com/s/cutive/v8/pFCmZyjowpyhKzF9GsVvyevvDin1pK8aKteLpeZ5c0A.woff) format("woff")
+}
+
+.state-draw {
+    text-align: center
+}
+
+#player {
+    background: #f0c;
+    color: #fff;
+    padding: .5em 0 .21em 0;
+    font-size: 1em;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    border-image: url(assets/c93fed4a666aea127189.png) 7 repeat;
+    border-style: solid;
+    border-width: 0px 0px 7px 0px
+}
+
+.drawful br {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    line-height: 0px;
+    content: " "
+}
+
+.drawful2-page .drawful-text-box {
+    padding: 10px 10px;
+    display: block
+}
+
+p#audience-welcome br {
+    height: 50px
+}
+
+.game p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th,
+span {
+    font-family: "Cutive";
+    font-weight: 700;
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-transform: lowercase
+}
+
+.logo-image {
+    background: url(assets/2194d8e88a2824ff0844.png) no-repeat center;
+    background-size: contain;
+    height: 80%;
+    width: 90%;
+    margin: auto
+}
+
+#page-drawful {
+    background-image: url(assets/b6bf7add4e854be9c4ad.png);
+    font-family: "Cutive", serif;
+    font-size: 1.2em
+}
+
+#page-drawful input.jbg-input {
+    font-family: "Cutive";
+    font-size: 1em
+}
+
+.drawful2-page {
+    overflow-y: auto;
+    height: 100%
+}
+
+.container {
+    padding: 2px
+}
+
+.sketchpad-container {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    border-image: url(assets/ed98a40a78610e4b3b8c.png) 10 stretch;
+    border-width: 10px;
+    border-style: solid;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: inline-block
+}
+
+.sketchpad {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    vertical-align: bottom
+}
+
+#drawful-color-buttons {
+    display: inline
+}
+
+.drawful-start-menu {
+    margin-top: 50px
+}
+
+.button-drawful {
+    color: #000;
+    background: #fff;
+    margin: 2px 0px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: "Cutive", serif;
+    padding: 3px 15px;
+    border-radius: 0px;
+    border-color: #000;
+    border-style: solid;
+    border-width: 7px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    border-image: url(assets/560a5c1001f5a8111df6.png) 10 repeat
+}
+
+a.gallery-link img {
+    max-width: 100%;
+    height: auto;
+    border: 0px solid #000;
+    border-radius: 15px
+}
+
+.button-drawful-black {
+    color: #fff;
+    background: #000;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box
+}
+
+.censor-button {
+    color: #fff;
+    background: #000;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box
+}
+
+.button-drawful-hover {
+    border-top-color: #fff
+}
+
+.button-drawful:active {
+    background: #333;
+    color: #000;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box
+}
+
+.button-drawful-red {
+    background-color: red !important;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box
+}
+
+.button-drawful.submit-drawing {
+    height: 50px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box
+}
+
+.button-drawful.submit-drawing:hover {
+    background: #333;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box
+}
+
+.button-color {
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    box-sizing: content-box;
+    width: 15px;
+    border-radius: 6px;
+    height: 23px;
+    margin: 6px
+}
+
+.button-color.selected {
+    border: 6px solid #000;
+    margin: 0px;
+    border-image: url(assets/aaecbaa9a20eef3535c5.png) 6 stretch;
+    background: url(assets/61022a9b0fd045ffaceb.png) no-repeat;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    background-size: cover;
+    width: 15px;
+    border-radius: 0px;
+    height: 23px
+}
+
+#page-drawful .pure-form input.jbg-input[type=text] {
+    border-image: url(assets/7c392fec0fc10f3428d2.png) 8 repeat;
+    border-width: 8px;
+    border-style: solid;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    box-shadow: none
+}
+
+.drawful-box-border {
+    border-image: url(assets/560a5c1001f5a8111df6.png) 12 stretch;
+    border-width: 6px;
+    border-style: solid;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    box-shadow: none
+}
+
+.drawful-box-border :first-child {
+    border-radius: 0px;
+    border-width: 0px
+}
+
+.drawful-box-border :last-child {
+    border-radius: 0px;
+    border-width: 0px;
+    background-color: #000;
+    color: #fff
+}
+
+.input-group-btn>button.btn {
+    border-radius: 0px !important
+}
+
+.input-group>span {
+    vertical-align: middle
+}
+
+.input-group {
+    background: #fff;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box
+}
+
+.drawful-ugc-previous {
+    margin-top: 50px
+}
+
+.drawful-data-table {
+    display: table
+}
+
+.drawful-data-row {
+    display: table-row-group
+}
+
+.drawful-data-cell {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.censor-button-image {
+    width: 30px;
+    height: 30px;
+    background: url(assets/8a9e83547fda6f7b6d56.png) 0px 0px/100% 100% no-repeat;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-right: 5px;
+    text-align: right;
+    vertical-align: middle;
+    display: inline-block
+}
+
+.drawful-censor-button {
+    width: 30px;
+    height: 30px;
+    background: url(assets/8a9e83547fda6f7b6d56.png) 0px 0px/100% 100% no-repeat;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-right: 5px;
+    text-align: right;
+    vertical-align: middle
+}
+
+.drawful-player-censor-button {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    background: #000 url(assets/8a9e83547fda6f7b6d56.png) 0px 0px/100% 100% no-repeat;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-right: 5px;
+    text-align: right;
+    vertical-align: middle
+}
+
+.censor-button-black {
+    background-position: bottom
+}
+
+.drawful-censor-confirm {
+    background: red url(assets/b652d8c303baa8b50f44.png) 0px 0px/100% 200% no-repeat;
+    background-position: bottom
+}
+
+.button-drawful-like {
+    color: #666;
+    background: none;
+    margin: 5px 0px;
+    cursor: pointer;
+    vertical-align: middle;
+    padding: 0px 5px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.button-drawful-liked {
+    color: #000;
+    background: none;
+    margin: 5px 0px;
+    padding: 0px 5px;
+    cursor: pointer;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.like-checkbox {
+    padding-right: 5px;
+    text-align: left;
+    vertical-align: middle
+}
+
+i.checkbox.box-unchecked {
+    width: 25px;
+    height: 36px;
+    background: url(assets/c607dc6403f6972e819b.png) 0px 0px/100% 200% no-repeat;
+    background-position: top;
+    margin-top: 0px
+}
+
+i.checkbox.box-checked {
+    width: 25px;
+    height: 36px;
+    background: url(assets/c607dc6403f6972e819b.png) 0px 0px/100% 200% no-repeat;
+    background-position: bottom;
+    margin-top: 0px
+}
+
+.like-text {
+    width: 100%;
+    text-align: left;
+    font-family: "Cutive", serif;
+    vertical-align: middle;
+    padding: 0px 5px
+}
+
+.button-drawful-loading {
+    background: url(assets/04aaf5d106f940c15f7c.gif) no-repeat center;
+    background-size: contain;
+    color: rgba(0, 0, 0, 0);
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.drawful-preload {
+    content: url "../images/loading.gif";
+    display: none
+}
+
+.lowercase {
+    text-transform: lowercase
+}
+
+.capitalized {
+    text-transform: uppercase
+}
+
+.drawful-image-screen {
+    width: 83px;
+    height: 73px;
+    background: url(assets/636e51eaa73e027cf5ec.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.drawful-image-screen:active {
+    background-position: bottom
+}
+
+.drawful-image-controller {
+    width: 83px;
+    height: 73px;
+    background: url(assets/5bd82626b9bfb4ae4361.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.drawful-image-controller:active {
+    background-position: bottom
+}
+
+.lobby-episode-id {
+    color: #fb405a;
+    font-size: .6em
+}
+
+table.drawful-list {
+    text-align: right;
+    margin: 0em;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+    padding-bottom: 100px;
+    word-break: break-all
+}
+
+table.drawful-list tr>td {
+    border-width: 7px 0px;
+    border-style: solid;
+    border-color: #000;
+    border-image: url(assets/560a5c1001f5a8111df6.png) 10 repeat;
+    background-clip: padding-box;
+    background-color: #fff;
+    cursor: pointer
+}
+
+table.drawful-list .drawful-list-black {
+    background-color: #000;
+    color: #fff
+}
+
+table.drawful-list .drawful-list-fill {
+    width: 100%
+}
+
+table.drawful-list tr>td {
+    word-break: break-word
+}
+
+table.drawful-list tr :first-child {
+    border-left-width: 7px
+}
+
+table.drawful-list tr :last-child {
+    border-right-width: 7px
+}
+
+table.drawful-list .drawful-list-button:hover {
+    transition: background .1s ease-in;
+    background-color: #ccc
+}
+
+table.drawful-list .drawful-list-button:active {
+    background-color: #666
+}
+
+table.drawful-list.drawful-list-no-border tr>td {
+    border: none;
+    background: none
+}
+
+table.drawful-list.drawful-list-no-border tr {
+    border-radius: 25px
+}
+
+.ugc-remove-x {
+    width: 30px;
+    height: 30px;
+    background: #000 url(assets/b652d8c303baa8b50f44.png) 0px 0px/100% 200% no-repeat;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 5px;
+    text-align: right;
+    vertical-align: middle
+}
+
+.ugc-checkbox {
+    display: table-cell;
+    padding-right: 5px;
+    text-align: left;
+    vertical-align: middle
+}
+
+.ugc-text {
+    width: 100%;
+    display: table-cell;
+    text-align: left;
+    font-family: "Cutive", serif;
+    vertical-align: middle;
+    padding: 0px 5px
+}
+
+.ugc-input {
+    width: 95%
+}
+
+.ugc-form-button {
+    margin: .1em;
+    margin-top: .7em
+}
+
+.btn {
+    white-space: normal;
+    font-weight: 700
+}
+
+.button-bar {
+    max-width: 700px;
+    margin: 0px auto;
+    margin-top: 5px
+}
+
+.drawful-tos-button {
+    position: absolute
+}
+
+.postgame-drawing {
+    background-color: #eee;
+    margin-bottom: 20px;
+    max-width: 280px;
+    min-width: 100px;
+    padding: 10px;
+    margin: 10px
+}
+
+.postgame-drawing img {
+    background-color: #fff;
+    border-image: url(assets/ed98a40a78610e4b3b8c.png) 10 stretch;
+    border-width: 10px;
+    border-style: solid
+}
+
+.centered {
+    margin: auto
+}
+
+@media only screen and (max-width: 320px) {
+    .button-drawful {
+        font-size: .8em;
+        line-height: 1.2em
+    }
+
+    .drawful-text {
+        font-size: .8em;
+        line-height: 1.4em
+    }
+
+    .ugc-text {
+        font-size: .8em
+    }
+
+    .button-drawful.eye-button {
+        background: #fff;
+        padding-left: 0px;
+        padding-right: 0px
+    }
+
+    .button-drawful.eye-button:active {
+        background: #333;
+        padding-left: 0px;
+        padding-right: 0px
+    }
+
+    .sketchpad-container {
+        border-width: 2px
+    }
+
+    .submit-drawing {
+        border-width: 2px
+    }
+
+    .button-drawful.submit-drawing {
+        height: 44px
+    }
+
+    .button-color {
+        height: 16px
+    }
+
+    .button-color.selected {
+        height: 16px
+    }
+}
+
+#drawful-submit-alert {
+    position: relative
+}
+
+/*# sourceMappingURL=7411.css.map*/

@@ -1,0 +1,1665 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url("patentlystupid/post-banner.tjpp7_banner-image.png")
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url("patentlystupid/post-banner.tjpp6_banner-image.png")
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("patentlystupid/a4bece5c270c316c1c24.ttf");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("patentlystupid/2263cf4bbb29e585de1b.ttf");
+    font-weight: 500;
+    font-style: normal
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+body {
+    color: #000;
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+.page {
+    overflow-y: auto
+}
+
+img {
+    margin: 0px auto
+}
+
+canvas {
+    border: 1px solid #000
+}
+
+.controller-page {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch
+}
+
+.scrollable {
+    overflow-y: auto
+}
+
+.textDescriptions {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden
+}
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+.loadingSpinner {
+    text-align: center;
+    margin: 50px 0px
+}
+
+.playerName {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.playerIcon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    background-size: contain
+}
+
+.playerIcon.none {
+    display: none
+}
+
+.twitchBroadcasterIcon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 13px;
+    bottom: 10px;
+    background-image: url("patentlystupid/twitchBroadcasterIcon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.controller-container {
+    display: flex;
+    overflow-y: hidden
+}
+
+#controller-container {
+    display: flex;
+    flex-direction: column
+}
+
+#controller-container>div:last-child {
+    flex-grow: 1
+}
+
+#controller-main {
+    flex: 1 0 auto
+}
+
+.Logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch
+}
+
+.Logo>div {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    text-align: center
+}
+
+div.logo-image {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 600px;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3
+}
+
+.lobbyTitle {
+    text-align: center
+}
+
+.artifactContainer {
+    text-align: center
+}
+
+.artifactButton {
+    background-image: url("patentlystupid/artifactButton.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 283px;
+    width: 90%;
+    max-width: 512px;
+    display: inline-block
+}
+
+@media only screen and (max-width: 480px) {
+    .artifactButton {
+        height: 192px
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .artifactButton {
+        height: 128px
+    }
+}
+
+.controller-content {
+    max-width: 768px;
+    margin: 0px auto
+}
+
+.controller-content>div {
+    display: inline-block;
+    width: 100%
+}
+
+.EnterSingleText,
+.MakeSingleChoice,
+.Draw,
+.Lobby,
+.Sortable,
+.UGC {
+    display: inline-block;
+    width: 100%
+}
+
+.Lobby .charactersList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 512px;
+    padding: .5rem;
+    margin: 0px auto
+}
+
+.Lobby .charactersList button.characters {
+    flex: 0 0 25%;
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: stretch;
+    box-sizing: border-box
+}
+
+.Lobby .charactersList button.characters.disabled {
+    cursor: not-allowed
+}
+
+.Lobby .charactersList button.characters.selected {
+    cursor: default
+}
+
+.Lobby .charactersList button.characters:before {
+    content: "";
+    display: table;
+    padding-top: 100%
+}
+
+.Lobby .charactersList button.characters .flex-item {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.choices {
+    text-align: center
+}
+
+.button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.choices .button-group button.choice-button * {
+    pointer-events: none
+}
+
+textarea.form-control {
+    resize: none;
+    overflow: hidden;
+    height: 36px;
+    line-height: 24px;
+    outline: none
+}
+
+textarea:focus {
+    outline: none
+}
+
+.button-group * {
+    border-radius: 0px;
+    margin: 0px;
+    max-width: 100%;
+    min-width: 50px;
+    overflow-wrap: break-word;
+    outline: none;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: normal;
+    word-break: break-word;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.button-group button:not(:only-child):not(:last-child) {
+    border-right-width: 0px
+}
+
+.button-group button:not(:only-child):not(:first-child) {
+    border-left-width: 0px
+}
+
+.button-group :first-child {
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2
+}
+
+.censor-button {
+    width: auto;
+    max-width: 15px;
+    padding: 0px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 35px;
+    flex: 0 1 35px
+}
+
+.double-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.double-nav-middle {
+    flex: 1 0 auto;
+    position: relative;
+    overflow-x: hidden
+}
+
+.double-nav-top,
+.double-nav-bottom {
+    flex: 0 1 auto;
+    width: 100%;
+    z-index: 1030;
+    text-align: center
+}
+
+.double-nav-detail {
+    top: 0px;
+    min-height: 100%;
+    display: absolute
+}
+
+.double-nav-bottom {
+    margin-top: auto
+}
+
+.canvasContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.Draw .nav-tabs {
+    border-width: 0px
+}
+
+li>a.button-color.active {
+    border: 3px solid
+}
+
+li>a.button-color.active[data-color="#000000"] {
+    border-color: #f32938
+}
+
+.Draw canvas.fullLayer {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.Draw .button {
+    height: 33px;
+    min-width: 40px;
+    margin: 2px;
+    padding: 5px
+}
+
+.Draw .submitDrawing {
+    height: auto
+}
+
+.Draw .currentColor {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    margin: 0px auto
+}
+
+.Draw .thickness-circle {
+    border-radius: 50%;
+    background-color: #000;
+    width: 5px;
+    height: 5px;
+    margin: 0px auto
+}
+
+.Draw .colorSwatch {
+    border-radius: 8px;
+    width: 62px;
+    height: 62px;
+    margin: 3px;
+    display: inline-block
+}
+
+.Draw .list .colorSwatch {
+    display: inline-block
+}
+
+.Draw .list .colorSwatch a {
+    padding: 0px;
+    width: 48px;
+    height: 48px
+}
+
+.Draw .colorPaletteRegion {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0)
+}
+
+.Draw .colorPaletteRegion.visible {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.Draw .colorPaletteRegion .colorPalette {
+    border: 8px solid #000;
+    background-color: #fff;
+    border-radius: 18px;
+    width: 230px;
+    padding: 2px
+}
+
+.Draw .picker {
+    position: relative
+}
+
+.Draw .list .colorPalette {
+    margin-bottom: -19px;
+    margin-right: 20px
+}
+
+.Draw .colorPaletteRegion .colorSwatch a {
+    padding: 0px;
+    width: 62px;
+    height: 62px
+}
+
+.Draw .canvasContainer {
+    display: inline-block
+}
+
+.Shoot {
+    height: 100%
+}
+
+.Shoot .health {
+    text-align: right
+}
+
+.Shoot .shoot-container {
+    max-width: 480px
+}
+
+.Shoot button.selected {
+    background: #000;
+    color: #fff
+}
+
+.Shoot div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.Shoot button {
+    width: 100px;
+    height: 50px
+}
+
+.Shoot .RadialView {
+    height: 100%
+}
+
+.Shoot .radial {
+    margin: 0px auto;
+    cursor: pointer
+}
+
+.Shoot .background {
+    stroke: #1797c5;
+    stroke-width: 32;
+    stroke-opacity: .8
+}
+
+.Shoot .health-display {
+    fill-opacity: 0;
+    stroke: #f0f;
+    stroke-width: 2
+}
+
+.Shoot .crosshair-center {
+    stroke: #fff;
+    stroke-width: .8;
+    stroke-dasharray: .3 1.265;
+    fill-opacity: 0
+}
+
+.Shoot .circle-helper {
+    stroke: #00cfe6;
+    stroke-width: 3;
+    fill-opacity: 0
+}
+
+.Shoot .line-helper-left,
+.Shoot .line-helper-right {
+    stroke: #fff;
+    stroke-width: .3
+}
+
+.Shoot .locked-in-line {
+    stroke: #fff;
+    stroke-width: .3;
+    stroke-dasharray: 1.265 .5
+}
+
+.Shoot .left-text,
+.Shoot .right-text {
+    color: #fff
+}
+
+.Shoot .locked-in-fade {
+    stroke: #000;
+    stroke-width: 34;
+    stroke-opacity: .8;
+    fill-opacity: 0
+}
+
+.Shoot .cls-1 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 17px
+}
+
+.Shoot .lockedIn .cls-1 {
+    stroke: #575757
+}
+
+.Camera {
+    position: relative
+}
+
+.Camera .cameraRegion canvas.cameraCanvas {
+    background-color: #000;
+    top: 0px;
+    left: 0px;
+    border: none
+}
+
+.Camera .cameraRegion .cameraVideo {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px
+}
+
+.Camera .cameraRegion .cameraImage {
+    width: 100%;
+    max-width: 100%
+}
+
+.Camera .cameraRegion .cameraImageDiv {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.Camera .cameraRegion .cameraControls {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    height: 60px;
+    text-align: center
+}
+
+.Camera .cameraRegion .buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden
+}
+
+.Camera .cameraRegion .buttons.visible {
+    visibility: visible
+}
+
+.Camera .cameraRegion .button {
+    background-color: #fff;
+    color: #000
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url("patentlystupid/twitchBroadcasterIcon.svg") no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url("patentlystupid/jbgTwitchContent_warning.png") no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+.debug {
+    position: fixed;
+    left: 0;
+    top: 55px;
+    opacity: .1;
+    z-index: 1031;
+    user-select: none;
+    text-shadow: -1px -1px 0 #ddd, 1px -1px 0 #ddd, -1px 1px 0 #ddd, 1px 1px 0 #ddd
+}
+
+.debug:hover {
+    opacity: 1
+}
+
+.debug button {
+    width: 50px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 1px solid #333 !important;
+    outline: 1px solid #ddd !important;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    box-shadow: none !important
+}
+
+.debug span {
+    position: relative;
+    top: -4px;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+@font-face {
+    font-family: "Carrot Juice";
+    src: url("patentlystupid/5a3666fa117085f9cdd7.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Astounder Squared";
+    src: url("patentlystupid/a66f396e82f7857aace7.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Astounder Squared LC";
+    src: url("patentlystupid/4386043f6d1a4b2b482b.woff") format("woff")
+}
+
+@font-face {
+    font-family: "label_tightpsregular";
+    src: url("patentlystupid/8d19b1dba95dcb32d779.woff2") format("woff2"), url("patentlystupid/4049f6d578f9a7d0dd53.woff") format("woff"), url("patentlystupid/bbddb584424295c45213.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal
+}
+
+.patentlystupid {
+    background: center repeat url("patentlystupid/patentlystupid.png"), center/cover no-repeat url("patentlystupid/patentlystupid_2.jpg")
+}
+
+.patentlystupid .text div:nth-of-type(1) {
+    text-shadow: 0px 3px 5px #222;
+    font-family: Astounder Squared;
+    text-shadow: #000 -3px 3px;
+    padding: 0px 0px
+}
+
+.patentlystupid .text div:nth-of-type(2) {
+    font-family: Astounder Squared LC;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    color: #2a9dfa;
+    text-align: center;
+    text-shadow: none
+}
+
+.patentlystupid .Lobby {
+    color: #fff;
+    font-size: 32px;
+    font-family: Astounder Squared;
+    text-shadow: #000 -3px 3px;
+    font-weight: 400;
+    text-align: center
+}
+
+.patentlystupid .Lobby .playerIcon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 128px;
+    height: 93px;
+    background-image: url("patentlystupid/patentlystupid_Lobby_playerIcon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px auto;
+    text-align: center
+}
+
+.patentlystupid .Lobby .playerIcon.Cup0 {
+    background-image: url("patentlystupid/patentlystupid_Lobby_playerIcon.png")
+}
+
+.patentlystupid .Lobby .playerIcon.Cup1 {
+    background-image: url("patentlystupid/patentlystupid_Lobby_playerIcon.Cup1.png")
+}
+
+.patentlystupid .Lobby .playerIcon.Cup2 {
+    background-image: url("patentlystupid/patentlystupid_Lobby_playerIcon.Cup2.png")
+}
+
+.patentlystupid .Lobby .playerIcon.Cup3 {
+    background-image: url("patentlystupid/patentlystupid_Lobby_playerIcon.Cup3.png")
+}
+
+.patentlystupid .Lobby .playerIcon.Cup4 {
+    background-image: url("patentlystupid/patentlystupid_Lobby_playerIcon.Cup4.png")
+}
+
+.patentlystupid .Lobby .playerIcon.Cup5 {
+    background-image: url("patentlystupid/patentlystupid_Lobby_playerIcon.Cup5.png")
+}
+
+.patentlystupid .Lobby .playerIcon.Cup6 {
+    background-image: url("patentlystupid/patentlystupid_Lobby_playerIcon.Cup6.png")
+}
+
+.patentlystupid .Lobby .playerIcon.Cup7 {
+    background-image: url("patentlystupid/patentlystupid_Lobby_playerIcon.Cup7.png")
+}
+
+.patentlystupid .Lobby .playerIcon.CupAud {
+    background-image: url("patentlystupid/patentlystupid_Lobby_playerIcon.CupAud.png")
+}
+
+.patentlystupid .Lobby .playerIcon.none {
+    display: none
+}
+
+.patentlystupid .Lobby .playerIcon .playerInitial {
+    font-size: 50px;
+    text-shadow: none;
+    display: table;
+    color: #fff;
+    margin: 48px auto;
+    line-height: 0px
+}
+
+.patentlystupid .Lobby .lobbyTitle {
+    border: 20px solid;
+    border-image: url("patentlystupid/patentlystupid_Lobby_lobbyTitle.png") 18 23 21 25 repeat
+}
+
+.patentlystupid .Lobby .lobbyTitle>div {
+    padding: 15px;
+    background-color: #0a2b4c
+}
+
+.patentlystupid .Lobby,
+.patentlystupid .Draw,
+.patentlystupid .Logo,
+.patentlystupid .MakeSingleChoice,
+.patentlystupid .EnterSingleText {
+    display: flex
+}
+
+.patentlystupid .Lobby>div,
+.patentlystupid .Draw>div,
+.patentlystupid .Logo>div,
+.patentlystupid .MakeSingleChoice>div,
+.patentlystupid .EnterSingleText>div {
+    width: 100%;
+    flex: 1 0 auto
+}
+
+.patentlystupid .Lobby .controller-content,
+.patentlystupid .Draw .controller-content,
+.patentlystupid .Logo .controller-content,
+.patentlystupid .MakeSingleChoice .controller-content,
+.patentlystupid .EnterSingleText .controller-content {
+    margin-bottom: 0px;
+    border: 20px solid;
+    border-image: url("patentlystupid/patentlystupid_Lobby_lobbyTitle.png") 20 25 20 25 repeat
+}
+
+.patentlystupid button,
+.patentlystupid button:focus {
+    font-family: "label_tightpsregular";
+    font-weight: 400;
+    font-size: 32px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0px;
+    padding: 0px;
+    width: 100%;
+    box-shadow: 0px 3px 5px #222;
+    white-space: normal
+}
+
+@media only screen and (max-width: 360px) {
+
+    .patentlystupid button,
+    .patentlystupid button:focus {
+        font-size: 28px
+    }
+}
+
+.patentlystupid button:hover {
+    color: #fff;
+    background-color: #111
+}
+
+.patentlystupid button:active {
+    color: #fff;
+    background-color: #444
+}
+
+.patentlystupid button.btn[disabled] {
+    opacity: .2
+}
+
+.patentlystupid .Logo {
+    margin-bottom: 0px;
+    border: 20px solid;
+    border-image: url("patentlystupid/patentlystupid_Lobby_lobbyTitle.png") 20 25 20 25 repeat
+}
+
+.patentlystupid .Logo .message {
+    flex-grow: 0;
+    border: 20px solid;
+    border-image: url("patentlystupid/patentlystupid_Lobby_lobbyTitle.png") 18 23 21 25 repeat;
+    background-color: rgba(0, 0, 0, .3);
+    background-clip: padding-box
+}
+
+.patentlystupid .Logo .messageText {
+    flex-direction: column
+}
+
+.patentlystupid .Logo .messageText>div:nth-of-type(1) {
+    font-family: Astounder Squared;
+    text-shadow: #000 -3px 3px;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 34px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 3px 5px #222
+}
+
+.patentlystupid .Logo .logo-image {
+    flex: 1 0 auto;
+    margin: auto;
+    background: url("patentlystupid/patentlystupid_Logo_logo-image.png") no-repeat center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.patentlystupid .Logo.welcome .logo-image {
+    background-image: url("patentlystupid/patentlystupid_Logo.welcome_logo-image.png")
+}
+
+.patentlystupid .Logo .action {
+    flex: 0 0 auto
+}
+
+.patentlystupid .EnterSingleText>div {
+    margin-bottom: 0px
+}
+
+.patentlystupid .EnterSingleText .choices {
+    text-align: right
+}
+
+.patentlystupid .EnterSingleText .prompt .text>div:nth-of-type(3) {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #000;
+    font-family: "Carrot Juice";
+    font-weight: 400;
+    text-shadow: none;
+    -ms-transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    padding: 30% 0;
+    max-width: 576px;
+    margin: 0px auto
+}
+
+@media only screen and (max-width: 360px) {
+    .patentlystupid .EnterSingleText .prompt .text>div:nth-of-type(3) {
+        font-size: 24px
+    }
+}
+
+.patentlystupid .EnterSingleText.Blue .prompt .text>div:nth-of-type(3) {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Blue_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.patentlystupid .EnterSingleText.Green .prompt .text>div:nth-of-type(3) {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Green_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.patentlystupid .EnterSingleText.Orange .prompt .text>div:nth-of-type(3) {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Orange_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.patentlystupid .EnterSingleText.Pink .prompt .text>div:nth-of-type(3) {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Pink_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.patentlystupid .EnterSingleText.Purple .prompt .text>div:nth-of-type(3) {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Purple_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.patentlystupid .EnterSingleText.Red .prompt .text>div:nth-of-type(3) {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Red_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.patentlystupid .EnterSingleText.Teal .prompt .text>div:nth-of-type(3) {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Teal_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.patentlystupid .EnterSingleText.Yellow .prompt .text>div:nth-of-type(3) {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Yellow_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.patentlystupid .MakeSingleChoice.welcome .controller-content {
+    background-image: url("patentlystupid/patentlystupid_Logo.welcome_logo-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain
+}
+
+.patentlystupid .MakeSingleChoice .choices {
+    padding: 0px 15px
+}
+
+.patentlystupid .MakeSingleChoice .smallerButton {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.patentlystupid .MakeSingleChoice .smallerButton button {
+    width: auto;
+    padding: 0px 25px;
+    font-size: 24px
+}
+
+.patentlystupid .MakeSingleChoice .hint {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 10px 0px 15px 0px
+}
+
+.patentlystupid .MakeSingleChoice .doneText,
+.patentlystupid .MakeSingleChoice .makeSingleChoiceDone {
+    text-align: center
+}
+
+.patentlystupid .Draw {
+    overflow-y: auto
+}
+
+.patentlystupid .Draw .canvasContainer {
+    text-align: center
+}
+
+.patentlystupid .Draw #pre-sketchpad {
+    margin-top: 0;
+    text-align: center
+}
+
+.patentlystupid .Draw #pre-sketchpad .list {
+    width: auto;
+    display: inline-block
+}
+
+.patentlystupid .Draw #sketchpad {
+    position: relative;
+    z-index: 1000
+}
+
+.patentlystupid .Draw .Sketchpad {
+    max-width: 586px;
+    margin: 0 auto
+}
+
+.patentlystupid .Draw .sketchpad {
+    background-image: url("patentlystupid/patentlystupid_Draw_sketchpad.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    margin-left: 0px
+}
+
+.patentlystupid .Draw.Napkin0 .sketchpad {
+    background-image: url("patentlystupid/patentlystupid_Draw_sketchpad.png")
+}
+
+.patentlystupid .Draw.Napkin1 .sketchpad {
+    background-image: url("patentlystupid/patentlystupid_Draw.Napkin1_sketchpad.png")
+}
+
+.patentlystupid .Draw.Napkin2 .sketchpad {
+    background-image: url("patentlystupid/patentlystupid_Draw.Napkin2_sketchpad.png")
+}
+
+.patentlystupid .Draw.Napkin3 .sketchpad {
+    background-image: url("patentlystupid/patentlystupid_Draw.Napkin3_sketchpad.png")
+}
+
+.patentlystupid .Draw.Napkin4 .sketchpad {
+    background-image: url("patentlystupid/patentlystupid_Draw.Napkin4_sketchpad.png")
+}
+
+.patentlystupid .Draw.Napkin5 .sketchpad {
+    background-image: url("patentlystupid/patentlystupid_Draw.Napkin5_sketchpad.png")
+}
+
+.patentlystupid .Draw.Napkin6 .sketchpad {
+    background-image: url("patentlystupid/patentlystupid_Draw.Napkin6_sketchpad.png")
+}
+
+.patentlystupid .Draw.Napkin7 .sketchpad {
+    background-image: url("patentlystupid/patentlystupid_Draw.Napkin7_sketchpad.png")
+}
+
+.patentlystupid .picker {
+    display: none
+}
+
+.patentlystupid .list {
+    margin: 0px auto;
+    position: relative;
+    margin-bottom: -12px;
+    width: 100%
+}
+
+.patentlystupid ul {
+    max-width: 586px;
+    margin: 0 auto
+}
+
+.patentlystupid .Draw .list #undoButton,
+.patentlystupid .Draw .list #undoButtonList,
+.patentlystupid .Draw #submitdrawing {
+    transform: rotate(-3deg);
+    border: none;
+    width: 125px;
+    font-size: 34px;
+    margin-left: 20px;
+    padding: 3px;
+    text-align: center;
+    height: 48px;
+    z-index: 100
+}
+
+@media only screen and (max-width: 360px) {
+
+    .patentlystupid .Draw .list #undoButton,
+    .patentlystupid .Draw .list #undoButtonList,
+    .patentlystupid .Draw #submitdrawing {
+        width: 90px;
+        height: 37.5px;
+        font-size: 24px
+    }
+}
+
+.patentlystupid .post-sketchpad {
+    text-align: right
+}
+
+.patentlystupid .Draw #submitdrawing {
+    transform: rotate(3deg)
+}
+
+.patentlystupid .ballpoint :first-child {
+    background: url("patentlystupid/patentlystupid_ballpoint__first-child.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-bottom: -16px;
+    vertical-align: bottom;
+    border: none;
+    width: 48px
+}
+
+.patentlystupid .ballpoint.selected :first-child {
+    border-radius: 50%;
+    background-color: rgba(46, 155, 255, .4)
+}
+
+.patentlystupid .highlighter :first-child {
+    background: url("patentlystupid/patentlystupid_highlighter__first-child.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-bottom: -16px;
+    vertical-align: bottom;
+    border: none;
+    width: 48px
+}
+
+.patentlystupid .highlighter.selected :first-child {
+    border-radius: 50%;
+    background-color: rgba(46, 155, 255, .4)
+}
+
+.patentlystupid .highlighter.Blue :first-child {
+    background-image: url("patentlystupid/patentlystupid_highlighter.Blue__first-child.png")
+}
+
+.patentlystupid .highlighter.Green :first-child {
+    background-image: url("patentlystupid/patentlystupid_highlighter.Green__first-child.png")
+}
+
+.patentlystupid .highlighter.Orange :first-child {
+    background-image: url("patentlystupid/patentlystupid_highlighter.Orange__first-child.png")
+}
+
+.patentlystupid .highlighter.Pink :first-child {
+    background-image: url("patentlystupid/patentlystupid_highlighter.Pink__first-child.png")
+}
+
+.patentlystupid .highlighter.Purple :first-child {
+    background-image: url("patentlystupid/patentlystupid_highlighter.Purple__first-child.png")
+}
+
+.patentlystupid .highlighter.Red :first-child {
+    background-image: url("patentlystupid/patentlystupid_highlighter.Red__first-child.png")
+}
+
+.patentlystupid .highlighter.Teal :first-child {
+    background-image: url("patentlystupid/patentlystupid_highlighter.Teal__first-child.png")
+}
+
+.patentlystupid .highlighter.Yellow :first-child {
+    background-image: url("patentlystupid/patentlystupid_highlighter.Yellow__first-child.png")
+}
+
+.patentlystupid button[type=submit] {
+    background-size: contain;
+    border: none;
+    width: 125px;
+    vertical-align: top;
+    margin-top: -4px;
+    height: 50px;
+    transform: rotate(3deg)
+}
+
+@media only screen and (max-width: 360px) {
+    .patentlystupid button[type=submit] {
+        width: 90px;
+        height: 37.5px;
+        font-size: 24px
+    }
+}
+
+.patentlystupid .post-sketchpad {
+    height: 50px;
+    margin-right: 14px
+}
+
+.patentlystupid .button-pad {
+    min-height: 100%
+}
+
+.patentlystupid .text,
+.patentlystupid .doneText {
+    font-family: Astounder Squared LC;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 34px;
+    color: #fff;
+    text-align: center;
+    text-shadow: none;
+    padding-bottom: 10px
+}
+
+@media only screen and (max-width: 360px) {
+
+    .patentlystupid .text,
+    .patentlystupid .doneText {
+        font-size: 24px
+    }
+}
+
+.patentlystupid .text.help {
+    padding-top: 10px;
+    margin: 0px
+}
+
+.patentlystupid .prompt .text div:nth-of-type(1) {
+    text-shadow: 0px 3px 5px #222;
+    font-family: Astounder Squared;
+    text-shadow: #000 -3px 3px;
+    padding: 0px 0px
+}
+
+.patentlystupid .prompt .text div:nth-of-type(2) {
+    font-family: Astounder Squared LC;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    color: #2a9dfa;
+    text-align: center;
+    text-shadow: none
+}
+
+@media only screen and (max-width: 360px) {
+    .patentlystupid .prompt .text div:nth-of-type(2) {
+        font-size: 24px
+    }
+}
+
+.patentlystupid .footer,
+.patentlystupid .messageText {
+    font-family: Astounder Squared LC;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    color: #2a9dfa;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center
+}
+
+.patentlystupid .footerText {
+    align-self: flex-end
+}
+
+.patentlystupid .userInput {
+    text-transform: uppercase;
+    pointer-events: none
+}
+
+.patentlystupid .info-button {
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: -6px;
+    background: url("patentlystupid/patentlystupid_info-button.png");
+    background-size: contain;
+    display: inline-block;
+    height: 28px;
+    width: 28px
+}
+
+.patentlystupid .artifactButton {
+    background: url("patentlystupid/patentlystupid_artifactButton.png") no-repeat center/contain
+}
+
+.swal2-container .swal2-close {
+    color: rgba(0, 0, 0, 0);
+    outline: none;
+    display: block;
+    background-image: url("patentlystupid/swal2-container_swal2-close.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 15px;
+    left: 295px;
+    z-index: 100
+}
+
+.swal2-container .swal2-close:hover,
+.swal2-container .swal2-close:active {
+    color: rgba(0, 0, 0, 0);
+    outline: none
+}
+
+@media only screen and (max-width: 360px) {
+    .swal2-container .swal2-close {
+        left: 230px
+    }
+}
+
+.swal2-container .userInput {
+    text-transform: uppercase
+}
+
+.Card {
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #000;
+    font-family: "Carrot Juice";
+    -ms-transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    width: 320px;
+    height: 200px
+}
+
+@media only screen and (max-width: 360px) {
+    .Card {
+        width: 250px;
+        height: 148px
+    }
+}
+
+.Card .popup-image {
+    width: 100%
+}
+
+.Card .text {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    color: #000
+}
+
+@media only screen and (max-width: 360px) {
+    .Card .text {
+        font-size: 22px
+    }
+}
+
+.btn-block.Card {
+    width: 320px;
+    display: block;
+    margin: 10px auto
+}
+
+@media only screen and (max-width: 360px) {
+    .btn-block.Card {
+        width: 250px;
+        height: 148px
+    }
+}
+
+.Card button.choice-button {
+    padding-top: 25px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #000;
+    font-family: "Carrot Juice";
+    font-weight: 400;
+    height: 185px;
+    word-break: break-word;
+    word-wrap: break-word;
+    line-height: 32px
+}
+
+@media only screen and (max-width: 360px) {
+    .Card button.choice-button {
+        padding-top: 0px;
+        font-size: 24px;
+        line-height: 24px;
+        width: 250px;
+        height: 148px
+    }
+}
+
+.Card button.censor-button {
+    display: none
+}
+
+.Card.CardBlue {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Blue_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.Card.CardGreen {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Green_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.Card.CardOrange {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Orange_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.Card.CardPink {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Pink_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.Card.CardPurple {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Purple_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.Card.CardRed {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Red_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.Card.CardTeal {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Teal_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.Card.CardYellow {
+    background-image: url("patentlystupid/patentlystupid_EnterSingleText.Yellow_prompt_text_div_nth-of-type(3).jpg")
+}
+
+.Card.CardGray {
+    background-image: url("patentlystupid/Card.CardGray.jpg")
+}
+
+@media only screen and (max-device-width: 380px) {
+    .prompt .text div:first-of-type {
+        font-size: 38px
+    }
+
+    .footer {
+        font-size: 26px
+    }
+}
+
+@media only screen and (max-device-width: 320px) {
+    .prompt .text div:first-of-type {
+        font-size: 32px
+    }
+
+    .footer {
+        font-size: 18px
+    }
+}
+
+@media only screen and (max-device-width: 365px) {
+    .footer {
+        font-size: 22px
+    }
+}
+
+@media only screen and (max-device-width: 315px) {
+    .prompt .text div:first-of-type {
+        font-size: 32px
+    }
+
+    .footer {
+        font-size: 16px
+    }
+}
+
+/*# sourceMappingURL=7263.css.map*/

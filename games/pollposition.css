@@ -1,0 +1,900 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url("pollposition/post-banner.tjpp7_banner-image.png")
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url("pollposition/post-banner.tjpp6_banner-image.png")
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("pollposition/a4bece5c270c316c1c24.ttf");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("pollposition/2263cf4bbb29e585de1b.ttf");
+    font-weight: 500;
+    font-style: normal
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th {
+    font-weight: 700
+}
+
+.button-primary {
+    background: #000;
+    color: #fff
+}
+
+.button-xlarge {
+    border-width: 0px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 5px;
+    border-radius: 10px
+}
+
+.button-large {
+    border-radius: 10px
+}
+
+.post-banner {
+    cursor: pointer
+}
+
+.button-blue {
+    color: #fff;
+    background: #3e55fe;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.button-blue:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-gray {
+    color: #3e55fe;
+    background: #ccc;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent
+}
+
+.button-gray:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-help-text {
+    display: inline
+}
+
+@media screen and (max-width: 480px) {
+    .button-help-text {
+        display: none
+    }
+}
+
+.button-black {
+    color: #fff;
+    background: #333
+}
+
+.debug {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: .6
+}
+
+.debug span {
+    pointer-events: none;
+    user-select: none
+}
+
+.text-signin {
+    color: #3e55fe
+}
+
+.jbg-input {
+    font-size: 1.3em
+}
+
+.close {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000;
+    background: transparent;
+    border: none !important;
+    text-decoration: none;
+    content: "x";
+    right: 10px;
+    position: absolute
+}
+
+.close:hover {
+    color: #666
+}
+
+.button-yes {
+    background: #1cb841
+}
+
+.button-no {
+    background: #ca3c3c
+}
+
+.image-hand {
+    background: url("pollposition/image-hand.png");
+    cursor: pointer;
+    border: none;
+    width: 126px;
+    height: 700px
+}
+
+canvas {
+    touch-action: none
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url("pollposition/jbgTwitchContent_icon-twitch.svg") no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url("pollposition/jbgTwitchContent_warning.png") no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+@font-face {
+    font-family: "Revolution Gothic ExtraBold It";
+    src: url("pollposition/11ddadb28d7a49713739.eot");
+    src: url("pollposition/f986e65c02cdb28f2295.woff") format("woff"), url("pollposition/644eeac5d049405ed777.ttf") format("truetype"), url("pollposition/563bd1884eecf828c18e.svg#webfont") format("svg")
+}
+
+@font-face {
+    font-family: "Revolution Gothic ExtraBold";
+    src: url("pollposition/e69a5b8162a4da155ec9.eot");
+    src: url("pollposition/537e76f6bcc4cf814124.woff") format("woff"), url("pollposition/a8561c790facfda1deef.ttf") format("truetype"), url("pollposition/9d746611e110686eed56.svg#webfont") format("svg")
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+.pollposition-page {
+    overflow-y: auto
+}
+
+.pollposition-background {
+    background-image: url("pollposition/pollposition-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
+.container {
+    padding: 5px
+}
+
+.state-nothing {
+    background-image: url("pollposition/state-nothing.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: auto
+}
+
+#player {
+    color: #fff;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 100%;
+    text-align: center
+}
+
+.pollposition-player {
+    background-color: #1e3188;
+    text-transform: uppercase
+}
+
+#pollposition-percentage {
+    outline: none;
+    margin-top: 15px;
+    margin-left: 25%;
+    margin-right: 15px;
+    padding-top: 3px;
+    height: 8.4px;
+    box-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d;
+    border-radius: 1.3px;
+    border: .2px solid #010101;
+    width: 50%;
+    float: left
+}
+
+svg.pollposition-percentage-picker {
+    width: 800px;
+    height: 800px;
+    outline: 0px
+}
+
+svg.pollposition-percentage-picker circle.background {
+    fill-opacity: 0;
+    stroke: #1797c5;
+    stroke-width: 32;
+    stroke-opacity: .8
+}
+
+svg.pollposition-percentage-picker circle.percent-display {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    fill-opacity: 0;
+    stroke: #2e3191;
+    stroke-width: 32;
+    stroke-dasharray: 75 100
+}
+
+svg.pollposition-percentage-picker circle.helper {
+    stroke: #00cfe6;
+    stroke-width: 3;
+    fill-opacity: 0
+}
+
+svg.pollposition-percentage-picker circle.center {
+    stroke: #00cfe6;
+    stroke-width: 2;
+    fill-opacity: 0
+}
+
+svg.pollposition-percentage-picker line {
+    stroke: #00cfe6;
+    stroke-width: 2
+}
+
+svg.pollposition-percentage-picker text {
+    font-family: "Revolution Gothic ExtraBold It"
+}
+
+svg.pollposition-percentage-picker text.percent {
+    fill: #fff;
+    font-size: "55"
+}
+
+svg.pollposition-percentage-picker text.percent-sign {
+    fill: #fff;
+    font-size: "25"
+}
+
+output {
+    position: absolute;
+    background-image: linear-gradient(top, #444444, #999999);
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    display: inline-block;
+    font: bold 15px/30px Georgia;
+    bottom: 175%;
+    left: 0;
+    margin-left: -1%
+}
+
+output:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #999;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    margin-top: -1px
+}
+
+br {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    line-height: 0px;
+    content: " "
+}
+
+.pollposition-range-buffer {
+    box-sizing: border-box
+}
+
+.pollposition-text {
+    color: #fff;
+    font-family: "Revolution Gothic ExtraBold";
+    font-size: 32px;
+    line-height: 30px
+}
+
+.pollposition-text-it {
+    font-family: "Revolution Gothic ExtraBold It";
+    font-size: 32px;
+    line-height: 30px
+}
+
+.pollposition-text-medium {
+    font-size: 22px
+}
+
+.pollposition-label {
+    font-size: 125%;
+    width: 20%;
+    float: left;
+    text-align: left
+}
+
+.page p,
+.page h1,
+.page h2,
+.page h3,
+.page h4,
+.page h5,
+.page h6,
+.page td,
+.page th,
+.page span {
+    font-family: "Revolution Gothic ExtraBold It";
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    text-align: center
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%
+}
+
+.logo-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-left: 2%;
+    padding-right: 2%
+}
+
+.pollposition-page {
+    overflow-y: auto
+}
+
+.pollposition-button {
+    color: #1e3188;
+    background-color: #00cfe6;
+    border-radius: 0px;
+    border-width: 0px;
+    box-shadow: 1px 1px #1e3188;
+    transform: skewX(-15deg);
+    font-family: "Revolution Gothic ExtraBold It";
+    font-size: 32px;
+    width: 70%;
+    margin: 2px 0px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.pollposition-button:hover {
+    color: #fff
+}
+
+.pollposition-button:active {
+    background: #fff;
+    color: #000;
+    box-shadow: 0px 0px
+}
+
+.pollposition-button span {
+    transform: skewX(15deg);
+    display: block;
+    word-wrap: break-word;
+    color: #1e3188
+}
+
+.pollposition-button:hover span {
+    color: #fff
+}
+
+.pollposition-button:active span {
+    color: #00cfe6
+}
+
+.pollposition-button[disabled],
+.pollposition-button[disabled]:hover,
+.pollposition-button[disabled]:focus,
+.pollposition-button[disabled]:active {
+    background: #fff;
+    color: #000;
+    box-shadow: 0px 0px;
+    opacity: .5
+}
+
+.pollposition-button[disabled] span,
+.pollposition-button[disabled] span:hover,
+.pollposition-button[disabled] span:focus,
+.pollposition-button[disabled] span:active {
+    color: #1e3188
+}
+
+.pollposition-hangingform {
+    padding-top: 40px;
+    width: 100%;
+    margin: auto
+}
+
+.pollposition-results-padded {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.pollposition-high-low-button {
+    margin-bottom: 20px
+}
+
+.pollposition-category-button {
+    color: #fff;
+    background: #101010;
+    margin: 5px 0px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(8, 8, 8, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: table-cell;
+    width: 50%
+}
+
+.pollposition-character-button {
+    color: #fff;
+    background: #49b0de;
+    margin: 2px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(8, 8, 8, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-style: none;
+    border-color: #49b0de;
+    border-radius: 10px;
+    width: 80%;
+    vertical-align: middle
+}
+
+.pollposition-character {
+    background-image: url("pollposition/pollposition-character.png");
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: 100% auto;
+    border-width: 2px
+}
+
+button.pollposition-character:hover {
+    background-image: url("pollposition/pollposition-character.png");
+    background-color: #000
+}
+
+button.pollposition-character:focus {
+    background-image: url("pollposition/pollposition-character.png");
+    background-color: #5fe7be
+}
+
+button.pollposition-character.selected {
+    background-image: url("pollposition/button.pollposition-character.selected.png");
+    background-color: #0f3140;
+    opacity: 1;
+    border-width: 4px;
+    cursor: not-allowed
+}
+
+button.pollposition-character.player {
+    border-color: #fff;
+    border-width: 2px;
+    border-style: solid
+}
+
+.pollposition-player .pollposition-character {
+    margin-right: 20px
+}
+
+.pollposition-character.beretlady {
+    background-position: 0 calc(100% / 23 * 0)
+}
+
+.pollposition-character.boblady {
+    background-position: 0 calc(100% / 23 * 1)
+}
+
+.pollposition-character.bombsquad {
+    background-position: 0 calc(100% / 23 * 2)
+}
+
+.pollposition-character.businessman {
+    background-position: 0 calc(100% / 23 * 3)
+}
+
+.pollposition-character.dog {
+    background-position: 0 calc(100% / 23 * 4)
+}
+
+.pollposition-character.dolphin {
+    background-position: 0 calc(100% / 23 * 5)
+}
+
+.pollposition-character.eagle2 {
+    background-position: 0 calc(100% / 23 * 6)
+}
+
+.pollposition-character.eyegadget {
+    background-position: 0 calc(100% / 23 * 7)
+}
+
+.pollposition-character.facemaskguy {
+    background-position: 0 calc(100% / 23 * 8)
+}
+
+.pollposition-character.goateeman {
+    background-position: 0 calc(100% / 23 * 9)
+}
+
+.pollposition-character.hatguy {
+    background-position: 0 calc(100% / 23 * 10)
+}
+
+.pollposition-character.hatwoman {
+    background-position: 0 calc(100% / 23 * 11)
+}
+
+.pollposition-character.hazmat {
+    background-position: 0 calc(100% / 23 * 12)
+}
+
+.pollposition-character.headphonesgirl {
+    background-position: 0 calc(100% / 23 * 13)
+}
+
+.pollposition-character.helmet {
+    background-position: 0 calc(100% / 23 * 14)
+}
+
+.pollposition-character.informant {
+    background-position: 0 calc(100% / 23 * 15)
+}
+
+.pollposition-character.radiooperator {
+    background-position: 0 calc(100% / 23 * 16)
+}
+
+.pollposition-character.robot {
+    background-position: 0 calc(100% / 23 * 17)
+}
+
+.pollposition-character.scarflady {
+    background-position: 0 calc(100% / 23 * 18)
+}
+
+.pollposition-character.sniper {
+    background-position: 0 calc(100% / 23 * 19)
+}
+
+.pollposition-character.swatteam {
+    background-position: 0 calc(100% / 23 * 20)
+}
+
+.pollposition-character.travelingdr {
+    background-position: 0 calc(100% / 23 * 21)
+}
+
+.pollposition-character.vrman {
+    background-position: 0 calc(100% / 23 * 22)
+}
+
+.pollposition-character.vrwoman {
+    background-position: 0 calc(100% / 23 * 23)
+}
+
+.pollposition-character-button span {
+    position: relative;
+    display: inherit;
+    bottom: -20px;
+    left: -14px;
+    font-size: 60%;
+    width: 62px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+    background-color: rgba(16, 16, 16, .5)
+}
+
+.table-bordered {
+    border-color: #1e3188
+}
+
+.table-bordered>thead>tr>th {
+    border-color: #1e3188;
+    background-color: #1e3188
+}
+
+.table-bordered>tbody>tr>td {
+    border-color: #1e3188;
+    vertical-align: middle
+}
+
+.table-striped>tbody>tr:nth-child(odd) {
+    background-color: #00cfe6
+}
+
+.table-striped>tbody>tr:nth-child(even) {
+    background-color: #1e3188
+}
+
+.pollposition-button-loading {
+    background: #fff url("pollposition/pollposition-button-loading.gif") no-repeat center;
+    background-size: contain;
+    color: rgba(0, 0, 0, 0);
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.pollposition-preload {
+    content: url "../images/loading.gif";
+    display: none
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+/*# sourceMappingURL=7879.css.map*/

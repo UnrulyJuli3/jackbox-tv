@@ -1,0 +1,1726 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url(assets/372b296441e568c4f230.png)
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url(assets/6705b194308b696103dd.png)
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(assets/a4bece5c270c316c1c24.ttf);
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(assets/2263cf4bbb29e585de1b.ttf);
+    font-weight: 500;
+    font-style: normal
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+body {
+    color: #000;
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+.page {
+    overflow-y: auto
+}
+
+img {
+    margin: 0px auto
+}
+
+canvas {
+    border: 1px solid #000
+}
+
+.controller-page {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch
+}
+
+.scrollable {
+    overflow-y: auto
+}
+
+.textDescriptions {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden
+}
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+.loadingSpinner {
+    text-align: center;
+    margin: 50px 0px
+}
+
+.playerName {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.playerIcon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    background-size: contain
+}
+
+.playerIcon.none {
+    display: none
+}
+
+.twitchBroadcasterIcon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 13px;
+    bottom: 10px;
+    background-image: url(assets/2154fb6d10c0d32f494a.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.controller-container {
+    display: flex;
+    overflow-y: hidden
+}
+
+#controller-container {
+    display: flex;
+    flex-direction: column
+}
+
+#controller-container>div:last-child {
+    flex-grow: 1
+}
+
+#controller-main {
+    flex: 1 0 auto
+}
+
+.Logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch
+}
+
+.Logo>div {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    text-align: center
+}
+
+div.logo-image {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 600px;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3
+}
+
+.lobbyTitle {
+    text-align: center
+}
+
+.artifactContainer {
+    text-align: center
+}
+
+.artifactButton {
+    background-image: url(assets/8fa1f1ed4c15973f951d.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 283px;
+    width: 90%;
+    max-width: 512px;
+    display: inline-block
+}
+
+@media only screen and (max-width: 480px) {
+    .artifactButton {
+        height: 192px
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .artifactButton {
+        height: 128px
+    }
+}
+
+.controller-content {
+    max-width: 768px;
+    margin: 0px auto
+}
+
+.controller-content>div {
+    display: inline-block;
+    width: 100%
+}
+
+.EnterSingleText,
+.MakeSingleChoice,
+.Draw,
+.Lobby,
+.Sortable,
+.UGC {
+    display: inline-block;
+    width: 100%
+}
+
+.Lobby .charactersList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 512px;
+    padding: .5rem;
+    margin: 0px auto
+}
+
+.Lobby .charactersList button.characters {
+    flex: 0 0 25%;
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: stretch;
+    box-sizing: border-box
+}
+
+.Lobby .charactersList button.characters.disabled {
+    cursor: not-allowed
+}
+
+.Lobby .charactersList button.characters.selected {
+    cursor: default
+}
+
+.Lobby .charactersList button.characters:before {
+    content: "";
+    display: table;
+    padding-top: 100%
+}
+
+.Lobby .charactersList button.characters .flex-item {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.choices {
+    text-align: center
+}
+
+.button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.choices .button-group button.choice-button * {
+    pointer-events: none
+}
+
+textarea.form-control {
+    resize: none;
+    overflow: hidden;
+    height: 36px;
+    line-height: 24px;
+    outline: none
+}
+
+textarea:focus {
+    outline: none
+}
+
+.button-group * {
+    border-radius: 0px;
+    margin: 0px;
+    max-width: 100%;
+    min-width: 50px;
+    overflow-wrap: break-word;
+    outline: none;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: normal;
+    word-break: break-word;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.button-group button:not(:only-child):not(:last-child) {
+    border-right-width: 0px
+}
+
+.button-group button:not(:only-child):not(:first-child) {
+    border-left-width: 0px
+}
+
+.button-group :first-child {
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2
+}
+
+.censor-button {
+    width: auto;
+    max-width: 15px;
+    padding: 0px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 35px;
+    flex: 0 1 35px
+}
+
+.double-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.double-nav-middle {
+    flex: 1 0 auto;
+    position: relative;
+    overflow-x: hidden
+}
+
+.double-nav-top,
+.double-nav-bottom {
+    flex: 0 1 auto;
+    width: 100%;
+    z-index: 1030;
+    text-align: center
+}
+
+.double-nav-detail {
+    top: 0px;
+    min-height: 100%;
+    display: absolute
+}
+
+.double-nav-bottom {
+    margin-top: auto
+}
+
+.canvasContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.Draw .nav-tabs {
+    border-width: 0px
+}
+
+li>a.button-color.active {
+    border: 3px solid
+}
+
+li>a.button-color.active[data-color="#000000"] {
+    border-color: #f32938
+}
+
+.Draw canvas.fullLayer {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.Draw .button {
+    height: 33px;
+    min-width: 40px;
+    margin: 2px;
+    padding: 5px
+}
+
+.Draw .submitDrawing {
+    height: auto
+}
+
+.Draw .currentColor {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    margin: 0px auto
+}
+
+.Draw .thickness-circle {
+    border-radius: 50%;
+    background-color: #000;
+    width: 5px;
+    height: 5px;
+    margin: 0px auto
+}
+
+.Draw .colorSwatch {
+    border-radius: 8px;
+    width: 62px;
+    height: 62px;
+    margin: 3px;
+    display: inline-block
+}
+
+.Draw .list .colorSwatch {
+    display: inline-block
+}
+
+.Draw .list .colorSwatch a {
+    padding: 0px;
+    width: 48px;
+    height: 48px
+}
+
+.Draw .colorPaletteRegion {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0)
+}
+
+.Draw .colorPaletteRegion.visible {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.Draw .colorPaletteRegion .colorPalette {
+    border: 8px solid #000;
+    background-color: #fff;
+    border-radius: 18px;
+    width: 230px;
+    padding: 2px
+}
+
+.Draw .picker {
+    position: relative
+}
+
+.Draw .list .colorPalette {
+    margin-bottom: -19px;
+    margin-right: 20px
+}
+
+.Draw .colorPaletteRegion .colorSwatch a {
+    padding: 0px;
+    width: 62px;
+    height: 62px
+}
+
+.Draw .canvasContainer {
+    display: inline-block
+}
+
+.Shoot {
+    height: 100%
+}
+
+.Shoot .health {
+    text-align: right
+}
+
+.Shoot .shoot-container {
+    max-width: 480px
+}
+
+.Shoot button.selected {
+    background: #000;
+    color: #fff
+}
+
+.Shoot div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.Shoot button {
+    width: 100px;
+    height: 50px
+}
+
+.Shoot .RadialView {
+    height: 100%
+}
+
+.Shoot .radial {
+    margin: 0px auto;
+    cursor: pointer
+}
+
+.Shoot .background {
+    stroke: #1797c5;
+    stroke-width: 32;
+    stroke-opacity: .8
+}
+
+.Shoot .health-display {
+    fill-opacity: 0;
+    stroke: #f0f;
+    stroke-width: 2
+}
+
+.Shoot .crosshair-center {
+    stroke: #fff;
+    stroke-width: .8;
+    stroke-dasharray: .3 1.265;
+    fill-opacity: 0
+}
+
+.Shoot .circle-helper {
+    stroke: #00cfe6;
+    stroke-width: 3;
+    fill-opacity: 0
+}
+
+.Shoot .line-helper-left,
+.Shoot .line-helper-right {
+    stroke: #fff;
+    stroke-width: .3
+}
+
+.Shoot .locked-in-line {
+    stroke: #fff;
+    stroke-width: .3;
+    stroke-dasharray: 1.265 .5
+}
+
+.Shoot .left-text,
+.Shoot .right-text {
+    color: #fff
+}
+
+.Shoot .locked-in-fade {
+    stroke: #000;
+    stroke-width: 34;
+    stroke-opacity: .8;
+    fill-opacity: 0
+}
+
+.Shoot .cls-1 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 17px
+}
+
+.Shoot .lockedIn .cls-1 {
+    stroke: #575757
+}
+
+.Camera {
+    position: relative
+}
+
+.Camera .cameraRegion canvas.cameraCanvas {
+    background-color: #000;
+    top: 0px;
+    left: 0px;
+    border: none
+}
+
+.Camera .cameraRegion .cameraVideo {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px
+}
+
+.Camera .cameraRegion .cameraImage {
+    width: 100%;
+    max-width: 100%
+}
+
+.Camera .cameraRegion .cameraImageDiv {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.Camera .cameraRegion .cameraControls {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    height: 60px;
+    text-align: center
+}
+
+.Camera .cameraRegion .buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden
+}
+
+.Camera .cameraRegion .buttons.visible {
+    visibility: visible
+}
+
+.Camera .cameraRegion .button {
+    background-color: #fff;
+    color: #000
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url(assets/2154fb6d10c0d32f494a.svg) no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url(assets/4afc534f7e5f41737be2.png) no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+.debug {
+    position: fixed;
+    left: 0;
+    top: 55px;
+    opacity: .1;
+    z-index: 1031;
+    user-select: none;
+    text-shadow: -1px -1px 0 #ddd, 1px -1px 0 #ddd, -1px 1px 0 #ddd, 1px 1px 0 #ddd
+}
+
+.debug:hover {
+    opacity: 1
+}
+
+.debug button {
+    width: 50px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 1px solid #333 !important;
+    outline: 1px solid #ddd !important;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    box-shadow: none !important
+}
+
+.debug span {
+    position: relative;
+    top: -4px;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+@font-face {
+    font-family: "Revolution Gothic ExtraBold It";
+    src: url(assets/11ddadb28d7a49713739.eot);
+    src: url(assets/f986e65c02cdb28f2295.woff) format("woff"), url(assets/644eeac5d049405ed777.ttf) format("truetype"), url(assets/563bd1884eecf828c18e.svg#webfont) format("svg")
+}
+
+@font-face {
+    font-family: "Revolution Gothic ExtraBold";
+    src: url(assets/e69a5b8162a4da155ec9.eot);
+    src: url(assets/537e76f6bcc4cf814124.woff) format("woff"), url(assets/a8561c790facfda1deef.ttf) format("truetype"), url(assets/9d746611e110686eed56.svg#webfont) format("svg")
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+.pollposition-page {
+    overflow-y: auto
+}
+
+.pollposition-background {
+    background-image: url(assets/8b0f1e1a2076998a0971.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
+.container {
+    padding: 5px
+}
+
+.state-nothing {
+    background-image: url(assets/8228c753d8eaea9c2dfd.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: auto
+}
+
+#player {
+    color: #fff;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 100%;
+    text-align: center
+}
+
+.pollposition-player {
+    background-color: #1e3188;
+    text-transform: uppercase
+}
+
+#pollposition-percentage {
+    outline: none;
+    margin-top: 15px;
+    margin-left: 25%;
+    margin-right: 15px;
+    padding-top: 3px;
+    height: 8.4px;
+    box-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d;
+    border-radius: 1.3px;
+    border: .2px solid #010101;
+    width: 50%;
+    float: left
+}
+
+svg.pollposition-percentage-picker {
+    width: 800px;
+    height: 800px;
+    outline: 0px
+}
+
+svg.pollposition-percentage-picker circle.background {
+    fill-opacity: 0;
+    stroke: #1797c5;
+    stroke-width: 32;
+    stroke-opacity: .8
+}
+
+svg.pollposition-percentage-picker circle.percent-display {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    fill-opacity: 0;
+    stroke: #2e3191;
+    stroke-width: 32;
+    stroke-dasharray: 75 100
+}
+
+svg.pollposition-percentage-picker circle.helper {
+    stroke: #00cfe6;
+    stroke-width: 3;
+    fill-opacity: 0
+}
+
+svg.pollposition-percentage-picker circle.center {
+    stroke: #00cfe6;
+    stroke-width: 2;
+    fill-opacity: 0
+}
+
+svg.pollposition-percentage-picker line {
+    stroke: #00cfe6;
+    stroke-width: 2
+}
+
+svg.pollposition-percentage-picker text {
+    font-family: "Revolution Gothic ExtraBold It"
+}
+
+svg.pollposition-percentage-picker text.percent {
+    fill: #fff;
+    font-size: "55"
+}
+
+svg.pollposition-percentage-picker text.percent-sign {
+    fill: #fff;
+    font-size: "25"
+}
+
+output {
+    position: absolute;
+    background-image: linear-gradient(top, #444444, #999999);
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    display: inline-block;
+    font: bold 15px/30px Georgia;
+    bottom: 175%;
+    left: 0;
+    margin-left: -1%
+}
+
+output:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 10px solid #999;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    margin-top: -1px
+}
+
+br {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    line-height: 0px;
+    content: " "
+}
+
+.pollposition-range-buffer {
+    box-sizing: border-box
+}
+
+.pollposition-text {
+    color: #fff;
+    font-family: "Revolution Gothic ExtraBold";
+    font-size: 32px;
+    line-height: 30px
+}
+
+.pollposition-text-it {
+    font-family: "Revolution Gothic ExtraBold It";
+    font-size: 32px;
+    line-height: 30px
+}
+
+.pollposition-text-medium {
+    font-size: 22px
+}
+
+.pollposition-label {
+    font-size: 125%;
+    width: 20%;
+    float: left;
+    text-align: left
+}
+
+.page p,
+.page h1,
+.page h2,
+.page h3,
+.page h4,
+.page h5,
+.page h6,
+.page td,
+.page th,
+.page span {
+    font-family: "Revolution Gothic ExtraBold It";
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    text-align: center
+}
+
+.logo-image {
+    width: 100%;
+    height: 100%
+}
+
+.logo-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-left: 2%;
+    padding-right: 2%
+}
+
+.pollposition-page {
+    overflow-y: auto
+}
+
+.pollposition-button {
+    color: #1e3188;
+    background-color: #00cfe6;
+    border-radius: 0px;
+    border-width: 0px;
+    box-shadow: 1px 1px #1e3188;
+    transform: skewX(-15deg);
+    font-family: "Revolution Gothic ExtraBold It";
+    font-size: 32px;
+    width: 70%;
+    margin: 2px 0px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.pollposition-button:hover {
+    color: #fff
+}
+
+.pollposition-button:active {
+    background: #fff;
+    color: #000;
+    box-shadow: 0px 0px
+}
+
+.pollposition-button span {
+    transform: skewX(15deg);
+    display: block;
+    word-wrap: break-word;
+    color: #1e3188
+}
+
+.pollposition-button:hover span {
+    color: #fff
+}
+
+.pollposition-button:active span {
+    color: #00cfe6
+}
+
+.pollposition-button[disabled],
+.pollposition-button[disabled]:hover,
+.pollposition-button[disabled]:focus,
+.pollposition-button[disabled]:active {
+    background: #fff;
+    color: #000;
+    box-shadow: 0px 0px;
+    opacity: .5
+}
+
+.pollposition-button[disabled] span,
+.pollposition-button[disabled] span:hover,
+.pollposition-button[disabled] span:focus,
+.pollposition-button[disabled] span:active {
+    color: #1e3188
+}
+
+.pollposition-hangingform {
+    padding-top: 40px;
+    width: 100%;
+    margin: auto
+}
+
+.pollposition-results-padded {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.pollposition-high-low-button {
+    margin-bottom: 20px
+}
+
+.pollposition-category-button {
+    color: #fff;
+    background: #101010;
+    margin: 5px 0px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(8, 8, 8, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: table-cell;
+    width: 50%
+}
+
+.pollposition-character-button {
+    color: #fff;
+    background: #49b0de;
+    margin: 2px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(8, 8, 8, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-style: none;
+    border-color: #49b0de;
+    border-radius: 10px;
+    width: 80%;
+    vertical-align: middle
+}
+
+.pollposition-character {
+    background-image: url(assets/c1b8ee738f42c8d70b0f.png);
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: 100% auto;
+    border-width: 2px
+}
+
+button.pollposition-character:hover {
+    background-image: url(assets/c1b8ee738f42c8d70b0f.png);
+    background-color: #000
+}
+
+button.pollposition-character:focus {
+    background-image: url(assets/c1b8ee738f42c8d70b0f.png);
+    background-color: #5fe7be
+}
+
+button.pollposition-character.selected {
+    background-image: url(assets/bfaf845d7e55cf47ce16.png);
+    background-color: #0f3140;
+    opacity: 1;
+    border-width: 4px;
+    cursor: not-allowed
+}
+
+button.pollposition-character.player {
+    border-color: #fff;
+    border-width: 2px;
+    border-style: solid
+}
+
+.pollposition-player .pollposition-character {
+    margin-right: 20px
+}
+
+.pollposition-character.beretlady {
+    background-position: 0 calc(100% / 23 * 0)
+}
+
+.pollposition-character.boblady {
+    background-position: 0 calc(100% / 23 * 1)
+}
+
+.pollposition-character.bombsquad {
+    background-position: 0 calc(100% / 23 * 2)
+}
+
+.pollposition-character.businessman {
+    background-position: 0 calc(100% / 23 * 3)
+}
+
+.pollposition-character.dog {
+    background-position: 0 calc(100% / 23 * 4)
+}
+
+.pollposition-character.dolphin {
+    background-position: 0 calc(100% / 23 * 5)
+}
+
+.pollposition-character.eagle2 {
+    background-position: 0 calc(100% / 23 * 6)
+}
+
+.pollposition-character.eyegadget {
+    background-position: 0 calc(100% / 23 * 7)
+}
+
+.pollposition-character.facemaskguy {
+    background-position: 0 calc(100% / 23 * 8)
+}
+
+.pollposition-character.goateeman {
+    background-position: 0 calc(100% / 23 * 9)
+}
+
+.pollposition-character.hatguy {
+    background-position: 0 calc(100% / 23 * 10)
+}
+
+.pollposition-character.hatwoman {
+    background-position: 0 calc(100% / 23 * 11)
+}
+
+.pollposition-character.hazmat {
+    background-position: 0 calc(100% / 23 * 12)
+}
+
+.pollposition-character.headphonesgirl {
+    background-position: 0 calc(100% / 23 * 13)
+}
+
+.pollposition-character.helmet {
+    background-position: 0 calc(100% / 23 * 14)
+}
+
+.pollposition-character.informant {
+    background-position: 0 calc(100% / 23 * 15)
+}
+
+.pollposition-character.radiooperator {
+    background-position: 0 calc(100% / 23 * 16)
+}
+
+.pollposition-character.robot {
+    background-position: 0 calc(100% / 23 * 17)
+}
+
+.pollposition-character.scarflady {
+    background-position: 0 calc(100% / 23 * 18)
+}
+
+.pollposition-character.sniper {
+    background-position: 0 calc(100% / 23 * 19)
+}
+
+.pollposition-character.swatteam {
+    background-position: 0 calc(100% / 23 * 20)
+}
+
+.pollposition-character.travelingdr {
+    background-position: 0 calc(100% / 23 * 21)
+}
+
+.pollposition-character.vrman {
+    background-position: 0 calc(100% / 23 * 22)
+}
+
+.pollposition-character.vrwoman {
+    background-position: 0 calc(100% / 23 * 23)
+}
+
+.pollposition-character-button span {
+    position: relative;
+    display: inherit;
+    bottom: -20px;
+    left: -14px;
+    font-size: 60%;
+    width: 62px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+    background-color: rgba(16, 16, 16, .5)
+}
+
+.table-bordered {
+    border-color: #1e3188
+}
+
+.table-bordered>thead>tr>th {
+    border-color: #1e3188;
+    background-color: #1e3188
+}
+
+.table-bordered>tbody>tr>td {
+    border-color: #1e3188;
+    vertical-align: middle
+}
+
+.table-striped>tbody>tr:nth-child(odd) {
+    background-color: #00cfe6
+}
+
+.table-striped>tbody>tr:nth-child(even) {
+    background-color: #1e3188
+}
+
+.pollposition-button-loading {
+    background: #fff url(assets/e1e1909ffc553d97a339.gif) no-repeat center;
+    background-size: contain;
+    color: rgba(0, 0, 0, 0);
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.pollposition-preload {
+    content: url "../images/loading.gif";
+    display: none
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.controller-page {
+    background-image: url(assets/8b0f1e1a2076998a0971.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff
+}
+
+#player {
+    background-color: #2524c8;
+    height: 50px;
+    margin-bottom: 20px
+}
+
+.playerTopBar .playerName {
+    font-family: "Revolution Gothic ExtraBold It";
+    font-size: 28px;
+    text-align: center;
+    color: #fff
+}
+
+.playerName {
+    text-transform: none !important
+}
+
+.playerIcon {
+    display: none
+}
+
+br {
+    margin: 20px
+}
+
+.prompt,
+.question,
+.text,
+.messageText {
+    font-family: "Revolution Gothic ExtraBold";
+    font-size: 32px;
+    line-height: 30px;
+    text-align: center
+}
+
+.text-it {
+    font-family: "Revolution Gothic ExtraBold It";
+    font-size: 32px;
+    line-height: 30px
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    text-align: center
+}
+
+.Logo {
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse
+}
+
+.Logo .logo-image {
+    background-image: url(assets/8228c753d8eaea9c2dfd.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: auto;
+    width: 100%;
+    height: 100%
+}
+
+.Logo .logo-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-left: 2%;
+    padding-right: 2%
+}
+
+.AnswerReview {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 35px
+}
+
+.AnswerReview .text {
+    color: aqua;
+    flex: 0 1 auto;
+    text-align: left
+}
+
+.AnswerReview .stat {
+    display: inline-block;
+    min-width: 112px;
+    color: #fff;
+    font-size: 40px
+}
+
+.AnswerReview .scorereviewContainer {
+    text-align: center
+}
+
+.AnswerReview .scorereviewContainer .ScoreView {
+    display: inline-block;
+    margin: 0px auto
+}
+
+.pollposition-page {
+    overflow-y: auto
+}
+
+.pollposition-button,
+.choice-button {
+    color: #1e3188;
+    background-color: #00cfe6;
+    border-radius: 0px;
+    border-width: 0px;
+    box-shadow: 1px 1px #1e3188;
+    transform: skewX(-15deg);
+    font-family: "Revolution Gothic ExtraBold It";
+    font-size: 32px;
+    width: 70%;
+    margin: 2px;
+    margin-left: 25px !important;
+    margin-right: 25px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.pollposition-button:hover {
+    color: #fff
+}
+
+.pollposition-button:active {
+    background: #fff;
+    color: #000;
+    box-shadow: 0px 0px
+}
+
+.pollposition-button span {
+    transform: skewX(15deg);
+    display: block;
+    word-wrap: break-word;
+    color: #1e3188
+}
+
+.pollposition-button:hover span {
+    color: #fff
+}
+
+.pollposition-button:active span {
+    color: #00cfe6
+}
+
+.pollposition-button[disabled],
+.pollposition-button[disabled]:hover,
+.pollposition-button[disabled]:focus,
+.pollposition-button[disabled]:active {
+    background: #fff;
+    color: #000;
+    box-shadow: 0px 0px;
+    opacity: .5
+}
+
+.pollposition-button[disabled] span,
+.pollposition-button[disabled] span:hover,
+.pollposition-button[disabled] span:focus,
+.pollposition-button[disabled] span:active {
+    color: #1e3188
+}
+
+.pollposition-hangingform {
+    padding-top: 40px;
+    width: 100%;
+    margin: auto
+}
+
+.pollposition-results-padded {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.pollposition-high-low-button {
+    margin-bottom: 20px
+}
+
+.pollposition-category-button {
+    color: #fff;
+    background: #101010;
+    margin: 5px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(8, 8, 8, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: table-cell;
+    width: 50%
+}
+
+.table-bordered {
+    border-color: #1e3188
+}
+
+.table-bordered>thead>tr>th {
+    border-color: #1e3188;
+    background-color: #1e3188
+}
+
+.table-bordered>tbody>tr>td {
+    border-color: #1e3188;
+    vertical-align: middle
+}
+
+#pollposition-percentage {
+    outline: none;
+    margin-top: 15px;
+    margin-left: 25%;
+    margin-right: 15px;
+    padding-top: 3px;
+    height: 8.4px;
+    box-shadow: 1px 1px 1px #000, 0px 0px 1px #0d0d0d;
+    border-radius: 1.3px;
+    border: .2px solid #010101;
+    width: 50%;
+    float: left
+}
+
+#pollposition-submitpercentage {
+    position: absolute;
+    bottom: 3px;
+    margin-bottom: 50px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    left: 0;
+    right: 0
+}
+
+svg.pollposition-percentage-picker {
+    display: block;
+    margin: auto;
+    padding-bottom: 10px;
+    min-height: 200px
+}
+
+svg.pollposition-percentage-picker circle.background {
+    fill-opacity: 0;
+    stroke: #1797c5;
+    stroke-width: 32;
+    stroke-opacity: .8
+}
+
+svg.pollposition-percentage-picker circle.percent-display {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    fill-opacity: 0;
+    stroke: #2e3191;
+    stroke-width: 32;
+    stroke-dasharray: 75 100
+}
+
+svg.pollposition-percentage-picker circle.helper {
+    stroke: #00cfe6;
+    stroke-width: 3;
+    fill-opacity: 0
+}
+
+svg.pollposition-percentage-picker circle.center {
+    stroke: #00cfe6;
+    stroke-width: 2;
+    fill-opacity: 0
+}
+
+svg.pollposition-percentage-picker line {
+    stroke: #00cfe6;
+    stroke-width: 2
+}
+
+svg.pollposition-percentage-picker text {
+    font-family: "Revolution Gothic ExtraBold It"
+}
+
+svg.pollposition-percentage-picker text.percent {
+    fill: #fff;
+    font-size: "55"
+}
+
+svg.pollposition-percentage-picker text.percent-sign {
+    fill: #fff;
+    font-size: "25"
+}
+
+.adroll_bounce_notice span {
+    color: #000
+}
+
+/*# sourceMappingURL=5022.css.map*/

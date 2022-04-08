@@ -1,0 +1,2075 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url(assets/372b296441e568c4f230.png)
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url(assets/6705b194308b696103dd.png)
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(assets/a4bece5c270c316c1c24.ttf);
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(assets/2263cf4bbb29e585de1b.ttf);
+    font-weight: 500;
+    font-style: normal
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+body {
+    color: #000;
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+.page {
+    overflow-y: auto
+}
+
+img {
+    margin: 0px auto
+}
+
+canvas {
+    border: 1px solid #000
+}
+
+.controller-page {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch
+}
+
+.scrollable {
+    overflow-y: auto
+}
+
+.textDescriptions {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden
+}
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+.loadingSpinner {
+    text-align: center;
+    margin: 50px 0px
+}
+
+.playerName {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.playerIcon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    background-size: contain
+}
+
+.playerIcon.none {
+    display: none
+}
+
+.twitchBroadcasterIcon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 13px;
+    bottom: 10px;
+    background-image: url(assets/2154fb6d10c0d32f494a.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.controller-container {
+    display: flex;
+    overflow-y: hidden
+}
+
+#controller-container {
+    display: flex;
+    flex-direction: column
+}
+
+#controller-container>div:last-child {
+    flex-grow: 1
+}
+
+#controller-main {
+    flex: 1 0 auto
+}
+
+.Logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch
+}
+
+.Logo>div {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    text-align: center
+}
+
+div.logo-image {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 600px;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3
+}
+
+.lobbyTitle {
+    text-align: center
+}
+
+.artifactContainer {
+    text-align: center
+}
+
+.artifactButton {
+    background-image: url(assets/8fa1f1ed4c15973f951d.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 283px;
+    width: 90%;
+    max-width: 512px;
+    display: inline-block
+}
+
+@media only screen and (max-width: 480px) {
+    .artifactButton {
+        height: 192px
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .artifactButton {
+        height: 128px
+    }
+}
+
+.controller-content {
+    max-width: 768px;
+    margin: 0px auto
+}
+
+.controller-content>div {
+    display: inline-block;
+    width: 100%
+}
+
+.EnterSingleText,
+.MakeSingleChoice,
+.Draw,
+.Lobby,
+.Sortable,
+.UGC {
+    display: inline-block;
+    width: 100%
+}
+
+.Lobby .charactersList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 512px;
+    padding: .5rem;
+    margin: 0px auto
+}
+
+.Lobby .charactersList button.characters {
+    flex: 0 0 25%;
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: stretch;
+    box-sizing: border-box
+}
+
+.Lobby .charactersList button.characters.disabled {
+    cursor: not-allowed
+}
+
+.Lobby .charactersList button.characters.selected {
+    cursor: default
+}
+
+.Lobby .charactersList button.characters:before {
+    content: "";
+    display: table;
+    padding-top: 100%
+}
+
+.Lobby .charactersList button.characters .flex-item {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.choices {
+    text-align: center
+}
+
+.button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.choices .button-group button.choice-button * {
+    pointer-events: none
+}
+
+textarea.form-control {
+    resize: none;
+    overflow: hidden;
+    height: 36px;
+    line-height: 24px;
+    outline: none
+}
+
+textarea:focus {
+    outline: none
+}
+
+.button-group * {
+    border-radius: 0px;
+    margin: 0px;
+    max-width: 100%;
+    min-width: 50px;
+    overflow-wrap: break-word;
+    outline: none;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: normal;
+    word-break: break-word;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.button-group button:not(:only-child):not(:last-child) {
+    border-right-width: 0px
+}
+
+.button-group button:not(:only-child):not(:first-child) {
+    border-left-width: 0px
+}
+
+.button-group :first-child {
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2
+}
+
+.censor-button {
+    width: auto;
+    max-width: 15px;
+    padding: 0px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 35px;
+    flex: 0 1 35px
+}
+
+.double-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.double-nav-middle {
+    flex: 1 0 auto;
+    position: relative;
+    overflow-x: hidden
+}
+
+.double-nav-top,
+.double-nav-bottom {
+    flex: 0 1 auto;
+    width: 100%;
+    z-index: 1030;
+    text-align: center
+}
+
+.double-nav-detail {
+    top: 0px;
+    min-height: 100%;
+    display: absolute
+}
+
+.double-nav-bottom {
+    margin-top: auto
+}
+
+.canvasContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.Draw .nav-tabs {
+    border-width: 0px
+}
+
+li>a.button-color.active {
+    border: 3px solid
+}
+
+li>a.button-color.active[data-color="#000000"] {
+    border-color: #f32938
+}
+
+.Draw canvas.fullLayer {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.Draw .button {
+    height: 33px;
+    min-width: 40px;
+    margin: 2px;
+    padding: 5px
+}
+
+.Draw .submitDrawing {
+    height: auto
+}
+
+.Draw .currentColor {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    margin: 0px auto
+}
+
+.Draw .thickness-circle {
+    border-radius: 50%;
+    background-color: #000;
+    width: 5px;
+    height: 5px;
+    margin: 0px auto
+}
+
+.Draw .colorSwatch {
+    border-radius: 8px;
+    width: 62px;
+    height: 62px;
+    margin: 3px;
+    display: inline-block
+}
+
+.Draw .list .colorSwatch {
+    display: inline-block
+}
+
+.Draw .list .colorSwatch a {
+    padding: 0px;
+    width: 48px;
+    height: 48px
+}
+
+.Draw .colorPaletteRegion {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0)
+}
+
+.Draw .colorPaletteRegion.visible {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.Draw .colorPaletteRegion .colorPalette {
+    border: 8px solid #000;
+    background-color: #fff;
+    border-radius: 18px;
+    width: 230px;
+    padding: 2px
+}
+
+.Draw .picker {
+    position: relative
+}
+
+.Draw .list .colorPalette {
+    margin-bottom: -19px;
+    margin-right: 20px
+}
+
+.Draw .colorPaletteRegion .colorSwatch a {
+    padding: 0px;
+    width: 62px;
+    height: 62px
+}
+
+.Draw .canvasContainer {
+    display: inline-block
+}
+
+.Shoot {
+    height: 100%
+}
+
+.Shoot .health {
+    text-align: right
+}
+
+.Shoot .shoot-container {
+    max-width: 480px
+}
+
+.Shoot button.selected {
+    background: #000;
+    color: #fff
+}
+
+.Shoot div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.Shoot button {
+    width: 100px;
+    height: 50px
+}
+
+.Shoot .RadialView {
+    height: 100%
+}
+
+.Shoot .radial {
+    margin: 0px auto;
+    cursor: pointer
+}
+
+.Shoot .background {
+    stroke: #1797c5;
+    stroke-width: 32;
+    stroke-opacity: .8
+}
+
+.Shoot .health-display {
+    fill-opacity: 0;
+    stroke: #f0f;
+    stroke-width: 2
+}
+
+.Shoot .crosshair-center {
+    stroke: #fff;
+    stroke-width: .8;
+    stroke-dasharray: .3 1.265;
+    fill-opacity: 0
+}
+
+.Shoot .circle-helper {
+    stroke: #00cfe6;
+    stroke-width: 3;
+    fill-opacity: 0
+}
+
+.Shoot .line-helper-left,
+.Shoot .line-helper-right {
+    stroke: #fff;
+    stroke-width: .3
+}
+
+.Shoot .locked-in-line {
+    stroke: #fff;
+    stroke-width: .3;
+    stroke-dasharray: 1.265 .5
+}
+
+.Shoot .left-text,
+.Shoot .right-text {
+    color: #fff
+}
+
+.Shoot .locked-in-fade {
+    stroke: #000;
+    stroke-width: 34;
+    stroke-opacity: .8;
+    fill-opacity: 0
+}
+
+.Shoot .cls-1 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 17px
+}
+
+.Shoot .lockedIn .cls-1 {
+    stroke: #575757
+}
+
+.Camera {
+    position: relative
+}
+
+.Camera .cameraRegion canvas.cameraCanvas {
+    background-color: #000;
+    top: 0px;
+    left: 0px;
+    border: none
+}
+
+.Camera .cameraRegion .cameraVideo {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px
+}
+
+.Camera .cameraRegion .cameraImage {
+    width: 100%;
+    max-width: 100%
+}
+
+.Camera .cameraRegion .cameraImageDiv {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.Camera .cameraRegion .cameraControls {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    height: 60px;
+    text-align: center
+}
+
+.Camera .cameraRegion .buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden
+}
+
+.Camera .cameraRegion .buttons.visible {
+    visibility: visible
+}
+
+.Camera .cameraRegion .button {
+    background-color: #fff;
+    color: #000
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url(assets/2154fb6d10c0d32f494a.svg) no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url(assets/4afc534f7e5f41737be2.png) no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+.debug {
+    position: fixed;
+    left: 0;
+    top: 55px;
+    opacity: .1;
+    z-index: 1031;
+    user-select: none;
+    text-shadow: -1px -1px 0 #ddd, 1px -1px 0 #ddd, -1px 1px 0 #ddd, 1px 1px 0 #ddd
+}
+
+.debug:hover {
+    opacity: 1
+}
+
+.debug button {
+    width: 50px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 1px solid #333 !important;
+    outline: 1px solid #ddd !important;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    box-shadow: none !important
+}
+
+.debug span {
+    position: relative;
+    top: -4px;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+@font-face {
+    font-family: "typewriter_serialbold";
+    src: url(assets/dc08a481f0c662855545.woff) format("woff");
+    font-weight: normal;
+    font-style: normal
+}
+
+.drawful2international,
+.drawful2 {
+    background-image: url(assets/b6bf7add4e854be9c4ad.png);
+    font-family: "typewriter_serialbold", serif;
+    font-size: 18px;
+    text-transform: lowercase
+}
+
+.drawful2international *,
+.drawful2 * {
+    font-family: "typewriter_serialbold", serif
+}
+
+.drawful2international .danger .text,
+.drawful2 .danger .text {
+    color: #a94442
+}
+
+.drawful2international .artifactButton,
+.drawful2 .artifactButton {
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(assets/1937faf094184f7a1e42.png);
+    border: none
+}
+
+.drawful2international.fr .artifactButton,
+.drawful2.fr .artifactButton {
+    background-image: url(assets/873f597fb7817de7861e.png)
+}
+
+.drawful2international.it .artifactButton,
+.drawful2.it .artifactButton {
+    background-image: url(assets/a4405cbaca7d004864c6.png)
+}
+
+.drawful2international.es .artifactButton,
+.drawful2.es .artifactButton {
+    background-image: url(assets/40ade8aaa852307b15d2.png)
+}
+
+.drawful2international.de .artifactButton,
+.drawful2.de .artifactButton {
+    background-image: url(assets/28ac79304651407a5107.png)
+}
+
+.drawful2international .playerTopBarView,
+.drawful2 .playerTopBarView {
+    color: #fff;
+    background-color: #f0c;
+    margin-bottom: 8px;
+    position: relative
+}
+
+.drawful2international .playerTopBarView:after,
+.drawful2 .playerTopBarView:after {
+    content: "";
+    width: 100%;
+    height: 10px;
+    background-image: url(assets/857f9ad165b786ae14e6.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -5px
+}
+
+.drawful2international .Logo .logo-image,
+.drawful2 .Logo .logo-image {
+    background-image: url(assets/2194d8e88a2824ff0844.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: auto
+}
+
+.drawful2international .Lobby,
+.drawful2international .Logo,
+.drawful2international .MakeSingleChoice,
+.drawful2international .EnterSingleText,
+.drawful2international .UGC,
+.drawful2 .Lobby,
+.drawful2 .Logo,
+.drawful2 .MakeSingleChoice,
+.drawful2 .EnterSingleText,
+.drawful2 .UGC {
+    padding: 0px 5px;
+    text-align: center
+}
+
+.drawful2international .Lobby .button,
+.drawful2international .Lobby textarea,
+.drawful2international .Lobby .inlineSubmitButton,
+.drawful2international .Logo .button,
+.drawful2international .Logo textarea,
+.drawful2international .Logo .inlineSubmitButton,
+.drawful2international .MakeSingleChoice .button,
+.drawful2international .MakeSingleChoice textarea,
+.drawful2international .MakeSingleChoice .inlineSubmitButton,
+.drawful2international .EnterSingleText .button,
+.drawful2international .EnterSingleText textarea,
+.drawful2international .EnterSingleText .inlineSubmitButton,
+.drawful2international .UGC .button,
+.drawful2international .UGC textarea,
+.drawful2international .UGC .inlineSubmitButton,
+.drawful2 .Lobby .button,
+.drawful2 .Lobby textarea,
+.drawful2 .Lobby .inlineSubmitButton,
+.drawful2 .Logo .button,
+.drawful2 .Logo textarea,
+.drawful2 .Logo .inlineSubmitButton,
+.drawful2 .MakeSingleChoice .button,
+.drawful2 .MakeSingleChoice textarea,
+.drawful2 .MakeSingleChoice .inlineSubmitButton,
+.drawful2 .EnterSingleText .button,
+.drawful2 .EnterSingleText textarea,
+.drawful2 .EnterSingleText .inlineSubmitButton,
+.drawful2 .UGC .button,
+.drawful2 .UGC textarea,
+.drawful2 .UGC .inlineSubmitButton {
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 7px solid #000;
+    color: #000;
+    border-image: url(assets/a146c52aed0ca556b69c.svg) 10% 6%;
+    border-image-repeat: inherit
+}
+
+.drawful2international .Lobby .button.choice-button,
+.drawful2international .Lobby textarea.choice-button,
+.drawful2international .Lobby .inlineSubmitButton.choice-button,
+.drawful2international .Logo .button.choice-button,
+.drawful2international .Logo textarea.choice-button,
+.drawful2international .Logo .inlineSubmitButton.choice-button,
+.drawful2international .MakeSingleChoice .button.choice-button,
+.drawful2international .MakeSingleChoice textarea.choice-button,
+.drawful2international .MakeSingleChoice .inlineSubmitButton.choice-button,
+.drawful2international .EnterSingleText .button.choice-button,
+.drawful2international .EnterSingleText textarea.choice-button,
+.drawful2international .EnterSingleText .inlineSubmitButton.choice-button,
+.drawful2international .UGC .button.choice-button,
+.drawful2international .UGC textarea.choice-button,
+.drawful2international .UGC .inlineSubmitButton.choice-button,
+.drawful2 .Lobby .button.choice-button,
+.drawful2 .Lobby textarea.choice-button,
+.drawful2 .Lobby .inlineSubmitButton.choice-button,
+.drawful2 .Logo .button.choice-button,
+.drawful2 .Logo textarea.choice-button,
+.drawful2 .Logo .inlineSubmitButton.choice-button,
+.drawful2 .MakeSingleChoice .button.choice-button,
+.drawful2 .MakeSingleChoice textarea.choice-button,
+.drawful2 .MakeSingleChoice .inlineSubmitButton.choice-button,
+.drawful2 .EnterSingleText .button.choice-button,
+.drawful2 .EnterSingleText textarea.choice-button,
+.drawful2 .EnterSingleText .inlineSubmitButton.choice-button,
+.drawful2 .UGC .button.choice-button,
+.drawful2 .UGC textarea.choice-button,
+.drawful2 .UGC .inlineSubmitButton.choice-button {
+    padding: 5px 16px
+}
+
+.drawful2international .Lobby .button .inlineSubmitText,
+.drawful2international .Lobby textarea .inlineSubmitText,
+.drawful2international .Lobby .inlineSubmitButton .inlineSubmitText,
+.drawful2international .Logo .button .inlineSubmitText,
+.drawful2international .Logo textarea .inlineSubmitText,
+.drawful2international .Logo .inlineSubmitButton .inlineSubmitText,
+.drawful2international .MakeSingleChoice .button .inlineSubmitText,
+.drawful2international .MakeSingleChoice textarea .inlineSubmitText,
+.drawful2international .MakeSingleChoice .inlineSubmitButton .inlineSubmitText,
+.drawful2international .EnterSingleText .button .inlineSubmitText,
+.drawful2international .EnterSingleText textarea .inlineSubmitText,
+.drawful2international .EnterSingleText .inlineSubmitButton .inlineSubmitText,
+.drawful2international .UGC .button .inlineSubmitText,
+.drawful2international .UGC textarea .inlineSubmitText,
+.drawful2international .UGC .inlineSubmitButton .inlineSubmitText,
+.drawful2 .Lobby .button .inlineSubmitText,
+.drawful2 .Lobby textarea .inlineSubmitText,
+.drawful2 .Lobby .inlineSubmitButton .inlineSubmitText,
+.drawful2 .Logo .button .inlineSubmitText,
+.drawful2 .Logo textarea .inlineSubmitText,
+.drawful2 .Logo .inlineSubmitButton .inlineSubmitText,
+.drawful2 .MakeSingleChoice .button .inlineSubmitText,
+.drawful2 .MakeSingleChoice textarea .inlineSubmitText,
+.drawful2 .MakeSingleChoice .inlineSubmitButton .inlineSubmitText,
+.drawful2 .EnterSingleText .button .inlineSubmitText,
+.drawful2 .EnterSingleText textarea .inlineSubmitText,
+.drawful2 .EnterSingleText .inlineSubmitButton .inlineSubmitText,
+.drawful2 .UGC .button .inlineSubmitText,
+.drawful2 .UGC textarea .inlineSubmitText,
+.drawful2 .UGC .inlineSubmitButton .inlineSubmitText {
+    color: #000
+}
+
+.drawful2international .Lobby textarea,
+.drawful2international .Logo textarea,
+.drawful2international .MakeSingleChoice textarea,
+.drawful2international .EnterSingleText textarea,
+.drawful2international .UGC textarea,
+.drawful2 .Lobby textarea,
+.drawful2 .Logo textarea,
+.drawful2 .MakeSingleChoice textarea,
+.drawful2 .EnterSingleText textarea,
+.drawful2 .UGC textarea {
+    text-transform: lowercase;
+    outline: none;
+    box-shadow: none;
+    min-height: 48px;
+    margin-top: 5px
+}
+
+.drawful2international .Lobby .button:active,
+.drawful2international .Logo .button:active,
+.drawful2international .MakeSingleChoice .button:active,
+.drawful2international .EnterSingleText .button:active,
+.drawful2international .UGC .button:active,
+.drawful2 .Lobby .button:active,
+.drawful2 .Logo .button:active,
+.drawful2 .MakeSingleChoice .button:active,
+.drawful2 .EnterSingleText .button:active,
+.drawful2 .UGC .button:active {
+    outline: none;
+    background-color: #000;
+    color: #fff
+}
+
+.drawful2international .Lobby .button:focus,
+.drawful2international .Logo .button:focus,
+.drawful2international .MakeSingleChoice .button:focus,
+.drawful2international .EnterSingleText .button:focus,
+.drawful2international .UGC .button:focus,
+.drawful2 .Lobby .button:focus,
+.drawful2 .Logo .button:focus,
+.drawful2 .MakeSingleChoice .button:focus,
+.drawful2 .EnterSingleText .button:focus,
+.drawful2 .UGC .button:focus {
+    outline: none
+}
+
+.drawful2international .Lobby .button.artifactButton,
+.drawful2international .Logo .button.artifactButton,
+.drawful2international .MakeSingleChoice .button.artifactButton,
+.drawful2international .EnterSingleText .button.artifactButton,
+.drawful2international .UGC .button.artifactButton,
+.drawful2 .Lobby .button.artifactButton,
+.drawful2 .Logo .button.artifactButton,
+.drawful2 .MakeSingleChoice .button.artifactButton,
+.drawful2 .EnterSingleText .button.artifactButton,
+.drawful2 .UGC .button.artifactButton {
+    border: none
+}
+
+.drawful2international .Lobby .button-group.selected button,
+.drawful2international .Logo .button-group.selected button,
+.drawful2international .MakeSingleChoice .button-group.selected button,
+.drawful2international .EnterSingleText .button-group.selected button,
+.drawful2international .UGC .button-group.selected button,
+.drawful2 .Lobby .button-group.selected button,
+.drawful2 .Logo .button-group.selected button,
+.drawful2 .MakeSingleChoice .button-group.selected button,
+.drawful2 .EnterSingleText .button-group.selected button,
+.drawful2 .UGC .button-group.selected button {
+    background-color: #333;
+    color: #ccc
+}
+
+.drawful2international .Lobby .button-group .censor-button,
+.drawful2international .Logo .button-group .censor-button,
+.drawful2international .MakeSingleChoice .button-group .censor-button,
+.drawful2international .EnterSingleText .button-group .censor-button,
+.drawful2international .UGC .button-group .censor-button,
+.drawful2 .Lobby .button-group .censor-button,
+.drawful2 .Logo .button-group .censor-button,
+.drawful2 .MakeSingleChoice .button-group .censor-button,
+.drawful2 .EnterSingleText .button-group .censor-button,
+.drawful2 .UGC .button-group .censor-button {
+    background-color: #000;
+    background-image: url(assets/a9edf63fb96eccce9034.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.drawful2international .Lobby .button-group .censor-button.isWarned,
+.drawful2international .Logo .button-group .censor-button.isWarned,
+.drawful2international .MakeSingleChoice .button-group .censor-button.isWarned,
+.drawful2international .EnterSingleText .button-group .censor-button.isWarned,
+.drawful2international .UGC .button-group .censor-button.isWarned,
+.drawful2 .Lobby .button-group .censor-button.isWarned,
+.drawful2 .Logo .button-group .censor-button.isWarned,
+.drawful2 .MakeSingleChoice .button-group .censor-button.isWarned,
+.drawful2 .EnterSingleText .button-group .censor-button.isWarned,
+.drawful2 .UGC .button-group .censor-button.isWarned {
+    background-color: #900;
+    background-image: url(assets/ce6e9fc45592502ad373.png)
+}
+
+.drawful2international .Lobby.ChooseLikes .button-group .button,
+.drawful2international .Logo.ChooseLikes .button-group .button,
+.drawful2international .MakeSingleChoice.ChooseLikes .button-group .button,
+.drawful2international .EnterSingleText.ChooseLikes .button-group .button,
+.drawful2international .UGC.ChooseLikes .button-group .button,
+.drawful2 .Lobby.ChooseLikes .button-group .button,
+.drawful2 .Logo.ChooseLikes .button-group .button,
+.drawful2 .MakeSingleChoice.ChooseLikes .button-group .button,
+.drawful2 .EnterSingleText.ChooseLikes .button-group .button,
+.drawful2 .UGC.ChooseLikes .button-group .button {
+    border: 0px solid;
+    background-color: transparent;
+    padding-left: 35px;
+    text-align: left
+}
+
+.drawful2international .Lobby.ChooseLikes .button-group .button:active,
+.drawful2international .Lobby.ChooseLikes .button-group .button:hover,
+.drawful2international .Lobby.ChooseLikes .button-group .button:focus,
+.drawful2international .Logo.ChooseLikes .button-group .button:active,
+.drawful2international .Logo.ChooseLikes .button-group .button:hover,
+.drawful2international .Logo.ChooseLikes .button-group .button:focus,
+.drawful2international .MakeSingleChoice.ChooseLikes .button-group .button:active,
+.drawful2international .MakeSingleChoice.ChooseLikes .button-group .button:hover,
+.drawful2international .MakeSingleChoice.ChooseLikes .button-group .button:focus,
+.drawful2international .EnterSingleText.ChooseLikes .button-group .button:active,
+.drawful2international .EnterSingleText.ChooseLikes .button-group .button:hover,
+.drawful2international .EnterSingleText.ChooseLikes .button-group .button:focus,
+.drawful2international .UGC.ChooseLikes .button-group .button:active,
+.drawful2international .UGC.ChooseLikes .button-group .button:hover,
+.drawful2international .UGC.ChooseLikes .button-group .button:focus,
+.drawful2 .Lobby.ChooseLikes .button-group .button:active,
+.drawful2 .Lobby.ChooseLikes .button-group .button:hover,
+.drawful2 .Lobby.ChooseLikes .button-group .button:focus,
+.drawful2 .Logo.ChooseLikes .button-group .button:active,
+.drawful2 .Logo.ChooseLikes .button-group .button:hover,
+.drawful2 .Logo.ChooseLikes .button-group .button:focus,
+.drawful2 .MakeSingleChoice.ChooseLikes .button-group .button:active,
+.drawful2 .MakeSingleChoice.ChooseLikes .button-group .button:hover,
+.drawful2 .MakeSingleChoice.ChooseLikes .button-group .button:focus,
+.drawful2 .EnterSingleText.ChooseLikes .button-group .button:active,
+.drawful2 .EnterSingleText.ChooseLikes .button-group .button:hover,
+.drawful2 .EnterSingleText.ChooseLikes .button-group .button:focus,
+.drawful2 .UGC.ChooseLikes .button-group .button:active,
+.drawful2 .UGC.ChooseLikes .button-group .button:hover,
+.drawful2 .UGC.ChooseLikes .button-group .button:focus {
+    box-shadow: none;
+    color: #000
+}
+
+.drawful2international .Lobby.ChooseLikes .button-group .choice-button::before,
+.drawful2international .Logo.ChooseLikes .button-group .choice-button::before,
+.drawful2international .MakeSingleChoice.ChooseLikes .button-group .choice-button::before,
+.drawful2international .EnterSingleText.ChooseLikes .button-group .choice-button::before,
+.drawful2international .UGC.ChooseLikes .button-group .choice-button::before,
+.drawful2 .Lobby.ChooseLikes .button-group .choice-button::before,
+.drawful2 .Logo.ChooseLikes .button-group .choice-button::before,
+.drawful2 .MakeSingleChoice.ChooseLikes .button-group .choice-button::before,
+.drawful2 .EnterSingleText.ChooseLikes .button-group .choice-button::before,
+.drawful2 .UGC.ChooseLikes .button-group .choice-button::before {
+    content: " ";
+    background-image: url(assets/c607dc6403f6972e819b.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 26px;
+    height: 36px
+}
+
+.drawful2international .Lobby.ChooseLikes .button-group.selected .button.choice-button,
+.drawful2international .Logo.ChooseLikes .button-group.selected .button.choice-button,
+.drawful2international .MakeSingleChoice.ChooseLikes .button-group.selected .button.choice-button,
+.drawful2international .EnterSingleText.ChooseLikes .button-group.selected .button.choice-button,
+.drawful2international .UGC.ChooseLikes .button-group.selected .button.choice-button,
+.drawful2 .Lobby.ChooseLikes .button-group.selected .button.choice-button,
+.drawful2 .Logo.ChooseLikes .button-group.selected .button.choice-button,
+.drawful2 .MakeSingleChoice.ChooseLikes .button-group.selected .button.choice-button,
+.drawful2 .EnterSingleText.ChooseLikes .button-group.selected .button.choice-button,
+.drawful2 .UGC.ChooseLikes .button-group.selected .button.choice-button {
+    background-color: transparent;
+    color: #000
+}
+
+.drawful2international .Lobby.ChooseLikes .button-group.selected .choice-button::before,
+.drawful2international .Logo.ChooseLikes .button-group.selected .choice-button::before,
+.drawful2international .MakeSingleChoice.ChooseLikes .button-group.selected .choice-button::before,
+.drawful2international .EnterSingleText.ChooseLikes .button-group.selected .choice-button::before,
+.drawful2international .UGC.ChooseLikes .button-group.selected .choice-button::before,
+.drawful2 .Lobby.ChooseLikes .button-group.selected .choice-button::before,
+.drawful2 .Logo.ChooseLikes .button-group.selected .choice-button::before,
+.drawful2 .MakeSingleChoice.ChooseLikes .button-group.selected .choice-button::before,
+.drawful2 .EnterSingleText.ChooseLikes .button-group.selected .choice-button::before,
+.drawful2 .UGC.ChooseLikes .button-group.selected .choice-button::before {
+    background-position: bottom
+}
+
+.drawful2international .Lobby.ChooseLikes .button-group .censor-button,
+.drawful2international .Logo.ChooseLikes .button-group .censor-button,
+.drawful2international .MakeSingleChoice.ChooseLikes .button-group .censor-button,
+.drawful2international .EnterSingleText.ChooseLikes .button-group .censor-button,
+.drawful2international .UGC.ChooseLikes .button-group .censor-button,
+.drawful2 .Lobby.ChooseLikes .button-group .censor-button,
+.drawful2 .Logo.ChooseLikes .button-group .censor-button,
+.drawful2 .MakeSingleChoice.ChooseLikes .button-group .censor-button,
+.drawful2 .EnterSingleText.ChooseLikes .button-group .censor-button,
+.drawful2 .UGC.ChooseLikes .button-group .censor-button {
+    background-color: #000
+}
+
+.drawful2international .Lobby .ugcModal,
+.drawful2international .Logo .ugcModal,
+.drawful2international .MakeSingleChoice .ugcModal,
+.drawful2international .EnterSingleText .ugcModal,
+.drawful2international .UGC .ugcModal,
+.drawful2 .Lobby .ugcModal,
+.drawful2 .Logo .ugcModal,
+.drawful2 .MakeSingleChoice .ugcModal,
+.drawful2 .EnterSingleText .ugcModal,
+.drawful2 .UGC .ugcModal {
+    border-radius: 12px;
+    font-family: "Rokkitt", serif;
+    font-size: 28px;
+    text-transform: lowercase
+}
+
+.drawful2international .Lobby .ugcModal .swal2-content,
+.drawful2international .Logo .ugcModal .swal2-content,
+.drawful2international .MakeSingleChoice .ugcModal .swal2-content,
+.drawful2international .EnterSingleText .ugcModal .swal2-content,
+.drawful2international .UGC .ugcModal .swal2-content,
+.drawful2 .Lobby .ugcModal .swal2-content,
+.drawful2 .Logo .ugcModal .swal2-content,
+.drawful2 .MakeSingleChoice .ugcModal .swal2-content,
+.drawful2 .EnterSingleText .ugcModal .swal2-content,
+.drawful2 .UGC .ugcModal .swal2-content {
+    color: #000
+}
+
+.drawful2international .Lobby .ugcModal .swal2-actions button,
+.drawful2international .Logo .ugcModal .swal2-actions button,
+.drawful2international .MakeSingleChoice .ugcModal .swal2-actions button,
+.drawful2international .EnterSingleText .ugcModal .swal2-actions button,
+.drawful2international .UGC .ugcModal .swal2-actions button,
+.drawful2 .Lobby .ugcModal .swal2-actions button,
+.drawful2 .Logo .ugcModal .swal2-actions button,
+.drawful2 .MakeSingleChoice .ugcModal .swal2-actions button,
+.drawful2 .EnterSingleText .ugcModal .swal2-actions button,
+.drawful2 .UGC .ugcModal .swal2-actions button {
+    text-transform: lowercase
+}
+
+.drawful2international .Lobby .tosLink,
+.drawful2international .Logo .tosLink,
+.drawful2international .MakeSingleChoice .tosLink,
+.drawful2international .EnterSingleText .tosLink,
+.drawful2international .UGC .tosLink,
+.drawful2 .Lobby .tosLink,
+.drawful2 .Logo .tosLink,
+.drawful2 .MakeSingleChoice .tosLink,
+.drawful2 .EnterSingleText .tosLink,
+.drawful2 .UGC .tosLink {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    border-radius: 12px;
+    text-align: baseline;
+    padding: 10px 15px 0px 15px
+}
+
+.drawful2international .Lobby .chosen.text,
+.drawful2international .Logo .chosen.text,
+.drawful2international .MakeSingleChoice .chosen.text,
+.drawful2international .EnterSingleText .chosen.text,
+.drawful2international .UGC .chosen.text,
+.drawful2 .Lobby .chosen.text,
+.drawful2 .Logo .chosen.text,
+.drawful2 .MakeSingleChoice .chosen.text,
+.drawful2 .EnterSingleText .chosen.text,
+.drawful2 .UGC .chosen.text {
+    word-break: break-word
+}
+
+.drawful2international .Lobby .lobbyTitle,
+.drawful2 .Lobby .lobbyTitle {
+    padding: 10px
+}
+
+.drawful2international .Lobby .choices,
+.drawful2 .Lobby .choices {
+    margin: 0px auto;
+    max-width: 480px;
+    padding: 0px 50px
+}
+
+.drawful2international .Lobby .choices button,
+.drawful2 .Lobby .choices button {
+    font-size: 24px
+}
+
+.drawful2international .Lobby .vipCensorOptions button,
+.drawful2international .Lobby .vipEpisodesMenu button,
+.drawful2 .Lobby .vipCensorOptions button,
+.drawful2 .Lobby .vipEpisodesMenu button {
+    background-color: #000;
+    color: #fff;
+    flex-grow: 0;
+    font-size: 18px
+}
+
+.drawful2international .Lobby .vipStart,
+.drawful2international .Lobby .vipCancel,
+.drawful2 .Lobby .vipStart,
+.drawful2 .Lobby .vipCancel {
+    margin-bottom: 42px
+}
+
+.drawful2international .Draw,
+.drawful2 .Draw {
+    padding: 0px 5px;
+    text-align: center
+}
+
+.drawful2international .Draw .controller-content,
+.drawful2 .Draw .controller-content {
+    max-width: 480px
+}
+
+.drawful2international .Draw .prompt,
+.drawful2 .Draw .prompt {
+    font-size: 18px;
+    padding: 10px 0px;
+    word-break: break-word
+}
+
+.drawful2international .Draw .nav-colors .button:focus,
+.drawful2international .Draw .nav-colors .button:active,
+.drawful2 .Draw .nav-colors .button:focus,
+.drawful2 .Draw .nav-colors .button:active {
+    outline: none
+}
+
+.drawful2international .Draw .submitdrawing:focus,
+.drawful2international .Draw .submitdrawing:active,
+.drawful2 .Draw .submitdrawing:focus,
+.drawful2 .Draw .submitdrawing:active {
+    outline: none
+}
+
+.drawful2international .Draw canvas,
+.drawful2 .Draw canvas {
+    background-color: #fff;
+    border: 0px solid
+}
+
+.drawful2international .Draw .canvasContainer,
+.drawful2 .Draw .canvasContainer {
+    box-sizing: border-box;
+    border: 10px solid;
+    border-image: url(assets/edd1ec53b1ea95b0bed8.svg) 2.6%;
+    line-height: 0px
+}
+
+.drawful2international .Draw .button,
+.drawful2 .Draw .button {
+    vertical-align: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: transparent;
+    border: 0px solid;
+    height: 50px;
+    width: 50px
+}
+
+.drawful2international .Draw #submitdrawing,
+.drawful2 .Draw #submitdrawing {
+    width: auto;
+    font-size: 24px;
+    color: #fff;
+    background-image: url(assets/a146c52aed0ca556b69c.svg);
+    background-clip: padding-box;
+    background-color: transparent;
+    background-size: 100% 100%;
+    border: 0px solid;
+    padding: 5px 10px
+}
+
+.drawful2international .Draw #submitdrawing:active,
+.drawful2 .Draw #submitdrawing:active {
+    color: #000;
+    background-image: url(assets/e52ddcb6972de6c27414.svg)
+}
+
+.drawful2international .inlineSubmitButton,
+.drawful2international button.button[data-action=submit],
+.drawful2 .inlineSubmitButton,
+.drawful2 button.button[data-action=submit] {
+    box-shadow: none;
+    width: auto;
+    font-size: 24px;
+    border: 0px solid;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: #000;
+    background-clip: padding-box;
+    background-image: none;
+    border: 7px solid #000;
+    border-image: url(assets/a146c52aed0ca556b69c.svg) 10% 6% fill;
+    border-image-repeat: inherit;
+    text-shadow: none;
+    font-size: 18px;
+    padding: 6px 12px
+}
+
+.drawful2international .inlineSubmitButton .inlineSubmitText,
+.drawful2international button.button[data-action=submit] .inlineSubmitText,
+.drawful2 .inlineSubmitButton .inlineSubmitText,
+.drawful2 button.button[data-action=submit] .inlineSubmitText {
+    font-family: "typewriter_serialbold", serif;
+    color: #fff
+}
+
+.drawful2international .inlineSubmitButton:active,
+.drawful2international .inlineSubmitButton:focus,
+.drawful2international button.button[data-action=submit]:active,
+.drawful2international button.button[data-action=submit]:focus,
+.drawful2 .inlineSubmitButton:active,
+.drawful2 .inlineSubmitButton:focus,
+.drawful2 button.button[data-action=submit]:active,
+.drawful2 button.button[data-action=submit]:focus {
+    box-shadow: none;
+    outline: none
+}
+
+.drawful2international .inlineSubmitButton:active,
+.drawful2international button.button[data-action=submit]:active,
+.drawful2 .inlineSubmitButton:active,
+.drawful2 button.button[data-action=submit]:active {
+    background-color: #fff
+}
+
+.drawful2international .inlineSubmitButton:active .inlineSubmitText,
+.drawful2international button.button[data-action=submit]:active .inlineSubmitText,
+.drawful2 .inlineSubmitButton:active .inlineSubmitText,
+.drawful2 button.button[data-action=submit]:active .inlineSubmitText {
+    color: #000
+}
+
+.drawful2international .EnterSingleText .choices .button-group.btn-group.btn-block,
+.drawful2 .EnterSingleText .choices .button-group.btn-group.btn-block {
+    width: auto;
+    display: inline-block
+}
+
+.drawful2international .EnterSingleText .choices .button-group.btn-group.btn-block:first-of-type,
+.drawful2 .EnterSingleText .choices .button-group.btn-group.btn-block:first-of-type {
+    float: right;
+    padding-top: 5px
+}
+
+.drawful2international .EnterSingleText button[data-action=submit],
+.drawful2 .EnterSingleText button[data-action=submit] {
+    float: right
+}
+
+.drawful2international .UGC button.inlineSubmitButton,
+.drawful2 .UGC button.inlineSubmitButton {
+    background: #fff
+}
+
+.drawful2international .UGC button.inlineSubmitButton:active,
+.drawful2 .UGC button.inlineSubmitButton:active {
+    background: #000
+}
+
+.drawful2international .UGC button.inlineSubmitButton .inlineSubmitText,
+.drawful2 .UGC button.inlineSubmitButton .inlineSubmitText {
+    color: #000
+}
+
+.drawful2international .UGC button.ugc-toggle-visibility-button,
+.drawful2 .UGC button.ugc-toggle-visibility-button {
+    border: 0px solid transparent;
+    width: 75px;
+    height: 66px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% auto;
+    vertical-align: middle
+}
+
+.drawful2international .UGC button.ugc-toggle-visibility-button.on,
+.drawful2 .UGC button.ugc-toggle-visibility-button.on {
+    background-position: top
+}
+
+.drawful2international .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller,
+.drawful2 .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller {
+    background-image: url(assets/5bd82626b9bfb4ae4361.png)
+}
+
+.drawful2international .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen,
+.drawful2 .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen {
+    background-image: url(assets/636e51eaa73e027cf5ec.png)
+}
+
+.drawful2international .UGC button.ugc-toggle-visibility-button:active,
+.drawful2international .UGC button.ugc-toggle-visibility-button:focus,
+.drawful2 .UGC button.ugc-toggle-visibility-button:active,
+.drawful2 .UGC button.ugc-toggle-visibility-button:focus {
+    border: 0px solid transparent;
+    outline: none
+}
+
+.drawful2international .swal2-container .choice-button,
+.drawful2 .swal2-container .choice-button {
+    font-family: "typewriter_serialbold", serif;
+    font-size: 32px;
+    color: #000;
+    text-transform: lowercase
+}
+
+.drawful2international .swal2-container .swal2-confirm.swal2-styled,
+.drawful2 .swal2-container .swal2-confirm.swal2-styled {
+    color: #000;
+    font-family: "typewriter_serialbold", serif;
+    border: 5px solid #000
+}
+
+.drawful2international .playerTopBarView.Player0,
+.drawful2 .playerTopBarView.Player0 {
+    background-color: #fb405a
+}
+
+.drawful2international .Draw.Player0 button#primaryColor,
+.drawful2 .Draw.Player0 button#primaryColor {
+    background-image: url(assets/43b09a67b50437ef033e.svg)
+}
+
+.drawful2international .Draw.Player0 button#secondaryColor,
+.drawful2 .Draw.Player0 button#secondaryColor {
+    background-image: url(assets/ed260fc6bd6d52d946af.svg)
+}
+
+.drawful2international .Draw.Player0 button#primaryColor.selected,
+.drawful2 .Draw.Player0 button#primaryColor.selected {
+    background-image: url(assets/6fd419c05fda2f7f25e3.svg)
+}
+
+.drawful2international .Draw.Player0 button#secondaryColor.selected,
+.drawful2 .Draw.Player0 button#secondaryColor.selected {
+    background-image: url(assets/7dd7aa39896d58732c73.svg)
+}
+
+.drawful2international .Draw.Player0 .prompt .text div:nth-of-type(2),
+.drawful2 .Draw.Player0 .prompt .text div:nth-of-type(2) {
+    color: #fb405a
+}
+
+.drawful2international .controller-page>.Player0,
+.drawful2 .controller-page>.Player0 {
+    background: no-repeat center/cover
+}
+
+.drawful2international .controller-page>.Player0 .button-group.submit button,
+.drawful2 .controller-page>.Player0 .button-group.submit button {
+    color: #fff
+}
+
+.drawful2international .playerTopBarView.Player1,
+.drawful2 .playerTopBarView.Player1 {
+    background-color: #ff5520
+}
+
+.drawful2international .Draw.Player1 button#primaryColor,
+.drawful2 .Draw.Player1 button#primaryColor {
+    background-image: url(assets/1f2085cd2f8edf524528.svg)
+}
+
+.drawful2international .Draw.Player1 button#secondaryColor,
+.drawful2 .Draw.Player1 button#secondaryColor {
+    background-image: url(assets/80fdc594393683cea8b9.svg)
+}
+
+.drawful2international .Draw.Player1 button#primaryColor.selected,
+.drawful2 .Draw.Player1 button#primaryColor.selected {
+    background-image: url(assets/fb42369c817faf10f9c8.svg)
+}
+
+.drawful2international .Draw.Player1 button#secondaryColor.selected,
+.drawful2 .Draw.Player1 button#secondaryColor.selected {
+    background-image: url(assets/a2d8aa2aa8be60d7f306.svg)
+}
+
+.drawful2international .Draw.Player1 .prompt .text div:nth-of-type(2),
+.drawful2 .Draw.Player1 .prompt .text div:nth-of-type(2) {
+    color: #ff5520
+}
+
+.drawful2international .controller-page>.Player1,
+.drawful2 .controller-page>.Player1 {
+    background: no-repeat center/cover
+}
+
+.drawful2international .controller-page>.Player1 .button-group.submit button,
+.drawful2 .controller-page>.Player1 .button-group.submit button {
+    color: #fff
+}
+
+.drawful2international .playerTopBarView.Player2,
+.drawful2 .playerTopBarView.Player2 {
+    background-color: #e39600
+}
+
+.drawful2international .Draw.Player2 button#primaryColor,
+.drawful2 .Draw.Player2 button#primaryColor {
+    background-image: url(assets/70dfc08e5682e2991ffb.svg)
+}
+
+.drawful2international .Draw.Player2 button#secondaryColor,
+.drawful2 .Draw.Player2 button#secondaryColor {
+    background-image: url(assets/35e5b79daf988f9aac04.svg)
+}
+
+.drawful2international .Draw.Player2 button#primaryColor.selected,
+.drawful2 .Draw.Player2 button#primaryColor.selected {
+    background-image: url(assets/8912a96baff9899c58ed.svg)
+}
+
+.drawful2international .Draw.Player2 button#secondaryColor.selected,
+.drawful2 .Draw.Player2 button#secondaryColor.selected {
+    background-image: url(assets/9346a9616f6170b5a782.svg)
+}
+
+.drawful2international .Draw.Player2 .prompt .text div:nth-of-type(2),
+.drawful2 .Draw.Player2 .prompt .text div:nth-of-type(2) {
+    color: #e39600
+}
+
+.drawful2international .controller-page>.Player2,
+.drawful2 .controller-page>.Player2 {
+    background: no-repeat center/cover
+}
+
+.drawful2international .controller-page>.Player2 .button-group.submit button,
+.drawful2 .controller-page>.Player2 .button-group.submit button {
+    color: #fff
+}
+
+.drawful2international .playerTopBarView.Player3,
+.drawful2 .playerTopBarView.Player3 {
+    background-color: #0fc772
+}
+
+.drawful2international .Draw.Player3 button#primaryColor,
+.drawful2 .Draw.Player3 button#primaryColor {
+    background-image: url(assets/702eb64854804ff76a75.svg)
+}
+
+.drawful2international .Draw.Player3 button#secondaryColor,
+.drawful2 .Draw.Player3 button#secondaryColor {
+    background-image: url(assets/37e313eea26e95e34f5f.svg)
+}
+
+.drawful2international .Draw.Player3 button#primaryColor.selected,
+.drawful2 .Draw.Player3 button#primaryColor.selected {
+    background-image: url(assets/c5909ee4b7142ac2cf9f.svg)
+}
+
+.drawful2international .Draw.Player3 button#secondaryColor.selected,
+.drawful2 .Draw.Player3 button#secondaryColor.selected {
+    background-image: url(assets/422d8822a9f676da753b.svg)
+}
+
+.drawful2international .Draw.Player3 .prompt .text div:nth-of-type(2),
+.drawful2 .Draw.Player3 .prompt .text div:nth-of-type(2) {
+    color: #0fc772
+}
+
+.drawful2international .controller-page>.Player3,
+.drawful2 .controller-page>.Player3 {
+    background: no-repeat center/cover
+}
+
+.drawful2international .controller-page>.Player3 .button-group.submit button,
+.drawful2 .controller-page>.Player3 .button-group.submit button {
+    color: #fff
+}
+
+.drawful2international .playerTopBarView.Player4,
+.drawful2 .playerTopBarView.Player4 {
+    background-color: #00d6ca
+}
+
+.drawful2international .Draw.Player4 button#primaryColor,
+.drawful2 .Draw.Player4 button#primaryColor {
+    background-image: url(assets/a2117e98a12c5189d7e7.svg)
+}
+
+.drawful2international .Draw.Player4 button#secondaryColor,
+.drawful2 .Draw.Player4 button#secondaryColor {
+    background-image: url(assets/9d70239a6400c28c65fc.svg)
+}
+
+.drawful2international .Draw.Player4 button#primaryColor.selected,
+.drawful2 .Draw.Player4 button#primaryColor.selected {
+    background-image: url(assets/6e400058c642824b5dbf.svg)
+}
+
+.drawful2international .Draw.Player4 button#secondaryColor.selected,
+.drawful2 .Draw.Player4 button#secondaryColor.selected {
+    background-image: url(assets/7dbc20b4e794283e14d9.svg)
+}
+
+.drawful2international .Draw.Player4 .prompt .text div:nth-of-type(2),
+.drawful2 .Draw.Player4 .prompt .text div:nth-of-type(2) {
+    color: #00d6ca
+}
+
+.drawful2international .controller-page>.Player4,
+.drawful2 .controller-page>.Player4 {
+    background: no-repeat center/cover
+}
+
+.drawful2international .controller-page>.Player4 .button-group.submit button,
+.drawful2 .controller-page>.Player4 .button-group.submit button {
+    color: #fff
+}
+
+.drawful2international .playerTopBarView.Player5,
+.drawful2 .playerTopBarView.Player5 {
+    background-color: #a84ec4
+}
+
+.drawful2international .Draw.Player5 button#primaryColor,
+.drawful2 .Draw.Player5 button#primaryColor {
+    background-image: url(assets/e0c466e21dba6a76224b.svg)
+}
+
+.drawful2international .Draw.Player5 button#secondaryColor,
+.drawful2 .Draw.Player5 button#secondaryColor {
+    background-image: url(assets/3f1bd8d5bd1a6e156b40.svg)
+}
+
+.drawful2international .Draw.Player5 button#primaryColor.selected,
+.drawful2 .Draw.Player5 button#primaryColor.selected {
+    background-image: url(assets/fd215457aededa600764.svg)
+}
+
+.drawful2international .Draw.Player5 button#secondaryColor.selected,
+.drawful2 .Draw.Player5 button#secondaryColor.selected {
+    background-image: url(assets/536f9b1c9067a69be09c.svg)
+}
+
+.drawful2international .Draw.Player5 .prompt .text div:nth-of-type(2),
+.drawful2 .Draw.Player5 .prompt .text div:nth-of-type(2) {
+    color: #a84ec4
+}
+
+.drawful2international .controller-page>.Player5,
+.drawful2 .controller-page>.Player5 {
+    background: no-repeat center/cover
+}
+
+.drawful2international .controller-page>.Player5 .button-group.submit button,
+.drawful2 .controller-page>.Player5 .button-group.submit button {
+    color: #fff
+}
+
+.drawful2international .playerTopBarView.Player6,
+.drawful2 .playerTopBarView.Player6 {
+    background-color: #556be0
+}
+
+.drawful2international .Draw.Player6 button#primaryColor,
+.drawful2 .Draw.Player6 button#primaryColor {
+    background-image: url(assets/f557a730dd0163af4f99.svg)
+}
+
+.drawful2international .Draw.Player6 button#secondaryColor,
+.drawful2 .Draw.Player6 button#secondaryColor {
+    background-image: url(assets/9606a291d0c98d46c8aa.svg)
+}
+
+.drawful2international .Draw.Player6 button#primaryColor.selected,
+.drawful2 .Draw.Player6 button#primaryColor.selected {
+    background-image: url(assets/1ed7c6253e62c5d26c1b.svg)
+}
+
+.drawful2international .Draw.Player6 button#secondaryColor.selected,
+.drawful2 .Draw.Player6 button#secondaryColor.selected {
+    background-image: url(assets/7d4e205ae7bc4edf109f.svg)
+}
+
+.drawful2international .Draw.Player6 .prompt .text div:nth-of-type(2),
+.drawful2 .Draw.Player6 .prompt .text div:nth-of-type(2) {
+    color: #556be0
+}
+
+.drawful2international .controller-page>.Player6,
+.drawful2 .controller-page>.Player6 {
+    background: no-repeat center/cover
+}
+
+.drawful2international .controller-page>.Player6 .button-group.submit button,
+.drawful2 .controller-page>.Player6 .button-group.submit button {
+    color: #fff
+}
+
+.drawful2international .playerTopBarView.Player7,
+.drawful2 .playerTopBarView.Player7 {
+    background-color: #9c9d3e
+}
+
+.drawful2international .Draw.Player7 button#primaryColor,
+.drawful2 .Draw.Player7 button#primaryColor {
+    background-image: url(assets/83c2a1ef3f708e346e20.svg)
+}
+
+.drawful2international .Draw.Player7 button#secondaryColor,
+.drawful2 .Draw.Player7 button#secondaryColor {
+    background-image: url(assets/d4c1463cc01217f5a6c3.svg)
+}
+
+.drawful2international .Draw.Player7 button#primaryColor.selected,
+.drawful2 .Draw.Player7 button#primaryColor.selected {
+    background-image: url(assets/3c4e0db0b9da737b00ba.svg)
+}
+
+.drawful2international .Draw.Player7 button#secondaryColor.selected,
+.drawful2 .Draw.Player7 button#secondaryColor.selected {
+    background-image: url(assets/35810603f1095a1c7596.svg)
+}
+
+.drawful2international .Draw.Player7 .prompt .text div:nth-of-type(2),
+.drawful2 .Draw.Player7 .prompt .text div:nth-of-type(2) {
+    color: #9c9d3e
+}
+
+.drawful2international .controller-page>.Player7,
+.drawful2 .controller-page>.Player7 {
+    background: no-repeat center/cover
+}
+
+.drawful2international .controller-page>.Player7 .button-group.submit button,
+.drawful2 .controller-page>.Player7 .button-group.submit button {
+    color: #fff
+}
+
+.censorMenu,
+.episodesModal,
+.censorOptionsModal,
+.Dialog {
+    background-image: url(assets/b6bf7add4e854be9c4ad.png);
+    box-sizing: border-box;
+    border: 10px solid;
+    border-image: url(assets/edd1ec53b1ea95b0bed8.svg) 2.6%;
+    border-radius: 0px;
+    background-clip: padding-box
+}
+
+.censorMenu .prompt,
+.censorMenu .title,
+.episodesModal .prompt,
+.episodesModal .title,
+.censorOptionsModal .prompt,
+.censorOptionsModal .title,
+.Dialog .prompt,
+.Dialog .title {
+    font-family: "typewriter_serialbold", serif;
+    font-size: 18px;
+    color: #000;
+    font-size: 18px
+}
+
+.censorMenu .cancelButton,
+.episodesModal .cancelButton,
+.censorOptionsModal .cancelButton,
+.Dialog .cancelButton {
+    text-transform: lowercase
+}
+
+.censorMenu .button,
+.censorMenu .swal2-actions .cancelButton.swal2-styled,
+.censorMenu button.swal2-styled,
+.episodesModal .button,
+.episodesModal .swal2-actions .cancelButton.swal2-styled,
+.episodesModal button.swal2-styled,
+.censorOptionsModal .button,
+.censorOptionsModal .swal2-actions .cancelButton.swal2-styled,
+.censorOptionsModal button.swal2-styled,
+.Dialog .button,
+.Dialog .swal2-actions .cancelButton.swal2-styled,
+.Dialog button.swal2-styled {
+    font-family: "typewriter_serialbold", serif;
+    font-size: 18px;
+    text-transform: lowercase;
+    font-size: 24px;
+    background-color: #fff;
+    color: #000;
+    background-color: #fff;
+    background-clip: padding-box;
+    background-image: none;
+    border: 7px solid #000;
+    border-image: url(assets/a146c52aed0ca556b69c.svg) 10% 6%;
+    border-image-repeat: inherit;
+    outline: none
+}
+
+.censorMenu .button:hover,
+.censorMenu .swal2-actions .cancelButton.swal2-styled:hover,
+.censorMenu button.swal2-styled:hover,
+.episodesModal .button:hover,
+.episodesModal .swal2-actions .cancelButton.swal2-styled:hover,
+.episodesModal button.swal2-styled:hover,
+.censorOptionsModal .button:hover,
+.censorOptionsModal .swal2-actions .cancelButton.swal2-styled:hover,
+.censorOptionsModal button.swal2-styled:hover,
+.Dialog .button:hover,
+.Dialog .swal2-actions .cancelButton.swal2-styled:hover,
+.Dialog button.swal2-styled:hover {
+    background-color: #fff;
+    background-image: none
+}
+
+.censorMenu .button:active,
+.censorMenu .swal2-actions .cancelButton.swal2-styled:active,
+.censorMenu button.swal2-styled:active,
+.episodesModal .button:active,
+.episodesModal .swal2-actions .cancelButton.swal2-styled:active,
+.episodesModal button.swal2-styled:active,
+.censorOptionsModal .button:active,
+.censorOptionsModal .swal2-actions .cancelButton.swal2-styled:active,
+.censorOptionsModal button.swal2-styled:active,
+.Dialog .button:active,
+.Dialog .swal2-actions .cancelButton.swal2-styled:active,
+.Dialog button.swal2-styled:active {
+    background-color: #000;
+    color: #fff;
+    box-shadow: none
+}
+
+.censorMenu .button:focus,
+.censorMenu .swal2-actions .cancelButton.swal2-styled:focus,
+.censorMenu button.swal2-styled:focus,
+.episodesModal .button:focus,
+.episodesModal .swal2-actions .cancelButton.swal2-styled:focus,
+.episodesModal button.swal2-styled:focus,
+.censorOptionsModal .button:focus,
+.censorOptionsModal .swal2-actions .cancelButton.swal2-styled:focus,
+.censorOptionsModal button.swal2-styled:focus,
+.Dialog .button:focus,
+.Dialog .swal2-actions .cancelButton.swal2-styled:focus,
+.Dialog button.swal2-styled:focus {
+    box-shadow: none
+}
+
+.censorMenu textarea:focus,
+.episodesModal textarea:focus,
+.censorOptionsModal textarea:focus,
+.Dialog textarea:focus {
+    text-transform: lowercase;
+    outline-color: transparent;
+    outline-style: none;
+    box-shadow: none
+}
+
+.censorMenu .backButton button,
+.episodesModal .backButton button,
+.censorOptionsModal .backButton button,
+.Dialog .backButton button {
+    flex-grow: 0;
+    background-color: #000;
+    color: #fff;
+    background-clip: padding-box
+}
+
+.censorMenu .backButton button:hover:hover,
+.censorMenu .backButton button:active:hover,
+.censorMenu .backButton button:focus:hover,
+.episodesModal .backButton button:hover:hover,
+.episodesModal .backButton button:active:hover,
+.episodesModal .backButton button:focus:hover,
+.censorOptionsModal .backButton button:hover:hover,
+.censorOptionsModal .backButton button:active:hover,
+.censorOptionsModal .backButton button:focus:hover,
+.Dialog .backButton button:hover:hover,
+.Dialog .backButton button:active:hover,
+.Dialog .backButton button:focus:hover {
+    background-color: #000;
+    color: #fff
+}
+
+.censorMenu .backButton button:active,
+.episodesModal .backButton button:active,
+.censorOptionsModal .backButton button:active,
+.Dialog .backButton button:active {
+    background-color: #fff;
+    color: #000
+}
+
+/*# sourceMappingURL=9082.css.map*/

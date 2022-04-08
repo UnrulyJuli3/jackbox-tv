@@ -1,0 +1,2896 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url("ydkj2015/post-banner.tjpp7_banner-image.png")
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url("ydkj2015/post-banner.tjpp6_banner-image.png")
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("ydkj2015/a4bece5c270c316c1c24.ttf");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("ydkj2015/2263cf4bbb29e585de1b.ttf");
+    font-weight: 500;
+    font-style: normal
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th {
+    font-weight: 700
+}
+
+.button-primary {
+    background: #000;
+    color: #fff
+}
+
+.button-xlarge {
+    border-width: 0px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 5px;
+    border-radius: 10px
+}
+
+.button-large {
+    border-radius: 10px
+}
+
+.post-banner {
+    cursor: pointer
+}
+
+.button-blue {
+    color: #fff;
+    background: #3e55fe;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.button-blue:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-gray {
+    color: #3e55fe;
+    background: #ccc;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent
+}
+
+.button-gray:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-help-text {
+    display: inline
+}
+
+@media screen and (max-width: 480px) {
+    .button-help-text {
+        display: none
+    }
+}
+
+.button-black {
+    color: #fff;
+    background: #333
+}
+
+.debug {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: .6
+}
+
+.debug span {
+    pointer-events: none;
+    user-select: none
+}
+
+.text-signin {
+    color: #3e55fe
+}
+
+.jbg-input {
+    font-size: 1.3em
+}
+
+.close {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000;
+    background: transparent;
+    border: none !important;
+    text-decoration: none;
+    content: "x";
+    right: 10px;
+    position: absolute
+}
+
+.close:hover {
+    color: #666
+}
+
+.button-yes {
+    background: #1cb841
+}
+
+.button-no {
+    background: #ca3c3c
+}
+
+.image-hand {
+    background: url("ydkj2015/image-hand.png");
+    cursor: pointer;
+    border: none;
+    width: 126px;
+    height: 700px
+}
+
+canvas {
+    touch-action: none
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url("ydkj2015/jbgTwitchContent_icon-twitch.svg") no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url("ydkj2015/jbgTwitchContent_warning.png") no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+@font-face {
+    font-family: "Francois One";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Francois One Regular"), local("FrancoisOne-Regular"), url(https://fonts.gstatic.com/s/francoisone/v9/bYbkq2nU2TSx4SwFbz5sCKRDOzjiPcYnFooOUGCOsRk.woff) format("woff")
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.ydkj-page {
+    overflow-y: hidden
+}
+
+.ydkj-gameplay {
+    margin-top: 20px
+}
+
+.ydkj-game-screwed {
+    background-color: red
+}
+
+.ydkj-game-shortie {
+    background: url("ydkj2015/ydkj-game-shortie.png");
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat
+}
+
+.ydkj-game-lobby {
+    background: url("ydkj2015/ydkj-game-lobby.png");
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat
+}
+
+.ydkj-game-disordat {
+    background: url("ydkj2015/ydkj-game-disordat.png");
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat
+}
+
+.ydkj-game-jackattack {
+    background: url("ydkj2015/ydkj-game-jackattack.png");
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat
+}
+
+.ydkj-game-credits {
+    background: url("ydkj2015/ydkj-game-credits.png");
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat
+}
+
+.ydkj-playerName {
+    background: #000
+}
+
+.ydkj-playerName-text {
+    color: #ff9;
+    font-family: "Francois One"
+}
+
+.ydkj-playerNum {
+    width: 133px;
+    height: 104px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.button-ydkj {
+    color: #fff;
+    background: #000;
+    margin-top: 10px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.button-ydkj:hover {
+    color: #fff;
+    background: #000;
+    border-top-color: #fff
+}
+
+.button-ydkj:active {
+    background: #fff;
+    color: #000
+}
+
+.ydkj-preload-1 {
+    background: url("ydkj2015/ydkj-game-lobby.png") no-repeat center;
+    display: none
+}
+
+.ydkj-preload-2 {
+    background: url("ydkj2015/ydkj-game-shortie.png") no-repeat center;
+    display: none
+}
+
+.ydkj-preload-3 {
+    background: url("ydkj2015/ydkj-game-disordat.png") no-repeat center;
+    display: none
+}
+
+.ydkj-preload-4 {
+    background: url("ydkj2015/ydkj-game-jackattack.png") no-repeat center;
+    display: none
+}
+
+.ydkj-preload-5 {
+    background: url("ydkj2015/ydkj-game-credits.png") no-repeat center;
+    display: none
+}
+
+.button-a {
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    border: none
+}
+
+.button-a:active {
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none
+}
+
+.button-a:focus {
+    outline: 0
+}
+
+.button-a-disable {
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none
+}
+
+.button-b {
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    border: none
+}
+
+.button-b:active {
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none
+}
+
+.button-b:focus {
+    outline: 0
+}
+
+.button-b-disable {
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none
+}
+
+.button-x {
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    border: none
+}
+
+.button-x:active {
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none
+}
+
+.button-x:focus {
+    outline: 0
+}
+
+.button-x-disable {
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none
+}
+
+.button-y {
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    border: none
+}
+
+.button-y:active {
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none
+}
+
+.button-y:focus {
+    outline: 0
+}
+
+.button-y-disable {
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none
+}
+
+.button-a-lg {
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    border: none
+}
+
+.button-a-lg:active {
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none
+}
+
+.button-a-lg:focus {
+    outline: 0
+}
+
+.button-screw {
+    background-color: rgba(0, 0, 0, 0);
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0px auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    border: none
+}
+
+.button-screw:active {
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none
+}
+
+.button-screw:focus {
+    outline: 0
+}
+
+.button-pause {
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    border: none
+}
+
+.button-pause:active {
+    background-size: cover;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none
+}
+
+.button-pause:focus {
+    outline: 0
+}
+
+.gameplay-centered {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center
+}
+
+.ydkj-button-preload-1 {
+    display: none
+}
+
+.ydkj-button-preload-2 {
+    display: none
+}
+
+.ydkj-button-preload-3 {
+    display: none
+}
+
+.ydkj-button-preload-4 {
+    display: none
+}
+
+.ydkj-button-preload-5 {
+    display: none
+}
+
+.ydkj-button-preload-6 {
+    display: none
+}
+
+.ydkj-button-preload-7 {
+    display: none
+}
+
+.ydkj-button-preload-8 {
+    display: none
+}
+
+.ydkj-button-preload-9 {
+    display: none
+}
+
+.ydkj-button-preload-10 {
+    display: none
+}
+
+.ydkj-button-preload-11 {
+    display: none
+}
+
+.ydkj-button-preload-12 {
+    display: none
+}
+
+.ydkj-button-preload-13 {
+    display: none
+}
+
+.ydkj-button-preload-14 {
+    display: none
+}
+
+.ydkj-button-preload-15 {
+    display: none
+}
+
+.ydkj-button-preload-16 {
+    display: none
+}
+
+.button-a {
+    background-image: url("ydkj2015/button-a.png")
+}
+
+.button-a:active {
+    background-image: url("ydkj2015/button-a_active.png")
+}
+
+.button-a-disable {
+    background-image: url("ydkj2015/button-a-disable.png")
+}
+
+.button-b {
+    background-image: url("ydkj2015/button-b.png")
+}
+
+.button-b:active {
+    background-image: url("ydkj2015/button-b_active.png")
+}
+
+.button-b-disable {
+    background-image: url("ydkj2015/button-b-disable.png")
+}
+
+.button-x {
+    background-image: url("ydkj2015/button-x.png")
+}
+
+.button-x:active {
+    background-image: url("ydkj2015/button-x_active.png")
+}
+
+.button-x-disable {
+    background-image: url("ydkj2015/button-x-disable.png")
+}
+
+.button-y {
+    background-image: url("ydkj2015/button-y.png")
+}
+
+.button-y:active {
+    background-image: url("ydkj2015/button-y_active.png")
+}
+
+.button-y-disable {
+    background-image: url("ydkj2015/button-y-disable.png")
+}
+
+.button-a-lg {
+    background-image: url("ydkj2015/button-a-lg.png")
+}
+
+.button-a-lg:active {
+    background-image: url("ydkj2015/button-a-lg_active.png")
+}
+
+.button-screw {
+    background-image: url("ydkj2015/button-screw.png")
+}
+
+.button-screw:active {
+    background-image: url("ydkj2015/button-screw_active.png")
+}
+
+.button-pause {
+    background-image: url("ydkj2015/button-pause.png")
+}
+
+.button-pause:active {
+    background-image: url("ydkj2015/button-pause_active.png")
+}
+
+.aft .button-a {
+    background-image: url("ydkj2015/button-a.png")
+}
+
+.aft .button-a:active {
+    background-image: url("ydkj2015/button-a_active.png")
+}
+
+.aft .button-a-disable {
+    background-image: url("ydkj2015/button-a-disable.png")
+}
+
+.aft .button-b {
+    background-image: url("ydkj2015/button-b.png")
+}
+
+.aft .button-b:active {
+    background-image: url("ydkj2015/button-b_active.png")
+}
+
+.aft .button-b-disable {
+    background-image: url("ydkj2015/button-b-disable.png")
+}
+
+.aft .button-x {
+    background-image: url("ydkj2015/button-x.png")
+}
+
+.aft .button-x:active {
+    background-image: url("ydkj2015/button-x_active.png")
+}
+
+.aft .button-x-disable {
+    background-image: url("ydkj2015/button-x-disable.png")
+}
+
+.aft .button-y {
+    background-image: url("ydkj2015/button-y.png")
+}
+
+.aft .button-y:active {
+    background-image: url("ydkj2015/button-y_active.png")
+}
+
+.aft .button-y-disable {
+    background-image: url("ydkj2015/button-y-disable.png")
+}
+
+.aft .button-a-lg {
+    background-image: url("ydkj2015/button-a-lg.png")
+}
+
+.aft .button-a-lg:active {
+    background-image: url("ydkj2015/button-a-lg_active.png")
+}
+
+.aft .button-screw {
+    background-image: url("ydkj2015/button-screw.png")
+}
+
+.aft .button-screw:active {
+    background-image: url("ydkj2015/button-screw_active.png")
+}
+
+.aft .button-pause {
+    background-image: url("ydkj2015/button-pause.png")
+}
+
+.aft .button-pause:active {
+    background-image: url("ydkj2015/button-pause_active.png")
+}
+
+.aft .ydkj-button-preload-1 {
+    background: url("ydkj2015/button-a.png") no-repeat center
+}
+
+.aft .ydkj-button-preload-2 {
+    background: url("ydkj2015/button-a_active.png") no-repeat center
+}
+
+.aft .ydkj-button-preload-3 {
+    background: url("ydkj2015/button-a-disable.png") no-repeat center
+}
+
+.aft .ydkj-button-preload-4 {
+    background: url("ydkj2015/button-b.png") no-repeat center
+}
+
+.aft .ydkj-button-preload-5 {
+    background: url("ydkj2015/button-b_active.png") no-repeat center
+}
+
+.aft .ydkj-button-preload-6 {
+    background: url("ydkj2015/button-b-disable.png") no-repeat center
+}
+
+.aft .ydkj-button-preload-7 {
+    background: url("ydkj2015/button-x.png") no-repeat center
+}
+
+.aft .ydkj-button-preload-8 {
+    background: url("ydkj2015/button-x_active.png") no-repeat center
+}
+
+.aft .ydkj-button-preload-9 {
+    background: url("ydkj2015/button-x-disable.png") no-repeat center
+}
+
+.aft .ydkj-button-preload-10 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.aft .ydkj-button-preload-11 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.aft .ydkj-button-preload-12 {
+    background: url("ydkj2015/button-y-disable.png") no-repeat center
+}
+
+.aft .ydkj-button-preload-13 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.aft .ydkj-button-preload-14 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.aft .ydkj-button-preload-15 {
+    background: url("ydkj2015/button-screw.png") no-repeat center
+}
+
+.aft .ydkj-button-preload-16 {
+    background: url("ydkj2015/button-screw_active.png") no-repeat center
+}
+
+.aftm .button-a {
+    background-image: url("ydkj2015/button-a.png")
+}
+
+.aftm .button-a:active {
+    background-image: url("ydkj2015/button-a_active.png")
+}
+
+.aftm .button-a-disable {
+    background-image: url("ydkj2015/button-a-disable.png")
+}
+
+.aftm .button-b {
+    background-image: url("ydkj2015/button-b.png")
+}
+
+.aftm .button-b:active {
+    background-image: url("ydkj2015/button-b_active.png")
+}
+
+.aftm .button-b-disable {
+    background-image: url("ydkj2015/button-b-disable.png")
+}
+
+.aftm .button-x {
+    background-image: url("ydkj2015/button-x.png")
+}
+
+.aftm .button-x:active {
+    background-image: url("ydkj2015/button-x_active.png")
+}
+
+.aftm .button-x-disable {
+    background-image: url("ydkj2015/button-x-disable.png")
+}
+
+.aftm .button-y {
+    background-image: url("ydkj2015/button-y.png")
+}
+
+.aftm .button-y:active {
+    background-image: url("ydkj2015/button-y_active.png")
+}
+
+.aftm .button-y-disable {
+    background-image: url("ydkj2015/button-y-disable.png")
+}
+
+.aftm .button-a-lg {
+    background-image: url("ydkj2015/button-a-lg.png")
+}
+
+.aftm .button-a-lg:active {
+    background-image: url("ydkj2015/button-a-lg_active.png")
+}
+
+.aftm .button-screw {
+    background-image: url("ydkj2015/button-screw.png")
+}
+
+.aftm .button-screw:active {
+    background-image: url("ydkj2015/button-screw_active.png")
+}
+
+.aftm .button-pause {
+    background-image: url("ydkj2015/button-pause.png")
+}
+
+.aftm .button-pause:active {
+    background-image: url("ydkj2015/button-pause_active.png")
+}
+
+.aftm .ydkj-button-preload-1 {
+    background: url("ydkj2015/button-a.png") no-repeat center
+}
+
+.aftm .ydkj-button-preload-2 {
+    background: url("ydkj2015/button-a_active.png") no-repeat center
+}
+
+.aftm .ydkj-button-preload-3 {
+    background: url("ydkj2015/button-a-disable.png") no-repeat center
+}
+
+.aftm .ydkj-button-preload-4 {
+    background: url("ydkj2015/button-b.png") no-repeat center
+}
+
+.aftm .ydkj-button-preload-5 {
+    background: url("ydkj2015/button-b_active.png") no-repeat center
+}
+
+.aftm .ydkj-button-preload-6 {
+    background: url("ydkj2015/button-b-disable.png") no-repeat center
+}
+
+.aftm .ydkj-button-preload-7 {
+    background: url("ydkj2015/button-x.png") no-repeat center
+}
+
+.aftm .ydkj-button-preload-8 {
+    background: url("ydkj2015/button-x_active.png") no-repeat center
+}
+
+.aftm .ydkj-button-preload-9 {
+    background: url("ydkj2015/button-x-disable.png") no-repeat center
+}
+
+.aftm .ydkj-button-preload-10 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.aftm .ydkj-button-preload-11 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.aftm .ydkj-button-preload-12 {
+    background: url("ydkj2015/button-y-disable.png") no-repeat center
+}
+
+.aftm .ydkj-button-preload-13 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.aftm .ydkj-button-preload-14 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.aftm .ydkj-button-preload-15 {
+    background: url("ydkj2015/button-screw.png") no-repeat center
+}
+
+.aftm .ydkj-button-preload-16 {
+    background: url("ydkj2015/button-screw_active.png") no-repeat center
+}
+
+.air .button-a {
+    background-image: url("ydkj2015/button-a.png")
+}
+
+.air .button-a:active {
+    background-image: url("ydkj2015/button-a_active.png")
+}
+
+.air .button-a-disable {
+    background-image: url("ydkj2015/button-a-disable.png")
+}
+
+.air .button-b {
+    background-image: url("ydkj2015/button-b.png")
+}
+
+.air .button-b:active {
+    background-image: url("ydkj2015/button-b_active.png")
+}
+
+.air .button-b-disable {
+    background-image: url("ydkj2015/button-b-disable.png")
+}
+
+.air .button-x {
+    background-image: url("ydkj2015/button-x.png")
+}
+
+.air .button-x:active {
+    background-image: url("ydkj2015/button-x_active.png")
+}
+
+.air .button-x-disable {
+    background-image: url("ydkj2015/button-x-disable.png")
+}
+
+.air .button-y {
+    background-image: url("ydkj2015/button-y.png")
+}
+
+.air .button-y:active {
+    background-image: url("ydkj2015/button-y_active.png")
+}
+
+.air .button-y-disable {
+    background-image: url("ydkj2015/button-y-disable.png")
+}
+
+.air .button-a-lg {
+    background-image: url("ydkj2015/button-a-lg.png")
+}
+
+.air .button-a-lg:active {
+    background-image: url("ydkj2015/button-a-lg_active.png")
+}
+
+.air .button-screw {
+    background-image: url("ydkj2015/button-screw.png")
+}
+
+.air .button-screw:active {
+    background-image: url("ydkj2015/button-screw_active.png")
+}
+
+.air .button-pause {
+    background-image: url("ydkj2015/button-pause.png")
+}
+
+.air .button-pause:active {
+    background-image: url("ydkj2015/button-pause_active.png")
+}
+
+.air .ydkj-button-preload-1 {
+    background: url("ydkj2015/button-a.png") no-repeat center
+}
+
+.air .ydkj-button-preload-2 {
+    background: url("ydkj2015/button-a_active.png") no-repeat center
+}
+
+.air .ydkj-button-preload-3 {
+    background: url("ydkj2015/button-a-disable.png") no-repeat center
+}
+
+.air .ydkj-button-preload-4 {
+    background: url("ydkj2015/button-b.png") no-repeat center
+}
+
+.air .ydkj-button-preload-5 {
+    background: url("ydkj2015/button-b_active.png") no-repeat center
+}
+
+.air .ydkj-button-preload-6 {
+    background: url("ydkj2015/button-b-disable.png") no-repeat center
+}
+
+.air .ydkj-button-preload-7 {
+    background: url("ydkj2015/button-x.png") no-repeat center
+}
+
+.air .ydkj-button-preload-8 {
+    background: url("ydkj2015/button-x_active.png") no-repeat center
+}
+
+.air .ydkj-button-preload-9 {
+    background: url("ydkj2015/button-x-disable.png") no-repeat center
+}
+
+.air .ydkj-button-preload-10 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.air .ydkj-button-preload-11 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.air .ydkj-button-preload-12 {
+    background: url("ydkj2015/button-y-disable.png") no-repeat center
+}
+
+.air .ydkj-button-preload-13 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.air .ydkj-button-preload-14 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.air .ydkj-button-preload-15 {
+    background: url("ydkj2015/button-screw.png") no-repeat center
+}
+
+.air .ydkj-button-preload-16 {
+    background: url("ydkj2015/button-screw_active.png") no-repeat center
+}
+
+.android .button-a {
+    background-image: url("ydkj2015/button-a.png")
+}
+
+.android .button-a:active {
+    background-image: url("ydkj2015/button-a_active.png")
+}
+
+.android .button-a-disable {
+    background-image: url("ydkj2015/button-a-disable.png")
+}
+
+.android .button-b {
+    background-image: url("ydkj2015/button-b.png")
+}
+
+.android .button-b:active {
+    background-image: url("ydkj2015/button-b_active.png")
+}
+
+.android .button-b-disable {
+    background-image: url("ydkj2015/button-b-disable.png")
+}
+
+.android .button-x {
+    background-image: url("ydkj2015/button-x.png")
+}
+
+.android .button-x:active {
+    background-image: url("ydkj2015/button-x_active.png")
+}
+
+.android .button-x-disable {
+    background-image: url("ydkj2015/button-x-disable.png")
+}
+
+.android .button-y {
+    background-image: url("ydkj2015/button-y.png")
+}
+
+.android .button-y:active {
+    background-image: url("ydkj2015/button-y_active.png")
+}
+
+.android .button-y-disable {
+    background-image: url("ydkj2015/button-y-disable.png")
+}
+
+.android .button-a-lg {
+    background-image: url("ydkj2015/button-a-lg.png")
+}
+
+.android .button-a-lg:active {
+    background-image: url("ydkj2015/button-a-lg_active.png")
+}
+
+.android .button-screw {
+    background-image: url("ydkj2015/button-screw.png")
+}
+
+.android .button-screw:active {
+    background-image: url("ydkj2015/button-screw_active.png")
+}
+
+.android .button-pause {
+    background-image: url("ydkj2015/button-pause.png")
+}
+
+.android .button-pause:active {
+    background-image: url("ydkj2015/button-pause_active.png")
+}
+
+.android .ydkj-button-preload-1 {
+    background: url("ydkj2015/button-a.png") no-repeat center
+}
+
+.android .ydkj-button-preload-2 {
+    background: url("ydkj2015/button-a_active.png") no-repeat center
+}
+
+.android .ydkj-button-preload-3 {
+    background: url("ydkj2015/button-a-disable.png") no-repeat center
+}
+
+.android .ydkj-button-preload-4 {
+    background: url("ydkj2015/button-b.png") no-repeat center
+}
+
+.android .ydkj-button-preload-5 {
+    background: url("ydkj2015/button-b_active.png") no-repeat center
+}
+
+.android .ydkj-button-preload-6 {
+    background: url("ydkj2015/button-b-disable.png") no-repeat center
+}
+
+.android .ydkj-button-preload-7 {
+    background: url("ydkj2015/button-x.png") no-repeat center
+}
+
+.android .ydkj-button-preload-8 {
+    background: url("ydkj2015/button-x_active.png") no-repeat center
+}
+
+.android .ydkj-button-preload-9 {
+    background: url("ydkj2015/button-x-disable.png") no-repeat center
+}
+
+.android .ydkj-button-preload-10 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.android .ydkj-button-preload-11 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.android .ydkj-button-preload-12 {
+    background: url("ydkj2015/button-y-disable.png") no-repeat center
+}
+
+.android .ydkj-button-preload-13 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.android .ydkj-button-preload-14 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.android .ydkj-button-preload-15 {
+    background: url("ydkj2015/button-screw.png") no-repeat center
+}
+
+.android .ydkj-button-preload-16 {
+    background: url("ydkj2015/button-screw_active.png") no-repeat center
+}
+
+.flash .button-a {
+    background-image: url("ydkj2015/button-a.png")
+}
+
+.flash .button-a:active {
+    background-image: url("ydkj2015/button-a_active.png")
+}
+
+.flash .button-a-disable {
+    background-image: url("ydkj2015/button-a-disable.png")
+}
+
+.flash .button-b {
+    background-image: url("ydkj2015/button-b.png")
+}
+
+.flash .button-b:active {
+    background-image: url("ydkj2015/button-b_active.png")
+}
+
+.flash .button-b-disable {
+    background-image: url("ydkj2015/button-b-disable.png")
+}
+
+.flash .button-x {
+    background-image: url("ydkj2015/button-x.png")
+}
+
+.flash .button-x:active {
+    background-image: url("ydkj2015/button-x_active.png")
+}
+
+.flash .button-x-disable {
+    background-image: url("ydkj2015/button-x-disable.png")
+}
+
+.flash .button-y {
+    background-image: url("ydkj2015/button-y.png")
+}
+
+.flash .button-y:active {
+    background-image: url("ydkj2015/button-y_active.png")
+}
+
+.flash .button-y-disable {
+    background-image: url("ydkj2015/button-y-disable.png")
+}
+
+.flash .button-a-lg {
+    background-image: url("ydkj2015/button-a-lg.png")
+}
+
+.flash .button-a-lg:active {
+    background-image: url("ydkj2015/button-a-lg_active.png")
+}
+
+.flash .button-screw {
+    background-image: url("ydkj2015/button-screw.png")
+}
+
+.flash .button-screw:active {
+    background-image: url("ydkj2015/button-screw_active.png")
+}
+
+.flash .button-pause {
+    background-image: url("ydkj2015/button-pause.png")
+}
+
+.flash .button-pause:active {
+    background-image: url("ydkj2015/button-pause_active.png")
+}
+
+.flash .ydkj-button-preload-1 {
+    background: url("ydkj2015/button-a.png") no-repeat center
+}
+
+.flash .ydkj-button-preload-2 {
+    background: url("ydkj2015/button-a_active.png") no-repeat center
+}
+
+.flash .ydkj-button-preload-3 {
+    background: url("ydkj2015/button-a-disable.png") no-repeat center
+}
+
+.flash .ydkj-button-preload-4 {
+    background: url("ydkj2015/button-b.png") no-repeat center
+}
+
+.flash .ydkj-button-preload-5 {
+    background: url("ydkj2015/button-b_active.png") no-repeat center
+}
+
+.flash .ydkj-button-preload-6 {
+    background: url("ydkj2015/button-b-disable.png") no-repeat center
+}
+
+.flash .ydkj-button-preload-7 {
+    background: url("ydkj2015/button-x.png") no-repeat center
+}
+
+.flash .ydkj-button-preload-8 {
+    background: url("ydkj2015/button-x_active.png") no-repeat center
+}
+
+.flash .ydkj-button-preload-9 {
+    background: url("ydkj2015/button-x-disable.png") no-repeat center
+}
+
+.flash .ydkj-button-preload-10 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.flash .ydkj-button-preload-11 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.flash .ydkj-button-preload-12 {
+    background: url("ydkj2015/button-y-disable.png") no-repeat center
+}
+
+.flash .ydkj-button-preload-13 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.flash .ydkj-button-preload-14 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.flash .ydkj-button-preload-15 {
+    background: url("ydkj2015/button-screw.png") no-repeat center
+}
+
+.flash .ydkj-button-preload-16 {
+    background: url("ydkj2015/button-screw_active.png") no-repeat center
+}
+
+.googletv .button-a {
+    background-image: url("ydkj2015/button-a.png")
+}
+
+.googletv .button-a:active {
+    background-image: url("ydkj2015/button-a_active.png")
+}
+
+.googletv .button-a-disable {
+    background-image: url("ydkj2015/button-a-disable.png")
+}
+
+.googletv .button-b {
+    background-image: url("ydkj2015/button-b.png")
+}
+
+.googletv .button-b:active {
+    background-image: url("ydkj2015/button-b_active.png")
+}
+
+.googletv .button-b-disable {
+    background-image: url("ydkj2015/button-b-disable.png")
+}
+
+.googletv .button-x {
+    background-image: url("ydkj2015/button-x.png")
+}
+
+.googletv .button-x:active {
+    background-image: url("ydkj2015/button-x_active.png")
+}
+
+.googletv .button-x-disable {
+    background-image: url("ydkj2015/button-x-disable.png")
+}
+
+.googletv .button-y {
+    background-image: url("ydkj2015/button-y.png")
+}
+
+.googletv .button-y:active {
+    background-image: url("ydkj2015/button-y_active.png")
+}
+
+.googletv .button-y-disable {
+    background-image: url("ydkj2015/button-y-disable.png")
+}
+
+.googletv .button-a-lg {
+    background-image: url("ydkj2015/button-a-lg.png")
+}
+
+.googletv .button-a-lg:active {
+    background-image: url("ydkj2015/button-a-lg_active.png")
+}
+
+.googletv .button-screw {
+    background-image: url("ydkj2015/button-screw.png")
+}
+
+.googletv .button-screw:active {
+    background-image: url("ydkj2015/button-screw_active.png")
+}
+
+.googletv .button-pause {
+    background-image: url("ydkj2015/button-pause.png")
+}
+
+.googletv .button-pause:active {
+    background-image: url("ydkj2015/button-pause_active.png")
+}
+
+.googletv .ydkj-button-preload-1 {
+    background: url("ydkj2015/button-a.png") no-repeat center
+}
+
+.googletv .ydkj-button-preload-2 {
+    background: url("ydkj2015/button-a_active.png") no-repeat center
+}
+
+.googletv .ydkj-button-preload-3 {
+    background: url("ydkj2015/button-a-disable.png") no-repeat center
+}
+
+.googletv .ydkj-button-preload-4 {
+    background: url("ydkj2015/button-b.png") no-repeat center
+}
+
+.googletv .ydkj-button-preload-5 {
+    background: url("ydkj2015/button-b_active.png") no-repeat center
+}
+
+.googletv .ydkj-button-preload-6 {
+    background: url("ydkj2015/button-b-disable.png") no-repeat center
+}
+
+.googletv .ydkj-button-preload-7 {
+    background: url("ydkj2015/button-x.png") no-repeat center
+}
+
+.googletv .ydkj-button-preload-8 {
+    background: url("ydkj2015/button-x_active.png") no-repeat center
+}
+
+.googletv .ydkj-button-preload-9 {
+    background: url("ydkj2015/button-x-disable.png") no-repeat center
+}
+
+.googletv .ydkj-button-preload-10 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.googletv .ydkj-button-preload-11 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.googletv .ydkj-button-preload-12 {
+    background: url("ydkj2015/button-y-disable.png") no-repeat center
+}
+
+.googletv .ydkj-button-preload-13 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.googletv .ydkj-button-preload-14 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.googletv .ydkj-button-preload-15 {
+    background: url("ydkj2015/button-screw.png") no-repeat center
+}
+
+.googletv .ydkj-button-preload-16 {
+    background: url("ydkj2015/button-screw_active.png") no-repeat center
+}
+
+.ios .button-a {
+    background-image: url("ydkj2015/button-a.png")
+}
+
+.ios .button-a:active {
+    background-image: url("ydkj2015/button-a_active.png")
+}
+
+.ios .button-a-disable {
+    background-image: url("ydkj2015/button-a-disable.png")
+}
+
+.ios .button-b {
+    background-image: url("ydkj2015/button-b.png")
+}
+
+.ios .button-b:active {
+    background-image: url("ydkj2015/button-b_active.png")
+}
+
+.ios .button-b-disable {
+    background-image: url("ydkj2015/button-b-disable.png")
+}
+
+.ios .button-x {
+    background-image: url("ydkj2015/button-x.png")
+}
+
+.ios .button-x:active {
+    background-image: url("ydkj2015/button-x_active.png")
+}
+
+.ios .button-x-disable {
+    background-image: url("ydkj2015/button-x-disable.png")
+}
+
+.ios .button-y {
+    background-image: url("ydkj2015/button-y.png")
+}
+
+.ios .button-y:active {
+    background-image: url("ydkj2015/button-y_active.png")
+}
+
+.ios .button-y-disable {
+    background-image: url("ydkj2015/button-y-disable.png")
+}
+
+.ios .button-a-lg {
+    background-image: url("ydkj2015/button-a-lg.png")
+}
+
+.ios .button-a-lg:active {
+    background-image: url("ydkj2015/button-a-lg_active.png")
+}
+
+.ios .button-screw {
+    background-image: url("ydkj2015/button-screw.png")
+}
+
+.ios .button-screw:active {
+    background-image: url("ydkj2015/button-screw_active.png")
+}
+
+.ios .button-pause {
+    background-image: url("ydkj2015/button-pause.png")
+}
+
+.ios .button-pause:active {
+    background-image: url("ydkj2015/button-pause_active.png")
+}
+
+.ios .ydkj-button-preload-1 {
+    background: url("ydkj2015/button-a.png") no-repeat center
+}
+
+.ios .ydkj-button-preload-2 {
+    background: url("ydkj2015/button-a_active.png") no-repeat center
+}
+
+.ios .ydkj-button-preload-3 {
+    background: url("ydkj2015/button-a-disable.png") no-repeat center
+}
+
+.ios .ydkj-button-preload-4 {
+    background: url("ydkj2015/button-b.png") no-repeat center
+}
+
+.ios .ydkj-button-preload-5 {
+    background: url("ydkj2015/button-b_active.png") no-repeat center
+}
+
+.ios .ydkj-button-preload-6 {
+    background: url("ydkj2015/button-b-disable.png") no-repeat center
+}
+
+.ios .ydkj-button-preload-7 {
+    background: url("ydkj2015/button-x.png") no-repeat center
+}
+
+.ios .ydkj-button-preload-8 {
+    background: url("ydkj2015/button-x_active.png") no-repeat center
+}
+
+.ios .ydkj-button-preload-9 {
+    background: url("ydkj2015/button-x-disable.png") no-repeat center
+}
+
+.ios .ydkj-button-preload-10 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.ios .ydkj-button-preload-11 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.ios .ydkj-button-preload-12 {
+    background: url("ydkj2015/button-y-disable.png") no-repeat center
+}
+
+.ios .ydkj-button-preload-13 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.ios .ydkj-button-preload-14 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.ios .ydkj-button-preload-15 {
+    background: url("ydkj2015/button-screw.png") no-repeat center
+}
+
+.ios .ydkj-button-preload-16 {
+    background: url("ydkj2015/button-screw_active.png") no-repeat center
+}
+
+.linux .button-a {
+    background-image: url("ydkj2015/linux_button-a.png")
+}
+
+.linux .button-a:active {
+    background-image: url("ydkj2015/linux_button-a_active.png")
+}
+
+.linux .button-a-disable {
+    background-image: url("ydkj2015/linux_button-a-disable.png")
+}
+
+.linux .button-b {
+    background-image: url("ydkj2015/linux_button-b.png")
+}
+
+.linux .button-b:active {
+    background-image: url("ydkj2015/linux_button-b_active.png")
+}
+
+.linux .button-b-disable {
+    background-image: url("ydkj2015/linux_button-b-disable.png")
+}
+
+.linux .button-x {
+    background-image: url("ydkj2015/linux_button-x.png")
+}
+
+.linux .button-x:active {
+    background-image: url("ydkj2015/linux_button-x_active.png")
+}
+
+.linux .button-x-disable {
+    background-image: url("ydkj2015/linux_button-x-disable.png")
+}
+
+.linux .button-y {
+    background-image: url("ydkj2015/linux_button-y.png")
+}
+
+.linux .button-y:active {
+    background-image: url("ydkj2015/linux_button-y_active.png")
+}
+
+.linux .button-y-disable {
+    background-image: url("ydkj2015/linux_button-y-disable.png")
+}
+
+.linux .button-a-lg {
+    background-image: url("ydkj2015/linux_button-a-lg.png")
+}
+
+.linux .button-a-lg:active {
+    background-image: url("ydkj2015/linux_button-a-lg_active.png")
+}
+
+.linux .button-screw {
+    background-image: url("ydkj2015/linux_button-screw.png")
+}
+
+.linux .button-screw:active {
+    background-image: url("ydkj2015/linux_button-screw_active.png")
+}
+
+.linux .button-pause {
+    background-image: url("ydkj2015/linux_button-pause.png")
+}
+
+.linux .button-pause:active {
+    background-image: url("ydkj2015/linux_button-pause_active.png")
+}
+
+.linux .ydkj-button-preload-1 {
+    background: url("ydkj2015/linux_button-a.png") no-repeat center
+}
+
+.linux .ydkj-button-preload-2 {
+    background: url("ydkj2015/linux_button-a_active.png") no-repeat center
+}
+
+.linux .ydkj-button-preload-3 {
+    background: url("ydkj2015/linux_button-a-disable.png") no-repeat center
+}
+
+.linux .ydkj-button-preload-4 {
+    background: url("ydkj2015/linux_button-b.png") no-repeat center
+}
+
+.linux .ydkj-button-preload-5 {
+    background: url("ydkj2015/linux_button-b_active.png") no-repeat center
+}
+
+.linux .ydkj-button-preload-6 {
+    background: url("ydkj2015/linux_button-b-disable.png") no-repeat center
+}
+
+.linux .ydkj-button-preload-7 {
+    background: url("ydkj2015/linux_button-x.png") no-repeat center
+}
+
+.linux .ydkj-button-preload-8 {
+    background: url("ydkj2015/linux_button-x_active.png") no-repeat center
+}
+
+.linux .ydkj-button-preload-9 {
+    background: url("ydkj2015/linux_button-x-disable.png") no-repeat center
+}
+
+.linux .ydkj-button-preload-10 {
+    background: url("ydkj2015/linux_button-y.png") no-repeat center
+}
+
+.linux .ydkj-button-preload-11 {
+    background: url("ydkj2015/linux_button-y_active.png") no-repeat center
+}
+
+.linux .ydkj-button-preload-12 {
+    background: url("ydkj2015/linux_button-y-disable.png") no-repeat center
+}
+
+.linux .ydkj-button-preload-13 {
+    background: url("ydkj2015/linux_button-y.png") no-repeat center
+}
+
+.linux .ydkj-button-preload-14 {
+    background: url("ydkj2015/linux_button-y_active.png") no-repeat center
+}
+
+.linux .ydkj-button-preload-15 {
+    background: url("ydkj2015/linux_button-screw.png") no-repeat center
+}
+
+.linux .ydkj-button-preload-16 {
+    background: url("ydkj2015/linux_button-screw_active.png") no-repeat center
+}
+
+.nx .button-a {
+    background-image: url("ydkj2015/nx_button-a.png")
+}
+
+.nx .button-a:active {
+    background-image: url("ydkj2015/nx_button-a_active.png")
+}
+
+.nx .button-a-disable {
+    background-image: url("ydkj2015/nx_button-a-disable.png")
+}
+
+.nx .button-b {
+    background-image: url("ydkj2015/nx_button-b.png")
+}
+
+.nx .button-b:active {
+    background-image: url("ydkj2015/nx_button-b_active.png")
+}
+
+.nx .button-b-disable {
+    background-image: url("ydkj2015/nx_button-b-disable.png")
+}
+
+.nx .button-x {
+    background-image: url("ydkj2015/nx_button-x.png")
+}
+
+.nx .button-x:active {
+    background-image: url("ydkj2015/nx_button-x_active.png")
+}
+
+.nx .button-x-disable {
+    background-image: url("ydkj2015/nx_button-x-disable.png")
+}
+
+.nx .button-y {
+    background-image: url("ydkj2015/nx_button-y.png")
+}
+
+.nx .button-y:active {
+    background-image: url("ydkj2015/nx_button-y_active.png")
+}
+
+.nx .button-y-disable {
+    background-image: url("ydkj2015/nx_button-y-disable.png")
+}
+
+.nx .button-a-lg {
+    background-image: url("ydkj2015/nx_button-a-lg.png")
+}
+
+.nx .button-a-lg:active {
+    background-image: url("ydkj2015/nx_button-a-lg_active.png")
+}
+
+.nx .button-screw {
+    background-image: url("ydkj2015/nx_button-screw.png")
+}
+
+.nx .button-screw:active {
+    background-image: url("ydkj2015/nx_button-screw_active.png")
+}
+
+.nx .button-pause {
+    background-image: url("ydkj2015/nx_button-pause.png")
+}
+
+.nx .button-pause:active {
+    background-image: url("ydkj2015/nx_button-pause_active.png")
+}
+
+.nx .ydkj-button-preload-1 {
+    background: url("ydkj2015/nx_button-b.png") no-repeat center
+}
+
+.nx .ydkj-button-preload-2 {
+    background: url("ydkj2015/nx_button-b_active.png") no-repeat center
+}
+
+.nx .ydkj-button-preload-3 {
+    background: url("ydkj2015/nx_button-b-disable.png") no-repeat center
+}
+
+.nx .ydkj-button-preload-4 {
+    background: url("ydkj2015/nx_button-a.png") no-repeat center
+}
+
+.nx .ydkj-button-preload-5 {
+    background: url("ydkj2015/nx_button-a_active.png") no-repeat center
+}
+
+.nx .ydkj-button-preload-6 {
+    background: url("ydkj2015/nx_button-a-disable.png") no-repeat center
+}
+
+.nx .ydkj-button-preload-7 {
+    background: url("ydkj2015/nx_button-y.png") no-repeat center
+}
+
+.nx .ydkj-button-preload-8 {
+    background: url("ydkj2015/nx_button-y_active.png") no-repeat center
+}
+
+.nx .ydkj-button-preload-9 {
+    background: url("ydkj2015/nx_button-y-disable.png") no-repeat center
+}
+
+.nx .ydkj-button-preload-10 {
+    background: url("ydkj2015/nx_button-x.png") no-repeat center
+}
+
+.nx .ydkj-button-preload-11 {
+    background: url("ydkj2015/nx_button-x_active.png") no-repeat center
+}
+
+.nx .ydkj-button-preload-12 {
+    background: url("ydkj2015/nx_button-x-disable.png") no-repeat center
+}
+
+.nx .ydkj-button-preload-13 {
+    background: url("ydkj2015/nx_button-x.png") no-repeat center
+}
+
+.nx .ydkj-button-preload-14 {
+    background: url("ydkj2015/nx_button-x_active.png") no-repeat center
+}
+
+.nx .ydkj-button-preload-15 {
+    background: url("ydkj2015/nx_button-screw.png") no-repeat center
+}
+
+.nx .ydkj-button-preload-16 {
+    background: url("ydkj2015/nx_button-screw_active.png") no-repeat center
+}
+
+.ouya .button-a {
+    background-image: url("ydkj2015/ouya_button-a.png")
+}
+
+.ouya .button-a:active {
+    background-image: url("ydkj2015/ouya_button-a_active.png")
+}
+
+.ouya .button-a-disable {
+    background-image: url("ydkj2015/ouya_button-a-disable.png")
+}
+
+.ouya .button-b {
+    background-image: url("ydkj2015/ouya_button-b.png")
+}
+
+.ouya .button-b:active {
+    background-image: url("ydkj2015/ouya_button-b_active.png")
+}
+
+.ouya .button-b-disable {
+    background-image: url("ydkj2015/ouya_button-b-disable.png")
+}
+
+.ouya .button-x {
+    background-image: url("ydkj2015/ouya_button-x.png")
+}
+
+.ouya .button-x:active {
+    background-image: url("ydkj2015/ouya_button-x_active.png")
+}
+
+.ouya .button-x-disable {
+    background-image: url("ydkj2015/ouya_button-x-disable.png")
+}
+
+.ouya .button-y {
+    background-image: url("ydkj2015/ouya_button-y.png")
+}
+
+.ouya .button-y:active {
+    background-image: url("ydkj2015/ouya_button-y_active.png")
+}
+
+.ouya .button-y-disable {
+    background-image: url("ydkj2015/ouya_button-y-disable.png")
+}
+
+.ouya .button-a-lg {
+    background-image: url("ydkj2015/ouya_button-a-lg.png")
+}
+
+.ouya .button-a-lg:active {
+    background-image: url("ydkj2015/ouya_button-a-lg_active.png")
+}
+
+.ouya .button-screw {
+    background-image: url("ydkj2015/ouya_button-screw.png")
+}
+
+.ouya .button-screw:active {
+    background-image: url("ydkj2015/ouya_button-screw_active.png")
+}
+
+.ouya .button-pause {
+    background-image: url("ydkj2015/nx_button-pause.png")
+}
+
+.ouya .button-pause:active {
+    background-image: url("ydkj2015/nx_button-pause_active.png")
+}
+
+.ouya .ydkj-button-preload-1 {
+    background: url("ydkj2015/ouya_button-a.png") no-repeat center
+}
+
+.ouya .ydkj-button-preload-2 {
+    background: url("ydkj2015/ouya_button-a_active.png") no-repeat center
+}
+
+.ouya .ydkj-button-preload-3 {
+    background: url("ydkj2015/ouya_button-a-disable.png") no-repeat center
+}
+
+.ouya .ydkj-button-preload-4 {
+    background: url("ydkj2015/ouya_button-b.png") no-repeat center
+}
+
+.ouya .ydkj-button-preload-5 {
+    background: url("ydkj2015/ouya_button-b_active.png") no-repeat center
+}
+
+.ouya .ydkj-button-preload-6 {
+    background: url("ydkj2015/ouya_button-b-disable.png") no-repeat center
+}
+
+.ouya .ydkj-button-preload-7 {
+    background: url("ydkj2015/ouya_button-x.png") no-repeat center
+}
+
+.ouya .ydkj-button-preload-8 {
+    background: url("ydkj2015/ouya_button-x_active.png") no-repeat center
+}
+
+.ouya .ydkj-button-preload-9 {
+    background: url("ydkj2015/ouya_button-x-disable.png") no-repeat center
+}
+
+.ouya .ydkj-button-preload-10 {
+    background: url("ydkj2015/ouya_button-y.png") no-repeat center
+}
+
+.ouya .ydkj-button-preload-11 {
+    background: url("ydkj2015/ouya_button-y_active.png") no-repeat center
+}
+
+.ouya .ydkj-button-preload-12 {
+    background: url("ydkj2015/ouya_button-y-disable.png") no-repeat center
+}
+
+.ouya .ydkj-button-preload-13 {
+    background: url("ydkj2015/ouya_button-y.png") no-repeat center
+}
+
+.ouya .ydkj-button-preload-14 {
+    background: url("ydkj2015/ouya_button-y_active.png") no-repeat center
+}
+
+.ouya .ydkj-button-preload-15 {
+    background: url("ydkj2015/ouya_button-screw.png") no-repeat center
+}
+
+.ouya .ydkj-button-preload-16 {
+    background: url("ydkj2015/ouya_button-screw_active.png") no-repeat center
+}
+
+.ps3 .button-a {
+    background-image: url("ydkj2015/ps3_button-a.png")
+}
+
+.ps3 .button-a:active {
+    background-image: url("ydkj2015/ps3_button-a_active.png")
+}
+
+.ps3 .button-a-disable {
+    background-image: url("ydkj2015/ps3_button-a-disable.png")
+}
+
+.ps3 .button-b {
+    background-image: url("ydkj2015/ps3_button-b.png")
+}
+
+.ps3 .button-b:active {
+    background-image: url("ydkj2015/ps3_button-b_active.png")
+}
+
+.ps3 .button-b-disable {
+    background-image: url("ydkj2015/ps3_button-b-disable.png")
+}
+
+.ps3 .button-x {
+    background-image: url("ydkj2015/ps3_button-x.png")
+}
+
+.ps3 .button-x:active {
+    background-image: url("ydkj2015/ps3_button-x_active.png")
+}
+
+.ps3 .button-x-disable {
+    background-image: url("ydkj2015/ps3_button-x-disable.png")
+}
+
+.ps3 .button-y {
+    background-image: url("ydkj2015/ps3_button-y.png")
+}
+
+.ps3 .button-y:active {
+    background-image: url("ydkj2015/ps3_button-y_active.png")
+}
+
+.ps3 .button-y-disable {
+    background-image: url("ydkj2015/ps3_button-y-disable.png")
+}
+
+.ps3 .button-a-lg {
+    background-image: url("ydkj2015/ps3_button-a-lg.png")
+}
+
+.ps3 .button-a-lg:active {
+    background-image: url("ydkj2015/ps3_button-a-lg_active.png")
+}
+
+.ps3 .button-screw {
+    background-image: url("ydkj2015/ps3_button-screw.png")
+}
+
+.ps3 .button-screw:active {
+    background-image: url("ydkj2015/ps3_button-screw_active.png")
+}
+
+.ps3 .button-pause {
+    background-image: url("ydkj2015/button-pause.png")
+}
+
+.ps3 .button-pause:active {
+    background-image: url("ydkj2015/button-pause_active.png")
+}
+
+.ps3 .ydkj-button-preload-1 {
+    background: url("ydkj2015/ps3_button-a.png") no-repeat center
+}
+
+.ps3 .ydkj-button-preload-2 {
+    background: url("ydkj2015/ps3_button-a_active.png") no-repeat center
+}
+
+.ps3 .ydkj-button-preload-3 {
+    background: url("ydkj2015/ps3_button-a-disable.png") no-repeat center
+}
+
+.ps3 .ydkj-button-preload-4 {
+    background: url("ydkj2015/ps3_button-b.png") no-repeat center
+}
+
+.ps3 .ydkj-button-preload-5 {
+    background: url("ydkj2015/ps3_button-b_active.png") no-repeat center
+}
+
+.ps3 .ydkj-button-preload-6 {
+    background: url("ydkj2015/ps3_button-b-disable.png") no-repeat center
+}
+
+.ps3 .ydkj-button-preload-7 {
+    background: url("ydkj2015/ps3_button-x.png") no-repeat center
+}
+
+.ps3 .ydkj-button-preload-8 {
+    background: url("ydkj2015/ps3_button-x_active.png") no-repeat center
+}
+
+.ps3 .ydkj-button-preload-9 {
+    background: url("ydkj2015/ps3_button-x-disable.png") no-repeat center
+}
+
+.ps3 .ydkj-button-preload-10 {
+    background: url("ydkj2015/ps3_button-y.png") no-repeat center
+}
+
+.ps3 .ydkj-button-preload-11 {
+    background: url("ydkj2015/ps3_button-y_active.png") no-repeat center
+}
+
+.ps3 .ydkj-button-preload-12 {
+    background: url("ydkj2015/ps3_button-y-disable.png") no-repeat center
+}
+
+.ps3 .ydkj-button-preload-13 {
+    background: url("ydkj2015/ps3_button-y.png") no-repeat center
+}
+
+.ps3 .ydkj-button-preload-14 {
+    background: url("ydkj2015/ps3_button-y_active.png") no-repeat center
+}
+
+.ps3 .ydkj-button-preload-15 {
+    background: url("ydkj2015/ps3_button-screw.png") no-repeat center
+}
+
+.ps3 .ydkj-button-preload-16 {
+    background: url("ydkj2015/ps3_button-screw_active.png") no-repeat center
+}
+
+.ps4 .button-a {
+    background-image: url("ydkj2015/ps3_button-a.png")
+}
+
+.ps4 .button-a:active {
+    background-image: url("ydkj2015/ps3_button-a_active.png")
+}
+
+.ps4 .button-a-disable {
+    background-image: url("ydkj2015/ps3_button-a-disable.png")
+}
+
+.ps4 .button-b {
+    background-image: url("ydkj2015/ps3_button-b.png")
+}
+
+.ps4 .button-b:active {
+    background-image: url("ydkj2015/ps3_button-b_active.png")
+}
+
+.ps4 .button-b-disable {
+    background-image: url("ydkj2015/ps3_button-b-disable.png")
+}
+
+.ps4 .button-x {
+    background-image: url("ydkj2015/ps3_button-x.png")
+}
+
+.ps4 .button-x:active {
+    background-image: url("ydkj2015/ps3_button-x_active.png")
+}
+
+.ps4 .button-x-disable {
+    background-image: url("ydkj2015/ps3_button-x-disable.png")
+}
+
+.ps4 .button-y {
+    background-image: url("ydkj2015/ps3_button-y.png")
+}
+
+.ps4 .button-y:active {
+    background-image: url("ydkj2015/ps3_button-y_active.png")
+}
+
+.ps4 .button-y-disable {
+    background-image: url("ydkj2015/ps3_button-y-disable.png")
+}
+
+.ps4 .button-a-lg {
+    background-image: url("ydkj2015/ps3_button-a-lg.png")
+}
+
+.ps4 .button-a-lg:active {
+    background-image: url("ydkj2015/ps3_button-a-lg_active.png")
+}
+
+.ps4 .button-screw {
+    background-image: url("ydkj2015/ps3_button-screw.png")
+}
+
+.ps4 .button-screw:active {
+    background-image: url("ydkj2015/ps3_button-screw_active.png")
+}
+
+.ps4 .button-pause {
+    background-image: url("ydkj2015/button-pause.png")
+}
+
+.ps4 .button-pause:active {
+    background-image: url("ydkj2015/button-pause_active.png")
+}
+
+.ps4 .ydkj-button-preload-1 {
+    background: url("ydkj2015/ps3_button-a.png") no-repeat center
+}
+
+.ps4 .ydkj-button-preload-2 {
+    background: url("ydkj2015/ps3_button-a_active.png") no-repeat center
+}
+
+.ps4 .ydkj-button-preload-3 {
+    background: url("ydkj2015/ps3_button-a-disable.png") no-repeat center
+}
+
+.ps4 .ydkj-button-preload-4 {
+    background: url("ydkj2015/ps3_button-b.png") no-repeat center
+}
+
+.ps4 .ydkj-button-preload-5 {
+    background: url("ydkj2015/ps3_button-b_active.png") no-repeat center
+}
+
+.ps4 .ydkj-button-preload-6 {
+    background: url("ydkj2015/ps3_button-b-disable.png") no-repeat center
+}
+
+.ps4 .ydkj-button-preload-7 {
+    background: url("ydkj2015/ps3_button-x.png") no-repeat center
+}
+
+.ps4 .ydkj-button-preload-8 {
+    background: url("ydkj2015/ps3_button-x_active.png") no-repeat center
+}
+
+.ps4 .ydkj-button-preload-9 {
+    background: url("ydkj2015/ps3_button-x-disable.png") no-repeat center
+}
+
+.ps4 .ydkj-button-preload-10 {
+    background: url("ydkj2015/ps3_button-y.png") no-repeat center
+}
+
+.ps4 .ydkj-button-preload-11 {
+    background: url("ydkj2015/ps3_button-y_active.png") no-repeat center
+}
+
+.ps4 .ydkj-button-preload-12 {
+    background: url("ydkj2015/ps3_button-y-disable.png") no-repeat center
+}
+
+.ps4 .ydkj-button-preload-13 {
+    background: url("ydkj2015/ps3_button-y.png") no-repeat center
+}
+
+.ps4 .ydkj-button-preload-14 {
+    background: url("ydkj2015/ps3_button-y_active.png") no-repeat center
+}
+
+.ps4 .ydkj-button-preload-15 {
+    background: url("ydkj2015/ps3_button-screw.png") no-repeat center
+}
+
+.ps4 .ydkj-button-preload-16 {
+    background: url("ydkj2015/ps3_button-screw_active.png") no-repeat center
+}
+
+.tvos .button-a {
+    background-image: url("ydkj2015/button-a.png")
+}
+
+.tvos .button-a:active {
+    background-image: url("ydkj2015/button-a_active.png")
+}
+
+.tvos .button-a-disable {
+    background-image: url("ydkj2015/button-a-disable.png")
+}
+
+.tvos .button-b {
+    background-image: url("ydkj2015/button-b.png")
+}
+
+.tvos .button-b:active {
+    background-image: url("ydkj2015/button-b_active.png")
+}
+
+.tvos .button-b-disable {
+    background-image: url("ydkj2015/button-b-disable.png")
+}
+
+.tvos .button-x {
+    background-image: url("ydkj2015/button-x.png")
+}
+
+.tvos .button-x:active {
+    background-image: url("ydkj2015/button-x_active.png")
+}
+
+.tvos .button-x-disable {
+    background-image: url("ydkj2015/button-x-disable.png")
+}
+
+.tvos .button-y {
+    background-image: url("ydkj2015/button-y.png")
+}
+
+.tvos .button-y:active {
+    background-image: url("ydkj2015/button-y_active.png")
+}
+
+.tvos .button-y-disable {
+    background-image: url("ydkj2015/button-y-disable.png")
+}
+
+.tvos .button-a-lg {
+    background-image: url("ydkj2015/button-a-lg.png")
+}
+
+.tvos .button-a-lg:active {
+    background-image: url("ydkj2015/button-a-lg_active.png")
+}
+
+.tvos .button-screw {
+    background-image: url("ydkj2015/button-screw.png")
+}
+
+.tvos .button-screw:active {
+    background-image: url("ydkj2015/button-screw_active.png")
+}
+
+.tvos .button-pause {
+    background-image: url("ydkj2015/button-pause.png")
+}
+
+.tvos .button-pause:active {
+    background-image: url("ydkj2015/button-pause_active.png")
+}
+
+.tvos .ydkj-button-preload-1 {
+    background: url("ydkj2015/button-a.png") no-repeat center
+}
+
+.tvos .ydkj-button-preload-2 {
+    background: url("ydkj2015/button-a_active.png") no-repeat center
+}
+
+.tvos .ydkj-button-preload-3 {
+    background: url("ydkj2015/button-a-disable.png") no-repeat center
+}
+
+.tvos .ydkj-button-preload-4 {
+    background: url("ydkj2015/button-b.png") no-repeat center
+}
+
+.tvos .ydkj-button-preload-5 {
+    background: url("ydkj2015/button-b_active.png") no-repeat center
+}
+
+.tvos .ydkj-button-preload-6 {
+    background: url("ydkj2015/button-b-disable.png") no-repeat center
+}
+
+.tvos .ydkj-button-preload-7 {
+    background: url("ydkj2015/button-x.png") no-repeat center
+}
+
+.tvos .ydkj-button-preload-8 {
+    background: url("ydkj2015/button-x_active.png") no-repeat center
+}
+
+.tvos .ydkj-button-preload-9 {
+    background: url("ydkj2015/button-x-disable.png") no-repeat center
+}
+
+.tvos .ydkj-button-preload-10 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.tvos .ydkj-button-preload-11 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.tvos .ydkj-button-preload-12 {
+    background: url("ydkj2015/button-y-disable.png") no-repeat center
+}
+
+.tvos .ydkj-button-preload-13 {
+    background: url("ydkj2015/button-y.png") no-repeat center
+}
+
+.tvos .ydkj-button-preload-14 {
+    background: url("ydkj2015/button-y_active.png") no-repeat center
+}
+
+.tvos .ydkj-button-preload-15 {
+    background: url("ydkj2015/button-screw.png") no-repeat center
+}
+
+.tvos .ydkj-button-preload-16 {
+    background: url("ydkj2015/button-screw_active.png") no-repeat center
+}
+
+.xbone .button-a {
+    background-image: url("ydkj2015/xbone_button-a.png")
+}
+
+.xbone .button-a:active {
+    background-image: url("ydkj2015/xbone_button-a_active.png")
+}
+
+.xbone .button-a-disable {
+    background-image: url("ydkj2015/xbone_button-a-disable.png")
+}
+
+.xbone .button-b {
+    background-image: url("ydkj2015/xbone_button-b.png")
+}
+
+.xbone .button-b:active {
+    background-image: url("ydkj2015/xbone_button-b_active.png")
+}
+
+.xbone .button-b-disable {
+    background-image: url("ydkj2015/xbone_button-b-disable.png")
+}
+
+.xbone .button-x {
+    background-image: url("ydkj2015/xbone_button-x.png")
+}
+
+.xbone .button-x:active {
+    background-image: url("ydkj2015/xbone_button-x_active.png")
+}
+
+.xbone .button-x-disable {
+    background-image: url("ydkj2015/xbone_button-x-disable.png")
+}
+
+.xbone .button-y {
+    background-image: url("ydkj2015/xbone_button-y.png")
+}
+
+.xbone .button-y:active {
+    background-image: url("ydkj2015/xbone_button-y_active.png")
+}
+
+.xbone .button-y-disable {
+    background-image: url("ydkj2015/xbone_button-y-disable.png")
+}
+
+.xbone .button-a-lg {
+    background-image: url("ydkj2015/xbone_button-a-lg.png")
+}
+
+.xbone .button-a-lg:active {
+    background-image: url("ydkj2015/xbone_button-a-lg_active.png")
+}
+
+.xbone .button-screw {
+    background-image: url("ydkj2015/xbone_button-screw.png")
+}
+
+.xbone .button-screw:active {
+    background-image: url("ydkj2015/xbone_button-screw_active.png")
+}
+
+.xbone .button-pause {
+    background-image: url("ydkj2015/button-pause.png")
+}
+
+.xbone .button-pause:active {
+    background-image: url("ydkj2015/button-pause_active.png")
+}
+
+.xbone .ydkj-button-preload-1 {
+    background: url("ydkj2015/xbone_button-a.png") no-repeat center
+}
+
+.xbone .ydkj-button-preload-2 {
+    background: url("ydkj2015/xbone_button-a_active.png") no-repeat center
+}
+
+.xbone .ydkj-button-preload-3 {
+    background: url("ydkj2015/xbone_button-a-disable.png") no-repeat center
+}
+
+.xbone .ydkj-button-preload-4 {
+    background: url("ydkj2015/xbone_button-b.png") no-repeat center
+}
+
+.xbone .ydkj-button-preload-5 {
+    background: url("ydkj2015/xbone_button-b_active.png") no-repeat center
+}
+
+.xbone .ydkj-button-preload-6 {
+    background: url("ydkj2015/xbone_button-b-disable.png") no-repeat center
+}
+
+.xbone .ydkj-button-preload-7 {
+    background: url("ydkj2015/xbone_button-x.png") no-repeat center
+}
+
+.xbone .ydkj-button-preload-8 {
+    background: url("ydkj2015/xbone_button-x_active.png") no-repeat center
+}
+
+.xbone .ydkj-button-preload-9 {
+    background: url("ydkj2015/xbone_button-x-disable.png") no-repeat center
+}
+
+.xbone .ydkj-button-preload-10 {
+    background: url("ydkj2015/xbone_button-y.png") no-repeat center
+}
+
+.xbone .ydkj-button-preload-11 {
+    background: url("ydkj2015/xbone_button-y_active.png") no-repeat center
+}
+
+.xbone .ydkj-button-preload-12 {
+    background: url("ydkj2015/xbone_button-y-disable.png") no-repeat center
+}
+
+.xbone .ydkj-button-preload-13 {
+    background: url("ydkj2015/xbone_button-y.png") no-repeat center
+}
+
+.xbone .ydkj-button-preload-14 {
+    background: url("ydkj2015/xbone_button-y_active.png") no-repeat center
+}
+
+.xbone .ydkj-button-preload-15 {
+    background: url("ydkj2015/xbone_button-screw.png") no-repeat center
+}
+
+.xbone .ydkj-button-preload-16 {
+    background: url("ydkj2015/xbone_button-screw_active.png") no-repeat center
+}
+
+.xbox360 .button-a {
+    background-image: url("ydkj2015/xbone_button-a.png")
+}
+
+.xbox360 .button-a:active {
+    background-image: url("ydkj2015/xbone_button-a_active.png")
+}
+
+.xbox360 .button-a-disable {
+    background-image: url("ydkj2015/xbone_button-a-disable.png")
+}
+
+.xbox360 .button-b {
+    background-image: url("ydkj2015/xbone_button-b.png")
+}
+
+.xbox360 .button-b:active {
+    background-image: url("ydkj2015/xbone_button-b_active.png")
+}
+
+.xbox360 .button-b-disable {
+    background-image: url("ydkj2015/xbone_button-b-disable.png")
+}
+
+.xbox360 .button-x {
+    background-image: url("ydkj2015/xbone_button-x.png")
+}
+
+.xbox360 .button-x:active {
+    background-image: url("ydkj2015/xbone_button-x_active.png")
+}
+
+.xbox360 .button-x-disable {
+    background-image: url("ydkj2015/xbone_button-x-disable.png")
+}
+
+.xbox360 .button-y {
+    background-image: url("ydkj2015/xbone_button-y.png")
+}
+
+.xbox360 .button-y:active {
+    background-image: url("ydkj2015/xbone_button-y_active.png")
+}
+
+.xbox360 .button-y-disable {
+    background-image: url("ydkj2015/xbone_button-y-disable.png")
+}
+
+.xbox360 .button-a-lg {
+    background-image: url("ydkj2015/xbone_button-a-lg.png")
+}
+
+.xbox360 .button-a-lg:active {
+    background-image: url("ydkj2015/xbone_button-a-lg_active.png")
+}
+
+.xbox360 .button-screw {
+    background-image: url("ydkj2015/xbone_button-screw.png")
+}
+
+.xbox360 .button-screw:active {
+    background-image: url("ydkj2015/xbone_button-screw_active.png")
+}
+
+.xbox360 .button-pause {
+    background-image: url("ydkj2015/button-pause.png")
+}
+
+.xbox360 .button-pause:active {
+    background-image: url("ydkj2015/button-pause_active.png")
+}
+
+.xbox360 .ydkj-button-preload-1 {
+    background: url("ydkj2015/xbone_button-a.png") no-repeat center
+}
+
+.xbox360 .ydkj-button-preload-2 {
+    background: url("ydkj2015/xbone_button-a_active.png") no-repeat center
+}
+
+.xbox360 .ydkj-button-preload-3 {
+    background: url("ydkj2015/xbone_button-a-disable.png") no-repeat center
+}
+
+.xbox360 .ydkj-button-preload-4 {
+    background: url("ydkj2015/xbone_button-b.png") no-repeat center
+}
+
+.xbox360 .ydkj-button-preload-5 {
+    background: url("ydkj2015/xbone_button-b_active.png") no-repeat center
+}
+
+.xbox360 .ydkj-button-preload-6 {
+    background: url("ydkj2015/xbone_button-b-disable.png") no-repeat center
+}
+
+.xbox360 .ydkj-button-preload-7 {
+    background: url("ydkj2015/xbone_button-x.png") no-repeat center
+}
+
+.xbox360 .ydkj-button-preload-8 {
+    background: url("ydkj2015/xbone_button-x_active.png") no-repeat center
+}
+
+.xbox360 .ydkj-button-preload-9 {
+    background: url("ydkj2015/xbone_button-x-disable.png") no-repeat center
+}
+
+.xbox360 .ydkj-button-preload-10 {
+    background: url("ydkj2015/xbone_button-y.png") no-repeat center
+}
+
+.xbox360 .ydkj-button-preload-11 {
+    background: url("ydkj2015/xbone_button-y_active.png") no-repeat center
+}
+
+.xbox360 .ydkj-button-preload-12 {
+    background: url("ydkj2015/xbone_button-y-disable.png") no-repeat center
+}
+
+.xbox360 .ydkj-button-preload-13 {
+    background: url("ydkj2015/xbone_button-y.png") no-repeat center
+}
+
+.xbox360 .ydkj-button-preload-14 {
+    background: url("ydkj2015/xbone_button-y_active.png") no-repeat center
+}
+
+.xbox360 .ydkj-button-preload-15 {
+    background: url("ydkj2015/xbone_button-screw.png") no-repeat center
+}
+
+.xbox360 .ydkj-button-preload-16 {
+    background: url("ydkj2015/xbone_button-screw_active.png") no-repeat center
+}
+
+/*# sourceMappingURL=5519.css.map*/

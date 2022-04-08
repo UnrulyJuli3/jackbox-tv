@@ -1,0 +1,1113 @@
+.jbg[data-v-2df46cec] {
+    background: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #333
+}
+
+.jbg a[data-v-2df46cec] {
+    color: #4254f4;
+    text-decoration: none
+}
+
+.jbg h1[data-v-2df46cec] {
+    font-size: 2em
+}
+
+.jbg button[data-v-2df46cec] {
+    cursor: pointer;
+    height: 48px;
+    width: calc(100% - 50px);
+    margin: 10px 25px 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #4254f4;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 5px 0 0 #0e167d;
+    transition: color .5s, background-position .5s, box-shadow .5s
+}
+
+.jbg button .loading[data-v-2df46cec] {
+    display: none
+}
+
+.jbg button.connecting span[data-v-2df46cec] {
+    display: none
+}
+
+.jbg button.connecting .loading[data-v-2df46cec] {
+    display: block
+}
+
+.jbg button.cancel[data-v-2df46cec] {
+    background-color: #333;
+    box-shadow: 0 5px 0 0 #161616
+}
+
+.jbg button[data-v-2df46cec]:disabled {
+    background: #e0e0e0;
+    color: #505050;
+    box-shadow: 0 0 0 0 #505050
+}
+
+.jbg form[data-v-2df46cec] {
+    margin: 0px auto 5px;
+    padding: 70px 15px 0px 15px
+}
+
+.jbg label[data-v-2df46cec] {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 0 12px;
+    color: #333;
+    font-size: 17px
+}
+
+.jbg input[data-v-2df46cec],
+.jbg textarea[data-v-2df46cec] {
+    width: 100%;
+    height: 34px;
+    margin-bottom: 15px;
+    padding: 20px 12px;
+    background-color: #e0e0e0;
+    border: 0px solid;
+    border-radius: 12px;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase
+}
+
+.jbg input[data-v-2df46cec]::placeholder,
+.jbg textarea[data-v-2df46cec]::placeholder {
+    color: #505050
+}
+
+.jbg input[data-v-2df46cec]:disabled,
+.jbg textarea[data-v-2df46cec]:disabled {
+    background: #e0e0e0;
+    color: #505050;
+    cursor: not-allowed;
+    user-select: none
+}
+
+.jbg textarea[data-v-2df46cec] {
+    height: auto;
+    padding: 12px;
+    font-size: 14px
+}
+
+.jbg .loading[data-v-2df46cec],
+.jbg .loading[data-v-2df46cec]::before,
+.jbg .loading[data-v-2df46cec]::after {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #0e167d;
+    border-radius: 50%;
+    background: #4254f4;
+    animation-fill-mode: both;
+    animation: loading-data-v-2df46cec 1.5s infinite ease-in-out
+}
+
+.jbg .loading[data-v-2df46cec] {
+    position: relative;
+    margin: 18px auto;
+    animation-delay: -0.25s
+}
+
+.jbg .loading[data-v-2df46cec]::before,
+.jbg .loading[data-v-2df46cec]::after {
+    content: "";
+    position: absolute;
+    top: -2px
+}
+
+.jbg .loading[data-v-2df46cec]::before {
+    left: -22px;
+    animation-delay: -0.5s
+}
+
+.jbg .loading[data-v-2df46cec]::after {
+    left: 18px
+}
+
+.jbg .disabled.loading[data-v-2df46cec],
+.jbg .disabled.loading[data-v-2df46cec]::before,
+.jbg .disabled.loading[data-v-2df46cec]::after {
+    border: 2px solid #505050;
+    background: #e0e0e0;
+    animation-name: loading-disabled-data-v-2df46cec
+}
+
+@keyframes loading-data-v-2df46cec {
+
+    0%,
+    20%,
+    80%,
+    100% {
+        background-color: #0e167d
+    }
+
+    50% {
+        background-color: #4254f4
+    }
+}
+
+@keyframes loading-disabled-data-v-2df46cec {
+
+    0%,
+    20%,
+    80%,
+    100% {
+        background-color: #505050
+    }
+
+    50% {
+        background-color: #e0e0e0
+    }
+}
+
+.tutorial[data-v-2df46cec] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    user-select: none
+}
+
+.container[data-v-2df46cec] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    line-height: 0;
+    transform: translate(-50%, calc(-50% - 40px))
+}
+
+@media only screen and (orientation: portrait) {
+    .container[data-v-2df46cec] {
+        width: calc(100% - 85px);
+        max-width: 400px;
+        min-width: 300px
+    }
+
+    .container .ratio-svg[data-v-2df46cec] {
+        width: 100%;
+        height: auto
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .container[data-v-2df46cec] {
+        height: calc(100% - 85px);
+        max-height: 600px;
+        min-height: 200px
+    }
+
+    .container .ratio-svg[data-v-2df46cec] {
+        width: auto;
+        height: 100%
+    }
+}
+
+.slide[data-v-2df46cec] {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 25px 35px 30px;
+    background: #fff;
+    border-radius: 15px;
+    transition: opacity .25s, transform .25s
+}
+
+.slide.left[data-v-2df46cec] {
+    opacity: 0;
+    transform: translateX(-75px) scale(0.9)
+}
+
+.slide.right[data-v-2df46cec] {
+    opacity: 0;
+    transform: translateX(75px) scale(0.9)
+}
+
+.slide .text[data-v-2df46cec] {
+    text-align: left;
+    font-family: Helvetica, Arial, sans-serif
+}
+
+.slide .text h3[data-v-2df46cec] {
+    line-height: 1.2;
+    padding-bottom: 6%
+}
+
+.slide .text ul[data-v-2df46cec] {
+    padding-left: 16px
+}
+
+.slide .text li[data-v-2df46cec] {
+    line-height: 1.2;
+    padding-bottom: 5px
+}
+
+@media only screen and (orientation: portrait) {
+    .slide .text h3[data-v-2df46cec] {
+        font-size: clamp(18px, 5.2vw, 24px)
+    }
+
+    .slide .text li[data-v-2df46cec] {
+        font-size: clamp(14px, 4vw, 18px)
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .slide .text h3[data-v-2df46cec] {
+        font-size: clamp(16px, 3.8vh, 24px)
+    }
+
+    .slide .text li[data-v-2df46cec] {
+        font-size: clamp(13px, 3vh, 18px)
+    }
+}
+
+.slide .image[data-v-2df46cec] {
+    width: 100%;
+    flex-grow: 1;
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.arrow[data-v-2df46cec] {
+    position: absolute;
+    width: 10%;
+    transform-origin: top left
+}
+
+.arrow svg[data-v-2df46cec] {
+    width: 100%;
+    stroke: #4254f4;
+    stroke-width: 6px;
+    fill: transparent;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    overflow: visible;
+    animation: arrow-bounce-data-v-2df46cec .5s alternate infinite
+}
+
+.dots[data-v-2df46cec] {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%
+}
+
+.dots .dot[data-v-2df46cec] {
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    background: #ccc;
+    transition: background-color .25s, transform .25s
+}
+
+.dots .dot.current[data-v-2df46cec] {
+    background: #4254f4;
+    transform: scale(1.5)
+}
+
+.buttons[data-v-2df46cec] {
+    position: absolute;
+    bottom: -40px;
+    width: 100%
+}
+
+.buttons button[data-v-2df46cec] {
+    height: 32px;
+    background: none;
+    border: none;
+    color: #fff
+}
+
+.buttons .skip[data-v-2df46cec] {
+    float: left;
+    font-size: 15px
+}
+
+.buttons .next[data-v-2df46cec],
+.buttons .done[data-v-2df46cec] {
+    float: right;
+    padding: 0 20px;
+    border-radius: 20px;
+    background: #4254f4;
+    font-size: 17px;
+    box-shadow: 0 4px 0 0 #0e167d;
+    transition: box-shadow .2s
+}
+
+.buttons .next[data-v-2df46cec]:active,
+.buttons .done[data-v-2df46cec]:active {
+    box-shadow: 0 0 0 0 #0e167d
+}
+
+.buttons .done[data-v-2df46cec] {
+    background: #fff;
+    color: #4254f4;
+    animation: done-pulse-data-v-2df46cec .5s alternate infinite
+}
+
+@keyframes arrow-bounce-data-v-2df46cec {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-20%)
+    }
+}
+
+@keyframes done-pulse-data-v-2df46cec {
+    0% {
+        background: #e0e0e0
+    }
+
+    100% {
+        transform: #fff
+    }
+}
+
+.lobby .action {
+    width: 100%
+}
+
+.artifact-link {
+    display: inline-block;
+    width: 100%
+}
+
+.artifact-link.no-content {
+    padding-bottom: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.artifact-link[data-v-57793e1c] {
+    background-image: url("murder-detectives/artifact-link[data-v-57793e1c].png")
+}
+
+.post-game .action {
+    width: 100%;
+    margin-bottom: 10px
+}
+
+.choosing {
+    height: 100%;
+    padding-bottom: 100px
+}
+
+.choosing .choices {
+    padding: 0px 10%
+}
+
+.choosing .choices .choice {
+    margin: 6px 0;
+    width: 100%;
+    min-height: 48px;
+    font-size: 18px;
+    font-weight: bold
+}
+
+.choosing .choices .choice .drawing {
+    width: 40%;
+    height: auto
+}
+
+.choosing .choices .choice .text {
+    display: block;
+    position: relative
+}
+
+.choosing .choices .choice.hurryUp {
+    background-color: #963
+}
+
+.choosing .choices .choice.hasMagnifyingGlass {
+    position: relative
+}
+
+.choosing .choices .choice.hasMagnifyingGlass ::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url("murder-detectives/choosing_choices_choice.hasMagnifyingGlass__after.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.choosing .section {
+    margin-top: 25px
+}
+
+.choosing .footer {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: #ffaf3b;
+    color: #000;
+    font-size: 18px
+}
+
+button {
+    font-size: 22px
+}
+
+.drawing {
+    overflow-y: auto;
+    height: 100%
+}
+
+.drawing>div.content {
+    padding: 0px 0px
+}
+
+.drawing .tabs {
+    margin: 0px auto -6px auto;
+    padding-right: 4px;
+    text-align: center
+}
+
+.drawing .tabs .mode {
+    width: 44%;
+    margin: 6px auto 0px auto;
+    padding: 10px 0px 6px 0px;
+    border: 3px solid transparent;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #000
+}
+
+.drawing .tabs .mode.active {
+    transform: translateY(-2px)
+}
+
+@media screen and (max-width: 450px) {
+    .drawing .tabs .mode {
+        font-size: 18px;
+        padding: 9px 0px 5px 0px
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .drawing .tabs .mode {
+        font-size: 15px;
+        padding: 8px 0px 4px 0px
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .drawing .tabs .mode {
+        font-size: 12px;
+        padding: 7px 0px 3px 0px
+    }
+}
+
+.drawing .folder {
+    background-image: url("murder-detectives/drawing_folder.png");
+    background-size: 150% auto;
+    background-position: center top;
+    background-repeat: no-repeat
+}
+
+.drawing .folder.draw {
+    background-image: url("murder-detectives/drawing_folder.draw.png")
+}
+
+.drawing .folder .controls {
+    padding: 10px 15%;
+    overflow: auto
+}
+
+.drawing .folder .undo {
+    float: left;
+    padding: 10px 20px
+}
+
+.drawing .folder .submit {
+    float: right;
+    padding: 10px 20px
+}
+
+.drawing .stage {
+    margin: 6px 5%
+}
+
+.drawing .stage canvas {
+    background-color: #fff
+}
+
+.soundboard {
+    height: 100%;
+    padding-bottom: 100px;
+    --progress-width: 0%
+}
+
+.soundboard .choices {
+    padding: 0px 10%
+}
+
+.soundboard .choices .choice {
+    position: relative;
+    margin: 6px 0;
+    width: 100%;
+    min-height: 48px;
+    font-size: 18px;
+    font-weight: bold;
+    overflow: hidden
+}
+
+.soundboard .choices .choice.cooling {
+    background: #ffaf3b;
+    color: #740a00
+}
+
+.soundboard .choices .choice::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .1);
+    transform-origin: left;
+    transform: scaleX(var(--progress-width));
+    transition: transform .2s
+}
+
+.soundboard .choices .choice:disabled {
+    color: #ffaf3b;
+    background: transparent;
+    opacity: 1
+}
+
+.soundboard .choices .choice:disabled::before {
+    display: none
+}
+
+.detectives .stabbing {
+    height: 100%;
+    padding-bottom: 100px;
+    text-align: center
+}
+
+.detectives .stabbing .prompt {
+    padding-bottom: 20px
+}
+
+.detectives .stabbing h3 {
+    font-size: 16px;
+    padding-bottom: 5px
+}
+
+.detectives .stabbing .stab-button {
+    width: 60%;
+    transform: rotate(-10deg);
+    background: #000;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: clamp(21px, 6.5vw, 30px);
+    box-shadow: 8px 10px 0px rgba(0, 0, 0, .25)
+}
+
+.detectives .stabbing .stab-button span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    transform: translateY(-50%)
+}
+
+.detectives .stabbing .stab-button::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%
+}
+
+.detectives .stabbing .stab-button:active {
+    box-shadow: 2px 3px 0px rgba(0, 0, 0, .5);
+    transform: rotate(-10deg) scale(0.99)
+}
+
+.detectives .stabbing .result {
+    padding: 15px 25px;
+    color: #ffaf3b
+}
+
+.detectives .stabbing .result-transition-enter-active.result {
+    transition: opacity .25s, transform .25s cubic-bezier(0.16, 1, 0.3, 1)
+}
+
+.detectives .stabbing .result-transition-leave-active.result {
+    transition: opacity .25s, transform .25s
+}
+
+.detectives .stabbing .result-transition-enter.result,
+.detectives .stabbing .result-transition-leave-to.result {
+    opacity: 0;
+    transform: scale(0.9)
+}
+
+.warning {
+    height: 230px
+}
+
+.nippleContainer {
+    background-color: #ccc;
+    background-image: url("murder-detectives/nippleContainer.png");
+    background-size: 100% 100%;
+    border: 3px solid #000;
+    border-radius: 6px;
+    position: relative;
+    height: 230px
+}
+
+.nippleContainer.numPlayers4 {
+    background-image: url("murder-detectives/nippleContainer.png")
+}
+
+.nippleContainer.numPlayers5 {
+    background-image: url("murder-detectives/nippleContainer.numPlayers5.png")
+}
+
+.nippleContainer.numPlayers6 {
+    background-image: url("murder-detectives/nippleContainer.numPlayers6.png")
+}
+
+.nippleContainer.numPlayers7 {
+    background-image: url("murder-detectives/nippleContainer.numPlayers7.png")
+}
+
+.nippleContainer.numPlayers8 {
+    background-image: url("murder-detectives/nippleContainer.numPlayers8.png")
+}
+
+.waiting {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center
+}
+
+.waiting>div {
+    flex: 0 0 auto
+}
+
+.waiting .content {
+    flex: 1 0 auto;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap
+}
+
+.waiting .content>div {
+    flex: 1 0 auto
+}
+
+.waiting .content .logo {
+    pointer-events: none;
+    max-width: 100%
+}
+
+.waiting .icon {
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 3400px 200px;
+    margin: 25px auto;
+    animation-name: appear;
+    animation-duration: .5s;
+    animation-timing-function: steps(16);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+}
+
+.waiting .icon.Murderer {
+    background-image: url("murder-detectives/waiting_icon.Murderer.png")
+}
+
+.waiting .icon.Detective,
+.waiting .icon.DetectiveUnrevealed {
+    background-image: url("murder-detectives/waiting_icon.Detective.png")
+}
+
+.waiting .prompt {
+    transition: all .6s ease-in-out;
+    transition-delay: .3s
+}
+
+.waiting.v-enter.v-enter-active .prompt {
+    transition: all 0s ease;
+    transform: translateY(50%);
+    opacity: 0
+}
+
+.waiting.v-leave-active .icon.Murderer,
+.waiting.v-leave-active .icon.Detective,
+.waiting.v-leave-active .icon.DetectiveUnrevealed {
+    animation-name: disappear
+}
+
+.waiting.v-leave-active .prompt {
+    transition-delay: 0s;
+    opacity: 0
+}
+
+@keyframes appear {
+    from {
+        background-position: 0px
+    }
+
+    to {
+        background-position: calc(-200px * 16)
+    }
+}
+
+@keyframes disappear {
+    from {
+        background-position: calc(-200px * 16)
+    }
+
+    to {
+        background-position: 0px
+    }
+}
+
+.writing textarea {
+    font-size: 24px;
+    padding: 5px;
+    resize: none;
+    width: 100%;
+    border-radius: 9px;
+    border: 6px solid #000
+}
+
+.writing .character-count {
+    font-size: 12px;
+    color: #fff;
+    float: left;
+    text-align: right
+}
+
+.writing .character-count.too-long {
+    color: #ffaf3b
+}
+
+.writing .inputLine {
+    margin-top: 10px;
+    overflow: auto
+}
+
+.writing .inputLine button.submit {
+    float: right
+}
+
+.writing .error {
+    text-align: center;
+    color: #fff
+}
+
+@font-face {
+    font-family: "Type Wronger";
+    src: url("murder-detectives/b6738a9fc841fc0640c1.otf");
+    font-weight: 400;
+    font-style: normal
+}
+
+.tutorial .slide .text h3 {
+    padding-bottom: 4%;
+    font-size: clamp(16px, 5vw, 22px)
+}
+
+.tutorial .slide .text li {
+    padding-bottom: 7px
+}
+
+.tutorial .image.tutorial-0 {
+    background-image: url("murder-detectives/tutorial_image.tutorial-0.jpg")
+}
+
+.tutorial .image.tutorial-1 {
+    background-image: url("murder-detectives/tutorial_image.tutorial-1.jpg")
+}
+
+.tutorial .image.tutorial-2 {
+    background-image: url("murder-detectives/tutorial_image.tutorial-2.jpg")
+}
+
+.tutorial .image.tutorial-3 {
+    background-image: url("murder-detectives/tutorial_image.tutorial-3.jpg")
+}
+
+.tutorial .image.tutorial-4 {
+    background-image: url("murder-detectives/tutorial_image.tutorial-4.jpg")
+}
+
+.detectives {
+    --theme-primary: #000;
+    --theme-secondary: #FFF;
+    --theme-highlight: #333;
+    --theme-background: #FFF;
+    background-color: #611a05;
+    background-image: url("murder-detectives/detectives.png");
+    background-size: cover;
+    background-position: center;
+    font-size: 24px;
+    height: 100%;
+    min-height: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.detectives>div {
+    min-height: 100%
+}
+
+.detectives>div .constrain {
+    min-height: auto
+}
+
+.detectives,
+.detectives * {
+    touch-action: manipulation;
+    font-family: "Type Wronger", serif
+}
+
+.detectives .header {
+    width: 100%;
+    text-align: center;
+    background-color: #ffaf3b;
+    font-size: 24px;
+    color: #000;
+    padding: 12px 0px;
+    position: relative
+}
+
+.detectives .header.avatar {
+    margin-bottom: 40px
+}
+
+.detectives .header.avatar::after {
+    content: "";
+    width: 64px;
+    height: 64px;
+    background-image: url("murder-detectives/detectives_header.avatar_after.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -75%;
+    left: 50%;
+    transform: translate(-50%, 0)
+}
+
+.detectives .header.Avatar0::after {
+    background-image: url("murder-detectives/detectives_header.Avatar0_after.png")
+}
+
+.detectives .header.Avatar1::after {
+    background-image: url("murder-detectives/detectives_header.Avatar1_after.png")
+}
+
+.detectives .header.Avatar2::after {
+    background-image: url("murder-detectives/detectives_header.Avatar2_after.png")
+}
+
+.detectives .header.Avatar3::after {
+    background-image: url("murder-detectives/detectives_header.Avatar3_after.png")
+}
+
+.detectives .header.Avatar4::after {
+    background-image: url("murder-detectives/detectives_header.Avatar4_after.png")
+}
+
+.detectives .header.Avatar5::after {
+    background-image: url("murder-detectives/detectives_header.Avatar5_after.png")
+}
+
+.detectives .header.Avatar6::after {
+    background-image: url("murder-detectives/detectives_header.Avatar6_after.png")
+}
+
+.detectives .header.Avatar7::after {
+    background-image: url("murder-detectives/detectives_header.Avatar7_after.png")
+}
+
+.detectives .header.AvatarAud::after {
+    background-image: url("murder-detectives/detectives_header.avatar_after.png")
+}
+
+.detectives .prompt,
+.detectives .message,
+.detectives .status {
+    color: #fff;
+    text-align: center;
+    padding: 15px 20px;
+    word-break: break-word
+}
+
+.detectives .player,
+.detectives .guest {
+    color: #ffaf3b
+}
+
+.detectives .content {
+    padding: 0px 10px
+}
+
+.detectives input,
+.detectives textarea {
+    background: #fff;
+    color: #000;
+    display: block;
+    overflow: hidden;
+    resize: none;
+    text-align: top
+}
+
+.detectives .blackButton {
+    border-radius: 9px;
+    padding: 10px 20px;
+    font-size: 24px
+}
+
+.detectives button.blackButton {
+    border: 0px solid transparent;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    word-wrap: break-word
+}
+
+.detectives button.blackButton img {
+    background-color: #fff
+}
+
+.detectives button.blackButton.chosen,
+.detectives button.blackButton.selected {
+    background: #fff;
+    color: #000
+}
+
+.detectives button.blackButton:active:not(:disabled) {
+    color: #000;
+    background-color: #fff
+}
+
+.detectives button.blackButton:disabled {
+    cursor: not-allowed
+}
+
+.detectives button.blackButton.disabled {
+    opacity: .3
+}
+
+.detectives .allow-select {
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text
+}
+
+.detectives .scrollable {
+    overflow-y: auto
+}
+
+.detectives .toast {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    background: #ffaf3b;
+    z-index: 1000
+}
+
+.detectives .toast .constrain {
+    padding: 15px 15px;
+    padding-left: 65px
+}
+
+.detectives .toast .constrain ::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-image: url("murder-detectives/detectives_toast_constrain__after.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.detectives .toast .text {
+    font-size: 18px;
+    color: #000
+}
+
+.detectives .toast .text .guest {
+    color: #000;
+    display: block
+}
+
+.detectives .toast.toast-transition-enter-active {
+    transition: bottom .25s, opacity .25s cubic-bezier(0.16, 1, 0.3, 1)
+}
+
+.detectives .toast.toast-transition-leave-active {
+    transition: bottom .5s cubic-bezier(0.5, 0, 0.75, 0), opacity .5s cubic-bezier(0.7, 0, 0.84, 0)
+}
+
+.detectives .toast.toast-transition-enter,
+.detectives .toast.toast-transition-leave-to {
+    bottom: -70px;
+    opacity: 0
+}
+
+body::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url("murder-detectives/body_after.png") url("murder-detectives/drawing_folder.png") url("murder-detectives/body_after_2.png") url("murder-detectives/drawing_folder.draw.png") url("murder-detectives/body_after_3.png") url("murder-detectives/body_after_4.png") url("murder-detectives/body_after_5.png") url("murder-detectives/body_after_6.png") url("murder-detectives/body_after_7.png") url("murder-detectives/body_after_8.png") url("murder-detectives/body_after_9.png") url("murder-detectives/body_after_10.png") url("murder-detectives/body_after_11.svg") url("murder-detectives/waiting_icon.Detective.png") url("murder-detectives/waiting_icon.Murderer.png") url("murder-detectives/artifact-link[data-v-57793e1c].png") url("murder-detectives/body_after_12.png") url("murder-detectives/nippleContainer.png") url("murder-detectives/nippleContainer.numPlayers5.png") url("murder-detectives/nippleContainer.numPlayers6.png") url("murder-detectives/nippleContainer.numPlayers7.png") url("murder-detectives/nippleContainer.numPlayers8.png") url("murder-detectives/detectives.png")
+}
+
+/*# sourceMappingURL=8274.css.map*/

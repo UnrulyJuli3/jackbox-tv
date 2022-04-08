@@ -1,0 +1,1342 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url("rapbattle/post-banner.tjpp7_banner-image.png")
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url("rapbattle/post-banner.tjpp6_banner-image.png")
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("rapbattle/a4bece5c270c316c1c24.ttf");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("rapbattle/2263cf4bbb29e585de1b.ttf");
+    font-weight: 500;
+    font-style: normal
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+body {
+    color: #000;
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+.page {
+    overflow-y: auto
+}
+
+img {
+    margin: 0px auto
+}
+
+canvas {
+    border: 1px solid #000
+}
+
+.controller-page {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch
+}
+
+.scrollable {
+    overflow-y: auto
+}
+
+.textDescriptions {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden
+}
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+.loadingSpinner {
+    text-align: center;
+    margin: 50px 0px
+}
+
+.playerName {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.playerIcon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    background-size: contain
+}
+
+.playerIcon.none {
+    display: none
+}
+
+.twitchBroadcasterIcon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 13px;
+    bottom: 10px;
+    background-image: url("rapbattle/twitchBroadcasterIcon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.controller-container {
+    display: flex;
+    overflow-y: hidden
+}
+
+#controller-container {
+    display: flex;
+    flex-direction: column
+}
+
+#controller-container>div:last-child {
+    flex-grow: 1
+}
+
+#controller-main {
+    flex: 1 0 auto
+}
+
+.Logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch
+}
+
+.Logo>div {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    text-align: center
+}
+
+div.logo-image {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 600px;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3
+}
+
+.lobbyTitle {
+    text-align: center
+}
+
+.artifactContainer {
+    text-align: center
+}
+
+.artifactButton {
+    background-image: url("rapbattle/artifactButton.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 283px;
+    width: 90%;
+    max-width: 512px;
+    display: inline-block
+}
+
+@media only screen and (max-width: 480px) {
+    .artifactButton {
+        height: 192px
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .artifactButton {
+        height: 128px
+    }
+}
+
+.controller-content {
+    max-width: 768px;
+    margin: 0px auto
+}
+
+.controller-content>div {
+    display: inline-block;
+    width: 100%
+}
+
+.EnterSingleText,
+.MakeSingleChoice,
+.Draw,
+.Lobby,
+.Sortable,
+.UGC {
+    display: inline-block;
+    width: 100%
+}
+
+.Lobby .charactersList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 512px;
+    padding: .5rem;
+    margin: 0px auto
+}
+
+.Lobby .charactersList button.characters {
+    flex: 0 0 25%;
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: stretch;
+    box-sizing: border-box
+}
+
+.Lobby .charactersList button.characters.disabled {
+    cursor: not-allowed
+}
+
+.Lobby .charactersList button.characters.selected {
+    cursor: default
+}
+
+.Lobby .charactersList button.characters:before {
+    content: "";
+    display: table;
+    padding-top: 100%
+}
+
+.Lobby .charactersList button.characters .flex-item {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.choices {
+    text-align: center
+}
+
+.button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.choices .button-group button.choice-button * {
+    pointer-events: none
+}
+
+textarea.form-control {
+    resize: none;
+    overflow: hidden;
+    height: 36px;
+    line-height: 24px;
+    outline: none
+}
+
+textarea:focus {
+    outline: none
+}
+
+.button-group * {
+    border-radius: 0px;
+    margin: 0px;
+    max-width: 100%;
+    min-width: 50px;
+    overflow-wrap: break-word;
+    outline: none;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: normal;
+    word-break: break-word;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.button-group button:not(:only-child):not(:last-child) {
+    border-right-width: 0px
+}
+
+.button-group button:not(:only-child):not(:first-child) {
+    border-left-width: 0px
+}
+
+.button-group :first-child {
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2
+}
+
+.censor-button {
+    width: auto;
+    max-width: 15px;
+    padding: 0px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 35px;
+    flex: 0 1 35px
+}
+
+.double-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.double-nav-middle {
+    flex: 1 0 auto;
+    position: relative;
+    overflow-x: hidden
+}
+
+.double-nav-top,
+.double-nav-bottom {
+    flex: 0 1 auto;
+    width: 100%;
+    z-index: 1030;
+    text-align: center
+}
+
+.double-nav-detail {
+    top: 0px;
+    min-height: 100%;
+    display: absolute
+}
+
+.double-nav-bottom {
+    margin-top: auto
+}
+
+.canvasContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.Draw .nav-tabs {
+    border-width: 0px
+}
+
+li>a.button-color.active {
+    border: 3px solid
+}
+
+li>a.button-color.active[data-color="#000000"] {
+    border-color: #f32938
+}
+
+.Draw canvas.fullLayer {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.Draw .button {
+    height: 33px;
+    min-width: 40px;
+    margin: 2px;
+    padding: 5px
+}
+
+.Draw .submitDrawing {
+    height: auto
+}
+
+.Draw .currentColor {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    margin: 0px auto
+}
+
+.Draw .thickness-circle {
+    border-radius: 50%;
+    background-color: #000;
+    width: 5px;
+    height: 5px;
+    margin: 0px auto
+}
+
+.Draw .colorSwatch {
+    border-radius: 8px;
+    width: 62px;
+    height: 62px;
+    margin: 3px;
+    display: inline-block
+}
+
+.Draw .list .colorSwatch {
+    display: inline-block
+}
+
+.Draw .list .colorSwatch a {
+    padding: 0px;
+    width: 48px;
+    height: 48px
+}
+
+.Draw .colorPaletteRegion {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0)
+}
+
+.Draw .colorPaletteRegion.visible {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.Draw .colorPaletteRegion .colorPalette {
+    border: 8px solid #000;
+    background-color: #fff;
+    border-radius: 18px;
+    width: 230px;
+    padding: 2px
+}
+
+.Draw .picker {
+    position: relative
+}
+
+.Draw .list .colorPalette {
+    margin-bottom: -19px;
+    margin-right: 20px
+}
+
+.Draw .colorPaletteRegion .colorSwatch a {
+    padding: 0px;
+    width: 62px;
+    height: 62px
+}
+
+.Draw .canvasContainer {
+    display: inline-block
+}
+
+.Shoot {
+    height: 100%
+}
+
+.Shoot .health {
+    text-align: right
+}
+
+.Shoot .shoot-container {
+    max-width: 480px
+}
+
+.Shoot button.selected {
+    background: #000;
+    color: #fff
+}
+
+.Shoot div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.Shoot button {
+    width: 100px;
+    height: 50px
+}
+
+.Shoot .RadialView {
+    height: 100%
+}
+
+.Shoot .radial {
+    margin: 0px auto;
+    cursor: pointer
+}
+
+.Shoot .background {
+    stroke: #1797c5;
+    stroke-width: 32;
+    stroke-opacity: .8
+}
+
+.Shoot .health-display {
+    fill-opacity: 0;
+    stroke: #f0f;
+    stroke-width: 2
+}
+
+.Shoot .crosshair-center {
+    stroke: #fff;
+    stroke-width: .8;
+    stroke-dasharray: .3 1.265;
+    fill-opacity: 0
+}
+
+.Shoot .circle-helper {
+    stroke: #00cfe6;
+    stroke-width: 3;
+    fill-opacity: 0
+}
+
+.Shoot .line-helper-left,
+.Shoot .line-helper-right {
+    stroke: #fff;
+    stroke-width: .3
+}
+
+.Shoot .locked-in-line {
+    stroke: #fff;
+    stroke-width: .3;
+    stroke-dasharray: 1.265 .5
+}
+
+.Shoot .left-text,
+.Shoot .right-text {
+    color: #fff
+}
+
+.Shoot .locked-in-fade {
+    stroke: #000;
+    stroke-width: 34;
+    stroke-opacity: .8;
+    fill-opacity: 0
+}
+
+.Shoot .cls-1 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 17px
+}
+
+.Shoot .lockedIn .cls-1 {
+    stroke: #575757
+}
+
+.Camera {
+    position: relative
+}
+
+.Camera .cameraRegion canvas.cameraCanvas {
+    background-color: #000;
+    top: 0px;
+    left: 0px;
+    border: none
+}
+
+.Camera .cameraRegion .cameraVideo {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px
+}
+
+.Camera .cameraRegion .cameraImage {
+    width: 100%;
+    max-width: 100%
+}
+
+.Camera .cameraRegion .cameraImageDiv {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.Camera .cameraRegion .cameraControls {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    height: 60px;
+    text-align: center
+}
+
+.Camera .cameraRegion .buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden
+}
+
+.Camera .cameraRegion .buttons.visible {
+    visibility: visible
+}
+
+.Camera .cameraRegion .button {
+    background-color: #fff;
+    color: #000
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url("rapbattle/twitchBroadcasterIcon.svg") no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url("rapbattle/jbgTwitchContent_warning.png") no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+.debug {
+    position: fixed;
+    left: 0;
+    top: 55px;
+    opacity: .1;
+    z-index: 1031;
+    user-select: none;
+    text-shadow: -1px -1px 0 #ddd, 1px -1px 0 #ddd, -1px 1px 0 #ddd, 1px 1px 0 #ddd
+}
+
+.debug:hover {
+    opacity: 1
+}
+
+.debug button {
+    width: 50px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 1px solid #333 !important;
+    outline: 1px solid #ddd !important;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    box-shadow: none !important
+}
+
+.debug span {
+    position: relative;
+    top: -4px;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+@font-face {
+    font-family: "Tremendous Loose";
+    src: url("rapbattle/9ec97aa01f048bc50d4d.woff2") format("woff2"), url("rapbattle/3166834826df5b79023e.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Konkret Bold";
+    src: url("rapbattle/0b133db36bd87197a58d.woff2") format("woff2"), url("rapbattle/4f105b2b50863bf81a1b.woff") format("woff")
+}
+
+.rapbattle {
+    font-family: "Konkret Bold";
+    font-weight: 400
+}
+
+.rapbattle .artifactButton {
+    background: url("rapbattle/rapbattle_artifactButton.png") no-repeat center/contain
+}
+
+.rapbattle .Logo {
+    background-color: #0c70a4
+}
+
+.rapbattle .logo-image {
+    height: 80%;
+    width: 90%;
+    margin: auto;
+    background: url("rapbattle/rapbattle_logo-image.png") no-repeat center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.rapbattle .choice-button {
+    height: auto;
+    min-height: 2.4em;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 28px;
+    -webkit-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease
+}
+
+@media only screen and (device-width: 768px) {
+    .rapbattle .choice-button {
+        font-size: 28px
+    }
+}
+
+.rapbattle .choices {
+    margin: 0 3em
+}
+
+@media only screen and (max-width: 768px) {
+    .rapbattle .choices {
+        margin: 0 6em
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .rapbattle .choices {
+        margin: 0 2em;
+        font-size: 1em !important
+    }
+}
+
+.rapbattle .chosen {
+    margin: 0 2.1em;
+    font-size: 24px;
+    padding-top: 10px
+}
+
+.rapbattle .choice-button:hover {
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05)
+}
+
+.rapbattle .choice-button:active {
+    -webkit-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    background-color: #000;
+    color: #fff
+}
+
+.rapbattle #playerRegion .playerTopBar {
+    background-color: #333;
+    color: #000;
+    font-family: "Tremendous Loose";
+    font-size: 33px
+}
+
+.rapbattle #playerRegion .playerIcon {
+    width: 45px;
+    height: 45px
+}
+
+.rapbattle #playerRegion #player {
+    padding: 0
+}
+
+.rapbattle #playerRegion .playerIcon.PlayerIcon1 {
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon1.png")
+}
+
+.rapbattle #playerRegion .playerIcon.PlayerIcon2 {
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon2.png")
+}
+
+.rapbattle #playerRegion .playerIcon.PlayerIcon3 {
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon3.png")
+}
+
+.rapbattle #playerRegion .playerIcon.PlayerIcon4 {
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon4.png")
+}
+
+.rapbattle #playerRegion .playerIcon.PlayerIcon5 {
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon5.png")
+}
+
+.rapbattle #playerRegion .playerIcon.PlayerIcon6 {
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon6.png")
+}
+
+.rapbattle #playerRegion .playerIcon.PlayerIcon7 {
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon7.png")
+}
+
+.rapbattle #playerRegion .playerIcon.PlayerIcon8 {
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon8.png")
+}
+
+.rapbattle #playerRegion .playerIcon.none {
+    display: none
+}
+
+.rapbattle #playerRegion .playerIcon {
+    background-size: 100%;
+    background-repeat: no-repeat
+}
+
+.rapbattle .Lobby {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start
+}
+
+.rapbattle .Lobby .mech {
+    flex: 1 0 auto;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.rapbattle .Lobby #title {
+    margin-top: 2em;
+    font-size: 24px
+}
+
+.rapbattle .Lobby #choices {
+    margin-top: 1.5em
+}
+
+.rapbattle .Lobby .controller-content {
+    margin-bottom: 0px
+}
+
+.rapbattle .Lobby.BigMech1 .mech {
+    background-image: url("rapbattle/rapbattle_Lobby.BigMech1_mech.png");
+    background-position: center;
+    margin-left: -15%
+}
+
+.rapbattle .Lobby.BigMech2 .mech {
+    background-image: url("rapbattle/rapbattle_Lobby.BigMech2_mech.png");
+    background-position: center;
+    margin-left: -15%
+}
+
+.rapbattle .Lobby.BigMech3 .mech {
+    background-image: url("rapbattle/rapbattle_Lobby.BigMech3_mech.png");
+    background-position: center;
+    margin-left: -15%
+}
+
+.rapbattle .Lobby.BigMech4 .mech {
+    background-image: url("rapbattle/rapbattle_Lobby.BigMech4_mech.png");
+    background-position: center;
+    margin-left: -15%
+}
+
+.rapbattle .Lobby.BigMech5 .mech {
+    background-image: url("rapbattle/rapbattle_Lobby.BigMech5_mech.png");
+    background-position: center;
+    margin-left: -15%
+}
+
+.rapbattle .Lobby.BigMech6 .mech {
+    background-image: url("rapbattle/rapbattle_Lobby.BigMech6_mech.png");
+    background-position: center;
+    margin-left: -15%
+}
+
+.rapbattle .Lobby.BigMech7 .mech {
+    background-image: url("rapbattle/rapbattle_Lobby.BigMech7_mech.png");
+    background-position: center;
+    margin-left: -15%
+}
+
+.rapbattle .Lobby.BigMech8 .mech {
+    background-image: url("rapbattle/rapbattle_Lobby.BigMech8_mech.png");
+    background-position: center;
+    margin-left: -15%
+}
+
+.rapbattle .Lobby.Round3 .mech {
+    display: none
+}
+
+.rapbattle .EnterSingleText .prompt {
+    margin-top: 15px;
+    padding: 0px 20px;
+    margin-bottom: .5em;
+    font-size: 24px;
+    overflow-wrap: normal
+}
+
+.rapbattle .EnterSingleText .prompt .text {
+    line-height: 24px
+}
+
+.rapbattle .EnterSingleText .prompt .text>div {
+    padding: 3px 0px
+}
+
+.rapbattle .EnterSingleText .prompt .text>div:nth-child(1) {
+    font-size: 18px
+}
+
+.rapbattle .EnterSingleText .prompt .text>div:nth-child(3) {
+    color: #fff
+}
+
+@media only screen and (max-width: 414px) {
+    .rapbattle .EnterSingleText .prompt {
+        padding: 0px 20px
+    }
+}
+
+.rapbattle .EnterSingleText .line {
+    color: #fff;
+    font-size: 1.8em;
+    font-style: italic;
+    line-height: 1
+}
+
+.rapbattle .EnterSingleText .form-group {
+    margin-bottom: .75em
+}
+
+.rapbattle .EnterSingleText .form-group .jbg-input {
+    line-height: normal;
+    font-size: 32px
+}
+
+@media only screen and (max-width: 414px) {
+    .rapbattle .EnterSingleText .form-group .jbg-input {
+        font-size: 24px
+    }
+}
+
+.rapbattle .EnterSingleText .choices {
+    width: 45%;
+    float: right;
+    margin-right: 0
+}
+
+.rapbattle .EnterSingleText #buttons {
+    padding-left: 2em;
+    padding-right: 2em
+}
+
+.rapbattle .EnterSingleText .choice-button {
+    height: 1.7em;
+    font-size: 21px
+}
+
+.rapbattle .EnterSingleText button {
+    padding: 0 8px
+}
+
+.rapbattle .EnterSingleText button[type=button] {
+    background-color: #9c9c9c;
+    margin-top: .1em
+}
+
+.rapbattle .EnterSingleText .enterSingleTextDone {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    font-size: 18px
+}
+
+.rapbattle .actionChoice>div:first-child {
+    margin-bottom: 30px
+}
+
+.rapbattle .MakeSingleChoice {
+    overflow-x: hidden
+}
+
+.rapbattle .MakeSingleChoice #prompt {
+    margin-top: 15px;
+    padding: 0px 20px;
+    font-size: 24px
+}
+
+@media only screen and (max-width: 414px) {
+    .rapbattle .MakeSingleChoice #prompt {
+        padding: 0px 10px;
+        font-size: 20px
+    }
+}
+
+.rapbattle .Vote.button-group {
+    font-family: tremendous-loose
+}
+
+.rapbattle .Logo .messageText {
+    font-size: 26px
+}
+
+.rapbattle .actionChoice button {
+    min-height: 3.4em;
+    font-size: 26px
+}
+
+.rapbattle .Round1 #helpBlock2 {
+    color: #2b724e
+}
+
+.rapbattle .Round2 #helpBlock2 {
+    color: #63ffc1
+}
+
+.rapbattle .Round3 #helpBlock2 {
+    color: #b02745
+}
+
+.rapbattle .Lobby,
+.rapbattle .Logo,
+.rapbattle .MakeSingleChoice,
+.rapbattle .EnterSingleText {
+    background-image: url("rapbattle/rapbattle_Lobby.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+.rapbattle .Lobby button,
+.rapbattle .Logo button,
+.rapbattle .MakeSingleChoice button,
+.rapbattle .EnterSingleText button {
+    background-color: #e9220f
+}
+
+.rapbattle .Lobby .choice-button:active,
+.rapbattle .Logo .choice-button:active,
+.rapbattle .MakeSingleChoice .choice-button:active,
+.rapbattle .EnterSingleText .choice-button:active {
+    -webkit-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    background-color: #000;
+    color: #fff
+}
+
+.rapbattle .Lobby.Round2,
+.rapbattle .Logo.Round2,
+.rapbattle .MakeSingleChoice.Round2,
+.rapbattle .EnterSingleText.Round2 {
+    background-image: url("rapbattle/rapbattle_Lobby.Round2.jpg")
+}
+
+.rapbattle .Lobby.Round2 button,
+.rapbattle .Logo.Round2 button,
+.rapbattle .MakeSingleChoice.Round2 button,
+.rapbattle .EnterSingleText.Round2 button {
+    background-color: #e9ac0f
+}
+
+.rapbattle .Lobby.Round2 .choice-button:active,
+.rapbattle .Logo.Round2 .choice-button:active,
+.rapbattle .MakeSingleChoice.Round2 .choice-button:active,
+.rapbattle .EnterSingleText.Round2 .choice-button:active {
+    -webkit-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    background-color: #000;
+    color: #fff
+}
+
+.rapbattle .Lobby.Round3,
+.rapbattle .Logo.Round3,
+.rapbattle .MakeSingleChoice.Round3,
+.rapbattle .EnterSingleText.Round3 {
+    background-image: url("rapbattle/rapbattle_Lobby.Round3.jpg")
+}
+
+.rapbattle .Lobby.Round3 button,
+.rapbattle .Logo.Round3 button,
+.rapbattle .MakeSingleChoice.Round3 button,
+.rapbattle .EnterSingleText.Round3 button {
+    background-color: #8be5f4
+}
+
+.rapbattle .Lobby.Round3 .choice-button,
+.rapbattle .Logo.Round3 .choice-button,
+.rapbattle .MakeSingleChoice.Round3 .choice-button,
+.rapbattle .EnterSingleText.Round3 .choice-button {
+    color: #000
+}
+
+.rapbattle .Lobby.Round3 .choice-button:active,
+.rapbattle .Logo.Round3 .choice-button:active,
+.rapbattle .MakeSingleChoice.Round3 .choice-button:active,
+.rapbattle .EnterSingleText.Round3 .choice-button:active {
+    -webkit-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    background-color: #000;
+    color: #fff
+}
+
+.rapbattle .Lobby.Round3 .text,
+.rapbattle .Lobby.Round3 .doneText,
+.rapbattle .Lobby.Round3 .messageText,
+.rapbattle .Logo.Round3 .text,
+.rapbattle .Logo.Round3 .doneText,
+.rapbattle .Logo.Round3 .messageText,
+.rapbattle .MakeSingleChoice.Round3 .text,
+.rapbattle .MakeSingleChoice.Round3 .doneText,
+.rapbattle .MakeSingleChoice.Round3 .messageText,
+.rapbattle .EnterSingleText.Round3 .text,
+.rapbattle .EnterSingleText.Round3 .doneText,
+.rapbattle .EnterSingleText.Round3 .messageText {
+    color: #fff
+}
+
+.playerVote .choices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 3em
+}
+
+.playerVote .choices .button-group {
+    padding: 0 5px;
+    margin-top: 0
+}
+
+.playerVote .choices .button-group .button {
+    font-size: 24px;
+    min-height: 3.7em
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    #player {
+        max-height: 49.14px
+    }
+}
+
+/*# sourceMappingURL=6244.css.map*/

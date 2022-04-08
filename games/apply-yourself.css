@@ -1,0 +1,2221 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat);
+
+.done {
+    padding-top: 30px
+}
+
+.done .title {
+    color: var(--text);
+    font-family: "Bourton";
+    font-size: 30px;
+    text-align: center
+}
+
+.done .submissions {
+    bottom: 25px;
+    left: 0;
+    position: absolute;
+    max-height: 65%;
+    overflow-y: auto;
+    padding: 10px;
+    text-align: center;
+    width: 100%
+}
+
+.done .submission {
+    list-style-type: none;
+    color: var(--text);
+    font-family: "ClickClack";
+    font-size: clamp(20px, 3vw, 30px);
+    margin: auto;
+    margin-top: 10px;
+    max-width: 786px;
+    overflow-wrap: break-word;
+    text-align: center;
+    word-wrap: break-word;
+    width: 100%
+}
+
+@media only screen and (max-height: 400px) {
+    .done {
+        padding-top: 10px
+    }
+
+    .done .submissions {
+        max-height: 40%
+    }
+
+    .done .title {
+        font-size: 22px
+    }
+}
+
+.progress {
+    background-color: var(--paper);
+    color: var(--progress);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: -7px
+}
+
+.progress .flex-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    max-width: 786px;
+    padding: 8px 5px
+}
+
+.progress .current,
+.progress .unchecked {
+    position: relative
+}
+
+.progress .current::after,
+.progress .unchecked::after {
+    color: var(--paper);
+    font-family: "ClickClack";
+    left: 0px;
+    position: absolute;
+    text-align: center;
+    top: 2px;
+    width: 100%
+}
+
+.progress .current.step_1::after,
+.progress .unchecked.step_1::after {
+    content: "1"
+}
+
+.progress .current.step_2::after,
+.progress .unchecked.step_2::after {
+    content: "2"
+}
+
+.progress .current.step_3::after,
+.progress .unchecked.step_3::after {
+    content: "3"
+}
+
+.progress .connector {
+    background-color: var(--inactive);
+    border-radius: 10px;
+    height: 10px;
+    min-width: 20px;
+    width: clamp(5%, 33%, 44%)
+}
+
+.progress .connector.filled {
+    background-color: var(--progress)
+}
+
+.progress .just-filled {
+    animation: fill cubic-bezier(0.785, 0.135, 0.15, 0.86) .5s forwards;
+    transform-origin: left
+}
+
+.progress .step {
+    color: var(--inactive);
+    height: 25px;
+    width: 25px
+}
+
+.progress .checked {
+    color: var(--progress)
+}
+
+.progress .just-checked {
+    animation: pulse .4s;
+    color: var(--progress)
+}
+
+.progress .current {
+    color: var(--progress)
+}
+
+@keyframes fill {
+    from {
+        transform: scaleX(0)
+    }
+
+    to {
+        transform: scaleX(1)
+    }
+}
+
+.writing .character-count {
+    color: var(--midtone);
+    font-family: "Bourton";
+    font-size: clamp(16px, 2vw, 30px);
+    padding-right: 2px;
+    text-align: right
+}
+
+.writing .max-characters {
+    color: var(--error)
+}
+
+.writing .prompt {
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+    top: 0
+}
+
+.writing textarea {
+    border: none;
+    border-radius: 10px 10px 0px 0px;
+    color: var(--text);
+    font-family: "ClickClack";
+    font-size: 20px;
+    max-width: 100%;
+    min-height: 175px;
+    padding: 15px;
+    width: 100%;
+    resize: none
+}
+
+.writing textarea:disabled {
+    background-color: var(--highlight);
+    color: var(--placeholder)
+}
+
+.writing .submit-button {
+    padding-top: 7px
+}
+
+.header {
+    border-bottom: 3px solid var(--border);
+    color: var(--text);
+    font-family: "Bourton";
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    z-index: 2
+}
+
+.header .pulse {
+    animation: pulse .6s linear infinite;
+    animation-delay: .5s
+}
+
+.header .draggable-name {
+    background: none;
+    color: var(--text);
+    font-family: "Bourton";
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    cursor: pointer
+}
+
+.header .draggable-name:focus {
+    border: 2px solid var(--focus)
+}
+
+.lobby .header {
+    font-family: "ClickClack";
+    margin-bottom: 20px
+}
+
+.lobby .paper-container {
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+    transition: bottom .5s, left .5s;
+    z-index: 1
+}
+
+.lobby .slide-down {
+    transition: transform .5s;
+    left: 0px;
+    position: absolute;
+    width: 100%
+}
+
+@media only screen and (min-height: 737px) {
+    .lobby .slide-down {
+        transform: translateY(5vh)
+    }
+}
+
+.lobby .name-container {
+    max-width: 400px;
+    margin: auto;
+    position: relative
+}
+
+.lobby .name-container .name-instructions {
+    animation: text .3s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+    border-radius: 15px;
+    border-top-right-radius: 0px;
+    font-family: "Bourton";
+    line-height: 16px;
+    margin: auto;
+    margin-right: 10px;
+    opacity: 0;
+    padding: 10px;
+    text-align: center;
+    z-index: 2
+}
+
+.lobby .name-container .name-instructions::after {
+    content: "";
+    border-left: 8px solid #fff;
+    border-top: 8px solid #fff;
+    border-color: inherit;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid transparent;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    top: -2px;
+    right: -18px
+}
+
+.lobby .paper {
+    background-image: url("apply-yourself/lobby_paper.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 2px;
+    height: 430px;
+    margin: auto;
+    max-width: 400px;
+    padding: 25px 10px 10px 10px;
+    text-align: center
+}
+
+.lobby .paper .name-draggable {
+    min-height: 40px
+}
+
+.lobby .paper .name-draggable .name {
+    color: var(--text);
+    font-family: "ClickClack";
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px
+}
+
+.lobby .paper .name-empty::before {
+    content: var(--content);
+    color: var(--placeholder);
+    font-family: "ClickClack";
+    font-size: 24px;
+    line-height: 50px;
+    text-transform: uppercase;
+    width: 100%
+}
+
+.lobby .paper .sortable-chosen.sortable-ghost {
+    visibility: hidden
+}
+
+.lobby .paper .stamp-draggable {
+    min-height: 125px;
+    position: relative
+}
+
+.lobby .paper .stamp-draggable .stamp {
+    background: none;
+    border: none;
+    box-shadow: none;
+    position: relative
+}
+
+.lobby .paper .stamp-draggable .stamp img {
+    height: 145px
+}
+
+.lobby .paper .stamp-draggable .stamp .initial {
+    font-family: "ClickClack";
+    font-size: 33px;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    width: 100%
+}
+
+.lobby .paper .stamp-draggable .heart,
+.lobby .paper .stamp-draggable .duck,
+.lobby .paper .stamp-draggable .owl,
+.lobby .paper .stamp-draggable .shirt,
+.lobby .paper .stamp-draggable .dode,
+.lobby .paper .stamp-draggable .poop,
+.lobby .paper .stamp-draggable .bomb,
+.lobby .paper .stamp-draggable .skull,
+.lobby .paper .stamp-draggable .faker,
+.lobby .paper .stamp-draggable .jack,
+.lobby .paper .stamp-draggable .wampus,
+.lobby .paper .stamp-draggable .moon,
+.lobby .paper .stamp-draggable .screw,
+.lobby .paper .stamp-draggable .robot {
+    animation: pulse .3s linear 1
+}
+
+.lobby .paper .stamp-draggable .heart>.initial,
+.lobby .paper .stamp-draggable .shirt>.initial {
+    top: 50px
+}
+
+.lobby .paper .stamp-draggable .duck>.initial {
+    top: 67px
+}
+
+.lobby .paper .stamp-draggable .owl>.initial {
+    left: 3px;
+    top: 53px
+}
+
+.lobby .paper .stamp-draggable .dode>.initial {
+    left: -8px;
+    top: 47px
+}
+
+.lobby .paper .stamp-draggable .poop>.initial,
+.lobby .paper .stamp-draggable .bomb>.initial {
+    top: 58px
+}
+
+.lobby .paper .stamp-draggable .skull>.initial,
+.lobby .paper .stamp-draggable .robot>.initial {
+    top: 31px
+}
+
+.lobby .paper .stamp-draggable .faker>.initial,
+.lobby .paper .stamp-draggable .jack>.initial {
+    top: 53px
+}
+
+.lobby .paper .stamp-draggable .wampus>.initial {
+    top: 37px
+}
+
+.lobby .paper .stamp-draggable .moon>.initial {
+    left: 20px;
+    top: 50px
+}
+
+.lobby .paper .stamp-draggable .screw>.initial {
+    left: -3px;
+    top: 38px
+}
+
+.lobby .paper .empty::before {
+    content: var(--content);
+    color: var(--placeholder);
+    display: inline-block;
+    font-family: "ClickClack";
+    font-size: clamp(20px, 6vw, 40px);
+    left: 0;
+    position: absolute;
+    text-transform: uppercase;
+    transform: rotate(8deg);
+    top: 40px;
+    width: 100%
+}
+
+.lobby .avatar-stash .container {
+    max-width: 768px;
+    margin: auto
+}
+
+.lobby .avatar-stash .avatars {
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    max-height: 35vh;
+    overflow-y: visible;
+    animation: appear .2s linear 1
+}
+
+.lobby .avatar-stash .avatars .avatar {
+    background: none;
+    border: 2px solid transparent;
+    box-shadow: none;
+    cursor: pointer;
+    flex-grow: 1;
+    position: relative;
+    width: 19%;
+    z-index: 1
+}
+
+.lobby .avatar-stash .avatars .avatar img {
+    width: 100%;
+    max-width: 100px
+}
+
+@media only screen and (max-width: 500px) {
+    .lobby .avatar-stash .avatars .avatar img {
+        width: 125%
+    }
+}
+
+.lobby .avatar-stash .avatars .avatar:disabled {
+    opacity: .3
+}
+
+.lobby .avatar-stash .avatars .avatar:focus {
+    border: 2px solid var(--focus)
+}
+
+.lobby .controls-container {
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    z-index: 2
+}
+
+.lobby .controls-container .controls {
+    background-color: var(--shadow);
+    border-radius: 20px;
+    bottom: 0px;
+    box-shadow: 0px 0px 13px 1px var(--boxshadow);
+    margin: auto;
+    max-width: 786px;
+    padding: 6px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%
+}
+
+.lobby .controls-container .controls p {
+    padding-top: 3px;
+    color: var(--text);
+    font-family: "ClickClack";
+    font-size: 20px
+}
+
+.lobby .controls-container .controls button.control {
+    box-shadow: 5px 5px #000;
+    margin-bottom: 10px
+}
+
+.lobby .controls-container .controls .status {
+    margin-top: 5px
+}
+
+.lobby .controls-container .controls .control {
+    max-width: 300px;
+    width: 90%;
+    margin-top: 5px
+}
+
+@media only screen and (min-width: 500px) {
+    .lobby .avatar {
+        width: 25%
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .lobby .paper-container {
+        padding-left: 18px
+    }
+}
+
+@media only screen and (max-height: 665px) {
+    .lobby .slide-down {
+        bottom: -130px
+    }
+
+    .lobby .slide-down .paper .name-draggable {
+        min-height: 25px
+    }
+
+    .lobby .slide-down .paper .name-draggable .name {
+        font-size: 20px
+    }
+
+    .lobby .slide-down .paper .stamp-draggable .stamp img {
+        height: 120px
+    }
+
+    .lobby .slide-down .paper .stamp-draggable .initial {
+        font-size: 30px
+    }
+
+    .lobby .slide-down .paper .stamp-draggable .heart>.initial {
+        top: 40px
+    }
+
+    .lobby .slide-down .paper .stamp-draggable .duck>.initial {
+        top: 53px
+    }
+
+    .lobby .slide-down .paper .stamp-draggable .owl>.initial {
+        left: 2px;
+        top: 41px
+    }
+
+    .lobby .slide-down .paper .stamp-draggable .shirt>.initial {
+        top: 41px
+    }
+
+    .lobby .slide-down .paper .stamp-draggable .dode>.initial {
+        left: -8px;
+        top: 37px
+    }
+
+    .lobby .slide-down .paper .stamp-draggable .poop>.initial,
+    .lobby .slide-down .paper .stamp-draggable .bomb>.initial {
+        top: 48px
+    }
+
+    .lobby .slide-down .paper .stamp-draggable .skull>.initial,
+    .lobby .slide-down .paper .stamp-draggable .robot>.initial {
+        top: 24px
+    }
+
+    .lobby .slide-down .paper .stamp-draggable .faker>.initial,
+    .lobby .slide-down .paper .stamp-draggable .jack>.initial {
+        top: 42px
+    }
+
+    .lobby .slide-down .paper .stamp-draggable .wampus>.initial {
+        left: -2px;
+        top: 28px
+    }
+
+    .lobby .slide-down .paper .stamp-draggable .moon>.initial {
+        left: 18px;
+        top: 40px
+    }
+
+    .lobby .slide-down .paper .stamp-draggable .screw>.initial {
+        left: -4px;
+        top: 31px
+    }
+
+    .lobby .lobby-actions {
+        bottom: 15px
+    }
+
+    .lobby .lobby-actions p {
+        font-size: 17px
+    }
+}
+
+@keyframes text {
+    0% {
+        transform: scale(0.1);
+        opacity: .5
+    }
+
+    90% {
+        transform: scale(1.1);
+        opacity: 1
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes appear {
+    0% {
+        transform: scale(0.1)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+.magnets .punctuation {
+    margin-left: 0px !important
+}
+
+.magnets .composition-draggable {
+    min-height: 50px
+}
+
+.magnets .instructions {
+    margin: auto
+}
+
+.magnets .placeholder {
+    border-radius: 20px;
+    color: var(--highlight);
+    font-family: "Bourton";
+    font-size: 24px;
+    height: 30px;
+    line-height: 50px;
+    opacity: .2;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%
+}
+
+.magnets .prompt {
+    margin-top: 20px;
+    text-align: center
+}
+
+.magnets .shake {
+    -webkit-animation: shake .3s;
+    animation: shake .3s
+}
+
+@keyframes shake {
+    25% {
+        transform: translateX(-10px)
+    }
+
+    50% {
+        transform: translateX(10px)
+    }
+
+    75% {
+        transform: translateX(-10px)
+    }
+
+    100% {
+        transform: translateX(0px)
+    }
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center
+}
+
+.logo .round {
+    background-size: 57%;
+    background-image: url("apply-yourself/logo_round.png");
+    display: flex;
+    height: 100%;
+    text-align: center;
+    width: 100%
+}
+
+.logo .round .round-number {
+    background: none;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    overflow: visible;
+    margin: auto;
+    transform-origin: top;
+    width: clamp(40px, 80vw, 450px);
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none
+}
+
+.logo .round .round-number .three {
+    margin-left: -4vw;
+    position: relative
+}
+
+@media only screen and (max-width: 600px) {
+    .logo .round .round-number .three {
+        margin-left: -10vw
+    }
+}
+
+.logo .round .round-number.spin {
+    animation: spin .5s
+}
+
+.logo .round .round-enter-active {
+    animation: spin-in 1s
+}
+
+.logo .round .temp {
+    color: #fc0000;
+    font-family: "ClickClack";
+    font-size: 40px;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    transform: rotate(-11deg)
+}
+
+.logo .non-round {
+    padding: 20px
+}
+
+.logo .non-round .briefcase {
+    background: none;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    margin: auto;
+    position: relative;
+    width: 70%;
+    max-width: 400px;
+    margin-top: 100px;
+    transition: transform .5s;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none
+}
+
+.logo .non-round .briefcase .eyelids,
+.logo .non-round .briefcase .eyes,
+.logo .non-round .briefcase .left-pupil,
+.logo .non-round .briefcase .right-pupil,
+.logo .non-round .briefcase .body {
+    left: 0;
+    position: absolute
+}
+
+.logo .non-round .look .left-pupil {
+    animation: 3s cubic-bezier(0, 0, 0.2, 1) 1s 1 look
+}
+
+.logo .non-round .look .right-pupil {
+    animation: 3s cubic-bezier(0, 0, 0.2, 1) 1s 1 look
+}
+
+.logo .controls {
+    bottom: 50px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 1
+}
+
+.logo .controls button {
+    width: 90%;
+    max-width: 300px
+}
+
+@keyframes spin-in {
+    0% {
+        transform: scale(2) rotate(400deg)
+    }
+
+    80% {
+        transform: scale(0.8) rotate(0deg)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes spin-in {
+    0% {
+        -webkit-transform: scale(2) rotate(400deg)
+    }
+
+    80% {
+        -webkit-transform: scale(0.8) rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(360deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(360deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg)
+    }
+}
+
+@-webkit-keyframes look {
+    0% {
+        -webkit-transform: translateY(0%)
+    }
+
+    20% {
+        -webkit-transform: translateY(-1%) translateX(-1%)
+    }
+
+    40% {
+        -webkit-transform: translateY(-1) translateX(1%)
+    }
+
+    65% {
+        -webkit-transform: translateY(0%)
+    }
+
+    80% {
+        -webkit-transform: translateY(2%)
+    }
+
+    100% {
+        -webkit-transform: translateY(0%)
+    }
+}
+
+@keyframes look {
+    0% {
+        transform: translateY(0%)
+    }
+
+    20% {
+        transform: translateY(-1%) translateX(-1%)
+    }
+
+    40% {
+        transform: translateY(-1%) translateX(1%)
+    }
+
+    65% {
+        transform: translateY(0%)
+    }
+
+    80% {
+        transform: translateY(2%)
+    }
+
+    100% {
+        transform: translateY(0%)
+    }
+}
+
+.resumagnets .category {
+    margin-top: 20px;
+    text-align: center
+}
+
+.resumagnets .category .category-word {
+    background: none;
+    color: var(--text);
+    font-size: 24px;
+    font-family: "Bourton";
+    font-weight: 600;
+    margin-right: 3.5px;
+    padding: 0px
+}
+
+.resumagnets .prompt {
+    font-size: clamp(25px, 5vw, 35px);
+    margin-bottom: 15px
+}
+
+@media only screen and (min-width: 501px) {
+    .resumagnets .prompt {
+        margin: auto;
+        max-width: 768px
+    }
+}
+
+.resumagnets .prompt .prompt-text {
+    display: inline-block;
+    margin-top: 3px
+}
+
+.resumagnets .prompt .composition-draggable {
+    border: 3px dashed rgba(249, 249, 249, .2);
+    border-radius: 5px;
+    display: inline-block;
+    min-height: 40px;
+    min-width: 200px;
+    text-align: left
+}
+
+.resumagnets .prompt .composition-draggable .composition-word,
+.resumagnets .prompt .composition-draggable .word {
+    font-size: 20px;
+    margin-bottom: -2px;
+    margin-top: 4px
+}
+
+.resumagnets .prompt .composition-draggable::before {
+    content: var(--placeholder);
+    color: var(--text);
+    display: inline-block;
+    font-family: "Bourton";
+    font-size: 14px;
+    height: 100%;
+    line-height: 40px;
+    opacity: .3;
+    text-align: center;
+    text-transform: uppercase;
+    width: 200px
+}
+
+.resumagnets .prompt .selected {
+    border: 3px dashed var(--highlight)
+}
+
+.resumagnets .piece-container-blank {
+    background: none;
+    border: none;
+    margin-left: 10px
+}
+
+.resumagnets .piece-container-blank:focus .composition-draggable {
+    border: 3px solid var(--focus)
+}
+
+.resumagnets .section {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px
+}
+
+.resumagnets .blank {
+    border-bottom: 3px solid var(--highlight);
+    display: inline-block;
+    min-width: 100px;
+    text-align: center
+}
+
+.resumagnets .blank .blank-label {
+    background-color: var(--highlight);
+    border-radius: 50%;
+    color: var(--background);
+    display: inline-block;
+    font-size: 16px;
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 10px;
+    width: 25px
+}
+
+.resumagnets .clipboard .magnet-answer {
+    border-radius: 20px !important
+}
+
+@media only screen and (max-width: 700px) {
+    .resumagnets .clipboard .magnet-answer {
+        padding-right: 20px
+    }
+}
+
+.resumagnets .shake {
+    animation: shake .3s
+}
+
+@keyframes shake {
+    25% {
+        transform: translateX(-10px)
+    }
+
+    50% {
+        transform: translateX(10px)
+    }
+
+    75% {
+        transform: translateX(-10px)
+    }
+
+    100% {
+        transform: translateX(0px)
+    }
+}
+
+.voting .title,
+.voting .success {
+    color: var(--text);
+    font-family: "Bourton";
+    font-weight: 600;
+    font-size: clamp(20px, 4vw, 34px);
+    margin-top: 20px;
+    text-align: center
+}
+
+.voting .choice {
+    background-color: var(--highlight);
+    border-radius: 10px;
+    font-family: "ClickClack";
+    font-size: clamp(20px, 3vw, 30px);
+    min-height: 50px;
+    height: auto;
+    line-height: 50px;
+    margin: 10px 0px;
+    overflow-wrap: break-word;
+    text-align: center;
+    width: 100%;
+    word-wrap: break-word
+}
+
+.voting button.choice:focus {
+    border-color: #ff0
+}
+
+.artifact-link {
+    display: inline-block;
+    width: 100%
+}
+
+.artifact-link.no-content {
+    padding-bottom: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.postgame .artifact-link {
+    background-image: url("apply-yourself/postgame_artifact-link.png")
+}
+
+.postgame .controls .message {
+    font-family: "Bourton";
+    font-size: 24px;
+    text-align: center
+}
+
+.postgame .controls .status {
+    font-family: "ClickClack";
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center
+}
+
+.postgame .controls button {
+    margin-bottom: 15px;
+    width: 100%
+}
+
+.voting {
+    margin-top: 50px
+}
+
+.voting .submitted {
+    margin-top: 30px
+}
+
+.voting .submitted .success {
+    text-align: center
+}
+
+.voting .choice {
+    background-color: var(--highlight);
+    border-radius: 0px;
+    border: 7px solid var(--text);
+    padding: 10px
+}
+
+.voting button.choice:focus {
+    border-color: #ff0
+}
+
+.voting .resume {
+    border: 30px solid #000;
+    border-image: url("apply-yourself/voting_resume.svg") 30 round
+}
+
+.apply-yourself .poster_86132 {
+    background-image: url("apply-yourself/apply-yourself_poster_86132.png")
+}
+
+.apply-yourself .poster_86133 {
+    background-image: url("apply-yourself/apply-yourself_poster_86133.png")
+}
+
+.apply-yourself .poster_86134 {
+    background-image: url("apply-yourself/apply-yourself_poster_86134.png")
+}
+
+.apply-yourself .poster_86135 {
+    background-image: url("apply-yourself/apply-yourself_poster_86135.png")
+}
+
+.apply-yourself .poster_86136 {
+    background-image: url("apply-yourself/apply-yourself_poster_86136.png")
+}
+
+.apply-yourself .poster_86137 {
+    background-image: url("apply-yourself/apply-yourself_poster_86137.png")
+}
+
+.apply-yourself .poster_86138 {
+    background-image: url("apply-yourself/apply-yourself_poster_86138.png")
+}
+
+.apply-yourself .poster_86139 {
+    background-image: url("apply-yourself/apply-yourself_poster_86139.png")
+}
+
+.apply-yourself .poster_86140 {
+    background-image: url("apply-yourself/apply-yourself_poster_86140.png")
+}
+
+.apply-yourself .poster_86141 {
+    background-image: url("apply-yourself/apply-yourself_poster_86141.png")
+}
+
+.apply-yourself .poster_86142 {
+    background-image: url("apply-yourself/apply-yourself_poster_86142.png")
+}
+
+.apply-yourself .poster_86143 {
+    background-image: url("apply-yourself/apply-yourself_poster_86143.png")
+}
+
+.apply-yourself .poster_86144 {
+    background-image: url("apply-yourself/apply-yourself_poster_86144.png")
+}
+
+.apply-yourself .poster_86145 {
+    background-image: url("apply-yourself/apply-yourself_poster_86145.png")
+}
+
+.apply-yourself .poster_86146 {
+    background-image: url("apply-yourself/apply-yourself_poster_86146.png")
+}
+
+.apply-yourself .poster_86147 {
+    background-image: url("apply-yourself/apply-yourself_poster_86147.png")
+}
+
+.apply-yourself .poster_86148 {
+    background-image: url("apply-yourself/apply-yourself_poster_86148.png")
+}
+
+.apply-yourself .poster_86149 {
+    background-image: url("apply-yourself/apply-yourself_poster_86149.png")
+}
+
+.apply-yourself .poster_86150 {
+    background-image: url("apply-yourself/apply-yourself_poster_86150.png")
+}
+
+.apply-yourself .poster_86151 {
+    background-image: url("apply-yourself/apply-yourself_poster_86151.png")
+}
+
+.apply-yourself .poster_86152 {
+    background-image: url("apply-yourself/apply-yourself_poster_86152.png")
+}
+
+.apply-yourself .poster_86153 {
+    background-image: url("apply-yourself/apply-yourself_poster_86153.png")
+}
+
+.apply-yourself .poster_86154 {
+    background-image: url("apply-yourself/apply-yourself_poster_86154.png")
+}
+
+.apply-yourself .poster_86155 {
+    background-image: url("apply-yourself/apply-yourself_poster_86155.png")
+}
+
+.apply-yourself .poster_86156 {
+    background-image: url("apply-yourself/apply-yourself_poster_86156.png")
+}
+
+.apply-yourself .poster_86157 {
+    background-image: url("apply-yourself/apply-yourself_poster_86157.png")
+}
+
+.apply-yourself .poster_86158 {
+    background-image: url("apply-yourself/apply-yourself_poster_86158.png")
+}
+
+.apply-yourself .poster_86159 {
+    background-image: url("apply-yourself/apply-yourself_poster_86159.png")
+}
+
+.apply-yourself .poster_86160 {
+    background-image: url("apply-yourself/apply-yourself_poster_86160.png")
+}
+
+.apply-yourself .poster_86161 {
+    background-image: url("apply-yourself/apply-yourself_poster_86161.png")
+}
+
+.apply-yourself .poster_86165 {
+    background-image: url("apply-yourself/apply-yourself_poster_86165.png")
+}
+
+.apply-yourself .poster_86166 {
+    background-image: url("apply-yourself/apply-yourself_poster_86166.png")
+}
+
+.apply-yourself .poster_86167 {
+    background-image: url("apply-yourself/apply-yourself_poster_86167.png")
+}
+
+.apply-yourself .poster_86168 {
+    background-image: url("apply-yourself/apply-yourself_poster_86168.png")
+}
+
+.apply-yourself .poster_86169 {
+    background-image: url("apply-yourself/apply-yourself_poster_86169.png")
+}
+
+.apply-yourself .poster_86170 {
+    background-image: url("apply-yourself/apply-yourself_poster_86170.png")
+}
+
+.apply-yourself .poster_86172 {
+    background-image: url("apply-yourself/apply-yourself_poster_86172.png")
+}
+
+.apply-yourself .poster_86173 {
+    background-image: url("apply-yourself/apply-yourself_poster_86173.png")
+}
+
+.apply-yourself .poster_86174 {
+    background-image: url("apply-yourself/apply-yourself_poster_86174.png")
+}
+
+.apply-yourself .poster_86175 {
+    background-image: url("apply-yourself/apply-yourself_poster_86175.png")
+}
+
+.apply-yourself .poster_86176 {
+    background-image: url("apply-yourself/apply-yourself_poster_86176.png")
+}
+
+.apply-yourself .poster_86227 {
+    background-image: url("apply-yourself/apply-yourself_poster_86227.png")
+}
+
+.apply-yourself .poster_86228 {
+    background-image: url("apply-yourself/apply-yourself_poster_86228.png")
+}
+
+.apply-yourself .poster_86229 {
+    background-image: url("apply-yourself/apply-yourself_poster_86229.png")
+}
+
+.apply-yourself .poster_86230 {
+    background-image: url("apply-yourself/apply-yourself_poster_86230.png")
+}
+
+.apply-yourself .poster_86231 {
+    background-image: url("apply-yourself/apply-yourself_poster_86231.png")
+}
+
+.apply-yourself .poster_86232 {
+    background-image: url("apply-yourself/apply-yourself_poster_86232.png")
+}
+
+.apply-yourself .poster_86233 {
+    background-image: url("apply-yourself/apply-yourself_poster_86233.png")
+}
+
+.apply-yourself .poster_86234 {
+    background-image: url("apply-yourself/apply-yourself_poster_86234.png")
+}
+
+.apply-yourself .poster_86235 {
+    background-image: url("apply-yourself/apply-yourself_poster_86235.png")
+}
+
+.apply-yourself .poster_86236 {
+    background-image: url("apply-yourself/apply-yourself_poster_86236.png")
+}
+
+.apply-yourself .poster_86237 {
+    background-image: url("apply-yourself/apply-yourself_poster_86237.png")
+}
+
+.apply-yourself .poster_86238 {
+    background-image: url("apply-yourself/apply-yourself_poster_86238.png")
+}
+
+.apply-yourself .poster_86239 {
+    background-image: url("apply-yourself/apply-yourself_poster_86239.png")
+}
+
+.apply-yourself .poster_86240 {
+    background-image: url("apply-yourself/apply-yourself_poster_86240.png")
+}
+
+.apply-yourself .poster_86241 {
+    background-image: url("apply-yourself/apply-yourself_poster_86241.png")
+}
+
+.apply-yourself .poster_86242 {
+    background-image: url("apply-yourself/apply-yourself_poster_86242.png")
+}
+
+.apply-yourself .poster_86243 {
+    background-image: url("apply-yourself/apply-yourself_poster_86243.png")
+}
+
+.apply-yourself .poster_86244 {
+    background-image: url("apply-yourself/apply-yourself_poster_86244.png")
+}
+
+.apply-yourself .poster_86245 {
+    background-image: url("apply-yourself/apply-yourself_poster_86245.png")
+}
+
+.apply-yourself .poster_86246 {
+    background-image: url("apply-yourself/apply-yourself_poster_86246.png")
+}
+
+.apply-yourself .poster_86247 {
+    background-image: url("apply-yourself/apply-yourself_poster_86247.png")
+}
+
+.apply-yourself .poster_86248 {
+    background-image: url("apply-yourself/apply-yourself_poster_86248.png")
+}
+
+.apply-yourself .poster_86249 {
+    background-image: url("apply-yourself/apply-yourself_poster_86249.png")
+}
+
+.apply-yourself .poster_86250 {
+    background-image: url("apply-yourself/apply-yourself_poster_86250.png")
+}
+
+.apply-yourself .poster_86251 {
+    background-image: url("apply-yourself/apply-yourself_poster_86251.png")
+}
+
+.apply-yourself .poster_86252 {
+    background-image: url("apply-yourself/apply-yourself_poster_86252.png")
+}
+
+.apply-yourself .poster_86253 {
+    background-image: url("apply-yourself/apply-yourself_poster_86253.png")
+}
+
+.apply-yourself .poster_86254 {
+    background-image: url("apply-yourself/apply-yourself_poster_86254.png")
+}
+
+.apply-yourself .poster_86255 {
+    background-image: url("apply-yourself/apply-yourself_poster_86255.png")
+}
+
+.apply-yourself .poster_86256 {
+    background-image: url("apply-yourself/apply-yourself_poster_86256.png")
+}
+
+.apply-yourself .poster_86257 {
+    background-image: url("apply-yourself/apply-yourself_poster_86257.png")
+}
+
+.apply-yourself .poster_86258 {
+    background-image: url("apply-yourself/apply-yourself_poster_86258.png")
+}
+
+.apply-yourself .poster_86259 {
+    background-image: url("apply-yourself/apply-yourself_poster_86259.png")
+}
+
+.apply-yourself .poster_86260 {
+    background-image: url("apply-yourself/apply-yourself_poster_86260.png")
+}
+
+.apply-yourself .poster_86261 {
+    background-image: url("apply-yourself/apply-yourself_poster_86261.png")
+}
+
+.apply-yourself .poster_86262 {
+    background-image: url("apply-yourself/apply-yourself_poster_86262.png")
+}
+
+.apply-yourself .poster_86263 {
+    background-image: url("apply-yourself/apply-yourself_poster_86263.png")
+}
+
+.apply-yourself .poster_86264 {
+    background-image: url("apply-yourself/apply-yourself_poster_86264.png")
+}
+
+.apply-yourself .poster_86265 {
+    background-image: url("apply-yourself/apply-yourself_poster_86265.png")
+}
+
+.apply-yourself .poster_86266 {
+    background-image: url("apply-yourself/apply-yourself_poster_86266.png")
+}
+
+.apply-yourself .poster_86267 {
+    background-image: url("apply-yourself/apply-yourself_poster_86267.png")
+}
+
+.apply-yourself .poster_86268 {
+    background-image: url("apply-yourself/apply-yourself_poster_86268.png")
+}
+
+.apply-yourself .poster_86269 {
+    background-image: url("apply-yourself/apply-yourself_poster_86269.png")
+}
+
+.apply-yourself .poster_86270 {
+    background-image: url("apply-yourself/apply-yourself_poster_86270.png")
+}
+
+.apply-yourself .poster_86271 {
+    background-image: url("apply-yourself/apply-yourself_poster_86271.png")
+}
+
+.apply-yourself .poster_86272 {
+    background-image: url("apply-yourself/apply-yourself_poster_86272.png")
+}
+
+.apply-yourself .poster_86273 {
+    background-image: url("apply-yourself/apply-yourself_poster_86273.png")
+}
+
+.apply-yourself .poster_86274 {
+    background-image: url("apply-yourself/apply-yourself_poster_86274.png")
+}
+
+.apply-yourself .poster_86275 {
+    background-image: url("apply-yourself/apply-yourself_poster_86275.png")
+}
+
+.apply-yourself .poster_86276 {
+    background-image: url("apply-yourself/apply-yourself_poster_86276.png")
+}
+
+.apply-yourself .poster_86277 {
+    background-image: url("apply-yourself/apply-yourself_poster_86277.png")
+}
+
+.apply-yourself .poster_86278 {
+    background-image: url("apply-yourself/apply-yourself_poster_86278.png")
+}
+
+.apply-yourself .poster_86279 {
+    background-image: url("apply-yourself/apply-yourself_poster_86279.png")
+}
+
+.apply-yourself .poster_86280 {
+    background-image: url("apply-yourself/apply-yourself_poster_86280.png")
+}
+
+.apply-yourself .poster_86281 {
+    background-image: url("apply-yourself/apply-yourself_poster_86281.png")
+}
+
+.apply-yourself .poster_86282 {
+    background-image: url("apply-yourself/apply-yourself_poster_86282.png")
+}
+
+.apply-yourself .poster_86283 {
+    background-image: url("apply-yourself/apply-yourself_poster_86283.png")
+}
+
+.apply-yourself .poster_86284 {
+    background-image: url("apply-yourself/apply-yourself_poster_86284.png")
+}
+
+.apply-yourself .poster_86791 {
+    background-image: url("apply-yourself/apply-yourself_poster_86791.png")
+}
+
+.apply-yourself .poster_86792 {
+    background-image: url("apply-yourself/apply-yourself_poster_86792.png")
+}
+
+.apply-yourself .poster_86793 {
+    background-image: url("apply-yourself/apply-yourself_poster_86793.png")
+}
+
+.apply-yourself .poster_86794 {
+    background-image: url("apply-yourself/apply-yourself_poster_86794.png")
+}
+
+.apply-yourself .poster_86795 {
+    background-image: url("apply-yourself/apply-yourself_poster_86795.png")
+}
+
+.apply-yourself .poster_86796 {
+    background-image: url("apply-yourself/apply-yourself_poster_86796.png")
+}
+
+.apply-yourself .poster_86797 {
+    background-image: url("apply-yourself/apply-yourself_poster_86797.png")
+}
+
+.apply-yourself .poster_86798 {
+    background-image: url("apply-yourself/apply-yourself_poster_86798.png")
+}
+
+.apply-yourself .poster_86799 {
+    background-image: url("apply-yourself/apply-yourself_poster_86799.png")
+}
+
+.apply-yourself .poster_86800 {
+    background-image: url("apply-yourself/apply-yourself_poster_86800.png")
+}
+
+.apply-yourself .poster_86801 {
+    background-image: url("apply-yourself/apply-yourself_poster_86801.png")
+}
+
+.apply-yourself .poster_86802 {
+    background-image: url("apply-yourself/apply-yourself_poster_86802.png")
+}
+
+.apply-yourself .poster_86803 {
+    background-image: url("apply-yourself/apply-yourself_poster_86803.png")
+}
+
+.apply-yourself .poster_86804 {
+    background-image: url("apply-yourself/apply-yourself_poster_86804.png")
+}
+
+.apply-yourself .poster_86805 {
+    background-image: url("apply-yourself/apply-yourself_poster_86805.png")
+}
+
+.apply-yourself .poster_86806 {
+    background-image: url("apply-yourself/apply-yourself_poster_86806.png")
+}
+
+.apply-yourself .poster_86807 {
+    background-image: url("apply-yourself/apply-yourself_poster_86807.png")
+}
+
+.apply-yourself .poster_86808 {
+    background-image: url("apply-yourself/apply-yourself_poster_86808.png")
+}
+
+.sinkvoting {
+    margin-top: 30px
+}
+
+.sinkvoting .prompt {
+    color: var(--text);
+    font-family: "Bourton";
+    letter-spacing: -0.5px;
+    line-height: clamp(20px, 5vw, 5vw);
+    margin-bottom: 10px;
+    font-size: clamp(23px, 4vw, 34px);
+    text-align: center
+}
+
+.sinkvoting .poster {
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    border-image: url("apply-yourself/sinkvoting_poster.svg") 24 stretch;
+    border-radius: 0px;
+    border-width: 25px;
+    margin-bottom: 10px;
+    max-height: 278px;
+    max-width: 400px;
+    height: 64.8vw;
+    width: 90vw;
+    padding: 0px
+}
+
+.sinkvoting .poster img {
+    margin-bottom: -8px;
+    width: 100%
+}
+
+.sinkvoting .stash,
+.sinkvoting .posters,
+.sinkvoting .done {
+    text-align: center
+}
+
+.sinkvoting .word {
+    background: url("apply-yourself/sinkvoting_word.svg");
+    background-position: 0% 68%;
+    background-size: cover;
+    border: none;
+    border-radius: 3px;
+    box-shadow: none;
+    color: var(--text);
+    cursor: pointer;
+    display: inline-block;
+    font-family: "ClickClack";
+    font-size: 26px;
+    font-weight: 700;
+    margin: 2px 5px;
+    padding: 0px 10px 8px 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    position: relative;
+    max-width: 100%;
+    width: auto;
+    z-index: 1
+}
+
+@media only screen and (max-width: 700px) {
+    .sinkvoting .word {
+        max-width: 80vw
+    }
+}
+
+.sinkvoting .word:disabled {
+    opacity: .5
+}
+
+.sinkvoting .clipboard {
+    background-color: var(--shadow);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    bottom: 4px;
+    box-shadow: 0px 0px 13px 1px var(--boxshadow);
+    left: 0;
+    padding: 40px 15px;
+    position: absolute;
+    width: 100%;
+    z-index: 2
+}
+
+.sinkvoting .fib {
+    align-items: center;
+    color: var(--text);
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Bourton";
+    font-size: clamp(23px, 4vw, 34px);
+    justify-content: center;
+    letter-spacing: -0.5px;
+    line-height: clamp(20px, 5vw, 5vw);
+    text-align: center
+}
+
+.sinkvoting .fib span {
+    margin-bottom: 10px
+}
+
+.sinkvoting .fib .answer-draggable {
+    border: 2px dashed var(--highlight);
+    border-radius: 5px;
+    display: inline-block;
+    margin: auto 10px;
+    min-height: 50px;
+    min-width: 130px;
+    position: relative
+}
+
+.sinkvoting .fib .empty::before {
+    border-radius: 20px;
+    content: "Drag here";
+    color: var(--text);
+    font-family: "Bourton";
+    font-size: 16px;
+    left: 0px;
+    line-height: 50px;
+    opacity: .3;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%
+}
+
+.sinkvoting .fib .disabled-blank {
+    border-bottom: 2px solid var(--text);
+    display: inline-block;
+    margin-left: 5px;
+    min-height: 30px;
+    min-width: 100px
+}
+
+@font-face {
+    font-family: "ClickClack";
+    src: url("apply-yourself/1511b1f1c9444fb4dd19.otf")
+}
+
+@font-face {
+    font-family: "Bourton";
+    src: url("apply-yourself/06dd73ed36c9684078b3.otf")
+}
+
+#app {
+    overflow: hidden
+}
+
+:root {
+    --inactive: rgb(249, 249, 249, 0.7);
+    --error: #d6584f;
+    --errorDark: #9e0b00;
+    --disabled: #bdbbb5;
+    --highlight: #ffffff;
+    --background: #fbf9e8;
+    --paper: #CAC0A7;
+    --shadow: #95907C;
+    --progress: #797359;
+    --focus: #fff7b1;
+    --midtone: #174783;
+    --text: #000000;
+    --timer: #60a4ed;
+    --placeholder: #7a7a7a;
+    --boxshadow: rgb(0, 0, 0, .6);
+    --red: #E74255;
+    --redDark: #661a23;
+    --orange: #EC7839;
+    --orangeDark: #963b0a;
+    --yellow: #D8B230;
+    --yellowDark: #6e5500;
+    --green: #5BC47A;
+    --greenDark: #1a6330;
+    --teal: #61D3C9;
+    --tealDark: #1d6d66;
+    --purple: #9D53BE;
+    --purpleDark: #4c1a63;
+    --blue: #2A63D9;
+    --blueDark: #0e3175;
+    --olive: #9C9D4D;
+    --oliveDark: #484909;
+    --grey: #78786A;
+    --greyDark: #20201a;
+    --pink: #FF9999;
+    --pinkDark: #793e3e
+}
+
+.apply-yourself {
+    background-image: url("apply-yourself/apply-yourself.png");
+    color: var(--text);
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 20px;
+    touch-action: manipulation
+}
+
+.lobby,
+.magnets,
+.resumagnets,
+.done,
+.writing,
+.voting,
+.postgame {
+    max-width: 768px;
+    margin: auto
+}
+
+.lobby .error,
+.magnets .error,
+.resumagnets .error,
+.done .error,
+.writing .error,
+.voting .error,
+.postgame .error {
+    background-color: var(--error);
+    border-radius: 15px;
+    color: var(--highlight);
+    display: block;
+    font-family: "Bourton";
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
+    margin-top: 10px;
+    text-align: center
+}
+
+.writing,
+.magnets,
+.resumagnets {
+    position: relative;
+    z-index: 1
+}
+
+.writing .prompt,
+.writing .prompt-word,
+.magnets .prompt,
+.magnets .prompt-word,
+.resumagnets .prompt,
+.resumagnets .prompt-word {
+    border: 2px solid transparent;
+    color: var(--text);
+    font-family: "Bourton";
+    letter-spacing: -0.5px;
+    line-height: clamp(20px, 4vw, 34px);
+    margin-bottom: 5px;
+    font-size: clamp(23px, 4vw, 34px)
+}
+
+.writing .instructions,
+.magnets .instructions,
+.resumagnets .instructions {
+    color: var(--midtone);
+    font-family: "Bourton";
+    font-weight: 600;
+    margin: auto;
+    max-width: 80vw;
+    font-size: clamp(16px, 3vw, 24px);
+    text-align: center
+}
+
+.writing button.control,
+.magnets button.control,
+.resumagnets button.control {
+    display: block;
+    margin-top: 15px;
+    width: 100%
+}
+
+.writing button:focus,
+.magnets button:focus,
+.resumagnets button:focus {
+    border-color: var(--focus)
+}
+
+.magnets .prompt-word,
+.resumagnets .prompt-word {
+    background: none;
+    box-shadow: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 1px
+}
+
+.magnets .instruction-word,
+.resumagnets .instruction-word {
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: inline-block
+}
+
+.magnets .draggable,
+.resumagnets .draggable {
+    touch-action: manipulation
+}
+
+.magnets .word,
+.magnets .composition-word,
+.resumagnets .word,
+.resumagnets .composition-word {
+    background: url("apply-yourself/sinkvoting_word.svg");
+    background-position: 0% 68%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    color: var(--text);
+    cursor: pointer;
+    display: inline-block;
+    font-family: "ClickClack";
+    font-size: 23px;
+    font-weight: 700;
+    margin: 2px 5px;
+    padding: 0px 10px 8px 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    position: relative;
+    max-width: 100%;
+    z-index: 1;
+    -webkit-tap-highlight-color: transparent
+}
+
+@media only screen and (max-width: 700px) {
+
+    .magnets .word,
+    .magnets .composition-word,
+    .resumagnets .word,
+    .resumagnets .composition-word {
+        max-width: 80vw
+    }
+}
+
+.magnets .composition-word,
+.resumagnets .composition-word {
+    font-size: 20px
+}
+
+.magnets .word:focus,
+.magnets .composition-word:focus,
+.magnets .instruction-word:focus,
+.magnets .prompt-word:focus,
+.resumagnets .word:focus,
+.resumagnets .composition-word:focus,
+.resumagnets .instruction-word:focus,
+.resumagnets .prompt-word:focus {
+    border: 2px solid var(--focus)
+}
+
+.magnets .wordset,
+.resumagnets .wordset {
+    margin-top: 10px;
+    padding-bottom: 30px;
+    margin-bottom: var(--scrollSpace)
+}
+
+.magnets .wordset .controls,
+.resumagnets .wordset .controls {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1
+}
+
+.magnets .wordset .controls button,
+.resumagnets .wordset .controls button {
+    margin-right: 5px
+}
+
+@media only screen and (max-width: 500px) {
+
+    .magnets .wordset .draggable,
+    .resumagnets .wordset .draggable {
+        margin-right: 30px
+    }
+}
+
+.magnets .wordset.disabled .draggable .word,
+.resumagnets .wordset.disabled .draggable .word {
+    opacity: .5
+}
+
+.magnets .clipboard,
+.resumagnets .clipboard {
+    bottom: 0vh;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 2
+}
+
+.magnets .clipboard .magnet-answer,
+.resumagnets .clipboard .magnet-answer {
+    background-color: var(--shadow);
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px 0px 13px 1px var(--boxshadow);
+    margin: auto;
+    max-width: 786px;
+    padding: 15px 10px 15px 10px
+}
+
+.magnets .clipboard .controls,
+.resumagnets .clipboard .controls {
+    display: flex;
+    flex-direction: row
+}
+
+.magnets .clipboard .controls .start,
+.resumagnets .clipboard .controls .start {
+    flex: .5;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+.magnets .clipboard .controls .submit-button,
+.resumagnets .clipboard .controls .submit-button {
+    flex: .5;
+    margin-right: 10px;
+    transition: flex .3s
+}
+
+.magnets .clipboard .controls .full,
+.resumagnets .clipboard .controls .full {
+    margin-right: 0px;
+    flex: 1
+}
+
+@media only screen and (max-width: 700px) {
+
+    .magnets .clipboard .composition,
+    .magnets .clipboard .prompt,
+    .resumagnets .clipboard .composition,
+    .resumagnets .clipboard .prompt {
+        max-height: 45vh;
+        overflow-y: auto;
+        width: 100%
+    }
+
+    .magnets .clipboard .composition .composition-draggable,
+    .magnets .clipboard .prompt .composition-draggable,
+    .resumagnets .clipboard .composition .composition-draggable,
+    .resumagnets .clipboard .prompt .composition-draggable {
+        max-width: 85vw
+    }
+}
+
+@media only screen and (min-width: 701px) {
+
+    .magnets .clipboard .composition,
+    .magnets .clipboard .prompt,
+    .resumagnets .clipboard .composition,
+    .resumagnets .clipboard .prompt {
+        margin: auto;
+        max-height: 50vh;
+        max-width: 768px;
+        overflow-y: auto
+    }
+
+    .magnets .clipboard .controls,
+    .resumagnets .clipboard .controls {
+        margin: auto;
+        max-width: 768px
+    }
+}
+
+.magnets .clipboard button.submit-button,
+.magnets .clipboard button.start,
+.resumagnets .clipboard button.submit-button,
+.resumagnets .clipboard button.start {
+    box-shadow: 5px 5px var(--text)
+}
+
+.magnets .clipboard .sortable-ghost,
+.magnets .clipboard .sortable-drag,
+.magnets .clipboard .sortable-chosen,
+.resumagnets .clipboard .sortable-ghost,
+.resumagnets .clipboard .sortable-drag,
+.resumagnets .clipboard .sortable-chosen {
+    cursor: pointer;
+    border-radius: 3px;
+    color: var(--text);
+    display: inline-block;
+    font-family: "ClickClack";
+    font-size: 20px;
+    font-weight: 700;
+    margin: 2px 5px
+}
+
+.postgame {
+    padding-top: 30px;
+    text-align: center
+}
+
+.postgame .artifact-link {
+    background-color: #3a88e4;
+    background-image: url("apply-yourself/postgame_artifact-link_2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 10px;
+    box-shadow: 5px 5px var(--shadow);
+    display: inline-block;
+    height: clamp(140px, 40vw, 265px);
+    width: clamp(280px, 80vw, 530px);
+    margin-top: 20px;
+    padding: 0px
+}
+
+.timer {
+    position: absolute;
+    background-image: url("apply-yourself/timer.png"), linear-gradient(180deg, transparent 67px, var(--timer) 67px);
+    background-position: 0px -67px, center;
+    background-repeat: repeat-x;
+    bottom: 0px;
+    height: var(--remaining);
+    width: 100%;
+    left: 0;
+    transition: height .5s
+}
+
+.timer-hidden {
+    display: none
+}
+
+.clipboard-enter {
+    transform: translateY(400px)
+}
+
+.clipboard-enter-active {
+    animation: slide-in .5s
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(400px)
+    }
+
+    50% {
+        transform: translateY(-50px)
+    }
+
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+@keyframes pulse {
+    25% {
+        transform: scale(0.9)
+    }
+
+    75% {
+        transform: scale(1.1)
+    }
+}
+
+button.control {
+    background-color: var(--highlight);
+    border: 3px solid var(--text);
+    border-radius: 10px;
+    box-shadow: 5px 5px var(--shadow);
+    color: #000;
+    font-family: "Bourton";
+    font-size: 20px;
+    font-weight: 600;
+    min-height: 50px;
+    padding-top: 10px;
+    cursor: pointer;
+    width: 100px
+}
+
+button:disabled {
+    border: none;
+    color: var(--disabled)
+}
+
+button:active {
+    box-shadow: 3px 3px var(--shadow);
+    transform: translateY(4px)
+}
+
+button.instruction-word {
+    background: none;
+    color: var(--midtone);
+    font-family: "Bourton";
+    font-weight: 600;
+    margin: auto;
+    max-width: 80vw;
+    font-size: clamp(18px, 3vw, 28px);
+    padding: 0px;
+    text-align: center
+}
+
+button.prompt-word {
+    padding: 0px
+}
+
+button.composition-word,
+button.category-word,
+button.draggable-name,
+button.instruction-word,
+button.prompt-word,
+button.word {
+    border: none;
+    box-shadow: none;
+    display: inline-block;
+    width: auto
+}
+
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px
+}
+
+/*# sourceMappingURL=4872.css.map*/

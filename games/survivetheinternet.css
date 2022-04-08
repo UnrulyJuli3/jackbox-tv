@@ -1,0 +1,2278 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url("survivetheinternet/post-banner.tjpp7_banner-image.png")
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url("survivetheinternet/post-banner.tjpp6_banner-image.png")
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("survivetheinternet/a4bece5c270c316c1c24.ttf");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("survivetheinternet/2263cf4bbb29e585de1b.ttf");
+    font-weight: 500;
+    font-style: normal
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+body {
+    color: #000;
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+.page {
+    overflow-y: auto
+}
+
+img {
+    margin: 0px auto
+}
+
+canvas {
+    border: 1px solid #000
+}
+
+.controller-page {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch
+}
+
+.scrollable {
+    overflow-y: auto
+}
+
+.textDescriptions {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden
+}
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+.loadingSpinner {
+    text-align: center;
+    margin: 50px 0px
+}
+
+.playerName {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.playerIcon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    background-size: contain
+}
+
+.playerIcon.none {
+    display: none
+}
+
+.twitchBroadcasterIcon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 13px;
+    bottom: 10px;
+    background-image: url("survivetheinternet/twitchBroadcasterIcon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.controller-container {
+    display: flex;
+    overflow-y: hidden
+}
+
+#controller-container {
+    display: flex;
+    flex-direction: column
+}
+
+#controller-container>div:last-child {
+    flex-grow: 1
+}
+
+#controller-main {
+    flex: 1 0 auto
+}
+
+.Logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch
+}
+
+.Logo>div {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    text-align: center
+}
+
+div.logo-image {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 600px;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3
+}
+
+.lobbyTitle {
+    text-align: center
+}
+
+.artifactContainer {
+    text-align: center
+}
+
+.artifactButton {
+    background-image: url("survivetheinternet/artifactButton.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 283px;
+    width: 90%;
+    max-width: 512px;
+    display: inline-block
+}
+
+@media only screen and (max-width: 480px) {
+    .artifactButton {
+        height: 192px
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .artifactButton {
+        height: 128px
+    }
+}
+
+.controller-content {
+    max-width: 768px;
+    margin: 0px auto
+}
+
+.controller-content>div {
+    display: inline-block;
+    width: 100%
+}
+
+.EnterSingleText,
+.MakeSingleChoice,
+.Draw,
+.Lobby,
+.Sortable,
+.UGC {
+    display: inline-block;
+    width: 100%
+}
+
+.Lobby .charactersList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 512px;
+    padding: .5rem;
+    margin: 0px auto
+}
+
+.Lobby .charactersList button.characters {
+    flex: 0 0 25%;
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: stretch;
+    box-sizing: border-box
+}
+
+.Lobby .charactersList button.characters.disabled {
+    cursor: not-allowed
+}
+
+.Lobby .charactersList button.characters.selected {
+    cursor: default
+}
+
+.Lobby .charactersList button.characters:before {
+    content: "";
+    display: table;
+    padding-top: 100%
+}
+
+.Lobby .charactersList button.characters .flex-item {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.choices {
+    text-align: center
+}
+
+.button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.choices .button-group button.choice-button * {
+    pointer-events: none
+}
+
+textarea.form-control {
+    resize: none;
+    overflow: hidden;
+    height: 36px;
+    line-height: 24px;
+    outline: none
+}
+
+textarea:focus {
+    outline: none
+}
+
+.button-group * {
+    border-radius: 0px;
+    margin: 0px;
+    max-width: 100%;
+    min-width: 50px;
+    overflow-wrap: break-word;
+    outline: none;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: normal;
+    word-break: break-word;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.button-group button:not(:only-child):not(:last-child) {
+    border-right-width: 0px
+}
+
+.button-group button:not(:only-child):not(:first-child) {
+    border-left-width: 0px
+}
+
+.button-group :first-child {
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2
+}
+
+.censor-button {
+    width: auto;
+    max-width: 15px;
+    padding: 0px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 35px;
+    flex: 0 1 35px
+}
+
+.double-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.double-nav-middle {
+    flex: 1 0 auto;
+    position: relative;
+    overflow-x: hidden
+}
+
+.double-nav-top,
+.double-nav-bottom {
+    flex: 0 1 auto;
+    width: 100%;
+    z-index: 1030;
+    text-align: center
+}
+
+.double-nav-detail {
+    top: 0px;
+    min-height: 100%;
+    display: absolute
+}
+
+.double-nav-bottom {
+    margin-top: auto
+}
+
+.canvasContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.Draw .nav-tabs {
+    border-width: 0px
+}
+
+li>a.button-color.active {
+    border: 3px solid
+}
+
+li>a.button-color.active[data-color="#000000"] {
+    border-color: #f32938
+}
+
+.Draw canvas.fullLayer {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.Draw .button {
+    height: 33px;
+    min-width: 40px;
+    margin: 2px;
+    padding: 5px
+}
+
+.Draw .submitDrawing {
+    height: auto
+}
+
+.Draw .currentColor {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    margin: 0px auto
+}
+
+.Draw .thickness-circle {
+    border-radius: 50%;
+    background-color: #000;
+    width: 5px;
+    height: 5px;
+    margin: 0px auto
+}
+
+.Draw .colorSwatch {
+    border-radius: 8px;
+    width: 62px;
+    height: 62px;
+    margin: 3px;
+    display: inline-block
+}
+
+.Draw .list .colorSwatch {
+    display: inline-block
+}
+
+.Draw .list .colorSwatch a {
+    padding: 0px;
+    width: 48px;
+    height: 48px
+}
+
+.Draw .colorPaletteRegion {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0)
+}
+
+.Draw .colorPaletteRegion.visible {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.Draw .colorPaletteRegion .colorPalette {
+    border: 8px solid #000;
+    background-color: #fff;
+    border-radius: 18px;
+    width: 230px;
+    padding: 2px
+}
+
+.Draw .picker {
+    position: relative
+}
+
+.Draw .list .colorPalette {
+    margin-bottom: -19px;
+    margin-right: 20px
+}
+
+.Draw .colorPaletteRegion .colorSwatch a {
+    padding: 0px;
+    width: 62px;
+    height: 62px
+}
+
+.Draw .canvasContainer {
+    display: inline-block
+}
+
+.Shoot {
+    height: 100%
+}
+
+.Shoot .health {
+    text-align: right
+}
+
+.Shoot .shoot-container {
+    max-width: 480px
+}
+
+.Shoot button.selected {
+    background: #000;
+    color: #fff
+}
+
+.Shoot div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.Shoot button {
+    width: 100px;
+    height: 50px
+}
+
+.Shoot .RadialView {
+    height: 100%
+}
+
+.Shoot .radial {
+    margin: 0px auto;
+    cursor: pointer
+}
+
+.Shoot .background {
+    stroke: #1797c5;
+    stroke-width: 32;
+    stroke-opacity: .8
+}
+
+.Shoot .health-display {
+    fill-opacity: 0;
+    stroke: #f0f;
+    stroke-width: 2
+}
+
+.Shoot .crosshair-center {
+    stroke: #fff;
+    stroke-width: .8;
+    stroke-dasharray: .3 1.265;
+    fill-opacity: 0
+}
+
+.Shoot .circle-helper {
+    stroke: #00cfe6;
+    stroke-width: 3;
+    fill-opacity: 0
+}
+
+.Shoot .line-helper-left,
+.Shoot .line-helper-right {
+    stroke: #fff;
+    stroke-width: .3
+}
+
+.Shoot .locked-in-line {
+    stroke: #fff;
+    stroke-width: .3;
+    stroke-dasharray: 1.265 .5
+}
+
+.Shoot .left-text,
+.Shoot .right-text {
+    color: #fff
+}
+
+.Shoot .locked-in-fade {
+    stroke: #000;
+    stroke-width: 34;
+    stroke-opacity: .8;
+    fill-opacity: 0
+}
+
+.Shoot .cls-1 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 17px
+}
+
+.Shoot .lockedIn .cls-1 {
+    stroke: #575757
+}
+
+.Camera {
+    position: relative
+}
+
+.Camera .cameraRegion canvas.cameraCanvas {
+    background-color: #000;
+    top: 0px;
+    left: 0px;
+    border: none
+}
+
+.Camera .cameraRegion .cameraVideo {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px
+}
+
+.Camera .cameraRegion .cameraImage {
+    width: 100%;
+    max-width: 100%
+}
+
+.Camera .cameraRegion .cameraImageDiv {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.Camera .cameraRegion .cameraControls {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    height: 60px;
+    text-align: center
+}
+
+.Camera .cameraRegion .buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden
+}
+
+.Camera .cameraRegion .buttons.visible {
+    visibility: visible
+}
+
+.Camera .cameraRegion .button {
+    background-color: #fff;
+    color: #000
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url("survivetheinternet/twitchBroadcasterIcon.svg") no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url("survivetheinternet/jbgTwitchContent_warning.png") no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+.debug {
+    position: fixed;
+    left: 0;
+    top: 55px;
+    opacity: .1;
+    z-index: 1031;
+    user-select: none;
+    text-shadow: -1px -1px 0 #ddd, 1px -1px 0 #ddd, -1px 1px 0 #ddd, 1px 1px 0 #ddd
+}
+
+.debug:hover {
+    opacity: 1
+}
+
+.debug button {
+    width: 50px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 1px solid #333 !important;
+    outline: 1px solid #ddd !important;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    box-shadow: none !important
+}
+
+.debug span {
+    position: relative;
+    top: -4px;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+@font-face {
+    font-family: "american_captain_eternalRg";
+    src: url("survivetheinternet/7332a3a1de30b91825b7.eot");
+    src: url("survivetheinternet/7332a3a1de30b91825b7_2.eot?#iefix") format("embedded-opentype"), url("survivetheinternet/cbc3a34601b821496846.woff2") format("woff2"), url("survivetheinternet/611c3c64edd1b35bc35e.woff") format("woff"), url("survivetheinternet/00c8a236b599501171f7.ttf") format("truetype"), url("survivetheinternet/c1a9c1dfc193312abe1f.svg#american_captain_eternalRg") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "american_captain_patrius_01Rg";
+    src: url("survivetheinternet/a92134e2c9b51a4b1002.eot");
+    src: url("survivetheinternet/a92134e2c9b51a4b1002_2.eot?#iefix") format("embedded-opentype"), url("survivetheinternet/a706e3352e84c922e640.woff2") format("woff2"), url("survivetheinternet/f2280e30aee69864ed1e.woff") format("woff"), url("survivetheinternet/eefb87740e9a8589deb2.ttf") format("truetype"), url("survivetheinternet/1bab386b93d314afb9e3.svg#american_captain_patrius_01Rg") format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th,
+span,
+button {
+    color: #000;
+    font-family: "american_captain_patrius_01Rg";
+    font-weight: 400;
+    text-align: center;
+    -webkit-font-kerning: auto;
+    font-kerning: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    word-wrap: break-word
+}
+
+.survivetheinternet .playerTopBar {
+    background-color: #333;
+    color: #fff;
+    font-size: 32px;
+    font-family: "american_captain_eternalRg"
+}
+
+.survivetheinternet .playerName {
+    text-transform: capitalize
+}
+
+.survivetheinternet .Logo {
+    background-color: #000;
+    background-image: url("survivetheinternet/survivetheinternet_Logo.png");
+    background-position: center;
+    background-size: cover
+}
+
+.survivetheinternet .logo-image {
+    background: url("survivetheinternet/survivetheinternet_logo-image.png") no-repeat center;
+    background-size: contain;
+    width: 90%;
+    margin: auto
+}
+
+.survivetheinternet .logo-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px
+}
+
+.survivetheinternet .lobbyTitle {
+    font-size: 32px;
+    text-transform: none;
+    margin: 15px 0px
+}
+
+.survivetheinternet .Lobby .choicesContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.survivetheinternet .artifactButton {
+    background-image: url("survivetheinternet/survivetheinternet_artifactButton.png");
+    height: 256px
+}
+
+.survivetheinternet .promptView {
+    text-align: center;
+    width: 100%;
+    margin: 10px 0px;
+    font-size: 32px
+}
+
+.survivetheinternet .blackBox {
+    font-size: 32px;
+    background-color: #000;
+    color: #fff;
+    margin: 10px 0px;
+    padding: 10px 10px;
+    width: 100%
+}
+
+.survivetheinternet .chosen {
+    font-size: 32px
+}
+
+.survivetheinternet .triangle-isosceles {
+    position: relative;
+    margin-top: 30px
+}
+
+.survivetheinternet .triangle-isosceles:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: 15px;
+    width: 0;
+    border-width: 0 20px 30px 0;
+    border-style: solid;
+    border-color: #000 transparent
+}
+
+.survivetheinternet .belowBlackBox {
+    font-size: 24px
+}
+
+.survivetheinternet .promptView img {
+    max-width: 100%
+}
+
+.survivetheinternet .button-group {
+    border-width: 0px;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, .75);
+    box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, .75)
+}
+
+.survivetheinternet input[type=text].form-control,
+.survivetheinternet textarea.form-control {
+    margin: 15px auto;
+    background: #fff;
+    border-radius: 0px;
+    border: 1px solid #666;
+    color: #000;
+    -webkit-box-shadow: inset 2px 2px 1px 0px rgba(0, 0, 0, .25);
+    box-shadow: inset 2px 2px 1px 0px rgba(0, 0, 0, .25)
+}
+
+.survivetheinternet textarea.form-control:focus,
+.survivetheinternet textarea.form-control:active,
+.survivetheinternet textarea.form-control:active:focus {
+    outline-color: #000;
+    border-color: #000;
+    height: 36px
+}
+
+.survivetheinternet .choices .button-group .btn {
+    font-size: 24px;
+    color: #fff;
+    padding-top: 5px
+}
+
+.survivetheinternet .choices .button-group .btn[type=submit] {
+    padding: 5px 15px
+}
+
+.survivetheinternet .enterSingleTextForm .choices .btn-group {
+    float: right;
+    margin-right: 10%
+}
+
+.survivetheinternet button[type=submit] {
+    color: #fff;
+    border-width: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, .75);
+    box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, .75)
+}
+
+.survivetheinternet .btn:focus,
+.survivetheinternet .btn:active,
+.survivetheinternet .btn:active:focus,
+.survivetheinternet .btn:hover {
+    color: #fff;
+    outline: none
+}
+
+.survivetheinternet .btn:active {
+    background-color: #fff
+}
+
+.survivetheinternet .MakeSingleChoice {
+    display: inline-block;
+    background-color: #bbb
+}
+
+.survivetheinternet .choices.voting .button-group {
+    -webkit-box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, .75);
+    box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, .75);
+    margin: 5px auto
+}
+
+.survivetheinternet .choices.voting .button-group .btn {
+    padding: 5px;
+    background-color: #fff;
+    -webkit-transition: all .2s ease 0s;
+    -o-transition: all .2s ease 0s;
+    transition: all .2s ease 0s
+}
+
+.survivetheinternet .choices.voting .button-group .btn div {
+    pointer-events: none
+}
+
+.survivetheinternet .choices .voteButton {
+    padding: 15px
+}
+
+.survivetheinternet .voteTwistHeader,
+.survivetheinternet .voteTwistFooter,
+.survivetheinternet .voteText,
+.survivetheinternet .voteText:active,
+.survivetheinternet .voteText:hover {
+    color: #000;
+    font-size: 22px
+}
+
+.survivetheinternet .voteTwistHeader,
+.survivetheinternet .voteTwistFooter {
+    font-family: "american_captain_eternalRg";
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis
+}
+
+.survivetheinternet .voteButton .voteIcon {
+    margin-right: 5px
+}
+
+.survivetheinternet .voteThumbnail {
+    margin-right: 10px
+}
+
+.survivetheinternet .voteResponse {
+    color: #999;
+    font-size: 18px
+}
+
+.survivetheinternet .votePlayer {
+    font-size: 18px
+}
+
+.survivetheinternet .choices.voting .button-group .btn:hover {
+    background-color: #aaa
+}
+
+.survivetheinternet .choices.voting .button-group .btn:active,
+.survivetheinternet .choices.voting .button-group .btn.active {
+    background-color: #666
+}
+
+.survivetheinternet .playerIcon {
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    background-image: url("survivetheinternet/survivetheinternet_playerIcon.png");
+    background-size: 100%
+}
+
+.survivetheinternet .voteIcon {
+    width: 56px;
+    height: 56px;
+    background-image: url("survivetheinternet/survivetheinternet_playerIcon.png");
+    background-size: 100%
+}
+
+.survivetheinternet .votePlayer {
+    font-family: "american_captain_eternalRg"
+}
+
+.survivetheinternet .Blue {
+    background-image: url("survivetheinternet/survivetheinternet_playerIcon.png")
+}
+
+.survivetheinternet .Gene {
+    background-image: url("survivetheinternet/survivetheinternet_Gene.png")
+}
+
+.survivetheinternet .Green {
+    background-image: url("survivetheinternet/survivetheinternet_Green.png")
+}
+
+.survivetheinternet .Orange {
+    background-image: url("survivetheinternet/survivetheinternet_Orange.png")
+}
+
+.survivetheinternet .Pink {
+    background-image: url("survivetheinternet/survivetheinternet_Pink.png")
+}
+
+.survivetheinternet .Purple {
+    background-image: url("survivetheinternet/survivetheinternet_Purple.png")
+}
+
+.survivetheinternet .Red {
+    background-image: url("survivetheinternet/survivetheinternet_Red.png")
+}
+
+.survivetheinternet .Teal {
+    background-image: url("survivetheinternet/survivetheinternet_Teal.png")
+}
+
+.survivetheinternet .Yellow {
+    background-image: url("survivetheinternet/survivetheinternet_Yellow.png")
+}
+
+.survivetheinternet .finalRoundImage {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 340px;
+    width: 100%
+}
+
+@media only screen and (max-width: 340px) {
+    .survivetheinternet .finalRoundImage {
+        height: calc(100vw * 340 / 504)
+    }
+}
+
+.survivetheinternet .finalRoundImage.Airplane {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Airplane.jpg")
+}
+
+.survivetheinternet .finalRoundImage.ApplePicking {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.ApplePicking.jpg")
+}
+
+.survivetheinternet .finalRoundImage.ArtMuseum {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.ArtMuseum.jpg")
+}
+
+.survivetheinternet .finalRoundImage.AvocadoToast {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.AvocadoToast.jpg")
+}
+
+.survivetheinternet .finalRoundImage.BabyAnnouncement {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.BabyAnnouncement.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Barn {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Barn.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Baseball {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Baseball.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Basketball {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Basketball.jpg")
+}
+
+.survivetheinternet .finalRoundImage.BathroomStall {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.BathroomStall.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Bat {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Bat.jpg")
+}
+
+.survivetheinternet .finalRoundImage.BBQ {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.BBQ.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Beach {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Beach.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Bear {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Bear.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Bicycle {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Bicycle.jpg")
+}
+
+.survivetheinternet .finalRoundImage.BirthdayParty {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.BirthdayParty.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Bonfire {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Bonfire.jpg")
+}
+
+.survivetheinternet .finalRoundImage.BookStore {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.BookStore.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Boxing {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Boxing.jpg")
+}
+
+.survivetheinternet .finalRoundImage.BubbleBath {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.BubbleBath.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Cabin {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Cabin.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Camping {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Camping.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Cat {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Cat.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Chimpanzee {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Chimpanzee.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Chinese {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Chinese.jpg")
+}
+
+.survivetheinternet .finalRoundImage.CoffeeShop {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.CoffeeShop.jpg")
+}
+
+.survivetheinternet .finalRoundImage.CompactCar {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.CompactCar.jpg")
+}
+
+.survivetheinternet .finalRoundImage.ConcertStage {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.ConcertStage.jpg")
+}
+
+.survivetheinternet .finalRoundImage.CondoInterior {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.CondoInterior.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Condo {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Condo.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Convertible {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Convertible.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Dentist {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Dentist.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Desert {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Desert.jpg")
+}
+
+.survivetheinternet .finalRoundImage.DMV {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.DMV.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Dog {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Dog.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Dolphin {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Dolphin.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Elephant {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Elephant.jpg")
+}
+
+.survivetheinternet .finalRoundImage.EngagementRing {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.EngagementRing.jpg")
+}
+
+.survivetheinternet .finalRoundImage.FarmHouse {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.FarmHouse.jpg")
+}
+
+.survivetheinternet .finalRoundImage.FeetOnBeach {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.FeetOnBeach.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Ferret {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Ferret.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Field {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Field.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Fireworks {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Fireworks.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Football {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Football.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Forest {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Forest.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Funeral {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Funeral.jpg")
+}
+
+.survivetheinternet .finalRoundImage.GasStation {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.GasStation.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Giraffe {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Giraffe.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Goldfish {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Goldfish.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Gorilla {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Gorilla.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Graduation {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Graduation.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Guacamole {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Guacamole.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Gym {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Gym.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Gyro {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Gyro.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Hamburger {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Hamburger.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Hockey {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Hockey.jpg")
+}
+
+.survivetheinternet .finalRoundImage.HomeRepair {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.HomeRepair.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Horse {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Horse.jpg")
+}
+
+.survivetheinternet .finalRoundImage.HorseRace {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.HorseRace.jpg")
+}
+
+.survivetheinternet .finalRoundImage.HotAirBalloon {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.HotAirBalloon.jpg")
+}
+
+.survivetheinternet .finalRoundImage.HotDogs {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.HotDogs.jpg")
+}
+
+.survivetheinternet .finalRoundImage.HouseParty {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.HouseParty.jpg")
+}
+
+.survivetheinternet .finalRoundImage.IceCream {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.IceCream.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Igloo {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Igloo.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Indian {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Indian.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Island {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Island.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Jeep {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Jeep.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Jungle {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Jungle.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Kite {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Kite.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Kittens {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Kittens.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Laundromat {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Laundromat.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Lion {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Lion.jpg")
+}
+
+.survivetheinternet .finalRoundImage.London {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.London.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Mansion {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Mansion.jpg")
+}
+
+.survivetheinternet .finalRoundImage.MeatSkewer {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.MeatSkewer.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Meditation {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Meditation.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Mexican {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Mexican.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Minivan {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Minivan.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Moose {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Moose.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Motel {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Motel.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Motorcycle {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Motorcycle.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Mountains {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Mountains.jpg")
+}
+
+.survivetheinternet .finalRoundImage.MovieTheater {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.MovieTheater.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Moving {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Moving.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Museum {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Museum.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Nascar {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Nascar.jpg")
+}
+
+.survivetheinternet .finalRoundImage.NewYorkCity {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.NewYorkCity.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Office {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Office.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Orangutan {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Orangutan.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Parade {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Parade.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Paris {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Paris.jpg")
+}
+
+.survivetheinternet .finalRoundImage.ParkingTicket {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.ParkingTicket.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Park {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Park.jpg")
+}
+
+.survivetheinternet .finalRoundImage.PickupTruck {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.PickupTruck.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Pig {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Pig.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Pizza {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Pizza.jpg")
+}
+
+.survivetheinternet .finalRoundImage.PoolParty {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.PoolParty.jpg")
+}
+
+.survivetheinternet .finalRoundImage.PostOffice {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.PostOffice.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Puppies {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Puppies.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Rabbit {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Rabbit.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Rainstorm {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Rainstorm.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Rollerblades {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Rollerblades.jpg")
+}
+
+.survivetheinternet .finalRoundImage.RollerCoaster {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.RollerCoaster.jpg")
+}
+
+.survivetheinternet .finalRoundImage.RomanticGetaway {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.RomanticGetaway.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Russia {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Russia.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Sailboat {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Sailboat.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Salad {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Salad.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Salmon {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Salmon.jpg")
+}
+
+.survivetheinternet .finalRoundImage.SanFrancisco {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.SanFrancisco.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Segway {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Segway.jpg")
+}
+
+.survivetheinternet .finalRoundImage.SemiTruck {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.SemiTruck.jpg")
+}
+
+.survivetheinternet .finalRoundImage.ShootingStar {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.ShootingStar.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Skyscraper {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Skyscraper.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Snake {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Snake.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Soccer {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Soccer.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Spider {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Spider.jpg")
+}
+
+.survivetheinternet .finalRoundImage.StationWagon {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.StationWagon.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Statue {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Statue.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Steak {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Steak.jpg")
+}
+
+.survivetheinternet .finalRoundImage.SubwayCar {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.SubwayCar.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Suitcase {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Suitcase.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Sunset {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Sunset.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Tennis {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Tennis.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Traffic {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Traffic.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Train {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Train.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Vegas {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Vegas.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Volleyball {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Volleyball.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Voting {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Voting.jpg")
+}
+
+.survivetheinternet .finalRoundImage.VR {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.VR.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Wedding {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Wedding.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Wrestling {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Wrestling.jpg")
+}
+
+.survivetheinternet .finalRoundImage.WritingDesk {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.WritingDesk.jpg")
+}
+
+.survivetheinternet .finalRoundImage.Yoga {
+    background-image: url("survivetheinternet/survivetheinternet_finalRoundImage.Yoga.jpg")
+}
+
+.survivetheinternet .voteThumbnail {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 81px;
+    width: 120px
+}
+
+.survivetheinternet .Airplane-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Airplane-thumb.jpg")
+}
+
+.survivetheinternet .ApplePicking-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_ApplePicking-thumb.jpg")
+}
+
+.survivetheinternet .ArtMuseum-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_ArtMuseum-thumb.jpg")
+}
+
+.survivetheinternet .AvocadoToast-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_AvocadoToast-thumb.jpg")
+}
+
+.survivetheinternet .BabyAnnouncement-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_BabyAnnouncement-thumb.jpg")
+}
+
+.survivetheinternet .Barn-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Barn-thumb.jpg")
+}
+
+.survivetheinternet .Baseball-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Baseball-thumb.jpg")
+}
+
+.survivetheinternet .Basketball-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Basketball-thumb.jpg")
+}
+
+.survivetheinternet .BathroomStall-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_BathroomStall-thumb.jpg")
+}
+
+.survivetheinternet .Bat-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Bat-thumb.jpg")
+}
+
+.survivetheinternet .BBQ-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_BBQ-thumb.jpg")
+}
+
+.survivetheinternet .Beach-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Beach-thumb.jpg")
+}
+
+.survivetheinternet .Bear-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Bear-thumb.jpg")
+}
+
+.survivetheinternet .Bicycle-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Bicycle-thumb.jpg")
+}
+
+.survivetheinternet .BirthdayParty-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_BirthdayParty-thumb.jpg")
+}
+
+.survivetheinternet .Bonfire-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Bonfire-thumb.jpg")
+}
+
+.survivetheinternet .BookStore-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_BookStore-thumb.jpg")
+}
+
+.survivetheinternet .Boxing-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Boxing-thumb.jpg")
+}
+
+.survivetheinternet .BubbleBath-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_BubbleBath-thumb.jpg")
+}
+
+.survivetheinternet .Cabin-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Cabin-thumb.jpg")
+}
+
+.survivetheinternet .Camping-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Camping-thumb.jpg")
+}
+
+.survivetheinternet .Cat-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Cat-thumb.jpg")
+}
+
+.survivetheinternet .Chimpanzee-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Chimpanzee-thumb.jpg")
+}
+
+.survivetheinternet .Chinese-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Chinese-thumb.jpg")
+}
+
+.survivetheinternet .CoffeeShop-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_CoffeeShop-thumb.jpg")
+}
+
+.survivetheinternet .CompactCar-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_CompactCar-thumb.jpg")
+}
+
+.survivetheinternet .ConcertStage-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_ConcertStage-thumb.jpg")
+}
+
+.survivetheinternet .CondoInterior-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_CondoInterior-thumb.jpg")
+}
+
+.survivetheinternet .Condo-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Condo-thumb.jpg")
+}
+
+.survivetheinternet .Convertible-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Convertible-thumb.jpg")
+}
+
+.survivetheinternet .Dentist-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Dentist-thumb.jpg")
+}
+
+.survivetheinternet .Desert-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Desert-thumb.jpg")
+}
+
+.survivetheinternet .DMV-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_DMV-thumb.jpg")
+}
+
+.survivetheinternet .Dog-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Dog-thumb.jpg")
+}
+
+.survivetheinternet .Dolphin-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Dolphin-thumb.jpg")
+}
+
+.survivetheinternet .Elephant-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Elephant-thumb.jpg")
+}
+
+.survivetheinternet .EngagementRing-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_EngagementRing-thumb.jpg")
+}
+
+.survivetheinternet .FarmHouse-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_FarmHouse-thumb.jpg")
+}
+
+.survivetheinternet .FeetOnBeach-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_FeetOnBeach-thumb.jpg")
+}
+
+.survivetheinternet .Ferret-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Ferret-thumb.jpg")
+}
+
+.survivetheinternet .Field-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Field-thumb.jpg")
+}
+
+.survivetheinternet .Fireworks-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Fireworks-thumb.jpg")
+}
+
+.survivetheinternet .Football-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Football-thumb.jpg")
+}
+
+.survivetheinternet .Forest-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Forest-thumb.jpg")
+}
+
+.survivetheinternet .Funeral-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Funeral-thumb.jpg")
+}
+
+.survivetheinternet .GasStation-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_GasStation-thumb.jpg")
+}
+
+.survivetheinternet .Giraffe-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Giraffe-thumb.jpg")
+}
+
+.survivetheinternet .Goldfish-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Goldfish-thumb.jpg")
+}
+
+.survivetheinternet .Gorilla-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Gorilla-thumb.jpg")
+}
+
+.survivetheinternet .Graduation-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Graduation-thumb.jpg")
+}
+
+.survivetheinternet .Guacamole-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Guacamole-thumb.jpg")
+}
+
+.survivetheinternet .Gym-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Gym-thumb.jpg")
+}
+
+.survivetheinternet .Gyro-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Gyro-thumb.jpg")
+}
+
+.survivetheinternet .Hamburger-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Hamburger-thumb.jpg")
+}
+
+.survivetheinternet .Hockey-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Hockey-thumb.jpg")
+}
+
+.survivetheinternet .HomeRepair-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_HomeRepair-thumb.jpg")
+}
+
+.survivetheinternet .Horse-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Horse-thumb.jpg")
+}
+
+.survivetheinternet .HorseRace-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_HorseRace-thumb.jpg")
+}
+
+.survivetheinternet .HotAirBalloon-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_HotAirBalloon-thumb.jpg")
+}
+
+.survivetheinternet .HotDogs-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_HotDogs-thumb.jpg")
+}
+
+.survivetheinternet .HouseParty-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_HouseParty-thumb.jpg")
+}
+
+.survivetheinternet .IceCream-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_IceCream-thumb.jpg")
+}
+
+.survivetheinternet .Igloo-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Igloo-thumb.jpg")
+}
+
+.survivetheinternet .Indian-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Indian-thumb.jpg")
+}
+
+.survivetheinternet .Island-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Island-thumb.jpg")
+}
+
+.survivetheinternet .Jeep-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Jeep-thumb.jpg")
+}
+
+.survivetheinternet .Jungle-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Jungle-thumb.jpg")
+}
+
+.survivetheinternet .Kite-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Kite-thumb.jpg")
+}
+
+.survivetheinternet .Kittens-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Kittens-thumb.jpg")
+}
+
+.survivetheinternet .Laundromat-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Laundromat-thumb.jpg")
+}
+
+.survivetheinternet .Lion-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Lion-thumb.jpg")
+}
+
+.survivetheinternet .London-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_London-thumb.jpg")
+}
+
+.survivetheinternet .Mansion-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Mansion-thumb.jpg")
+}
+
+.survivetheinternet .MeatSkewer-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_MeatSkewer-thumb.jpg")
+}
+
+.survivetheinternet .Meditation-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Meditation-thumb.jpg")
+}
+
+.survivetheinternet .Mexican-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Mexican-thumb.jpg")
+}
+
+.survivetheinternet .Minivan-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Minivan-thumb.jpg")
+}
+
+.survivetheinternet .Moose-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Moose-thumb.jpg")
+}
+
+.survivetheinternet .Motel-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Motel-thumb.jpg")
+}
+
+.survivetheinternet .Motorcycle-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Motorcycle-thumb.jpg")
+}
+
+.survivetheinternet .Mountains-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Mountains-thumb.jpg")
+}
+
+.survivetheinternet .MovieTheater-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_MovieTheater-thumb.jpg")
+}
+
+.survivetheinternet .Moving-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Moving-thumb.jpg")
+}
+
+.survivetheinternet .Museum-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Museum-thumb.jpg")
+}
+
+.survivetheinternet .Nascar-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Nascar-thumb.jpg")
+}
+
+.survivetheinternet .NewYorkCity-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_NewYorkCity-thumb.jpg")
+}
+
+.survivetheinternet .Office-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Office-thumb.jpg")
+}
+
+.survivetheinternet .Orangutan-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Orangutan-thumb.jpg")
+}
+
+.survivetheinternet .Parade-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Parade-thumb.jpg")
+}
+
+.survivetheinternet .Paris-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Paris-thumb.jpg")
+}
+
+.survivetheinternet .ParkingTicket-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_ParkingTicket-thumb.jpg")
+}
+
+.survivetheinternet .Park-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Park-thumb.jpg")
+}
+
+.survivetheinternet .PickupTruck-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_PickupTruck-thumb.jpg")
+}
+
+.survivetheinternet .Pig-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Pig-thumb.jpg")
+}
+
+.survivetheinternet .Pizza-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Pizza-thumb.jpg")
+}
+
+.survivetheinternet .PoolParty-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_PoolParty-thumb.jpg")
+}
+
+.survivetheinternet .PostOffice-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_PostOffice-thumb.jpg")
+}
+
+.survivetheinternet .Puppies-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Puppies-thumb.jpg")
+}
+
+.survivetheinternet .Rabbit-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Rabbit-thumb.jpg")
+}
+
+.survivetheinternet .Rainstorm-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Rainstorm-thumb.jpg")
+}
+
+.survivetheinternet .Rollerblades-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Rollerblades-thumb.jpg")
+}
+
+.survivetheinternet .RollerCoaster-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_RollerCoaster-thumb.jpg")
+}
+
+.survivetheinternet .RomanticGetaway-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_RomanticGetaway-thumb.jpg")
+}
+
+.survivetheinternet .Russia-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Russia-thumb.jpg")
+}
+
+.survivetheinternet .Sailboat-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Sailboat-thumb.jpg")
+}
+
+.survivetheinternet .Salad-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Salad-thumb.jpg")
+}
+
+.survivetheinternet .Salmon-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Salmon-thumb.jpg")
+}
+
+.survivetheinternet .SanFrancisco-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_SanFrancisco-thumb.jpg")
+}
+
+.survivetheinternet .Segway-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Segway-thumb.jpg")
+}
+
+.survivetheinternet .SemiTruck-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_SemiTruck-thumb.jpg")
+}
+
+.survivetheinternet .ShootingStar-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_ShootingStar-thumb.jpg")
+}
+
+.survivetheinternet .Skyscraper-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Skyscraper-thumb.jpg")
+}
+
+.survivetheinternet .Snake-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Snake-thumb.jpg")
+}
+
+.survivetheinternet .Soccer-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Soccer-thumb.jpg")
+}
+
+.survivetheinternet .Spider-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Spider-thumb.jpg")
+}
+
+.survivetheinternet .StationWagon-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_StationWagon-thumb.jpg")
+}
+
+.survivetheinternet .Statue-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Statue-thumb.jpg")
+}
+
+.survivetheinternet .Steak-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Steak-thumb.jpg")
+}
+
+.survivetheinternet .SubwayCar-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_SubwayCar-thumb.jpg")
+}
+
+.survivetheinternet .Suitcase-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Suitcase-thumb.jpg")
+}
+
+.survivetheinternet .Sunset-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Sunset-thumb.jpg")
+}
+
+.survivetheinternet .Tennis-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Tennis-thumb.jpg")
+}
+
+.survivetheinternet .Traffic-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Traffic-thumb.jpg")
+}
+
+.survivetheinternet .Train-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Train-thumb.jpg")
+}
+
+.survivetheinternet .Vegas-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Vegas-thumb.jpg")
+}
+
+.survivetheinternet .Volleyball-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Volleyball-thumb.jpg")
+}
+
+.survivetheinternet .Voting-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Voting-thumb.jpg")
+}
+
+.survivetheinternet .VR-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_VR-thumb.jpg")
+}
+
+.survivetheinternet .Wedding-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Wedding-thumb.jpg")
+}
+
+.survivetheinternet .Wrestling-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Wrestling-thumb.jpg")
+}
+
+.survivetheinternet .WritingDesk-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_WritingDesk-thumb.jpg")
+}
+
+.survivetheinternet .Yoga-thumb {
+    background-image: url("survivetheinternet/survivetheinternet_Yoga-thumb.jpg")
+}
+
+.survivetheinternet .censor-button {
+    width: auto;
+    background-image: url("survivetheinternet/survivetheinternet_censor-button.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain
+}
+
+/*# sourceMappingURL=1882.css.map*/

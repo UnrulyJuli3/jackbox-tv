@@ -1,0 +1,808 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url("quiplash2/post-banner.tjpp7_banner-image.png")
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url("quiplash2/post-banner.tjpp6_banner-image.png")
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("quiplash2/a4bece5c270c316c1c24.ttf");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("quiplash2/2263cf4bbb29e585de1b.ttf");
+    font-weight: 500;
+    font-style: normal
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th {
+    font-weight: 700
+}
+
+.button-primary {
+    background: #000;
+    color: #fff
+}
+
+.button-xlarge {
+    border-width: 0px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 5px;
+    border-radius: 10px
+}
+
+.button-large {
+    border-radius: 10px
+}
+
+.post-banner {
+    cursor: pointer
+}
+
+.button-blue {
+    color: #fff;
+    background: #3e55fe;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.button-blue:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-gray {
+    color: #3e55fe;
+    background: #ccc;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent
+}
+
+.button-gray:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-help-text {
+    display: inline
+}
+
+@media screen and (max-width: 480px) {
+    .button-help-text {
+        display: none
+    }
+}
+
+.button-black {
+    color: #fff;
+    background: #333
+}
+
+.debug {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: .6
+}
+
+.debug span {
+    pointer-events: none;
+    user-select: none
+}
+
+.text-signin {
+    color: #3e55fe
+}
+
+.jbg-input {
+    font-size: 1.3em
+}
+
+.close {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000;
+    background: transparent;
+    border: none !important;
+    text-decoration: none;
+    content: "x";
+    right: 10px;
+    position: absolute
+}
+
+.close:hover {
+    color: #666
+}
+
+.button-yes {
+    background: #1cb841
+}
+
+.button-no {
+    background: #ca3c3c
+}
+
+.image-hand {
+    background: url("quiplash2/image-hand.png");
+    cursor: pointer;
+    border: none;
+    width: 126px;
+    height: 700px
+}
+
+canvas {
+    touch-action: none
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url("quiplash2/jbgTwitchContent_icon-twitch.svg") no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url("quiplash2/jbgTwitchContent_warning.png") no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+#page-quiplash .quiplash2-page {
+    overflow-y: auto
+}
+
+#page-quiplash p,
+#page-quiplash h1,
+#page-quiplash h2,
+#page-quiplash h3,
+#page-quiplash h4,
+#page-quiplash h5,
+#page-quiplash h6,
+#page-quiplash td,
+#page-quiplash th,
+#page-quiplash .quiplash2-page span,
+#page-quiplash div {
+    font-family: "Rokkitt";
+    font-size: 28px;
+    text-align: center;
+    font-weight: 500;
+    font-kerning: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+#page-quiplash #state-done-answering {
+    text-align: center
+}
+
+#page-quiplash #vote-text {
+    font-size: 23px
+}
+
+#page-quiplash .container {
+    padding: 5px;
+    padding-bottom: 15px;
+    text-align: center
+}
+
+#page-quiplash .game {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-transform: uppercase
+}
+
+#page-quiplash .game button {
+    text-transform: uppercase;
+    word-break: break-word;
+    word-wrap: break-word
+}
+
+#page-quiplash .hide {
+    display: none
+}
+
+#page-quiplash .show {
+    display: block
+}
+
+#page-quiplash .capitalized {
+    text-transform: uppercase
+}
+
+#page-quiplash #player {
+    color: #000
+}
+
+#page-quiplash #player h1 {
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 0;
+    margin-bottom: 0
+}
+
+#page-quiplash #quiplash-answer-field {
+    margin-left: 20px;
+    margin-right: 20px
+}
+
+#page-quiplash .background-yellow {
+    background-image: url("quiplash2/#page-quiplash_background-yellow.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
+#page-quiplash .quiplash2-logo-image {
+    background-color: #4c4267;
+    background-image: url("quiplash2/#page-quiplash_quiplash2-logo-image.png"), url("quiplash2/#page-quiplash_quiplash2-logo-image_2.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: contain, cover;
+    height: 80%;
+    width: 90%;
+    margin: auto
+}
+
+#page-quiplash .quiplash2-round-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    background-position-y: 50px
+}
+
+#page-quiplash .quiplash2-round-image.quiplash2-round-0 {
+    background-image: url("quiplash2/#page-quiplash_quiplash2-round-image.quiplash2-round-0.png")
+}
+
+#page-quiplash .quiplash2-round-image.quiplash2-round-1 {
+    background-image: url("quiplash2/#page-quiplash_quiplash2-round-image.quiplash2-round-1.png")
+}
+
+#page-quiplash .quiplash2-round-image.quiplash2-round-2 {
+    background-image: url("quiplash2/#page-quiplash_quiplash2-round-image.quiplash2-round-2.png")
+}
+
+#page-quiplash #quiplash-lobby-text {
+    color: #fff;
+    text-transform: none
+}
+
+#page-quiplash .button-container button {
+    margin: 5px
+}
+
+#page-quiplash .quiplash2-answer-input {
+    color: #000;
+    font-family: "Rokkitt";
+    font-weight: bold;
+    font-size: 23px;
+    line-height: normal;
+    border-radius: 0px
+}
+
+#page-quiplash #state-lobby {
+    color: #fff
+}
+
+#page-quiplash #state-answer-question {
+    color: #fff
+}
+
+#page-quiplash #state-done-answering span {
+    color: #fff
+}
+
+#page-quiplash #state-vote {
+    color: #fff
+}
+
+#page-quiplash #state-ugc {
+    color: #fff
+}
+
+#page-quiplash .state-answer-question-audience-text {
+    text-transform: none
+}
+
+#page-quiplash .quiplash2-button {
+    color: #fff;
+    font-family: "Rokkitt";
+    font-size: 28px;
+    background: #000;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: normal;
+    word-wrap: break-word
+}
+
+#page-quiplash .quiplash2-button:hover {
+    color: #fff;
+    background: #000;
+    border-top-color: #fff
+}
+
+#page-quiplash .quiplash2-button:active,
+#page-quiplash .quiplash2-button.selected {
+    background: #fff;
+    color: #000
+}
+
+#page-quiplash .quiplash2-button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch
+}
+
+#page-quiplash .quiplash2-button-group * {
+    border-radius: 0px;
+    margin: 5px 0px;
+    overflow: hidden;
+    min-width: 50px
+}
+
+#page-quiplash .quiplash2-button-group :first-child {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px
+}
+
+#page-quiplash .quiplash2-button-group :last-child {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px
+}
+
+#page-quiplash .quiplash2-button-group input {
+    padding: 5px;
+    color: #000
+}
+
+#page-quiplash #quiplash-submit-answer {
+    text-transform: none
+}
+
+#page-quiplash #quiplash-submit-alert {
+    display: block;
+    margin-bottom: 0;
+    margin-top: 10px
+}
+
+#page-quiplash .quiplash-text {
+    font-family: "Rokkitt";
+    text-transform: none;
+    font-size: 28px;
+    line-height: 28px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    color: #fff
+}
+
+#page-quiplash .quiplash-text-big {
+    text-transform: none;
+    font-size: 32px;
+    line-height: 32px
+}
+
+#page-quiplash .quiplash-text-alt {
+    padding-top: 5px;
+    text-transform: none;
+    font-size: 22px;
+    line-height: 22px
+}
+
+#page-quiplash .quiplash-text-danger {
+    text-transform: none;
+    font-size: 18px;
+    color: red
+}
+
+#page-quiplash .quiplash2-button-loading {
+    background: #fff url("quiplash2/#page-quiplash_quiplash2-button-loading.gif") no-repeat center;
+    background-size: contain;
+    color: rgba(0, 0, 0, 0);
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#page-quiplash .quiplash-preload {
+    content: url "../images/loading.gif";
+    display: none
+}
+
+#page-quiplash .quiplash2-button-red {
+    background: red
+}
+
+#page-quiplash .quiplash2-button-red:hover {
+    background: #ff4040
+}
+
+#page-quiplash .quiplash-censorable {
+    width: 70%
+}
+
+#page-quiplash .quiplash-censor-button {
+    width: auto
+}
+
+#page-quiplash table.quiplash-list {
+    text-align: right;
+    margin: 0em;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 10px
+}
+
+#page-quiplash table.quiplash-list tbody tr>td {
+    border-width: 7px 0px;
+    border-style: solid;
+    border-color: #000;
+    background-color: #000;
+    cursor: pointer
+}
+
+#page-quiplash table.quiplash-list tbody tr>td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px
+}
+
+#page-quiplash table.quiplash-list tbody tr>td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px
+}
+
+#page-quiplash table.quiplash-list .quiplash-list-black {
+    background-color: #000;
+    color: #000
+}
+
+#page-quiplash table.quiplash-list .quiplash-list-other {
+    background-color: #e2dc6b;
+    color: #000
+}
+
+#page-quiplash table.quiplash-list .quiplash-list-fill {
+    width: 100%
+}
+
+#page-quiplash table.quiplash-list tr>td {
+    word-break: break-word
+}
+
+#page-quiplash table.quiplash-list tr :first-child {
+    border-left-width: 7px
+}
+
+#page-quiplash table.quiplash-list tr :last-child {
+    border-right-width: 7px
+}
+
+#page-quiplash table.quiplash-list .quiplash-list-button:hover {
+    transition: background .1s ease-in;
+    background-color: #000
+}
+
+#page-quiplash table.quiplash-list .quiplash-list-button:active {
+    background-color: #666
+}
+
+#page-quiplash table.quiplash-list.quiplash-list-no-border tr>td {
+    border: none;
+    background: none
+}
+
+#page-quiplash table.quiplash-list.quiplash-list-no-border tr {
+    border-radius: 25px
+}
+
+#page-quiplash .quiplash-image-screen {
+    width: 64px;
+    height: 64px;
+    background: url("quiplash2/#page-quiplash_quiplash-image-screen.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-origin: border-box;
+    background-size: 100% auto;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+#page-quiplash .quiplash-image-screen.off {
+    background-position-y: 100%
+}
+
+#page-quiplash .quiplash-image-controller {
+    width: 64px;
+    height: 64px;
+    background: url("quiplash2/#page-quiplash_quiplash-image-controller.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-origin: border-box;
+    background-size: 100% auto;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+#page-quiplash a.gallery-link img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #000;
+    border-radius: 15%/30%
+}
+
+#page-quiplash .quiplash-image-controller.off {
+    background-position-y: 100%
+}
+
+#page-quiplash .ugc-option {
+    padding-bottom: 5px
+}
+
+#page-quiplash .ugc-remove-x {
+    width: 30px;
+    height: 30px;
+    background: #000 url("quiplash2/#page-quiplash_ugc-remove-x.png") 0px 0px/100% 200% no-repeat;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin: 5px;
+    text-align: right;
+    vertical-align: middle
+}
+
+#page-quiplash .ugc-checkbox {
+    display: table-cell;
+    padding-right: 5px;
+    text-align: left;
+    vertical-align: middle
+}
+
+#page-quiplash .ugc-text {
+    width: 100%;
+    display: table-cell;
+    text-align: left;
+    font-family: "Rokkitt";
+    font-weight: bold;
+    font-size: 23px;
+    line-height: normal;
+    vertical-align: middle;
+    padding: 0px 5px
+}
+
+#page-quiplash .ugc-input {
+    color: #000;
+    font-family: "Rokkitt";
+    font-weight: bold;
+    font-size: 23px;
+    line-height: normal;
+    border-radius: 0px
+}
+
+#page-quiplash .ugc-load-button,
+#page-quiplash .quiplash-list-fill {
+    background-color: #000;
+    border-radius: 5px;
+    padding: 5px
+}
+
+/*# sourceMappingURL=6190.css.map*/

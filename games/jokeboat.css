@@ -1,0 +1,1409 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url("jokeboat/post-banner.tjpp7_banner-image.png")
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url("jokeboat/post-banner.tjpp6_banner-image.png")
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("jokeboat/a4bece5c270c316c1c24.ttf");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("jokeboat/2263cf4bbb29e585de1b.ttf");
+    font-weight: 500;
+    font-style: normal
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+body {
+    color: #000;
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+.page {
+    overflow-y: auto
+}
+
+img {
+    margin: 0px auto
+}
+
+canvas {
+    border: 1px solid #000
+}
+
+.controller-page {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch
+}
+
+.scrollable {
+    overflow-y: auto
+}
+
+.textDescriptions {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden
+}
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+.loadingSpinner {
+    text-align: center;
+    margin: 50px 0px
+}
+
+.playerName {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.playerIcon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    background-size: contain
+}
+
+.playerIcon.none {
+    display: none
+}
+
+.twitchBroadcasterIcon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 13px;
+    bottom: 10px;
+    background-image: url("jokeboat/twitchBroadcasterIcon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.controller-container {
+    display: flex;
+    overflow-y: hidden
+}
+
+#controller-container {
+    display: flex;
+    flex-direction: column
+}
+
+#controller-container>div:last-child {
+    flex-grow: 1
+}
+
+#controller-main {
+    flex: 1 0 auto
+}
+
+.Logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch
+}
+
+.Logo>div {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    text-align: center
+}
+
+div.logo-image {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 600px;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3
+}
+
+.lobbyTitle {
+    text-align: center
+}
+
+.artifactContainer {
+    text-align: center
+}
+
+.artifactButton {
+    background-image: url("jokeboat/artifactButton.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 283px;
+    width: 90%;
+    max-width: 512px;
+    display: inline-block
+}
+
+@media only screen and (max-width: 480px) {
+    .artifactButton {
+        height: 192px
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .artifactButton {
+        height: 128px
+    }
+}
+
+.controller-content {
+    max-width: 768px;
+    margin: 0px auto
+}
+
+.controller-content>div {
+    display: inline-block;
+    width: 100%
+}
+
+.EnterSingleText,
+.MakeSingleChoice,
+.Draw,
+.Lobby,
+.Sortable,
+.UGC {
+    display: inline-block;
+    width: 100%
+}
+
+.Lobby .charactersList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 512px;
+    padding: .5rem;
+    margin: 0px auto
+}
+
+.Lobby .charactersList button.characters {
+    flex: 0 0 25%;
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: stretch;
+    box-sizing: border-box
+}
+
+.Lobby .charactersList button.characters.disabled {
+    cursor: not-allowed
+}
+
+.Lobby .charactersList button.characters.selected {
+    cursor: default
+}
+
+.Lobby .charactersList button.characters:before {
+    content: "";
+    display: table;
+    padding-top: 100%
+}
+
+.Lobby .charactersList button.characters .flex-item {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.choices {
+    text-align: center
+}
+
+.button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.choices .button-group button.choice-button * {
+    pointer-events: none
+}
+
+textarea.form-control {
+    resize: none;
+    overflow: hidden;
+    height: 36px;
+    line-height: 24px;
+    outline: none
+}
+
+textarea:focus {
+    outline: none
+}
+
+.button-group * {
+    border-radius: 0px;
+    margin: 0px;
+    max-width: 100%;
+    min-width: 50px;
+    overflow-wrap: break-word;
+    outline: none;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: normal;
+    word-break: break-word;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.button-group button:not(:only-child):not(:last-child) {
+    border-right-width: 0px
+}
+
+.button-group button:not(:only-child):not(:first-child) {
+    border-left-width: 0px
+}
+
+.button-group :first-child {
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2
+}
+
+.censor-button {
+    width: auto;
+    max-width: 15px;
+    padding: 0px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 35px;
+    flex: 0 1 35px
+}
+
+.double-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.double-nav-middle {
+    flex: 1 0 auto;
+    position: relative;
+    overflow-x: hidden
+}
+
+.double-nav-top,
+.double-nav-bottom {
+    flex: 0 1 auto;
+    width: 100%;
+    z-index: 1030;
+    text-align: center
+}
+
+.double-nav-detail {
+    top: 0px;
+    min-height: 100%;
+    display: absolute
+}
+
+.double-nav-bottom {
+    margin-top: auto
+}
+
+.canvasContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.Draw .nav-tabs {
+    border-width: 0px
+}
+
+li>a.button-color.active {
+    border: 3px solid
+}
+
+li>a.button-color.active[data-color="#000000"] {
+    border-color: #f32938
+}
+
+.Draw canvas.fullLayer {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.Draw .button {
+    height: 33px;
+    min-width: 40px;
+    margin: 2px;
+    padding: 5px
+}
+
+.Draw .submitDrawing {
+    height: auto
+}
+
+.Draw .currentColor {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    margin: 0px auto
+}
+
+.Draw .thickness-circle {
+    border-radius: 50%;
+    background-color: #000;
+    width: 5px;
+    height: 5px;
+    margin: 0px auto
+}
+
+.Draw .colorSwatch {
+    border-radius: 8px;
+    width: 62px;
+    height: 62px;
+    margin: 3px;
+    display: inline-block
+}
+
+.Draw .list .colorSwatch {
+    display: inline-block
+}
+
+.Draw .list .colorSwatch a {
+    padding: 0px;
+    width: 48px;
+    height: 48px
+}
+
+.Draw .colorPaletteRegion {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0)
+}
+
+.Draw .colorPaletteRegion.visible {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.Draw .colorPaletteRegion .colorPalette {
+    border: 8px solid #000;
+    background-color: #fff;
+    border-radius: 18px;
+    width: 230px;
+    padding: 2px
+}
+
+.Draw .picker {
+    position: relative
+}
+
+.Draw .list .colorPalette {
+    margin-bottom: -19px;
+    margin-right: 20px
+}
+
+.Draw .colorPaletteRegion .colorSwatch a {
+    padding: 0px;
+    width: 62px;
+    height: 62px
+}
+
+.Draw .canvasContainer {
+    display: inline-block
+}
+
+.Shoot {
+    height: 100%
+}
+
+.Shoot .health {
+    text-align: right
+}
+
+.Shoot .shoot-container {
+    max-width: 480px
+}
+
+.Shoot button.selected {
+    background: #000;
+    color: #fff
+}
+
+.Shoot div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.Shoot button {
+    width: 100px;
+    height: 50px
+}
+
+.Shoot .RadialView {
+    height: 100%
+}
+
+.Shoot .radial {
+    margin: 0px auto;
+    cursor: pointer
+}
+
+.Shoot .background {
+    stroke: #1797c5;
+    stroke-width: 32;
+    stroke-opacity: .8
+}
+
+.Shoot .health-display {
+    fill-opacity: 0;
+    stroke: #f0f;
+    stroke-width: 2
+}
+
+.Shoot .crosshair-center {
+    stroke: #fff;
+    stroke-width: .8;
+    stroke-dasharray: .3 1.265;
+    fill-opacity: 0
+}
+
+.Shoot .circle-helper {
+    stroke: #00cfe6;
+    stroke-width: 3;
+    fill-opacity: 0
+}
+
+.Shoot .line-helper-left,
+.Shoot .line-helper-right {
+    stroke: #fff;
+    stroke-width: .3
+}
+
+.Shoot .locked-in-line {
+    stroke: #fff;
+    stroke-width: .3;
+    stroke-dasharray: 1.265 .5
+}
+
+.Shoot .left-text,
+.Shoot .right-text {
+    color: #fff
+}
+
+.Shoot .locked-in-fade {
+    stroke: #000;
+    stroke-width: 34;
+    stroke-opacity: .8;
+    fill-opacity: 0
+}
+
+.Shoot .cls-1 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 17px
+}
+
+.Shoot .lockedIn .cls-1 {
+    stroke: #575757
+}
+
+.Camera {
+    position: relative
+}
+
+.Camera .cameraRegion canvas.cameraCanvas {
+    background-color: #000;
+    top: 0px;
+    left: 0px;
+    border: none
+}
+
+.Camera .cameraRegion .cameraVideo {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px
+}
+
+.Camera .cameraRegion .cameraImage {
+    width: 100%;
+    max-width: 100%
+}
+
+.Camera .cameraRegion .cameraImageDiv {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.Camera .cameraRegion .cameraControls {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    height: 60px;
+    text-align: center
+}
+
+.Camera .cameraRegion .buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden
+}
+
+.Camera .cameraRegion .buttons.visible {
+    visibility: visible
+}
+
+.Camera .cameraRegion .button {
+    background-color: #fff;
+    color: #000
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url("jokeboat/twitchBroadcasterIcon.svg") no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url("jokeboat/jbgTwitchContent_warning.png") no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+.debug {
+    position: fixed;
+    left: 0;
+    top: 55px;
+    opacity: .1;
+    z-index: 1031;
+    user-select: none;
+    text-shadow: -1px -1px 0 #ddd, 1px -1px 0 #ddd, -1px 1px 0 #ddd, 1px 1px 0 #ddd
+}
+
+.debug:hover {
+    opacity: 1
+}
+
+.debug button {
+    width: 50px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 1px solid #333 !important;
+    outline: 1px solid #ddd !important;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    box-shadow: none !important
+}
+
+.debug span {
+    position: relative;
+    top: -4px;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+@font-face {
+    font-family: "Lille Snemand";
+    src: url("jokeboat/df3da5ba968bc3694a3c.woff2") format("woff2"), url("jokeboat/2c6b4368a41af05e50b9.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Lille Snemand";
+    font-style: italic;
+    src: url("jokeboat/1f6605eda4788b2d6ba0.woff2") format("woff2"), url("jokeboat/9d8beef65c02e1292d46.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Permanent Marker";
+    src: url("jokeboat/84ce680962a38baea318.woff2") format("woff2"), url("jokeboat/de28b367df3fbbafbf71.woff") format("woff")
+}
+
+.jokeboat {
+    background-color: #1a1818;
+    font-family: "Lille Snemand", Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    text-align: center;
+    color: #1a1818
+}
+
+.jokeboat .testing-nav {
+    opacity: .05
+}
+
+.jokeboat .testing-nav button {
+    width: auto
+}
+
+.jokeboat .testing-nav span {
+    display: none
+}
+
+.jokeboat .controller-page {
+    position: relative;
+    border-radius: 0 25px 25px 0;
+    background-image: url("jokeboat/jokeboat_controller-page.jpg");
+    background-size: cover
+}
+
+.jokeboat .controller-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    background-image: linear-gradient(to right, rgba(126, 106, 40, 0.65), rgba(126, 106, 40, 0))
+}
+
+.jokeboat.catchphrase .controller-page {
+    background-image: url("jokeboat/jokeboat.catchphrase_controller-page.jpg")
+}
+
+.jokeboat.catchphrase .controller-page::before {
+    width: 35px;
+    background-size: cover;
+    background-image: url("jokeboat/jokeboat.catchphrase_controller-page_before.jpg")
+}
+
+.jokeboat.final-round .controller-page {
+    background-image: url("jokeboat/jokeboat.final-round_controller-page.jpg")
+}
+
+.jokeboat .controller-content {
+    max-width: 450px;
+    padding: 15px 25px 0
+}
+
+.jokeboat .prompt {
+    margin-bottom: 25px
+}
+
+.jokeboat .text .count {
+    margin-top: -8px;
+    font-size: .8em
+}
+
+.jokeboat .text .marker {
+    padding-top: 25px;
+    line-height: 1.1;
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.1em;
+    color: #751b23;
+    text-transform: lowercase;
+    word-break: break-word
+}
+
+.jokeboat .text .marker .marker {
+    padding-top: 5px;
+    font-size: inherit
+}
+
+.jokeboat .button-group .help {
+    display: none
+}
+
+.jokeboat .button-group button:not(:only-child):not(:last-child) {
+    border-right-width: 26px
+}
+
+.jokeboat button {
+    width: 100%;
+    border-image-source: url("jokeboat/jokeboat_button.png");
+    border-width: 4px 26px 14px;
+    border-image-slice: 4 26 14 26 fill;
+    color: #1b3740;
+    font-family: "Permanent Marker", cursive;
+    margin-top: 0;
+    margin-bottom: 3px;
+    padding: 5px 2px;
+    background: transparent;
+    line-height: 1;
+    font-size: 1.1em;
+    text-transform: lowercase
+}
+
+.jokeboat button:disabled {
+    border-image-source: url("jokeboat/jokeboat_button_disabled.png");
+    color: #1a1818
+}
+
+.jokeboat button:focus,
+.jokeboat button:active:focus {
+    outline: none;
+    color: #1b3740
+}
+
+.jokeboat button:active {
+    margin-top: 4px;
+    border-width: 4px 26px 10px;
+    color: #1b3740;
+    box-shadow: none
+}
+
+.jokeboat button:hover {
+    color: #1b3740
+}
+
+.jokeboat .playerTopBarView {
+    font-size: 1.3em
+}
+
+.jokeboat .playerTopBarView .playerTopBar {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto
+}
+
+.jokeboat .playerTopBarView::before {
+    content: "IN CASE OF LOSS, RETURN TO:";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 8px;
+    color: #998c78
+}
+
+.jokeboat .playerTopBarView .playerName {
+    min-width: 250px;
+    padding: 30px 10px 0;
+    border-bottom: 1px solid #998c78;
+    line-height: 1;
+    font-size: 21px;
+    font-family: "Permanent Marker", cursive;
+    color: #191b87
+}
+
+.jokeboat .playerTopBarView .playerIcon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 2px;
+    left: 7px;
+    background-size: contain
+}
+
+.jokeboat .playerTopBarView .playerIcon.player0 {
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player0.png")
+}
+
+.jokeboat .playerTopBarView .playerIcon.player1 {
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player1.png")
+}
+
+.jokeboat .playerTopBarView .playerIcon.player2 {
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player2.png")
+}
+
+.jokeboat .playerTopBarView .playerIcon.player3 {
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player3.png")
+}
+
+.jokeboat .playerTopBarView .playerIcon.player4 {
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player4.png")
+}
+
+.jokeboat .playerTopBarView .playerIcon.player5 {
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player5.png")
+}
+
+.jokeboat .playerTopBarView .playerIcon.player6 {
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player6.png")
+}
+
+.jokeboat .playerTopBarView .playerIcon.player7 {
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player7.png")
+}
+
+.jokeboat.catchphrase .playerTopBarView {
+    padding: 35px 35px 0 65px
+}
+
+.jokeboat.catchphrase .playerTopBarView #player {
+    padding: 35px 0 20px
+}
+
+.jokeboat.catchphrase .playerTopBarView .playerTopBar {
+    position: relative;
+    background: #f5f0e9;
+    border-radius: 50%/20%;
+    box-shadow: 0px 0px 0px 3px #f5f0e9 inset, 0px 0px 0px 5px #273b18 inset
+}
+
+.jokeboat.catchphrase .playerTopBarView .playerTopBar::before {
+    content: "JOKE BOOK:";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: #273b18
+}
+
+.jokeboat.catchphrase .playerTopBarView::before {
+    content: ""
+}
+
+.jokeboat.catchphrase .playerTopBarView .playerName {
+    min-width: 200px;
+    border-bottom: 2px solid #273b18
+}
+
+.jokeboat.catchphrase .playerTopBarView .playerIcon {
+    display: none !important
+}
+
+.jokeboat .Lobby .lobbyTitle {
+    margin-bottom: 20px;
+    font-size: 1em
+}
+
+.jokeboat .MakeSingleChoice .error {
+    display: none
+}
+
+.jokeboat .MakeSingleChoice .reset-choices {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    padding: 0 40px
+}
+
+.jokeboat .MakeSingleChoice .reset-choices button {
+    max-width: 400px;
+    border-image-source: url("jokeboat/jokeboat_button_disabled.png");
+    font-size: 1.1em;
+    color: #1a1818
+}
+
+.jokeboat .MakeSingleChoice.punchup button,
+.jokeboat .MakeSingleChoice.setup button {
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 1em
+}
+
+.jokeboat .MakeSingleChoice.punchup button:disabled,
+.jokeboat .MakeSingleChoice.setup button:disabled {
+    border-image-source: url("jokeboat/jokeboat_button_disabled.png");
+    color: #1a1818
+}
+
+.jokeboat .MakeSingleChoice.punchup button {
+    padding: 33px 5px 10px;
+    z-index: 1
+}
+
+.jokeboat .MakeSingleChoice.punchup .help {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 8px 0 2px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    border-style: solid;
+    border-radius: 0;
+    border-image: url("jokeboat/jokeboat_MakeSingleChoice.punchup_help.png");
+    border-image-slice: 0 0 2 0;
+    border-width: 0 0 2px 0;
+    pointer-events: none;
+    z-index: 2
+}
+
+.jokeboat .MakeSingleChoice.punchup .button:active+.help {
+    margin-top: 3px
+}
+
+.jokeboat .MakeSingleChoice.setup button {
+    padding: 10px 5px
+}
+
+.jokeboat .MakeSingleChoice.perform .button-group:last-child {
+    margin-top: 10px;
+    padding: 0 15px
+}
+
+.jokeboat .MakeSingleChoice.perform .button-group:last-child button {
+    border-image-source: url("jokeboat/jokeboat_MakeSingleChoice.perform_button-group_last-child_button.png");
+    color: #273b18;
+    font-size: 1em
+}
+
+.jokeboat .MakeSingleChoice.favorite .button-group:first-child {
+    position: relative;
+    padding-bottom: 60px
+}
+
+.jokeboat .MakeSingleChoice.favorite .button-group:first-child::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-size: 60px 48px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("jokeboat/jokeboat_MakeSingleChoice.favorite_button-group_first-child_after.png")
+}
+
+.jokeboat.catchphrase .MakeSingleChoice {
+    padding: 0 0 0 30px
+}
+
+.jokeboat.catchphrase .MakeSingleChoice .text {
+    font-size: .95em;
+    color: #273b18
+}
+
+.jokeboat.catchphrase .MakeSingleChoice .text .marker {
+    color: #1a1818
+}
+
+.jokeboat.catchphrase .MakeSingleChoice button {
+    border-image-source: url("jokeboat/jokeboat.catchphrase_MakeSingleChoice_button.png");
+    color: #273b18
+}
+
+.jokeboat .EnterSingleText .topic {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 0 10px;
+    border-style: solid;
+    border-image-source: url("jokeboat/jokeboat_EnterSingleText_topic.png");
+    border-width: 0 26px;
+    border-image-slice: 0 26 0 26;
+    font-size: 1.7em;
+    text-transform: uppercase
+}
+
+.jokeboat .EnterSingleText .inputGroup {
+    position: relative
+}
+
+.jokeboat .EnterSingleText .errorText {
+    font-size: .8em
+}
+
+.jokeboat .EnterSingleText textarea {
+    position: relative;
+    margin-top: 10px;
+    padding: 10px 20px 6px 12px;
+    border-style: solid;
+    border-radius: 0;
+    border-image: url("jokeboat/jokeboat_MakeSingleChoice.punchup_help.png");
+    border-image-slice: 0 0 5 0;
+    border-width: 0 0 5px 0;
+    background: rgba(0, 0, 0, .05);
+    box-shadow: none;
+    font-size: 20px
+}
+
+.jokeboat .EnterSingleText .charCountDisplay {
+    position: absolute;
+    top: 14px;
+    right: 3px;
+    font-size: 18px
+}
+
+.jokeboat .EnterSingleText button {
+    margin-left: 25px !important;
+    margin-right: 25px !important;
+    font-size: 1.3em
+}
+
+.jokeboat .EnterSingleText .choices {
+    position: relative
+}
+
+.jokeboat .EnterSingleText .topics-info,
+.jokeboat .EnterSingleText .joke-info {
+    position: absolute;
+    top: 42px;
+    right: 0;
+    width: 255px
+}
+
+.jokeboat .EnterSingleText .topics-info .arrow,
+.jokeboat .EnterSingleText .joke-info .arrow {
+    position: absolute;
+    top: 5px;
+    right: -10px;
+    width: 15px;
+    height: 75px;
+    background-image: url("jokeboat/jokeboat_EnterSingleText_topics-info_arrow.png");
+    background-size: 100% 100%
+}
+
+.jokeboat .EnterSingleText .topics-info p,
+.jokeboat .EnterSingleText .joke-info p {
+    margin-top: 100px;
+    text-align: left;
+    font-size: 19px;
+    font-family: "Permanent Marker", cursive;
+    line-height: 1.2;
+    color: #751b23;
+    transform: rotate(-10deg)
+}
+
+.jokeboat .EnterSingleText .topics-info p em,
+.jokeboat .EnterSingleText .joke-info p em {
+    text-decoration: underline
+}
+
+.jokeboat .EnterSingleText .has-error .topics-info .arrow {
+    height: 95px
+}
+
+.jokeboat .EnterSingleText .has-error .topics-info p {
+    margin-top: 120px
+}
+
+.jokeboat .EnterSingleText .action-jokeForMe {
+    margin-top: 20px;
+    padding: 0 15px
+}
+
+.jokeboat .EnterSingleText .action-jokeForMe .button {
+    color: #273b18;
+    font-size: 1em;
+    border-image-source: url("jokeboat/jokeboat_MakeSingleChoice.perform_button-group_last-child_button.png")
+}
+
+.jokeboat .EnterSingleText .action-jokeForMe .button em {
+    font-style: normal;
+    font-size: 15px
+}
+
+.jokeboat .EnterSingleText .joke-info {
+    top: auto;
+    bottom: -65px;
+    right: 30px
+}
+
+.jokeboat .EnterSingleText .joke-info .arrow {
+    width: 15px;
+    height: 45px
+}
+
+.jokeboat .EnterSingleText .joke-info p {
+    margin-top: 65px;
+    text-align: right;
+    transform: rotate(-7deg)
+}
+
+.jokeboat .Logo {
+    position: relative
+}
+
+.jokeboat .Logo .logo-image {
+    background-image: url("jokeboat/jokeboat_Logo_logo-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: auto;
+    width: 60%;
+    height: 60%;
+    opacity: .2
+}
+
+.jokeboat .Logo .message {
+    position: absolute;
+    width: 100%
+}
+
+.jokeboat .Logo .lookup {
+    display: inline-block;
+    width: 124px;
+    height: 153.5px;
+    margin-bottom: 10px;
+    background-image: url("jokeboat/jokeboat_Logo_lookup.png");
+    background-size: contain
+}
+
+.jokeboat .Logo .messageText {
+    margin: 2px auto 0;
+    padding: 0 15px;
+    max-width: 700px;
+    font-size: 1em;
+    line-height: 1.4;
+    text-align: center
+}
+
+.jokeboat .artifactButton {
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("jokeboat/jokeboat_artifactButton.png");
+    border: none
+}
+
+/*# sourceMappingURL=5988.css.map*/

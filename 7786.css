@@ -1,0 +1,1355 @@
+@import url(https://fonts.googleapis.com/css?family=Rokkitt:400,700&display=swap);
+
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url(assets/372b296441e568c4f230.png)
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url(assets/6705b194308b696103dd.png)
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(assets/a4bece5c270c316c1c24.ttf);
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(assets/2263cf4bbb29e585de1b.ttf);
+    font-weight: 500;
+    font-style: normal
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+body {
+    color: #000;
+    height: 100%;
+    overflow: hidden;
+    position: fixed
+}
+
+.page {
+    overflow-y: auto
+}
+
+img {
+    margin: 0px auto
+}
+
+canvas {
+    border: 1px solid #000
+}
+
+.controller-page {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch
+}
+
+.scrollable {
+    overflow-y: auto
+}
+
+.textDescriptions {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden
+}
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+.loadingSpinner {
+    text-align: center;
+    margin: 50px 0px
+}
+
+.playerName {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.playerIcon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 35px;
+    background-size: contain
+}
+
+.playerIcon.none {
+    display: none
+}
+
+.twitchBroadcasterIcon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 13px;
+    bottom: 10px;
+    background-image: url(assets/2154fb6d10c0d32f494a.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.controller-container {
+    display: flex;
+    overflow-y: hidden
+}
+
+#controller-container {
+    display: flex;
+    flex-direction: column
+}
+
+#controller-container>div:last-child {
+    flex-grow: 1
+}
+
+#controller-main {
+    flex: 1 0 auto
+}
+
+.Logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch
+}
+
+.Logo>div {
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    text-align: center
+}
+
+div.logo-image {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 600px;
+    -webkit-box-flex: 3;
+    -ms-flex-positive: 3;
+    flex-grow: 3
+}
+
+.lobbyTitle {
+    text-align: center
+}
+
+.artifactContainer {
+    text-align: center
+}
+
+.artifactButton {
+    background-image: url(assets/8fa1f1ed4c15973f951d.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 283px;
+    width: 90%;
+    max-width: 512px;
+    display: inline-block
+}
+
+@media only screen and (max-width: 480px) {
+    .artifactButton {
+        height: 192px
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .artifactButton {
+        height: 128px
+    }
+}
+
+.controller-content {
+    max-width: 768px;
+    margin: 0px auto
+}
+
+.controller-content>div {
+    display: inline-block;
+    width: 100%
+}
+
+.EnterSingleText,
+.MakeSingleChoice,
+.Draw,
+.Lobby,
+.Sortable,
+.UGC {
+    display: inline-block;
+    width: 100%
+}
+
+.Lobby .charactersList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 512px;
+    padding: .5rem;
+    margin: 0px auto
+}
+
+.Lobby .charactersList button.characters {
+    flex: 0 0 25%;
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    align-items: stretch;
+    box-sizing: border-box
+}
+
+.Lobby .charactersList button.characters.disabled {
+    cursor: not-allowed
+}
+
+.Lobby .charactersList button.characters.selected {
+    cursor: default
+}
+
+.Lobby .charactersList button.characters:before {
+    content: "";
+    display: table;
+    padding-top: 100%
+}
+
+.Lobby .charactersList button.characters .flex-item {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.choices {
+    text-align: center
+}
+
+.button-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.choices .button-group button.choice-button * {
+    pointer-events: none
+}
+
+textarea.form-control {
+    resize: none;
+    overflow: hidden;
+    height: 36px;
+    line-height: 24px;
+    outline: none
+}
+
+textarea:focus {
+    outline: none
+}
+
+.button-group * {
+    border-radius: 0px;
+    margin: 0px;
+    max-width: 100%;
+    min-width: 50px;
+    overflow-wrap: break-word;
+    outline: none;
+    overflow: hidden;
+    -webkit-user-select: none;
+    user-select: none;
+    white-space: normal;
+    word-break: break-word;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none
+}
+
+.button-group button:not(:only-child):not(:last-child) {
+    border-right-width: 0px
+}
+
+.button-group button:not(:only-child):not(:first-child) {
+    border-left-width: 0px
+}
+
+.button-group :first-child {
+    -webkit-box-flex: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2
+}
+
+.censor-button {
+    width: auto;
+    max-width: 15px;
+    padding: 0px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 35px;
+    flex: 0 1 35px
+}
+
+.double-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.double-nav-middle {
+    flex: 1 0 auto;
+    position: relative;
+    overflow-x: hidden
+}
+
+.double-nav-top,
+.double-nav-bottom {
+    flex: 0 1 auto;
+    width: 100%;
+    z-index: 1030;
+    text-align: center
+}
+
+.double-nav-detail {
+    top: 0px;
+    min-height: 100%;
+    display: absolute
+}
+
+.double-nav-bottom {
+    margin-top: auto
+}
+
+.canvasContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.Draw .nav-tabs {
+    border-width: 0px
+}
+
+li>a.button-color.active {
+    border: 3px solid
+}
+
+li>a.button-color.active[data-color="#000000"] {
+    border-color: #f32938
+}
+
+.Draw canvas.fullLayer {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.Draw .button {
+    height: 33px;
+    min-width: 40px;
+    margin: 2px;
+    padding: 5px
+}
+
+.Draw .submitDrawing {
+    height: auto
+}
+
+.Draw .currentColor {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    margin: 0px auto
+}
+
+.Draw .thickness-circle {
+    border-radius: 50%;
+    background-color: #000;
+    width: 5px;
+    height: 5px;
+    margin: 0px auto
+}
+
+.Draw .colorSwatch {
+    border-radius: 8px;
+    width: 62px;
+    height: 62px;
+    margin: 3px;
+    display: inline-block
+}
+
+.Draw .list .colorSwatch {
+    display: inline-block
+}
+
+.Draw .list .colorSwatch a {
+    padding: 0px;
+    width: 48px;
+    height: 48px
+}
+
+.Draw .colorPaletteRegion {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0)
+}
+
+.Draw .colorPaletteRegion.visible {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+
+.Draw .colorPaletteRegion .colorPalette {
+    border: 8px solid #000;
+    background-color: #fff;
+    border-radius: 18px;
+    width: 230px;
+    padding: 2px
+}
+
+.Draw .picker {
+    position: relative
+}
+
+.Draw .list .colorPalette {
+    margin-bottom: -19px;
+    margin-right: 20px
+}
+
+.Draw .colorPaletteRegion .colorSwatch a {
+    padding: 0px;
+    width: 62px;
+    height: 62px
+}
+
+.Draw .canvasContainer {
+    display: inline-block
+}
+
+.Shoot {
+    height: 100%
+}
+
+.Shoot .health {
+    text-align: right
+}
+
+.Shoot .shoot-container {
+    max-width: 480px
+}
+
+.Shoot button.selected {
+    background: #000;
+    color: #fff
+}
+
+.Shoot div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.Shoot button {
+    width: 100px;
+    height: 50px
+}
+
+.Shoot .RadialView {
+    height: 100%
+}
+
+.Shoot .radial {
+    margin: 0px auto;
+    cursor: pointer
+}
+
+.Shoot .background {
+    stroke: #1797c5;
+    stroke-width: 32;
+    stroke-opacity: .8
+}
+
+.Shoot .health-display {
+    fill-opacity: 0;
+    stroke: #f0f;
+    stroke-width: 2
+}
+
+.Shoot .crosshair-center {
+    stroke: #fff;
+    stroke-width: .8;
+    stroke-dasharray: .3 1.265;
+    fill-opacity: 0
+}
+
+.Shoot .circle-helper {
+    stroke: #00cfe6;
+    stroke-width: 3;
+    fill-opacity: 0
+}
+
+.Shoot .line-helper-left,
+.Shoot .line-helper-right {
+    stroke: #fff;
+    stroke-width: .3
+}
+
+.Shoot .locked-in-line {
+    stroke: #fff;
+    stroke-width: .3;
+    stroke-dasharray: 1.265 .5
+}
+
+.Shoot .left-text,
+.Shoot .right-text {
+    color: #fff
+}
+
+.Shoot .locked-in-fade {
+    stroke: #000;
+    stroke-width: 34;
+    stroke-opacity: .8;
+    fill-opacity: 0
+}
+
+.Shoot .cls-1 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 17px
+}
+
+.Shoot .lockedIn .cls-1 {
+    stroke: #575757
+}
+
+.Camera {
+    position: relative
+}
+
+.Camera .cameraRegion canvas.cameraCanvas {
+    background-color: #000;
+    top: 0px;
+    left: 0px;
+    border: none
+}
+
+.Camera .cameraRegion .cameraVideo {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px
+}
+
+.Camera .cameraRegion .cameraImage {
+    width: 100%;
+    max-width: 100%
+}
+
+.Camera .cameraRegion .cameraImageDiv {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.Camera .cameraRegion .cameraControls {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    height: 60px;
+    text-align: center
+}
+
+.Camera .cameraRegion .buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden
+}
+
+.Camera .cameraRegion .buttons.visible {
+    visibility: visible
+}
+
+.Camera .cameraRegion .button {
+    background-color: #fff;
+    color: #000
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url(assets/2154fb6d10c0d32f494a.svg) no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url(assets/4afc534f7e5f41737be2.png) no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+.debug {
+    position: fixed;
+    left: 0;
+    top: 55px;
+    opacity: .1;
+    z-index: 1031;
+    user-select: none;
+    text-shadow: -1px -1px 0 #ddd, 1px -1px 0 #ddd, -1px 1px 0 #ddd, 1px 1px 0 #ddd
+}
+
+.debug:hover {
+    opacity: 1
+}
+
+.debug button {
+    width: 50px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 1px solid #333 !important;
+    outline: 1px solid #ddd !important;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+    box-shadow: none !important
+}
+
+.debug span {
+    position: relative;
+    top: -4px;
+    color: #333 !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th,
+span,
+button {
+    font-family: "Rokkitt", serif;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 500;
+    font-kerning: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    word-wrap: break-word
+}
+
+.quiplash2-international * {
+    box-sizing: border-box
+}
+
+.quiplash2-international .playerTopBarView {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 28px;
+    letter-spacing: 0;
+    margin-bottom: 0
+}
+
+.quiplash2-international .messageText {
+    margin-top: 0px
+}
+
+.quiplash2-international .controller-content {
+    padding: 0px 5px
+}
+
+.quiplash2-international .artifactButton {
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(assets/a78fbf28db1b56019457.png);
+    border: none
+}
+
+.quiplash2-international .Logo {
+    background-color: #4c4267;
+    background-image: url(assets/8284c1f9c70c8bb60b6d.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}
+
+.quiplash2-international .Logo .logo-image {
+    background-image: url(assets/da603123e5936d1668ef.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: auto
+}
+
+.quiplash2-international .Logo.Round0 {
+    background-color: #000;
+    background-image: none
+}
+
+.quiplash2-international .Logo.Round0 .logo-image {
+    background-color: transparent;
+    background-image: url(assets/4c3e2e99375fc872d956.png);
+    background-position: 50% 25%
+}
+
+.quiplash2-international .Logo.Round1 {
+    background-color: #000;
+    background-image: none
+}
+
+.quiplash2-international .Logo.Round1 .logo-image {
+    background-color: transparent;
+    background-image: url(assets/8e79d890081328205ae3.png);
+    background-position: 50% 25%
+}
+
+.quiplash2-international .Logo.Round2 {
+    background-color: #000;
+    background-image: none
+}
+
+.quiplash2-international .Logo.Round2 .logo-image {
+    background-color: transparent;
+    background-image: url(assets/66a65848c3c866e0a9a3.png);
+    background-position: 50% 25%
+}
+
+.quiplash2-international.fr .Logo.Round0 .logo-image {
+    background-image: url(assets/1b2e6e69c3bf11fb432b.png)
+}
+
+.quiplash2-international.fr .Logo.Round1 .logo-image {
+    background-image: url(assets/12681eae894290288f84.png)
+}
+
+.quiplash2-international.fr .Logo.Round2 .logo-image {
+    background-image: url(assets/458371421e9d9e035580.png)
+}
+
+.quiplash2-international.fr .artifactButton {
+    background-image: url(assets/d67cb0d60ed0b1cb7beb.png)
+}
+
+.quiplash2-international.it .Logo.Round0 .logo-image {
+    background-image: url(assets/614f6a878d3a2be85abd.png)
+}
+
+.quiplash2-international.it .Logo.Round1 .logo-image {
+    background-image: url(assets/78f5eca823ea14ce0591.png)
+}
+
+.quiplash2-international.it .Logo.Round2 .logo-image {
+    background-image: url(assets/a863dff0234ad98a5db5.png)
+}
+
+.quiplash2-international.it .artifactButton {
+    background-image: url(assets/44e21ec62f827e9ce68a.png)
+}
+
+.quiplash2-international.es .Logo.Round0 .logo-image {
+    background-image: url(assets/2b08c0d8a417792a68db.png)
+}
+
+.quiplash2-international.es .Logo.Round1 .logo-image {
+    background-image: url(assets/15225933c1e8b2dc0da1.png)
+}
+
+.quiplash2-international.es .Logo.Round2 .logo-image {
+    background-image: url(assets/8348ce85966b1ec2bb93.png)
+}
+
+.quiplash2-international.es .artifactButton {
+    background-image: url(assets/46911e0aafc5482086bd.png)
+}
+
+.quiplash2-international.de .Logo.Round0 .logo-image {
+    background-image: url(assets/8befa1ec4cddd8fbd603.png)
+}
+
+.quiplash2-international.de .Logo.Round1 .logo-image {
+    background-image: url(assets/4127dee658d3fab3f10f.png)
+}
+
+.quiplash2-international.de .Logo.Round2 .logo-image {
+    background-image: url(assets/c0893922264aecaae455.png)
+}
+
+.quiplash2-international.de .artifactButton {
+    background-image: url(assets/2c2467c2abeef0228e95.png)
+}
+
+.quiplash2-international .Lobby,
+.quiplash2-international .MakeSingleChoice,
+.quiplash2-international .EnterSingleText,
+.quiplash2-international .UGC {
+    padding: 0px 5px
+}
+
+.quiplash2-international .Lobby .prompt,
+.quiplash2-international .MakeSingleChoice .prompt,
+.quiplash2-international .EnterSingleText .prompt,
+.quiplash2-international .UGC .prompt {
+    font-size: 28px
+}
+
+.quiplash2-international .Lobby .button,
+.quiplash2-international .MakeSingleChoice .button,
+.quiplash2-international .EnterSingleText .button,
+.quiplash2-international .UGC .button {
+    font-family: "Rokkitt", serif;
+    font-weight: 400;
+    font-size: 28px;
+    border: 0px solid #000;
+    padding: 14px 28px;
+    margin: 2px 0px;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase
+}
+
+.quiplash2-international .Lobby .button[type=submit],
+.quiplash2-international .MakeSingleChoice .button[type=submit],
+.quiplash2-international .EnterSingleText .button[type=submit],
+.quiplash2-international .UGC .button[type=submit] {
+    margin-bottom: 15px
+}
+
+@media(hover) {
+
+    .quiplash2-international .Lobby .button:hover,
+    .quiplash2-international .MakeSingleChoice .button:hover,
+    .quiplash2-international .EnterSingleText .button:hover,
+    .quiplash2-international .UGC .button:hover {
+        background-color: #333;
+        color: #fff
+    }
+}
+
+.quiplash2-international .Lobby textarea,
+.quiplash2-international .MakeSingleChoice textarea,
+.quiplash2-international .EnterSingleText textarea,
+.quiplash2-international .UGC textarea {
+    border-radius: 4px;
+    padding: 4px;
+    color: #000;
+    font-family: "Rokkitt";
+    font-weight: 500;
+    font-size: 28px;
+    line-height: normal
+}
+
+.quiplash2-international .Lobby .button:focus,
+.quiplash2-international .MakeSingleChoice .button:focus,
+.quiplash2-international .EnterSingleText .button:focus,
+.quiplash2-international .UGC .button:focus {
+    outline: 0px solid #fff;
+    color: #fff
+}
+
+.quiplash2-international .Lobby .button:active,
+.quiplash2-international .MakeSingleChoice .button:active,
+.quiplash2-international .EnterSingleText .button:active,
+.quiplash2-international .UGC .button:active {
+    background-color: #fff;
+    color: #000
+}
+
+.quiplash2-international .Lobby .button-group.selected button,
+.quiplash2-international .MakeSingleChoice .button-group.selected button,
+.quiplash2-international .EnterSingleText .button-group.selected button,
+.quiplash2-international .UGC .button-group.selected button {
+    background-color: #333;
+    color: #ccc
+}
+
+.quiplash2-international .Lobby .button-group .censor-button,
+.quiplash2-international .MakeSingleChoice .button-group .censor-button,
+.quiplash2-international .EnterSingleText .button-group .censor-button,
+.quiplash2-international .UGC .button-group .censor-button {
+    background-color: #000;
+    background-image: url(assets/74093efed1ea56c69239.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.quiplash2-international .Lobby .button-group .censor-button.isWarned,
+.quiplash2-international .MakeSingleChoice .button-group .censor-button.isWarned,
+.quiplash2-international .EnterSingleText .button-group .censor-button.isWarned,
+.quiplash2-international .UGC .button-group .censor-button.isWarned {
+    background-color: #900;
+    background-image: url(assets/ce6e9fc45592502ad373.png)
+}
+
+.quiplash2-international .Lobby .episodesModal,
+.quiplash2-international .MakeSingleChoice .episodesModal,
+.quiplash2-international .EnterSingleText .episodesModal,
+.quiplash2-international .UGC .episodesModal {
+    color: #fff;
+    font-size: 28px;
+    font-family: "Rokkitt", serif
+}
+
+.quiplash2-international .Lobby .episodesModal button,
+.quiplash2-international .MakeSingleChoice .episodesModal button,
+.quiplash2-international .EnterSingleText .episodesModal button,
+.quiplash2-international .UGC .episodesModal button {
+    background-color: #000;
+    border-radius: 5px;
+    padding: 5px;
+    text-transform: none
+}
+
+.quiplash2-international .Lobby .episodesModal .backButton,
+.quiplash2-international .MakeSingleChoice .episodesModal .backButton,
+.quiplash2-international .EnterSingleText .episodesModal .backButton,
+.quiplash2-international .UGC .episodesModal .backButton {
+    margin: 20px 0px
+}
+
+.quiplash2-international .Lobby .episodesModal .episodesListHeader,
+.quiplash2-international .MakeSingleChoice .episodesModal .episodesListHeader,
+.quiplash2-international .EnterSingleText .episodesModal .episodesListHeader,
+.quiplash2-international .UGC .episodesModal .episodesListHeader {
+    margin: 20px 0px
+}
+
+.quiplash2-international .Lobby .episodesModal .danger,
+.quiplash2-international .MakeSingleChoice .episodesModal .danger,
+.quiplash2-international .EnterSingleText .episodesModal .danger,
+.quiplash2-international .UGC .episodesModal .danger {
+    color: red;
+    font-size: 14px
+}
+
+.quiplash2-international .Lobby .episodesModal .input-group textarea,
+.quiplash2-international .MakeSingleChoice .episodesModal .input-group textarea,
+.quiplash2-international .EnterSingleText .episodesModal .input-group textarea,
+.quiplash2-international .UGC .episodesModal .input-group textarea {
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 42px;
+    min-height: 42px
+}
+
+.quiplash2-international .Lobby .episodesModal .input-group .inlineSubmitButton,
+.quiplash2-international .MakeSingleChoice .episodesModal .input-group .inlineSubmitButton,
+.quiplash2-international .EnterSingleText .episodesModal .input-group .inlineSubmitButton,
+.quiplash2-international .UGC .episodesModal .input-group .inlineSubmitButton {
+    font-size: 24px;
+    background-image: none;
+    background-color: #000;
+    border: 0px solid #000;
+    color: #fff;
+    height: 40px;
+    padding: 0px 15px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px
+}
+
+.quiplash2-international .UGC {
+    background-color: transparent;
+    background-image: url(assets/584adc24d11846ae3685.png);
+    background-position: 50% 25%;
+    background-size: cover
+}
+
+.quiplash2-international .UGC button.inlineSubmitButton {
+    padding: 0px 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background: #000;
+    color: #fff;
+    border: 0px solid #000;
+    text-transform: uppercase
+}
+
+.quiplash2-international .UGC button.inlineSubmitButton:active {
+    background: #000
+}
+
+.quiplash2-international .UGC .input .inlineSubmit,
+.quiplash2-international .UGC .input .charCountDisplay {
+    display: table-cell;
+    vertical-align: top
+}
+
+.quiplash2-international .UGC .input.addPrompt button.inlineSubmitButton {
+    width: 64px;
+    height: 42px
+}
+
+.quiplash2-international .UGC .input.addPrompt button.inlineSubmitButton::before {
+    color: #fff;
+    display: inline-block;
+    content: "";
+    background-image: url('data:image/svg+xml,<svg class="bi bi-arrow-up-square" width="1em" height="1em" viewBox="0 0 16 16" fill="white" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/><path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/><path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 32px;
+    margin-top: 5px
+}
+
+.quiplash2-international .UGC button.ugc-toggle-visibility-button {
+    border: 0px solid transparent;
+    outline: 0px solid transparent;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% auto;
+    vertical-align: middle
+}
+
+.quiplash2-international .UGC button.ugc-toggle-visibility-button.on {
+    background-position: top
+}
+
+.quiplash2-international .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller {
+    background-image: url(assets/6f2973c23947e1d1e32d.png)
+}
+
+.quiplash2-international .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen {
+    background-image: url(assets/87de4a2488d32ecdd933.png)
+}
+
+.quiplash2-international .UGC button.action-button {
+    width: 100%
+}
+
+.quiplash2-international .UGC #episodesRegion button.choice-button {
+    text-transform: none;
+    padding: 2px 25px;
+    border-radius: 6px
+}
+
+.quiplash2-international .UGC .promptsCount {
+    text-transform: uppercase
+}
+
+.quiplash2-international .UGC #promptsRegion .button-group button {
+    overflow: inherit;
+    border: 7px solid #000;
+    border-right-width: 40px;
+    border-radius: 10px;
+    background-color: #000;
+    padding: 0px 15px
+}
+
+.quiplash2-international .UGC #promptsRegion .button-group button::before {
+    background: #000 url(assets/826d708beeee6896fcc4.png) 0px 0px/100% 200% no-repeat;
+    background-position: top;
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    top: calc(50% - 15px);
+    right: -34px;
+    width: 30px;
+    height: 30px
+}
+
+.quiplash2-international .UGC #promptsRegion .button-group.other button {
+    background-color: #e2dc6b
+}
+
+.quiplash2-international .UGC .ugcModal {
+    background-color: #dfaa33;
+    border-radius: 12px;
+    font-family: "Rokkitt", serif;
+    font-size: 28px;
+    text-transform: uppercase
+}
+
+.quiplash2-international .UGC .ugcModal .swal2-content {
+    color: #000
+}
+
+.quiplash2-international .UGC .ugcModal .swal2-actions button {
+    text-transform: uppercase
+}
+
+.quiplash2-international .UGC .ugcModal .confirmButton {
+    background-color: #000
+}
+
+.quiplash2-international .UGC .tosLink {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    border-radius: 12px;
+    text-align: baseline;
+    padding: 10px 15px 0px 15px
+}
+
+@keyframes settle {
+    100% {
+        transform: translate(0px, 0px)
+    }
+}
+
+/*# sourceMappingURL=7786.css.map*/

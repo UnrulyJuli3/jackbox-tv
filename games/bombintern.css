@@ -1,0 +1,672 @@
+.post-banner {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    padding: 4px 5px 0 45px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    opacity: 0;
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s .3s
+}
+
+.post-banner.show {
+    opacity: 1;
+    transform: translateY(-30px);
+    transition: transform .4s cubic-bezier(0.3, 1.5, 0.75, 1.5), opacity 0s 0s
+}
+
+.post-banner .banner-image {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    width: 45px;
+    height: 45px;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.post-banner .banner-text {
+    display: inline-block;
+    color: #fff
+}
+
+.post-banner .banner-cta {
+    display: inline-block;
+    padding: 3px 7px;
+    margin-left: 3px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 15px;
+    line-height: 1;
+    text-transform: uppercase;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3)
+}
+
+@media(max-width: 350px) {
+    .post-banner {
+        font-size: 12px;
+        padding: 4px 5px 0 35px
+    }
+
+    .post-banner .banner-image {
+        top: -10px;
+        width: 35px;
+        height: 35px
+    }
+
+    .post-banner .banner-cta {
+        padding: 3px 6px
+    }
+}
+
+.post-banner.no-theme {
+    padding: 4px 5px 0 4px;
+    background: #000;
+    border-top: 2px solid #fff
+}
+
+.post-banner.no-theme .banner-image {
+    display: none
+}
+
+.post-banner.no-theme .banner-text {
+    display: inline-block
+}
+
+.post-banner.no-theme .banner-cta {
+    display: inline-block;
+    text-transform: uppercase
+}
+
+.post-banner.tjpp7 {
+    background: #0086ca;
+    border-top: 2px solid #000
+}
+
+.post-banner.tjpp7 .banner-image {
+    background-image: url("bombintern/post-banner.tjpp7_banner-image.png")
+}
+
+.post-banner.tjpp7 .banner-text {
+    color: #fff
+}
+
+.post-banner.tjpp7 .banner-cta {
+    color: #fff;
+    background-color: #ff000a
+}
+
+.post-banner.tjpp6 {
+    background: #ff85e2;
+    border-top: 2px solid #fff
+}
+
+.post-banner.tjpp6 .banner-image {
+    background-image: url("bombintern/post-banner.tjpp6_banner-image.png")
+}
+
+.post-banner.tjpp6 .banner-cta {
+    color: #fff;
+    background: #00c9b9
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("bombintern/a4bece5c270c316c1c24.ttf");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url("bombintern/2263cf4bbb29e585de1b.ttf");
+    font-weight: 500;
+    font-style: normal
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td,
+th {
+    font-weight: 700
+}
+
+.button-primary {
+    background: #000;
+    color: #fff
+}
+
+.button-xlarge {
+    border-width: 0px;
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 5px;
+    border-radius: 10px
+}
+
+.button-large {
+    border-radius: 10px
+}
+
+.post-banner {
+    cursor: pointer
+}
+
+.button-blue {
+    color: #fff;
+    background: #3e55fe;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.button-blue:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-gray {
+    color: #3e55fe;
+    background: #ccc;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent
+}
+
+.button-gray:active {
+    color: #3e55fe;
+    background: #000
+}
+
+.button-help-text {
+    display: inline
+}
+
+@media screen and (max-width: 480px) {
+    .button-help-text {
+        display: none
+    }
+}
+
+.button-black {
+    color: #fff;
+    background: #333
+}
+
+.debug {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: .6
+}
+
+.debug span {
+    pointer-events: none;
+    user-select: none
+}
+
+.text-signin {
+    color: #3e55fe
+}
+
+.jbg-input {
+    font-size: 1.3em
+}
+
+.close {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #000;
+    background: transparent;
+    border: none !important;
+    text-decoration: none;
+    content: "x";
+    right: 10px;
+    position: absolute
+}
+
+.close:hover {
+    color: #666
+}
+
+.button-yes {
+    background: #1cb841
+}
+
+.button-no {
+    background: #ca3c3c
+}
+
+.image-hand {
+    background: url("bombintern/image-hand.png");
+    cursor: pointer;
+    border: none;
+    width: 126px;
+    height: 700px
+}
+
+canvas {
+    touch-action: none
+}
+
+.jbgTwitchContainer {
+    padding: 0
+}
+
+.jbgTwitchPopup {
+    background-color: #fcfcfc;
+    border-radius: 0px;
+    width: 495px;
+    position: inherit;
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, .23)
+}
+
+.jbgTwitchPopup.jbgTwitchShow {
+    animation-name: slideUp;
+    animation-duration: .6s
+}
+
+.jbgTwitchPopup.jbgTwitchHide {
+    animation-name: slideDown;
+    animation-duration: .6s
+}
+
+.jbgTwitchContent {
+    font-family: "Rubik", sans-serif;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left
+}
+
+.jbgTwitchContent .icon-twitch {
+    height: 50px;
+    line-height: 50px;
+    margin: 30px 0px 17px 0px;
+    color: #9146ff;
+    padding-left: 50px;
+    background: url("bombintern/jbgTwitchContent_icon-twitch.svg") no-repeat center left/40px
+}
+
+.jbgTwitchContent .success {
+    padding-bottom: 20px
+}
+
+.jbgTwitchContent .warning {
+    border-top: 1px solid #cdcdcd;
+    padding: 20px 0px;
+    line-height: normal;
+    color: #0c0c0c;
+    padding-left: 50px;
+    background: url("bombintern/jbgTwitchContent_warning.png") no-repeat center left/40px
+}
+
+.jbgCloseButton {
+    top: 16px;
+    right: 13px
+}
+
+@keyframes slideUp {
+    0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0)
+    }
+}
+
+#game p,
+.page h1,
+.page h2,
+.page h3,
+.page h4,
+.page h5,
+.page h6,
+.page td,
+.page th,
+.page span {
+    font-family: "Press Start 2P";
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-transform: uppercase
+}
+
+#player {
+    color: #fff;
+    font-family: "Press Start 2P"
+}
+
+#player h1 {
+    color: #fff;
+    font-family: "Press Start 2P"
+}
+
+#bombintern-container-top {
+    height: 1px
+}
+
+.bombintern-rule {
+    font-size: 95%;
+    text-transform: inherit
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    text-align: center
+}
+
+.bombintern-page {
+    overflow-y: auto
+}
+
+.logo-image {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.logo-image img {
+    display: block;
+    width: 80%;
+    padding: 5%
+}
+
+.button-bombintern {
+    color: #fff;
+    background: #000;
+    margin: 5px 0px;
+    padding: 15px;
+    font-family: "Press Start 2P";
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.button-bombintern:hover {
+    color: #fff;
+    background: #000;
+    border-top-color: #fff
+}
+
+.button-bombintern:active {
+    background: #fff;
+    color: #000
+}
+
+.button-bombintern span {
+    color: #fff;
+    white-space: normal
+}
+
+.bombintern-keypadbomb-button,
+.bombintern-coffeebomb-button {
+    padding: 20px
+}
+
+.image-button-bombintern {
+    width: 50px;
+    height: 50px;
+    background-color: #000
+}
+
+.image-button-bombinterns {
+    width: 65px;
+    height: 50px;
+    border-radius: 5px
+}
+
+.image-button-bombinterns-wrapper {
+    display: inline-block;
+    margin: 0% 2%
+}
+
+.player-content-bombintern {
+    float: none;
+    display: inline-block
+}
+
+.player-name-bombintern {
+    display: inline-block;
+    margin: 0% 2%;
+    width: 170px;
+    text-transform: uppercase;
+    vertical-align: 50%
+}
+
+.player-name-bombintern p {
+    margin: 0%
+}
+
+#leftButton {
+    margin-left: 7%
+}
+
+#rightButton {
+    margin-right: 7%
+}
+
+.rules-folder {
+    background-color: #cda470;
+    padding: 2% 2% 1% 2%;
+    border-radius: 15px;
+    margin-bottom: 2%
+}
+
+.rules-folder-tab {
+    width: 30%;
+    background-color: #cda470;
+    margin: 2% 10% 0% 10%;
+    border-radius: 10px 10px 0px 0px;
+    padding: 1% 1% 0% 1%
+}
+
+.rules-page {
+    background-color: #fff;
+    text-align: left;
+    padding: 2%;
+    margin: 2%
+}
+
+.bomb-header {
+    margin: 1% auto 0% auto;
+    font-size: 110%
+}
+
+#button-header {
+    width: 80%;
+    margin-bottom: 1%
+}
+
+#brew-header {
+    margin-top: 5%
+}
+
+.bombinterns-ingredient-controls {
+    margin-top: 2%;
+    width: 50%;
+    display: inline-block
+}
+
+.bombinterns-ingredient-count {
+    margin: 0% 1%
+}
+
+.copier-rule-page {
+    background-color: #e6ceaf
+}
+
+.copier-rule {
+    text-align: left;
+    vertical-align: middle;
+    display: table-cell;
+    margin-left: 5px
+}
+
+.copier-icon {
+    display: table-cell
+}
+
+.copier-icon img {
+    height: 50%;
+    padding: 2%;
+    margin-right: 10px
+}
+
+.copier-control-image {
+    margin-top: 7%
+}
+
+.copier-control-image img {
+    width: 60%;
+    max-width: 150px
+}
+
+.bombintern-copier-control {
+    width: 50%;
+    display: inline-block;
+    padding-left: 2%;
+    padding-right: 2%
+}
+
+@media screen and (max-width: 400px) {
+    .rules-folder {
+        background-color: #cda470;
+        padding: 2%;
+        border-radius: 15px;
+        margin-bottom: 3%;
+        padding-top: .5%
+    }
+
+    .rules-folder-tab {
+        width: 65%;
+        background-color: #cda470;
+        margin: 2% 0% 0% 8%;
+        border-radius: 10px 10px 0px 0px;
+        padding: 1% 1% 0% 1%
+    }
+
+    .rules-page {
+        padding: 4%;
+        margin: 6%
+    }
+
+    .image-button-bombinterns {
+        width: 55px;
+        height: 40px;
+        border-radius: 5px
+    }
+
+    #leftButton {
+        margin-left: 2%
+    }
+
+    #rightButton {
+        margin-right: 2%
+    }
+
+    .bombintern-rule {
+        font-size: 80%;
+        text-transform: inherit
+    }
+
+    .bomb-header {
+        margin: 1% auto 0% auto;
+        font-size: 90%
+    }
+
+    #instruction-header {
+        margin-top: 2%
+    }
+
+    #button-header {
+        width: 80%;
+        margin-bottom: 2%;
+        margin-top: 5%
+    }
+
+    .bombintern-coffeebomb-button {
+        padding: 18px
+    }
+
+    .bombintern-copier-control {
+        font-size: 80%
+    }
+}
+
+@media(min-width: 400px) {
+    .player-name-bombintern {
+        top: 50%;
+        transform: translateY(-50%)
+    }
+}
+
+@media(min-width: 800px) {
+    .logo-image img {
+        width: 500px
+    }
+}
+
+@media(max-width: 500px) {
+    .player-name-bombintern {
+        vertical-align: 50%
+    }
+}
+
+@media(min-width: 990px) {
+    .rules-page {
+        padding: 10px;
+        margin: 10px
+    }
+
+    .rules-folder {
+        padding: 10px
+    }
+
+    .bombinterns-ingredient-count {
+        margin: 0% 5%
+    }
+}
+
+/*# sourceMappingURL=3191.css.map*/
