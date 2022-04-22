@@ -34,7 +34,7 @@
                     artifact: Object
                 },
                 i18n: {
-                    messages: i.j
+                    messages: i.s
                 },
                 computed: {
                     link() {
@@ -254,8 +254,8 @@
                 }, [e._v("\n            Submit\n        ")])], 1)])
             };
             u._withStripped = !0;
-            var p = s(23178),
-                h = s(33958),
+            var p = s(44285),
+                h = s(55507),
                 f = s(89446),
                 v = function() {
                     var e = this,
@@ -743,8 +743,8 @@
                     c((a = a.apply(e, t || [])).next())
                 }))
             };
-            const j = ["#9D53BE", "#2A63D9", "#78786A"],
-                L = n().extend({
+            const L = ["#9D53BE", "#2A63D9", "#78786A"],
+                j = n().extend({
                     components: {
                         draggable: R(),
                         TopBar: T,
@@ -825,7 +825,7 @@
                             const e = this.info.color;
                             return {
                                 backgroundColor: e,
-                                color: j.includes(e) ? "var(--highlight)" : "var(--text)",
+                                color: L.includes(e) ? "var(--highlight)" : "var(--text)",
                                 border: `2px solid ${e}`
                             }
                         }
@@ -867,7 +867,7 @@
                         }
                     }
                 });
-            var B = (0, c.Z)(L, P, [], !1, null, null, null);
+            var B = (0, c.Z)(j, P, [], !1, null, null, null);
             B.options.__file = "src/games/pp8/apply-yourself/views/player/Lobby.vue";
             const N = B.exports;
             var F = function() {
@@ -3428,4 +3428,4 @@
         }
     }
 ]);
-//# sourceMappingURL=4872.14c764f839aa072be5c0.js.map
+//# sourceMappingURL=sourcemaps/4872.af8c665b6be4b6980528.js.map

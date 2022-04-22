@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("pushthebutton/post-banner.tjpp7_banner-image.png")
+    background-image: url("pushthebutton/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("pushthebutton/post-banner.tjpp6_banner-image.png")
+    background-image: url("pushthebutton/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -918,52 +918,52 @@ li>a.button-color.active[data-color="#000000"] {
 
 .pushthebutton .avatar.Avatar1,
 .pushthebutton .playerIcon.Avatar1 {
-    background-image: url("pushthebutton/pushthebutton_avatar.Avatar1.png")
+    background-image: url("pushthebutton/pushthebutton_avatar_Avatar1.png")
 }
 
 .pushthebutton .avatar.Avatar2,
 .pushthebutton .playerIcon.Avatar2 {
-    background-image: url("pushthebutton/pushthebutton_avatar.Avatar2.png")
+    background-image: url("pushthebutton/pushthebutton_avatar_Avatar2.png")
 }
 
 .pushthebutton .avatar.Avatar3,
 .pushthebutton .playerIcon.Avatar3 {
-    background-image: url("pushthebutton/pushthebutton_avatar.Avatar3.png")
+    background-image: url("pushthebutton/pushthebutton_avatar_Avatar3.png")
 }
 
 .pushthebutton .avatar.Avatar4,
 .pushthebutton .playerIcon.Avatar4 {
-    background-image: url("pushthebutton/pushthebutton_avatar.Avatar4.png")
+    background-image: url("pushthebutton/pushthebutton_avatar_Avatar4.png")
 }
 
 .pushthebutton .avatar.Avatar5,
 .pushthebutton .playerIcon.Avatar5 {
-    background-image: url("pushthebutton/pushthebutton_avatar.Avatar5.png")
+    background-image: url("pushthebutton/pushthebutton_avatar_Avatar5.png")
 }
 
 .pushthebutton .avatar.Avatar6,
 .pushthebutton .playerIcon.Avatar6 {
-    background-image: url("pushthebutton/pushthebutton_avatar.Avatar6.png")
+    background-image: url("pushthebutton/pushthebutton_avatar_Avatar6.png")
 }
 
 .pushthebutton .avatar.Avatar7,
 .pushthebutton .playerIcon.Avatar7 {
-    background-image: url("pushthebutton/pushthebutton_avatar.Avatar7.png")
+    background-image: url("pushthebutton/pushthebutton_avatar_Avatar7.png")
 }
 
 .pushthebutton .avatar.Avatar8,
 .pushthebutton .playerIcon.Avatar8 {
-    background-image: url("pushthebutton/pushthebutton_avatar.Avatar8.png")
+    background-image: url("pushthebutton/pushthebutton_avatar_Avatar8.png")
 }
 
 .pushthebutton .avatar.Avatar9,
 .pushthebutton .playerIcon.Avatar9 {
-    background-image: url("pushthebutton/pushthebutton_avatar.Avatar9.png")
+    background-image: url("pushthebutton/pushthebutton_avatar_Avatar9.png")
 }
 
 .pushthebutton .avatar.Avatar10,
 .pushthebutton .playerIcon.Avatar10 {
-    background-image: url("pushthebutton/pushthebutton_avatar.Avatar10.png")
+    background-image: url("pushthebutton/pushthebutton_avatar_Avatar10.png")
 }
 
 .pushthebutton .button-group {
@@ -2525,7 +2525,7 @@ li>a.button-color.active[data-color="#000000"] {
     left: 2px;
     width: 46px;
     height: 62px;
-    background: url("pushthebutton/pushthebutton_glitched.glitch-sketch_after.gif");
+    background: url("pushthebutton/pushthebutton_glitched_glitch-sketch_after.gif");
     background-size: cover
 }
 
@@ -2992,11 +2992,11 @@ li>a.button-color.active[data-color="#000000"] {
 }
 
 .pushthebutton .Probe .hack-button.other {
-    background-image: url("pushthebutton/pushthebutton_Probe_hack-button.other.png")
+    background-image: url("pushthebutton/pushthebutton_Probe_hack-button_other.png")
 }
 
 .pushthebutton .Probe .hack-button.decoy {
-    background-image: url("pushthebutton/pushthebutton_Probe_hack-button.decoy.png");
+    background-image: url("pushthebutton/pushthebutton_Probe_hack-button_decoy.png");
     background-size: 40px 44px;
     pointer-events: none
 }
@@ -3006,7 +3006,7 @@ li>a.button-color.active[data-color="#000000"] {
 }
 
 .pushthebutton .Probe .hack-button.disabled {
-    background-image: url("pushthebutton/pushthebutton_Probe_hack-button.disabled.png");
+    background-image: url("pushthebutton/pushthebutton_Probe_hack-button_disabled.png");
     background-size: 40px 44px;
     pointer-events: none
 }
@@ -3093,7 +3093,7 @@ li>a.button-color.active[data-color="#000000"] {
 
 .pushthebutton .Probe .probe-player.alien .detail-button .count {
     padding: 0 30px 0 75px;
-    background-image: url("pushthebutton/pushthebutton_Probe_probe-player.alien_detail-button_count.png");
+    background-image: url("pushthebutton/pushthebutton_Probe_probe-player_alien_detail-button_count.png");
     background-size: 12px 12px;
     background-position: 60px 2px;
     background-repeat: no-repeat
@@ -3202,7 +3202,7 @@ li>a.button-color.active[data-color="#000000"] {
 
 .pushthebutton .Probe .probe-detail.alien .count {
     padding: 0 30px 10px 79px;
-    background-image: url("pushthebutton/pushthebutton_Probe_probe-player.alien_detail-button_count.png");
+    background-image: url("pushthebutton/pushthebutton_Probe_probe-player_alien_detail-button_count.png");
     background-size: 12px 12px;
     background-position: 64px 2px;
     background-repeat: no-repeat
@@ -3304,7 +3304,7 @@ li>a.button-color.active[data-color="#000000"] {
     left: 30px;
     bottom: 2px;
     height: 20px;
-    background-image: url("pushthebutton/pushthebutton_Probe_probe-player.alien_detail-button_count.png");
+    background-image: url("pushthebutton/pushthebutton_Probe_probe-player_alien_detail-button_count.png");
     background-size: contain
 }
 
@@ -3883,11 +3883,11 @@ li>a.button-color.active[data-color="#000000"] {
 }
 
 .pushthebutton .GameOver.alien .image {
-    background-image: url("pushthebutton/pushthebutton_GameOver.alien_image.png")
+    background-image: url("pushthebutton/pushthebutton_GameOver_alien_image.png")
 }
 
 .pushthebutton .GameOver.human .image {
-    background-image: url("pushthebutton/pushthebutton_GameOver.human_image.png")
+    background-image: url("pushthebutton/pushthebutton_GameOver_human_image.png")
 }
 
 @keyframes game-over {
@@ -4247,4 +4247,4 @@ li>a.button-color.active[data-color="#000000"] {
     }
 }
 
-/*# sourceMappingURL=8428.css.map*/
+/*# sourceMappingURL=sourcemaps/8428.css.map*/

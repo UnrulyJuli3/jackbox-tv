@@ -51,7 +51,7 @@
                     }
                 },
                 S = (t, e) => {
-                    if (!/[^\u00A1\u0020-\u0022\u0024-\u0029\u002B-\u002F\u003A-\u007E\u00BF-\u00FF’]/gi.test(t)) return e && t && t.length > e && (t = t.substr(0, e)), {
+                    if (!/[^\u00A1\u0020-\u0022\u0024-\u0029\u002B-\u002F\u003A-\u007E\u00BF-\u00FF’]/gi.test(t)) return e && t && t.length > e && (t = t.substring(0, e)), {
                         result: t,
                         charCount: t.length
                     };
@@ -652,4 +652,4 @@
         }
     }
 ]);
-//# sourceMappingURL=6088.14e204b7308c378fa60a.js.map
+//# sourceMappingURL=sourcemaps/6088.4d3df3ab7f40fb54ce58.js.map

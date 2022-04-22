@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("everyday/post-banner.tjpp7_banner-image.png")
+    background-image: url("everyday/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("everyday/post-banner.tjpp6_banner-image.png")
+    background-image: url("everyday/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -1233,7 +1233,7 @@ li>a.button-color.active[data-color="#000000"] {
     width: 60px;
     height: 60px;
     background: #000;
-    background-image: url("everyday/everyday_mechanic_button.leave.png");
+    background-image: url("everyday/everyday_mechanic_button_leave.png");
     background-size: 35px 35px;
     background-repeat: no-repeat;
     background-position: center;
@@ -1245,7 +1245,7 @@ li>a.button-color.active[data-color="#000000"] {
 
 .everyday .mechanic button.leave.back,
 .everyday .mechanic button.close-button.back {
-    background-image: url("everyday/everyday_mechanic_button.leave.back.png")
+    background-image: url("everyday/everyday_mechanic_button_leave_back.png")
 }
 
 .everyday .mechanic button.leave:focus,
@@ -1379,7 +1379,7 @@ li>a.button-color.active[data-color="#000000"] {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("everyday/everyday_gather.captain_item.selected_after.png")
+    background-image: url("everyday/everyday_gather_captain_item_selected_after.png")
 }
 
 .everyday .gather.captain .extra-title {
@@ -1466,7 +1466,7 @@ li>a.button-color.active[data-color="#000000"] {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("everyday/everyday_gather.captain_item.selected_after.png")
+    background-image: url("everyday/everyday_gather_captain_item_selected_after.png")
 }
 
 .everyday .gather.participant .item.back {
@@ -1538,7 +1538,7 @@ li>a.button-color.active[data-color="#000000"] {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("everyday/everyday_gather.captain_item.selected_after.png")
+    background-image: url("everyday/everyday_gather_captain_item_selected_after.png")
 }
 
 @media(max-width: 360px) {
@@ -1740,7 +1740,7 @@ li>a.button-color.active[data-color="#000000"] {
 }
 
 .everyday .phone .phonebook button.close-button {
-    background-image: url("everyday/everyday_mechanic_button.leave.back.png")
+    background-image: url("everyday/everyday_mechanic_button_leave_back.png")
 }
 
 .everyday .phone .handset {
@@ -1959,7 +1959,7 @@ li>a.button-color.active[data-color="#000000"] {
 
 .everyday .dialog .comment.npc .avatar {
     background-size: 900% 100%;
-    background-image: url("everyday/everyday_dialog_comment.npc_avatar.png");
+    background-image: url("everyday/everyday_dialog_comment_npc_avatar.png");
     top: -12px;
     left: -25px;
     width: 45px;
@@ -4429,7 +4429,7 @@ li>a.button-color.active[data-color="#000000"] {
 }
 
 .everyday .result .particles .particle.star {
-    background-image: url("everyday/everyday_result_particles_particle.star.png")
+    background-image: url("everyday/everyday_result_particles_particle_star.png")
 }
 
 .everyday .result .particles .particle.particle-0 {
@@ -5516,119 +5516,119 @@ li>a.button-color.active[data-color="#000000"] {
 }
 
 .everyday .find .item.marbles {
-    background-image: url("everyday/everyday_find_item.marbles.png")
+    background-image: url("everyday/everyday_find_item_marbles.png")
 }
 
 .everyday .find .item.socket_wrench {
-    background-image: url("everyday/everyday_find_item.socket_wrench.png")
+    background-image: url("everyday/everyday_find_item_socket_wrench.png")
 }
 
 .everyday .find .item.socks {
-    background-image: url("everyday/everyday_find_item.socks.png")
+    background-image: url("everyday/everyday_find_item_socks.png")
 }
 
 .everyday .find .item.drawings {
-    background-image: url("everyday/everyday_find_item.drawings.png")
+    background-image: url("everyday/everyday_find_item_drawings.png")
 }
 
 .everyday .find .item.shirts {
-    background-image: url("everyday/everyday_find_item.shirts.png")
+    background-image: url("everyday/everyday_find_item_shirts.png")
 }
 
 .everyday .find .item.noodle {
-    background-image: url("everyday/everyday_find_item.noodle.png")
+    background-image: url("everyday/everyday_find_item_noodle.png")
 }
 
 .everyday .find .item.animals {
-    background-image: url("everyday/everyday_find_item.animals.png")
+    background-image: url("everyday/everyday_find_item_animals.png")
 }
 
 .everyday .find .item.keys {
-    background-image: url("everyday/everyday_find_item.keys.png")
+    background-image: url("everyday/everyday_find_item_keys.png")
 }
 
 .everyday .find .item.tools {
-    background-image: url("everyday/everyday_find_item.tools.png")
+    background-image: url("everyday/everyday_find_item_tools.png")
 }
 
 .everyday .find .item.birds {
-    background-image: url("everyday/everyday_find_item.birds.png")
+    background-image: url("everyday/everyday_find_item_birds.png")
 }
 
 .everyday .find .item.nice_shirt {
-    background-image: url("everyday/everyday_find_item.nice_shirt.png")
+    background-image: url("everyday/everyday_find_item_nice_shirt.png")
 }
 
 .everyday .find .item.poster {
-    background-image: url("everyday/everyday_find_item.poster.png")
+    background-image: url("everyday/everyday_find_item_poster.png")
 }
 
 .everyday .find .item.club {
-    background-image: url("everyday/everyday_find_item.club.png")
+    background-image: url("everyday/everyday_find_item_club.png")
 }
 
 .everyday .find .item.hat {
-    background-image: url("everyday/everyday_find_item.hat.png")
+    background-image: url("everyday/everyday_find_item_hat.png")
 }
 
 .everyday .find .item.book {
-    background-image: url("everyday/everyday_find_item.book.png")
+    background-image: url("everyday/everyday_find_item_book.png")
 }
 
 .everyday .find .item.shoes {
-    background-image: url("everyday/everyday_find_item.shoes.png")
+    background-image: url("everyday/everyday_find_item_shoes.png")
 }
 
 .everyday .find .item.batteries {
-    background-image: url("everyday/everyday_find_item.batteries.png")
+    background-image: url("everyday/everyday_find_item_batteries.png")
 }
 
 .everyday .find .item.earrings {
-    background-image: url("everyday/everyday_find_item.earrings.png")
+    background-image: url("everyday/everyday_find_item_earrings.png")
 }
 
 .everyday .find .item.controller {
-    background-image: url("everyday/everyday_find_item.controller.png")
+    background-image: url("everyday/everyday_find_item_controller.png")
 }
 
 .everyday .find .item.asprin {
-    background-image: url("everyday/everyday_find_item.asprin.png")
+    background-image: url("everyday/everyday_find_item_asprin.png")
 }
 
 .everyday .find .item.light_bulbs {
-    background-image: url("everyday/everyday_find_item.light_bulbs.png")
+    background-image: url("everyday/everyday_find_item_light_bulbs.png")
 }
 
 .everyday .find .item.remotes {
-    background-image: url("everyday/everyday_find_item.remotes.png")
+    background-image: url("everyday/everyday_find_item_remotes.png")
 }
 
 .everyday .find .item.chairs {
-    background-image: url("everyday/everyday_find_item.chairs.png")
+    background-image: url("everyday/everyday_find_item_chairs.png")
 }
 
 .everyday .find .item.ties {
-    background-image: url("everyday/everyday_find_item.ties.png")
+    background-image: url("everyday/everyday_find_item_ties.png")
 }
 
 .everyday .find .item.wallet_cards {
-    background-image: url("everyday/everyday_find_item.wallet_cards.png")
+    background-image: url("everyday/everyday_find_item_wallet_cards.png")
 }
 
 .everyday .find .item.bags {
-    background-image: url("everyday/everyday_find_item.bags.png")
+    background-image: url("everyday/everyday_find_item_bags.png")
 }
 
 .everyday .find .item.toys {
-    background-image: url("everyday/everyday_find_item.toys.png")
+    background-image: url("everyday/everyday_find_item_toys.png")
 }
 
 .everyday .find .item.swim_suit {
-    background-image: url("everyday/everyday_find_item.swim_suit.png")
+    background-image: url("everyday/everyday_find_item_swim_suit.png")
 }
 
 .everyday .find .item.beret {
-    background-image: url("everyday/everyday_find_item.beret.png")
+    background-image: url("everyday/everyday_find_item_beret.png")
 }
 
 .everyday .find.captain {
@@ -6775,7 +6775,7 @@ li>a.button-color.active[data-color="#000000"] {
     position: absolute;
     width: 1480px;
     height: 2280px;
-    background: url("everyday/everyday_travel.captain_map.png");
+    background: url("everyday/everyday_travel_captain_map.png");
     background-size: 100% 100%;
     background-position: center center;
     overflow: hidden
@@ -6789,7 +6789,7 @@ li>a.button-color.active[data-color="#000000"] {
     top: 50%;
     margin-top: -68px;
     margin-left: -75px;
-    background: url("everyday/everyday_travel.captain_car.png");
+    background: url("everyday/everyday_travel_captain_car.png");
     background-size: cover;
     animation: car-captain .15s linear infinite
 }
@@ -6802,7 +6802,7 @@ li>a.button-color.active[data-color="#000000"] {
     height: 60px;
     margin-top: -30px;
     margin-left: -30px;
-    background: url("everyday/everyday_travel.captain_destination.png");
+    background: url("everyday/everyday_travel_captain_destination.png");
     background-size: cover
 }
 
@@ -6867,7 +6867,7 @@ li>a.button-color.active[data-color="#000000"] {
     left: 0;
     width: 740px;
     height: 1140px;
-    background: url("everyday/everyday_travel.captain_map.png");
+    background: url("everyday/everyday_travel_captain_map.png");
     background-size: 100% 100%;
     background-position: center center;
     transition: transform .5s .25s linear
@@ -6881,7 +6881,7 @@ li>a.button-color.active[data-color="#000000"] {
     height: 70px;
     margin-top: -35px;
     margin-left: -35px;
-    background: url("everyday/everyday_travel.captain_car.png");
+    background: url("everyday/everyday_travel_captain_car.png");
     background-size: cover;
     animation: move 1.5s ease-in-out forwards, car-participant .15s linear infinite
 }
@@ -6894,7 +6894,7 @@ li>a.button-color.active[data-color="#000000"] {
     height: 30px;
     margin-top: -15px;
     margin-left: -15px;
-    background: url("everyday/everyday_travel.captain_destination.png");
+    background: url("everyday/everyday_travel_captain_destination.png");
     background-size: cover
 }
 
@@ -6994,4 +6994,4 @@ li>a.button-color.active[data-color="#000000"] {
     }
 }
 
-/*# sourceMappingURL=9725.css.map*/
+/*# sourceMappingURL=sourcemaps/9725.css.map*/

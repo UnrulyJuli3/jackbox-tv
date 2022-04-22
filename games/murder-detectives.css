@@ -388,31 +388,6 @@
     }
 }
 
-.lobby .action {
-    width: 100%
-}
-
-.artifact-link {
-    display: inline-block;
-    width: 100%
-}
-
-.artifact-link.no-content {
-    padding-bottom: 50%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat
-}
-
-.artifact-link[data-v-57793e1c] {
-    background-image: url("murder-detectives/artifact-link[data-v-57793e1c].png")
-}
-
-.post-game .action {
-    width: 100%;
-    margin-bottom: 10px
-}
-
 .choosing {
     height: 100%;
     padding-bottom: 100px
@@ -453,7 +428,7 @@
     position: absolute;
     width: 25px;
     height: 25px;
-    background-image: url("murder-detectives/choosing_choices_choice.hasMagnifyingGlass__after.png");
+    background-image: url("murder-detectives/choosing_choices_choice_hasMagnifyingGlass__after.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -538,7 +513,7 @@ button {
 }
 
 .drawing .folder.draw {
-    background-image: url("murder-detectives/drawing_folder.draw.png")
+    background-image: url("murder-detectives/drawing_folder_draw.png")
 }
 
 .drawing .folder .controls {
@@ -562,6 +537,65 @@ button {
 
 .drawing .stage canvas {
     background-color: #fff
+}
+
+.warning {
+    height: 230px
+}
+
+.nippleContainer {
+    background-color: #ccc;
+    background-image: url("murder-detectives/nippleContainer.png");
+    background-size: 100% 100%;
+    border: 3px solid #000;
+    border-radius: 6px;
+    position: relative;
+    height: 230px
+}
+
+.nippleContainer.numPlayers4 {
+    background-image: url("murder-detectives/nippleContainer.png")
+}
+
+.nippleContainer.numPlayers5 {
+    background-image: url("murder-detectives/nippleContainer_numPlayers5.png")
+}
+
+.nippleContainer.numPlayers6 {
+    background-image: url("murder-detectives/nippleContainer_numPlayers6.png")
+}
+
+.nippleContainer.numPlayers7 {
+    background-image: url("murder-detectives/nippleContainer_numPlayers7.png")
+}
+
+.nippleContainer.numPlayers8 {
+    background-image: url("murder-detectives/nippleContainer_numPlayers8.png")
+}
+
+.lobby .action {
+    width: 100%
+}
+
+.artifact-link {
+    display: inline-block;
+    width: 100%
+}
+
+.artifact-link.no-content {
+    padding-bottom: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.artifact-link[data-v-57793e1c] {
+    background-image: url("murder-detectives/artifact-link[data-v-57793e1c].png")
+}
+
+.post-game .action {
+    width: 100%;
+    margin-bottom: 10px
 }
 
 .soundboard {
@@ -677,40 +711,6 @@ button {
     transform: scale(0.9)
 }
 
-.warning {
-    height: 230px
-}
-
-.nippleContainer {
-    background-color: #ccc;
-    background-image: url("murder-detectives/nippleContainer.png");
-    background-size: 100% 100%;
-    border: 3px solid #000;
-    border-radius: 6px;
-    position: relative;
-    height: 230px
-}
-
-.nippleContainer.numPlayers4 {
-    background-image: url("murder-detectives/nippleContainer.png")
-}
-
-.nippleContainer.numPlayers5 {
-    background-image: url("murder-detectives/nippleContainer.numPlayers5.png")
-}
-
-.nippleContainer.numPlayers6 {
-    background-image: url("murder-detectives/nippleContainer.numPlayers6.png")
-}
-
-.nippleContainer.numPlayers7 {
-    background-image: url("murder-detectives/nippleContainer.numPlayers7.png")
-}
-
-.nippleContainer.numPlayers8 {
-    background-image: url("murder-detectives/nippleContainer.numPlayers8.png")
-}
-
 .waiting {
     display: flex;
     flex-flow: column nowrap;
@@ -751,12 +751,12 @@ button {
 }
 
 .waiting .icon.Murderer {
-    background-image: url("murder-detectives/waiting_icon.Murderer.png")
+    background-image: url("murder-detectives/waiting_icon_Murderer.png")
 }
 
 .waiting .icon.Detective,
 .waiting .icon.DetectiveUnrevealed {
-    background-image: url("murder-detectives/waiting_icon.Detective.png")
+    background-image: url("murder-detectives/waiting_icon_Detective.png")
 }
 
 .waiting .prompt {
@@ -852,23 +852,23 @@ button {
 }
 
 .tutorial .image.tutorial-0 {
-    background-image: url("murder-detectives/tutorial_image.tutorial-0.jpg")
+    background-image: url("murder-detectives/tutorial_image_tutorial-0.jpg")
 }
 
 .tutorial .image.tutorial-1 {
-    background-image: url("murder-detectives/tutorial_image.tutorial-1.jpg")
+    background-image: url("murder-detectives/tutorial_image_tutorial-1.jpg")
 }
 
 .tutorial .image.tutorial-2 {
-    background-image: url("murder-detectives/tutorial_image.tutorial-2.jpg")
+    background-image: url("murder-detectives/tutorial_image_tutorial-2.jpg")
 }
 
 .tutorial .image.tutorial-3 {
-    background-image: url("murder-detectives/tutorial_image.tutorial-3.jpg")
+    background-image: url("murder-detectives/tutorial_image_tutorial-3.jpg")
 }
 
 .tutorial .image.tutorial-4 {
-    background-image: url("murder-detectives/tutorial_image.tutorial-4.jpg")
+    background-image: url("murder-detectives/tutorial_image_tutorial-4.jpg")
 }
 
 .detectives {
@@ -923,7 +923,7 @@ button {
     content: "";
     width: 64px;
     height: 64px;
-    background-image: url("murder-detectives/detectives_header.avatar_after.png");
+    background-image: url("murder-detectives/detectives_header_avatar_after.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -934,39 +934,39 @@ button {
 }
 
 .detectives .header.Avatar0::after {
-    background-image: url("murder-detectives/detectives_header.Avatar0_after.png")
+    background-image: url("murder-detectives/detectives_header_Avatar0_after.png")
 }
 
 .detectives .header.Avatar1::after {
-    background-image: url("murder-detectives/detectives_header.Avatar1_after.png")
+    background-image: url("murder-detectives/detectives_header_Avatar1_after.png")
 }
 
 .detectives .header.Avatar2::after {
-    background-image: url("murder-detectives/detectives_header.Avatar2_after.png")
+    background-image: url("murder-detectives/detectives_header_Avatar2_after.png")
 }
 
 .detectives .header.Avatar3::after {
-    background-image: url("murder-detectives/detectives_header.Avatar3_after.png")
+    background-image: url("murder-detectives/detectives_header_Avatar3_after.png")
 }
 
 .detectives .header.Avatar4::after {
-    background-image: url("murder-detectives/detectives_header.Avatar4_after.png")
+    background-image: url("murder-detectives/detectives_header_Avatar4_after.png")
 }
 
 .detectives .header.Avatar5::after {
-    background-image: url("murder-detectives/detectives_header.Avatar5_after.png")
+    background-image: url("murder-detectives/detectives_header_Avatar5_after.png")
 }
 
 .detectives .header.Avatar6::after {
-    background-image: url("murder-detectives/detectives_header.Avatar6_after.png")
+    background-image: url("murder-detectives/detectives_header_Avatar6_after.png")
 }
 
 .detectives .header.Avatar7::after {
-    background-image: url("murder-detectives/detectives_header.Avatar7_after.png")
+    background-image: url("murder-detectives/detectives_header_Avatar7_after.png")
 }
 
 .detectives .header.AvatarAud::after {
-    background-image: url("murder-detectives/detectives_header.avatar_after.png")
+    background-image: url("murder-detectives/detectives_header_avatar_after.png")
 }
 
 .detectives .prompt,
@@ -1107,7 +1107,7 @@ body::after {
     height: 0;
     overflow: hidden;
     z-index: -1;
-    content: url("murder-detectives/body_after.png") url("murder-detectives/drawing_folder.png") url("murder-detectives/body_after_2.png") url("murder-detectives/drawing_folder.draw.png") url("murder-detectives/body_after_3.png") url("murder-detectives/body_after_4.png") url("murder-detectives/body_after_5.png") url("murder-detectives/body_after_6.png") url("murder-detectives/body_after_7.png") url("murder-detectives/body_after_8.png") url("murder-detectives/body_after_9.png") url("murder-detectives/body_after_10.png") url("murder-detectives/body_after_11.svg") url("murder-detectives/waiting_icon.Detective.png") url("murder-detectives/waiting_icon.Murderer.png") url("murder-detectives/artifact-link[data-v-57793e1c].png") url("murder-detectives/body_after_12.png") url("murder-detectives/nippleContainer.png") url("murder-detectives/nippleContainer.numPlayers5.png") url("murder-detectives/nippleContainer.numPlayers6.png") url("murder-detectives/nippleContainer.numPlayers7.png") url("murder-detectives/nippleContainer.numPlayers8.png") url("murder-detectives/detectives.png")
+    content: url("murder-detectives/body_after.png") url("murder-detectives/drawing_folder.png") url("murder-detectives/body_after_2.png") url("murder-detectives/drawing_folder_draw.png") url("murder-detectives/body_after_3.png") url("murder-detectives/body_after_4.png") url("murder-detectives/body_after_5.png") url("murder-detectives/body_after_6.png") url("murder-detectives/body_after_7.png") url("murder-detectives/body_after_8.png") url("murder-detectives/body_after_9.png") url("murder-detectives/body_after_10.png") url("murder-detectives/body_after_11.svg") url("murder-detectives/waiting_icon_Detective.png") url("murder-detectives/waiting_icon_Murderer.png") url("murder-detectives/artifact-link[data-v-57793e1c].png") url("murder-detectives/body_after_12.png") url("murder-detectives/nippleContainer.png") url("murder-detectives/nippleContainer_numPlayers5.png") url("murder-detectives/nippleContainer_numPlayers6.png") url("murder-detectives/nippleContainer_numPlayers7.png") url("murder-detectives/nippleContainer_numPlayers8.png") url("murder-detectives/detectives.png")
 }
 
-/*# sourceMappingURL=8274.css.map*/
+/*# sourceMappingURL=sourcemaps/8274.css.map*/

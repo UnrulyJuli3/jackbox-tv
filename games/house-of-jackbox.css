@@ -88,7 +88,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("house-of-jackbox/post-banner.tjpp7_banner-image.png")
+    background-image: url("house-of-jackbox/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -106,7 +106,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("house-of-jackbox/post-banner.tjpp6_banner-image.png")
+    background-image: url("house-of-jackbox/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -986,7 +986,7 @@ li>a.button-color.active[data-color="#000000"] {
 
 .house-of-jackbox .Fibbage.MakeSingleChoice .choices .choice-button {
     color: #000;
-    background: #fcffd4 url("house-of-jackbox/house-of-jackbox_Fibbage.MakeSingleChoice_choices_choice-button.png");
+    background: #fcffd4 url("house-of-jackbox/house-of-jackbox_Fibbage_MakeSingleChoice_choices_choice-button.png");
     background-size: 100% 100%;
     padding: 10px 25px
 }
@@ -1004,7 +1004,7 @@ li>a.button-color.active[data-color="#000000"] {
     background-color: #fff;
     background-clip: padding-box;
     border: 10px solid #000;
-    border-image: url("house-of-jackbox/house-of-jackbox_Drawful.MakeSingleChoice_button.button.png") 10;
+    border-image: url("house-of-jackbox/house-of-jackbox_Drawful_MakeSingleChoice_button_button.png") 10;
     border-image-repeat: round;
     font-family: "typewriter_serialbold", serif;
     text-transform: lowercase
@@ -1021,4 +1021,4 @@ li>a.button-color.active[data-color="#000000"] {
     }
 }
 
-/*# sourceMappingURL=8081.css.map*/
+/*# sourceMappingURL=sourcemaps/8081.css.map*/

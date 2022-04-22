@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("fakinit/post-banner.tjpp7_banner-image.png")
+    background-image: url("fakinit/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("fakinit/post-banner.tjpp6_banner-image.png")
+    background-image: url("fakinit/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -492,43 +492,43 @@ div.fakinit-text-instruction {
 }
 
 .fakinit-player.Shape1 {
-    background-image: url("fakinit/fakinit-player.Shape1.png")
+    background-image: url("fakinit/fakinit-player_Shape1.png")
 }
 
 .fakinit-player.Shape2 {
-    background-image: url("fakinit/fakinit-player.Shape2.png")
+    background-image: url("fakinit/fakinit-player_Shape2.png")
 }
 
 .fakinit-player.Shape3 {
-    background-image: url("fakinit/fakinit-player.Shape3.png")
+    background-image: url("fakinit/fakinit-player_Shape3.png")
 }
 
 .fakinit-player.Shape4 {
-    background-image: url("fakinit/fakinit-player.Shape4.png")
+    background-image: url("fakinit/fakinit-player_Shape4.png")
 }
 
 .fakinit-player.Shape5 {
-    background-image: url("fakinit/fakinit-player.Shape5.png")
+    background-image: url("fakinit/fakinit-player_Shape5.png")
 }
 
 .fakinit-player.Shape6 {
-    background-image: url("fakinit/fakinit-player.Shape6.png")
+    background-image: url("fakinit/fakinit-player_Shape6.png")
 }
 
 .fakinit-player.Shape7 {
-    background-image: url("fakinit/fakinit-player.Shape7.png")
+    background-image: url("fakinit/fakinit-player_Shape7.png")
 }
 
 .fakinit-player.Shape8 {
-    background-image: url("fakinit/fakinit-player.Shape8.png")
+    background-image: url("fakinit/fakinit-player_Shape8.png")
 }
 
 .fakinit-player.Shape9 {
-    background-image: url("fakinit/fakinit-player.Shape9.png")
+    background-image: url("fakinit/fakinit-player_Shape9.png")
 }
 
 .fakinit-player.Shape10 {
-    background-image: url("fakinit/fakinit-player.Shape10.png")
+    background-image: url("fakinit/fakinit-player_Shape10.png")
 }
 
 .fakinit-category-background {
@@ -951,4 +951,4 @@ button[disabled].fakinit-button {
     width: auto
 }
 
-/*# sourceMappingURL=2987.css.map*/
+/*# sourceMappingURL=sourcemaps/2987.css.map*/

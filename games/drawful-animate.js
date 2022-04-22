@@ -25,16 +25,16 @@
                 }, [t._t("default")], 2) : t._e()
             };
             i._withStripped = !0;
-            var n = s(2934),
-                a = s.n(n),
-                r = s(81127),
-                o = s(65853);
-            const l = a().extend({
+            var a = s(2934),
+                n = s.n(a),
+                o = s(81127),
+                r = s(65853);
+            const l = n().extend({
                 props: {
                     artifact: Object
                 },
                 i18n: {
-                    messages: o.j
+                    messages: r.s
                 },
                 computed: {
                     link() {
@@ -55,7 +55,7 @@
                         this.$analytics.trackEvent({
                             category: "PostGame",
                             action: "galleryClicked"
-                        }), r.Q.setAsViewed(0)
+                        }), o.Q.setAsViewed(0)
                     }
                 }
             });
@@ -66,7 +66,7 @@
         94835: (t, e, s) => {
             "use strict";
             s.d(e, {
-                Z: () => p
+                Z: () => d
             });
             var i = function() {
                 var t = this,
@@ -158,18 +158,18 @@
                 }, [t._v(t._s(t.$t("TUTORIAL.BUTTON_NEXT")))])])], 2)])
             };
             i._withStripped = !0;
-            var n = s(2934),
-                a = s.n(n),
-                r = s(78627),
-                o = s.n(r),
+            var a = s(2934),
+                n = s.n(a),
+                o = s(78627),
+                r = s.n(o),
                 l = s(65853);
-            a().use(o());
-            const c = a().extend({
+            n().use(r());
+            const c = n().extend({
                 props: {
                     slides: Array
                 },
                 i18n: {
-                    messages: l.j
+                    messages: l.s
                 },
                 data: () => ({
                     currentIndex: 0
@@ -208,7 +208,7 @@
             });
             var u = (0, s(51900).Z)(c, i, [], !1, null, "2df46cec", null);
             u.options.__file = "src/apps/vue/components/Tutorial.vue";
-            const p = u.exports
+            const d = u.exports
         },
         17819: (t, e, s) => {
             "use strict";
@@ -246,11 +246,11 @@
                 }, [t._v(t._s(t.player.submitText || "SUBMIT"))])])])])
             };
             i._withStripped = !0;
-            var n = s(2934),
-                a = s.n(n),
-                r = s(32530),
-                o = s(96486);
-            const l = a().extend({
+            var a = s(2934),
+                n = s.n(a),
+                o = s(32530),
+                r = s(96486);
+            const l = n().extend({
                 props: {
                     player: Object
                 },
@@ -269,19 +269,19 @@
                             e = this.$refs.stage,
                             s = e.getBoundingClientRect(),
                             i = e.parentElement.getBoundingClientRect(),
-                            n = Math.max(.9 * i.width, 240),
-                            a = Math.max(this.windowHeight - t.height + s.height, 240),
-                            r = this.stage.canvas.width,
-                            o = this.stage.canvas.height,
-                            l = Math.min(n / r, a / o);
+                            a = Math.max(.9 * i.width, 240),
+                            n = Math.max(this.windowHeight - t.height + s.height, 240),
+                            o = this.stage.canvas.width,
+                            r = this.stage.canvas.height,
+                            l = Math.min(a / o, n / r);
                         return {
-                            width: r * l + "px",
-                            height: o * l + "px"
+                            width: o * l + "px",
+                            height: r * l + "px"
                         }
                     }
                 },
                 mounted() {
-                    this.onResizeWithContext = (0, o.throttle)(this.onResize.bind(this), 400), window.addEventListener("resize", this.onResizeWithContext), this.setupStage()
+                    this.onResizeWithContext = (0, r.throttle)(this.onResize.bind(this), 400), window.addEventListener("resize", this.onResizeWithContext), this.setupStage()
                 },
                 beforeDestroy() {
                     window.removeEventListener("resize", this.onResizeWithContext), this.stage && this.stage.beforeDestroy()
@@ -290,7 +290,7 @@
                     setupStage() {
                         const t = this.$refs.stage,
                             e = {};
-                        this.player.size && (e.width = this.player.size.width, e.height = this.player.size.height), this.player.thicknesses && (e.thickness = this.player.thicknesses[0]), this.player.colors && (e.color = this.player.colors[0]), this.player.maxPoints && (e.maxPoints = this.player.maxPoints), this.stage = new r.U(t, e), this.stage.on("up", (() => {
+                        this.player.size && (e.width = this.player.size.width, e.height = this.player.size.height), this.player.thicknesses && (e.thickness = this.player.thicknesses[0]), this.player.colors && (e.color = this.player.colors[0]), this.player.maxPoints && (e.maxPoints = this.player.maxPoints), this.stage = new o.U(t, e), this.stage.on("up", (() => {
                             var t;
                             if (!this.player.live) return;
                             const e = (null === (t = this.stage) || void 0 === t ? void 0 : t.getObject()) || {};
@@ -312,10 +312,10 @@
             c.options.__file = "src/apps/vue/components/base/Draw.vue";
             const u = c.exports
         },
-        77782: (t, e, s) => {
+        66333: (t, e, s) => {
             "use strict";
             s.r(e), s.d(e, {
-                default: () => Wt
+                default: () => pt
             });
             var i = function() {
                 var t = this,
@@ -397,130 +397,92 @@
                 })], 1) : t._e()])
             };
             i._withStripped = !0;
-            var n = s(2934),
-                a = s.n(n),
-                r = function() {
+            var a = s(2934),
+                n = s.n(a),
+                o = function() {
                     var t = this,
                         e = t.$createElement,
-                        s = t._self._c || e;
-                    return s("div", {
-                        staticClass: "waiting",
+                        i = t._self._c || e;
+                    return i("div", {
+                        staticClass: "choosing scrollable",
                         class: {
-                            isFriendMode: t.player.isFriendMode
+                            liking: t.liking, "doubling-down": t.player.doubleDown
                         }
-                    }, [s("div", {
+                    }, [i("div", {
                         staticClass: "header",
                         domProps: {
                             textContent: t._s(t.header)
                         }
-                    }), t._v(" "), s("div", {
-                        staticClass: "constrain stacked"
-                    }, [t.player.message ? s("div", {
-                        staticClass: "message",
+                    }), t._v(" "), i("div", {
+                        staticClass: "constrain"
+                    }, [t.player.doubleDown ? i("div", {
+                        staticClass: "doubleDown"
+                    }, [i("div", {
+                        staticClass: "doubleDownPrompt",
                         domProps: {
-                            textContent: t._s(t.player.message)
+                            textContent: t._s(t.player.doubleDown.prompt)
                         }
-                    }) : t._e(), t._v(" "), s("div", {
-                        staticClass: "logo"
-                    })])])
-                };
-            r._withStripped = !0;
-            const o = a().extend({
-                props: {
-                    info: Object,
-                    player: Object
-                },
-                computed: {
-                    header() {
-                        return this.player && this.player.header ? this.player.header : this.info && this.info.name ? this.info.name : this.$ecast.name
-                    }
-                }
-            });
-            var l = s(51900),
-                c = (0, l.Z)(o, r, [], !1, null, null, null);
-            c.options.__file = "src/games/pp8/drawful-animate/views/Waiting.vue";
-            const u = c.exports;
-            var p = function() {
-                var t = this,
-                    e = t.$createElement,
-                    s = t._self._c || e;
-                return s("div", {
-                    staticClass: "lobby scrollable",
-                    class: {
-                        isFriendMode: t.player.isFriendMode
-                    }
-                }, [s("div", {
-                    staticClass: "header",
-                    domProps: {
-                        textContent: t._s(t.info.name)
-                    }
-                }), t._v(" "), s("div", {
-                    staticClass: "constrain"
-                }, [s("LobbyActions", {
-                    attrs: {
-                        player: t.player,
-                        classes: {
-                            action: "buttonBlack"
+                    }), t._v(" "), i("button", {
+                        staticClass: "choice",
+                        class: t.player.doubleDown.status,
+                        attrs: {
+                            disabled: "available" !== t.player.doubleDown.status
                         },
-                        "should-start": t.shouldStart
-                    }
-                }), t._v(" "), t.player.playerCanDoEpisodes ? s("div", [t.player.activeContentId ? s("div", [s("div", [t._v(t._s(t.player.episodeTitle))]), t._v(" "), t.player.activeContentId ? s("button", {
-                    directives: [{
-                        name: "t",
-                        rawName: "v-t",
-                        value: "LOBBY.VIP_EPISODES_UNLOAD",
-                        expression: "'LOBBY.VIP_EPISODES_UNLOAD'"
-                    }],
-                    staticClass: "buttonBlack",
-                    on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onActionEvent("ugc-unload")
+                        on: {
+                            click: function(e) {
+                                return e.preventDefault(), t.onDoubleDownClick.apply(null, arguments)
+                            }
                         }
-                    }
-                }) : t._e(), t._v(" "), t.player.playerCanReport ? s("button", {
-                    directives: [{
-                        name: "t",
-                        rawName: "v-t",
-                        value: "LOBBY.VIP_EPISODES_REPORT",
-                        expression: "'LOBBY.VIP_EPISODES_REPORT'"
-                    }],
-                    staticClass: "buttonBlack",
-                    on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onReportClick.apply(null, arguments)
+                    }, [t._v("\n                " + t._s(t.$t("CHOOSING.DOUBLEDOWN_TEXT")) + "\n                "), "used" === t.player.doubleDown.status ? i("span", {
+                        staticClass: "subheader"
+                    }, [t._v(t._s(t.$t("CHOOSING.DOUBLEDOWN_USED")))]) : "round" === t.player.doubleDown.frequency ? i("span", {
+                        staticClass: "subheader"
+                    }, [t._v(t._s(t.$t("CHOOSING.DOUBLEDOWN_PER_ROUND")))]) : "game" === t.player.doubleDown.frequency ? i("span", {
+                        staticClass: "subheader"
+                    }, [t._v(t._s(t.$t("CHOOSING.DOUBLEDOWN_PER_GAME")))]) : t._e()])]) : t._e(), t._v(" "), i("div", {
+                        staticClass: "prompt",
+                        domProps: {
+                            textContent: t._s(t.player.prompt)
                         }
-                    }
-                }) : t._e(), t._v(" "), t.player.playerCanViewAuthor ? s("button", {
-                    directives: [{
-                        name: "t",
-                        rawName: "v-t",
-                        value: "LOBBY.VIP_EPISODES_VIEW_AUTHOR",
-                        expression: "'LOBBY.VIP_EPISODES_VIEW_AUTHOR'"
-                    }],
-                    staticClass: "buttonBlack",
-                    on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onActionEvent("ugc-view-author")
+                    }), t._v(" "), i("div", {
+                        staticClass: "choices"
+                    }, t._l(t.player.choices, (function(e, s) {
+                        return i("button", {
+                            key: "choice_" + t.player.choiceId + "_" + s,
+                            staticClass: "choice",
+                            class: {
+                                buttonBlack: !t.liking, chosen: t.submittedActions.choose === s, selected: e.selected
+                            },
+                            attrs: {
+                                disabled: e.disabled || -1 !== t.submittedActions.choose
+                            },
+                            on: {
+                                click: function(e) {
+                                    return e.preventDefault(), t.submitVote(e, s, "choose")
+                                }
+                            }
+                        }, [i("span", {
+                            staticClass: "text",
+                            domProps: {
+                                textContent: t._s(e.text)
+                            }
+                        })])
+                    })), 0), t._v(" "), void 0 !== t.player.speedIndex ? i("div", {
+                        staticClass: "track"
+                    }, [i("div", {
+                        staticClass: "track-image-container",
+                        class: "speed-" + t.player.speedIndex
+                    }, [i("img", {
+                        staticClass: "track-image",
+                        attrs: {
+                            src: s(57095),
+                            alt: "speed " + t.player.speedIndex
                         }
-                    }
-                }) : t._e()]) : s("div", [s("button", {
-                    directives: [{
-                        name: "t",
-                        rawName: "v-t",
-                        value: "LOBBY.VIP_EPISODES_MENU",
-                        expression: "'LOBBY.VIP_EPISODES_MENU'"
-                    }],
-                    staticClass: "buttonBlack",
-                    on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onEpisodesClick.apply(null, arguments)
-                        }
-                    }
-                })]), t._v(" "), t.player.lastUGCResult && t.player.lastUGCResult.error ? s("div", [t._v("\n                " + t._s(t.player.lastUGCResult.error) + "\n            ")]) : t._e()]) : t._e()], 1)])
-            };
-            p._withStripped = !0;
-            var d = s(13494);
-            const h = {
+                    })])]) : t._e()])])
+                };
+            o._withStripped = !0;
+            var r = s(55507);
+            const l = {
                     LOBBY: {
                         WAIT: "sit back and relax!",
                         VIP_WAITING: "waiting for all players to join",
@@ -615,890 +577,49 @@
                         DOUBLEDOWN_TEXT: "double down?"
                     }
                 },
-                v = {
-                    en: h,
-                    fr: h,
-                    it: h,
-                    de: h,
-                    es: h
+                c = {
+                    en: l,
+                    fr: l,
+                    it: l,
+                    de: l,
+                    es: l,
+                    "es-XL": l
                 };
-            var _ = function() {
-                var t = this,
-                    e = t.$createElement,
-                    s = t._self._c || e;
-                return s("div", {
-                    staticClass: "drawful-animate episodes"
-                }, [s("button", {
-                    staticClass: "backButton buttonBlack",
-                    on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onBackClick.apply(null, arguments)
-                        }
-                    }
-                }, [t._v(t._s(t.$t("LOBBY.VIP_EPISODES_BACK")))]), t._v(" "), s("div", [t._v(t._s(t.$t("LOBBY.VIP_EPISODES_LOAD")))]), t._v(" "), s("fieldset", {
-                    staticClass: "inputEpisode"
-                }, [s("input", {
-                    directives: [{
-                        name: "model",
-                        rawName: "v-model",
-                        value: t.answer,
-                        expression: "answer"
-                    }, {
-                        name: "mask",
-                        rawName: "v-mask",
-                        value: "XXX-XXXX",
-                        expression: "'XXX-XXXX'"
-                    }],
-                    attrs: {
-                        rows: "1",
-                        placeholder: "???-????"
-                    },
-                    domProps: {
-                        value: t.answer
-                    },
-                    on: {
-                        input: [function(e) {
-                            e.target.composing || (t.answer = e.target.value)
-                        }, t.onAnswerInput]
-                    }
-                }), t._v(" "), s("button", {
-                    staticClass: "submit buttonBlack",
-                    on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onSubmitInput.apply(null, arguments)
-                        }
-                    }
-                }, [t._v(t._s(t.$t("LOBBY.VIP_EPISODES_SUBMIT")))])]), t._v(" "), s("div", {
-                    staticClass: "episodes-warning"
-                }, [t._v(t._s(t.$t("LOBBY.VIP_EPISODES_WARNING")))]), t._v(" "), t.episodes.length ? s("div", [s("div", [t._v(t._s(t.$t("LOBBY.VIP_EPISODES_SELECT")))]), t._v(" "), t._l(t.episodes, (function(e, i) {
-                    return s("button", {
-                        key: e.remoteContentId || e.localContentId,
-                        staticClass: "episode buttonBlack",
-                        on: {
-                            click: function(e) {
-                                return e.preventDefault(), t.onEpisodeClick(i)
-                            }
-                        }
-                    }, [t._v("\n            " + t._s(e.metadata.title) + "\n            "), e.remoteContentId ? s("span", {
-                        staticClass: "episodeId"
-                    }, [t._v(t._s(e.formattedRemoteContentId))]) : t._e()])
-                }))], 2) : t._e()])
-            };
-
-            function m(t) {
-                return (m = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t) {
-                    return typeof t
-                } : function(t) {
-                    return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t
-                })(t)
-            }
-
-            function y(t, e, s) {
-                return e in t ? Object.defineProperty(t, e, {
-                    value: s,
-                    enumerable: !0,
-                    configurable: !0,
-                    writable: !0
-                }) : t[e] = s, t
-            }
-
-            function f(t, e) {
-                var s = Object.keys(t);
-                if (Object.getOwnPropertySymbols) {
-                    var i = Object.getOwnPropertySymbols(t);
-                    e && (i = i.filter((function(e) {
-                        return Object.getOwnPropertyDescriptor(t, e).enumerable
-                    }))), s.push.apply(s, i)
-                }
-                return s
-            }
-
-            function g(t) {
-                for (var e = 1; e < arguments.length; e++) {
-                    var s = null != arguments[e] ? arguments[e] : {};
-                    e % 2 ? f(Object(s), !0).forEach((function(e) {
-                        y(t, e, s[e])
-                    })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(s)) : f(Object(s)).forEach((function(e) {
-                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(s, e))
-                    }))
-                }
-                return t
-            }
-            _._withStripped = !0;
-            var b = "_",
-                C = "function",
-                E = [];
-
-            function T() {
-                var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E,
-                    e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b;
-                if (!I(t)) throw new Error("Text-mask:convertMaskToPlaceholder; The mask property must be an array.");
-                if (-1 !== t.indexOf(e)) throw new Error("Placeholder character must not be used as part of the mask. Please specify a character that is not present in your mask as your placeholder character.\n\n" + "The placeholder character that was received is: ".concat(JSON.stringify(e), "\n\n") + "The mask that was received is: ".concat(JSON.stringify(t)));
-                return t.map((function(t) {
-                    return t instanceof RegExp ? e : t
-                })).join("")
-            }
-
-            function I(t) {
-                return Array.isArray && Array.isArray(t) || t instanceof Array
-            }
-
-            function w(t) {
-                for (var e, s = []; - 1 !== (e = t.indexOf("[]"));) s.push(e), t.splice(e, 1);
-                return {
-                    maskWithoutCaretTraps: t,
-                    indexes: s
-                }
-            }
-            var O = [],
-                x = "";
-
-            function S() {
-                var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : x,
-                    e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : O,
-                    s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                if (!I(e)) {
-                    if (m(e) !== C) throw new Error("Text-mask:conformToMask; The mask property must be an array.");
-                    e = w(e = e(t, s)).maskWithoutCaretTraps
-                }
-                var i = s.guide,
-                    n = void 0 === i || i,
-                    a = s.previousConformedValue,
-                    r = void 0 === a ? x : a,
-                    o = s.placeholderChar,
-                    l = void 0 === o ? b : o,
-                    c = s.placeholder,
-                    u = void 0 === c ? T(e, l) : c,
-                    p = s.currentCaretPosition,
-                    d = s.keepCharPositions,
-                    h = !1 === n && void 0 !== r,
-                    v = t.length,
-                    _ = r.length,
-                    y = u.length,
-                    f = e.length,
-                    g = v - _,
-                    E = g > 0,
-                    S = p + (E ? -g : 0),
-                    N = S + Math.abs(g);
-                if (!0 === d && !E) {
-                    for (var k = x, P = S; P < N; P++) u[P] === l && (k += l);
-                    t = t.slice(0, S) + k + t.slice(S, v)
-                }
-                for (var D = t.split(x).map((function(t, e) {
-                        return {
-                            char: t,
-                            isNew: e >= S && e < N
-                        }
-                    })), A = v - 1; A >= 0; A--) {
-                    var L = D[A].char;
-                    if (L !== l) {
-                        var R = A >= S && _ === f;
-                        L === u[R ? A - g : A] && D.splice(A, 1)
-                    }
-                }
-                var $ = x,
-                    B = !1;
-                t: for (var U = 0; U < y; U++) {
-                    var G = u[U];
-                    if (G === l) {
-                        if (D.length > 0)
-                            for (; D.length > 0;) {
-                                var M = D.shift(),
-                                    K = M.char,
-                                    W = M.isNew;
-                                if (K === l && !0 !== h) {
-                                    $ += l;
-                                    continue t
-                                }
-                                if (e[U].test(K)) {
-                                    if (!0 === d && !1 !== W && r !== x && !1 !== n && E) {
-                                        for (var j = D.length, V = null, H = 0; H < j; H++) {
-                                            var F = D[H];
-                                            if (F.char !== l && !1 === F.isNew) break;
-                                            if (F.char === l) {
-                                                V = H;
-                                                break
-                                            }
-                                        }
-                                        null !== V ? ($ += K, D.splice(V, 1)) : U--
-                                    } else $ += K;
-                                    continue t
-                                }
-                                B = !0
-                            }!1 === h && ($ += u.substr(U, y));
-                        break
-                    }
-                    $ += G
-                }
-                if (h && !1 === E) {
-                    for (var z = null, Y = 0; Y < $.length; Y++) u[Y] === l && (z = Y);
-                    $ = null !== z ? $.substr(0, z + 1) : x
-                }
-                return {
-                    conformedValue: $,
-                    meta: {
-                        someCharsRejected: B
-                    }
-                }
-            }
-            var N = {
-                    __nextCharOptional__: !0
-                },
-                k = {
-                    "#": /\d/,
-                    A: /[a-z]/i,
-                    N: /[a-z0-9]/i,
-                    "?": N,
-                    X: /./
-                },
-                P = function(t) {
-                    return s = (e = t.toString().replace(/.(\/)[gmiyus]{0,6}$/, (function(t) {
-                        return t.replace("/", "?/")
-                    }))).lastIndexOf("/"), new RegExp(e.slice(1, s), e.slice(s + 1));
-                    var e, s
-                },
-                D = function(t) {
-                    return t instanceof RegExp ? t : function(t) {
-                        return new RegExp("/[".concat(function(t) {
-                            return "[\\^$.|?*+()".indexOf(t) > -1 ? "\\".concat(t) : t
-                        }(t), "]/"))
-                    }(t)
-                };
-
-            function A(t) {
-                var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : k;
-                return t.map((function(t, s, i) {
-                    var n = e[t] || t,
-                        a = i[s - 1],
-                        r = e[a] || a;
-                    return n === N ? null : r === N ? P(D(n)) : n
-                })).filter(Boolean)
-            }
-
-            function L(t) {
-                var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : k;
-                return A(t.split(""), e)
-            }
-            var R = function(t) {
-                    return t instanceof HTMLInputElement ? t : t.querySelector("input") || t
-                },
-                $ = function(t) {
-                    return "function" == typeof t
-                },
-                B = function(t) {
-                    return "string" == typeof t
-                },
-                U = function() {
-                    var t = new Map,
-                        e = {
-                            previousValue: "",
-                            mask: []
-                        };
-
-                    function s(s) {
-                        return t.get(s) || g({}, e)
-                    }
-                    return {
-                        partiallyUpdate: function(e, i) {
-                            t.set(e, g(g({}, s(e)), i))
-                        },
-                        remove: function(e) {
-                            t.delete(e)
-                        },
-                        get: s
-                    }
-                }();
-
-            function G(t) {
-                ! function(t, e) {
-                    var s = document.createEvent("HTMLEvents");
-                    s.initEvent("input", !0, !0), t.dispatchEvent(s)
-                }(t)
-            }
-
-            function M(t) {
-                var e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    s = t.value,
-                    i = U.get(t),
-                    n = i.previousValue,
-                    a = i.mask,
-                    r = s !== n,
-                    o = s.length > n.length,
-                    l = s && r && o;
-                if ((e || l) && a) {
-                    var c = S(s, a, {
-                            guide: !1
-                        }),
-                        u = c.conformedValue;
-                    t.value = u, G(t)
-                }
-                U.partiallyUpdate(t, {
-                    previousValue: s
-                })
-            }
-
-            function K(t, e, s) {
-                var i;
-                i = Array.isArray(e) ? function(t) {
-                    var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : k;
-                    return A(t.map((function(t) {
-                        return t instanceof RegExp ? t : "string" == typeof t ? t.split("") : null
-                    })).filter(Boolean).reduce((function(t, e) {
-                        return t.concat(e)
-                    }), []), e)
-                }(e, s) : $(e) ? e : B(e) && e.length > 0 ? L(e, s) : e, U.partiallyUpdate(t, {
-                    mask: i
-                })
-            }
-
-            function W(t) {
-                var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : k;
-                return null === t || Array.isArray(t) || "object" !== m(t) ? e : Object.keys(t).reduce((function(e, s) {
-                    var i = t[s];
-                    return null === i || i instanceof RegExp ? g(g({}, e), {}, y({}, s, i)) : e
-                }), e)
-            }
-
-            function j(t) {
-                return (Array.isArray(t) ? t : [t]).filter((function(t) {
-                    return B(t) || t instanceof RegExp
-                })).toString()
-            }
-
-            function V() {
-                var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                    e = W(t && t.placeholders);
-                return {
-                    bind: function(t, s) {
-                        var i = s.value;
-                        K(t = R(t), i, e), M(t)
-                    },
-                    componentUpdated: function(t, s) {
-                        var i = s.value,
-                            n = s.oldValue;
-                        t = R(t);
-                        var a = $(i) || j(n) !== j(i);
-                        a && K(t, i, e), M(t, a)
-                    },
-                    unbind: function(t) {
-                        t = R(t), U.remove(t)
-                    }
-                }
-            }
-            V();
-            var H = function(t, e) {
-                var s = L(e);
-                return B(t) || Number.isFinite(t) ? S("".concat(t), s, {
-                    guide: !1
-                }).conformedValue : t
-            };
-            a().use((function(t) {
-                var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                t.directive("mask", V(e)), t.filter("VMask", H)
-            }));
-            const F = a().extend({
-                props: {
-                    episodes: Array
-                },
-                i18n: {
-                    messages: v
-                },
-                data: () => ({
-                    answer: ""
-                }),
-                methods: {
-                    onEpisodeClick(t) {
-                        const e = this.episodes[t],
-                            s = e.remoteContentId || e.localContentId;
-                        this.$emit("resolve", {
-                            action: "load",
-                            contentId: s
-                        })
-                    },
-                    onAnswerInput(t) {
-                        const e = t.target;
-                        this.answer = e.value
-                    },
-                    onBackClick() {
-                        this.$emit("resolve", {})
-                    },
-                    onSubmitInput() {
-                        this.$emit("resolve", {
-                            action: "input",
-                            answer: this.answer
-                        })
-                    }
-                }
-            });
-            var z = (0, l.Z)(F, _, [], !1, null, null, null);
-            z.options.__file = "src/games/pp8/drawful-animate/views/EpisodesModal.vue";
-            const Y = z.exports;
-            var Z = function(t, e, s, i) {
-                return new(s || (s = Promise))((function(n, a) {
-                    function r(t) {
+            var u = function(t, e, s, i) {
+                return new(s || (s = Promise))((function(a, n) {
+                    function o(t) {
                         try {
                             l(i.next(t))
                         } catch (t) {
-                            a(t)
+                            n(t)
                         }
                     }
 
-                    function o(t) {
+                    function r(t) {
                         try {
                             l(i.throw(t))
                         } catch (t) {
-                            a(t)
+                            n(t)
                         }
                     }
 
                     function l(t) {
                         var e;
-                        t.done ? n(t.value) : (e = t.value, e instanceof s ? e : new s((function(t) {
+                        t.done ? a(t.value) : (e = t.value, e instanceof s ? e : new s((function(t) {
                             t(e)
-                        }))).then(r, o)
+                        }))).then(o, r)
                     }
                     l((i = i.apply(t, e || [])).next())
                 }))
             };
-            const X = a().extend({
-                components: {
-                    LobbyActions: d.Z
-                },
-                props: {
-                    info: Object,
-                    player: Object
-                },
-                i18n: {
-                    messages: v
-                },
-                data: () => ({
-                    showEpisodesModal: !1
-                }),
-                methods: {
-                    shouldStart() {
-                        return Z(this, void 0, void 0, (function*() {
-                            return !(!this.player.allPlayersHavePortraits && "confirm" !== (yield this.$showModal("Options", {
-                                text: this.$t("LOBBY.VIP_PORTRAIT_WARNING"),
-                                options: [{
-                                    text: this.$t("LOBBY.VIP_PORTRAIT_WARNING_CONFIRM"),
-                                    value: "confirm"
-                                }, {
-                                    text: this.$t("LOBBY.VIP_PORTRAIT_WARNING_CANCEL"),
-                                    value: "cancel"
-                                }]
-                            })))
-                        }))
-                    },
-                    onActionEvent(t) {
-                        this.player.responseKey && this.$ecast.updateObject(this.player.responseKey, {
-                            action: t
-                        }).catch(this.$handleEcastError)
-                    },
-                    onReportClick() {
-                        window.location.href = `mailto:support@jackboxgames.com?subject=Report episode id ${this.player.formattedActiveContentId}`
-                    },
-                    onEpisodesClick() {
-                        var t;
-                        return Z(this, void 0, void 0, (function*() {
-                            const e = yield this.$showModal(Y, {
-                                episodes: this.player.history
-                            });
-                            if (e && this.player.responseKey && ("load" === e.action && this.$ecast.updateObject(this.player.responseKey, {
-                                    activateContentId: !0,
-                                    contentId: e.contentId
-                                }).catch(this.$handleEcastError), "input" === e.action)) {
-                                const s = (null === (t = e.answer) || void 0 === t ? void 0 : t.replace(/[^A-Za-z]/gi, "").toUpperCase()) || "";
-                                if (s.length < 7) return;
-                                this.$ecast.updateObject(this.player.responseKey, {
-                                    activateContentId: !0,
-                                    contentId: s
-                                }).catch(this.$handleEcastError)
-                            }
-                        }))
-                    }
-                }
-            });
-            var q = (0, l.Z)(X, p, [], !1, null, null, null);
-            q.options.__file = "src/games/pp8/drawful-animate/views/Lobby.vue";
-            const J = q.exports;
-            var Q = function() {
-                var t = this,
-                    e = t.$createElement,
-                    s = t._self._c || e;
-                return s("div", {
-                    staticClass: "post-game scrollable"
-                }, [s("div", {
-                    staticClass: "header",
-                    domProps: {
-                        textContent: t._s(t.info.name)
-                    }
-                }), t._v(" "), s("div", {
-                    staticClass: "constrain"
-                }, [s("PostGameActions", {
-                    attrs: {
-                        player: t.player,
-                        classes: {
-                            action: "buttonBlack"
-                        }
-                    }
-                }), t._v(" "), s("GalleryLink", {
-                    attrs: {
-                        artifact: t.artifact
-                    }
-                })], 1)])
-            };
-            Q._withStripped = !0;
-            var tt = s(56623),
-                et = s(83933);
-            const st = a().extend({
-                components: {
-                    GalleryLink: tt.Z,
-                    PostGameActions: et.Z
-                },
-                props: {
-                    artifact: Object,
-                    info: Object,
-                    player: Object
-                }
-            });
-            var it = (0, l.Z)(st, Q, [], !1, null, null, null);
-            it.options.__file = "src/games/pp8/drawful-animate/views/PostGame.vue";
-            const nt = it.exports;
-            var at = function() {
-                var t = this,
-                    e = t.$createElement,
-                    s = t._self._c || e;
-                return s("div", {
-                    staticClass: "writing"
-                }, [s("div", {
-                    staticClass: "header",
-                    domProps: {
-                        textContent: t._s(t.player.header)
-                    }
-                }), t._v(" "), s("div", {
-                    staticClass: "constrain"
-                }, [t.isSubmitted ? s("p", {
-                    directives: [{
-                        name: "t",
-                        rawName: "v-t",
-                        value: "WRITING.DONE",
-                        expression: "'WRITING.DONE'"
-                    }]
-                }) : s("form", {
-                    on: {
-                        submit: function(e) {
-                            return e.preventDefault(), t.onSubmit.apply(null, arguments)
-                        }
-                    }
-                }, [s("fieldset", {
-                    attrs: {
-                        disabled: t.isSubmitting
-                    }
-                }, [s("label", {
-                    attrs: {
-                        for: "text-input"
-                    }
-                }, [s("p", {
-                    staticClass: "prompt",
-                    domProps: {
-                        textContent: t._s(t.prompt)
-                    }
-                })]), t._v(" "), s("textarea", {
-                    ref: "textarea",
-                    attrs: {
-                        id: "text-input",
-                        rows: "1",
-                        maxlength: t.player.maxLength,
-                        placeholder: t.player.placeholder
-                    },
-                    domProps: {
-                        value: t.answer
-                    },
-                    on: {
-                        input: t.onInput,
-                        keypress: t.onKeypress
-                    }
-                }), t._v(" "), t.player.isFriendMode ? s("div", {
-                    directives: [{
-                        name: "t",
-                        rawName: "v-t",
-                        value: "WRITING.FRIEND_HINT",
-                        expression: "'WRITING.FRIEND_HINT'"
-                    }],
-                    staticClass: "friend-hint"
-                }) : t._e(), t._v(" "), t.player.error ? s("div", {
-                    staticClass: "error"
-                }, [t._v(t._s(t.player.error))]) : t._e(), t._v(" "), t.filterError ? s("div", {
-                    staticClass: "error"
-                }, [t._v(t._s(t.$t("WRITING.FILTER_ERROR")))]) : t._e(), t._v(" "), s("div", {
-                    staticClass: "controls"
-                }, [s("div", {
-                    staticClass: "remaining",
-                    domProps: {
-                        textContent: t._s(t.remainingCharacters)
-                    }
-                }), t._v(" "), s("button", {
-                    staticClass: "submit",
-                    attrs: {
-                        type: "submit",
-                        value: "Submit",
-                        disabled: !t.hasAnswer
-                    }
-                }, [t._v("\n                        " + t._s(t.submitText) + "\n                    ")])])])])])])
-            };
-            at._withStripped = !0;
-            var rt = s(96486),
-                ot = s(79367),
-                lt = s.n(ot),
-                ct = s(89446),
-                ut = s(33958),
-                pt = function(t, e, s, i) {
-                    return new(s || (s = Promise))((function(n, a) {
-                        function r(t) {
-                            try {
-                                l(i.next(t))
-                            } catch (t) {
-                                a(t)
-                            }
-                        }
-
-                        function o(t) {
-                            try {
-                                l(i.throw(t))
-                            } catch (t) {
-                                a(t)
-                            }
-                        }
-
-                        function l(t) {
-                            var e;
-                            t.done ? n(t.value) : (e = t.value, e instanceof s ? e : new s((function(t) {
-                                t(e)
-                            }))).then(r, o)
-                        }
-                        l((i = i.apply(t, e || [])).next())
-                    }))
-                };
-            const dt = a().extend({
-                props: {
-                    player: Object,
-                    audience: Boolean
-                },
-                i18n: {
-                    messages: v
-                },
-                data: () => ({
-                    answer: "",
-                    filterError: !1,
-                    isSubmitting: !1,
-                    isSubmitted: !1,
-                    autoSubmitter: void 0
-                }),
-                computed: {
-                    sanitizedAnswer() {
-                        return ct.c.sanitizeInput(this.answer).trim()
-                    },
-                    prompt() {
-                        return this.player.prompt || this.$t("WRITING.PROMPT")
-                    },
-                    remainingCharacters() {
-                        return this.player.maxLength && this.answer ? "" + (this.player.maxLength - this.answer.length) : ""
-                    },
-                    canSubmit() {
-                        return !(!this.sanitizedAnswer || this.player.maxLength && this.sanitizedAnswer.length > this.player.maxLength)
-                    },
-                    submitText() {
-                        return this.player.submitText || this.$t("WRITING.BUTTON_SUBMIT")
-                    },
-                    hasAnswer() {
-                        var t;
-                        return (null === (t = this.answer) || void 0 === t ? void 0 : t.trim().length) > 0
-                    }
-                },
-                watch: {
-                    "player.writingId": function() {
-                        this.player.error || (this.answer = ""), this.isSubmitting = !1
-                    }
-                },
-                mounted() {
-                    this.autoSubmitter = (0, rt.throttle)(this.autoSubmit.bind(this), 400), lt()(this.$refs.textarea), this.player.textKey && this.restoreText()
-                },
-                beforeDestroy() {
-                    var t;
-                    null === (t = this.autoSubmitter) || void 0 === t || t.cancel()
-                },
-                methods: {
-                    restoreText() {
-                        return pt(this, void 0, void 0, (function*() {
-                            try {
-                                const t = yield this.$ecast.getText(this.player.textKey);
-                                this.answer = t.text
-                            } catch (t) {
-                                this.$handleEcastError(t)
-                            }
-                        }))
-                    },
-                    autoSubmit() {
-                        return pt(this, void 0, void 0, (function*() {
-                            if (!this.isSubmitting) try {
-                                yield this.$ecast.updateText(this.player.textKey, this.sanitizedAnswer)
-                            } catch (t) {
-                                t instanceof ut.EcastFilterError || this.$handleEcastError(t), this.$ecast.updateText(this.player.textKey, "").catch(this.$handleEcastError)
-                            }
-                        }))
-                    },
-                    onKeypress(t) {
-                        "Enter" === t.key && this.onSubmit()
-                    },
-                    onInput(t) {
-                        const e = t.target,
-                            s = this.player.maxLength || Number.MAX_SAFE_INTEGER;
-                        e.value.length > s && (e.value = e.value.substring(0, s)), e.value = ct.c.sanitizeInput(e.value), this.answer = e.value, this.filterError = !1, this.player.responseKey && this.autoSubmitter && this.autoSubmitter()
-                    },
-                    onSubmit() {
-                        return pt(this, void 0, void 0, (function*() {
-                            if (this.isSubmitting = !0, this.audience) try {
-                                this.player.textRingName && (yield this.$ecast.pushTextRing(this.player.textRingName, this.sanitizedAnswer), this.isSubmitted = !0)
-                            } catch (t) {
-                                this.$handleEcastError(t)
-                            } else try {
-                                if (yield this.$ecast.getText(this.player.textKey), yield this.$ecast.updateText(this.player.textKey, this.sanitizedAnswer), this.filterError = !1, this.player.responseKey) try {
-                                    yield this.$ecast.updateObject(this.player.responseKey, {
-                                        answer: this.sanitizedAnswer,
-                                        done: !0
-                                    })
-                                } catch (t) {
-                                    this.$handleEcastError(t)
-                                }
-                            } catch (t) {
-                                t instanceof ut.EcastFilterError || this.$handleEcastError(t), this.filterError = !0, this.isSubmitting = !1, setTimeout((() => {
-                                    this.$refs.textarea instanceof HTMLElement && this.$refs.textarea.focus()
-                                }), 0)
-                            }
-                        }))
-                    }
-                }
-            });
-            var ht = (0, l.Z)(dt, at, [], !1, null, null, null);
-            ht.options.__file = "src/games/pp8/drawful-animate/views/Writing.vue";
-            const vt = ht.exports;
-            var _t = function() {
-                var t = this,
-                    e = t.$createElement,
-                    i = t._self._c || e;
-                return i("div", {
-                    staticClass: "choosing scrollable",
-                    class: {
-                        liking: t.liking, "doubling-down": t.player.doubleDown
-                    }
-                }, [i("div", {
-                    staticClass: "header",
-                    domProps: {
-                        textContent: t._s(t.header)
-                    }
-                }), t._v(" "), i("div", {
-                    staticClass: "constrain"
-                }, [t.player.doubleDown ? i("div", {
-                    staticClass: "doubleDown"
-                }, [i("div", {
-                    staticClass: "doubleDownPrompt",
-                    domProps: {
-                        textContent: t._s(t.player.doubleDown.prompt)
-                    }
-                }), t._v(" "), i("button", {
-                    staticClass: "choice",
-                    class: t.player.doubleDown.status,
-                    attrs: {
-                        disabled: "available" !== t.player.doubleDown.status
-                    },
-                    on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onDoubleDownClick.apply(null, arguments)
-                        }
-                    }
-                }, [t._v("\n                " + t._s(t.$t("CHOOSING.DOUBLEDOWN_TEXT")) + "\n                "), "used" === t.player.doubleDown.status ? i("span", {
-                    staticClass: "subheader"
-                }, [t._v(t._s(t.$t("CHOOSING.DOUBLEDOWN_USED")))]) : "round" === t.player.doubleDown.frequency ? i("span", {
-                    staticClass: "subheader"
-                }, [t._v(t._s(t.$t("CHOOSING.DOUBLEDOWN_PER_ROUND")))]) : "game" === t.player.doubleDown.frequency ? i("span", {
-                    staticClass: "subheader"
-                }, [t._v(t._s(t.$t("CHOOSING.DOUBLEDOWN_PER_GAME")))]) : t._e()])]) : t._e(), t._v(" "), i("div", {
-                    staticClass: "prompt",
-                    domProps: {
-                        textContent: t._s(t.player.prompt)
-                    }
-                }), t._v(" "), i("div", {
-                    staticClass: "choices"
-                }, t._l(t.player.choices, (function(e, s) {
-                    return i("button", {
-                        key: "choice_" + t.player.choiceId + "_" + s,
-                        staticClass: "choice",
-                        class: {
-                            buttonBlack: !t.liking, chosen: t.submittedActions.choose === s, selected: e.selected
-                        },
-                        attrs: {
-                            disabled: e.disabled || -1 !== t.submittedActions.choose
-                        },
-                        on: {
-                            click: function(e) {
-                                return e.preventDefault(), t.submitVote(e, s, "choose")
-                            }
-                        }
-                    }, [i("span", {
-                        staticClass: "text",
-                        domProps: {
-                            textContent: t._s(e.text)
-                        }
-                    })])
-                })), 0), t._v(" "), void 0 !== t.player.speedIndex ? i("div", {
-                    staticClass: "track"
-                }, [i("div", {
-                    staticClass: "track-image-container",
-                    class: "speed-" + t.player.speedIndex
-                }, [i("img", {
-                    staticClass: "track-image",
-                    attrs: {
-                        src: s(57095),
-                        alt: "speed " + t.player.speedIndex
-                    }
-                })])]) : t._e()])])
-            };
-            _t._withStripped = !0;
-            var mt = function(t, e, s, i) {
-                return new(s || (s = Promise))((function(n, a) {
-                    function r(t) {
-                        try {
-                            l(i.next(t))
-                        } catch (t) {
-                            a(t)
-                        }
-                    }
-
-                    function o(t) {
-                        try {
-                            l(i.throw(t))
-                        } catch (t) {
-                            a(t)
-                        }
-                    }
-
-                    function l(t) {
-                        var e;
-                        t.done ? n(t.value) : (e = t.value, e instanceof s ? e : new s((function(t) {
-                            t(e)
-                        }))).then(r, o)
-                    }
-                    l((i = i.apply(t, e || [])).next())
-                }))
-            };
-            const yt = a().extend({
+            const d = n().extend({
                 props: {
                     player: Object,
                     audience: Boolean,
                     liking: Boolean
                 },
                 i18n: {
-                    messages: v
+                    messages: c
                 },
                 data: () => ({
                     chosenIndex: -1,
@@ -1527,20 +648,20 @@
                         }).catch(this.$handleEcastError)
                     },
                     submitVoteAudience(t, e) {
-                        return mt(this, void 0, void 0, (function*() {
+                        return u(this, void 0, void 0, (function*() {
                             if (this.audience && !this.player.countGroupName && console.error("Missing count group name"), this.submittedActions[e] = t, this.rateLimited) return;
                             const s = void 0 !== this.player.choices[t].countGroupKey ? this.player.choices[t].countGroupKey : `${t}`;
                             try {
                                 yield this.$ecast.incrementCountGroupCounter(this.player.countGroupName, s)
                             } catch (t) {
-                                t instanceof ut.EcastRateLimitExceeded || this.$handleEcastError(t), this.rateLimited = !0, setTimeout((() => {
+                                t instanceof r.EcastRateLimitExceeded || this.$handleEcastError(t), this.rateLimited = !0, setTimeout((() => {
                                     this.rateLimited = !1
                                 }), 1e3)
                             }
                         }))
                     },
                     submitVote(t, e, s) {
-                        return mt(this, void 0, void 0, (function*() {
+                        return u(this, void 0, void 0, (function*() {
                             if (t.target instanceof HTMLElement && t.target.blur(), this.audience) return this.submitVoteAudience(e, s);
                             this.audience || this.player.responseKey || console.error("Missing response entity for vote session"), this.submittedActions[s] = e;
                             const i = void 0 !== this.player.choices[e].key ? this.player.choices[e].key : e;
@@ -1552,10 +673,265 @@
                     }
                 }
             });
-            var ft = (0, l.Z)(yt, _t, [], !1, null, null, null);
-            ft.options.__file = "src/games/pp8/drawful-animate/views/Choosing.vue";
-            const gt = ft.exports;
-            var bt = function() {
+            var p = s(51900),
+                h = (0, p.Z)(d, o, [], !1, null, null, null);
+            h.options.__file = "src/games/pp8/drawful-animate/views/Choosing.vue";
+            const v = h.exports;
+            var _ = function() {
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
+                return s("div", {
+                    staticClass: "drawing"
+                }, [s("div", {
+                    ref: "content",
+                    staticClass: "content"
+                }, [s("div", {
+                    staticClass: "header",
+                    domProps: {
+                        textContent: t._s(t.player.header)
+                    }
+                }), t._v(" "), s("div", {
+                    staticClass: "constrain"
+                }, [s("fieldset", {
+                    attrs: {
+                        disabled: t.isSubmitting
+                    }
+                }, [t.player.prompt ? s("div", {
+                    staticClass: "prompt",
+                    domProps: {
+                        textContent: t._s(t.player.prompt)
+                    }
+                }) : t._e(), t._v(" "), s("div", {
+                    staticClass: "controls"
+                }, [s("button", {
+                    class: {
+                        "frame-button": !0, active: 0 === t.activeFrame
+                    },
+                    on: {
+                        click: function(e) {
+                            return e.preventDefault(), e.stopPropagation(), t.onFrameClick(0)
+                        }
+                    }
+                }, [t._v("\n                        " + t._s(t.$t("DRAWING.FRAME_1")) + "\n                    ")]), t._v(" "), s("button", {
+                    class: {
+                        "frame-button": !0, active: 1 === t.activeFrame
+                    },
+                    on: {
+                        click: function(e) {
+                            return e.preventDefault(), e.stopPropagation(), t.onFrameClick(1)
+                        }
+                    }
+                }, [t._v("\n                        " + t._s(t.$t("DRAWING.FRAME_2")) + "\n                    ")])]), t._v(" "), s("div", {
+                    ref: "stage",
+                    staticClass: "stage",
+                    style: t.stageDimensions
+                }), t._v(" "), t.player.colors ? s("div", {
+                    staticClass: "palette"
+                }, t._l(t.player.colors, (function(e, i) {
+                    return s("ColorButton", {
+                        key: i,
+                        class: {
+                            color: !0, active: t.activeColor === e
+                        },
+                        attrs: {
+                            hex: e,
+                            active: t.activeColor === e
+                        },
+                        on: {
+                            clicked: function(s) {
+                                return t.onColorClick(e)
+                            }
+                        }
+                    })
+                })), 1) : t._e(), t._v(" "), s("button", {
+                    staticClass: "submit-button",
+                    attrs: {
+                        type: "submit",
+                        disabled: !t.canSubmit
+                    },
+                    on: {
+                        click: function(e) {
+                            return e.preventDefault(), e.stopPropagation(), t.onSubmitClick.apply(null, arguments)
+                        }
+                    }
+                }, [t._v("\n                    " + t._s(t.$t("DRAWING.BUTTON_SUBMIT")) + "\n                ")])])])]), t._v(" "), t.player.showTutorial && !t.hasSeenTutorial ? s("Tutorial", {
+                    attrs: {
+                        slides: t.slides
+                    },
+                    on: {
+                        tutorialComplete: t.onTutorialComplete
+                    }
+                }) : t._e()], 1)
+            };
+            _._withStripped = !0;
+            var m = s(17819),
+                y = s(94835),
+                C = function() {
+                    var t = this,
+                        e = t.$createElement,
+                        s = t._self._c || e;
+                    return s("button", {
+                        staticClass: "svg-container",
+                        on: {
+                            click: function(e) {
+                                return e.preventDefault(), t.onColorClick()
+                            }
+                        }
+                    }, [s("svg", {
+                        attrs: {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            viewBox: "0 0 100 100"
+                        }
+                    }, [s("defs"), t._v(" "), s("g", {
+                        attrs: {
+                            id: "ColorSelect",
+                            "data-name": "Layer 2"
+                        }
+                    }, [s("g", {
+                        attrs: {
+                            id: "UI"
+                        }
+                    }, [s("path", {
+                        style: {
+                            fill: t.hex,
+                            stroke: "none",
+                            strokeWidth: .090248
+                        },
+                        attrs: {
+                            id: "path68",
+                            d: "m 24.674841,80.964093 c -2.53527,-0.247984 -3.97558,-0.818724 -5.249833,-2.080311 -1.007461,-0.997446 -1.515304,-1.910747 -2.05347,-3.692941 -0.196892,-0.652029 -0.207986,-0.854054 -0.240015,-4.370557 -0.02481,-2.723643 -0.0054,-3.739661 0.07444,-3.88876 0.156667,-0.292734 0.05196,-9.203441 -0.138585,-11.793791 -0.189412,-2.574944 -0.276386,-8.308298 -0.1763,-11.62169 0.04391,-1.453849 0.09273,-2.44853 0.108481,-2.210399 0.01575,0.238131 0.06268,0.432965 0.104291,0.432965 0.07402,0 0.104402,-1.115922 0.275467,-10.117705 0.08621,-4.536938 0.1601,-5.482612 0.591071,-7.565491 0.411726,-1.989866 1.824998,-3.650128 3.706276,-4.354004 0.472783,-0.176892 1.809902,-0.431448 3.545085,-0.674901 1.032293,-0.144836 47.002008,-0.221915 49.449724,-0.08291 1.933145,0.109779 3.073523,0.358224 4.192344,0.913352 1.65418,0.820759 2.752578,2.159163 3.449644,4.203411 0.406366,1.191729 0.517141,2.109979 0.498421,4.131556 -0.01196,1.291678 -0.03243,1.604794 -0.06925,1.059079 l -0.05227,-0.774779 -0.0808,0.638054 c -0.11303,0.892605 0.0095,5.987031 0.230135,9.570802 0.152344,2.474163 0.183608,3.949842 0.176169,8.315402 -0.0051,2.964305 -0.04577,5.398896 -0.09224,5.514605 -0.07169,0.178495 -0.084,0.157335 -0.08898,-0.152875 -0.0044,-0.276662 -0.03069,-0.335133 -0.113345,-0.252478 -0.08056,0.08056 -0.123572,2.619553 -0.171316,10.113147 -0.06052,9.49925 -0.07353,10.076101 -0.257007,11.399105 -0.432186,3.116322 -0.764055,3.977443 -2.010302,5.21625 -0.872149,0.866944 -1.542264,1.254132 -2.663793,1.53912 -0.826984,0.210143 -2.413758,0.438599 -3.85949,0.55567 -0.998637,0.08087 -48.269538,0.110798 -49.084543,0.03108 z"
+                        }
+                    }), t._v(" "), s("path", {
+                        style: {
+                            fill: t.outlineFill
+                        },
+                        attrs: {
+                            id: "path50",
+                            d: "m 95.76,18.84 a 37,37 0 0 0 -0.7,-6 C 94.46,9.26 92,6.99 88.14,6.08 A 49.23,49.23 0 0 0 79.3,5.21 h -6.74 -6 C 34.5,4.97 73.89,4.66 41.84,4.5 36.24,4.5 30.65,5.11 25.06,5.14 6.39,5.22 34.46,4.78 15.78,4.83 A 14.73,14.73 0 0 0 11.52,5.58 C 5.39,7.5 4.06,12.02 4,16.99 4,26.05 4,72.57 4.05,81.13 a 37,37 0 0 0 0.71,6 c 0.6,3.57 3.06,5.85 6.92,6.76 a 49.23,49.23 0 0 0 8.84,0.86 c 17.41,0.07 -13.67,0 3.74,0.06 32.06,0.17 -7.33,0.49 24.73,0.65 5.59,0 11.18,-0.61 16.77,-0.64 18.68,-0.09 -0.4,0.36 18.27,0.31 a 14.79,14.79 0 0 0 4.27,-0.75 c 6.12,-1.92 7.46,-6.45 7.49,-11.42 0.06,-9.04 0.02,-55.56 -0.03,-64.12 z M 82.27,61.16 c 0,2.11 0,3.34 0,4 0,0.51 0,1.78 0,4.52 a 31.1,31.1 0 0 1 -0.62,5.94 5.73,5.73 0 0 1 -4.88,4.64 29,29 0 0 1 -4.34,0.48 c -6.18,0 -39.76,0 -46.3,0 -3.58,0 -6.85,-0.91 -8.24,-5 a 9.34,9.34 0 0 1 -0.54,-2.86 c 0,-12.54 0.29,0.27 0.22,-12.27 0,-3.76 -0.47,-7.51 -0.45,-11.27 0.11,-21.52 0.34,4.93 0.46,-16.6 0.07,-11.69 0,9.18 0.05,-2.51 a 31.09,31.09 0 0 1 0.61,-5.94 5.75,5.75 0 0 1 4.89,-4.64 28.83,28.83 0 0 1 4.33,-0.48 c 6.19,0 39.77,0 46.3,0 3.59,0 6.86,0.91 8.24,5 a 9.36,9.36 0 0 1 0.55,2.86 c 0,12.54 -0.29,-6.31 -0.23,6.23 0,3.75 0.48,7.51 0.46,11.26 -0.15,21.57 -0.38,-4.88 -0.51,16.64 z"
+                        }
+                    })])])])])
+                };
+            C._withStripped = !0;
+            const f = n().extend({
+                name: "SvgIcon",
+                props: {
+                    hex: {
+                        type: String,
+                        default: "#ffaf23"
+                    },
+                    active: {
+                        type: Boolean,
+                        default: !1
+                    },
+                    icon: {
+                        type: String,
+                        default: null
+                    },
+                    hasFill: {
+                        type: Boolean,
+                        default: !1
+                    },
+                    growByHeight: {
+                        type: Boolean,
+                        default: !0
+                    }
+                },
+                computed: {
+                    outlineFill() {
+                        return this.active ? "#030300" : "transparent"
+                    }
+                },
+                mounted() {},
+                methods: {
+                    onColorClick() {
+                        this.$emit("clicked", this.hex)
+                    }
+                }
+            });
+            var g = (0, p.Z)(f, C, [], !1, null, "96847278", null);
+            g.options.__file = "src/games/pp8/drawful-animate/views/ColorButton.vue";
+            const b = g.exports,
+                E = m.Z.extend({
+                    props: {
+                        player: Object
+                    },
+                    i18n: {
+                        messages: c
+                    },
+                    components: {
+                        Tutorial: y.Z,
+                        ColorButton: b
+                    },
+                    data() {
+                        return {
+                            hasSeenTutorial: !1,
+                            slides: [{
+                                title: this.$t("TUTORIAL.SLIDE_1_TITLE"),
+                                listItems: [this.$t("TUTORIAL.SLIDE_1_ITEM_1"), this.$t("TUTORIAL.SLIDE_1_ITEM_2")],
+                                imageClass: "tutorial-0",
+                                arrow: {
+                                    top: "33%",
+                                    left: "80%",
+                                    transform: "rotate(135deg)"
+                                }
+                            }, {
+                                title: this.$t("TUTORIAL.SLIDE_2_TITLE"),
+                                listItems: [this.$t("TUTORIAL.SLIDE_2_ITEM_1"), this.$t("TUTORIAL.SLIDE_2_ITEM_2")],
+                                imageClass: "tutorial-1"
+                            }, {
+                                title: this.$t("TUTORIAL.SLIDE_3_TITLE"),
+                                listItems: [this.$t("TUTORIAL.SLIDE_3_ITEM_1"), this.$t("TUTORIAL.SLIDE_3_ITEM_2")],
+                                imageClass: "tutorial-2",
+                                arrow: {
+                                    top: "67%",
+                                    left: "20%"
+                                }
+                            }, {
+                                title: this.$t("TUTORIAL.SLIDE_4_TITLE"),
+                                listItems: [this.$t("TUTORIAL.SLIDE_4_ITEM_1")],
+                                imageClass: "tutorial-3",
+                                arrow: {
+                                    top: "87%",
+                                    left: "28%"
+                                }
+                            }, {
+                                title: this.$t("TUTORIAL.SLIDE_5_TITLE"),
+                                listItems: [],
+                                imageClass: "tutorial-4"
+                            }]
+                        }
+                    },
+                    computed: {
+                        activeColor() {
+                            return this.stage ? this.stage.canvas.color : ""
+                        },
+                        activeFrame() {
+                            return this.stage ? this.stage.canvas.frame : 0
+                        },
+                        activeThickness() {
+                            return this.stage ? this.stage.canvas.thickness : 1
+                        },
+                        canSubmit() {
+                            return null !== this.stage && this.stage.canvas.lines.length > 0 && this.stage.canvas.lines2.length > 0
+                        }
+                    },
+                    methods: {
+                        onFrameClick(t) {
+                            this.stage && (this.stage.canvas.frame = t)
+                        },
+                        onColorClick(t) {
+                            this.stage && (this.stage.canvas.color = t)
+                        },
+                        onTutorialComplete() {
+                            this.hasSeenTutorial = !0
+                        }
+                    }
+                });
+            var I = (0, p.Z)(E, _, [], !1, null, null, null);
+            I.options.__file = "src/games/pp8/drawful-animate/views/Drawing.vue";
+            const T = I.exports;
+            var w = function() {
                 var t = this,
                     e = t.$createElement,
                     s = t._self._c || e;
@@ -1673,41 +1049,42 @@
                     class: t.completeName
                 })]) : t._e()])])
             };
-            bt._withStripped = !0;
-            var Ct = function(t, e, s, i) {
-                return new(s || (s = Promise))((function(n, a) {
-                    function r(t) {
-                        try {
-                            l(i.next(t))
-                        } catch (t) {
-                            a(t)
+            w._withStripped = !0;
+            var O = s(96486),
+                S = function(t, e, s, i) {
+                    return new(s || (s = Promise))((function(a, n) {
+                        function o(t) {
+                            try {
+                                l(i.next(t))
+                            } catch (t) {
+                                n(t)
+                            }
                         }
-                    }
 
-                    function o(t) {
-                        try {
-                            l(i.throw(t))
-                        } catch (t) {
-                            a(t)
+                        function r(t) {
+                            try {
+                                l(i.throw(t))
+                            } catch (t) {
+                                n(t)
+                            }
                         }
-                    }
 
-                    function l(t) {
-                        var e;
-                        t.done ? n(t.value) : (e = t.value, e instanceof s ? e : new s((function(t) {
-                            t(e)
-                        }))).then(r, o)
-                    }
-                    l((i = i.apply(t, e || [])).next())
-                }))
-            };
-            const Et = a().extend({
+                        function l(t) {
+                            var e;
+                            t.done ? a(t.value) : (e = t.value, e instanceof s ? e : new s((function(t) {
+                                t(e)
+                            }))).then(o, r)
+                        }
+                        l((i = i.apply(t, e || [])).next())
+                    }))
+                };
+            const x = n().extend({
                 props: {
                     player: Object,
                     timer: Object
                 },
                 i18n: {
-                    messages: v
+                    messages: c
                 },
                 data: () => ({
                     isSubmitting: !1,
@@ -1763,7 +1140,7 @@
                     }
                 },
                 mounted() {
-                    this.throttledSubmitVote = (0, rt.throttle)(this.submitVote.bind(this), 400)
+                    this.throttledSubmitVote = (0, O.throttle)(this.submitVote.bind(this), 400)
                 },
                 beforeDestroy() {
                     var t;
@@ -1771,14 +1148,14 @@
                 },
                 methods: {
                     voteClicked(t, e) {
-                        return Ct(this, void 0, void 0, (function*() {
+                        return S(this, void 0, void 0, (function*() {
                             t.target instanceof HTMLElement && t.target.blur();
                             const s = this.player.countGroupChoices ? `${this.player.countGroupChoices[e]}` : `${e}`;
                             if (s !== this.chosenKey) return this.chosenKey = s, this.throttledSubmitVote ? this.throttledSubmitVote() : void 0
                         }))
                     },
                     submitVote() {
-                        return Ct(this, void 0, void 0, (function*() {
+                        return S(this, void 0, void 0, (function*() {
                             this.player.countGroupName || console.error("Missing count group key for vote session");
                             const {
                                 chosenKey: t,
@@ -1790,7 +1167,7 @@
                                     if (yield this.$ecast.incrementCountGroupCounter(this.player.countGroupName, t), this.lastSubmittedKey = t, !this.player.countGroupNegativeName) return;
                                     "" !== e && this.$ecast.incrementCountGroupCounter(this.player.countGroupNegativeName, e).catch(this.$handleEcastError)
                                 } catch (t) {
-                                    t instanceof ut.EcastRateLimitExceeded || this.$handleEcastError(t)
+                                    t instanceof r.EcastRateLimitExceeded || this.$handleEcastError(t)
                                 }
                                 this.isSubmitting = !1
                             }
@@ -1798,264 +1175,323 @@
                     }
                 }
             });
-            var Tt = (0, l.Z)(Et, bt, [], !1, null, "c1eff0c0", null);
-            Tt.options.__file = "src/games/pp8/drawful-animate/views/Flipping.vue";
-            const It = Tt.exports;
-            var wt = function() {
+            var N = (0, p.Z)(x, w, [], !1, null, "c1eff0c0", null);
+            N.options.__file = "src/games/pp8/drawful-animate/views/Flipping.vue";
+            const D = N.exports;
+            var P = function() {
                 var t = this,
                     e = t.$createElement,
                     s = t._self._c || e;
                 return s("div", {
-                    staticClass: "drawing"
-                }, [s("div", {
-                    ref: "content",
-                    staticClass: "content"
+                    staticClass: "lobby scrollable",
+                    class: {
+                        isFriendMode: t.player.isFriendMode
+                    }
                 }, [s("div", {
                     staticClass: "header",
                     domProps: {
-                        textContent: t._s(t.player.header)
+                        textContent: t._s(t.info.name)
                     }
                 }), t._v(" "), s("div", {
                     staticClass: "constrain"
-                }, [s("fieldset", {
+                }, [s("LobbyActions", {
                     attrs: {
-                        disabled: t.isSubmitting
-                    }
-                }, [t.player.prompt ? s("div", {
-                    staticClass: "prompt",
-                    domProps: {
-                        textContent: t._s(t.player.prompt)
-                    }
-                }) : t._e(), t._v(" "), s("div", {
-                    staticClass: "controls"
-                }, [s("button", {
-                    class: {
-                        "frame-button": !0, active: 0 === t.activeFrame
-                    },
-                    on: {
-                        click: function(e) {
-                            return e.preventDefault(), e.stopPropagation(), t.onFrameClick(0)
-                        }
-                    }
-                }, [t._v("\n                        " + t._s(t.$t("DRAWING.FRAME_1")) + "\n                    ")]), t._v(" "), s("button", {
-                    class: {
-                        "frame-button": !0, active: 1 === t.activeFrame
-                    },
-                    on: {
-                        click: function(e) {
-                            return e.preventDefault(), e.stopPropagation(), t.onFrameClick(1)
-                        }
-                    }
-                }, [t._v("\n                        " + t._s(t.$t("DRAWING.FRAME_2")) + "\n                    ")])]), t._v(" "), s("div", {
-                    ref: "stage",
-                    staticClass: "stage",
-                    style: t.stageDimensions
-                }), t._v(" "), t.player.colors ? s("div", {
-                    staticClass: "palette"
-                }, t._l(t.player.colors, (function(e, i) {
-                    return s("ColorButton", {
-                        key: i,
-                        class: {
-                            color: !0, active: t.activeColor === e
+                        player: t.player,
+                        classes: {
+                            action: "buttonBlack"
                         },
-                        attrs: {
-                            hex: e,
-                            active: t.activeColor === e
-                        },
-                        on: {
-                            clicked: function(s) {
-                                return t.onColorClick(e)
-                            }
-                        }
-                    })
-                })), 1) : t._e(), t._v(" "), s("button", {
-                    staticClass: "submit-button",
-                    attrs: {
-                        type: "submit",
-                        disabled: !t.canSubmit
-                    },
+                        "should-start": t.shouldStart
+                    }
+                }), t._v(" "), t.player.playerCanDoEpisodes ? s("div", [t.player.activeContentId ? s("div", [s("div", [t._v(t._s(t.player.episodeTitle))]), t._v(" "), t.player.activeContentId ? s("button", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "LOBBY.VIP_EPISODES_UNLOAD",
+                        expression: "'LOBBY.VIP_EPISODES_UNLOAD'"
+                    }],
+                    staticClass: "buttonBlack",
                     on: {
                         click: function(e) {
-                            return e.preventDefault(), e.stopPropagation(), t.onSubmitClick.apply(null, arguments)
+                            return e.preventDefault(), t.onActionEvent("ugc-unload")
                         }
                     }
-                }, [t._v("\n                    " + t._s(t.$t("DRAWING.BUTTON_SUBMIT")) + "\n                ")])])])]), t._v(" "), t.player.showTutorial && !t.hasSeenTutorial ? s("Tutorial", {
-                    attrs: {
-                        slides: t.slides
-                    },
+                }) : t._e(), t._v(" "), t.player.playerCanReport ? s("button", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "LOBBY.VIP_EPISODES_REPORT",
+                        expression: "'LOBBY.VIP_EPISODES_REPORT'"
+                    }],
+                    staticClass: "buttonBlack",
                     on: {
-                        tutorialComplete: t.onTutorialComplete
+                        click: function(e) {
+                            return e.preventDefault(), t.onReportClick.apply(null, arguments)
+                        }
                     }
-                }) : t._e()], 1)
+                }) : t._e(), t._v(" "), t.player.playerCanViewAuthor ? s("button", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "LOBBY.VIP_EPISODES_VIEW_AUTHOR",
+                        expression: "'LOBBY.VIP_EPISODES_VIEW_AUTHOR'"
+                    }],
+                    staticClass: "buttonBlack",
+                    on: {
+                        click: function(e) {
+                            return e.preventDefault(), t.onActionEvent("ugc-view-author")
+                        }
+                    }
+                }) : t._e()]) : s("div", [s("button", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "LOBBY.VIP_EPISODES_MENU",
+                        expression: "'LOBBY.VIP_EPISODES_MENU'"
+                    }],
+                    staticClass: "buttonBlack",
+                    on: {
+                        click: function(e) {
+                            return e.preventDefault(), t.onEpisodesClick.apply(null, arguments)
+                        }
+                    }
+                })]), t._v(" "), t.player.lastUGCResult && t.player.lastUGCResult.error ? s("div", [t._v("\n                " + t._s(t.player.lastUGCResult.error) + "\n            ")]) : t._e()]) : t._e()], 1)])
             };
-            wt._withStripped = !0;
-            var Ot = s(17819),
-                xt = s(94835),
-                St = function() {
+            P._withStripped = !0;
+            var A = s(13494),
+                k = function() {
                     var t = this,
                         e = t.$createElement,
                         s = t._self._c || e;
-                    return s("button", {
-                        staticClass: "svg-container",
+                    return s("div", {
+                        staticClass: "drawful-animate episodes"
+                    }, [s("button", {
+                        staticClass: "backButton buttonBlack",
                         on: {
                             click: function(e) {
-                                return e.preventDefault(), t.onColorClick()
+                                return e.preventDefault(), t.onBackClick.apply(null, arguments)
                             }
                         }
-                    }, [s("svg", {
+                    }, [t._v(t._s(t.$t("LOBBY.VIP_EPISODES_BACK")))]), t._v(" "), s("div", [t._v(t._s(t.$t("LOBBY.VIP_EPISODES_LOAD")))]), t._v(" "), s("fieldset", {
+                        staticClass: "inputEpisode"
+                    }, [s("input", {
+                        directives: [{
+                            name: "model",
+                            rawName: "v-model",
+                            value: t.answer,
+                            expression: "answer"
+                        }, {
+                            name: "mask",
+                            rawName: "v-mask",
+                            value: "XXX-XXXX",
+                            expression: "'XXX-XXXX'"
+                        }],
                         attrs: {
-                            xmlns: "http://www.w3.org/2000/svg",
-                            viewBox: "0 0 100 100"
-                        }
-                    }, [s("defs"), t._v(" "), s("g", {
-                        attrs: {
-                            id: "ColorSelect",
-                            "data-name": "Layer 2"
-                        }
-                    }, [s("g", {
-                        attrs: {
-                            id: "UI"
-                        }
-                    }, [s("path", {
-                        style: {
-                            fill: t.hex,
-                            stroke: "none",
-                            strokeWidth: .090248
+                            rows: "1",
+                            placeholder: "???-????"
                         },
-                        attrs: {
-                            id: "path68",
-                            d: "m 24.674841,80.964093 c -2.53527,-0.247984 -3.97558,-0.818724 -5.249833,-2.080311 -1.007461,-0.997446 -1.515304,-1.910747 -2.05347,-3.692941 -0.196892,-0.652029 -0.207986,-0.854054 -0.240015,-4.370557 -0.02481,-2.723643 -0.0054,-3.739661 0.07444,-3.88876 0.156667,-0.292734 0.05196,-9.203441 -0.138585,-11.793791 -0.189412,-2.574944 -0.276386,-8.308298 -0.1763,-11.62169 0.04391,-1.453849 0.09273,-2.44853 0.108481,-2.210399 0.01575,0.238131 0.06268,0.432965 0.104291,0.432965 0.07402,0 0.104402,-1.115922 0.275467,-10.117705 0.08621,-4.536938 0.1601,-5.482612 0.591071,-7.565491 0.411726,-1.989866 1.824998,-3.650128 3.706276,-4.354004 0.472783,-0.176892 1.809902,-0.431448 3.545085,-0.674901 1.032293,-0.144836 47.002008,-0.221915 49.449724,-0.08291 1.933145,0.109779 3.073523,0.358224 4.192344,0.913352 1.65418,0.820759 2.752578,2.159163 3.449644,4.203411 0.406366,1.191729 0.517141,2.109979 0.498421,4.131556 -0.01196,1.291678 -0.03243,1.604794 -0.06925,1.059079 l -0.05227,-0.774779 -0.0808,0.638054 c -0.11303,0.892605 0.0095,5.987031 0.230135,9.570802 0.152344,2.474163 0.183608,3.949842 0.176169,8.315402 -0.0051,2.964305 -0.04577,5.398896 -0.09224,5.514605 -0.07169,0.178495 -0.084,0.157335 -0.08898,-0.152875 -0.0044,-0.276662 -0.03069,-0.335133 -0.113345,-0.252478 -0.08056,0.08056 -0.123572,2.619553 -0.171316,10.113147 -0.06052,9.49925 -0.07353,10.076101 -0.257007,11.399105 -0.432186,3.116322 -0.764055,3.977443 -2.010302,5.21625 -0.872149,0.866944 -1.542264,1.254132 -2.663793,1.53912 -0.826984,0.210143 -2.413758,0.438599 -3.85949,0.55567 -0.998637,0.08087 -48.269538,0.110798 -49.084543,0.03108 z"
-                        }
-                    }), t._v(" "), s("path", {
-                        style: {
-                            fill: t.outlineFill
+                        domProps: {
+                            value: t.answer
                         },
-                        attrs: {
-                            id: "path50",
-                            d: "m 95.76,18.84 a 37,37 0 0 0 -0.7,-6 C 94.46,9.26 92,6.99 88.14,6.08 A 49.23,49.23 0 0 0 79.3,5.21 h -6.74 -6 C 34.5,4.97 73.89,4.66 41.84,4.5 36.24,4.5 30.65,5.11 25.06,5.14 6.39,5.22 34.46,4.78 15.78,4.83 A 14.73,14.73 0 0 0 11.52,5.58 C 5.39,7.5 4.06,12.02 4,16.99 4,26.05 4,72.57 4.05,81.13 a 37,37 0 0 0 0.71,6 c 0.6,3.57 3.06,5.85 6.92,6.76 a 49.23,49.23 0 0 0 8.84,0.86 c 17.41,0.07 -13.67,0 3.74,0.06 32.06,0.17 -7.33,0.49 24.73,0.65 5.59,0 11.18,-0.61 16.77,-0.64 18.68,-0.09 -0.4,0.36 18.27,0.31 a 14.79,14.79 0 0 0 4.27,-0.75 c 6.12,-1.92 7.46,-6.45 7.49,-11.42 0.06,-9.04 0.02,-55.56 -0.03,-64.12 z M 82.27,61.16 c 0,2.11 0,3.34 0,4 0,0.51 0,1.78 0,4.52 a 31.1,31.1 0 0 1 -0.62,5.94 5.73,5.73 0 0 1 -4.88,4.64 29,29 0 0 1 -4.34,0.48 c -6.18,0 -39.76,0 -46.3,0 -3.58,0 -6.85,-0.91 -8.24,-5 a 9.34,9.34 0 0 1 -0.54,-2.86 c 0,-12.54 0.29,0.27 0.22,-12.27 0,-3.76 -0.47,-7.51 -0.45,-11.27 0.11,-21.52 0.34,4.93 0.46,-16.6 0.07,-11.69 0,9.18 0.05,-2.51 a 31.09,31.09 0 0 1 0.61,-5.94 5.75,5.75 0 0 1 4.89,-4.64 28.83,28.83 0 0 1 4.33,-0.48 c 6.19,0 39.77,0 46.3,0 3.59,0 6.86,0.91 8.24,5 a 9.36,9.36 0 0 1 0.55,2.86 c 0,12.54 -0.29,-6.31 -0.23,6.23 0,3.75 0.48,7.51 0.46,11.26 -0.15,21.57 -0.38,-4.88 -0.51,16.64 z"
+                        on: {
+                            input: [function(e) {
+                                e.target.composing || (t.answer = e.target.value)
+                            }, t.onAnswerInput]
                         }
-                    })])])])])
+                    }), t._v(" "), s("button", {
+                        staticClass: "submit buttonBlack",
+                        on: {
+                            click: function(e) {
+                                return e.preventDefault(), t.onSubmitInput.apply(null, arguments)
+                            }
+                        }
+                    }, [t._v(t._s(t.$t("LOBBY.VIP_EPISODES_SUBMIT")))])]), t._v(" "), s("div", {
+                        staticClass: "episodes-warning"
+                    }, [t._v(t._s(t.$t("LOBBY.VIP_EPISODES_WARNING")))]), t._v(" "), t.episodes.length ? s("div", [s("div", [t._v(t._s(t.$t("LOBBY.VIP_EPISODES_SELECT")))]), t._v(" "), t._l(t.episodes, (function(e, i) {
+                        return s("button", {
+                            key: e.remoteContentId || e.localContentId,
+                            staticClass: "episode buttonBlack",
+                            on: {
+                                click: function(e) {
+                                    return e.preventDefault(), t.onEpisodeClick(i)
+                                }
+                            }
+                        }, [t._v("\n            " + t._s(e.metadata.title) + "\n            "), e.remoteContentId ? s("span", {
+                            staticClass: "episodeId"
+                        }, [t._v(t._s(e.formattedRemoteContentId))]) : t._e()])
+                    }))], 2) : t._e()])
                 };
-            St._withStripped = !0;
-            const Nt = a().extend({
-                name: "SvgIcon",
+            k._withStripped = !0;
+            var L = s(79278);
+            n().use(L.ZP);
+            const R = n().extend({
                 props: {
-                    hex: {
-                        type: String,
-                        default: "#ffaf23"
-                    },
-                    active: {
-                        type: Boolean,
-                        default: !1
-                    },
-                    icon: {
-                        type: String,
-                        default: null
-                    },
-                    hasFill: {
-                        type: Boolean,
-                        default: !1
-                    },
-                    growByHeight: {
-                        type: Boolean,
-                        default: !0
-                    }
+                    episodes: Array
                 },
-                computed: {
-                    outlineFill() {
-                        return this.active ? "#030300" : "transparent"
-                    }
+                i18n: {
+                    messages: c
                 },
-                mounted() {},
+                data: () => ({
+                    answer: ""
+                }),
                 methods: {
-                    onColorClick() {
-                        this.$emit("clicked", this.hex)
+                    onEpisodeClick(t) {
+                        const e = this.episodes[t],
+                            s = e.remoteContentId || e.localContentId;
+                        this.$emit("resolve", {
+                            action: "load",
+                            contentId: s
+                        })
+                    },
+                    onAnswerInput(t) {
+                        const e = t.target;
+                        this.answer = e.value
+                    },
+                    onBackClick() {
+                        this.$emit("resolve", {})
+                    },
+                    onSubmitInput() {
+                        this.$emit("resolve", {
+                            action: "input",
+                            answer: this.answer
+                        })
                     }
                 }
             });
-            var kt = (0, l.Z)(Nt, St, [], !1, null, "96847278", null);
-            kt.options.__file = "src/games/pp8/drawful-animate/views/ColorButton.vue";
-            const Pt = kt.exports,
-                Dt = Ot.Z.extend({
-                    props: {
-                        player: Object
-                    },
-                    i18n: {
-                        messages: v
-                    },
-                    components: {
-                        Tutorial: xt.Z,
-                        ColorButton: Pt
-                    },
-                    data() {
-                        return {
-                            hasSeenTutorial: !1,
-                            slides: [{
-                                title: this.$t("TUTORIAL.SLIDE_1_TITLE"),
-                                listItems: [this.$t("TUTORIAL.SLIDE_1_ITEM_1"), this.$t("TUTORIAL.SLIDE_1_ITEM_2")],
-                                imageClass: "tutorial-0",
-                                arrow: {
-                                    top: "33%",
-                                    left: "80%",
-                                    transform: "rotate(135deg)"
-                                }
-                            }, {
-                                title: this.$t("TUTORIAL.SLIDE_2_TITLE"),
-                                listItems: [this.$t("TUTORIAL.SLIDE_2_ITEM_1"), this.$t("TUTORIAL.SLIDE_2_ITEM_2")],
-                                imageClass: "tutorial-1"
-                            }, {
-                                title: this.$t("TUTORIAL.SLIDE_3_TITLE"),
-                                listItems: [this.$t("TUTORIAL.SLIDE_3_ITEM_1"), this.$t("TUTORIAL.SLIDE_3_ITEM_2")],
-                                imageClass: "tutorial-2",
-                                arrow: {
-                                    top: "67%",
-                                    left: "20%"
-                                }
-                            }, {
-                                title: this.$t("TUTORIAL.SLIDE_4_TITLE"),
-                                listItems: [this.$t("TUTORIAL.SLIDE_4_ITEM_1")],
-                                imageClass: "tutorial-3",
-                                arrow: {
-                                    top: "87%",
-                                    left: "28%"
-                                }
-                            }, {
-                                title: this.$t("TUTORIAL.SLIDE_5_TITLE"),
-                                listItems: [],
-                                imageClass: "tutorial-4"
-                            }]
-                        }
-                    },
-                    computed: {
-                        activeColor() {
-                            return this.stage ? this.stage.canvas.color : ""
-                        },
-                        activeFrame() {
-                            return this.stage ? this.stage.canvas.frame : 0
-                        },
-                        activeThickness() {
-                            return this.stage ? this.stage.canvas.thickness : 1
-                        },
-                        canSubmit() {
-                            return null !== this.stage && this.stage.canvas.lines.length > 0 && this.stage.canvas.lines2.length > 0
-                        }
-                    },
-                    methods: {
-                        onFrameClick(t) {
-                            this.stage && (this.stage.canvas.frame = t)
-                        },
-                        onColorClick(t) {
-                            this.stage && (this.stage.canvas.color = t)
-                        },
-                        onTutorialComplete() {
-                            this.hasSeenTutorial = !0
+            var $ = (0, p.Z)(R, k, [], !1, null, null, null);
+            $.options.__file = "src/games/pp8/drawful-animate/views/EpisodesModal.vue";
+            const B = $.exports;
+            var U = function(t, e, s, i) {
+                return new(s || (s = Promise))((function(a, n) {
+                    function o(t) {
+                        try {
+                            l(i.next(t))
+                        } catch (t) {
+                            n(t)
                         }
                     }
-                });
-            var At = (0, l.Z)(Dt, wt, [], !1, null, null, null);
-            At.options.__file = "src/games/pp8/drawful-animate/views/Drawing.vue";
-            const Lt = At.exports;
-            var Rt = function() {
+
+                    function r(t) {
+                        try {
+                            l(i.throw(t))
+                        } catch (t) {
+                            n(t)
+                        }
+                    }
+
+                    function l(t) {
+                        var e;
+                        t.done ? a(t.value) : (e = t.value, e instanceof s ? e : new s((function(t) {
+                            t(e)
+                        }))).then(o, r)
+                    }
+                    l((i = i.apply(t, e || [])).next())
+                }))
+            };
+            const G = n().extend({
+                components: {
+                    LobbyActions: A.Z
+                },
+                props: {
+                    info: Object,
+                    player: Object
+                },
+                i18n: {
+                    messages: c
+                },
+                data: () => ({
+                    showEpisodesModal: !1
+                }),
+                methods: {
+                    shouldStart() {
+                        return U(this, void 0, void 0, (function*() {
+                            return !(!this.player.allPlayersHavePortraits && "confirm" !== (yield this.$showModal("Options", {
+                                text: this.$t("LOBBY.VIP_PORTRAIT_WARNING"),
+                                options: [{
+                                    text: this.$t("LOBBY.VIP_PORTRAIT_WARNING_CONFIRM"),
+                                    value: "confirm"
+                                }, {
+                                    text: this.$t("LOBBY.VIP_PORTRAIT_WARNING_CANCEL"),
+                                    value: "cancel"
+                                }]
+                            })))
+                        }))
+                    },
+                    onActionEvent(t) {
+                        this.player.responseKey && this.$ecast.updateObject(this.player.responseKey, {
+                            action: t
+                        }).catch(this.$handleEcastError)
+                    },
+                    onReportClick() {
+                        window.location.href = `mailto:support@jackboxgames.com?subject=Report episode id ${this.player.formattedActiveContentId}`
+                    },
+                    onEpisodesClick() {
+                        var t;
+                        return U(this, void 0, void 0, (function*() {
+                            const e = yield this.$showModal(B, {
+                                episodes: this.player.history
+                            });
+                            if (e && this.player.responseKey && ("load" === e.action && this.$ecast.updateObject(this.player.responseKey, {
+                                    activateContentId: !0,
+                                    contentId: e.contentId
+                                }).catch(this.$handleEcastError), "input" === e.action)) {
+                                const s = (null === (t = e.answer) || void 0 === t ? void 0 : t.replace(/[^A-Za-z]/gi, "").toUpperCase()) || "";
+                                if (s.length < 7) return;
+                                this.$ecast.updateObject(this.player.responseKey, {
+                                    activateContentId: !0,
+                                    contentId: s
+                                }).catch(this.$handleEcastError)
+                            }
+                        }))
+                    }
+                }
+            });
+            var M = (0, p.Z)(G, P, [], !1, null, null, null);
+            M.options.__file = "src/games/pp8/drawful-animate/views/Lobby.vue";
+            const K = M.exports;
+            var W = function() {
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
+                return s("div", {
+                    staticClass: "post-game scrollable"
+                }, [s("div", {
+                    staticClass: "header",
+                    domProps: {
+                        textContent: t._s(t.info.name)
+                    }
+                }), t._v(" "), s("div", {
+                    staticClass: "constrain"
+                }, [s("PostGameActions", {
+                    attrs: {
+                        player: t.player,
+                        classes: {
+                            action: "buttonBlack"
+                        }
+                    }
+                }), t._v(" "), s("GalleryLink", {
+                    attrs: {
+                        artifact: t.artifact
+                    }
+                })], 1)])
+            };
+            W._withStripped = !0;
+            var V = s(56623),
+                H = s(83933);
+            const j = n().extend({
+                components: {
+                    GalleryLink: V.Z,
+                    PostGameActions: H.Z
+                },
+                props: {
+                    artifact: Object,
+                    info: Object,
+                    player: Object
+                }
+            });
+            var F = (0, p.Z)(j, W, [], !1, null, null, null);
+            F.options.__file = "src/games/pp8/drawful-animate/views/PostGame.vue";
+            const Y = F.exports;
+            var Z = function() {
                 var t = this,
                     e = t.$createElement,
                     s = t._self._c || e;
@@ -2351,40 +1787,42 @@
                     })])])
                 })), 0)])]) : t._e()])])
             };
-            Rt._withStripped = !0;
-            var $t = function(t, e, s, i) {
-                return new(s || (s = Promise))((function(n, a) {
-                    function r(t) {
-                        try {
-                            l(i.next(t))
-                        } catch (t) {
-                            a(t)
+            Z._withStripped = !0;
+            var z = s(3682),
+                X = s(89446),
+                q = function(t, e, s, i) {
+                    return new(s || (s = Promise))((function(a, n) {
+                        function o(t) {
+                            try {
+                                l(i.next(t))
+                            } catch (t) {
+                                n(t)
+                            }
                         }
-                    }
 
-                    function o(t) {
-                        try {
-                            l(i.throw(t))
-                        } catch (t) {
-                            a(t)
+                        function r(t) {
+                            try {
+                                l(i.throw(t))
+                            } catch (t) {
+                                n(t)
+                            }
                         }
-                    }
 
-                    function l(t) {
-                        var e;
-                        t.done ? n(t.value) : (e = t.value, e instanceof s ? e : new s((function(t) {
-                            t(e)
-                        }))).then(r, o)
-                    }
-                    l((i = i.apply(t, e || [])).next())
-                }))
-            };
-            const Bt = a().extend({
+                        function l(t) {
+                            var e;
+                            t.done ? a(t.value) : (e = t.value, e instanceof s ? e : new s((function(t) {
+                                t(e)
+                            }))).then(o, r)
+                        }
+                        l((i = i.apply(t, e || [])).next())
+                    }))
+                };
+            const Q = n().extend({
                 props: {
                     player: Object
                 },
                 i18n: {
-                    messages: v
+                    messages: c
                 },
                 bb: {
                     tos: (t, e) => `<a class="tosLink" href="https://jackboxgames.com/terms-of-service/" target="_blank">${e}</a>`
@@ -2419,7 +1857,7 @@
                     }
                 },
                 mounted() {
-                    lt()([this.$refs.titleTextarea, this.$refs.promptTextarea])
+                    (0, z.Z)([this.$refs.titleTextarea, this.$refs.promptTextarea])
                 },
                 methods: {
                     onKeypress(t, e) {
@@ -2428,7 +1866,7 @@
                     onInput(t) {
                         const e = t.target;
                         let s = Number.MAX_SAFE_INTEGER;
-                        this.player.validActions.includes("title") && (s = this.player.maxTitleLength), this.player.validActions.includes("add") && (s = this.player.maxContentLength), e.value.length > s && (e.value = e.value.substring(0, s)), e.value = ct.c.sanitizeInput(e.value), this.answer = e.value
+                        this.player.validActions.includes("title") && (s = this.player.maxTitleLength), this.player.validActions.includes("add") && (s = this.player.maxContentLength), e.value.length > s && (e.value = e.value.substring(0, s)), e.value = X.c.sanitizeInput(e.value), this.answer = e.value
                     },
                     onToggleVisibility(t) {
                         this.$ecast.updateObject(this.player.responseKey, {
@@ -2442,7 +1880,7 @@
                         }).catch(this.$handleEcastError)
                     },
                     showTermsOfService() {
-                        return $t(this, void 0, void 0, (function*() {
+                        return q(this, void 0, void 0, (function*() {
                             "confirm" === (yield this.$showModal("Options", {
                                 text: this.$t("UGC.TOS_WARNING"),
                                 options: [{
@@ -2460,7 +1898,7 @@
                         }))
                     },
                     showConfirmDeleteDialog() {
-                        return $t(this, void 0, void 0, (function*() {
+                        return q(this, void 0, void 0, (function*() {
                             "confirm" === (yield this.$showModal("Options", {
                                 text: this.$t("UGC.DELETE_WARNING"),
                                 options: [{
@@ -2507,19 +1945,272 @@
                     }
                 }
             });
-            var Ut = (0, l.Z)(Bt, Rt, [], !1, null, null, null);
-            Ut.options.__file = "src/games/pp8/drawful-animate/views/Ugc.vue";
-            const Gt = Ut.exports,
-                Mt = a().extend({
+            var J = (0, p.Z)(Q, Z, [], !1, null, null, null);
+            J.options.__file = "src/games/pp8/drawful-animate/views/Ugc.vue";
+            const tt = J.exports;
+            var et = function() {
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
+                return s("div", {
+                    staticClass: "waiting",
+                    class: {
+                        isFriendMode: t.player.isFriendMode
+                    }
+                }, [s("div", {
+                    staticClass: "header",
+                    domProps: {
+                        textContent: t._s(t.header)
+                    }
+                }), t._v(" "), s("div", {
+                    staticClass: "constrain stacked"
+                }, [t.player.message ? s("div", {
+                    staticClass: "message",
+                    domProps: {
+                        textContent: t._s(t.player.message)
+                    }
+                }) : t._e(), t._v(" "), s("div", {
+                    staticClass: "logo"
+                })])])
+            };
+            et._withStripped = !0;
+            const st = n().extend({
+                props: {
+                    info: Object,
+                    player: Object
+                },
+                computed: {
+                    header() {
+                        return this.player && this.player.header ? this.player.header : this.info && this.info.name ? this.info.name : this.$ecast.name
+                    }
+                }
+            });
+            var it = (0, p.Z)(st, et, [], !1, null, null, null);
+            it.options.__file = "src/games/pp8/drawful-animate/views/Waiting.vue";
+            const at = it.exports;
+            var nt = function() {
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
+                return s("div", {
+                    staticClass: "writing"
+                }, [s("div", {
+                    staticClass: "header",
+                    domProps: {
+                        textContent: t._s(t.player.header)
+                    }
+                }), t._v(" "), s("div", {
+                    staticClass: "constrain"
+                }, [t.isSubmitted ? s("p", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "WRITING.DONE",
+                        expression: "'WRITING.DONE'"
+                    }]
+                }) : s("form", {
+                    on: {
+                        submit: function(e) {
+                            return e.preventDefault(), t.onSubmit.apply(null, arguments)
+                        }
+                    }
+                }, [s("fieldset", {
+                    attrs: {
+                        disabled: t.isSubmitting
+                    }
+                }, [s("label", {
+                    attrs: {
+                        for: "text-input"
+                    }
+                }, [s("p", {
+                    staticClass: "prompt",
+                    domProps: {
+                        textContent: t._s(t.prompt)
+                    }
+                })]), t._v(" "), s("textarea", {
+                    ref: "textarea",
+                    attrs: {
+                        id: "text-input",
+                        rows: "1",
+                        maxlength: t.player.maxLength,
+                        placeholder: t.player.placeholder
+                    },
+                    domProps: {
+                        value: t.answer
+                    },
+                    on: {
+                        input: t.onInput,
+                        keypress: t.onKeypress
+                    }
+                }), t._v(" "), t.player.isFriendMode ? s("div", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "WRITING.FRIEND_HINT",
+                        expression: "'WRITING.FRIEND_HINT'"
+                    }],
+                    staticClass: "friend-hint"
+                }) : t._e(), t._v(" "), t.player.error ? s("div", {
+                    staticClass: "error"
+                }, [t._v(t._s(t.player.error))]) : t._e(), t._v(" "), t.filterError ? s("div", {
+                    staticClass: "error"
+                }, [t._v(t._s(t.$t("WRITING.FILTER_ERROR")))]) : t._e(), t._v(" "), s("div", {
+                    staticClass: "controls"
+                }, [s("div", {
+                    staticClass: "remaining",
+                    domProps: {
+                        textContent: t._s(t.remainingCharacters)
+                    }
+                }), t._v(" "), s("button", {
+                    staticClass: "submit",
+                    attrs: {
+                        type: "submit",
+                        value: "Submit",
+                        disabled: !t.hasAnswer
+                    }
+                }, [t._v("\n                        " + t._s(t.submitText) + "\n                    ")])])])])])])
+            };
+            nt._withStripped = !0;
+            var ot = function(t, e, s, i) {
+                return new(s || (s = Promise))((function(a, n) {
+                    function o(t) {
+                        try {
+                            l(i.next(t))
+                        } catch (t) {
+                            n(t)
+                        }
+                    }
+
+                    function r(t) {
+                        try {
+                            l(i.throw(t))
+                        } catch (t) {
+                            n(t)
+                        }
+                    }
+
+                    function l(t) {
+                        var e;
+                        t.done ? a(t.value) : (e = t.value, e instanceof s ? e : new s((function(t) {
+                            t(e)
+                        }))).then(o, r)
+                    }
+                    l((i = i.apply(t, e || [])).next())
+                }))
+            };
+            const rt = n().extend({
+                props: {
+                    player: Object,
+                    audience: Boolean
+                },
+                i18n: {
+                    messages: c
+                },
+                data: () => ({
+                    answer: "",
+                    filterError: !1,
+                    isSubmitting: !1,
+                    isSubmitted: !1,
+                    autoSubmitter: void 0
+                }),
+                computed: {
+                    sanitizedAnswer() {
+                        return X.c.sanitizeInput(this.answer).trim()
+                    },
+                    prompt() {
+                        return this.player.prompt || this.$t("WRITING.PROMPT")
+                    },
+                    remainingCharacters() {
+                        return this.player.maxLength && this.answer ? "" + (this.player.maxLength - this.answer.length) : ""
+                    },
+                    canSubmit() {
+                        return !(!this.sanitizedAnswer || this.player.maxLength && this.sanitizedAnswer.length > this.player.maxLength)
+                    },
+                    submitText() {
+                        return this.player.submitText || this.$t("WRITING.BUTTON_SUBMIT")
+                    },
+                    hasAnswer() {
+                        var t;
+                        return (null === (t = this.answer) || void 0 === t ? void 0 : t.trim().length) > 0
+                    }
+                },
+                watch: {
+                    "player.writingId": function() {
+                        this.player.error || (this.answer = ""), this.isSubmitting = !1
+                    }
+                },
+                mounted() {
+                    this.autoSubmitter = (0, O.throttle)(this.autoSubmit.bind(this), 400), (0, z.Z)(this.$refs.textarea), this.player.textKey && this.restoreText()
+                },
+                beforeDestroy() {
+                    var t;
+                    null === (t = this.autoSubmitter) || void 0 === t || t.cancel()
+                },
+                methods: {
+                    restoreText() {
+                        return ot(this, void 0, void 0, (function*() {
+                            try {
+                                const t = yield this.$ecast.getText(this.player.textKey);
+                                this.answer = t.text
+                            } catch (t) {
+                                this.$handleEcastError(t)
+                            }
+                        }))
+                    },
+                    autoSubmit() {
+                        return ot(this, void 0, void 0, (function*() {
+                            if (!this.isSubmitting) try {
+                                yield this.$ecast.updateText(this.player.textKey, this.sanitizedAnswer)
+                            } catch (t) {
+                                t instanceof r.EcastFilterError || this.$handleEcastError(t), this.$ecast.updateText(this.player.textKey, "").catch(this.$handleEcastError)
+                            }
+                        }))
+                    },
+                    onKeypress(t) {
+                        "Enter" === t.key && this.onSubmit()
+                    },
+                    onInput(t) {
+                        const e = t.target,
+                            s = this.player.maxLength || Number.MAX_SAFE_INTEGER;
+                        e.value.length > s && (e.value = e.value.substring(0, s)), e.value = X.c.sanitizeInput(e.value), this.answer = e.value, this.filterError = !1, this.player.responseKey && this.autoSubmitter && this.autoSubmitter()
+                    },
+                    onSubmit() {
+                        return ot(this, void 0, void 0, (function*() {
+                            if (this.isSubmitting = !0, this.audience) try {
+                                this.player.textRingName && (yield this.$ecast.pushTextRing(this.player.textRingName, this.sanitizedAnswer), this.isSubmitted = !0)
+                            } catch (t) {
+                                this.$handleEcastError(t)
+                            } else try {
+                                if (yield this.$ecast.getText(this.player.textKey), yield this.$ecast.updateText(this.player.textKey, this.sanitizedAnswer), this.filterError = !1, this.player.responseKey) try {
+                                    yield this.$ecast.updateObject(this.player.responseKey, {
+                                        answer: this.sanitizedAnswer,
+                                        done: !0
+                                    })
+                                } catch (t) {
+                                    this.$handleEcastError(t)
+                                }
+                            } catch (t) {
+                                t instanceof r.EcastFilterError || this.$handleEcastError(t), this.filterError = !0, this.isSubmitting = !1, setTimeout((() => {
+                                    this.$refs.textarea instanceof HTMLElement && this.$refs.textarea.focus()
+                                }), 0)
+                            }
+                        }))
+                    }
+                }
+            });
+            var lt = (0, p.Z)(rt, nt, [], !1, null, null, null);
+            lt.options.__file = "src/games/pp8/drawful-animate/views/Writing.vue";
+            const ct = lt.exports,
+                ut = n().extend({
                     components: {
-                        Drawing: Lt,
-                        Waiting: u,
-                        Lobby: J,
-                        PostGame: nt,
-                        Writing: vt,
-                        Choosing: gt,
-                        Flipping: It,
-                        Ugc: Gt
+                        Drawing: T,
+                        Waiting: at,
+                        Lobby: K,
+                        PostGame: Y,
+                        Writing: ct,
+                        Choosing: v,
+                        Flipping: D,
+                        Ugc: tt
                     },
                     themeColor: "#611785",
                     props: {
@@ -2573,9 +2264,9 @@
                         this.$debug.setAutomarkIgnoredKeys(["timer"])
                     }
                 });
-            var Kt = (0, l.Z)(Mt, i, [], !1, null, "31bec97a", null);
-            Kt.options.__file = "src/games/pp8/drawful-animate/views/Main.vue";
-            const Wt = Kt.exports
+            var dt = (0, p.Z)(ut, i, [], !1, null, "31bec97a", null);
+            dt.options.__file = "src/games/pp8/drawful-animate/views/Main.vue";
+            const pt = dt.exports
         },
         57095: (t, e, s) => {
             "use strict";
@@ -2583,4 +2274,4 @@
         }
     }
 ]);
-//# sourceMappingURL=7782.b6be623048874293b308.js.map
+//# sourceMappingURL=sourcemaps/6333.07c45b573320a435a3d6.js.map

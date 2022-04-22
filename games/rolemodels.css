@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("rolemodels/post-banner.tjpp7_banner-image.png")
+    background-image: url("rolemodels/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("rolemodels/post-banner.tjpp6_banner-image.png")
+    background-image: url("rolemodels/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -1203,7 +1203,7 @@ button {
 
 .rolemodels .Draw canvas.sketchpad {
     border: none;
-    background: url("rolemodels/rolemodels_Draw_canvas.sketchpad.png") no-repeat center/101% 101%
+    background: url("rolemodels/rolemodels_Draw_canvas_sketchpad.png") no-repeat center/101% 101%
 }
 
 .rolemodels .Draw .button {
@@ -1387,7 +1387,7 @@ button {
 }
 
 .rolemodels .Sortable .roleListView .roleView .footer .doubleDown.selected {
-    background: url("rolemodels/rolemodels_Sortable_roleListView_roleView_footer_doubleDown.selected.png") no-repeat center/contain transparent
+    background: url("rolemodels/rolemodels_Sortable_roleListView_roleView_footer_doubleDown_selected.png") no-repeat center/contain transparent
 }
 
 .rolemodels .Sortable .roleListView .roleView .body {
@@ -1436,4 +1436,4 @@ button {
     }
 }
 
-/*# sourceMappingURL=7088.css.map*/
+/*# sourceMappingURL=sourcemaps/7088.css.map*/

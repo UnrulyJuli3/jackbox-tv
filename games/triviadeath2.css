@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("triviadeath2/post-banner.tjpp7_banner-image.png")
+    background-image: url("triviadeath2/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("triviadeath2/post-banner.tjpp6_banner-image.png")
+    background-image: url("triviadeath2/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -1257,14 +1257,14 @@ li>a.button-color.active[data-color="#000000"] {
     width: 64px;
     height: 64px;
     background-color: transparent;
-    background-image: url("triviadeath2/triviadeath2_MakeSingleChoice.FinalRound_button-group_check-button.png");
+    background-image: url("triviadeath2/triviadeath2_MakeSingleChoice_FinalRound_button-group_check-button.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain
 }
 
 .triviadeath2 .MakeSingleChoice.FinalRound .button-group.selected .check-button {
-    background-image: url("triviadeath2/triviadeath2_MakeSingleChoice.FinalRound_button-group.selected_check-button.png")
+    background-image: url("triviadeath2/triviadeath2_MakeSingleChoice_FinalRound_button-group_selected_check-button.png")
 }
 
 .triviadeath2 .MakeSingleChoice.FinalRound .button-group.selected .check-button button:hover:enabled,
@@ -1463,14 +1463,14 @@ li>a.button-color.active[data-color="#000000"] {
 }
 
 .triviadeath2 .Draw.Mirror canvas {
-    background-image: url("triviadeath2/triviadeath2_Draw.Mirror_canvas.jpg");
+    background-image: url("triviadeath2/triviadeath2_Draw_Mirror_canvas.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat
 }
 
 .triviadeath2 .Draw.Tattoos canvas {
-    background-image: url("triviadeath2/triviadeath2_Draw.Tattoos_canvas.jpg");
+    background-image: url("triviadeath2/triviadeath2_Draw_Tattoos_canvas.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat
@@ -1645,7 +1645,7 @@ li>a.button-color.active[data-color="#000000"] {
     border: 0px solid #000;
     background-color: #000;
     border-radius: 6px;
-    background-image: url("triviadeath2/triviadeath2_Grid_grid-cell.stab_grid-contents.svg");
+    background-image: url("triviadeath2/triviadeath2_Grid_grid-cell_stab_grid-contents.svg");
     background-repeat: no-repeat;
     background-position: 50% 80%;
     background-size: 50%;
@@ -1727,7 +1727,7 @@ li>a.button-color.active[data-color="#000000"] {
 
 .triviadeath2 .controller-page>.Green {
     color: #89b478;
-    background: url("triviadeath2/triviadeath2_controller-page_.Green.jpg") no-repeat center/cover #193c19
+    background: url("triviadeath2/triviadeath2_controller-page__Green.jpg") no-repeat center/cover #193c19
 }
 
 .triviadeath2 .controller-page>.Green .lobbyTitle {
@@ -1763,7 +1763,7 @@ li>a.button-color.active[data-color="#000000"] {
 
 .triviadeath2 .controller-page>.Purple {
     color: #9b7daf;
-    background: url("triviadeath2/triviadeath2_controller-page_.Purple.jpg") no-repeat center/cover #3c2846
+    background: url("triviadeath2/triviadeath2_controller-page__Purple.jpg") no-repeat center/cover #3c2846
 }
 
 .triviadeath2 .controller-page>.Purple .lobbyTitle {
@@ -1799,7 +1799,7 @@ li>a.button-color.active[data-color="#000000"] {
 
 .triviadeath2 .controller-page>.Blue {
     color: #6e9be1;
-    background: url("triviadeath2/triviadeath2_controller-page_.Blue.jpg") no-repeat center/cover #1e3755
+    background: url("triviadeath2/triviadeath2_controller-page__Blue.jpg") no-repeat center/cover #1e3755
 }
 
 .triviadeath2 .controller-page>.Blue .lobbyTitle {
@@ -1835,7 +1835,7 @@ li>a.button-color.active[data-color="#000000"] {
 
 .triviadeath2 .controller-page>.Gray {
     color: #afafaf;
-    background: url("triviadeath2/triviadeath2_controller-page_.Gray.jpg") no-repeat center/cover #383838
+    background: url("triviadeath2/triviadeath2_controller-page__Gray.jpg") no-repeat center/cover #383838
 }
 
 .triviadeath2 .controller-page>.Gray .lobbyTitle {
@@ -1871,7 +1871,7 @@ li>a.button-color.active[data-color="#000000"] {
 
 .triviadeath2 .controller-page>.Yellow {
     color: #ebdca0;
-    background: url("triviadeath2/triviadeath2_controller-page_.Yellow.jpg") no-repeat center/cover #50461e
+    background: url("triviadeath2/triviadeath2_controller-page__Yellow.jpg") no-repeat center/cover #50461e
 }
 
 .triviadeath2 .controller-page>.Yellow .lobbyTitle {
@@ -1907,7 +1907,7 @@ li>a.button-color.active[data-color="#000000"] {
 
 .triviadeath2 .controller-page>.Orange {
     color: #e1af78;
-    background: url("triviadeath2/triviadeath2_controller-page_.Orange.jpg") no-repeat center/cover #5f3c28
+    background: url("triviadeath2/triviadeath2_controller-page__Orange.jpg") no-repeat center/cover #5f3c28
 }
 
 .triviadeath2 .controller-page>.Orange .lobbyTitle {
@@ -1943,7 +1943,7 @@ li>a.button-color.active[data-color="#000000"] {
 
 .triviadeath2 .controller-page>.Red {
     color: #fa9696;
-    background: url("triviadeath2/triviadeath2_controller-page_.Red.jpg") no-repeat center/cover #5a1919
+    background: url("triviadeath2/triviadeath2_controller-page__Red.jpg") no-repeat center/cover #5a1919
 }
 
 .triviadeath2 .controller-page>.Red .lobbyTitle {
@@ -1979,7 +1979,7 @@ li>a.button-color.active[data-color="#000000"] {
 
 .triviadeath2 .controller-page>.Pink {
     color: #e191a5;
-    background: url("triviadeath2/triviadeath2_controller-page_.Pink.jpg") no-repeat center/cover #873250
+    background: url("triviadeath2/triviadeath2_controller-page__Pink.jpg") no-repeat center/cover #873250
 }
 
 .triviadeath2 .controller-page>.Pink .lobbyTitle {
@@ -2015,7 +2015,7 @@ li>a.button-color.active[data-color="#000000"] {
 
 .triviadeath2 .controller-page>.Audience {
     color: #f0d2be;
-    background: url("triviadeath2/triviadeath2_controller-page_.Audience.jpg") no-repeat center/cover #503c2d
+    background: url("triviadeath2/triviadeath2_controller-page__Audience.jpg") no-repeat center/cover #503c2d
 }
 
 .triviadeath2 .controller-page>.Audience .lobbyTitle {
@@ -2249,55 +2249,55 @@ li>a.button-color.active[data-color="#000000"] {
 
 @keyframes animated-rainbow-shadow {
     0% {
-        text-shadow: 0px 0px transparent, -6px 11px red, -3px 6px red, -7px 8px orange, -1px 5px orange, -9px -6px orange, 6px 11px yellow, 12px 11px yellow, 1px 0px yellow, -9px 10px blue, -7px 12px blue, -6px -6px blue, 6px 10px red
+        text-shadow: 0px 0px transparent, -11px 1px red, 9px 2px red, 0px -4px orange, -4px 4px orange, -11px -6px orange, 8px 1px yellow, 5px -2px yellow, -4px -3px yellow, 10px 5px blue, 2px 9px blue, 1px 8px blue, 11px -10px red
     }
 
     8.3333333333% {
-        text-shadow: 0px 0px transparent, -5px -4px red, -3px -7px orange, 0px 4px orange, -5px 3px orange, -11px 1px yellow, 7px -11px yellow, 9px -10px yellow, 8px -4px blue, 4px -9px blue, 8px -2px blue, -4px -6px red, -5px -4px red
+        text-shadow: 0px 0px transparent, -11px 9px red, 3px 10px orange, 5px 4px orange, -10px -6px orange, 7px -6px yellow, -4px -1px yellow, -10px 9px yellow, 5px 8px blue, 0px 3px blue, -3px -7px blue, -8px 4px red, -11px -2px red
     }
 
     16.6666666667% {
-        text-shadow: 0px 0px transparent, 10px -6px orange, -9px -4px orange, -11px 2px orange, 2px 2px yellow, -11px 3px yellow, 3px 6px yellow, 1px 12px blue, 3px -10px blue, 10px 10px blue, -6px -3px red, -2px -8px red, 8px -7px red
+        text-shadow: 0px 0px transparent, -8px 6px orange, 10px -10px orange, -9px 6px orange, 12px 6px yellow, -10px 1px yellow, 9px -9px yellow, 3px -8px blue, -10px -3px blue, -1px 0px blue, -1px -6px red, -6px 4px red, -5px -5px red
     }
 
     25% {
-        text-shadow: 0px 0px transparent, -9px -1px orange, -11px 5px orange, 3px -4px yellow, 2px 1px yellow, 2px -5px yellow, -11px 7px blue, -2px 10px blue, 12px -2px blue, 4px -9px red, -2px -7px red, 9px 11px red, 1px 9px orange
+        text-shadow: 0px 0px transparent, -7px 4px orange, -11px 4px orange, -2px 12px yellow, 3px 12px yellow, 5px -6px yellow, 11px 12px blue, 11px 12px blue, 8px 8px blue, 9px -8px red, 9px 0px red, 3px 1px red, -7px 2px orange
     }
 
     33.3333333333% {
-        text-shadow: 0px 0px transparent, 9px 7px orange, -9px -4px yellow, -11px -10px yellow, 8px 1px yellow, -9px 7px blue, -8px -1px blue, -3px -7px blue, -3px 0px red, -10px 7px red, 10px 2px red, 0px 10px orange, 2px -5px orange
+        text-shadow: 0px 0px transparent, -9px -7px orange, 12px -11px yellow, 3px -3px yellow, 0px -5px yellow, 10px -6px blue, -11px -5px blue, 7px 12px blue, -3px 5px red, -8px 10px red, 2px 9px red, -1px -11px orange, 1px -6px orange
     }
 
     41.6666666667% {
-        text-shadow: 0px 0px transparent, 9px 12px yellow, 1px -7px yellow, 6px -7px yellow, 10px 8px blue, 11px 6px blue, -8px 7px blue, -2px -6px red, 12px -4px red, -5px 9px red, 3px -10px orange, -10px 11px orange, 4px -9px orange
+        text-shadow: 0px 0px transparent, 8px 5px yellow, 12px 6px yellow, 7px 4px yellow, -4px -1px blue, -1px 8px blue, 2px 7px blue, 9px -9px red, -10px 5px red, -5px 1px red, 9px 12px orange, 5px 11px orange, -8px 0px orange
     }
 
     50% {
-        text-shadow: 0px 0px transparent, 5px -8px yellow, 11px -8px yellow, -10px -7px blue, -10px 10px blue, -9px 12px blue, 8px 8px red, -9px -11px red, 11px -4px red, 9px -8px orange, -7px -9px orange, 10px 6px orange, -2px 0px yellow
+        text-shadow: 0px 0px transparent, -11px -7px yellow, 1px 5px yellow, 2px -6px blue, 4px -4px blue, 9px 4px blue, -8px 12px red, -5px -7px red, -8px -6px red, 5px -6px orange, -7px -4px orange, 12px 10px orange, 10px 8px yellow
     }
 
     58.3333333333% {
-        text-shadow: 0px 0px transparent, 11px -7px yellow, 12px 7px blue, -10px -3px blue, 3px -9px blue, 1px -7px red, -3px 12px red, -8px -1px red, -7px -4px orange, 5px 1px orange, -9px 2px orange, 8px -4px yellow, -4px 1px yellow
+        text-shadow: 0px 0px transparent, 0px -10px yellow, 3px -10px blue, 8px 2px blue, 12px -6px blue, 8px 6px red, 8px 1px red, 4px -5px red, -3px -5px orange, 3px -4px orange, 7px 1px orange, 5px -4px yellow, 9px -8px yellow
     }
 
     66.6666666667% {
-        text-shadow: 0px 0px transparent, 9px -7px blue, 9px -2px blue, -11px 4px blue, 0px 1px red, 10px 1px red, 12px 6px red, 5px 3px orange, 0px -11px orange, -4px -4px orange, -10px -8px yellow, -5px 5px yellow, 8px 0px yellow
+        text-shadow: 0px 0px transparent, -7px 7px blue, 4px 0px blue, 11px 0px blue, -1px 3px red, -1px 10px red, -3px -2px red, 3px 6px orange, 10px 7px orange, -11px 12px orange, -7px -7px yellow, 9px 9px yellow, 8px -11px yellow
     }
 
     75% {
-        text-shadow: 0px 0px transparent, 6px 3px blue, 11px 9px blue, 9px 11px red, -3px -6px red, -9px 11px red, -5px -7px orange, 7px 4px orange, -8px 1px orange, 12px 11px yellow, -2px -5px yellow, -2px 0px yellow, 5px -6px blue
+        text-shadow: 0px 0px transparent, -3px 9px blue, 6px -1px blue, 8px 8px red, 8px 10px red, 1px 12px red, 11px -11px orange, -4px -3px orange, 4px -4px orange, -8px -1px yellow, 5px -3px yellow, 3px -3px yellow, -7px -2px blue
     }
 
     83.3333333333% {
-        text-shadow: 0px 0px transparent, 0px -6px blue, 3px -6px red, -8px -11px red, -3px -7px red, -7px 4px orange, 8px -1px orange, 5px 1px orange, -7px 7px yellow, 7px 5px yellow, -11px -1px yellow, 2px -2px blue, -4px -5px blue
+        text-shadow: 0px 0px transparent, 0px 8px blue, 7px -3px red, 8px 5px red, 11px -7px red, -3px 7px orange, 5px 8px orange, -5px -8px orange, -1px -9px yellow, -6px -2px yellow, -4px 5px yellow, -8px 2px blue, 12px -7px blue
     }
 
     91.6666666667% {
-        text-shadow: 0px 0px transparent, 1px -2px red, -9px -5px red, -10px -7px red, -10px 8px orange, -11px 1px orange, 2px -9px orange, 10px 1px yellow, -1px -1px yellow, 10px 9px yellow, 1px 7px blue, 10px -5px blue, -8px 8px blue
+        text-shadow: 0px 0px transparent, -11px 1px red, -3px -9px red, 12px 3px red, 4px -4px orange, 1px 7px orange, -1px -8px orange, -3px -4px yellow, 8px 0px yellow, 3px 9px yellow, 4px 2px blue, 11px 9px blue, 1px -1px blue
     }
 
     100% {
-        text-shadow: 0px 0px transparent, -6px 10px red, -8px 3px red, -5px 1px orange, -11px 4px orange, -1px 5px orange, -4px 8px yellow, 7px -2px yellow, -7px -2px yellow, -1px 5px blue, 12px 7px blue, 2px 6px blue, 3px -1px red
+        text-shadow: 0px 0px transparent, 12px 10px red, 2px 7px red, 10px -2px orange, 4px 5px orange, 0px 4px orange, 3px -3px yellow, -2px 1px yellow, 8px -7px yellow, -8px -10px blue, 5px 3px blue, -9px -10px blue, -5px 11px red
     }
 }
 
@@ -2425,4 +2425,4 @@ li>a.button-color.active[data-color="#000000"] {
     }
 }
 
-/*# sourceMappingURL=9187.css.map*/
+/*# sourceMappingURL=sourcemaps/9187.css.map*/

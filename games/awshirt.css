@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("awshirt/post-banner.tjpp7_banner-image.png")
+    background-image: url("awshirt/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("awshirt/post-banner.tjpp6_banner-image.png")
+    background-image: url("awshirt/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -391,67 +391,67 @@ fieldset {
 }
 
 .awshirt-player-avatar-large.baku {
-    background-image: url("awshirt/awshirt-player-avatar-large.baku.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_baku.png")
 }
 
 .awshirt-player-avatar-large.blueDemon {
-    background-image: url("awshirt/awshirt-player-avatar-large.blueDemon.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_blueDemon.png")
 }
 
 .awshirt-player-avatar-large.bun {
-    background-image: url("awshirt/awshirt-player-avatar-large.bun.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_bun.png")
 }
 
 .awshirt-player-avatar-large.cat {
-    background-image: url("awshirt/awshirt-player-avatar-large.cat.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_cat.png")
 }
 
 .awshirt-player-avatar-large.catfish {
-    background-image: url("awshirt/awshirt-player-avatar-large.catfish.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_catfish.png")
 }
 
 .awshirt-player-avatar-large.crow {
-    background-image: url("awshirt/awshirt-player-avatar-large.crow.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_crow.png")
 }
 
 .awshirt-player-avatar-large.dog {
-    background-image: url("awshirt/awshirt-player-avatar-large.dog.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_dog.png")
 }
 
 .awshirt-player-avatar-large.fire {
-    background-image: url("awshirt/awshirt-player-avatar-large.fire.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_fire.png")
 }
 
 .awshirt-player-avatar-large.fox {
-    background-image: url("awshirt/awshirt-player-avatar-large.fox.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_fox.png")
 }
 
 .awshirt-player-avatar-large.hair {
-    background-image: url("awshirt/awshirt-player-avatar-large.hair.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_hair.png")
 }
 
 .awshirt-player-avatar-large.kappa {
-    background-image: url("awshirt/awshirt-player-avatar-large.kappa.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_kappa.png")
 }
 
 .awshirt-player-avatar-large.monkey {
-    background-image: url("awshirt/awshirt-player-avatar-large.monkey.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_monkey.png")
 }
 
 .awshirt-player-avatar-large.raccoon {
-    background-image: url("awshirt/awshirt-player-avatar-large.raccoon.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_raccoon.png")
 }
 
 .awshirt-player-avatar-large.redDemon {
-    background-image: url("awshirt/awshirt-player-avatar-large.redDemon.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_redDemon.png")
 }
 
 .awshirt-player-avatar-large.snake {
-    background-image: url("awshirt/awshirt-player-avatar-large.snake.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_snake.png")
 }
 
 .awshirt-player-avatar-large.umbrella {
-    background-image: url("awshirt/awshirt-player-avatar-large.umbrella.png")
+    background-image: url("awshirt/awshirt-player-avatar-large_umbrella.png")
 }
 
 p,
@@ -773,7 +773,7 @@ li>a.button-color.active[data-color="#000000"] {
 
 .awshirt-avatars button.used {
     background-color: #0f0903;
-    background-image: url("awshirt/awshirt-avatars_button.used.png");
+    background-image: url("awshirt/awshirt-avatars_button_used.png");
     border-color: #000
 }
 
@@ -1304,4 +1304,4 @@ a.gallery-link img {
     direction: rtl
 }
 
-/*# sourceMappingURL=9039.css.map*/
+/*# sourceMappingURL=sourcemaps/9039.css.map*/

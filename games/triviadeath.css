@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("triviadeath/post-banner.tjpp7_banner-image.png")
+    background-image: url("triviadeath/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("triviadeath/post-banner.tjpp6_banner-image.png")
+    background-image: url("triviadeath/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -417,39 +417,39 @@ th,
 }
 
 .textured-background.audience {
-    background-image: url("triviadeath/textured-background.audience.png")
+    background-image: url("triviadeath/textured-background_audience.png")
 }
 
 .textured-background.blue {
-    background-image: url("triviadeath/textured-background.blue.png")
+    background-image: url("triviadeath/textured-background_blue.png")
 }
 
 .textured-background.gray {
-    background-image: url("triviadeath/textured-background.gray.png")
+    background-image: url("triviadeath/textured-background_gray.png")
 }
 
 .textured-background.green {
-    background-image: url("triviadeath/textured-background.green.png")
+    background-image: url("triviadeath/textured-background_green.png")
 }
 
 .textured-background.orange {
-    background-image: url("triviadeath/textured-background.orange.png")
+    background-image: url("triviadeath/textured-background_orange.png")
 }
 
 .textured-background.pink {
-    background-image: url("triviadeath/textured-background.pink.png")
+    background-image: url("triviadeath/textured-background_pink.png")
 }
 
 .textured-background.purple {
-    background-image: url("triviadeath/textured-background.purple.png")
+    background-image: url("triviadeath/textured-background_purple.png")
 }
 
 .textured-background.red {
-    background-image: url("triviadeath/textured-background.red.png")
+    background-image: url("triviadeath/textured-background_red.png")
 }
 
 .textured-background.yellow {
-    background-image: url("triviadeath/textured-background.yellow.png")
+    background-image: url("triviadeath/textured-background_yellow.png")
 }
 
 #lobby-text {
@@ -557,7 +557,7 @@ a.gallery-link img {
 i.checkbox.box-unchecked {
     width: 45px;
     height: 45px;
-    background: url("triviadeath/i.checkbox.box-unchecked.png") 0px 0px/100% 200% no-repeat;
+    background: url("triviadeath/i_checkbox_box-unchecked.png") 0px 0px/100% 200% no-repeat;
     background-position: top;
     margin-top: 0px;
     vertical-align: middle;
@@ -567,7 +567,7 @@ i.checkbox.box-unchecked {
 i.checkbox.box-checked {
     width: 45px;
     height: 45px;
-    background: url("triviadeath/i.checkbox.box-unchecked.png") 0px 0px/100% 200% no-repeat;
+    background: url("triviadeath/i_checkbox_box-unchecked.png") 0px 0px/100% 200% no-repeat;
     background-position: bottom;
     margin-top: 0px;
     vertical-align: middle;
@@ -720,4 +720,4 @@ i.checkbox.box-checked {
     background-position: top
 }
 
-/*# sourceMappingURL=7342.css.map*/
+/*# sourceMappingURL=sourcemaps/7342.css.map*/

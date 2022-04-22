@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("pollposition/post-banner.tjpp7_banner-image.png")
+    background-image: url("pollposition/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("pollposition/post-banner.tjpp6_banner-image.png")
+    background-image: url("pollposition/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -720,7 +720,7 @@ button.pollposition-character:focus {
 }
 
 button.pollposition-character.selected {
-    background-image: url("pollposition/button.pollposition-character.selected.png");
+    background-image: url("pollposition/button_pollposition-character_selected.png");
     background-color: #0f3140;
     opacity: 1;
     border-width: 4px;
@@ -897,4 +897,4 @@ button.pollposition-character.player {
     user-select: none
 }
 
-/*# sourceMappingURL=7879.css.map*/
+/*# sourceMappingURL=sourcemaps/7879.css.map*/

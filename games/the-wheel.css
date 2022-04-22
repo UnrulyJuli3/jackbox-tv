@@ -829,7 +829,7 @@ tspan.small[data-v-136efdac] {
     left: 15px;
     width: clamp(32px, 10vw, 45px);
     height: clamp(32px, 10vw, 45px);
-    background-image: url("the-wheel/gem-button.avatar.choice[data-v-48b5c973]_after.png");
+    background-image: url("the-wheel/gem-button_avatar_choice[data-v-48b5c973]_after.png");
     background-size: 800% 100%;
     background-repeat: no-repeat;
     transform: translateY(-50%)
@@ -1791,15 +1791,15 @@ tspan.small[data-v-136efdac] {
 }
 
 .egg.pizza[data-v-34dca79a] {
-    background-image: url("the-wheel/egg.pizza[data-v-34dca79a].png")
+    background-image: url("the-wheel/egg_pizza[data-v-34dca79a].png")
 }
 
 .egg.loser[data-v-34dca79a] {
-    background-image: url("the-wheel/egg.loser[data-v-34dca79a].png")
+    background-image: url("the-wheel/egg_loser[data-v-34dca79a].png")
 }
 
 .egg.tiny[data-v-34dca79a] {
-    background-image: url("the-wheel/egg.tiny[data-v-34dca79a].png")
+    background-image: url("the-wheel/egg_tiny[data-v-34dca79a].png")
 }
 
 .graphics[data-v-34dca79a] {
@@ -5787,39 +5787,39 @@ svg .text-path {
 }
 
 .wheel.Player1 {
-    background-image: url("the-wheel/wheel.Player1.png")
+    background-image: url("the-wheel/wheel_Player1.png")
 }
 
 .wheel.Player2 {
-    background-image: url("the-wheel/wheel.Player2.png")
+    background-image: url("the-wheel/wheel_Player2.png")
 }
 
 .wheel.Player3 {
-    background-image: url("the-wheel/wheel.Player3.png")
+    background-image: url("the-wheel/wheel_Player3.png")
 }
 
 .wheel.Player4 {
-    background-image: url("the-wheel/wheel.Player4.png")
+    background-image: url("the-wheel/wheel_Player4.png")
 }
 
 .wheel.Player5 {
-    background-image: url("the-wheel/wheel.Player5.png")
+    background-image: url("the-wheel/wheel_Player5.png")
 }
 
 .wheel.Player6 {
-    background-image: url("the-wheel/wheel.Player6.png")
+    background-image: url("the-wheel/wheel_Player6.png")
 }
 
 .wheel.Player7 {
-    background-image: url("the-wheel/wheel.Player7.png")
+    background-image: url("the-wheel/wheel_Player7.png")
 }
 
 .wheel.Player8 {
-    background-image: url("the-wheel/wheel.Player8.png")
+    background-image: url("the-wheel/wheel_Player8.png")
 }
 
 .wheel.Audience {
-    background-image: url("the-wheel/wheel.Audience.png")
+    background-image: url("the-wheel/wheel_Audience.png")
 }
 
 .wheel .avatar-image {
@@ -5867,4 +5867,4 @@ svg .text-path {
     background-image: url("the-wheel/Player8_avatar[data-v-106f6fec].png")
 }
 
-/*# sourceMappingURL=5815.css.map*/
+/*# sourceMappingURL=sourcemaps/1057.css.map*/

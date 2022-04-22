@@ -7,12 +7,18 @@
     overflow-y: scroll
 }
 
-.fallback a {
-    color: #194485
-}
-
 .fallback .constrain {
     padding: 10px 25px
+}
+
+.fallback .doodle .stage {
+    display: "inline-block";
+    width: auto;
+    border: 2px solid #000
+}
+
+.fallback a {
+    color: #194485
 }
 
 .fallback button {
@@ -72,6 +78,78 @@
     height: 34px;
     padding: 20px 12px;
     font-size: 18px
+}
+
+#doodle #doodles {
+    position: relative
+}
+
+#doodle #doodles .doodle {
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    touch-action: none
+}
+
+#doodle #doodles .doodle canvas {
+    position: relative;
+    width: 100%
+}
+
+#doodle #doodles .doodle:last-of-type {
+    position: relative
+}
+
+#doodle #doodles .doodle.inactive {
+    opacity: .25;
+    z-index: 1;
+    pointer-events: none
+}
+
+#doodle #doodles .doodle .stage {
+    display: inline-block;
+    width: clamp(300px, min(45vw, 45vh), 400px);
+    border: 2px solid var(--theme-primary)
+}
+
+#doodle #tools {
+    overflow: auto
+}
+
+#doodle #tools #colors {
+    float: right
+}
+
+#doodle #tools #colors .color {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    margin: 5px 2px;
+    padding: 0;
+    border: none;
+    border-radius: 50%
+}
+
+#doodle #tools #colors .color:checked {
+    border: 2px solid #000
+}
+
+#doodle #tools #colors .color:checked[data-color="#000000"] {
+    border-color: red
+}
+
+#doodle #tools #weights {
+    float: left
+}
+
+#doodle #tools #weights .weight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 30px
 }
 
 .stage {
@@ -152,7 +230,8 @@ p {
     text-align: center;
     color: var(--theme-primary);
     background-color: var(--theme-background);
-    overflow-y: scroll
+    overflow-y: scroll;
+    touch-action: manipulation
 }
 
 .main a {
@@ -221,4 +300,4 @@ button.invert.selected {
     color: var(--theme-primary)
 }
 
-/*# sourceMappingURL=1036.css.map*/
+/*# sourceMappingURL=sourcemaps/2903.css.map*/

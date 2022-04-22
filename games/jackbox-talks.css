@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("jackbox-talks/post-banner.tjpp7_banner-image.png")
+    background-image: url("jackbox-talks/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("jackbox-talks/post-banner.tjpp6_banner-image.png")
+    background-image: url("jackbox-talks/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -1011,7 +1011,7 @@ button {
 .jackbox-talks .Lobby button.characters .flex-item {
     border-radius: 300px;
     border: 10px solid #fff;
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_button.characters_flex-item.gif");
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_button_characters_flex-item.gif");
     background-color: #fff;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1048,55 +1048,55 @@ button {
 }
 
 .jackbox-talks .Lobby button.characters.Wooden.Mannequin .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_button.characters.Wooden.Mannequin_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_button_characters_Wooden_Mannequin_flex-item.png")
 }
 
 .jackbox-talks .Lobby button.characters.Deer.in.Turtleneck .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_button.characters.Deer.in.Turtleneck_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_button_characters_Deer_in_Turtleneck_flex-item.png")
 }
 
 .jackbox-talks .Lobby button.characters.Ancient.Statue .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_button.characters.Ancient.Statue_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_button_characters_Ancient_Statue_flex-item.png")
 }
 
 .jackbox-talks .Lobby button.characters.Astronaut .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_button.characters.Astronaut_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_button_characters_Astronaut_flex-item.png")
 }
 
 .jackbox-talks .Lobby button.characters.Lobster.in.Bowtie .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_button.characters.Lobster.in.Bowtie_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_button_characters_Lobster_in_Bowtie_flex-item.png")
 }
 
 .jackbox-talks .Lobby button.characters.Inflatable.Dancing.Man .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_button.characters.Inflatable.Dancing.Man_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_button_characters_Inflatable_Dancing_Man_flex-item.png")
 }
 
 .jackbox-talks .Lobby button.characters.Robot.in.Suit .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_button.characters.Robot.in.Suit_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_button_characters_Robot_in_Suit_flex-item.png")
 }
 
 .jackbox-talks .Lobby button.characters.Sock.Puppet .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_button.characters.Sock.Puppet_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_button_characters_Sock_Puppet_flex-item.png")
 }
 
 .jackbox-talks .Lobby button.characters.Skeleton .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_button.characters.Skeleton_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_button_characters_Skeleton_flex-item.png")
 }
 
 .jackbox-talks .Lobby button.characters.Balloon.Animal.Dog .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_button.characters.Balloon.Animal.Dog_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_button_characters_Balloon_Animal_Dog_flex-item.png")
 }
 
 .jackbox-talks .Lobby button.characters.Suit.of.Armor .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_button.characters.Suit.of.Armor_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_button_characters_Suit_of_Armor_flex-item.png")
 }
 
 .jackbox-talks .Lobby button.characters.Clown.Figurine .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_button.characters.Clown.Figurine_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_button_characters_Clown_Figurine_flex-item.png")
 }
 
 .jackbox-talks .Lobby button.characters.Dog.in.Pink.Scarf .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_button.characters.Dog.in.Pink.Scarf_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_button_characters_Dog_in_Pink_Scarf_flex-item.png")
 }
 
 .jackbox-talks .Lobby .choices button.choice-button {
@@ -1140,61 +1140,61 @@ button {
     position: absolute;
     left: 15px;
     top: 15px;
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_choices_button-group.toCamera_button_after.png");
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_choices_button-group_toCamera_button_after.png");
     background-size: contain;
     background-repeat: no-repeat
 }
 
 .jackbox-talks .Lobby.Hands button.characters.Wooden.Mannequin .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby.Hands_button.characters.Wooden.Mannequin_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_Hands_button_characters_Wooden_Mannequin_flex-item.png")
 }
 
 .jackbox-talks .Lobby.Hands button.characters.Deer.in.Turtleneck .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby.Hands_button.characters.Deer.in.Turtleneck_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_Hands_button_characters_Deer_in_Turtleneck_flex-item.png")
 }
 
 .jackbox-talks .Lobby.Hands button.characters.Ancient.Statue .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby.Hands_button.characters.Ancient.Statue_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_Hands_button_characters_Ancient_Statue_flex-item.png")
 }
 
 .jackbox-talks .Lobby.Hands button.characters.Astronaut .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby.Hands_button.characters.Astronaut_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_Hands_button_characters_Astronaut_flex-item.png")
 }
 
 .jackbox-talks .Lobby.Hands button.characters.Lobster.in.Bowtie .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby.Hands_button.characters.Lobster.in.Bowtie_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_Hands_button_characters_Lobster_in_Bowtie_flex-item.png")
 }
 
 .jackbox-talks .Lobby.Hands button.characters.Inflatable.Dancing.Man .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby.Hands_button.characters.Inflatable.Dancing.Man_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_Hands_button_characters_Inflatable_Dancing_Man_flex-item.png")
 }
 
 .jackbox-talks .Lobby.Hands button.characters.Robot.in.Suit .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby.Hands_button.characters.Robot.in.Suit_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_Hands_button_characters_Robot_in_Suit_flex-item.png")
 }
 
 .jackbox-talks .Lobby.Hands button.characters.Sock.Puppet .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby.Hands_button.characters.Sock.Puppet_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_Hands_button_characters_Sock_Puppet_flex-item.png")
 }
 
 .jackbox-talks .Lobby.Hands button.characters.Skeleton .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby.Hands_button.characters.Skeleton_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_Hands_button_characters_Skeleton_flex-item.png")
 }
 
 .jackbox-talks .Lobby.Hands button.characters.Balloon.Animal.Dog .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby.Hands_button.characters.Balloon.Animal.Dog_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_Hands_button_characters_Balloon_Animal_Dog_flex-item.png")
 }
 
 .jackbox-talks .Lobby.Hands button.characters.Suit.of.Armor .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby.Hands_button.characters.Suit.of.Armor_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_Hands_button_characters_Suit_of_Armor_flex-item.png")
 }
 
 .jackbox-talks .Lobby.Hands button.characters.Clown.Figurine .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby.Hands_button.characters.Clown.Figurine_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_Hands_button_characters_Clown_Figurine_flex-item.png")
 }
 
 .jackbox-talks .Lobby.Hands button.characters.Dog.in.Pink.Scarf .flex-item {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby.Hands_button.characters.Dog.in.Pink.Scarf_flex-item.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_Hands_button_characters_Dog_in_Pink_Scarf_flex-item.png")
 }
 
 .jackbox-talks .Logo .logo-image {
@@ -1446,7 +1446,7 @@ button {
 .jackbox-talks .Camera .startTalk button.choice-button,
 .jackbox-talks .Draw .startTalk button.choice-button,
 .jackbox-talks .Slideshow .startTalk button.choice-button {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_startTalk_button.choice-button.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_startTalk_button_choice-button.png")
 }
 
 .jackbox-talks .Lobby .nextSlideIsText button.choice-button,
@@ -1455,7 +1455,7 @@ button {
 .jackbox-talks .Camera .nextSlideIsText button.choice-button,
 .jackbox-talks .Draw .nextSlideIsText button.choice-button,
 .jackbox-talks .Slideshow .nextSlideIsText button.choice-button {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_nextSlideIsText_button.choice-button.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_nextSlideIsText_button_choice-button.png")
 }
 
 .jackbox-talks .Lobby .nextSlideIsPhoto button.choice-button,
@@ -1464,7 +1464,7 @@ button {
 .jackbox-talks .Camera .nextSlideIsPhoto button.choice-button,
 .jackbox-talks .Draw .nextSlideIsPhoto button.choice-button,
 .jackbox-talks .Slideshow .nextSlideIsPhoto button.choice-button {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_nextSlideIsPhoto_button.choice-button.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_nextSlideIsPhoto_button_choice-button.png")
 }
 
 .jackbox-talks .Lobby .endTalk button.choice-button,
@@ -1473,7 +1473,7 @@ button {
 .jackbox-talks .Camera .endTalk button.choice-button,
 .jackbox-talks .Draw .endTalk button.choice-button,
 .jackbox-talks .Slideshow .endTalk button.choice-button {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_endTalk_button.choice-button.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_endTalk_button_choice-button.png")
 }
 
 .jackbox-talks .Lobby .skipTutorial button.choice-button,
@@ -1482,7 +1482,7 @@ button {
 .jackbox-talks .Camera .skipTutorial button.choice-button,
 .jackbox-talks .Draw .skipTutorial button.choice-button,
 .jackbox-talks .Slideshow .skipTutorial button.choice-button {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_skipTutorial_button.choice-button.png")
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_skipTutorial_button_choice-button.png")
 }
 
 @media(hover) {
@@ -1609,67 +1609,67 @@ button {
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyA:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyA_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyA_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyB:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyB_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyB_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyC:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyC_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyC_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyD:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyD_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyD_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyE:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyE_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyE_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyF:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyF_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyF_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyG:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyG_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyG_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyH:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyH_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyH_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyI:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyI_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyI_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyJ:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyJ_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyJ_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyK:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyK_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyK_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyL:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyL_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyL_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyM:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyM_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyM_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyN:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyN_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyN_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyO:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyO_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyO_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyP:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyP_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyP_after.png")
 }
 
 .jackbox-talks .EnterSingleText .award.TrophyAudience:after {
@@ -1696,7 +1696,7 @@ button {
     color: #0c0c0c;
     font-size: 22px;
     background: transparent;
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_backButton_button.choice-button.svg");
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_backButton_button_choice-button.svg");
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: left middle;
@@ -1729,7 +1729,7 @@ button {
     flex: 0 0 auto;
     font-size: 34px;
     letter-spacing: -0.04em;
-    background-image: url("jackbox-talks/jackbox-talks_MakeSingleChoice_choices_voteUp_button.choice-button.png");
+    background-image: url("jackbox-talks/jackbox-talks_MakeSingleChoice_choices_voteUp_button_choice-button.png");
     background-size: 30%;
     background-position: center;
     background-repeat: no-repeat;
@@ -1828,7 +1828,7 @@ button {
     width: 25px;
     height: 25px;
     background-color: #fff;
-    background-image: url("jackbox-talks/jackbox-talks_MakeSingleChoice.Assistant_photo.selected_button.choice-button_after.png");
+    background-image: url("jackbox-talks/jackbox-talks_MakeSingleChoice_Assistant_photo_selected_button_choice-button_after.png");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
@@ -1854,7 +1854,7 @@ button {
     color: #0c0c0c;
     font-size: 22px;
     background: transparent;
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_backButton_button.choice-button.svg");
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_backButton_button_choice-button.svg");
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: left middle;
@@ -1942,20 +1942,20 @@ button {
 }
 
 .jackbox-talks .MakeSingleChoice.ChooseSlideTypeToAdd .button-group button.choice-button[data-key=toTextEntry]:after {
-    background-image: url("jackbox-talks/jackbox-talks_MakeSingleChoice.ChooseSlideTypeToAdd_button-group_button.choice-button[data-key=toTextEntry]_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_MakeSingleChoice_ChooseSlideTypeToAdd_button-group_button_choice-button[data-key=toTextEntry]_after.png")
 }
 
 .jackbox-talks .MakeSingleChoice.ChooseSlideTypeToAdd .button-group button.choice-button[data-key=toStockPhoto]:after {
-    background-image: url("jackbox-talks/jackbox-talks_MakeSingleChoice.ChooseSlideTypeToAdd_button-group_button.choice-button[data-key=toStockPhoto]_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_MakeSingleChoice_ChooseSlideTypeToAdd_button-group_button_choice-button[data-key=toStockPhoto]_after.png")
 }
 
 .jackbox-talks .MakeSingleChoice.ChooseSlideTypeToAdd .button-group button.choice-button[data-key=toCamera]:after {
     text-align: left;
-    background-image: url("jackbox-talks/jackbox-talks_MakeSingleChoice.ChooseSlideTypeToAdd_button-group_button.choice-button[data-key=toCamera]_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_MakeSingleChoice_ChooseSlideTypeToAdd_button-group_button_choice-button[data-key=toCamera]_after.png")
 }
 
 .jackbox-talks .MakeSingleChoice.ChooseSlideTypeToAdd .button-group button.choice-button[data-key=toDraw]:after {
-    background-image: url("jackbox-talks/jackbox-talks_MakeSingleChoice.ChooseSlideTypeToAdd_button-group_button.choice-button[data-key=toDraw]_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_MakeSingleChoice_ChooseSlideTypeToAdd_button-group_button_choice-button[data-key=toDraw]_after.png")
 }
 
 @media screen and (max-width: 420px) {
@@ -1975,7 +1975,7 @@ button {
     color: #0c0c0c;
     font-size: 22px;
     background: transparent;
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_backButton_button.choice-button.svg");
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_backButton_button_choice-button.svg");
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: left middle;
@@ -2077,7 +2077,7 @@ button {
 }
 
 .jackbox-talks .Camera .snapshotButton {
-    background-image: url("jackbox-talks/jackbox-talks_Lobby_choices_button-group.toCamera_button_after.png");
+    background-image: url("jackbox-talks/jackbox-talks_Lobby_choices_button-group_toCamera_button_after.png");
     width: 100px;
     height: 100px;
     color: transparent;
@@ -2129,35 +2129,35 @@ button {
 }
 
 .jackbox-talks .Draw .colorPalette .colorSwatch.Red {
-    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch.Red.png")
+    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch_Red.png")
 }
 
 .jackbox-talks .Draw .colorPalette .colorSwatch.Red.selected {
-    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch.Red.selected.png")
+    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch_Red_selected.png")
 }
 
 .jackbox-talks .Draw .colorPalette .colorSwatch.Yellow {
-    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch.Yellow.png")
+    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch_Yellow.png")
 }
 
 .jackbox-talks .Draw .colorPalette .colorSwatch.Yellow.selected {
-    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch.Yellow.selected.png")
+    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch_Yellow_selected.png")
 }
 
 .jackbox-talks .Draw .colorPalette .colorSwatch.Green {
-    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch.Green.png")
+    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch_Green.png")
 }
 
 .jackbox-talks .Draw .colorPalette .colorSwatch.Green.selected {
-    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch.Green.selected.png")
+    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch_Green_selected.png")
 }
 
 .jackbox-talks .Draw .colorPalette .colorSwatch.Black {
-    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch.Black.svg")
+    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch_Black.svg")
 }
 
 .jackbox-talks .Draw .colorPalette .colorSwatch.Black.selected {
-    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch.Black.selected.svg")
+    background-image: url("jackbox-talks/jackbox-talks_Draw_colorPalette_colorSwatch_Black_selected.svg")
 }
 
 .jackbox-talks .Draw .colorPalette .colorSwatch .change-color:active {
@@ -2199,7 +2199,7 @@ button {
     color: #0c0c0c;
     font-size: 22px;
     background: transparent;
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_backButton_button.choice-button.svg");
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_backButton_button_choice-button.svg");
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: left middle;
@@ -2256,67 +2256,67 @@ button {
 }
 
 .jackbox-talks .Awards .choices .award.TrophyA:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyA_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyA_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyB:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyB_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyB_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyC:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyC_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyC_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyD:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyD_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyD_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyE:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyE_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyE_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyF:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyF_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyF_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyG:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyG_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyG_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyH:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyH_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyH_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyI:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyI_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyI_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyJ:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyJ_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyJ_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyK:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyK_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyK_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyL:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyL_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyL_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyM:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyM_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyM_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyN:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyN_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyN_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyO:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyO_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyO_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyP:after {
-    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award.TrophyP_after.png")
+    background-image: url("jackbox-talks/jackbox-talks_EnterSingleText_award_TrophyP_after.png")
 }
 
 .jackbox-talks .Awards .choices .award.TrophyAudience:after {
@@ -2475,7 +2475,7 @@ button {
     max-height: 80px;
     border: 20px solid transparent;
     padding: 0px;
-    background-image: url("jackbox-talks/jackbox-talks_signpostView_button.button.png");
+    background-image: url("jackbox-talks/jackbox-talks_signpostView_button_button.png");
     background-size: 40%;
     background-position: center;
     background-repeat: no-repeat;
@@ -2491,7 +2491,7 @@ button {
     left: calc(50% - 16px);
     line-height: 32px;
     background-color: #f07d4c;
-    background-image: url("jackbox-talks/jackbox-talks_signpostView_div.header.svg");
+    background-image: url("jackbox-talks/jackbox-talks_signpostView_div_header.svg");
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center
@@ -2667,6 +2667,11 @@ button {
     animation-duration: 2s;
     animation-direction: alternate;
     animation-iteration-count: infinite
+}
+
+.jackbox-talks .choices .photo.photo-72425-thumb {
+    opacity: 0;
+    display: none
 }
 
 @keyframes pulse {
@@ -8930,4 +8935,4 @@ button {
     background-image: url("jackbox-talks/jackbox-talks_Slideshow_photo-76137-thumb.jpg")
 }
 
-/*# sourceMappingURL=8049.css.map*/
+/*# sourceMappingURL=sourcemaps/8049.css.map*/

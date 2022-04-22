@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("monstermingle/post-banner.tjpp7_banner-image.png")
+    background-image: url("monstermingle/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("monstermingle/post-banner.tjpp6_banner-image.png")
+    background-image: url("monstermingle/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -1702,4 +1702,4 @@ div.chatMessageText {
     border-color: transparent transparent transparent #fff
 }
 
-/*# sourceMappingURL=6533.css.map*/
+/*# sourceMappingURL=sourcemaps/6533.css.map*/

@@ -88,7 +88,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("fibbage3/post-banner.tjpp7_banner-image.png")
+    background-image: url("fibbage3/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -106,7 +106,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("fibbage3/post-banner.tjpp6_banner-image.png")
+    background-image: url("fibbage3/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -934,31 +934,31 @@ textarea:focus {
 }
 
 .playerIcon.Avatar2 {
-    background-image: url("fibbage3/playerIcon.Avatar2.png")
+    background-image: url("fibbage3/playerIcon_Avatar2.png")
 }
 
 .playerIcon.Avatar3 {
-    background-image: url("fibbage3/playerIcon.Avatar3.png")
+    background-image: url("fibbage3/playerIcon_Avatar3.png")
 }
 
 .playerIcon.Avatar4 {
-    background-image: url("fibbage3/playerIcon.Avatar4.png")
+    background-image: url("fibbage3/playerIcon_Avatar4.png")
 }
 
 .playerIcon.Avatar5 {
-    background-image: url("fibbage3/playerIcon.Avatar5.png")
+    background-image: url("fibbage3/playerIcon_Avatar5.png")
 }
 
 .playerIcon.Avatar6 {
-    background-image: url("fibbage3/playerIcon.Avatar6.png")
+    background-image: url("fibbage3/playerIcon_Avatar6.png")
 }
 
 .playerIcon.Avatar7 {
-    background-image: url("fibbage3/playerIcon.Avatar7.png")
+    background-image: url("fibbage3/playerIcon_Avatar7.png")
 }
 
 .playerIcon.Avatar8 {
-    background-image: url("fibbage3/playerIcon.Avatar8.png")
+    background-image: url("fibbage3/playerIcon_Avatar8.png")
 }
 
 .playerIcon.none {
@@ -1089,19 +1089,19 @@ textarea.form-control {
 }
 
 .controller-page .ChooseLie.Standard.Round-1 {
-    background: #f6bfbd url("fibbage3/controller-page_ChooseLie.Standard.Round-1.png")
+    background: #f6bfbd url("fibbage3/controller-page_ChooseLie_Standard_Round-1.png")
 }
 
 .controller-page .ChooseLie.Standard.Round-2 {
-    background: #f6bfbd url("fibbage3/controller-page_ChooseLie.Standard.Round-2.png")
+    background: #f6bfbd url("fibbage3/controller-page_ChooseLie_Standard_Round-2.png")
 }
 
 .controller-page .ChooseLie.TMI.Round-0 {
-    background: #f6bfbd url("fibbage3/controller-page_ChooseLie.TMI.Round-0.png")
+    background: #f6bfbd url("fibbage3/controller-page_ChooseLie_TMI_Round-0.png")
 }
 
 .controller-page .ChooseLie.TMI.Round-1 {
-    background: #f6bfbd url("fibbage3/controller-page_ChooseLie.TMI.Round-1.png")
+    background: #f6bfbd url("fibbage3/controller-page_ChooseLie_TMI_Round-1.png")
 }
 
 .ChooseLie #player {
@@ -1141,7 +1141,7 @@ textarea.form-control {
     right: 30px;
     top: 12px;
     position: absolute;
-    background-image: url("fibbage3/ChooseLike_button.button.censor-button_after.png");
+    background-image: url("fibbage3/ChooseLike_button_button_censor-button_after.png");
     background-size: 100%;
     background-position: center;
     height: 24px;
@@ -1480,4 +1480,4 @@ button.liked {
     }
 }
 
-/*# sourceMappingURL=5157.css.map*/
+/*# sourceMappingURL=sourcemaps/5157.css.map*/

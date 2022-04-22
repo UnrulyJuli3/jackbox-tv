@@ -107,7 +107,7 @@
                 u = e(31320),
                 c = e(83505),
                 a = e(99920),
-                f = e(54705);
+                f = e(96114);
             t.exports = function(t, r) {
                 var e, s, p, l, v, h = t.target,
                     g = t.global,
@@ -265,7 +265,7 @@
                 }
             }
         },
-        54705: (t, r, e) => {
+        96114: (t, r, e) => {
             var n = e(47293),
                 o = /#|\.prototype\./,
                 i = function(t, r) {
@@ -545,4 +545,4 @@
         }
     }
 ]);
-//# sourceMappingURL=6498.1a1c9e0ebb777e63f8a4.js.map
+//# sourceMappingURL=sourcemaps/6498.ee8c59fe4a93ba9a2111.js.map

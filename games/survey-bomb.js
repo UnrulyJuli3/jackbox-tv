@@ -48,7 +48,7 @@
                     artifact: Object
                 },
                 i18n: {
-                    messages: o.j
+                    messages: o.s
                 },
                 computed: {
                     link() {
@@ -146,7 +146,7 @@
             o.options.__file = "src/apps/vue/components/Input.vue";
             const c = o.exports
         },
-        30261: (e, t, s) => {
+        81988: (e, t, s) => {
             "use strict";
             s.r(t), s.d(t, {
                 default: () => fe
@@ -697,10 +697,11 @@
                 })] : e._e()], 2)
             };
             g._withStripped = !0;
-            var y = s(33958),
+            var y = s(55507),
                 _ = s(6305),
                 x = s(13494),
-                w = function() {
+                w = s(65853),
+                C = function() {
                     var e = this,
                         t = e.$createElement,
                         s = e._self._c || t;
@@ -758,20 +759,11 @@
                         }
                     }, [e._v("\n                    " + e._s(e.$t("SUBMIT")) + "\n                ")])]], 2)])])
                 };
-            w._withStripped = !0;
-            const C = {
+            C._withStripped = !0;
+            const E = {
                     en: {
                         INSTRUCTION_REVIEW: "Remember your choices",
                         SUBMIT_PICK_MORE: "Pick {amount} more"
-                    },
-                    fr: {},
-                    it: {},
-                    de: {},
-                    es: {}
-                },
-                E = {
-                    en: {
-                        SUBMIT: "Submit"
                     },
                     fr: {},
                     it: {},
@@ -792,8 +784,8 @@
                         question: String
                     },
                     i18n: {
-                        messages: C,
-                        sharedMessages: E
+                        messages: E,
+                        sharedMessages: w.s
                     },
                     data() {
                         return {
@@ -823,7 +815,7 @@
                         }
                     }
                 });
-            var S = (0, d.Z)(I, w, [], !1, null, "1a51ff57", null);
+            var S = (0, d.Z)(I, C, [], !1, null, "1a51ff57", null);
             S.options.__file = "src/games/pp8/survey-bomb/views/SurveyForm.vue";
             const T = S.exports;
             var k = function() {
@@ -951,7 +943,7 @@
                         de: {},
                         es: {}
                     },
-                    sharedMessages: E
+                    sharedMessages: w.s
                 },
                 bb: {
                     section: (e, t) => `<div class="section">${t}</div>`
@@ -1092,7 +1084,7 @@
                 }))], 2) : e._e()], 2)
             };
             U._withStripped = !0;
-            const B = i().extend({
+            const H = i().extend({
                 props: {
                     name: String,
                     teamIndex: Number,
@@ -1111,9 +1103,9 @@
                 },
                 themeColor: "#000"
             });
-            var H = (0, d.Z)(B, U, [], !1, null, "5c609c11", null);
-            H.options.__file = "src/games/pp8/survey-bomb/views/NameHeader.vue";
-            const F = H.exports;
+            var B = (0, d.Z)(H, U, [], !1, null, "5c609c11", null);
+            B.options.__file = "src/games/pp8/survey-bomb/views/NameHeader.vue";
+            const F = B.exports;
             var Z = function() {
                 var e = this,
                     t = e.$createElement,
@@ -1211,7 +1203,7 @@
                     player: Object
                 },
                 i18n: {
-                    messages: C
+                    messages: E
                 },
                 data() {
                     return {
@@ -2075,4 +2067,4 @@
         }
     }
 ]);
-//# sourceMappingURL=261.cf835368d572a228d855.js.map
+//# sourceMappingURL=sourcemaps/1988.f259a438ea6780080d9a.js.map

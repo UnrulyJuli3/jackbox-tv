@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("splittheroom/post-banner.tjpp7_banner-image.png")
+    background-image: url("splittheroom/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("splittheroom/post-banner.tjpp6_banner-image.png")
+    background-image: url("splittheroom/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -1066,4 +1066,4 @@ li>a.button-color.active[data-color="#000000"] {
     max-width: 300px
 }
 
-/*# sourceMappingURL=5863.css.map*/
+/*# sourceMappingURL=sourcemaps/5863.css.map*/

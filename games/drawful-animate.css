@@ -1,170 +1,11 @@
-.waiting {
-    height: 100%
-}
-
-.waiting .message {
-    text-align: center
-}
-
-.waiting .stacked {
-    display: flex;
-    flex-flow: column nowrap;
-    height: 100%
-}
-
-.waiting .stacked>div {
-    flex: 0 0 auto
-}
-
-.waiting .stacked>.logo {
-    flex: 1 0 auto;
-    background-image: url("drawful-animate/waiting_stacked_.logo.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain
-}
-
-.waiting.isFriendMode {
-    background-image: url("drawful-animate/waiting.isFriendMode.png")
-}
-
-.waiting.isFriendMode .logo {
-    background-image: url("drawful-animate/waiting.isFriendMode_logo.png")
-}
-
-.episodes.content {
-    border-radius: 0px;
-    border-width: 8px;
-    border-style: solid;
-    border-image: url("drawful-animate/episodes.content.svg") 6 7 fill;
-    background-clip: padding-box;
-    background-color: transparent;
-    text-align: center;
-    user-select: none;
-    font-family: "typewriter_serialbold", serif;
-    max-height: 90%;
-    overflow-y: auto
-}
-
-.episodes.content * {
-    font-size: 24px;
-    font-family: "typewriter_serialbold", serif
-}
-
-.episodes.content input,
-.episodes.content input::-webkit-input-placeholder {
-    font-size: 24px
-}
-
-.episodes.content .inputEpisode {
-    text-align: right
-}
-
-.episodes.content .episode {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px
-}
-
-.episodes.content .episode .episodeId {
-    display: block;
-    color: #ff28b7
-}
-
-.episodes.content .episodes-warning {
-    font-size: 11px;
-    color: #ff28b7;
-    margin: 6px auto
-}
-
-.episodes.content .backButton,
-.episodes.content .submit {
-    width: auto;
-    padding: 3px 15px;
-    border-width: 10px
-}
-
-.episodes.content .submit {
-    margin-right: 10px
-}
-
-.lobby.isFriendMode {
-    background-image: url("drawful-animate/waiting.isFriendMode.png")
-}
-
-.artifact-link {
-    display: inline-block;
-    width: 100%
-}
-
-.artifact-link.no-content {
-    padding-bottom: 50%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat
-}
-
-.post-game {
-    background-image: url("drawful-animate/post-game.png");
-    text-align: center
-}
-
-.artifact-link {
-    background-image: url("drawful-animate/artifact-link.png")
-}
-
-.writing {
-    background-image: url("drawful-animate/post-game.png");
-    text-align: center
-}
-
-.writing .friend-hint {
-    margin-bottom: 5px;
-    font-size: 14px;
-    opacity: .5
-}
-
-.writing .error {
-    margin-bottom: 5px;
-    font-size: 18px;
-    color: #cb0020
-}
-
-.writing .controls .remaining {
-    margin-left: 16px;
-    float: left
-}
-
-.writing .controls button.submit {
-    float: right;
-    margin-right: 16px;
-    font-size: 18px;
-    color: #fff;
-    background-clip: padding-box;
-    background-color: #000;
-    border-width: 7px;
-    border-style: solid;
-    border-image: url("drawful-animate/writing_controls_button.submit.svg") 3 fill
-}
-
-.writing .controls button.submit:active:not(:disabled) {
-    color: #000;
-    background-color: #fff;
-    border-image: url("drawful-animate/writing_controls_button.submit_active_not(_disabled).svg") 3 fill
-}
-
-.writing .controls button.submit:disabled {
-    opacity: .3
-}
-
 .choosing {
-    background-image: url("drawful-animate/post-game.png")
+    background-image: url("drawful-animate/choosing.png")
 }
 
 .choosing .choices .choice {
     padding: 5px 0;
     border: 7px solid #000;
-    border-image: url("drawful-animate/writing_controls_button.submit.svg") 7 7 fill;
+    border-image: url("drawful-animate/choosing_choices_choice.svg") 7 7 fill;
     border-image-repeat: inherit;
     cursor: pointer;
     margin: 6px 0;
@@ -182,7 +23,7 @@
 
 .choosing .choices .choice:active:not(:disabled),
 .choosing .choices .choice.chosen {
-    border-image: url("drawful-animate/writing_controls_button.submit_active_not(_disabled).svg") 7 7 fill;
+    border-image: url("drawful-animate/choosing_choices_choice_active_not(_disabled).svg") 7 7 fill;
     background-color: #fff;
     color: #000
 }
@@ -255,7 +96,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("drawful-animate/choosing.doubling-down_prompt_before.svg");
+    background-image: url("drawful-animate/choosing_doubling-down_prompt_before.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%
 }
@@ -268,7 +109,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background-image: url("drawful-animate/choosing.doubling-down_prompt_before.svg");
+    background-image: url("drawful-animate/choosing_doubling-down_prompt_before.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%
 }
@@ -286,7 +127,7 @@
     border-image: none;
     background-color: transparent;
     padding-left: 45px;
-    background-image: url("drawful-animate/choosing.doubling-down_choices_choice.png");
+    background-image: url("drawful-animate/choosing_doubling-down_choices_choice.png");
     background-position: center left;
     background-repeat: no-repeat;
     background-size: 44px
@@ -296,7 +137,7 @@
 .choosing.doubling-down .choices .choice.chosen,
 .choosing.liking .choices .choice.selected,
 .choosing.liking .choices .choice.chosen {
-    background-image: url("drawful-animate/choosing.doubling-down_choices_choice.selected.png")
+    background-image: url("drawful-animate/choosing_doubling-down_choices_choice_selected.png")
 }
 
 .choosing.doubling-down .choices .choice:active:not(:disabled),
@@ -314,7 +155,7 @@
     background-clip: padding-box;
     background-color: #000;
     border: 7px solid #000;
-    border-image: url("drawful-animate/writing_controls_button.submit.svg") 7 7 fill;
+    border-image: url("drawful-animate/choosing_choices_choice.svg") 7 7 fill;
     border-image-repeat: inherit;
     color: #fff
 }
@@ -333,7 +174,7 @@
     font-size: 26px;
     color: #000;
     background: none;
-    background-image: url("drawful-animate/choosing.doubling-down_doubleDown_button.png");
+    background-image: url("drawful-animate/choosing_doubling-down_doubleDown_button.png");
     background-position: center right;
     background-repeat: no-repeat;
     background-size: 40px;
@@ -344,7 +185,7 @@
 .choosing.doubling-down .doubleDown button.chosen,
 .choosing.liking .doubleDown button.active,
 .choosing.liking .doubleDown button.chosen {
-    background-image: url("drawful-animate/choosing.doubling-down_doubleDown_button.active.png")
+    background-image: url("drawful-animate/choosing_doubling-down_doubleDown_button_active.png")
 }
 
 .choosing.doubling-down .doubleDown button.used,
@@ -362,8 +203,523 @@
     opacity: .5
 }
 
+.jbg[data-v-2df46cec] {
+    background: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #333
+}
+
+.jbg a[data-v-2df46cec] {
+    color: #4254f4;
+    text-decoration: none
+}
+
+.jbg h1[data-v-2df46cec] {
+    font-size: 2em
+}
+
+.jbg button[data-v-2df46cec] {
+    cursor: pointer;
+    height: 48px;
+    width: calc(100% - 50px);
+    margin: 10px 25px 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #4254f4;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 5px 0 0 #0e167d;
+    transition: color .5s, background-position .5s, box-shadow .5s
+}
+
+.jbg button .loading[data-v-2df46cec] {
+    display: none
+}
+
+.jbg button.connecting span[data-v-2df46cec] {
+    display: none
+}
+
+.jbg button.connecting .loading[data-v-2df46cec] {
+    display: block
+}
+
+.jbg button.cancel[data-v-2df46cec] {
+    background-color: #333;
+    box-shadow: 0 5px 0 0 #161616
+}
+
+.jbg button[data-v-2df46cec]:disabled {
+    background: #e0e0e0;
+    color: #505050;
+    box-shadow: 0 0 0 0 #505050
+}
+
+.jbg form[data-v-2df46cec] {
+    margin: 0px auto 5px;
+    padding: 70px 15px 0px 15px
+}
+
+.jbg label[data-v-2df46cec] {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 0 12px;
+    color: #333;
+    font-size: 17px
+}
+
+.jbg input[data-v-2df46cec],
+.jbg textarea[data-v-2df46cec] {
+    width: 100%;
+    height: 34px;
+    margin-bottom: 15px;
+    padding: 20px 12px;
+    background-color: #e0e0e0;
+    border: 0px solid;
+    border-radius: 12px;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase
+}
+
+.jbg input[data-v-2df46cec]::placeholder,
+.jbg textarea[data-v-2df46cec]::placeholder {
+    color: #505050
+}
+
+.jbg input[data-v-2df46cec]:disabled,
+.jbg textarea[data-v-2df46cec]:disabled {
+    background: #e0e0e0;
+    color: #505050;
+    cursor: not-allowed;
+    user-select: none
+}
+
+.jbg textarea[data-v-2df46cec] {
+    height: auto;
+    padding: 12px;
+    font-size: 14px
+}
+
+.jbg .loading[data-v-2df46cec],
+.jbg .loading[data-v-2df46cec]::before,
+.jbg .loading[data-v-2df46cec]::after {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #0e167d;
+    border-radius: 50%;
+    background: #4254f4;
+    animation-fill-mode: both;
+    animation: loading-data-v-2df46cec 1.5s infinite ease-in-out
+}
+
+.jbg .loading[data-v-2df46cec] {
+    position: relative;
+    margin: 18px auto;
+    animation-delay: -0.25s
+}
+
+.jbg .loading[data-v-2df46cec]::before,
+.jbg .loading[data-v-2df46cec]::after {
+    content: "";
+    position: absolute;
+    top: -2px
+}
+
+.jbg .loading[data-v-2df46cec]::before {
+    left: -22px;
+    animation-delay: -0.5s
+}
+
+.jbg .loading[data-v-2df46cec]::after {
+    left: 18px
+}
+
+.jbg .disabled.loading[data-v-2df46cec],
+.jbg .disabled.loading[data-v-2df46cec]::before,
+.jbg .disabled.loading[data-v-2df46cec]::after {
+    border: 2px solid #505050;
+    background: #e0e0e0;
+    animation-name: loading-disabled-data-v-2df46cec
+}
+
+@keyframes loading-data-v-2df46cec {
+
+    0%,
+    20%,
+    80%,
+    100% {
+        background-color: #0e167d
+    }
+
+    50% {
+        background-color: #4254f4
+    }
+}
+
+@keyframes loading-disabled-data-v-2df46cec {
+
+    0%,
+    20%,
+    80%,
+    100% {
+        background-color: #505050
+    }
+
+    50% {
+        background-color: #e0e0e0
+    }
+}
+
+.tutorial[data-v-2df46cec] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    user-select: none
+}
+
+.container[data-v-2df46cec] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    line-height: 0;
+    transform: translate(-50%, calc(-50% - 40px))
+}
+
+@media only screen and (orientation: portrait) {
+    .container[data-v-2df46cec] {
+        width: calc(100% - 85px);
+        max-width: 400px;
+        min-width: 300px
+    }
+
+    .container .ratio-svg[data-v-2df46cec] {
+        width: 100%;
+        height: auto
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .container[data-v-2df46cec] {
+        height: calc(100% - 85px);
+        max-height: 600px;
+        min-height: 200px
+    }
+
+    .container .ratio-svg[data-v-2df46cec] {
+        width: auto;
+        height: 100%
+    }
+}
+
+.slide[data-v-2df46cec] {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 25px 35px 30px;
+    background: #fff;
+    border-radius: 15px;
+    transition: opacity .25s, transform .25s
+}
+
+.slide.left[data-v-2df46cec] {
+    opacity: 0;
+    transform: translateX(-75px) scale(0.9)
+}
+
+.slide.right[data-v-2df46cec] {
+    opacity: 0;
+    transform: translateX(75px) scale(0.9)
+}
+
+.slide .text[data-v-2df46cec] {
+    text-align: left;
+    font-family: Helvetica, Arial, sans-serif
+}
+
+.slide .text h3[data-v-2df46cec] {
+    line-height: 1.2;
+    padding-bottom: 6%
+}
+
+.slide .text ul[data-v-2df46cec] {
+    padding-left: 16px
+}
+
+.slide .text li[data-v-2df46cec] {
+    line-height: 1.2;
+    padding-bottom: 5px
+}
+
+@media only screen and (orientation: portrait) {
+    .slide .text h3[data-v-2df46cec] {
+        font-size: clamp(18px, 5.2vw, 24px)
+    }
+
+    .slide .text li[data-v-2df46cec] {
+        font-size: clamp(14px, 4vw, 18px)
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .slide .text h3[data-v-2df46cec] {
+        font-size: clamp(16px, 3.8vh, 24px)
+    }
+
+    .slide .text li[data-v-2df46cec] {
+        font-size: clamp(13px, 3vh, 18px)
+    }
+}
+
+.slide .image[data-v-2df46cec] {
+    width: 100%;
+    flex-grow: 1;
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.arrow[data-v-2df46cec] {
+    position: absolute;
+    width: 10%;
+    transform-origin: top left
+}
+
+.arrow svg[data-v-2df46cec] {
+    width: 100%;
+    stroke: #4254f4;
+    stroke-width: 6px;
+    fill: transparent;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    overflow: visible;
+    animation: arrow-bounce-data-v-2df46cec .5s alternate infinite
+}
+
+.dots[data-v-2df46cec] {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%
+}
+
+.dots .dot[data-v-2df46cec] {
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    padding: 0;
+    border: none;
+    border-radius: 4px;
+    background: #ccc;
+    transition: background-color .25s, transform .25s
+}
+
+.dots .dot.current[data-v-2df46cec] {
+    background: #4254f4;
+    transform: scale(1.5)
+}
+
+.buttons[data-v-2df46cec] {
+    position: absolute;
+    bottom: -40px;
+    width: 100%
+}
+
+.buttons button[data-v-2df46cec] {
+    height: 32px;
+    background: none;
+    border: none;
+    color: #fff
+}
+
+.buttons .skip[data-v-2df46cec] {
+    float: left;
+    font-size: 15px
+}
+
+.buttons .next[data-v-2df46cec],
+.buttons .done[data-v-2df46cec] {
+    float: right;
+    padding: 0 20px;
+    border-radius: 20px;
+    background: #4254f4;
+    font-size: 17px;
+    box-shadow: 0 4px 0 0 #0e167d;
+    transition: box-shadow .2s
+}
+
+.buttons .next[data-v-2df46cec]:active,
+.buttons .done[data-v-2df46cec]:active {
+    box-shadow: 0 0 0 0 #0e167d
+}
+
+.buttons .done[data-v-2df46cec] {
+    background: #fff;
+    color: #4254f4;
+    animation: done-pulse-data-v-2df46cec .5s alternate infinite
+}
+
+@keyframes arrow-bounce-data-v-2df46cec {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-20%)
+    }
+}
+
+@keyframes done-pulse-data-v-2df46cec {
+    0% {
+        background: #e0e0e0
+    }
+
+    100% {
+        transform: #fff
+    }
+}
+
+.svg-container[data-v-96847278] {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: 0px solid transparent;
+    background-color: transparent
+}
+
+.svg-container *[data-v-96847278] {
+    pointer-events: none
+}
+
+.drawing {
+    overflow-y: auto;
+    position: relative
+}
+
+.drawing .prompt {
+    text-align: center
+}
+
+.drawing .draw-canvas {
+    background-color: #fff
+}
+
+.drawing .controls {
+    margin: 0px auto -8px auto;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1
+}
+
+.drawing .controls .frame-button {
+    color: #000;
+    position: relative;
+    font-size: 16px;
+    width: 40%;
+    max-width: 150px;
+    margin: 6px auto 0px auto;
+    border-style: solid;
+    border-width: 7px;
+    border-image: url("drawful-animate/drawing_controls_frame-button.svg") 6 fill;
+    border-bottom: 0;
+    padding: 7px 0 3px;
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box
+}
+
+.drawing .controls .frame-button.active {
+    border-image: url("drawful-animate/drawing_controls_frame-button_active.svg") 6 fill
+}
+
+.drawing .controls .frame-button.active::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -2px;
+    right: -2px;
+    height: 10px;
+    background: #fff
+}
+
+.drawing .stage {
+    margin: 0px auto
+}
+
+.drawing .stage canvas.draw-canvas {
+    border-width: 8px;
+    border-style: solid;
+    border-image: url("drawful-animate/drawing_stage_canvas_draw-canvas.svg") 6 7;
+    background-clip: padding-box
+}
+
+.drawing .palette {
+    text-align: center
+}
+
+.drawing .palette button {
+    height: 50px;
+    width: 50px;
+    padding: 3px
+}
+
+.drawing .submit-button {
+    font-size: 18px;
+    padding: 5px 20%;
+    color: #fff;
+    background-color: #000;
+    border-radius: 6px;
+    border: 6px solid #000
+}
+
+.drawing .submit-button:active:not(:disabled) {
+    color: #000;
+    background-color: #fff
+}
+
+.drawing .submit-button:disabled {
+    opacity: .3;
+    cursor: not-allowed
+}
+
+.tutorial .image.tutorial-0 {
+    background-image: url("drawful-animate/tutorial_image_tutorial-0.png")
+}
+
+.tutorial .image.tutorial-1 {
+    background-image: url("drawful-animate/tutorial_image_tutorial-1.png")
+}
+
+.tutorial .image.tutorial-2 {
+    background-image: url("drawful-animate/tutorial_image_tutorial-2.png")
+}
+
+.tutorial .image.tutorial-3 {
+    background-image: url("drawful-animate/tutorial_image_tutorial-3.png")
+}
+
+.tutorial .image.tutorial-4 {
+    background-position: center;
+    background-image: url("drawful-animate/tutorial_image_tutorial-4.png")
+}
+
 .flipping[data-v-c1eff0c0] {
-    background-image: url("drawful-animate/post-game.png");
+    background-image: url("drawful-animate/choosing.png");
     overflow-x: hidden
 }
 
@@ -424,7 +780,7 @@
 }
 
 .flipping .flipchart .row .circle-button.selected[data-v-c1eff0c0] {
-    background-image: url("drawful-animate/flipping_flipchart_row_circle-button.selected[data-v-c1eff0c0].svg")
+    background-image: url("drawful-animate/flipping_flipchart_row_circle-button_selected[data-v-c1eff0c0].svg")
 }
 
 .flipping .timer[data-v-c1eff0c0] {
@@ -878,530 +1234,96 @@
     }
 }
 
-.jbg[data-v-2df46cec] {
-    background: #fff;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 10px;
-    font-weight: bold;
-    color: #333
-}
-
-.jbg a[data-v-2df46cec] {
-    color: #4254f4;
-    text-decoration: none
-}
-
-.jbg h1[data-v-2df46cec] {
-    font-size: 2em
-}
-
-.jbg button[data-v-2df46cec] {
-    cursor: pointer;
-    height: 48px;
-    width: calc(100% - 50px);
-    margin: 10px 25px 15px;
-    border: none;
-    border-radius: 12px;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #4254f4;
-    color: #fff;
-    text-transform: uppercase;
-    box-shadow: 0 5px 0 0 #0e167d;
-    transition: color .5s, background-position .5s, box-shadow .5s
-}
-
-.jbg button .loading[data-v-2df46cec] {
-    display: none
-}
-
-.jbg button.connecting span[data-v-2df46cec] {
-    display: none
-}
-
-.jbg button.connecting .loading[data-v-2df46cec] {
-    display: block
-}
-
-.jbg button.cancel[data-v-2df46cec] {
-    background-color: #333;
-    box-shadow: 0 5px 0 0 #161616
-}
-
-.jbg button[data-v-2df46cec]:disabled {
-    background: #e0e0e0;
-    color: #505050;
-    box-shadow: 0 0 0 0 #505050
-}
-
-.jbg form[data-v-2df46cec] {
-    margin: 0px auto 5px;
-    padding: 70px 15px 0px 15px
-}
-
-.jbg label[data-v-2df46cec] {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 5px;
-    padding: 0 12px;
-    color: #333;
-    font-size: 17px
-}
-
-.jbg input[data-v-2df46cec],
-.jbg textarea[data-v-2df46cec] {
-    width: 100%;
-    height: 34px;
-    margin-bottom: 15px;
-    padding: 20px 12px;
-    background-color: #e0e0e0;
-    border: 0px solid;
-    border-radius: 12px;
-    color: #000;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase
-}
-
-.jbg input[data-v-2df46cec]::placeholder,
-.jbg textarea[data-v-2df46cec]::placeholder {
-    color: #505050
-}
-
-.jbg input[data-v-2df46cec]:disabled,
-.jbg textarea[data-v-2df46cec]:disabled {
-    background: #e0e0e0;
-    color: #505050;
-    cursor: not-allowed;
-    user-select: none
-}
-
-.jbg textarea[data-v-2df46cec] {
-    height: auto;
-    padding: 12px;
-    font-size: 14px
-}
-
-.jbg .loading[data-v-2df46cec],
-.jbg .loading[data-v-2df46cec]::before,
-.jbg .loading[data-v-2df46cec]::after {
-    width: 12px;
-    height: 12px;
-    border: 2px solid #0e167d;
-    border-radius: 50%;
-    background: #4254f4;
-    animation-fill-mode: both;
-    animation: loading-data-v-2df46cec 1.5s infinite ease-in-out
-}
-
-.jbg .loading[data-v-2df46cec] {
-    position: relative;
-    margin: 18px auto;
-    animation-delay: -0.25s
-}
-
-.jbg .loading[data-v-2df46cec]::before,
-.jbg .loading[data-v-2df46cec]::after {
-    content: "";
-    position: absolute;
-    top: -2px
-}
-
-.jbg .loading[data-v-2df46cec]::before {
-    left: -22px;
-    animation-delay: -0.5s
-}
-
-.jbg .loading[data-v-2df46cec]::after {
-    left: 18px
-}
-
-.jbg .disabled.loading[data-v-2df46cec],
-.jbg .disabled.loading[data-v-2df46cec]::before,
-.jbg .disabled.loading[data-v-2df46cec]::after {
-    border: 2px solid #505050;
-    background: #e0e0e0;
-    animation-name: loading-disabled-data-v-2df46cec
-}
-
-@keyframes loading-data-v-2df46cec {
-
-    0%,
-    20%,
-    80%,
-    100% {
-        background-color: #0e167d
-    }
-
-    50% {
-        background-color: #4254f4
-    }
-}
-
-@keyframes loading-disabled-data-v-2df46cec {
-
-    0%,
-    20%,
-    80%,
-    100% {
-        background-color: #505050
-    }
-
-    50% {
-        background-color: #e0e0e0
-    }
-}
-
-.tutorial[data-v-2df46cec] {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, .8);
-    user-select: none
-}
-
-.container[data-v-2df46cec] {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+.episodes.content {
+    border-radius: 0px;
+    border-width: 8px;
+    border-style: solid;
+    border-image: url("drawful-animate/drawing_stage_canvas_draw-canvas.svg") 6 7 fill;
+    background-clip: padding-box;
+    background-color: transparent;
     text-align: center;
-    line-height: 0;
-    transform: translate(-50%, calc(-50% - 40px))
+    user-select: none;
+    font-family: "typewriter_serialbold", serif;
+    max-height: 90%;
+    overflow-y: auto
 }
 
-@media only screen and (orientation: portrait) {
-    .container[data-v-2df46cec] {
-        width: calc(100% - 85px);
-        max-width: 400px;
-        min-width: 300px
-    }
-
-    .container .ratio-svg[data-v-2df46cec] {
-        width: 100%;
-        height: auto
-    }
+.episodes.content * {
+    font-size: 24px;
+    font-family: "typewriter_serialbold", serif
 }
 
-@media only screen and (orientation: landscape) {
-    .container[data-v-2df46cec] {
-        height: calc(100% - 85px);
-        max-height: 600px;
-        min-height: 200px
-    }
-
-    .container .ratio-svg[data-v-2df46cec] {
-        width: auto;
-        height: 100%
-    }
+.episodes.content input,
+.episodes.content input::-webkit-input-placeholder {
+    font-size: 24px
 }
 
-.slide[data-v-2df46cec] {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    left: 0;
+.episodes.content .inputEpisode {
+    text-align: right
+}
+
+.episodes.content .episode {
+    display: block;
     width: 100%;
-    height: 100%;
-    padding: 25px 35px 30px;
-    background: #fff;
-    border-radius: 15px;
-    transition: opacity .25s, transform .25s
+    margin-bottom: 10px
 }
 
-.slide.left[data-v-2df46cec] {
-    opacity: 0;
-    transform: translateX(-75px) scale(0.9)
+.episodes.content .episode .episodeId {
+    display: block;
+    color: #ff28b7
 }
 
-.slide.right[data-v-2df46cec] {
-    opacity: 0;
-    transform: translateX(75px) scale(0.9)
+.episodes.content .episodes-warning {
+    font-size: 11px;
+    color: #ff28b7;
+    margin: 6px auto
 }
 
-.slide .text[data-v-2df46cec] {
-    text-align: left;
-    font-family: Helvetica, Arial, sans-serif
+.episodes.content .backButton,
+.episodes.content .submit {
+    width: auto;
+    padding: 3px 15px;
+    border-width: 10px
 }
 
-.slide .text h3[data-v-2df46cec] {
-    line-height: 1.2;
-    padding-bottom: 6%
+.episodes.content .submit {
+    margin-right: 10px
 }
 
-.slide .text ul[data-v-2df46cec] {
-    padding-left: 16px
+.lobby.isFriendMode {
+    background-image: url("drawful-animate/lobby_isFriendMode.png")
 }
 
-.slide .text li[data-v-2df46cec] {
-    line-height: 1.2;
-    padding-bottom: 5px
+.artifact-link {
+    display: inline-block;
+    width: 100%
 }
 
-@media only screen and (orientation: portrait) {
-    .slide .text h3[data-v-2df46cec] {
-        font-size: clamp(18px, 5.2vw, 24px)
-    }
-
-    .slide .text li[data-v-2df46cec] {
-        font-size: clamp(14px, 4vw, 18px)
-    }
-}
-
-@media only screen and (orientation: landscape) {
-    .slide .text h3[data-v-2df46cec] {
-        font-size: clamp(16px, 3.8vh, 24px)
-    }
-
-    .slide .text li[data-v-2df46cec] {
-        font-size: clamp(13px, 3vh, 18px)
-    }
-}
-
-.slide .image[data-v-2df46cec] {
-    width: 100%;
-    flex-grow: 1;
-    background-position: center bottom;
-    background-size: contain;
+.artifact-link.no-content {
+    padding-bottom: 50%;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat
 }
 
-.arrow[data-v-2df46cec] {
-    position: absolute;
-    width: 10%;
-    transform-origin: top left
-}
-
-.arrow svg[data-v-2df46cec] {
-    width: 100%;
-    stroke: #4254f4;
-    stroke-width: 6px;
-    fill: transparent;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    overflow: visible;
-    animation: arrow-bounce-data-v-2df46cec .5s alternate infinite
-}
-
-.dots[data-v-2df46cec] {
-    position: absolute;
-    bottom: 12px;
-    left: 0;
-    width: 100%
-}
-
-.dots .dot[data-v-2df46cec] {
-    width: 8px;
-    height: 8px;
-    margin: 0 5px;
-    padding: 0;
-    border: none;
-    border-radius: 4px;
-    background: #ccc;
-    transition: background-color .25s, transform .25s
-}
-
-.dots .dot.current[data-v-2df46cec] {
-    background: #4254f4;
-    transform: scale(1.5)
-}
-
-.buttons[data-v-2df46cec] {
-    position: absolute;
-    bottom: -40px;
-    width: 100%
-}
-
-.buttons button[data-v-2df46cec] {
-    height: 32px;
-    background: none;
-    border: none;
-    color: #fff
-}
-
-.buttons .skip[data-v-2df46cec] {
-    float: left;
-    font-size: 15px
-}
-
-.buttons .next[data-v-2df46cec],
-.buttons .done[data-v-2df46cec] {
-    float: right;
-    padding: 0 20px;
-    border-radius: 20px;
-    background: #4254f4;
-    font-size: 17px;
-    box-shadow: 0 4px 0 0 #0e167d;
-    transition: box-shadow .2s
-}
-
-.buttons .next[data-v-2df46cec]:active,
-.buttons .done[data-v-2df46cec]:active {
-    box-shadow: 0 0 0 0 #0e167d
-}
-
-.buttons .done[data-v-2df46cec] {
-    background: #fff;
-    color: #4254f4;
-    animation: done-pulse-data-v-2df46cec .5s alternate infinite
-}
-
-@keyframes arrow-bounce-data-v-2df46cec {
-    0% {
-        transform: translateX(0)
-    }
-
-    100% {
-        transform: translateX(-20%)
-    }
-}
-
-@keyframes done-pulse-data-v-2df46cec {
-    0% {
-        background: #e0e0e0
-    }
-
-    100% {
-        transform: #fff
-    }
-}
-
-.svg-container[data-v-96847278] {
-    cursor: pointer;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    border: 0px solid transparent;
-    background-color: transparent
-}
-
-.svg-container *[data-v-96847278] {
-    pointer-events: none
-}
-
-.drawing {
-    overflow-y: auto;
-    position: relative
-}
-
-.drawing .prompt {
+.post-game {
+    background-image: url("drawful-animate/choosing.png");
     text-align: center
 }
 
-.drawing .draw-canvas {
-    background-color: #fff
-}
-
-.drawing .controls {
-    margin: 0px auto -8px auto;
-    text-align: center;
-    overflow: hidden;
-    z-index: 1
-}
-
-.drawing .controls .frame-button {
-    color: #000;
-    position: relative;
-    font-size: 16px;
-    width: 40%;
-    max-width: 150px;
-    margin: 6px auto 0px auto;
-    border-style: solid;
-    border-width: 7px;
-    border-image: url("drawful-animate/drawing_controls_frame-button.svg") 6 fill;
-    border-bottom: 0;
-    padding: 7px 0 3px;
-    -webkit-background-clip: padding;
-    -moz-background-clip: padding;
-    background-clip: padding-box
-}
-
-.drawing .controls .frame-button.active {
-    border-image: url("drawful-animate/drawing_controls_frame-button.active.svg") 6 fill
-}
-
-.drawing .controls .frame-button.active::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: -2px;
-    right: -2px;
-    height: 10px;
-    background: #fff
-}
-
-.drawing .stage {
-    margin: 0px auto
-}
-
-.drawing .stage canvas.draw-canvas {
-    border-width: 8px;
-    border-style: solid;
-    border-image: url("drawful-animate/episodes.content.svg") 6 7;
-    background-clip: padding-box
-}
-
-.drawing .palette {
-    text-align: center
-}
-
-.drawing .palette button {
-    height: 50px;
-    width: 50px;
-    padding: 3px
-}
-
-.drawing .submit-button {
-    font-size: 18px;
-    padding: 5px 20%;
-    color: #fff;
-    background-color: #000;
-    border-radius: 6px;
-    border: 6px solid #000
-}
-
-.drawing .submit-button:active:not(:disabled) {
-    color: #000;
-    background-color: #fff
-}
-
-.drawing .submit-button:disabled {
-    opacity: .3;
-    cursor: not-allowed
-}
-
-.tutorial .image.tutorial-0 {
-    background-image: url("drawful-animate/tutorial_image.tutorial-0.png")
-}
-
-.tutorial .image.tutorial-1 {
-    background-image: url("drawful-animate/tutorial_image.tutorial-1.png")
-}
-
-.tutorial .image.tutorial-2 {
-    background-image: url("drawful-animate/tutorial_image.tutorial-2.png")
-}
-
-.tutorial .image.tutorial-3 {
-    background-image: url("drawful-animate/tutorial_image.tutorial-3.png")
-}
-
-.tutorial .image.tutorial-4 {
-    background-position: center;
-    background-image: url("drawful-animate/tutorial_image.tutorial-4.png")
+.artifact-link {
+    background-image: url("drawful-animate/artifact-link.png")
 }
 
 .ugc {
-    background-image: url("drawful-animate/post-game.png")
+    background-image: url("drawful-animate/choosing.png")
 }
 
 .ugc .action-button {
     border: 14px solid #000;
     background-color: #000;
     color: #fff;
-    border-image: url("drawful-animate/writing_controls_button.submit.svg") 7 fill;
+    border-image: url("drawful-animate/choosing_choices_choice.svg") 7 fill;
     border-image-repeat: inherit;
     cursor: pointer;
     margin: 3px 0;
@@ -1417,7 +1339,7 @@
 
 .ugc .action-button:active:not(:disabled),
 .ugc .action-button.chosen {
-    border-image: url("drawful-animate/writing_controls_button.submit_active_not(_disabled).svg") 7 fill;
+    border-image: url("drawful-animate/choosing_choices_choice_active_not(_disabled).svg") 7 fill;
     background-color: #fff;
     color: #000
 }
@@ -1454,7 +1376,7 @@
     content: "";
     height: 30px;
     width: 30px;
-    background: url("drawful-animate/ugc_button.player-prompt_after.png") no-repeat center/80% #000;
+    background: url("drawful-animate/ugc_button_player-prompt_after.png") no-repeat center/80% #000;
     border-radius: 15px;
     left: 7px;
     position: absolute;
@@ -1491,11 +1413,11 @@
 }
 
 .ugc button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller {
-    background-image: url("drawful-animate/ugc_button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller.png")
+    background-image: url("drawful-animate/ugc_button_ugc-toggle-visibility-button_ugc-toggle-visibility-button-controller.png")
 }
 
 .ugc button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen {
-    background-image: url("drawful-animate/ugc_button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen.png")
+    background-image: url("drawful-animate/ugc_button_ugc-toggle-visibility-button_ugc-toggle-visibility-button-screen.png")
 }
 
 .ugc button.ugc-toggle-visibility-button:active,
@@ -1548,6 +1470,84 @@
     width: 100%
 }
 
+.waiting {
+    height: 100%
+}
+
+.waiting .message {
+    text-align: center
+}
+
+.waiting .stacked {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%
+}
+
+.waiting .stacked>div {
+    flex: 0 0 auto
+}
+
+.waiting .stacked>.logo {
+    flex: 1 0 auto;
+    background-image: url("drawful-animate/waiting_stacked__logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.waiting.isFriendMode {
+    background-image: url("drawful-animate/lobby_isFriendMode.png")
+}
+
+.waiting.isFriendMode .logo {
+    background-image: url("drawful-animate/waiting_isFriendMode_logo.png")
+}
+
+.writing {
+    background-image: url("drawful-animate/choosing.png");
+    text-align: center
+}
+
+.writing .friend-hint {
+    margin-bottom: 5px;
+    font-size: 14px;
+    opacity: .5
+}
+
+.writing .error {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #cb0020
+}
+
+.writing .controls .remaining {
+    margin-left: 16px;
+    float: left
+}
+
+.writing .controls button.submit {
+    float: right;
+    margin-right: 16px;
+    font-size: 18px;
+    color: #fff;
+    background-clip: padding-box;
+    background-color: #000;
+    border-width: 7px;
+    border-style: solid;
+    border-image: url("drawful-animate/choosing_choices_choice.svg") 3 fill
+}
+
+.writing .controls button.submit:active:not(:disabled) {
+    color: #000;
+    background-color: #fff;
+    border-image: url("drawful-animate/choosing_choices_choice_active_not(_disabled).svg") 3 fill
+}
+
+.writing .controls button.submit:disabled {
+    opacity: .3
+}
+
 .drawful-animate[data-v-31bec97a] {
     --theme-primary: #000;
     --theme-secondary: #FFF;
@@ -1588,7 +1588,7 @@
 
 @font-face {
     font-family: "typewriter_serialbold";
-    src: url("drawful-animate/82a7ce7cc467841fcbaf.woff2") format("woff2"), url("drawful-animate/c5096d0630ae10ecd8cc.woff") format("woff")
+    src: url("drawful-animate/38a77887a94fd5f6216e.woff2") format("woff2"), url("drawful-animate/92d63f8bf9c02ead14d7.woff") format("woff")
 }
 
 .drawful-animate {
@@ -1614,7 +1614,7 @@
     background-color: #611785;
     border-bottom-width: 6px;
     border-style: solid;
-    border-image: url("drawful-animate/choosing.doubling-down_prompt_before.svg") 5;
+    border-image: url("drawful-animate/choosing_doubling-down_prompt_before.svg") 5;
     font-size: 18px;
     font-weight: bold;
     color: #fff;
@@ -1658,7 +1658,7 @@
 
 .drawful-animate .buttonBlack {
     border: 7px solid #000;
-    border-image: url("drawful-animate/writing_controls_button.submit.svg") 7 7 fill;
+    border-image: url("drawful-animate/choosing_choices_choice.svg") 7 7 fill;
     border-image-repeat: inherit;
     cursor: pointer;
     margin: 3px 0;
@@ -1677,7 +1677,7 @@
 
 .drawful-animate .buttonBlack:active:not(:disabled),
 .drawful-animate .buttonBlack.chosen {
-    border-image: url("drawful-animate/writing_controls_button.submit_active_not(_disabled).svg") 7 7 fill;
+    border-image: url("drawful-animate/choosing_choices_choice_active_not(_disabled).svg") 7 7 fill;
     background-color: #fff;
     color: #000
 }
@@ -1697,7 +1697,7 @@ body::after {
     height: 0;
     overflow: hidden;
     z-index: -1;
-    content: url("drawful-animate/writing_controls_button.submit.svg") url("drawful-animate/writing_controls_button.submit_active_not(_disabled).svg") url("drawful-animate/flipping_flipchart_row_circle-button[data-v-c1eff0c0].svg") url("drawful-animate/flipping_flipchart_row_circle-button.selected[data-v-c1eff0c0].svg") url("drawful-animate/body_after.svg") url("drawful-animate/choosing.doubling-down_doubleDown_button.png") url("drawful-animate/choosing.doubling-down_choices_choice.png") url("drawful-animate/choosing.doubling-down_doubleDown_button.active.png") url("drawful-animate/choosing.doubling-down_choices_choice.selected.png") url("drawful-animate/body_after_2.svg") url("drawful-animate/body_after_3.svg") url("drawful-animate/body_after_4.svg") url("drawful-animate/ugc_button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller.png") url("drawful-animate/body_after_5.svg") url("drawful-animate/body_after_6.svg") url("drawful-animate/episodes.content.svg") url("drawful-animate/post-game.png") url("drawful-animate/waiting.isFriendMode_logo.png") url("drawful-animate/artifact-link.png") url("drawful-animate/choosing.doubling-down_prompt_before.svg") url("drawful-animate/body_after_7.svg") url("drawful-animate/waiting.isFriendMode.png") url("drawful-animate/drawful-animate.png") url("drawful-animate/waiting_stacked_.logo.png") url("drawful-animate/body_after_8.svg") url("drawful-animate/body_after_9.svg") url("drawful-animate/body_after_10.svg") url("drawful-animate/ugc_button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen.png") url("drawful-animate/choosing_track-image-container_after.svg") url("drawful-animate/body_after_11.svg") url("drawful-animate/body_after_12.svg") url("drawful-animate/drawing_controls_frame-button.active.svg") url("drawful-animate/body_after_13.svg") url("drawful-animate/drawing_controls_frame-button.svg") url("drawful-animate/ugc_textarea.svg") url("drawful-animate/body_after_14.svg") url("drawful-animate/flipping_timer[data-v-c1eff0c0].svg") url("drawful-animate/tutorial_image.tutorial-0.png") url("drawful-animate/tutorial_image.tutorial-1.png") url("drawful-animate/tutorial_image.tutorial-2.png") url("drawful-animate/tutorial_image.tutorial-3.png") url("drawful-animate/tutorial_image.tutorial-4.png")
+    content: url("drawful-animate/choosing_choices_choice.svg") url("drawful-animate/choosing_choices_choice_active_not(_disabled).svg") url("drawful-animate/flipping_flipchart_row_circle-button[data-v-c1eff0c0].svg") url("drawful-animate/flipping_flipchart_row_circle-button_selected[data-v-c1eff0c0].svg") url("drawful-animate/body_after.svg") url("drawful-animate/choosing_doubling-down_doubleDown_button.png") url("drawful-animate/choosing_doubling-down_choices_choice.png") url("drawful-animate/choosing_doubling-down_doubleDown_button_active.png") url("drawful-animate/choosing_doubling-down_choices_choice_selected.png") url("drawful-animate/body_after_2.svg") url("drawful-animate/body_after_3.svg") url("drawful-animate/body_after_4.svg") url("drawful-animate/ugc_button_ugc-toggle-visibility-button_ugc-toggle-visibility-button-controller.png") url("drawful-animate/body_after_5.svg") url("drawful-animate/body_after_6.svg") url("drawful-animate/drawing_stage_canvas_draw-canvas.svg") url("drawful-animate/choosing.png") url("drawful-animate/waiting_isFriendMode_logo.png") url("drawful-animate/artifact-link.png") url("drawful-animate/choosing_doubling-down_prompt_before.svg") url("drawful-animate/body_after_7.svg") url("drawful-animate/lobby_isFriendMode.png") url("drawful-animate/drawful-animate.png") url("drawful-animate/waiting_stacked__logo.png") url("drawful-animate/body_after_8.svg") url("drawful-animate/body_after_9.svg") url("drawful-animate/body_after_10.svg") url("drawful-animate/ugc_button_ugc-toggle-visibility-button_ugc-toggle-visibility-button-screen.png") url("drawful-animate/choosing_track-image-container_after.svg") url("drawful-animate/body_after_11.svg") url("drawful-animate/body_after_12.svg") url("drawful-animate/drawing_controls_frame-button_active.svg") url("drawful-animate/body_after_13.svg") url("drawful-animate/drawing_controls_frame-button.svg") url("drawful-animate/ugc_textarea.svg") url("drawful-animate/body_after_14.svg") url("drawful-animate/flipping_timer[data-v-c1eff0c0].svg") url("drawful-animate/tutorial_image_tutorial-0.png") url("drawful-animate/tutorial_image_tutorial-1.png") url("drawful-animate/tutorial_image_tutorial-2.png") url("drawful-animate/tutorial_image_tutorial-3.png") url("drawful-animate/tutorial_image_tutorial-4.png")
 }
 
-/*# sourceMappingURL=7782.css.map*/
+/*# sourceMappingURL=sourcemaps/6333.css.map*/

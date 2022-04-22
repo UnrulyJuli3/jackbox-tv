@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("guesspionage-crowdplay/post-banner.tjpp7_banner-image.png")
+    background-image: url("guesspionage-crowdplay/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("guesspionage-crowdplay/post-banner.tjpp6_banner-image.png")
+    background-image: url("guesspionage-crowdplay/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -1237,7 +1237,7 @@ button.pollposition-character:focus {
 }
 
 button.pollposition-character.selected {
-    background-image: url("guesspionage-crowdplay/button.pollposition-character.selected.png");
+    background-image: url("guesspionage-crowdplay/button_pollposition-character_selected.png");
     background-color: #0f3140;
     opacity: 1;
     border-width: 4px;
@@ -1723,4 +1723,4 @@ svg.pollposition-percentage-picker text.percent-sign {
     color: #000
 }
 
-/*# sourceMappingURL=5022.css.map*/
+/*# sourceMappingURL=sourcemaps/5022.css.map*/

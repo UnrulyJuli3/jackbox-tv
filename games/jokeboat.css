@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("jokeboat/post-banner.tjpp7_banner-image.png")
+    background-image: url("jokeboat/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("jokeboat/post-banner.tjpp6_banner-image.png")
+    background-image: url("jokeboat/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -916,17 +916,17 @@ li>a.button-color.active[data-color="#000000"] {
 }
 
 .jokeboat.catchphrase .controller-page {
-    background-image: url("jokeboat/jokeboat.catchphrase_controller-page.jpg")
+    background-image: url("jokeboat/jokeboat_catchphrase_controller-page.jpg")
 }
 
 .jokeboat.catchphrase .controller-page::before {
     width: 35px;
     background-size: cover;
-    background-image: url("jokeboat/jokeboat.catchphrase_controller-page_before.jpg")
+    background-image: url("jokeboat/jokeboat_catchphrase_controller-page_before.jpg")
 }
 
 .jokeboat.final-round .controller-page {
-    background-image: url("jokeboat/jokeboat.final-round_controller-page.jpg")
+    background-image: url("jokeboat/jokeboat_final-round_controller-page.jpg")
 }
 
 .jokeboat .controller-content {
@@ -1046,35 +1046,35 @@ li>a.button-color.active[data-color="#000000"] {
 }
 
 .jokeboat .playerTopBarView .playerIcon.player0 {
-    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player0.png")
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon_player0.png")
 }
 
 .jokeboat .playerTopBarView .playerIcon.player1 {
-    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player1.png")
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon_player1.png")
 }
 
 .jokeboat .playerTopBarView .playerIcon.player2 {
-    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player2.png")
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon_player2.png")
 }
 
 .jokeboat .playerTopBarView .playerIcon.player3 {
-    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player3.png")
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon_player3.png")
 }
 
 .jokeboat .playerTopBarView .playerIcon.player4 {
-    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player4.png")
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon_player4.png")
 }
 
 .jokeboat .playerTopBarView .playerIcon.player5 {
-    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player5.png")
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon_player5.png")
 }
 
 .jokeboat .playerTopBarView .playerIcon.player6 {
-    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player6.png")
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon_player6.png")
 }
 
 .jokeboat .playerTopBarView .playerIcon.player7 {
-    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon.player7.png")
+    background-image: url("jokeboat/jokeboat_playerTopBarView_playerIcon_player7.png")
 }
 
 .jokeboat.catchphrase .playerTopBarView {
@@ -1170,7 +1170,7 @@ li>a.button-color.active[data-color="#000000"] {
     line-height: 1;
     border-style: solid;
     border-radius: 0;
-    border-image: url("jokeboat/jokeboat_MakeSingleChoice.punchup_help.png");
+    border-image: url("jokeboat/jokeboat_MakeSingleChoice_punchup_help.png");
     border-image-slice: 0 0 2 0;
     border-width: 0 0 2px 0;
     pointer-events: none;
@@ -1191,7 +1191,7 @@ li>a.button-color.active[data-color="#000000"] {
 }
 
 .jokeboat .MakeSingleChoice.perform .button-group:last-child button {
-    border-image-source: url("jokeboat/jokeboat_MakeSingleChoice.perform_button-group_last-child_button.png");
+    border-image-source: url("jokeboat/jokeboat_MakeSingleChoice_perform_button-group_last-child_button.png");
     color: #273b18;
     font-size: 1em
 }
@@ -1211,7 +1211,7 @@ li>a.button-color.active[data-color="#000000"] {
     background-size: 60px 48px;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url("jokeboat/jokeboat_MakeSingleChoice.favorite_button-group_first-child_after.png")
+    background-image: url("jokeboat/jokeboat_MakeSingleChoice_favorite_button-group_first-child_after.png")
 }
 
 .jokeboat.catchphrase .MakeSingleChoice {
@@ -1228,7 +1228,7 @@ li>a.button-color.active[data-color="#000000"] {
 }
 
 .jokeboat.catchphrase .MakeSingleChoice button {
-    border-image-source: url("jokeboat/jokeboat.catchphrase_MakeSingleChoice_button.png");
+    border-image-source: url("jokeboat/jokeboat_catchphrase_MakeSingleChoice_button.png");
     color: #273b18
 }
 
@@ -1258,7 +1258,7 @@ li>a.button-color.active[data-color="#000000"] {
     padding: 10px 20px 6px 12px;
     border-style: solid;
     border-radius: 0;
-    border-image: url("jokeboat/jokeboat_MakeSingleChoice.punchup_help.png");
+    border-image: url("jokeboat/jokeboat_MakeSingleChoice_punchup_help.png");
     border-image-slice: 0 0 5 0;
     border-width: 0 0 5px 0;
     background: rgba(0, 0, 0, .05);
@@ -1334,7 +1334,7 @@ li>a.button-color.active[data-color="#000000"] {
 .jokeboat .EnterSingleText .action-jokeForMe .button {
     color: #273b18;
     font-size: 1em;
-    border-image-source: url("jokeboat/jokeboat_MakeSingleChoice.perform_button-group_last-child_button.png")
+    border-image-source: url("jokeboat/jokeboat_MakeSingleChoice_perform_button-group_last-child_button.png")
 }
 
 .jokeboat .EnterSingleText .action-jokeForMe .button em {
@@ -1406,4 +1406,4 @@ li>a.button-color.active[data-color="#000000"] {
     border: none
 }
 
-/*# sourceMappingURL=5988.css.map*/
+/*# sourceMappingURL=sourcemaps/5988.css.map*/

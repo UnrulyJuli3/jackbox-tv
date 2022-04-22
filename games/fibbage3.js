@@ -3,7 +3,7 @@
         76516: (e, t, o) => {
             "use strict";
             o.r(t), o.d(t, {
-                MainView: () => E
+                MainView: () => N
             });
             var s = o(24340),
                 i = o(89446),
@@ -127,9 +127,8 @@
                 });
             var f = o(37231),
                 k = o(9659),
-                w = o(79367),
-                S = o.n(w);
-            const L = o(19690).E.extend({
+                w = o(3682);
+            const S = o(19690).E.extend({
                     template: m().template('<form> <div class="form-group makeEntry"> <div class="inputGroup"> <div class="error text-danger"></div> <div class="enterText"> <textarea id="enter-text-textarea" rows="1" class="form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea> <div class="doubleInput"> <div class="delimiter"> DELIM </div> <textarea id="enter-text-textarea-2" rows="1" class="form-control" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea> </div> <span class="inlineSubmit"> <div class="col-xs-6"> <button type="button" class="btn btn-block lieForMe" type="button">Lie For Me</button> </div> <div class="col-xs-6"> <button type="submit" class="btn btn-block submitButton" type="button">Send</button> </div> </span> </div> </div> </div> <div class="entryDone"> Thank you! Your entry: <span class="entryText">entryText</span> </div> </form>'),
                     bindings: {
                         ".makeEntry": {
@@ -192,7 +191,7 @@
                         "keypress textarea": "handleKeypress"
                     },
                     render() {
-                        this.$el.html(this.template()), this.stickit(), S()(this.el.querySelectorAll("textarea"))
+                        this.$el.html(this.template()), this.stickit(), (0, w.Z)(this.el.querySelectorAll("textarea"))
                     },
                     submitForm(e) {
                         return this.trigger("input:submit", e), !1
@@ -211,16 +210,16 @@
                         return s = this.model.get("doubleInput") ? [t, o] : t, s
                     }
                 }),
-                G = k.S.extend({
+                L = k.S.extend({
                     defaults: m().extend({}, f.G.prototype.model.defaults, {
                         doubleInput: !1,
                         requireLie: !1,
                         actions: []
                     })
                 }),
-                M = f.G.extend({
+                G = f.G.extend({
                     className: "EnterText scrollable",
-                    model: new G,
+                    model: new L,
                     events: {
                         "submit form": "onChildviewInputSubmit",
                         "input textarea": "validateInput",
@@ -228,7 +227,7 @@
                         "click .lieForMe": "lieForMe"
                     },
                     initialize(e) {
-                        f.G.prototype.initialize.apply(this, [e]), this.inputComponent = new L({
+                        f.G.prototype.initialize.apply(this, [e]), this.inputComponent = new S({
                             model: new(c().Model)
                         }), this.listenTo(this.inputComponent, "button:lieforme", this.lieForMe), this.listenTo(this.buttonsComponent, "childview:button:choose", this.chooseLie), this.update()
                     },
@@ -260,9 +259,9 @@
                         return this.triggerMethod("client:message", t), !1
                     }
                 });
-            var T = o(52650);
-            const I = T.W.extend({
-                    bindings: Object.assign(T.W.prototype.bindings, {
+            var M = o(52650);
+            const T = M.W.extend({
+                    bindings: Object.assign(M.W.prototype.bindings, {
                         "#artifactLink": {
                             attributes: [{
                                 name: "style",
@@ -272,10 +271,10 @@
                         }
                     }),
                     update() {
-                        T.W.prototype.update.apply(this, []), this.model.get("playerCanStartGame") || "TMI" !== this.model.get("type") || this.titleComponent.model.set("text", "TIP: This game is better when you use your real name!")
+                        M.W.prototype.update.apply(this, []), this.model.get("playerCanStartGame") || "TMI" !== this.model.get("type") || this.titleComponent.model.set("text", "TIP: This game is better when you use your real name!")
                     }
                 }),
-                N = v.s.extend({
+                I = v.s.extend({
                     bindings: Object.assign(v.s.prototype.bindings, {
                         "#playername": {
                             observe: "customerBlob",
@@ -296,7 +295,7 @@
                         this.model.attributes.imageClass = "logo-image"
                     }
                 }),
-                E = s.v.extend({
+                N = s.v.extend({
                     sessionModulePrefix: "Fibbage3",
                     getGameLayout(e) {
                         switch (e) {
@@ -310,11 +309,11 @@
                                 return this.setLayout(x);
                             case "EnterText":
                             case "EnterTruth":
-                                return this.setLayout(M);
+                                return this.setLayout(G);
                             case "Lobby":
-                                return this.setLayout(I);
+                                return this.setLayout(T);
                             case "Logo":
-                                return this.setLayout(N);
+                                return this.setLayout(I);
                             default:
                                 return -1
                         }
@@ -359,4 +358,4 @@
         }
     }
 ]);
-//# sourceMappingURL=5157.b2f6ce62244e998bf43a.js.map
+//# sourceMappingURL=sourcemaps/5157.ba169dde0364583813f7.js.map

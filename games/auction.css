@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("auction/post-banner.tjpp7_banner-image.png")
+    background-image: url("auction/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("auction/post-banner.tjpp6_banner-image.png")
+    background-image: url("auction/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -610,4 +610,4 @@ br {
     text-align: center
 }
 
-/*# sourceMappingURL=1571.css.map*/
+/*# sourceMappingURL=sourcemaps/1571.css.map*/

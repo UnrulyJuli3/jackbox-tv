@@ -1198,7 +1198,7 @@
         19690: (t, e, i) => {
             "use strict";
             i.d(e, {
-                E: () => m
+                E: () => u
             });
             var s = i(19755),
                 o = i.n(s),
@@ -1208,11 +1208,10 @@
                 l = i.n(r),
                 h = i(63574),
                 c = i.n(h),
-                d = i(79367),
-                p = i.n(d),
-                u = i(89446);
+                d = i(3682),
+                p = i(89446);
             i(70989);
-            const m = c().View.extend({
+            const u = c().View.extend({
                 tagName: "div",
                 className: "input",
                 model: new(l().Model)({}),
@@ -1297,7 +1296,7 @@
                     this.$el.html(this.template()), this.stickit(), this.model.set("remaining", this.model.get("maxLength"))
                 },
                 onAttach() {
-                    this.getOption("preventAutosize") || p()(o()("textarea"))
+                    this.getOption("preventAutosize") || (0, d.Z)(o()("textarea"))
                 },
                 onSubmitClick() {
                     return o()("textarea").blur(), this.triggerMethod("input:submit", this), !1
@@ -1316,7 +1315,7 @@
                 },
                 clearInput() {
                     const t = o()(this.$el).find("textarea");
-                    o()(t).val(""), this.getOption("preventAutosize") || p().update(t), this.onInputChange()
+                    o()(t).val(""), this.getOption("preventAutosize") || d.Z.update(t), this.onInputChange()
                 },
                 setValue(t) {
                     o()(this.$el).find("textarea")[0].value = t, this.onInputChange()
@@ -1325,10 +1324,10 @@
                     return this.$("textarea").val()
                 },
                 getSanitizedValue() {
-                    return u.c.sanitize(this.getValue())
+                    return p.c.sanitize(this.getValue())
                 },
-                sanitize: t => u.c.sanitize(t),
-                sanitizeInput: t => u.c.sanitizeInput(t)
+                sanitize: t => p.c.sanitize(t),
+                sanitizeInput: t => p.c.sanitizeInput(t)
             })
         },
         52650: (t, e, i) => {
@@ -1858,7 +1857,7 @@
                 a = i.n(n),
                 r = i(72316),
                 l = i.n(r),
-                h = i(33958),
+                h = i(55507),
                 c = i(63574),
                 d = i.n(c),
                 p = i(10972),
@@ -2530,7 +2529,7 @@
             const U = d().View.extend({
                 appId: "main",
                 appTag: "main",
-                appVersion: "4.1.24",
+                appVersion: "4.1.28",
                 currentState: null,
                 currentLayout: null,
                 template: a().template(B.Z),
@@ -3396,13 +3395,13 @@
                     "touchmove canvas": "move"
                 },
                 initialize(t) {
-                    this.color = "black", this.thicknessScale = -1, this.mergeOptions(t, this.myViewOptions), this.model.on("change:size", this.onUpdateSize, this)
+                    this.color = "black", this.thicknessScale = -1, this.mergeOptions(t, this.myViewOptions), this.model.on("change:size", this.onUpdateSize, this), this.endWithContext = this.end.bind(this)
                 },
                 onUpdateSize() {
                     this.sketchpad && this.sketchpad.updateSize(this.model.get("size"))
                 },
                 onRender() {
-                    this.stickit(), document.addEventListener("touchend", this.end.bind(this)), document.addEventListener("mouseup", this.end.bind(this))
+                    this.stickit(), document.addEventListener("touchend", this.endWithContext), document.addEventListener("mouseup", this.endWithContext)
                 },
                 onAttach() {
                     const t = `sketchpad-${this.model.cid}`;
@@ -3440,7 +3439,7 @@
                     this.isDrawing && (this.isDrawing = !1, this.sketchpad.endLine(), e || this.triggerMethod("sketchpad:line", this.sketchpad.getLastLine()))
                 },
                 onBeforeDestroy() {
-                    null !== this.getOption("mode") && this.end(null, !0)
+                    null !== this.getOption("mode") && this.end(null, !0), document.removeEventListener("touchend", this.endWithContext), document.removeEventListener("mouseup", this.endWithContext)
                 },
                 leave() {
                     "draw" !== this.getOption("mode") && this.tipShape.graphics.clear()
@@ -4489,7 +4488,7 @@
                 return e
             }
             $.prototype = U.prototype, $.class = U;
-            class H {
+            class W {
                 constructor() {
                     let {
                         image: t,
@@ -4526,10 +4525,10 @@
                 }
             }
 
-            function W(t) {
-                return new H(t)
+            function H(t) {
+                return new W(t)
             }
-            W.prototype = H.prototype, W.class = H
+            H.prototype = W.prototype, H.class = W
         },
         91434: (t, e, i) => {
             "use strict";
@@ -4572,4 +4571,4 @@
         }
     }
 ]);
-//# sourceMappingURL=4340.3693672de7a6a72595fa.js.map
+//# sourceMappingURL=sourcemaps/4340.467315cd4a9151ead406.js.map

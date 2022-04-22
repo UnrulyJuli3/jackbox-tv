@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("drawful2international/post-banner.tjpp7_banner-image.png")
+    background-image: url("drawful2international/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("drawful2international/post-banner.tjpp6_banner-image.png")
+    background-image: url("drawful2international/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -899,22 +899,22 @@ li>a.button-color.active[data-color="#000000"] {
 
 .drawful2international.fr .artifactButton,
 .drawful2.fr .artifactButton {
-    background-image: url("drawful2international/drawful2international.fr_artifactButton.png")
+    background-image: url("drawful2international/drawful2international_fr_artifactButton.png")
 }
 
 .drawful2international.it .artifactButton,
 .drawful2.it .artifactButton {
-    background-image: url("drawful2international/drawful2international.it_artifactButton.png")
+    background-image: url("drawful2international/drawful2international_it_artifactButton.png")
 }
 
 .drawful2international.es .artifactButton,
 .drawful2.es .artifactButton {
-    background-image: url("drawful2international/drawful2international.es_artifactButton.png")
+    background-image: url("drawful2international/drawful2international_es_artifactButton.png")
 }
 
 .drawful2international.de .artifactButton,
 .drawful2.de .artifactButton {
-    background-image: url("drawful2international/drawful2international.de_artifactButton.png")
+    background-image: url("drawful2international/drawful2international_de_artifactButton.png")
 }
 
 .drawful2international .playerTopBarView,
@@ -1164,7 +1164,7 @@ li>a.button-color.active[data-color="#000000"] {
 .drawful2 .EnterSingleText .button-group .censor-button.isWarned,
 .drawful2 .UGC .button-group .censor-button.isWarned {
     background-color: #900;
-    background-image: url("drawful2international/drawful2international_Lobby_button-group_censor-button.isWarned.png")
+    background-image: url("drawful2international/drawful2international_Lobby_button-group_censor-button_isWarned.png")
 }
 
 .drawful2international .Lobby.ChooseLikes .button-group .button,
@@ -1228,7 +1228,7 @@ li>a.button-color.active[data-color="#000000"] {
 .drawful2 .EnterSingleText.ChooseLikes .button-group .choice-button::before,
 .drawful2 .UGC.ChooseLikes .button-group .choice-button::before {
     content: " ";
-    background-image: url("drawful2international/drawful2international_Lobby.ChooseLikes_button-group_choice-button_before.png");
+    background-image: url("drawful2international/drawful2international_Lobby_ChooseLikes_button-group_choice-button_before.png");
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100% 200%;
@@ -1569,12 +1569,12 @@ li>a.button-color.active[data-color="#000000"] {
 
 .drawful2international .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller,
 .drawful2 .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller {
-    background-image: url("drawful2international/drawful2international_UGC_button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller.png")
+    background-image: url("drawful2international/drawful2international_UGC_button_ugc-toggle-visibility-button_ugc-toggle-visibility-button-controller.png")
 }
 
 .drawful2international .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen,
 .drawful2 .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen {
-    background-image: url("drawful2international/drawful2international_UGC_button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen.png")
+    background-image: url("drawful2international/drawful2international_UGC_button_ugc-toggle-visibility-button_ugc-toggle-visibility-button-screen.png")
 }
 
 .drawful2international .UGC button.ugc-toggle-visibility-button:active,
@@ -1607,22 +1607,22 @@ li>a.button-color.active[data-color="#000000"] {
 
 .drawful2international .Draw.Player0 button#primaryColor,
 .drawful2 .Draw.Player0 button#primaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player0_button#primaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player0_button#primaryColor.svg")
 }
 
 .drawful2international .Draw.Player0 button#secondaryColor,
 .drawful2 .Draw.Player0 button#secondaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player0_button#secondaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player0_button#secondaryColor.svg")
 }
 
 .drawful2international .Draw.Player0 button#primaryColor.selected,
 .drawful2 .Draw.Player0 button#primaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player0_button#primaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player0_button#primaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player0 button#secondaryColor.selected,
 .drawful2 .Draw.Player0 button#secondaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player0_button#secondaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player0_button#secondaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player0 .prompt .text div:nth-of-type(2),
@@ -1647,22 +1647,22 @@ li>a.button-color.active[data-color="#000000"] {
 
 .drawful2international .Draw.Player1 button#primaryColor,
 .drawful2 .Draw.Player1 button#primaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player1_button#primaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player1_button#primaryColor.svg")
 }
 
 .drawful2international .Draw.Player1 button#secondaryColor,
 .drawful2 .Draw.Player1 button#secondaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player1_button#secondaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player1_button#secondaryColor.svg")
 }
 
 .drawful2international .Draw.Player1 button#primaryColor.selected,
 .drawful2 .Draw.Player1 button#primaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player1_button#primaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player1_button#primaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player1 button#secondaryColor.selected,
 .drawful2 .Draw.Player1 button#secondaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player1_button#secondaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player1_button#secondaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player1 .prompt .text div:nth-of-type(2),
@@ -1687,22 +1687,22 @@ li>a.button-color.active[data-color="#000000"] {
 
 .drawful2international .Draw.Player2 button#primaryColor,
 .drawful2 .Draw.Player2 button#primaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player2_button#primaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player2_button#primaryColor.svg")
 }
 
 .drawful2international .Draw.Player2 button#secondaryColor,
 .drawful2 .Draw.Player2 button#secondaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player2_button#secondaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player2_button#secondaryColor.svg")
 }
 
 .drawful2international .Draw.Player2 button#primaryColor.selected,
 .drawful2 .Draw.Player2 button#primaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player2_button#primaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player2_button#primaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player2 button#secondaryColor.selected,
 .drawful2 .Draw.Player2 button#secondaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player2_button#secondaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player2_button#secondaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player2 .prompt .text div:nth-of-type(2),
@@ -1727,22 +1727,22 @@ li>a.button-color.active[data-color="#000000"] {
 
 .drawful2international .Draw.Player3 button#primaryColor,
 .drawful2 .Draw.Player3 button#primaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player3_button#primaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player3_button#primaryColor.svg")
 }
 
 .drawful2international .Draw.Player3 button#secondaryColor,
 .drawful2 .Draw.Player3 button#secondaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player3_button#secondaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player3_button#secondaryColor.svg")
 }
 
 .drawful2international .Draw.Player3 button#primaryColor.selected,
 .drawful2 .Draw.Player3 button#primaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player3_button#primaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player3_button#primaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player3 button#secondaryColor.selected,
 .drawful2 .Draw.Player3 button#secondaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player3_button#secondaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player3_button#secondaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player3 .prompt .text div:nth-of-type(2),
@@ -1767,22 +1767,22 @@ li>a.button-color.active[data-color="#000000"] {
 
 .drawful2international .Draw.Player4 button#primaryColor,
 .drawful2 .Draw.Player4 button#primaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player4_button#primaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player4_button#primaryColor.svg")
 }
 
 .drawful2international .Draw.Player4 button#secondaryColor,
 .drawful2 .Draw.Player4 button#secondaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player4_button#secondaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player4_button#secondaryColor.svg")
 }
 
 .drawful2international .Draw.Player4 button#primaryColor.selected,
 .drawful2 .Draw.Player4 button#primaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player4_button#primaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player4_button#primaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player4 button#secondaryColor.selected,
 .drawful2 .Draw.Player4 button#secondaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player4_button#secondaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player4_button#secondaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player4 .prompt .text div:nth-of-type(2),
@@ -1807,22 +1807,22 @@ li>a.button-color.active[data-color="#000000"] {
 
 .drawful2international .Draw.Player5 button#primaryColor,
 .drawful2 .Draw.Player5 button#primaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player5_button#primaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player5_button#primaryColor.svg")
 }
 
 .drawful2international .Draw.Player5 button#secondaryColor,
 .drawful2 .Draw.Player5 button#secondaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player5_button#secondaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player5_button#secondaryColor.svg")
 }
 
 .drawful2international .Draw.Player5 button#primaryColor.selected,
 .drawful2 .Draw.Player5 button#primaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player5_button#primaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player5_button#primaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player5 button#secondaryColor.selected,
 .drawful2 .Draw.Player5 button#secondaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player5_button#secondaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player5_button#secondaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player5 .prompt .text div:nth-of-type(2),
@@ -1847,22 +1847,22 @@ li>a.button-color.active[data-color="#000000"] {
 
 .drawful2international .Draw.Player6 button#primaryColor,
 .drawful2 .Draw.Player6 button#primaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player6_button#primaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player6_button#primaryColor.svg")
 }
 
 .drawful2international .Draw.Player6 button#secondaryColor,
 .drawful2 .Draw.Player6 button#secondaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player6_button#secondaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player6_button#secondaryColor.svg")
 }
 
 .drawful2international .Draw.Player6 button#primaryColor.selected,
 .drawful2 .Draw.Player6 button#primaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player6_button#primaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player6_button#primaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player6 button#secondaryColor.selected,
 .drawful2 .Draw.Player6 button#secondaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player6_button#secondaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player6_button#secondaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player6 .prompt .text div:nth-of-type(2),
@@ -1887,22 +1887,22 @@ li>a.button-color.active[data-color="#000000"] {
 
 .drawful2international .Draw.Player7 button#primaryColor,
 .drawful2 .Draw.Player7 button#primaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player7_button#primaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player7_button#primaryColor.svg")
 }
 
 .drawful2international .Draw.Player7 button#secondaryColor,
 .drawful2 .Draw.Player7 button#secondaryColor {
-    background-image: url("drawful2international/drawful2international_Draw.Player7_button#secondaryColor.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player7_button#secondaryColor.svg")
 }
 
 .drawful2international .Draw.Player7 button#primaryColor.selected,
 .drawful2 .Draw.Player7 button#primaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player7_button#primaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player7_button#primaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player7 button#secondaryColor.selected,
 .drawful2 .Draw.Player7 button#secondaryColor.selected {
-    background-image: url("drawful2international/drawful2international_Draw.Player7_button#secondaryColor.selected.svg")
+    background-image: url("drawful2international/drawful2international_Draw_Player7_button#secondaryColor_selected.svg")
 }
 
 .drawful2international .Draw.Player7 .prompt .text div:nth-of-type(2),
@@ -2072,4 +2072,4 @@ li>a.button-color.active[data-color="#000000"] {
     color: #000
 }
 
-/*# sourceMappingURL=9082.css.map*/
+/*# sourceMappingURL=sourcemaps/9082.css.map*/

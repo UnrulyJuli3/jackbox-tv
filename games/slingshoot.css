@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("slingshoot/post-banner.tjpp7_banner-image.png")
+    background-image: url("slingshoot/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("slingshoot/post-banner.tjpp6_banner-image.png")
+    background-image: url("slingshoot/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -1001,39 +1001,39 @@ li>a.button-color.active[data-color="#000000"] {
 }
 
 .slingshoot .Shoot .weaponIcon.ClusterBombs {
-    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon.ClusterBombs.png")
+    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon_ClusterBombs.png")
 }
 
 .slingshoot .Shoot .weaponIcon.PlayerWeapon {
-    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon.PlayerWeapon.png")
+    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon_PlayerWeapon.png")
 }
 
 .slingshoot .Shoot .weaponIcon.Heal {
-    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon.Heal.png")
+    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon_Heal.png")
 }
 
 .slingshoot .Shoot .weaponIcon.RainbowCannon {
-    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon.RainbowCannon.png")
+    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon_RainbowCannon.png")
 }
 
 .slingshoot .Shoot .weaponIcon.Repeater {
-    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon.Repeater.png")
+    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon_Repeater.png")
 }
 
 .slingshoot .Shoot .weaponIcon.Seeker {
-    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon.Seeker.png")
+    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon_Seeker.png")
 }
 
 .slingshoot .Shoot .weaponIcon.Shield {
-    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon.Shield.png")
+    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon_Shield.png")
 }
 
 .slingshoot .Shoot .weaponIcon.Stun {
-    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon.Stun.png")
+    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon_Stun.png")
 }
 
 .slingshoot .Shoot .weaponIcon.SuperBlaster {
-    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon.SuperBlaster.png")
+    background-image: url("slingshoot/slingshoot_Shoot_weaponIcon_SuperBlaster.png")
 }
 
 .slingshoot .Shoot .weaponNameContainer {
@@ -1109,4 +1109,4 @@ li>a.button-color.active[data-color="#000000"] {
     content: "9+"
 }
 
-/*# sourceMappingURL=9618.css.map*/
+/*# sourceMappingURL=sourcemaps/9618.css.map*/

@@ -45851,7 +45851,7 @@
                 sB = QO.extend({
                     imageManifest: {
                         plane0: Promise.resolve().then(s.t.bind(s, 51638, 17)),
-                        plane1: Promise.resolve().then(s.t.bind(s, 15403, 17)),
+                        plane1: Promise.resolve().then(s.t.bind(s, 99081, 17)),
                         plane2: Promise.resolve().then(s.t.bind(s, 98675, 17)),
                         plane3: Promise.resolve().then(s.t.bind(s, 89996, 17)),
                         plane4: Promise.resolve().then(s.t.bind(s, 80383, 17))
@@ -48383,7 +48383,7 @@
                     imageManifest: {
                         hand: Promise.resolve().then(s.t.bind(s, 61590, 17)),
                         Adult0: Promise.resolve().then(s.t.bind(s, 42059, 17)),
-                        Adult0v2: Promise.resolve().then(s.t.bind(s, 16133, 17)),
+                        Adult0v2: Promise.resolve().then(s.t.bind(s, 24677, 17)),
                         Adult1: Promise.resolve().then(s.t.bind(s, 7979, 17)),
                         Adult1v2: Promise.resolve().then(s.t.bind(s, 12156, 17)),
                         Child0: Promise.resolve().then(s.t.bind(s, 96297, 17)),
@@ -58668,7 +58668,7 @@
             "use strict";
             e.exports = s.p + "games/everyday/e0bc9493b3331e424ef2.png"
         },
-        16133: (e, t, s) => {
+        24677: (e, t, s) => {
             "use strict";
             e.exports = s.p + "games/everyday/258a0039e27802e6ed9c.png"
         },
@@ -61176,7 +61176,7 @@
             "use strict";
             e.exports = s.p + "games/everyday/4424547cfadeca6d610e.png"
         },
-        15403: (e, t, s) => {
+        99081: (e, t, s) => {
             "use strict";
             e.exports = s.p + "games/everyday/83d93ff2b09e4b4c86aa.png"
         },
@@ -65058,4 +65058,4 @@
         }
     }
 ]);
-//# sourceMappingURL=9725.394a63094e6a697797a2.js.map
+//# sourceMappingURL=sourcemaps/9725.14f5253d6dab58a9c7b7.js.map

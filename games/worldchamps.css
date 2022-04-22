@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("worldchamps/post-banner.tjpp7_banner-image.png")
+    background-image: url("worldchamps/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("worldchamps/post-banner.tjpp6_banner-image.png")
+    background-image: url("worldchamps/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -955,7 +955,7 @@ button {
 }
 
 .worldchamps .Lobby button.characters .flex-item {
-    background-image: url("worldchamps/worldchamps_Lobby_button.characters_flex-item.png");
+    background-image: url("worldchamps/worldchamps_Lobby_button_characters_flex-item.png");
     background-repeat: no-repeat;
     background-size: contain
 }
@@ -989,7 +989,7 @@ button {
 .worldchamps .Lobby.PostGame,
 .worldchamps .Lobby.Sequel {
     background: #000;
-    background-image: url("worldchamps/worldchamps_Lobby.PostGame.jpg");
+    background-image: url("worldchamps/worldchamps_Lobby_PostGame.jpg");
     background-size: cover;
     background-repeat: repeat-x
 }
@@ -1099,7 +1099,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("worldchamps/worldchamps_Logo.Tip_message_messageText.png");
+    background-image: url("worldchamps/worldchamps_Logo_Tip_message_messageText.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -1301,7 +1301,7 @@ button {
 }
 
 .worldchamps .Draw .toolbar .chooseMarker.white {
-    background-image: url("worldchamps/worldchamps_Draw_toolbar_chooseMarker.white.png")
+    background-image: url("worldchamps/worldchamps_Draw_toolbar_chooseMarker_white.png")
 }
 
 .worldchamps .Draw .toolbar .chooseHighlighter {
@@ -1317,7 +1317,7 @@ button {
 }
 
 .worldchamps .Draw .toolbar .chooseHighlighter.white {
-    background-image: url("worldchamps/worldchamps_Draw_toolbar_chooseHighlighter.white.png")
+    background-image: url("worldchamps/worldchamps_Draw_toolbar_chooseHighlighter_white.png")
 }
 
 .worldchamps .Draw .toolbar .chooseHighlighter:hover {
@@ -1407,7 +1407,7 @@ button {
 }
 
 .worldchamps .playerTopBar .playerIcon.Scarlet {
-    background-image: url("worldchamps/worldchamps_Lobby_button.characters_flex-item.png")
+    background-image: url("worldchamps/worldchamps_Lobby_button_characters_flex-item.png")
 }
 
 .worldchamps .Lobby .characters.Scarlet {
@@ -1415,11 +1415,11 @@ button {
 }
 
 .worldchamps .Lobby .characters.Scarlet .flex-item {
-    background-image: url("worldchamps/worldchamps_Lobby_characters.Scarlet_flex-item.png")
+    background-image: url("worldchamps/worldchamps_Lobby_characters_Scarlet_flex-item.png")
 }
 
 .worldchamps .Lobby.Scarlet .mech {
-    background-image: url("worldchamps/worldchamps_Lobby_button.characters_flex-item.png")
+    background-image: url("worldchamps/worldchamps_Lobby_button_characters_flex-item.png")
 }
 
 .worldchamps .playerTopBarView.Chartreuse {
@@ -1427,7 +1427,7 @@ button {
 }
 
 .worldchamps .playerTopBar .playerIcon.Chartreuse {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Chartreuse.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Chartreuse.png")
 }
 
 .worldchamps .Lobby .characters.Chartreuse {
@@ -1435,11 +1435,11 @@ button {
 }
 
 .worldchamps .Lobby .characters.Chartreuse .flex-item {
-    background-image: url("worldchamps/worldchamps_Lobby_characters.Chartreuse_flex-item.png")
+    background-image: url("worldchamps/worldchamps_Lobby_characters_Chartreuse_flex-item.png")
 }
 
 .worldchamps .Lobby.Chartreuse .mech {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Chartreuse.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Chartreuse.png")
 }
 
 .worldchamps .playerTopBarView.Magenta {
@@ -1447,7 +1447,7 @@ button {
 }
 
 .worldchamps .playerTopBar .playerIcon.Magenta {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Magenta.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Magenta.png")
 }
 
 .worldchamps .Lobby .characters.Magenta {
@@ -1455,11 +1455,11 @@ button {
 }
 
 .worldchamps .Lobby .characters.Magenta .flex-item {
-    background-image: url("worldchamps/worldchamps_Lobby_characters.Magenta_flex-item.png")
+    background-image: url("worldchamps/worldchamps_Lobby_characters_Magenta_flex-item.png")
 }
 
 .worldchamps .Lobby.Magenta .mech {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Magenta.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Magenta.png")
 }
 
 .worldchamps .playerTopBarView.GoldenRod {
@@ -1467,7 +1467,7 @@ button {
 }
 
 .worldchamps .playerTopBar .playerIcon.GoldenRod {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.GoldenRod.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_GoldenRod.png")
 }
 
 .worldchamps .Lobby .characters.GoldenRod {
@@ -1475,11 +1475,11 @@ button {
 }
 
 .worldchamps .Lobby .characters.GoldenRod .flex-item {
-    background-image: url("worldchamps/worldchamps_Lobby_characters.GoldenRod_flex-item.png")
+    background-image: url("worldchamps/worldchamps_Lobby_characters_GoldenRod_flex-item.png")
 }
 
 .worldchamps .Lobby.GoldenRod .mech {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.GoldenRod.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_GoldenRod.png")
 }
 
 .worldchamps .playerTopBarView.Maroon {
@@ -1487,7 +1487,7 @@ button {
 }
 
 .worldchamps .playerTopBar .playerIcon.Maroon {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Maroon.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Maroon.png")
 }
 
 .worldchamps .Lobby .characters.Maroon {
@@ -1495,11 +1495,11 @@ button {
 }
 
 .worldchamps .Lobby .characters.Maroon .flex-item {
-    background-image: url("worldchamps/worldchamps_Lobby_characters.Maroon_flex-item.png")
+    background-image: url("worldchamps/worldchamps_Lobby_characters_Maroon_flex-item.png")
 }
 
 .worldchamps .Lobby.Maroon .mech {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Maroon.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Maroon.png")
 }
 
 .worldchamps .playerTopBarView.Cyan {
@@ -1507,7 +1507,7 @@ button {
 }
 
 .worldchamps .playerTopBar .playerIcon.Cyan {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Cyan.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Cyan.png")
 }
 
 .worldchamps .Lobby .characters.Cyan {
@@ -1515,11 +1515,11 @@ button {
 }
 
 .worldchamps .Lobby .characters.Cyan .flex-item {
-    background-image: url("worldchamps/worldchamps_Lobby_characters.Cyan_flex-item.png")
+    background-image: url("worldchamps/worldchamps_Lobby_characters_Cyan_flex-item.png")
 }
 
 .worldchamps .Lobby.Cyan .mech {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Cyan.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Cyan.png")
 }
 
 .worldchamps .playerTopBarView.Indigo {
@@ -1527,7 +1527,7 @@ button {
 }
 
 .worldchamps .playerTopBar .playerIcon.Indigo {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Indigo.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Indigo.png")
 }
 
 .worldchamps .Lobby .characters.Indigo {
@@ -1535,11 +1535,11 @@ button {
 }
 
 .worldchamps .Lobby .characters.Indigo .flex-item {
-    background-image: url("worldchamps/worldchamps_Lobby_characters.Indigo_flex-item.png")
+    background-image: url("worldchamps/worldchamps_Lobby_characters_Indigo_flex-item.png")
 }
 
 .worldchamps .Lobby.Indigo .mech {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Indigo.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Indigo.png")
 }
 
 .worldchamps .playerTopBarView.Viridian {
@@ -1547,7 +1547,7 @@ button {
 }
 
 .worldchamps .playerTopBar .playerIcon.Viridian {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Viridian.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Viridian.png")
 }
 
 .worldchamps .Lobby .characters.Viridian {
@@ -1555,11 +1555,11 @@ button {
 }
 
 .worldchamps .Lobby .characters.Viridian .flex-item {
-    background-image: url("worldchamps/worldchamps_Lobby_characters.Viridian_flex-item.png")
+    background-image: url("worldchamps/worldchamps_Lobby_characters_Viridian_flex-item.png")
 }
 
 .worldchamps .Lobby.Viridian .mech {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Viridian.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Viridian.png")
 }
 
 .worldchamps .playerTopBarView.Lavender {
@@ -1567,7 +1567,7 @@ button {
 }
 
 .worldchamps .playerTopBar .playerIcon.Lavender {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Lavender.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Lavender.png")
 }
 
 .worldchamps .Lobby .characters.Lavender {
@@ -1575,11 +1575,11 @@ button {
 }
 
 .worldchamps .Lobby .characters.Lavender .flex-item {
-    background-image: url("worldchamps/worldchamps_Lobby_characters.Lavender_flex-item.png")
+    background-image: url("worldchamps/worldchamps_Lobby_characters_Lavender_flex-item.png")
 }
 
 .worldchamps .Lobby.Lavender .mech {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Lavender.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Lavender.png")
 }
 
 .worldchamps .playerTopBarView.Cobalt {
@@ -1587,7 +1587,7 @@ button {
 }
 
 .worldchamps .playerTopBar .playerIcon.Cobalt {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Cobalt.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Cobalt.png")
 }
 
 .worldchamps .Lobby .characters.Cobalt {
@@ -1595,11 +1595,11 @@ button {
 }
 
 .worldchamps .Lobby .characters.Cobalt .flex-item {
-    background-image: url("worldchamps/worldchamps_Lobby_characters.Cobalt_flex-item.png")
+    background-image: url("worldchamps/worldchamps_Lobby_characters_Cobalt_flex-item.png")
 }
 
 .worldchamps .Lobby.Cobalt .mech {
-    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon.Cobalt.png")
+    background-image: url("worldchamps/worldchamps_playerTopBar_playerIcon_Cobalt.png")
 }
 
 @keyframes pulse {
@@ -1612,4 +1612,4 @@ button {
     }
 }
 
-/*# sourceMappingURL=7265.css.map*/
+/*# sourceMappingURL=sourcemaps/7265.css.map*/

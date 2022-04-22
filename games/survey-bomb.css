@@ -815,7 +815,7 @@
 }
 
 .waiting .message.finalChance[data-v-9c843cf8]::before {
-    content: url("survey-bomb/waiting_message.finalChance[data-v-9c843cf8]_before.png")
+    content: url("survey-bomb/waiting_message_finalChance[data-v-9c843cf8]_before.png")
 }
 
 .waiting .message.finalChance[data-v-9c843cf8]::after {
@@ -1112,4 +1112,4 @@ button {
     padding: 5px 0
 }
 
-/*# sourceMappingURL=261.css.map*/
+/*# sourceMappingURL=sourcemaps/1988.css.map*/

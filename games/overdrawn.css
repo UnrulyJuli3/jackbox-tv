@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("overdrawn/post-banner.tjpp7_banner-image.png")
+    background-image: url("overdrawn/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("overdrawn/post-banner.tjpp6_banner-image.png")
+    background-image: url("overdrawn/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -1175,7 +1175,7 @@ button {
 }
 
 .Draw .button.showPalette {
-    background-image: url("overdrawn/Draw_button.showPalette.png");
+    background-image: url("overdrawn/Draw_button_showPalette.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%
@@ -1242,35 +1242,35 @@ button {
 }
 
 .reaction.Laughing {
-    background-image: url("overdrawn/reaction.Laughing.png")
+    background-image: url("overdrawn/reaction_Laughing.png")
 }
 
 .reaction.Poop {
-    background-image: url("overdrawn/reaction.Poop.png")
+    background-image: url("overdrawn/reaction_Poop.png")
 }
 
 .reaction.Question {
-    background-image: url("overdrawn/reaction.Question.png")
+    background-image: url("overdrawn/reaction_Question.png")
 }
 
 .reaction.ThumbsUp {
-    background-image: url("overdrawn/reaction.ThumbsUp.png")
+    background-image: url("overdrawn/reaction_ThumbsUp.png")
 }
 
 .reaction.Heart {
-    background-image: url("overdrawn/reaction.Heart.png")
+    background-image: url("overdrawn/reaction_Heart.png")
 }
 
 .reaction.Vomit {
-    background-image: url("overdrawn/reaction.Vomit.png")
+    background-image: url("overdrawn/reaction_Vomit.png")
 }
 
 .reaction.Eggplant {
-    background-image: url("overdrawn/reaction.Eggplant.png")
+    background-image: url("overdrawn/reaction_Eggplant.png")
 }
 
 .reaction.ThumbsDown {
-    background-image: url("overdrawn/reaction.ThumbsDown.png")
+    background-image: url("overdrawn/reaction_ThumbsDown.png")
 }
 
 .audienceInstruction {
@@ -1375,7 +1375,7 @@ button {
 }
 
 .button.censor-button {
-    background-image: url("overdrawn/button.censor-button.png");
+    background-image: url("overdrawn/button_censor-button.png");
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 70%;
@@ -1392,4 +1392,4 @@ button {
     opacity: .25
 }
 
-/*# sourceMappingURL=6507.css.map*/
+/*# sourceMappingURL=sourcemaps/6507.css.map*/

@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("drawful2/post-banner.tjpp7_banner-image.png")
+    background-image: url("drawful2/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("drawful2/post-banner.tjpp6_banner-image.png")
+    background-image: url("drawful2/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -577,8 +577,8 @@ a.gallery-link img {
 .button-color.selected {
     border: 6px solid #000;
     margin: 0px;
-    border-image: url("drawful2/button-color.selected.png") 6 stretch;
-    background: url("drawful2/button-color.selected_2.png") no-repeat;
+    border-image: url("drawful2/button-color_selected.png") 6 stretch;
+    background: url("drawful2/button-color_selected_2.png") no-repeat;
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;
@@ -589,7 +589,7 @@ a.gallery-link img {
 }
 
 #page-drawful .pure-form input.jbg-input[type=text] {
-    border-image: url("drawful2/#page-drawful_pure-form_input.jbg-input[type=text].png") 8 repeat;
+    border-image: url("drawful2/#page-drawful_pure-form_input_jbg-input[type=text].png") 8 repeat;
     border-width: 8px;
     border-style: solid;
     -webkit-background-clip: padding-box;
@@ -742,7 +742,7 @@ a.gallery-link img {
 i.checkbox.box-unchecked {
     width: 25px;
     height: 36px;
-    background: url("drawful2/i.checkbox.box-unchecked.png") 0px 0px/100% 200% no-repeat;
+    background: url("drawful2/i_checkbox_box-unchecked.png") 0px 0px/100% 200% no-repeat;
     background-position: top;
     margin-top: 0px
 }
@@ -750,7 +750,7 @@ i.checkbox.box-unchecked {
 i.checkbox.box-checked {
     width: 25px;
     height: 36px;
-    background: url("drawful2/i.checkbox.box-unchecked.png") 0px 0px/100% 200% no-repeat;
+    background: url("drawful2/i_checkbox_box-unchecked.png") 0px 0px/100% 200% no-repeat;
     background-position: bottom;
     margin-top: 0px
 }
@@ -1009,4 +1009,4 @@ table.drawful-list.drawful-list-no-border tr {
     position: relative
 }
 
-/*# sourceMappingURL=7411.css.map*/
+/*# sourceMappingURL=sourcemaps/7411.css.map*/

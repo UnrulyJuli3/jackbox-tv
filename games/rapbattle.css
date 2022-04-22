@@ -86,7 +86,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("rapbattle/post-banner.tjpp7_banner-image.png")
+    background-image: url("rapbattle/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -104,7 +104,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("rapbattle/post-banner.tjpp6_banner-image.png")
+    background-image: url("rapbattle/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -966,35 +966,35 @@ li>a.button-color.active[data-color="#000000"] {
 }
 
 .rapbattle #playerRegion .playerIcon.PlayerIcon1 {
-    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon1.png")
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon_PlayerIcon1.png")
 }
 
 .rapbattle #playerRegion .playerIcon.PlayerIcon2 {
-    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon2.png")
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon_PlayerIcon2.png")
 }
 
 .rapbattle #playerRegion .playerIcon.PlayerIcon3 {
-    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon3.png")
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon_PlayerIcon3.png")
 }
 
 .rapbattle #playerRegion .playerIcon.PlayerIcon4 {
-    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon4.png")
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon_PlayerIcon4.png")
 }
 
 .rapbattle #playerRegion .playerIcon.PlayerIcon5 {
-    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon5.png")
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon_PlayerIcon5.png")
 }
 
 .rapbattle #playerRegion .playerIcon.PlayerIcon6 {
-    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon6.png")
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon_PlayerIcon6.png")
 }
 
 .rapbattle #playerRegion .playerIcon.PlayerIcon7 {
-    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon7.png")
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon_PlayerIcon7.png")
 }
 
 .rapbattle #playerRegion .playerIcon.PlayerIcon8 {
-    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon.PlayerIcon8.png")
+    background-image: url("rapbattle/rapbattle_#playerRegion_playerIcon_PlayerIcon8.png")
 }
 
 .rapbattle #playerRegion .playerIcon.none {
@@ -1034,49 +1034,49 @@ li>a.button-color.active[data-color="#000000"] {
 }
 
 .rapbattle .Lobby.BigMech1 .mech {
-    background-image: url("rapbattle/rapbattle_Lobby.BigMech1_mech.png");
+    background-image: url("rapbattle/rapbattle_Lobby_BigMech1_mech.png");
     background-position: center;
     margin-left: -15%
 }
 
 .rapbattle .Lobby.BigMech2 .mech {
-    background-image: url("rapbattle/rapbattle_Lobby.BigMech2_mech.png");
+    background-image: url("rapbattle/rapbattle_Lobby_BigMech2_mech.png");
     background-position: center;
     margin-left: -15%
 }
 
 .rapbattle .Lobby.BigMech3 .mech {
-    background-image: url("rapbattle/rapbattle_Lobby.BigMech3_mech.png");
+    background-image: url("rapbattle/rapbattle_Lobby_BigMech3_mech.png");
     background-position: center;
     margin-left: -15%
 }
 
 .rapbattle .Lobby.BigMech4 .mech {
-    background-image: url("rapbattle/rapbattle_Lobby.BigMech4_mech.png");
+    background-image: url("rapbattle/rapbattle_Lobby_BigMech4_mech.png");
     background-position: center;
     margin-left: -15%
 }
 
 .rapbattle .Lobby.BigMech5 .mech {
-    background-image: url("rapbattle/rapbattle_Lobby.BigMech5_mech.png");
+    background-image: url("rapbattle/rapbattle_Lobby_BigMech5_mech.png");
     background-position: center;
     margin-left: -15%
 }
 
 .rapbattle .Lobby.BigMech6 .mech {
-    background-image: url("rapbattle/rapbattle_Lobby.BigMech6_mech.png");
+    background-image: url("rapbattle/rapbattle_Lobby_BigMech6_mech.png");
     background-position: center;
     margin-left: -15%
 }
 
 .rapbattle .Lobby.BigMech7 .mech {
-    background-image: url("rapbattle/rapbattle_Lobby.BigMech7_mech.png");
+    background-image: url("rapbattle/rapbattle_Lobby_BigMech7_mech.png");
     background-position: center;
     margin-left: -15%
 }
 
 .rapbattle .Lobby.BigMech8 .mech {
-    background-image: url("rapbattle/rapbattle_Lobby.BigMech8_mech.png");
+    background-image: url("rapbattle/rapbattle_Lobby_BigMech8_mech.png");
     background-position: center;
     margin-left: -15%
 }
@@ -1247,7 +1247,7 @@ li>a.button-color.active[data-color="#000000"] {
 .rapbattle .Logo.Round2,
 .rapbattle .MakeSingleChoice.Round2,
 .rapbattle .EnterSingleText.Round2 {
-    background-image: url("rapbattle/rapbattle_Lobby.Round2.jpg")
+    background-image: url("rapbattle/rapbattle_Lobby_Round2.jpg")
 }
 
 .rapbattle .Lobby.Round2 button,
@@ -1272,7 +1272,7 @@ li>a.button-color.active[data-color="#000000"] {
 .rapbattle .Logo.Round3,
 .rapbattle .MakeSingleChoice.Round3,
 .rapbattle .EnterSingleText.Round3 {
-    background-image: url("rapbattle/rapbattle_Lobby.Round3.jpg")
+    background-image: url("rapbattle/rapbattle_Lobby_Round3.jpg")
 }
 
 .rapbattle .Lobby.Round3 button,
@@ -1339,4 +1339,4 @@ li>a.button-color.active[data-color="#000000"] {
     }
 }
 
-/*# sourceMappingURL=6244.css.map*/
+/*# sourceMappingURL=sourcemaps/6244.css.map*/

@@ -164,14 +164,14 @@ button {
 
 .quiplash3 .controller-page.Logo {
     background-color: #4c4267;
-    background-image: url("quiplash3/quiplash3_controller-page.Logo.png") !important;
+    background-image: url("quiplash3/quiplash3_controller-page_Logo.png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover
 }
 
 .quiplash3 .controller-page.Logo .logo-image {
-    background-image: url("quiplash3/quiplash3_controller-page.Logo_logo-image.png");
+    background-image: url("quiplash3/quiplash3_controller-page_Logo_logo-image.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -186,7 +186,7 @@ button {
 
 .quiplash3 .controller-page.Logo.Round0 .logo-image {
     background-color: transparent;
-    background-image: url("quiplash3/quiplash3_controller-page.Logo.Round0_logo-image.png");
+    background-image: url("quiplash3/quiplash3_controller-page_Logo_Round0_logo-image.png");
     background-size: contain;
     max-width: 300px;
     width: 45%
@@ -199,7 +199,7 @@ button {
 
 .quiplash3 .controller-page.Logo.Round1 .logo-image {
     background-color: transparent;
-    background-image: url("quiplash3/quiplash3_controller-page.Logo.Round1_logo-image.png");
+    background-image: url("quiplash3/quiplash3_controller-page_Logo_Round1_logo-image.png");
     background-size: contain;
     max-width: 300px;
     width: 56%
@@ -212,7 +212,7 @@ button {
 
 .quiplash3 .controller-page.Logo.Round2 .logo-image {
     background-color: transparent;
-    background-image: url("quiplash3/quiplash3_controller-page.Logo.Round2_logo-image.png");
+    background-image: url("quiplash3/quiplash3_controller-page_Logo_Round2_logo-image.png");
     background-size: contain;
     max-width: 300px;
     width: 56%
@@ -346,7 +346,7 @@ button {
 .quiplash3 .Sortable .button-group .censor-button.isWarned,
 .quiplash3 .EnterTextList .button-group .censor-button.isWarned {
     background-color: #900;
-    background-image: url("quiplash3/quiplash3_Lobby_button-group_censor-button.isWarned.png")
+    background-image: url("quiplash3/quiplash3_Lobby_button-group_censor-button_isWarned.png")
 }
 
 .quiplash3 .EnterTextList .form-group {
@@ -536,19 +536,19 @@ button {
 }
 
 .quiplash3 .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller {
-    background-image: url("quiplash3/quiplash3_UGC_button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller.png")
+    background-image: url("quiplash3/quiplash3_UGC_button_ugc-toggle-visibility-button_ugc-toggle-visibility-button-controller.png")
 }
 
 .quiplash3 .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller.on {
-    background-image: url("quiplash3/quiplash3_UGC_button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-controller.on.png")
+    background-image: url("quiplash3/quiplash3_UGC_button_ugc-toggle-visibility-button_ugc-toggle-visibility-button-controller_on.png")
 }
 
 .quiplash3 .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen {
-    background-image: url("quiplash3/quiplash3_UGC_button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen.png")
+    background-image: url("quiplash3/quiplash3_UGC_button_ugc-toggle-visibility-button_ugc-toggle-visibility-button-screen.png")
 }
 
 .quiplash3 .UGC button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen.on {
-    background-image: url("quiplash3/quiplash3_UGC_button.ugc-toggle-visibility-button.ugc-toggle-visibility-button-screen.on.png")
+    background-image: url("quiplash3/quiplash3_UGC_button_ugc-toggle-visibility-button_ugc-toggle-visibility-button-screen_on.png")
 }
 
 .quiplash3 .UGC button.action-button,
@@ -615,7 +615,7 @@ button {
 }
 
 .quiplash3 .UGC #promptsRegion .button-group.thriplash button::before {
-    background: #000 url("quiplash3/quiplash3_UGC_#promptsRegion_button-group.thriplash_button_before.png") 0px 0px/100% 100% no-repeat;
+    background: #000 url("quiplash3/quiplash3_UGC_#promptsRegion_button-group_thriplash_button_before.png") 0px 0px/100% 100% no-repeat;
     content: "";
     position: absolute;
     top: 4px;
@@ -672,27 +672,27 @@ button {
 
 .quiplash3 .controller-page.Red {
     background-color: #f26f6f;
-    background-image: url("quiplash3/quiplash3_controller-page.Red.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Red.png")
 }
 
 .quiplash3 .playerTopBarView.Red {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Red.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Red.png")
 }
 
 .quiplash3 .playerTopBarView.Red .playerIcon.Red {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Red_playerIcon.Red.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Red_playerIcon_Red.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Red {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Red_playerIcon.Red.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Red_playerIcon_Red.png")
 }
 
 .quiplash3 .Lobby .characters.Red .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Red_playerIcon.Red.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Red_playerIcon_Red.png")
 }
 
 .quiplash3 .Lobby .characters.Red.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Red.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Red_selected_flex-item.png") !important
 }
 
 .quiplash3 .Red button {
@@ -701,27 +701,27 @@ button {
 
 .quiplash3 .controller-page.Orange {
     background-color: #e09b4a;
-    background-image: url("quiplash3/quiplash3_controller-page.Orange.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Orange.png")
 }
 
 .quiplash3 .playerTopBarView.Orange {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Orange.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Orange.png")
 }
 
 .quiplash3 .playerTopBarView.Orange .playerIcon.Orange {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Orange_playerIcon.Orange.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Orange_playerIcon_Orange.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Orange {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Orange_playerIcon.Orange.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Orange_playerIcon_Orange.png")
 }
 
 .quiplash3 .Lobby .characters.Orange .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Orange_playerIcon.Orange.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Orange_playerIcon_Orange.png")
 }
 
 .quiplash3 .Lobby .characters.Orange.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Orange.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Orange_selected_flex-item.png") !important
 }
 
 .quiplash3 .Orange button {
@@ -730,27 +730,27 @@ button {
 
 .quiplash3 .controller-page.Yellow {
     background-color: #e0da69;
-    background-image: url("quiplash3/quiplash3_controller-page.Yellow.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Yellow.png")
 }
 
 .quiplash3 .playerTopBarView.Yellow {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Yellow.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Yellow.png")
 }
 
 .quiplash3 .playerTopBarView.Yellow .playerIcon.Yellow {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Yellow_playerIcon.Yellow.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Yellow_playerIcon_Yellow.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Yellow {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Yellow_playerIcon.Yellow.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Yellow_playerIcon_Yellow.png")
 }
 
 .quiplash3 .Lobby .characters.Yellow .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Yellow_playerIcon.Yellow.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Yellow_playerIcon_Yellow.png")
 }
 
 .quiplash3 .Lobby .characters.Yellow.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Yellow.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Yellow_selected_flex-item.png") !important
 }
 
 .quiplash3 .Yellow button {
@@ -759,27 +759,27 @@ button {
 
 .quiplash3 .controller-page.Star {
     background-color: #95b758;
-    background-image: url("quiplash3/quiplash3_controller-page.Star.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Star.png")
 }
 
 .quiplash3 .playerTopBarView.Star {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Star.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Star.png")
 }
 
 .quiplash3 .playerTopBarView.Star .playerIcon.Star {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Star_playerIcon.Star.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Star_playerIcon_Star.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Star {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Star_playerIcon.Star.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Star_playerIcon_Star.png")
 }
 
 .quiplash3 .Lobby .characters.Star .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Star_playerIcon.Star.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Star_playerIcon_Star.png")
 }
 
 .quiplash3 .Lobby .characters.Star.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Star.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Star_selected_flex-item.png") !important
 }
 
 .quiplash3 .Star button {
@@ -788,27 +788,27 @@ button {
 
 .quiplash3 .controller-page.Green {
     background-color: #6dc979;
-    background-image: url("quiplash3/quiplash3_controller-page.Green.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Green.png")
 }
 
 .quiplash3 .playerTopBarView.Green {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Green.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Green.png")
 }
 
 .quiplash3 .playerTopBarView.Green .playerIcon.Green {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Green_playerIcon.Green.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Green_playerIcon_Green.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Green {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Green_playerIcon.Green.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Green_playerIcon_Green.png")
 }
 
 .quiplash3 .Lobby .characters.Green .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Green_playerIcon.Green.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Green_playerIcon_Green.png")
 }
 
 .quiplash3 .Lobby .characters.Green.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Green.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Green_selected_flex-item.png") !important
 }
 
 .quiplash3 .Green button {
@@ -817,27 +817,27 @@ button {
 
 .quiplash3 .controller-page.Kitten {
     background-color: #74beac;
-    background-image: url("quiplash3/quiplash3_controller-page.Kitten.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Kitten.png")
 }
 
 .quiplash3 .playerTopBarView.Kitten {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Kitten.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Kitten.png")
 }
 
 .quiplash3 .playerTopBarView.Kitten .playerIcon.Kitten {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Kitten_playerIcon.Kitten.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Kitten_playerIcon_Kitten.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Kitten {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Kitten_playerIcon.Kitten.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Kitten_playerIcon_Kitten.png")
 }
 
 .quiplash3 .Lobby .characters.Kitten .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Kitten_playerIcon.Kitten.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Kitten_playerIcon_Kitten.png")
 }
 
 .quiplash3 .Lobby .characters.Kitten.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Kitten.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Kitten_selected_flex-item.png") !important
 }
 
 .quiplash3 .Kitten button {
@@ -846,27 +846,27 @@ button {
 
 .quiplash3 .controller-page.Teal {
     background-color: #00d5ff;
-    background-image: url("quiplash3/quiplash3_controller-page.Teal.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Teal.png")
 }
 
 .quiplash3 .playerTopBarView.Teal {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Teal.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Teal.png")
 }
 
 .quiplash3 .playerTopBarView.Teal .playerIcon.Teal {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Teal_playerIcon.Teal.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Teal_playerIcon_Teal.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Teal {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Teal_playerIcon.Teal.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Teal_playerIcon_Teal.png")
 }
 
 .quiplash3 .Lobby .characters.Teal .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Teal_playerIcon.Teal.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Teal_playerIcon_Teal.png")
 }
 
 .quiplash3 .Lobby .characters.Teal.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Teal.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Teal_selected_flex-item.png") !important
 }
 
 .quiplash3 .Teal button {
@@ -875,27 +875,27 @@ button {
 
 .quiplash3 .controller-page.Blue {
     background-color: #5e9df0;
-    background-image: url("quiplash3/quiplash3_controller-page.Blue.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Blue.png")
 }
 
 .quiplash3 .playerTopBarView.Blue {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Blue.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Blue.png")
 }
 
 .quiplash3 .playerTopBarView.Blue .playerIcon.Blue {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Blue_playerIcon.Blue.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Blue_playerIcon_Blue.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Blue {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Blue_playerIcon.Blue.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Blue_playerIcon_Blue.png")
 }
 
 .quiplash3 .Lobby .characters.Blue .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Blue_playerIcon.Blue.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Blue_playerIcon_Blue.png")
 }
 
 .quiplash3 .Lobby .characters.Blue.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Blue.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Blue_selected_flex-item.png") !important
 }
 
 .quiplash3 .Blue button {
@@ -904,27 +904,27 @@ button {
 
 .quiplash3 .controller-page.Purple {
     background-color: #8c66ff;
-    background-image: url("quiplash3/quiplash3_controller-page.Purple.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Purple.png")
 }
 
 .quiplash3 .playerTopBarView.Purple {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Purple.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Purple.png")
 }
 
 .quiplash3 .playerTopBarView.Purple .playerIcon.Purple {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Purple_playerIcon.Purple.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Purple_playerIcon_Purple.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Purple {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Purple_playerIcon.Purple.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Purple_playerIcon_Purple.png")
 }
 
 .quiplash3 .Lobby .characters.Purple .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Purple_playerIcon.Purple.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Purple_playerIcon_Purple.png")
 }
 
 .quiplash3 .Lobby .characters.Purple.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Purple.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Purple_selected_flex-item.png") !important
 }
 
 .quiplash3 .Purple button {
@@ -933,27 +933,27 @@ button {
 
 .quiplash3 .controller-page.Triclops {
     background-color: #9d6dd2;
-    background-image: url("quiplash3/quiplash3_controller-page.Triclops.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Triclops.png")
 }
 
 .quiplash3 .playerTopBarView.Triclops {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Triclops.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Triclops.png")
 }
 
 .quiplash3 .playerTopBarView.Triclops .playerIcon.Triclops {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Triclops_playerIcon.Triclops.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Triclops_playerIcon_Triclops.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Triclops {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Triclops_playerIcon.Triclops.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Triclops_playerIcon_Triclops.png")
 }
 
 .quiplash3 .Lobby .characters.Triclops .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Triclops_playerIcon.Triclops.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Triclops_playerIcon_Triclops.png")
 }
 
 .quiplash3 .Lobby .characters.Triclops.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Triclops.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Triclops_selected_flex-item.png") !important
 }
 
 .quiplash3 .Triclops button {
@@ -962,27 +962,27 @@ button {
 
 .quiplash3 .controller-page.Pink {
     background-color: #e37df5;
-    background-image: url("quiplash3/quiplash3_controller-page.Pink.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Pink.png")
 }
 
 .quiplash3 .playerTopBarView.Pink {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Pink.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Pink.png")
 }
 
 .quiplash3 .playerTopBarView.Pink .playerIcon.Pink {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Pink_playerIcon.Pink.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Pink_playerIcon_Pink.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Pink {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Pink_playerIcon.Pink.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Pink_playerIcon_Pink.png")
 }
 
 .quiplash3 .Lobby .characters.Pink .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Pink_playerIcon.Pink.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Pink_playerIcon_Pink.png")
 }
 
 .quiplash3 .Lobby .characters.Pink.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Pink.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Pink_selected_flex-item.png") !important
 }
 
 .quiplash3 .Pink button {
@@ -991,7 +991,7 @@ button {
 
 .quiplash3 .controller-page.Coffin {
     background-color: #8f8f8f;
-    background-image: url("quiplash3/quiplash3_controller-page.Coffin.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Coffin.png")
 }
 
 .quiplash3 .playerTopBarView.Coffin {
@@ -999,19 +999,19 @@ button {
 }
 
 .quiplash3 .playerTopBarView.Coffin .playerIcon.Coffin {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Coffin_playerIcon.Coffin.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Coffin_playerIcon_Coffin.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Coffin {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Coffin_playerIcon.Coffin.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Coffin_playerIcon_Coffin.png")
 }
 
 .quiplash3 .Lobby .characters.Coffin .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Coffin_playerIcon.Coffin.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Coffin_playerIcon_Coffin.png")
 }
 
 .quiplash3 .Lobby .characters.Coffin.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Coffin.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Coffin_selected_flex-item.png") !important
 }
 
 .quiplash3 .Coffin button {
@@ -1020,27 +1020,27 @@ button {
 
 .quiplash3 .controller-page.Cactus {
     background-color: #629335;
-    background-image: url("quiplash3/quiplash3_controller-page.Cactus.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Cactus.png")
 }
 
 .quiplash3 .playerTopBarView.Cactus {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Cactus.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Cactus.png")
 }
 
 .quiplash3 .playerTopBarView.Cactus .playerIcon.Cactus {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Cactus_playerIcon.Cactus.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Cactus_playerIcon_Cactus.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Cactus {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Cactus_playerIcon.Cactus.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Cactus_playerIcon_Cactus.png")
 }
 
 .quiplash3 .Lobby .characters.Cactus .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Cactus_playerIcon.Cactus.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Cactus_playerIcon_Cactus.png")
 }
 
 .quiplash3 .Lobby .characters.Cactus.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Cactus.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Cactus_selected_flex-item.png") !important
 }
 
 .quiplash3 .Cactus button {
@@ -1049,27 +1049,27 @@ button {
 
 .quiplash3 .controller-page.Moon {
     background-color: #edaf3f;
-    background-image: url("quiplash3/quiplash3_controller-page.Moon.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Moon.png")
 }
 
 .quiplash3 .playerTopBarView.Moon {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Moon.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Moon.png")
 }
 
 .quiplash3 .playerTopBarView.Moon .playerIcon.Moon {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Moon_playerIcon.Moon.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Moon_playerIcon_Moon.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Moon {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Moon_playerIcon.Moon.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Moon_playerIcon_Moon.png")
 }
 
 .quiplash3 .Lobby .characters.Moon .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Moon_playerIcon.Moon.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Moon_playerIcon_Moon.png")
 }
 
 .quiplash3 .Lobby .characters.Moon.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Moon.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Moon_selected_flex-item.png") !important
 }
 
 .quiplash3 .Moon button {
@@ -1078,27 +1078,27 @@ button {
 
 .quiplash3 .controller-page.Tear {
     background-color: #3962b5;
-    background-image: url("quiplash3/quiplash3_controller-page.Tear.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Tear.png")
 }
 
 .quiplash3 .playerTopBarView.Tear {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Tear.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Tear.png")
 }
 
 .quiplash3 .playerTopBarView.Tear .playerIcon.Tear {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Tear_playerIcon.Tear.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Tear_playerIcon_Tear.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Tear {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Tear_playerIcon.Tear.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Tear_playerIcon_Tear.png")
 }
 
 .quiplash3 .Lobby .characters.Tear .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Tear_playerIcon.Tear.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Tear_playerIcon_Tear.png")
 }
 
 .quiplash3 .Lobby .characters.Tear.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Tear.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Tear_selected_flex-item.png") !important
 }
 
 .quiplash3 .Tear button {
@@ -1107,27 +1107,27 @@ button {
 
 .quiplash3 .controller-page.Poop {
     background-color: #8f5c47;
-    background-image: url("quiplash3/quiplash3_controller-page.Poop.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Poop.png")
 }
 
 .quiplash3 .playerTopBarView.Poop {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Poop.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Poop.png")
 }
 
 .quiplash3 .playerTopBarView.Poop .playerIcon.Poop {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Poop_playerIcon.Poop.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Poop_playerIcon_Poop.png")
 }
 
 .quiplash3 .playerTopBar .playerIcon.Poop {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Poop_playerIcon.Poop.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Poop_playerIcon_Poop.png")
 }
 
 .quiplash3 .Lobby .characters.Poop .flex-item {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Poop_playerIcon.Poop.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Poop_playerIcon_Poop.png")
 }
 
 .quiplash3 .Lobby .characters.Poop.selected .flex-item {
-    background-image: url("quiplash3/quiplash3_Lobby_characters.Poop.selected_flex-item.png") !important
+    background-image: url("quiplash3/quiplash3_Lobby_characters_Poop_selected_flex-item.png") !important
 }
 
 .quiplash3 .Poop button {
@@ -1136,11 +1136,11 @@ button {
 
 .quiplash3 .controller-page.Audience {
     background-color: #9d6dd2;
-    background-image: url("quiplash3/quiplash3_controller-page.Triclops.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Triclops.png")
 }
 
 .quiplash3 .playerTopBarView.Audience {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Triclops.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Triclops.png")
 }
 
 .quiplash3 .Lobby .characters.Audience.selected .flex-item {
@@ -1153,11 +1153,11 @@ button {
 
 .quiplash3 .controller-page.UGCView {
     background-color: #9d6dd2;
-    background-image: url("quiplash3/quiplash3_controller-page.Triclops.png")
+    background-image: url("quiplash3/quiplash3_controller-page_Triclops.png")
 }
 
 .quiplash3 .playerTopBarView.UGCView {
-    background-image: url("quiplash3/quiplash3_playerTopBarView.Triclops.png")
+    background-image: url("quiplash3/quiplash3_playerTopBarView_Triclops.png")
 }
 
 .quiplash3 .Lobby .characters.UGCView.selected .flex-item {
@@ -1262,7 +1262,7 @@ button {
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("quiplash3/post-banner.tjpp7_banner-image.png")
+    background-image: url("quiplash3/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -1280,7 +1280,7 @@ button {
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("quiplash3/post-banner.tjpp6_banner-image.png")
+    background-image: url("quiplash3/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -2038,4 +2038,4 @@ li>a.button-color.active[data-color="#000000"] {
     }
 }
 
-/*# sourceMappingURL=6088.css.map*/
+/*# sourceMappingURL=sourcemaps/6088.css.map*/

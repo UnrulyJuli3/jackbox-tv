@@ -88,7 +88,7 @@
 }
 
 .post-banner.tjpp7 .banner-image {
-    background-image: url("acquisitions-inc/post-banner.tjpp7_banner-image.png")
+    background-image: url("acquisitions-inc/post-banner_tjpp7_banner-image.png")
 }
 
 .post-banner.tjpp7 .banner-text {
@@ -106,7 +106,7 @@
 }
 
 .post-banner.tjpp6 .banner-image {
-    background-image: url("acquisitions-inc/post-banner.tjpp6_banner-image.png")
+    background-image: url("acquisitions-inc/post-banner_tjpp6_banner-image.png")
 }
 
 .post-banner.tjpp6 .banner-cta {
@@ -990,4 +990,4 @@ br {
     box-shadow: 1px
 }
 
-/*# sourceMappingURL=9805.css.map*/
+/*# sourceMappingURL=sourcemaps/9805.css.map*/
