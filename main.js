@@ -3486,7 +3486,7 @@
                         scheme: "https"
                     },
                     banners: {
-                        url: "https://s3.amazonaws.com/static.jackboxgames.com/banners.json"
+                        url: "banners.json"
                     },
                     gameFeatures: {
                         "fe8be043-af2e-401f-8862-37fb386dfda7": ["camera"],

@@ -1,0 +1,312 @@
+{
+    "bannerAds": [
+        {
+            "tags": [
+                "locale-fr"
+            ],
+            "start": "2020-04-08",
+            "text": "Acheter maintenant!",
+            "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/Quip2Int.png",
+            "href": "https://www.jackboxgames.com/quiplash-two-interlashional-french/?utm_source=jackboxtv&utm_campaign=jbgtvquipint&utm_content=jbgtvquipint"
+        },
+        {
+            "tags": [
+                "locale-it"
+            ],
+            "start": "2020-04-08",
+            "text": "Acquista ora!",
+            "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/Quip2Int.png",
+            "href": "https://www.jackboxgames.com/quiplash-two-interlashional-italian/?utm_source=jackboxtv&utm_campaign=jbgtvquipint&utm_content=jbgtvquipint"
+        },
+        {
+            "tags": [
+                "locale-de"
+            ],
+            "start": "2020-04-08",
+            "text": "Kaufe jetzt!",
+            "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/Quip2Int.png",
+            "href": "https://www.jackboxgames.com/quiplash-two-interlashional-german/?utm_source=jackboxtv&utm_campaign=jbgtvquipint&utm_content=jbgtvquipint"
+        },
+        {
+            "tags": [
+                "locale-es"
+            ],
+            "start": "2020-04-08",
+            "text": "¡Compralo ahora!",
+            "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/Quip2Int.png",
+            "href": "https://www.jackboxgames.com/quiplash-two-interlashional-spanish/?utm_source=jackboxtv&utm_campaign=jbgtvquipint&utm_content=jbgtvquipint"
+        },
+        {
+            "start": "2021-08-13",
+            "text": "ON SALE! $19.49",
+            "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/PP8 banner .png",
+            "href": "https://www.jackboxgames.com/party-pack-eight/?utm_source=jbgtvpp8&utm_medium=jbgtvpp8&utm_campaign=jbgtvpp8"
+        },
+        {
+            "start": "2021-07-23",
+            "text": "ON SALE! $17.99",
+            "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/PP7.png",
+            "href": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jbgtv&utm_medium=jbgtvpp7&utm_campaign=jbgtvpp7"
+        },
+        {
+            "start": "2021-07-23",
+            "text": "ON SALE! $17.99",
+            "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/JPP6ControllerAd.png",
+            "href": "https://jackboxgames.com/party-pack-six/?utm_source=jackboxtv&utm_campaign=jbgtvpp6&utm_content=jbgtvpp6"
+        },
+        {
+            "start": "2021-07-23",
+            "text": "ON SALE! $14.99",
+            "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/PP5.png",
+            "href": "https://jackboxgames.com/party-pack-five/?utm_source=jackboxtv&utm_campaign=jbgtvpp5&utm_content=jbgtvpp5"
+        },
+        {
+            "start": "2021-07-23",
+            "text": "ON SALE! $12.49",
+            "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/PP4.png",
+            "href": "https://jackboxgames.com/party-pack-four/?utm_source=jackboxtv&utm_campaign=jbgtvpp4&utm_content=jbgtvpp4"
+        },
+        {
+            "start": "2021-07-23",
+            "text": "ON SALE! $13.74",
+            "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/PP3.png",
+            "href": "https://jackboxgames.com/party-pack-three/?utm_source=jackboxtv&utm_campaign=jbgtvpp3&utm_content=jbgtvpp3"
+        },
+        {
+            "start": "2021-07-23",
+            "text": "ON SALE! $4.49",
+            "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/D2.png",
+            "href": "https://jackboxgames.com/drawful-two/?utm_source=jackboxtv&utm_campaign=jbgtvdraw&utm_content=jbgtvdraw"
+        },
+        {
+            "start": "2021-07-23",
+            "text": "ON SALE! $11.24",
+            "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/PP2.png",
+            "href": "https://jackboxgames.com/party-pack-two/?utm_source=jackboxtv&utm_campaign=jbgtvpp2&utm_content=jbgtvpp2"
+        },
+        {
+            "start": "2021-07-23",
+            "text": "ON SALE! $11.24",
+            "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/PP1.png",
+            "href": "https://jackboxgames.com/party-pack/?utm_source=jackboxtv&utm_campaign=jbgtvpp1&utm_content=jbgtvpp1"
+        }
+    ],
+    "postGameBanners": {
+        "quiplash3": {
+            "copy": "Like This Game? Try Party Pack 6!",
+            "url": "https://www.jackboxgames.com/party-pack-six/?utm_source=jackboxtv&utm_medium=jbgtvpostq3&utm_campaign=jbgtvpostq3",
+            "cta": "Shop",
+            "theme": "tjpp6"
+        },
+        "everyday": {
+            "copy": "Like This Game? Try Party Pack 6!",
+            "url": "https://www.jackboxgames.com/party-pack-six/?utm_source=jackboxtv&utm_medium=jbgtvpostdev&utm_campaign=jbgtvpostdev",
+            "cta": "Shop",
+            "theme": "tjpp6"
+        },
+        "jackbox-talks": {
+            "copy": "Like This Game? Try Party Pack 6!",
+            "url": "https://www.jackboxgames.com/party-pack-six/?utm_source=jackboxtv&utm_medium=jbgtvposttalk&utm_campaign=jbgtvposttalk",
+            "cta": "Shop",
+            "theme": "tjpp6"
+        },
+        "worldchamps": {
+            "copy": "Like This Game? Try Party Pack 6!",
+            "url": "https://www.jackboxgames.com/party-pack-six/?utm_source=jackboxtv&utm_medium=jbgtvpostcham&utm_campaign=jbgtvpostcham",
+            "cta": "Shop",
+            "theme": "tjpp6"
+        },
+        "blanky-blank": {
+            "copy": "Like This Game? Try Party Pack 6!",
+            "url": "https://www.jackboxgames.com/party-pack-six/?utm_source=jackboxtv&utm_medium=jbgtvpostblat&utm_campaign=jbgtvpostblat",
+            "cta": "Shop",
+            "theme": "tjpp6"
+        },
+        "rolemodels": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostrm&utm_campaign=jbgtvpostrm",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "ridictionary": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostdict&utm_campaign=jbgtvpostdict",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "pushthebutton": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostptb&utm_campaign=jbgtvpostptb",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "jokeboat": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostjb&utm_campaign=jbgtvpostjb",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "triviadeath2": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvposttmp2&utm_campaign=jbgtvposttmp2",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "ydkj2015": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostydkj15&utm_campaign=jbgtvpostydkj15",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "fibbage2": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostfib2&utm_campaign=jbgtvpostfib2",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "drawful": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostdraw1&utm_campaign=jbgtvpostdraw1",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "wordspud": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostspud&utm_campaign=jbgtvpostspud",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "lieswatter": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostlie&utm_campaign=jbgtvpostlie",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "auction": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostbid&utm_campaign=jbgtvpostbid",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "bombintern": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostbomb&utm_campaign=jbgtvpostbomb",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "earwax": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostear&utm_campaign=jbgtvpostear",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "quiplash2": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostq2&utm_campaign=jbgtvpostq2",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "triviadeath": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvposttmp1&utm_campaign=jbgtvposttmp1",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "pollposition": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostguess&utm_campaign=jbgtvpostguess",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "awshirt": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvposttko&utm_campaign=jbgtvposttko",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "fakinit": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostfak&utm_campaign=jbgtvpostfak",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "fibbage3": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostfib3&utm_campaign=jbgtvpostfib3",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "survivetheinternet": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpoststi&utm_campaign=jbgtvpoststi",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "monstermingle": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostmsm&utm_campaign=jbgtvpostmsm",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "bracketeering": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostbrack&utm_campaign=jbgtvpostbrack",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "overdrawn": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostciv&utm_campaign=jbgtvpostciv",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "ydkj2018": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostydkjfs&utm_campaign=jbgtvpostydkjfs",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "splittheroom": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpoststr&utm_campaign=jbgtvpoststr",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "patentlystupid": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostpat&utm_campaign=jbgtvpostpat",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "rapbattle": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostmvc&utm_campaign=jbgtvpostmvc",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "slingshoot": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostzeep&utm_campaign=jbgtvpostzeep",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "quiplash": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostq1&utm_campaign=jbgtvpostq1",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "fibbage": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostfib1&utm_campaign=jbgtvpostfib1",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        },
+        "drawful2": {
+            "copy": "Play New Games in Party Pack 7 Now!",
+            "url": "https://www.jackboxgames.com/party-pack-seven/?utm_source=jackboxtv&utm_medium=jbgtvpostd2&utm_campaign=jbgtvpostd2",
+            "cta": "Shop",
+            "theme": "tjpp7"
+        }
+    }
+}
