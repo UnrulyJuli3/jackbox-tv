@@ -3422,17 +3422,17 @@
                     routes: [{
                         path: "/",
                         component: () => E(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(5292), n.e(7608)]).then(n.bind(n, 97608))
+                            return Promise.all([n.e(2529), n.e(5853), n.e(4948)]).then(n.bind(n, 14948))
                         }))
                     }, {
                         path: "/:roomCode([A-Za-z]{4})",
                         component: () => E(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(5292), n.e(7608)]).then(n.bind(n, 97608))
+                            return Promise.all([n.e(2529), n.e(5853), n.e(4948)]).then(n.bind(n, 14948))
                         }))
                     }, {
                         path: "/moderation",
                         component: () => E(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(2530), n.e(2265)]).then(n.bind(n, 52265))
+                            return Promise.all([n.e(5853), n.e(2530), n.e(2265)]).then(n.bind(n, 52265))
                         }))
                     }, {
                         path: "/moderator",
@@ -3458,13 +3458,14 @@
                 new(i())({
                     router: C,
                     i18n: S,
+                    name: "Entry",
                     el: "#app",
                     mixins: [h.b],
                     beforeCreate() {
                         d.o.setup(), S.locale = d.o.locale, this.$setSentryTag("app", "entry"), this.$analytics.setApplication({
                             appTag: "SignIn",
                             appId: "signin",
-                            appVersion: "4.1.28"
+                            appVersion: "4.2.0"
                         })
                     },
                     computed: {
@@ -3575,27 +3576,27 @@
                         c((r = r.apply(e, t || [])).next())
                     }))
                 };
-                const i = ["4b0d3b57-a0cb-406a-a1fe-a652ce8592d4", "407e19f7-6276-476f-bcc1-af64f8194fd7", "3629240b-ecb2-4b33-90c3-56831bf59b04"],
+                const i = ["70a0ea54-26dd-429d-9f54-a868a63a8ecc", "8a34f379-00dc-495b-90de-b2be4382baea", "d1bfbe04-1a14-4a6a-bc61-52d005bf3ec5", "014d3763-bbad-49a7-8743-a7654571e2f1", "17f236c2-c3b8-40e6-bca6-6268fcdcf2f2"],
                     a = [{
                         name: "Prototype",
                         app: "vue",
                         tag: "prototype",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(9623), n.e(3386), n.e(2530), n.e("games/prototype")]).then(n.bind(n, 42903))
+                            return Promise.all([n.e(9623), n.e(5853), n.e(2530), n.e(3317), n.e("games/prototype")]).then(n.bind(n, 87986))
                         }))
                     }, {
                         name: "EcastTestClient",
                         app: "marionette",
                         tag: "ecast-test-client",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/ecast-test-client")]).then(n.bind(n, 67363))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/ecast-test-client")]).then(n.bind(n, 67363))
                         }))
                     }, {
                         name: "House of Jackbox",
                         app: "marionette",
                         tag: "house-of-jackbox",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/house-of-jackbox")]).then(n.bind(n, 79004))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/house-of-jackbox")]).then(n.bind(n, 79004))
                         }))
                     }, {
                         name: "Quiplash 2 International",
@@ -3603,14 +3604,14 @@
                         tag: "quiplash2-international",
                         categoryId: "quiplash2-internationalGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/quiplash2-international")]).then(n.bind(n, 43141))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/quiplash2-international")]).then(n.bind(n, 43141))
                         }))
                     }, {
                         name: "Guesspionage Crowdplay",
                         app: "marionette",
                         tag: "guesspionage-crowdplay",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/guesspionage-crowdplay")]).then(n.bind(n, 50310))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/guesspionage-crowdplay")]).then(n.bind(n, 50310))
                         }))
                     }, {
                         name: "Drawful 2",
@@ -3627,14 +3628,14 @@
                         tag: "drawful2international",
                         hasModeration: !0,
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/drawful2international")]).then(n.bind(n, 76490))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/drawful2international")]).then(n.bind(n, 76490))
                         }))
                     }, {
                         name: "Acquisitions, Inc.",
                         app: "marionette",
                         tag: "acquisitions-inc",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/acquisitions-inc")]).then(n.bind(n, 44489))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/acquisitions-inc")]).then(n.bind(n, 44489))
                         }))
                     }, {
                         name: "You Don't Know Jack 2015",
@@ -3750,7 +3751,7 @@
                         app: "marionette",
                         tag: "fibbage3",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/fibbage3")]).then(n.bind(n, 76516))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/fibbage3")]).then(n.bind(n, 76516))
                         }))
                     }, {
                         name: "Survive the Internet",
@@ -3758,7 +3759,7 @@
                         tag: "survivetheinternet",
                         categoryId: "STIGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/survivetheinternet")]).then(n.bind(n, 73315))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/survivetheinternet")]).then(n.bind(n, 73315))
                         }))
                     }, {
                         name: "Monster Seeking Monster",
@@ -3766,7 +3767,7 @@
                         tag: "monstermingle",
                         categoryId: "MonsterMingleGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/monstermingle")]).then(n.bind(n, 54750))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/monstermingle")]).then(n.bind(n, 54750))
                         }))
                     }, {
                         name: "Bracketeering",
@@ -3774,7 +3775,7 @@
                         tag: "bracketeering",
                         categoryId: "BRKGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/bracketeering")]).then(n.bind(n, 10335))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/bracketeering")]).then(n.bind(n, 10335))
                         }))
                     }, {
                         name: "Civic Doodle",
@@ -3783,7 +3784,7 @@
                         categoryId: "OverdrawnGame",
                         shopItems: ["shirts"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/overdrawn")]).then(n.bind(n, 4342))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/overdrawn")]).then(n.bind(n, 4342))
                         }))
                     }, {
                         name: "You Don't Know Jack 2018",
@@ -3791,7 +3792,7 @@
                         tag: "ydkj2018",
                         categoryId: "YDKJ2018Game",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/ydkj2018")]).then(n.bind(n, 94239))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/ydkj2018")]).then(n.bind(n, 94239))
                         }))
                     }, {
                         name: "Split the Room",
@@ -3799,7 +3800,7 @@
                         tag: "splittheroom",
                         categoryId: "SplitTheRoomGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/splittheroom")]).then(n.bind(n, 14433))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/splittheroom")]).then(n.bind(n, 14433))
                         }))
                     }, {
                         name: "Mad Verse City",
@@ -3807,7 +3808,7 @@
                         tag: "rapbattle",
                         categoryId: "RapBattleGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/rapbattle")]).then(n.bind(n, 94059))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/rapbattle")]).then(n.bind(n, 94059))
                         }))
                     }, {
                         name: "Zeeple Dome",
@@ -3815,7 +3816,7 @@
                         tag: "slingshoot",
                         categoryId: "SlingShootGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/slingshoot")]).then(n.bind(n, 41919))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/slingshoot")]).then(n.bind(n, 41919))
                         }))
                     }, {
                         name: "Patently Stupid",
@@ -3824,7 +3825,7 @@
                         categoryId: "PatentlyStupidGame",
                         shopItems: ["mugs"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/patentlystupid")]).then(n.bind(n, 41073))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/patentlystupid")]).then(n.bind(n, 41073))
                         }))
                     }, {
                         name: "Trivia Murder Party 2",
@@ -3832,7 +3833,7 @@
                         tag: "triviadeath2",
                         categoryId: "TriviaDeath2Game",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/triviadeath2")]).then(n.bind(n, 20188))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/triviadeath2")]).then(n.bind(n, 20188))
                         }))
                     }, {
                         name: "Role Models",
@@ -3842,7 +3843,7 @@
                         shopItems: ["shirts"],
                         features: ["camera"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/rolemodels")]).then(n.bind(n, 24970))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/rolemodels")]).then(n.bind(n, 24970))
                         }))
                     }, {
                         name: "Joke Boat",
@@ -3850,7 +3851,7 @@
                         tag: "jokeboat",
                         categoryId: "JokeboatGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/jokeboat")]).then(n.bind(n, 50946))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/jokeboat")]).then(n.bind(n, 50946))
                         }))
                     }, {
                         name: "Dictionarium",
@@ -3858,7 +3859,7 @@
                         tag: "ridictionary",
                         categoryId: "RidictionaryGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/ridictionary")]).then(n.bind(n, 85993))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/ridictionary")]).then(n.bind(n, 85993))
                         }))
                     }, {
                         name: "Push the Button",
@@ -3866,7 +3867,7 @@
                         tag: "pushthebutton",
                         categoryId: "PushTheButtonGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/pushthebutton")]).then(n.bind(n, 56716))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/pushthebutton")]).then(n.bind(n, 56716))
                         }))
                     }, {
                         name: "Talking Points",
@@ -3876,7 +3877,7 @@
                         categoryId: "JackboxTalksGame",
                         features: ["camera"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/jackbox-talks")]).then(n.bind(n, 54677))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/jackbox-talks")]).then(n.bind(n, 54677))
                         }))
                     }, {
                         name: "Quiplash 3",
@@ -3885,7 +3886,7 @@
                         hasModeration: !0,
                         categoryId: "quiplash3Game",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/quiplash3")]).then(n.bind(n, 19187))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/quiplash3")]).then(n.bind(n, 99499))
                         }))
                     }, {
                         name: "The Devils and the Details",
@@ -3894,7 +3895,7 @@
                         categoryId: "EverydayGame",
                         shopItems: ["mugs"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(1978), n.e(38), n.e(972), n.e(4340), n.e("games/everyday")]).then(n.bind(n, 7851))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(1978), n.e(38), n.e(972), n.e(4442), n.e(4340), n.e("games/everyday")]).then(n.bind(n, 7851))
                         }))
                     }, {
                         name: "Champ'd Up",
@@ -3904,7 +3905,7 @@
                         categoryId: "WorldChampionsGame",
                         shopItems: ["cards"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4340), n.e("games/worldchamps")]).then(n.bind(n, 35783))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/worldchamps")]).then(n.bind(n, 35783))
                         }))
                     }, {
                         name: "Blather 'Round",
@@ -3912,7 +3913,7 @@
                         tag: "blanky-blank",
                         categoryId: "BlankyBlankGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(1916), n.e(972), n.e(4340), n.e("games/blanky-blank")]).then(n.bind(n, 47642))
+                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(1916), n.e(972), n.e(4442), n.e(4340), n.e("games/blanky-blank")]).then(n.bind(n, 47642))
                         }))
                     }, {
                         name: "Job Job",
@@ -3922,7 +3923,7 @@
                         categoryId: "JobGameGame",
                         hasPreviews: !0,
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(9980), n.e(3386), n.e("games/apply-yourself")]).then(n.bind(n, 24872))
+                            return Promise.all([n.e(9980), n.e(5853), n.e(7381), n.e("games/apply-yourself")]).then(n.bind(n, 24872))
                         }))
                     }, {
                         name: "The Wheel of Enormous Proportions",
@@ -3930,7 +3931,7 @@
                         tag: "the-wheel",
                         categoryId: "TheWheelGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(1978), n.e(8990), n.e(3386), n.e("games/the-wheel")]).then(n.bind(n, 21057))
+                            return Promise.all([n.e(6498), n.e(1978), n.e(8990), n.e(5853), n.e(7381), n.e("games/the-wheel")]).then(n.bind(n, 21057))
                         }))
                     }, {
                         name: "The Poll Mine",
@@ -3938,7 +3939,7 @@
                         tag: "survey-bomb",
                         categoryId: "SurveyBombGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(3386), n.e("games/survey-bomb")]).then(n.bind(n, 81988))
+                            return Promise.all([n.e(5853), n.e(7381), n.e("games/survey-bomb")]).then(n.bind(n, 81988))
                         }))
                     }, {
                         name: "Weapons Drawn",
@@ -3947,7 +3948,7 @@
                         hasModeration: !0,
                         categoryId: "MurderDetectivesGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(9623), n.e(3386), n.e(2530), n.e("games/murder-detectives")]).then(n.bind(n, 28274))
+                            return Promise.all([n.e(9623), n.e(5853), n.e(7381), n.e(2530), n.e("games/murder-detectives")]).then(n.bind(n, 28274))
                         }))
                     }, {
                         name: "Drawful Animate",
@@ -3956,7 +3957,30 @@
                         hasModeration: !0,
                         categoryId: "DrawfulAnimateGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(9623), n.e(7611), n.e(3386), n.e(2530), n.e("games/drawful-animate")]).then(n.bind(n, 66333))
+                            return Promise.all([n.e(9623), n.e(7611), n.e(5853), n.e(7381), n.e(2530), n.e("games/drawful-animate")]).then(n.bind(n, 66333))
+                        }))
+                    }, {
+                        name: "Quiplash 3",
+                        app: "vue",
+                        tag: "quiplash3-tjsp",
+                        hasModeration: !0,
+                        importFn: () => r(void 0, void 0, void 0, (function*() {
+                            return Promise.all([n.e(5853), n.e(7381), n.e("games/quiplash3-tjsp")]).then(n.bind(n, 64785))
+                        }))
+                    }, {
+                        name: "Tee K.O.",
+                        app: "vue",
+                        tag: "awshirt-tjsp",
+                        hasModeration: !0,
+                        importFn: () => r(void 0, void 0, void 0, (function*() {
+                            return Promise.all([n.e(2529), n.e(5853), n.e(7381), n.e(3317), n.e("games/awshirt-tjsp")]).then(n.bind(n, 12659))
+                        }))
+                    }, {
+                        name: "Trivia Murder Party 2",
+                        app: "vue",
+                        tag: "triviadeath2-tjsp",
+                        importFn: () => r(void 0, void 0, void 0, (function*() {
+                            return Promise.all([n.e(4442), n.e(5853), n.e(7381), n.e(3317), n.e("games/triviadeath2-tjsp")]).then(n.bind(n, 87383))
                         }))
                     }],
                     o = e => i.includes(e),
@@ -4154,7 +4178,7 @@
                     };
                 class c {
                     constructor() {
-                        this.items = [], this.prodItemCount = 30, this.autoMarkWindow = 150, this.autoMarkerCount = 0, this.automarkIgnoredKeys = [], o.v.debug && (window.debug = this.expose())
+                        this.items = [], this.autoMarkWindow = 150, this.autoMarkerCount = 0, this.automarkIgnoredKeys = [], o.v.debug && (window.debug = this.expose())
                     }
                     get markerCount() {
                         return this.items.reduce(((e, t) => "marker" in t ? e + 1 : e), 0)
@@ -4162,7 +4186,7 @@
                     setup(e, t) {
                         this.client = e, this.room = t, Object.keys(this.client.entities).forEach((e => {
                             this.pushEntity(this.client.entities[e])
-                        })), this.items.length && this.setMarker("welcome"), e.on("artifact", (e => this.pushEntity(e))), e.on("doodle", (e => this.pushEntity(e))), e.on("drop", (e => this.pushEntity(e))), e.on("object", (e => this.pushEntity(e))), e.on("text", (e => this.pushEntity(e))), this.hijackConsole(), this.hijackSend()
+                        })), this.items.length && this.setMarker("welcome"), e.on("artifact", (e => this.pushEntity(e))), e.on("doodle", (e => this.pushEntity(e))), e.on("drop", (e => this.pushEntity(e))), e.on("number", (e => this.pushEntity(e))), e.on("object", (e => this.pushEntity(e))), e.on("text", (e => this.pushEntity(e))), this.hijackConsole(), this.hijackSend()
                     }
                     reset() {
                         this.items = []
@@ -4189,14 +4213,22 @@
                         }, e)) : e instanceof r.DropEntity ? this.items.push({
                             key: e.key,
                             type: "drop"
+                        }) : e instanceof r.NumberEntity ? this.items.push({
+                            key: e.key,
+                            type: "number",
+                            value: e.val,
+                            meta: e.meta,
+                            restrictions: e.restrictions
                         }) : e instanceof r.ObjectEntity ? (e.val.kind && (this.automarkPendingLabel = e.val.kind), this.items.push({
                             key: e.key,
                             type: "object",
-                            value: e.val
+                            value: e.val,
+                            meta: e.meta
                         })) : e instanceof r.TextEntity && this.items.push({
                             key: e.key,
                             type: "text",
-                            value: e.text
+                            value: e.text,
+                            meta: e.meta
                         }), this.automarkIgnoredKeys.includes(e.key) || this.startAutoMarkTimeout()
                     }
                     pushError(...e) {
@@ -4286,7 +4318,7 @@
                                 c = `${r} ${1===r?"entity":"entities"}`,
                                 l = [{
                                     type: "mrkdwn",
-                                    text: "*Version:* 4.1.28"
+                                    text: "*Version:* 4.2.0"
                                 }, {
                                     type: "mrkdwn",
                                     text: `*Domain:* ${window.location.hostname}`
@@ -4529,6 +4561,10 @@
                         const t = document.createElement("div");
                         return t.textContent = e, t.innerHTML
                     }
+                    static toPrecision(e, t) {
+                        const n = Math.pow(10, t);
+                        return Math.round((e + Number.EPSILON) * n) / n
+                    }
                     static hexToRgb(e) {
                         const t = new ArrayBuffer(4);
                         new DataView(t).setUint32(0, parseInt(e.replace("#", ""), 16), !1);
@@ -4656,7 +4692,7 @@
                             }), 50)
                         }
                         valueForEntity(e) {
-                            return e instanceof r.ArtifactEntity || e instanceof r.DoodleEntity ? e : e instanceof r.ObjectEntity ? s()(e.val) : e instanceof r.TextEntity ? e.text : null
+                            return e instanceof r.ArtifactEntity || e instanceof r.DoodleEntity ? e : e instanceof r.ObjectEntity ? s()(e.val) : e instanceof r.TextEntity ? e.text : e instanceof r.NumberEntity ? e.val : null
                         }
                         normalize() {
                             var e;
@@ -4832,7 +4868,7 @@
                             environment: s.c.clientEnvironment,
                             ignoreErrors: ["ceCurrentVideo.currentTime", "chrome-extension", "ResizeObserver", "webkitExitFullScreen", "window.webkit.messageHandlers.selectedTextHandler.postMessage", "promiseResolveThenableJob", "Cannot read property 'then' of undefined", "null is not an object (evaluating 't.scrollHeight')", "Cannot read properties of null (reading 'removeEventListener')"],
                             logErrors: !0,
-                            release: "jackbox-tv@4.1.28",
+                            release: "jackbox-tv@4.2.0",
                             beforeSend: (e, t) => {
                                 return n = this, r = void 0, c = function*() {
                                     if (t.originalException instanceof a.EcastEntityNotFound) return i.uT("no entity found having key", {
@@ -4929,7 +4965,7 @@
                             const r = null !== (t = null === (e = this.error.event) || void 0 === e ? void 0 : e.event_id) && void 0 !== t ? t : "Unknown";
                             let i = "";
                             const a = null === (n = this.error.hint) || void 0 === n ? void 0 : n.originalException;
-                            return i = a ? "string" == typeof a ? a : a.message : "An unknown error occured", `Version:\n4.1.28\n\nEvent ID:\n${r}\n\n${i}`
+                            return i = a ? "string" == typeof a ? a : a.message : "An unknown error occured", `Version:\n4.2.0\n\nEvent ID:\n${r}\n\n${i}`
                         }
                     },
                     methods: {
@@ -5340,53 +5376,56 @@
             972: 1,
             "games/wordspud": 1,
             "games/ecast-test-client": 1,
-            "games/the-wheel": 1,
             "games/drawful": 1,
             "games/fibbage": 1,
             "games/auction": 1,
             "games/fibbage2": 1,
             "games/survivetheinternet": 1,
-            "games/survey-bomb": 1,
+            2104: 1,
             2265: 1,
-            2601: 1,
+            "games/quiplash3-tjsp": 1,
             "games/bracketeering": 1,
-            "games/prototype": 1,
+            "games/apply-yourself": 1,
             "games/fakinit": 1,
             "games/lieswatter": 1,
             "games/bombintern": 1,
             "games/ridictionary": 1,
             "games/ydkj2018": 1,
-            "games/apply-yourself": 1,
+            "games/awshirt-tjsp": 1,
+            4948: 1,
             "games/guesspionage-crowdplay": 1,
             "games/fibbage3": 1,
             "games/ydkj2015": 1,
             "games/splittheroom": 1,
             "games/jokeboat": 1,
             "games/earwax": 1,
-            "games/quiplash3": 1,
+            "games/triviadeath2-tjsp": 1,
             "games/quiplash2": 1,
             "games/rapbattle": 1,
-            "games/drawful-animate": 1,
             6368: 1,
+            "games/quiplash3": 1,
             "games/overdrawn": 1,
             "games/monstermingle": 1,
+            "games/the-wheel": 1,
             "games/quiplash": 1,
             "games/rolemodels": 1,
             "games/patentlystupid": 1,
             "games/worldchamps": 1,
             "games/triviadeath": 1,
             "games/drawful2": 1,
-            7608: 1,
+            "games/drawful-animate": 1,
             "games/quiplash2-international": 1,
             "games/pollposition": 1,
+            "games/prototype": 1,
             "games/jackbox-talks": 1,
             "games/house-of-jackbox": 1,
-            "games/murder-detectives": 1,
             "games/pushthebutton": 1,
             "games/awshirt": 1,
             "games/drawful2international": 1,
             "games/blanky-blank": 1,
             "games/triviadeath2": 1,
+            "games/survey-bomb": 1,
+            "games/murder-detectives": 1,
             "games/slingshoot": 1,
             "games/everyday": 1,
             "games/acquisitions-inc": 1
@@ -5432,4 +5471,4 @@
     var u = l.O(void 0, [5221], (() => l(61966)));
     u = l.O(u)
 })();
-//# sourceMappingURL=sourcemaps/main.b546dbb1e57a9525adf3.js.map
+//# sourceMappingURL=sourcemaps/main.6d89f4172c6d88956f8c.js.map

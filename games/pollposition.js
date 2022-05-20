@@ -176,7 +176,7 @@
             const w = c().View.extend({
                 appId: "legacymain",
                 appTag: "legacymain",
-                appVersion: "4.1.28",
+                appVersion: "4.2.0",
                 template: null,
                 initialize(t) {
                     this.mergeOptions(t, ["appId", "appTag"]), h.app.analytics.setApplication({
@@ -680,4 +680,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/7879.86e2bcc0700474d353d9.js.map
+//# sourceMappingURL=sourcemaps/7879.cb8ff7a7ba31ed93f51e.js.map

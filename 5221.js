@@ -1,4 +1,4 @@
-/*! For license information please see 5221.76602bb9d5c11e5d8607.js.LICENSE.txt */
+/*! For license information please see 5221.2bacb494c39dece362d6.js.LICENSE.txt */
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     [5221], {
         9855: (t, e, n) => {
@@ -316,7 +316,7 @@
                 },
                 ClientKicked: class {
                     constructor(t) {
-                        this.id = t.id
+                        this.id = t.id, this.banned = t.banned
                     }
                 },
                 ClientSend: class {
@@ -695,42 +695,45 @@
             } = n(98506), {
                 GCounter: l
             } = n(4297), {
-                TextEntity: p
+                NumberEntity: p
+            } = n(86653), {
+                TextEntity: f
             } = n(95026), {
-                DoodleEntity: f
+                DoodleEntity: d
             } = n(30939), {
-                ObjectEntity: d
+                ObjectEntity: h
             } = n(17506), {
-                CountGroup: h
+                CountGroup: v
             } = n(69646), {
-                DropEntity: v
+                DropEntity: y
             } = n(86002), {
-                OK: y
+                OK: m
             } = n(42451), {
-                RoomExit: m
+                RoomExit: g
             } = n(51243), {
-                TextRing: g
+                TextRing: _
             } = n(70318), {
-                PNCounter: _
+                PNCounter: b
             } = n(14914);
             t.exports = {
                 APIClient: r,
                 WSClient: o,
                 ClientWelcome: s,
                 CreateRoomReply: i,
-                DropEntity: v,
+                DropEntity: y,
                 GetRoomReply: a,
                 ClientDisconnected: c,
-                RoomExit: m,
-                OK: y,
+                RoomExit: g,
+                OK: m,
                 ArtifactEntity: u,
-                DoodleEntity: f,
-                CountGroup: h,
+                DoodleEntity: d,
+                NumberEntity: p,
+                CountGroup: v,
                 GCounter: l,
-                ObjectEntity: d,
-                PNCounter: _,
-                TextEntity: p,
-                TextRing: g
+                ObjectEntity: h,
+                PNCounter: b,
+                TextEntity: f,
+                TextRing: _
             }
         },
         99113: t => {
@@ -740,7 +743,7 @@
                         this.key = t.key, this.from = t.from
                     }
                     whenReceived(t) {
-                        t.entities[this.key].meta.locked = !0
+                        t.entities[this.key] && (t.entities[this.key].meta.locked = !0)
                     }
                     toString() {
                         return `LockEntity{\n\tkey:${this.key}\n}`
@@ -753,6 +756,21 @@
                 Notification: class {
                     constructor(t) {
                         this.pc = t.pc, this.opcode = t.opcode, this.result = t.result
+                    }
+                }
+            }
+        },
+        86653: t => {
+            t.exports = {
+                NumberEntity: class {
+                    constructor(t) {
+                        this.from = t.from, this.key = t.key, this.val = t.val, this.restrictions = t.restrictions, this.version = t.version, this.meta = t.meta || {}
+                    }
+                    whenReceived(t) {
+                        t.entities[this.key] = this
+                    }
+                    toString() {
+                        return `NumberEntity{\n\tkey:${this.key}\n\tval: ${this.val}\n\trestrictions: ${JSON.stringify(this.restrictions)}\n\tmeta: ${JSON.stringify(this.meta)}\n}`
                     }
                 }
             }
@@ -825,22 +843,24 @@
             } = n(16474), {
                 OK: w
             } = n(42451), {
-                ObjectEcho: x,
-                ObjectEntity: k
+                NumberEntity: x
+            } = n(86653), {
+                ObjectEcho: k,
+                ObjectEntity: S
             } = n(17506), {
-                PNCounter: S
+                PNCounter: E
             } = n(14914), {
-                Reply: E
+                Reply: O
             } = n(16925), {
-                TextEcho: O,
-                TextEntity: T
+                TextEcho: T,
+                TextEntity: j
             } = n(95026), {
-                TextRing: j
+                TextRing: C
             } = n(70318), {
-                createError: C
+                createError: A
             } = n(55507);
 
-            function A(t, e, n) {
+            function $(t, e, n) {
                 switch (t) {
                     case "ok":
                         return new w;
@@ -854,14 +874,14 @@
                             from: e.from
                         });
                     case "error":
-                        return C({
+                        return A({
                             code: e.code,
                             message: e.msg
                         });
                     case "string":
                         return e;
                     case "text":
-                        return new T({
+                        return new j({
                             from: e.from,
                             key: e.key,
                             text: e.val,
@@ -869,18 +889,18 @@
                             meta: n
                         });
                     case "text/echo":
-                        return new O({
+                        return new T({
                             message: e.message
                         });
                     case "object":
-                        return new k({
+                        return new S({
                             from: e.from,
                             key: e.key,
                             val: e.val,
                             meta: n
                         });
                     case "object/echo":
-                        return new x({
+                        return new k({
                             message: e.message
                         });
                     case "drop":
@@ -932,7 +952,7 @@
                         if (e.entities) {
                             let n = {};
                             Object.entries(e.entities).forEach((([t, e]) => {
-                                n[t] = A(e[0], e[1], e[2])
+                                n[t] = $(e[0], e[1], e[2])
                             })), t.entities = n
                         }
                         return t
@@ -958,6 +978,15 @@
                             key: e.key,
                             index: e.index
                         });
+                    case "number":
+                        return new x({
+                            key: e.key,
+                            val: e.val,
+                            restrictions: e.restrictions,
+                            from: e.from,
+                            version: e.version,
+                            meta: n
+                        });
                     case "room/exit":
                         return new g({
                             cause: e.cause
@@ -969,7 +998,7 @@
                             connections: e.connections
                         });
                     case "audience":
-                        return new S({
+                        return new E({
                             key: t,
                             count: e[1]
                         });
@@ -980,7 +1009,7 @@
                             meta: n
                         });
                     case "audience/text-ring":
-                        return new j({
+                        return new C({
                             key: e.key,
                             elements: e.elements,
                             meta: n
@@ -992,7 +1021,7 @@
                             meta: n
                         });
                     case "audience/pn-counter":
-                        return new S({
+                        return new E({
                             key: e.key,
                             count: e.count,
                             meta: n
@@ -1005,15 +1034,15 @@
                 parseResponseMessage: function(t) {
                     let e = JSON.parse(t.data),
                         n = e.opcode || e.type;
-                    return e.re ? new E({
+                    return e.re ? new O({
                         pc: e.pc,
                         re: e.re,
                         opcode: n,
-                        result: A(n, e.result)
+                        result: $(n, e.result)
                     }) : new b({
                         pc: e.pc,
                         opcode: n,
-                        result: A(n, e.result)
+                        result: $(n, e.result)
                     })
                 }
             }
@@ -1208,13 +1237,11 @@
                                 this.debugLog(`recv <- ${JSON.stringify(JSON.parse(e.data),null,2)}`);
                                 const n = m(e);
                                 if (n instanceof d) this.onReply(n);
-                                else if (n instanceof l)
+                                else if (n instanceof l) {
                                     if (n.result instanceof s) i = !0, this.id = n.result.id, this.deviceId = n.result.deviceId, this.entities = n.result.entities, this.secret = n.result.secret, n.result.name && (this.name = n.result.name), r = n.result, t(r), o = !0;
-                                    else {
-                                        if (!o) return void a(n.result);
-                                        this.onNotification(n)
-                                    }
-                                else console.error(`failed to parse response messsage: ${n}`);
+                                    else if (!o) return void a(n.result);
+                                    this.onNotification(n)
+                                } else console.error(`failed to parse response messsage: ${n}`);
                                 var r
                             }, this.conn.onerror = t => {
                                 o ? this.emit("socketError", t) : a(t)
@@ -1301,9 +1328,10 @@
                             body: e
                         })
                     }
-                    kick(t) {
+                    kick(t, e = !1) {
                         return this.send("client/kick", {
-                            id: t
+                            id: t,
+                            ban: e
                         })
                     }
                     async drop(t) {
@@ -1323,6 +1351,19 @@
                         });
                         return this.entities[t].meta.locked = !0, e
                     }
+                    async getNumber(t) {
+                        const e = await this.send("number/get", {
+                            key: t
+                        });
+                        return this.entities[t].val = e.val, this.entities[t].restrictions = e.restrictions, e
+                    }
+                    async updateNumber(t, e) {
+                        const n = await this.send("number/update", {
+                            key: t,
+                            val: e
+                        });
+                        return this.entities[t].val = e, n
+                    }
                     async createObject(t, e, n) {
                         const r = {
                             key: t,
@@ -1332,7 +1373,10 @@
                         const o = await this.send("object/create", r);
                         return this.entities[t] = new p({
                             key: t,
-                            val: e
+                            val: e,
+                            meta: {
+                                locked: !1
+                            }
                         }), o
                     }
                     echoObject(t) {
@@ -1349,7 +1393,10 @@
                         const o = await this.send("object/set", r);
                         return this.entities[t] = new p({
                             key: t,
-                            val: e
+                            val: e,
+                            meta: {
+                                locked: !1
+                            }
                         }), o
                     }
                     async updateObject(t, e) {
@@ -1359,7 +1406,10 @@
                         });
                         return this.entities[t] = new p({
                             key: t,
-                            val: e
+                            val: e,
+                            meta: {
+                                locked: !1
+                            }
                         }), n
                     }
                     echoText(t) {
@@ -1386,7 +1436,10 @@
                         const s = await this.send("text/create", r);
                         return this.entities[t] = new v({
                             key: t,
-                            text: e
+                            text: e,
+                            meta: {
+                                locked: !1
+                            }
                         }), s
                     }
                     async setText(t, e, n) {
@@ -1398,7 +1451,10 @@
                         const o = await this.send("text/set", r);
                         return this.entities[t] = new v({
                             key: t,
-                            text: e
+                            text: e,
+                            meta: {
+                                locked: !1
+                            }
                         }), o
                     }
                     async updateText(t, e) {
@@ -1408,7 +1464,10 @@
                         });
                         return this.entities[t] = new v({
                             key: t,
-                            text: e
+                            text: e,
+                            meta: {
+                                locked: !1
+                            }
                         }), n
                     }
                     async createDoodle(t, e) {
@@ -1433,7 +1492,10 @@
                             locked: !1,
                             maxPoints: n.maxPoints || 0,
                             size: s,
-                            weights: c
+                            weights: c,
+                            meta: {
+                                locked: !1
+                            }
                         }), u
                     }
                     async getDoodle(t) {
@@ -1474,7 +1536,10 @@
                         });
                         return this.entities[t] = new c({
                             key: t,
-                            choices: e
+                            choices: e,
+                            meta: {
+                                locked: !1
+                            }
                         }), n
                     }
                     incrementCountGroupCounter(t, e) {
@@ -1495,7 +1560,10 @@
                         });
                         return this.entities[t] = new u({
                             key: t,
-                            count: e
+                            count: e,
+                            meta: {
+                                locked: !1
+                            }
                         }), n
                     }
                     incrementGCounter(t, e) {
@@ -1516,7 +1584,10 @@
                         });
                         return this.entities[t] = new f({
                             key: t,
-                            count: e
+                            count: e,
+                            meta: {
+                                locked: !1
+                            }
                         }), n
                     }
                     incrementPNCounter(t, e) {
@@ -1537,15 +1608,24 @@
                         })
                     }
                     async createTextRing(t, e) {
-                        const n = await this.send("audience/text-ring/create", {
-                            name: t,
-                            limit: e
-                        });
+                        const n = {
+                                key: t
+                            },
+                            {
+                                limit: r,
+                                accept: o,
+                                reject: i
+                            } = e;
+                        r && (n.limit = r), o && (n.accept = o), i && (n.reject = i);
+                        const a = await this.send("audience/text-ring/create", n);
                         return this.entities[t] = new y({
                             key: t,
                             elements: [],
-                            limit: e
-                        }), n
+                            limit: r,
+                            meta: {
+                                locked: !1
+                            }
+                        }), a
                     }
                     getTextRing(t) {
                         return this.send("audience/text-ring/get", {
@@ -14236,4 +14316,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/5221.76602bb9d5c11e5d8607.js.map
+//# sourceMappingURL=sourcemaps/5221.2bacb494c39dece362d6.js.map

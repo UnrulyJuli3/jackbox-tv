@@ -1,413 +1,370 @@
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     ["games/prototype"], {
-        20854: (t, e, n) => {
+        13494: (e, t, s) => {
             "use strict";
-            n.d(e, {
-                J: () => o
+            s.d(t, {
+                Z: () => c
             });
-            var i = n(16479),
-                s = n.n(i);
-            class o {
-                constructor(t, e, n) {
-                    var i, s, o, a;
-                    this.DEFAULT_WIDTH = 400, this.DEFAULT_HEIGHT = 400, this.color = "#000", this.layer = 0, this.layers = 1, this.maxPoints = Number.MAX_SAFE_INTEGER, this.points = [], this.weight = 4, this.isInteracting = !1, t.width = null !== (s = null === (i = e.size) || void 0 === i ? void 0 : i.width) && void 0 !== s ? s : this.DEFAULT_WIDTH, t.height = null !== (a = null === (o = e.size) || void 0 === o ? void 0 : o.height) && void 0 !== a ? a : this.DEFAULT_HEIGHT, this.canvas = t, this.ctx = t.getContext("2d"), this.doodle = e, (null == n ? void 0 : n.color) && (this.color = n.color), (null == n ? void 0 : n.layer) && (this.layer = n.layer), (null == n ? void 0 : n.layers) && (this.layers = n.layers), (null == n ? void 0 : n.maxPoints) && (this.maxPoints = n.maxPoints), (null == n ? void 0 : n.weight) && (this.weight = n.weight), this.drawLines()
-                }
-                addPoint(t) {
-                    const e = {
-                        x: Math.min(Math.max(.5 * this.weight, t.x), this.canvas.width - .5 * this.weight),
-                        y: Math.min(Math.max(.5 * this.weight, t.y), this.canvas.height - .5 * this.weight)
-                    };
-                    this.points.push(e)
-                }
-                drawLines() {
-                    if (this.ctx) {
-                        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-                        for (let t = 0; t < this.layers; t++) Object.values(this.doodle.lines).filter((e => {
-                            var n;
-                            return (null !== (n = e.layer) && void 0 !== n ? n : 0) === t
-                        })).forEach((t => this.drawLine(t))), t === this.layer && this.drawLine({
-                            color: this.color,
-                            index: this.doodle.lines.length,
-                            layer: this.layer,
-                            points: this.points,
-                            weight: this.weight
+            var a = function() {
+                var e = this,
+                    t = e.$createElement,
+                    s = e._self._c || t;
+                return s("div", {
+                    staticClass: "lobby-actions",
+                    class: {
+                        vip: e.player.hasControls
+                    }
+                }, [e.messageLocation && "top" !== e.messageLocation ? e._e() : s("p", {
+                    class: e.localClasses.message,
+                    domProps: {
+                        textContent: e._s(e.joinedCountText)
+                    }
+                }), e._v(" "), e.player.hasControls ? ["waitingForMore" === e.player.status ? s("p", {
+                    class: e.localClasses.status
+                }, [e._v(e._s(e.neededText))]) : e._e(), e._v(" "), "canStart" === e.player.status ? s("button", {
+                    class: e.localClasses.action,
+                    domProps: {
+                        textContent: e._s(e.startText || e.$t("LOBBY.BUTTON_START"))
+                    },
+                    on: {
+                        click: e.onStartClick
+                    }
+                }) : e._e(), e._v(" "), "countdown" === e.player.status ? s("button", {
+                    class: e.localClasses.action,
+                    domProps: {
+                        textContent: e._s(e.cancelText || e.$t("LOBBY.BUTTON_CANCEL"))
+                    },
+                    on: {
+                        click: e.onCancelClick
+                    }
+                }) : e._e()] : e.player.gamepadStart ? ["waitingForMore" === e.player.status ? s("p", {
+                    class: e.localClasses.status
+                }, [e._v(e._s(e.neededText))]) : e._e(), e._v(" "), "canStart" === e.player.status ? s("p", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "LOBBY.WAITING_FOR_GAMEPAD",
+                        expression: "'LOBBY.WAITING_FOR_GAMEPAD'"
+                    }],
+                    class: e.localClasses.status
+                }) : e._e(), e._v(" "), "countdown" === e.player.status ? s("p", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "LOBBY.GAME_STARTING",
+                        expression: "'LOBBY.GAME_STARTING'"
+                    }],
+                    class: e.localClasses.status
+                }) : e._e()] : ["waitingForMore" === e.player.status ? s("p", {
+                    class: e.localClasses.status
+                }, [e._v(e._s(e.neededText))]) : e._e(), e._v(" "), "canStart" === e.player.status ? s("p", {
+                    class: e.localClasses.status
+                }, [e._v(e._s(e.waitingForVIPText))]) : e._e(), e._v(" "), "countdown" === e.player.status ? s("p", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "LOBBY.GAME_STARTING",
+                        expression: "'LOBBY.GAME_STARTING'"
+                    }],
+                    class: e.localClasses.status
+                }) : e._e()], e._v(" "), "bottom" === e.messageLocation ? s("p", {
+                    class: e.localClasses.message,
+                    domProps: {
+                        textContent: e._s(e.joinedCountText)
+                    }
+                }) : e._e()], 2)
+            };
+            a._withStripped = !0;
+            var n = s(2934),
+                i = s.n(n),
+                o = s(65853);
+            const l = i().extend({
+                props: {
+                    cancelText: String,
+                    classes: Object,
+                    messageLocation: String,
+                    player: Object,
+                    shouldStart: Function,
+                    startText: String
+                },
+                i18n: {
+                    messages: o.s
+                },
+                computed: {
+                    joinedCountText() {
+                        return this.$tc("LOBBY.JOINED_COUNT", this.player.joinedPlayers, {
+                            count: this.player.joinedPlayers,
+                            maxPlayers: this.player.maxPlayers
                         })
-                    }
-                }
-                drawLine(t) {
-                    this.ctx && (this.ctx.fillStyle = t.color, this.ctx.strokeStyle = t.color, this.ctx.lineCap = "round", this.ctx.lineJoin = "round", this.ctx.lineWidth = t.weight, this.ctx.beginPath(), t.points.forEach(((e, n) => {
-                        1 === t.points.length && 0 === n && (this.ctx.save(), this.ctx.arc(e.x, e.y, t.weight / 2, 0, 2 * Math.PI), this.ctx.fill(), this.ctx.restore(), this.ctx.beginPath()), this.ctx.lineTo(e.x, e.y)
-                    })), this.ctx.stroke())
-                }
-                renderImage(t = "image/png") {
-                    return this.doodle.lines.length > 0 && this.drawLines(), this.canvas.toDataURL(t)
-                }
-                onStart(t) {
-                    this.isInteracting = !0, this.addPoint(t), this.drawLines()
-                }
-                onMove(t) {
-                    if (!this.isInteracting) return;
-                    const e = this.points[this.points.length - 1];
-                    if (!e) return void this.addPoint(t);
-                    const n = .5 * this.weight,
-                        i = {
-                            x: t.x - e.x,
-                            y: t.y - e.y
-                        },
-                        s = Math.sqrt(Math.pow(i.x, 2) + Math.pow(i.y, 2));
-                    if (s > n) {
-                        const t = (s - n) / s,
-                            o = {
-                                x: i.x * t,
-                                y: i.y * t
-                            },
-                            a = {
-                                x: e.x + o.x,
-                                y: e.y + o.y
-                            };
-                        this.addPoint(a), this.drawLines()
-                    }
-                }
-                onEnd() {
-                    if (!this.isInteracting) return null;
-                    const t = {
-                        color: this.color,
-                        index: this.doodle.lines.length,
-                        layer: this.layer,
-                        points: s()(this.points),
-                        weight: this.weight
-                    };
-                    return this.isInteracting = !1, this.points = [], t
-                }
-            }
-        },
-        19734: (t, e, n) => {
-            "use strict";
-            n.d(e, {
-                O: () => a
-            });
-            var i = n(89446);
-            class s {
-                constructor(t, e) {
-                    this.isCanceled = !1, this.distanceAccumulator = 0, this.velocityValues = [0], this.boundOnClick = this.onClick.bind(this), this.boundOnStart = this.onStart.bind(this), this.boundOnMove = this.onMove.bind(this), this.boundOnEnd = this.onEnd.bind(this), this.applyPolyfill(), this.element = t, this.documentElement = document.documentElement, this.usePointerEvents = void 0 !== window.PointerEvent, this.isRestrictedToBox = e.restrictToBox, this.bindStaticEvents()
-                }
-                destroy() {
-                    this.unbindStaticEvents(), this.unbindStartedEvents()
-                }
-                cancel() {
-                    this.isCanceled = !0, this.unbindStartedEvents()
-                }
-                bindStaticEvents() {
-                    this.element.addEventListener("click", this.boundOnClick), this.usePointerEvents ? this.element.addEventListener("pointerdown", this.boundOnStart) : (this.element.addEventListener("touchstart", this.boundOnStart), this.element.addEventListener("mousedown", this.boundOnStart))
-                }
-                unbindStaticEvents() {
-                    this.element.removeEventListener("click", this.boundOnClick), this.usePointerEvents ? this.element.removeEventListener("pointerdown", this.boundOnStart) : (this.element.removeEventListener("touchstart", this.boundOnStart), this.element.removeEventListener("mousedown", this.boundOnStart))
-                }
-                bindStartedEvents() {
-                    if (this.usePointerEvents) return this.element.addEventListener("pointermove", this.boundOnMove), this.element.addEventListener("pointerup", this.boundOnEnd), this.isRestrictedToBox && this.element.addEventListener("pointerleave", this.boundOnEnd), this.element.addEventListener("lostpointercapture", this.boundOnEnd), void this.disableChildPointerEvents();
-                    this.element.addEventListener("touchmove", this.boundOnMove), this.element.addEventListener("mousemove", this.boundOnMove), this.element.addEventListener("touchend", this.boundOnEnd), this.element.addEventListener("mouseleave", this.boundOnEnd), this.element.addEventListener("mouseup", this.boundOnEnd)
-                }
-                unbindStartedEvents() {
-                    if (this.usePointerEvents) return this.element.removeEventListener("pointermove", this.boundOnMove), this.element.removeEventListener("pointerup", this.boundOnEnd), this.isRestrictedToBox && this.element.removeEventListener("pointerleave", this.boundOnEnd), this.element.removeEventListener("lostpointercapture", this.boundOnEnd), void this.enableChildPointerEvents();
-                    this.element.removeEventListener("touchmove", this.boundOnMove), this.element.removeEventListener("mousemove", this.boundOnMove), this.element.removeEventListener("touchend", this.boundOnEnd), this.element.removeEventListener("mouseleave", this.boundOnEnd), this.element.removeEventListener("mouseup", this.boundOnEnd)
-                }
-                onClick(t) {
-                    const e = this.getStartDetail(t),
-                        n = new CustomEvent("pointerboxclick", {
-                            detail: e
-                        });
-                    this.element.dispatchEvent(n)
-                }
-                onStart(t) {
-                    if (t.preventDefault(), this.isCanceled = !1, this.usePointerEvents) {
-                        const e = t;
-                        if (!e.isPrimary) return;
-                        this.capturedPointer = {
-                            id: e.pointerId,
-                            type: e.pointerType
-                        }, this.isRestrictedToBox || this.element.setPointerCapture(this.capturedPointer.id)
-                    }
-                    this.distanceAccumulator = 0, this.velocityValues = [0];
-                    const e = this.getStartDetail(t);
-                    this.initial = e, this.previous = e;
-                    const n = new CustomEvent("pointerboxstart", {
-                        detail: e
-                    });
-                    this.element.dispatchEvent(n);
-                    const i = new CustomEvent("pointerboxchilddown", {
-                        detail: e
-                    });
-                    return this.staticEventChildren = document.elementsFromPoint(e.clientX, e.clientY), this.staticEventChildren.forEach((t => t.dispatchEvent(i))), this.bindStartedEvents(), !1
-                }
-                onMove(t) {
-                    var e;
-                    if (t.preventDefault(), this.isCanceled) return;
-                    if (this.usePointerEvents) {
-                        const n = t;
-                        if (!n.isPrimary) return;
-                        if (n.pointerType !== (null === (e = this.capturedPointer) || void 0 === e ? void 0 : e.type)) return
-                    }
-                    const n = this.getMoveDetail(t);
-                    this.previous = n;
-                    const i = new CustomEvent("pointerboxmove", {
-                        detail: n
-                    });
-                    return this.element.dispatchEvent(i), this.previousEventTimestamp = Date.now(), !1
-                }
-                onEnd(t) {
-                    var e;
-                    if (t.preventDefault(), this.isCanceled) return;
-                    if (this.usePointerEvents) {
-                        const n = t;
-                        if (!n.isPrimary) return;
-                        if (n.pointerType !== (null === (e = this.capturedPointer) || void 0 === e ? void 0 : e.type)) return;
-                        this.element.hasPointerCapture(this.capturedPointer.id) && this.element.releasePointerCapture(this.capturedPointer.id), delete this.capturedPointer
-                    }
-                    const n = this.getMoveDetail(t),
-                        i = new CustomEvent("pointerboxend", {
-                            detail: n
-                        });
-                    this.element.dispatchEvent(i), delete this.initial, delete this.previous, delete this.cachedElementRect, delete this.cachedDocumentRect, delete this.cachedTranslations, delete this.previousEventTimestamp, this.unbindStartedEvents();
-                    const s = new CustomEvent("pointerboxchildup", {
-                        detail: n
-                    });
-                    return document.elementsFromPoint(n.clientX, n.clientY).forEach((t => {
-                        var e;
-                        if (t.dispatchEvent(s), !(null === (e = this.staticEventChildren) || void 0 === e ? void 0 : e.includes(t))) return;
-                        const i = new CustomEvent("pointerboxchildclick", {
-                            detail: n
-                        });
-                        t.dispatchEvent(i)
-                    })), delete this.staticEventChildren, !1
-                }
-                disableChildPointerEvents() {
-                    this.element.style.touchAction = "none";
-                    for (let t = 0; t < this.element.children.length; t++) {
-                        const e = this.element.children[t];
-                        e.style.pointerEvents = "none", e.style.touchAction = "none"
-                    }
-                }
-                enableChildPointerEvents() {
-                    this.element.style.touchAction = "";
-                    for (let t = 0; t < this.element.children.length; t++) {
-                        const e = this.element.children[t];
-                        e.style.pointerEvents = "", e.style.touchAction = ""
-                    }
-                }
-                getStartDetail(t) {
-                    let e, n, i, s;
-                    this.cachedElementRect || (this.cachedElementRect = this.element.getBoundingClientRect()), this.cachedDocumentRect || (this.cachedDocumentRect = this.documentElement.getBoundingClientRect());
-                    const o = this.cachedDocumentRect.top;
-                    if (this.cachedTranslations || (this.cachedTranslations = this.getTranslations()), window.TouchEvent && t instanceof window.TouchEvent) {
-                        if (!t.touches.length) return this.previous;
-                        e = t.touches[0].pageX, n = t.touches[0].pageY + o, i = t.touches[0].clientX, s = t.touches[0].clientY
-                    } else {
-                        const a = t;
-                        e = a.pageX, n = a.pageY + o, i = a.clientX, s = a.clientY
-                    }
-                    const a = e - this.cachedElementRect.left,
-                        r = n - this.cachedElementRect.top,
-                        l = a / this.cachedElementRect.width,
-                        c = r / this.cachedElementRect.height,
-                        h = l < 0 || l > 1 || c < 0 || c > 1,
-                        d = {};
-                    return this.cachedTranslations.forEach((t => {
-                        d[t.id] && console.warn(`[PointerBox] duplicate translation key ${t.id}`), d[t.id] = {
-                            x: a * t.x - t.left,
-                            y: r * t.y - t.top
+                    },
+                    localClasses() {
+                        var e, t, s, a, n, i;
+                        return {
+                            message: null !== (t = null === (e = this.classes) || void 0 === e ? void 0 : e.message) && void 0 !== t ? t : "message",
+                            status: null !== (a = null === (s = this.classes) || void 0 === s ? void 0 : s.status) && void 0 !== a ? a : "status",
+                            action: null !== (i = null === (n = this.classes) || void 0 === n ? void 0 : n.action) && void 0 !== i ? i : "action"
                         }
-                    })), {
-                        boxX: a,
-                        boxY: r,
-                        pageX: e,
-                        pageY: n,
-                        clientX: i,
-                        clientY: s,
-                        percentX: l,
-                        percentY: c,
-                        translations: d,
-                        isOutsideBox: h,
-                        originalEvent: t,
-                        cancel: () => this.cancel()
-                    }
-                }
-                getMoveDetail(t) {
-                    if (!this.initial) throw new Error("[PointerBox] No initial details stored");
-                    if (!this.previous) throw new Error("[PointerBox] No previous details stored");
-                    const e = this.getStartDetail(t),
-                        n = i.c.getAngleBetweenPoints({
-                            x: this.initial.boxX,
-                            y: this.initial.boxY
-                        }, {
-                            x: e.boxX,
-                            y: e.boxY
-                        }),
-                        s = i.c.getDistanceBetweenPoints({
-                            x: this.initial.boxX,
-                            y: this.initial.boxY
-                        }, {
-                            x: e.boxX,
-                            y: e.boxY
-                        }),
-                        o = i.c.getAngleBetweenPoints({
-                            x: this.previous.boxX,
-                            y: this.previous.boxY
-                        }, {
-                            x: e.boxX,
-                            y: e.boxY
-                        }),
-                        a = i.c.getDistanceBetweenPoints({
-                            x: this.previous.boxX,
-                            y: this.previous.boxY
-                        }, {
-                            x: e.boxX,
-                            y: e.boxY
-                        });
-                    this.distanceAccumulator += a;
-                    let r = 0;
-                    return this.previousEventTimestamp && (r = i.c.getVelocity({
-                        x: this.previous.boxX,
-                        y: this.previous.boxY
-                    }, this.previousEventTimestamp, {
-                        x: e.boxX,
-                        y: e.boxY
-                    }, Date.now())), r && (this.velocityValues.unshift(r), this.velocityValues.length = Math.min(this.velocityValues.length, 5)), {
-                        boxX: e.boxX,
-                        boxY: e.boxY,
-                        pageX: e.pageX,
-                        pageY: e.pageY,
-                        clientX: e.clientX,
-                        clientY: e.clientY,
-                        percentX: e.percentX,
-                        percentY: e.percentY,
-                        translations: e.translations,
-                        isOutsideBox: e.isOutsideBox,
-                        degreesFromInitial: n,
-                        distanceFromInitial: s,
-                        changeXFromInitial: e.boxX - this.initial.boxX,
-                        changeYFromInitial: e.boxY - this.initial.boxY,
-                        degreesFromPrevious: o,
-                        distancefromPrevious: a,
-                        changeXFromPrevious: e.boxX - this.previous.boxX,
-                        changeYFromPrevious: e.boxY - this.previous.boxY,
-                        totalDistance: this.distanceAccumulator,
-                        velocity: r,
-                        normalizedVelocity: this.velocityValues.reduce(((t, e) => t + e)) / this.velocityValues.length,
-                        originalEvent: e.originalEvent,
-                        initial: this.initial,
-                        previous: this.previous,
-                        cancel: e.cancel
-                    }
-                }
-                getTranslations() {
-                    if (!this.cachedElementRect) throw Error("[PointerBox] Element rect is undefined");
-                    const t = [],
-                        e = this.element.children;
-                    for (let n = 0; n < e.length; n++) {
-                        const i = e[n].attributes.getNamedItem("data-pointerboxtranslateid");
-                        if (!i) continue;
-                        const s = i.value;
-                        if (!s) continue;
-                        const o = e[n].attributes.getNamedItem("data-pointerboxtranslatewidth"),
-                            a = e[n].attributes.getNamedItem("data-pointerboxtranslateheight"),
-                            r = (null == o ? void 0 : o.value) ? parseInt(o.value, 10) : this.cachedElementRect.width,
-                            l = (null == a ? void 0 : a.value) ? parseInt(a.value, 10) : this.cachedElementRect.height,
-                            c = e[n].getBoundingClientRect();
-                        t.push({
-                            id: s,
-                            left: c.left - this.cachedElementRect.left,
-                            top: c.top - this.cachedElementRect.top,
-                            x: r / c.width,
-                            y: l / c.height
+                    },
+                    neededText() {
+                        return this.$tc("LOBBY.PLAYERS_NEEDED", this.player.minPlayers - this.player.joinedPlayers)
+                    },
+                    waitingForVIPText() {
+                        return this.$t("LOBBY.WAITING_FOR_VIP", {
+                            name: this.player.vipName
                         })
                     }
-                    return t
-                }
-                applyPolyfill() {
-                    s.isPolyfilled || (s.isPolyfilled = !0, window && window.document && (window.document.elementsFromPoint || (window.document.elementsFromPoint = s.elementsFromPoint)))
-                }
-                static elementsFromPoint(t, e) {
-                    const n = [],
-                        i = [];
-                    let s = null;
-                    do {
-                        const o = window.document.elementFromPoint(t, e);
-                        s !== o ? (s = o, n.push(s), i.push(s.style.pointerEvents), s.style.pointerEvents = "none") : s = null
-                    } while (s);
-                    return n.forEach(((t, e) => {
-                        t.style.pointerEvents = i[e]
-                    })), n
-                }
-            }
-            s.isPolyfilled = !1;
-            const o = new Map,
-                a = {
-                    boxes: new Map,
-                    install(t) {
-                        t.directive("pointerBox", {
-                            inserted(t, e) {
-                                const n = new s(t, {
-                                    restrictToBox: e.modifiers.restrict
-                                });
-                                o.set(t, n)
-                            },
-                            unbind(t) {
-                                var e;
-                                null === (e = o.get(t)) || void 0 === e || e.destroy(), o.delete(t)
+                },
+                methods: {
+                    onCancelClick() {
+                        this.player.responseKey && this.$ecast.updateObject(this.player.responseKey, {
+                            action: "cancel"
+                        }).catch(this.$handleEcastError)
+                    },
+                    onStartClick() {
+                        return e = this, t = void 0, a = function*() {
+                            if (this.player.responseKey) {
+                                if (this.shouldStart && !(yield Promise.resolve(this.shouldStart()))) return;
+                                this.$ecast.updateObject(this.player.responseKey, {
+                                    action: "start"
+                                }).catch(this.$handleEcastError)
                             }
-                        }), t.directive("pointerboxtranslate", {
-                            inserted(t, e) {
-                                var n, i, s;
-                                t.setAttribute("data-pointerboxtranslateid", null !== (n = e.value.id) && void 0 !== n ? n : ""), t.setAttribute("data-pointerboxtranslatewidth", null !== (i = e.value.width) && void 0 !== i ? i : ""), t.setAttribute("data-pointerboxtranslateheight", null !== (s = e.value.height) && void 0 !== s ? s : "")
-                            },
-                            unbind(t) {
-                                t.removeAttribute("data-pointerboxtranslateid"), t.removeAttribute("data-pointerboxtranslatewidth"), t.removeAttribute("data-pointerboxtranslateheight")
+                        }, new((s = void 0) || (s = Promise))((function(n, i) {
+                            function o(e) {
+                                try {
+                                    r(a.next(e))
+                                } catch (e) {
+                                    i(e)
+                                }
                             }
-                        })
+
+                            function l(e) {
+                                try {
+                                    r(a.throw(e))
+                                } catch (e) {
+                                    i(e)
+                                }
+                            }
+
+                            function r(e) {
+                                var t;
+                                e.done ? n(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
+                                    e(t)
+                                }))).then(o, l)
+                            }
+                            r((a = a.apply(e, t || [])).next())
+                        }));
+                        var e, t, s, a
                     }
                 }
-        },
-        17819: (t, e, n) => {
-            "use strict";
-            n.d(e, {
-                Z: () => h
             });
-            var i = function() {
-                var t = this,
-                    e = t.$createElement,
-                    n = t._self._c || e;
-                return n("div", {
+            var r = (0, s(51900).Z)(l, a, [], !1, null, null, null);
+            r.options.__file = "src/apps/vue/components/LobbyActions.vue";
+            const c = r.exports
+        },
+        83933: (e, t, s) => {
+            "use strict";
+            s.d(t, {
+                Z: () => p
+            });
+            var a = function() {
+                var e = this,
+                    t = e.$createElement,
+                    s = e._self._c || t;
+                return e.player && e.player.status ? s("div", {
+                    staticClass: "post-game-actions",
+                    class: {
+                        vip: e.player.hasControls
+                    }
+                }, [e.messageLocation && "top" !== e.messageLocation ? e._e() : s("p", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "POST_GAME.PLAY_AGAIN",
+                        expression: "'POST_GAME.PLAY_AGAIN'"
+                    }],
+                    class: e.localClasses.message
+                }), e._v(" "), e.player.hasControls ? ["waiting" === e.player.status ? s("button", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "POST_GAME.BUTTON_SAME_PLAYERS",
+                        expression: "'POST_GAME.BUTTON_SAME_PLAYERS'"
+                    }],
+                    class: e.localClasses.action,
+                    on: {
+                        click: e.onSamePlayersClick
+                    }
+                }) : e._e(), e._v(" "), "waiting" === e.player.status ? s("button", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "POST_GAME.BUTTON_NEW_PLAYERS",
+                        expression: "'POST_GAME.BUTTON_NEW_PLAYERS'"
+                    }],
+                    class: e.localClasses.action,
+                    on: {
+                        click: e.onNewPlayersClick
+                    }
+                }) : e._e(), e._v(" "), "countdown" === e.player.status ? s("button", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "LOBBY.BUTTON_CANCEL",
+                        expression: "'LOBBY.BUTTON_CANCEL'"
+                    }],
+                    class: e.localClasses.action,
+                    on: {
+                        click: e.onCancelClick
+                    }
+                }) : e._e()] : e.player.gamepadStart ? [s("p", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "LOBBY.WAITING_FOR_GAMEPAD",
+                        expression: "'LOBBY.WAITING_FOR_GAMEPAD'"
+                    }],
+                    class: e.localClasses.status
+                })] : [s("p", {
+                    class: e.localClasses.status
+                }, [e._v(e._s(e.waitingForVIPText))])], e._v(" "), "bottom" === e.messageLocation ? s("p", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "POST_GAME.PLAY_AGAIN",
+                        expression: "'POST_GAME.PLAY_AGAIN'"
+                    }],
+                    class: e.localClasses.message
+                }) : e._e()], 2) : e._e()
+            };
+            a._withStripped = !0;
+            var n = s(2934),
+                i = s.n(n),
+                o = s(65853),
+                l = function(e, t, s, a) {
+                    return new(s || (s = Promise))((function(n, i) {
+                        function o(e) {
+                            try {
+                                r(a.next(e))
+                            } catch (e) {
+                                i(e)
+                            }
+                        }
+
+                        function l(e) {
+                            try {
+                                r(a.throw(e))
+                            } catch (e) {
+                                i(e)
+                            }
+                        }
+
+                        function r(e) {
+                            var t;
+                            e.done ? n(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
+                                e(t)
+                            }))).then(o, l)
+                        }
+                        r((a = a.apply(e, t || [])).next())
+                    }))
+                };
+            const r = i().extend({
+                props: {
+                    shouldStart: Function,
+                    messageLocation: String,
+                    classes: Object,
+                    player: Object
+                },
+                i18n: {
+                    messages: o.s
+                },
+                computed: {
+                    localClasses() {
+                        var e, t, s, a, n, i;
+                        return {
+                            message: null !== (t = null === (e = this.classes) || void 0 === e ? void 0 : e.message) && void 0 !== t ? t : "message",
+                            status: null !== (a = null === (s = this.classes) || void 0 === s ? void 0 : s.status) && void 0 !== a ? a : "status",
+                            action: null !== (i = null === (n = this.classes) || void 0 === n ? void 0 : n.action) && void 0 !== i ? i : "action"
+                        }
+                    },
+                    waitingForVIPText() {
+                        return this.$t("LOBBY.WAITING_FOR_VIP", {
+                            name: this.player.vipName
+                        })
+                    }
+                },
+                methods: {
+                    onSamePlayersClick() {
+                        return l(this, void 0, void 0, (function*() {
+                            if (this.player.responseKey) {
+                                if (this.shouldStart && !(yield Promise.resolve(this.shouldStart()))) return;
+                                this.$ecast.updateObject(this.player.responseKey, {
+                                    action: "samePlayers"
+                                }).catch(this.$handleEcastError)
+                            }
+                        }))
+                    },
+                    onNewPlayersClick() {
+                        return l(this, void 0, void 0, (function*() {
+                            if (this.player.responseKey) {
+                                if (this.shouldStart && !(yield Promise.resolve(this.shouldStart()))) return;
+                                this.$ecast.updateObject(this.player.responseKey, {
+                                    action: "newPlayers"
+                                }).catch(this.$handleEcastError)
+                            }
+                        }))
+                    },
+                    onCancelClick() {
+                        this.player.responseKey && this.$ecast.updateObject(this.player.responseKey, {
+                            action: "cancel"
+                        }).catch(this.$handleEcastError)
+                    }
+                }
+            });
+            var c = (0, s(51900).Z)(r, a, [], !1, null, null, null);
+            c.options.__file = "src/apps/vue/components/PostGameActions.vue";
+            const p = c.exports
+        },
+        17819: (e, t, s) => {
+            "use strict";
+            s.d(t, {
+                Z: () => p
+            });
+            var a = function() {
+                var e = this,
+                    t = e.$createElement,
+                    s = e._self._c || t;
+                return s("div", {
                     staticClass: "draw"
-                }, [n("div", {
+                }, [s("div", {
                     ref: "content",
                     staticClass: "content"
-                }, [n("div", {
+                }, [s("div", {
                     staticClass: "constrain"
-                }, [t.player.prompt ? n("div", {
+                }, [e.player.prompt ? s("div", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: t.player.prompt,
+                        value: e.player.prompt,
                         expression: "player.prompt"
                     }]
-                }) : t._e(), t._v(" "), n("div", {
+                }) : e._e(), e._v(" "), s("div", {
                     ref: "stage",
                     staticClass: "stage",
-                    style: t.stageDimensions
-                }), t._v(" "), n("button", {
+                    style: e.stageDimensions
+                }), e._v(" "), s("button", {
                     on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onSubmitClick.apply(null, arguments)
+                        click: function(t) {
+                            return t.preventDefault(), e.onSubmitClick.apply(null, arguments)
                         }
                     }
-                }, [t._v(t._s(t.player.submitText || "SUBMIT"))])])])])
+                }, [e._v(e._s(e.player.submitText || "SUBMIT"))])])])])
             };
-            i._withStripped = !0;
-            var s = n(2934),
-                o = n.n(s),
-                a = n(32530),
-                r = n(96486);
-            const l = o().extend({
+            a._withStripped = !0;
+            var n = s(2934),
+                i = s.n(n),
+                o = s(32530),
+                l = s(96486);
+            const r = i().extend({
                 props: {
                     player: Object
                 },
@@ -422,494 +379,317 @@
                             width: "auto",
                             height: "auto"
                         };
-                        const t = this.$refs.content.getBoundingClientRect(),
-                            e = this.$refs.stage,
-                            n = e.getBoundingClientRect(),
-                            i = e.parentElement.getBoundingClientRect(),
-                            s = Math.max(.9 * i.width, 240),
-                            o = Math.max(this.windowHeight - t.height + n.height, 240),
-                            a = this.stage.canvas.width,
-                            r = this.stage.canvas.height,
-                            l = Math.min(s / a, o / r);
+                        const e = this.$refs.content.getBoundingClientRect(),
+                            t = this.$refs.stage,
+                            s = t.getBoundingClientRect(),
+                            a = t.parentElement.getBoundingClientRect(),
+                            n = Math.max(.9 * a.width, 240),
+                            i = Math.max(this.windowHeight - e.height + s.height, 240),
+                            o = this.stage.canvas.width,
+                            l = this.stage.canvas.height,
+                            r = Math.min(n / o, i / l);
                         return {
-                            width: a * l + "px",
-                            height: r * l + "px"
+                            width: o * r + "px",
+                            height: l * r + "px"
                         }
                     }
                 },
                 mounted() {
-                    this.onResizeWithContext = (0, r.throttle)(this.onResize.bind(this), 400), window.addEventListener("resize", this.onResizeWithContext), this.setupStage()
+                    this.onResizeWithContext = (0, l.throttle)(this.onResize.bind(this), 400), window.addEventListener("resize", this.onResizeWithContext), this.setupStage()
                 },
                 beforeDestroy() {
                     window.removeEventListener("resize", this.onResizeWithContext), this.stage && this.stage.beforeDestroy()
                 },
                 methods: {
                     setupStage() {
-                        const t = this.$refs.stage,
-                            e = {};
-                        this.player.size && (e.width = this.player.size.width, e.height = this.player.size.height), this.player.thicknesses && (e.thickness = this.player.thicknesses[0]), this.player.colors && (e.color = this.player.colors[0]), this.player.maxPoints && (e.maxPoints = this.player.maxPoints), this.stage = new a.U(t, e), this.stage.on("up", (() => {
-                            var t;
+                        const e = this.$refs.stage,
+                            t = {};
+                        this.player.size && (t.width = this.player.size.width, t.height = this.player.size.height), this.player.thicknesses && (t.thickness = this.player.thicknesses[0]), this.player.colors && (t.color = this.player.colors[0]), this.player.maxPoints && (t.maxPoints = this.player.maxPoints), this.stage = new o.U(e, t), this.stage.on("up", (() => {
+                            var e;
                             if (!this.player.live) return;
-                            const e = (null === (t = this.stage) || void 0 === t ? void 0 : t.getObject()) || {};
-                            e.done = !1, this.$ecast.updateObject(this.player.responseKey, e).catch(this.$handleEcastError)
+                            const t = (null === (e = this.stage) || void 0 === e ? void 0 : e.getObject()) || {};
+                            t.done = !1, this.$ecast.updateObject(this.player.responseKey, t).catch(this.$handleEcastError)
                         }))
                     },
                     onSubmitClick() {
                         if (!this.stage) return;
                         this.isSubmitting = !0, this.stage.canvas.submitting = !0;
-                        const t = this.stage.getObject();
-                        t.done = !0, t.action = "submit", this.$ecast.updateObject(this.player.responseKey, t).catch(this.$handleEcastError)
+                        const e = this.stage.getObject();
+                        e.done = !0, e.action = "submit", this.$ecast.updateObject(this.player.responseKey, e).catch(this.$handleEcastError)
                     },
                     onResize() {
                         this.windowHeight = window.innerHeight
                     }
                 }
             });
-            var c = (0, n(51900).Z)(l, i, [], !1, null, null, null);
+            var c = (0, s(51900).Z)(r, a, [], !1, null, null, null);
             c.options.__file = "src/apps/vue/components/base/Draw.vue";
-            const h = c.exports
+            const p = c.exports
         },
-        74634: (t, e, n) => {
+        74634: (e, t, s) => {
             "use strict";
-            n.d(e, {
-                Z: () => r
+            s.d(t, {
+                Z: () => l
             });
-            var i = function() {
-                var t = this,
-                    e = t.$createElement,
-                    n = t._self._c || e;
-                return n("div", {
+            var a = function() {
+                var e = this,
+                    t = e.$createElement,
+                    s = e._self._c || t;
+                return s("div", {
                     staticClass: "waiting"
-                }, [n("div", {
+                }, [s("div", {
                     staticClass: "constrain"
-                }, [t.player.message ? n("p", {
+                }, [e.player.message ? s("p", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: t.player.message,
+                        value: e.player.message,
                         expression: "player.message"
                     }]
-                }) : t._e()])])
+                }) : e._e()])])
             };
-            i._withStripped = !0;
-            var s = n(2934);
-            const o = n.n(s)().extend({
+            a._withStripped = !0;
+            var n = s(2934);
+            const i = s.n(n)().extend({
                 props: {
                     player: Object
                 }
             });
-            var a = (0, n(51900).Z)(o, i, [], !1, null, null, null);
-            a.options.__file = "src/apps/vue/components/base/Waiting.vue";
-            const r = a.exports
+            var o = (0, s(51900).Z)(i, a, [], !1, null, null, null);
+            o.options.__file = "src/apps/vue/components/base/Waiting.vue";
+            const l = o.exports
         },
-        42903: (t, e, n) => {
+        87986: (e, t, s) => {
             "use strict";
-            n.r(e), n.d(e, {
-                default: () => bt
+            s.r(t), s.d(t, {
+                default: () => ue
             });
-            var i = function() {
-                var t = this,
-                    e = t.$createElement,
-                    n = t._self._c || e;
-                return n("div", {
+            var a = function() {
+                var e = this,
+                    t = e.$createElement,
+                    s = e._self._c || t;
+                return s("div", {
                     staticClass: "main",
-                    class: t.classes,
-                    style: t.themeStyle
-                }, [t.player ? n("div", {
+                    class: e.classes,
+                    style: e.themeStyle
+                }, [e.player ? s("div", {
                     staticClass: "player",
-                    class: t.player.classes
-                }, [n("div", {
+                    class: e.player.classes
+                }, [s("div", {
                     staticClass: "name"
-                }, [t._v(t._s(t.player.name))])]) : t._e(), t._v(" "), t.player ? n("Fallbacks", {
+                }, [e._v(e._s(e.player.name))])]) : e._e(), e._v(" "), e.player ? s("Fallbacks", {
                     attrs: {
-                        player: t.player
+                        player: e.player
                     }
-                }) : t._e(), t._v(" "), t.components ? n("div", {
+                }) : e._e(), e._v(" "), e.components ? s("div", {
                     staticClass: "constrain"
-                }, t._l(t.components.components, (function(t, e) {
-                    return n(t.type + "El", {
-                        key: e,
+                }, e._l(e.components.components, (function(e, t) {
+                    return s(e.type + "El", {
+                        key: t,
                         tag: "component",
                         staticClass: "component",
                         attrs: {
-                            component: t
+                            component: e
                         }
                     })
-                })), 1) : t._e()], 1)
+                })), 1) : e._e()], 1)
             };
-            i._withStripped = !0;
-            var s = n(2934),
-                o = n.n(s),
-                a = function() {
-                    var t = this,
-                        e = t.$createElement,
-                        n = t._self._c || e;
-                    return t.player ? n(t.player.kind, {
+            a._withStripped = !0;
+            var n = s(2934),
+                i = s.n(n),
+                o = function() {
+                    var e = this,
+                        t = e.$createElement,
+                        s = e._self._c || t;
+                    return e.player ? s(e.player.kind, {
                         tag: "component",
                         class: {
-                            fallback: t.applyStyling
+                            fallback: e.applyStyling
                         },
                         attrs: {
-                            player: t.player
+                            player: e.player
                         }
-                    }) : t._e()
+                    }) : e._e()
                 };
-            a._withStripped = !0;
-            var r = function() {
-                var t = this,
-                    e = t.$createElement,
-                    n = t._self._c || e;
-                return n("div", {
+            o._withStripped = !0;
+            var l = function() {
+                var e = this,
+                    t = e.$createElement,
+                    s = e._self._c || t;
+                return s("div", {
                     staticClass: "choices"
-                }, [n("div", {
+                }, [s("div", {
                     staticClass: "constrain"
-                }, [t.player.prompt ? n("p", {
+                }, [e.player.prompt ? s("p", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: t.player.prompt,
+                        value: e.player.prompt,
                         expression: "player.prompt"
                     }]
-                }) : t._e(), t._v(" "), t._l(t.player.choices, (function(e, i) {
-                    return n("button", {
-                        key: i,
+                }) : e._e(), e._v(" "), e._l(e.player.choices, (function(t, a) {
+                    return s("button", {
+                        key: a,
                         class: {
-                            selected: e.isSelected
+                            selected: t.isSelected
                         },
                         attrs: {
-                            disabled: e.isDisabled
+                            disabled: t.isDisabled
                         },
                         on: {
-                            click: function(e) {
-                                return e.preventDefault(), t.onChoiceClick(i)
+                            click: function(t) {
+                                return t.preventDefault(), e.onChoiceClick(a)
                             }
                         }
-                    }, [t._v("\n            " + t._s(e.text) + "\n        ")])
+                    }, [e._v("\n            " + e._s(t.text) + "\n        ")])
                 }))], 2)])
             };
-            r._withStripped = !0;
-            const l = o().extend({
+            l._withStripped = !0;
+            const r = i().extend({
                 props: {
                     player: Object
                 },
                 methods: {
-                    onChoiceClick(t) {
-                        var e, n, i;
-                        const s = this.player.choices[t];
-                        if (s.send) return void this.$ecast.updateObject(this.player.responseKey, s.send).catch(this.$handleEcastError);
-                        const o = {
-                            action: null !== (e = this.player.action) && void 0 !== e ? e : "choice",
-                            [null !== (n = this.player.key) && void 0 !== n ? n : "value"]: null !== (i = s.value) && void 0 !== i ? i : t
+                    onChoiceClick(e) {
+                        var t, s, a;
+                        const n = this.player.choices[e];
+                        if (n.send) return void this.$ecast.updateObject(this.player.responseKey, n.send).catch(this.$handleEcastError);
+                        const i = {
+                            action: null !== (t = this.player.action) && void 0 !== t ? t : "choice",
+                            [null !== (s = this.player.key) && void 0 !== s ? s : "value"]: null !== (a = n.value) && void 0 !== a ? a : e
                         };
-                        this.$ecast.updateObject(this.player.responseKey, o).catch(this.$handleEcastError)
+                        this.$ecast.updateObject(this.player.responseKey, i).catch(this.$handleEcastError)
                     }
                 }
             });
-            var c = n(51900),
-                h = (0, c.Z)(l, r, [], !1, null, null, null);
-            h.options.__file = "src/apps/vue/components/base/Choices.vue";
-            const d = h.exports;
-            var p = function() {
-                var t = this,
-                    e = t.$createElement,
-                    n = t._self._c || e;
-                return n("div", {
-                    staticClass: "doodle"
-                }, [n("div", {
-                    directives: [{
-                        name: "pointerBox",
-                        rawName: "v-pointerBox"
-                    }],
-                    staticClass: "stage",
-                    on: {
-                        pointerboxstart: t.onPointerBoxStart,
-                        pointerboxmove: t.onPointerBoxMove,
-                        pointerboxend: t.onPointerBoxEnd
-                    }
-                }, [n("canvas", {
-                    directives: [{
-                        name: "pointerboxtranslate",
-                        rawName: "v-pointerboxtranslate",
-                        value: {
-                            id: "doodleCanvas",
-                            width: t.player.doodle.size ? t.player.doodle.size.width : 320,
-                            height: t.player.doodle.size ? t.player.doodle.size.height : 320
-                        },
-                        expression: "{\n                id: 'doodleCanvas',\n                width: player.doodle.size ? player.doodle.size.width : 320,\n                height: player.doodle.size ? player.doodle.size.height : 320\n            }"
-                    }],
-                    ref: "canvas"
-                })]), t._v(" "), t.hideUndo ? t._e() : n("button", {
-                    directives: [{
-                        name: "t",
-                        rawName: "v-t",
-                        value: "ACTION.UNDO",
-                        expression: "'ACTION.UNDO'"
-                    }],
-                    attrs: {
-                        disabled: t.isSubmitting
-                    },
-                    on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onUndo.apply(null, arguments)
-                        }
-                    }
-                }), t._v(" "), t.hideSubmit ? t._e() : n("button", {
-                    directives: [{
-                        name: "t",
-                        rawName: "v-t",
-                        value: "ACTION.SUBMIT",
-                        expression: "'ACTION.SUBMIT'"
-                    }],
-                    attrs: {
-                        disabled: t.isSubmitting
-                    },
-                    on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onSubmit.apply(null, arguments)
-                        }
-                    }
-                })])
-            };
-            p._withStripped = !0;
-            var u = n(20854),
-                v = n(19734),
-                m = n(65853),
-                y = function(t, e, n, i) {
-                    return new(n || (n = Promise))((function(s, o) {
-                        function a(t) {
-                            try {
-                                l(i.next(t))
-                            } catch (t) {
-                                o(t)
-                            }
-                        }
-
-                        function r(t) {
-                            try {
-                                l(i.throw(t))
-                            } catch (t) {
-                                o(t)
-                            }
-                        }
-
-                        function l(t) {
-                            var e;
-                            t.done ? s(t.value) : (e = t.value, e instanceof n ? e : new n((function(t) {
-                                t(e)
-                            }))).then(a, r)
-                        }
-                        l((i = i.apply(t, e || [])).next())
-                    }))
-                };
-            o().use(v.O);
-            const b = o().extend({
-                props: {
-                    canvasOptions: Object,
-                    hideSubmit: Boolean,
-                    hideUndo: Boolean,
-                    player: Object
-                },
-                i18n: {
-                    messages: m.s
-                },
-                data: () => ({
-                    canvas: null,
-                    isSubmitting: !1
-                }),
-                watch: {
-                    canvasOptions: function(t) {
-                        var e, n, i, s, o;
-                        this.canvas && (this.canvas.color = null !== (e = t.color) && void 0 !== e ? e : "#000000", this.canvas.layer = null !== (n = t.layer) && void 0 !== n ? n : 0, this.canvas.layers = null !== (i = t.layers) && void 0 !== i ? i : 1, this.canvas.maxPoints = null !== (s = t.maxPoints) && void 0 !== s ? s : Number.MAX_SAFE_INTEGER, this.canvas.weight = null !== (o = t.weight) && void 0 !== o ? o : 4)
-                    },
-                    "player.doodle.key": function() {
-                        this.createCanvas()
-                    },
-                    "player.doodle.lines": function() {
-                        this.canvas && this.canvas.drawLines()
-                    }
-                },
-                mounted() {
-                    this.createCanvas()
-                },
-                methods: {
-                    createCanvas() {
-                        const t = this.$refs.canvas;
-                        this.canvas = new u.J(t, this.player.doodle, this.canvasOptions)
-                    },
-                    onPointerBoxStart(t) {
-                        if (!this.canvas) return;
-                        const e = {
-                            x: t.detail.translations.doodleCanvas.x,
-                            y: t.detail.translations.doodleCanvas.y
-                        };
-                        this.canvas.onStart(e)
-                    },
-                    onPointerBoxMove(t) {
-                        if (!this.canvas) return;
-                        const e = {
-                            x: t.detail.translations.doodleCanvas.x,
-                            y: t.detail.translations.doodleCanvas.y
-                        };
-                        this.canvas.onMove(e)
-                    },
-                    onPointerBoxEnd() {
-                        return y(this, void 0, void 0, (function*() {
-                            if (!this.canvas) return;
-                            const t = this.canvas.onEnd();
-                            if (t) try {
-                                yield this.$ecast.strokeDoodle(this.player.doodle.key, t)
-                            } catch (t) {
-                                this.$handleEcastError(t)
-                            }
-                        }))
-                    },
-                    onSubmit() {
-                        return y(this, void 0, void 0, (function*() {
-                            this.isSubmitting = !0;
-                            try {
-                                yield this.$ecast.lock(this.player.doodle.key)
-                            } catch (t) {
-                                this.isSubmitting = !1, this.$handleEcastError(t)
-                            }
-                        }))
-                    },
-                    onUndo() {
-                        return y(this, void 0, void 0, (function*() {
-                            if (this.canvas) try {
-                                yield this.$ecast.undoDoodle(this.player.doodle.key)
-                            } catch (t) {
-                                this.$handleEcastError(t)
-                            }
-                        }))
-                    }
-                }
-            });
-            var g = (0, c.Z)(b, p, [], !1, null, null, null);
-            g.options.__file = "src/apps/vue/components/base/Doodle.vue";
-            const x = g.exports;
-            var E = n(17819),
-                f = function() {
-                    var t = this,
-                        e = t.$createElement,
-                        n = t._self._c || e;
-                    return n("div", {
+            var c = s(51900),
+                p = (0, c.Z)(r, l, [], !1, null, null, null);
+            p.options.__file = "src/apps/vue/components/base/Choices.vue";
+            const u = p.exports;
+            var h = s(3317),
+                d = s(17819),
+                v = function() {
+                    var e = this,
+                        t = e.$createElement,
+                        s = e._self._c || t;
+                    return s("div", {
                         staticClass: "lobby"
-                    }, [n("div", {
+                    }, [s("div", {
                         staticClass: "constrain"
-                    }, [n("LobbyActions", {
+                    }, [s("LobbyActions", {
                         attrs: {
-                            player: t.player
+                            player: e.player
                         }
                     })], 1)])
                 };
-            f._withStripped = !0;
-            var w = n(13494);
-            const _ = o().extend({
+            v._withStripped = !0;
+            var m = s(13494);
+            const y = i().extend({
                 components: {
-                    LobbyActions: w.Z
+                    LobbyActions: m.Z
                 },
                 props: {
                     player: Object
                 }
             });
-            var C = (0, c.Z)(_, f, [], !1, null, null, null);
-            C.options.__file = "src/apps/vue/components/base/Lobby.vue";
-            const S = C.exports;
-            var O = function() {
-                var t = this,
-                    e = t.$createElement,
-                    n = t._self._c || e;
-                return n("div", {
+            var _ = (0, c.Z)(y, v, [], !1, null, null, null);
+            _.options.__file = "src/apps/vue/components/base/Lobby.vue";
+            const b = _.exports;
+            var g = function() {
+                var e = this,
+                    t = e.$createElement,
+                    s = e._self._c || t;
+                return s("div", {
                     staticClass: "post-game"
-                }, [n("div", {
+                }, [s("div", {
                     staticClass: "constrain"
-                }, [n("PostGameActions", {
+                }, [s("PostGameActions", {
                     attrs: {
-                        player: t.player
+                        player: e.player
                     }
                 })], 1)])
             };
-            O._withStripped = !0;
-            var P = n(83933);
-            const k = o().extend({
+            g._withStripped = !0;
+            var f = s(83933);
+            const x = i().extend({
                 components: {
-                    PostGameActions: P.Z
+                    PostGameActions: f.Z
                 },
                 props: {
                     player: Object
                 }
             });
-            var $ = (0, c.Z)(k, O, [], !1, null, null, null);
-            $.options.__file = "src/apps/vue/components/base/PostGame.vue";
-            const D = $.exports;
-            var T = function() {
-                var t = this,
-                    e = t.$createElement,
-                    n = t._self._c || e;
-                return n("div", {
+            var w = (0, c.Z)(x, g, [], !1, null, null, null);
+            w.options.__file = "src/apps/vue/components/base/PostGame.vue";
+            const C = w.exports;
+            var E = function() {
+                var e = this,
+                    t = e.$createElement,
+                    s = e._self._c || t;
+                return s("div", {
                     staticClass: "single-text-entry"
-                }, [n("div", {
+                }, [s("div", {
                     staticClass: "constrain"
-                }, [t.player.prompt ? n("p", {
+                }, [e.player.prompt ? s("p", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: t.player.prompt,
+                        value: e.player.prompt,
                         expression: "player.prompt"
                     }]
-                }) : t._e(), t._v(" "), t.player.label ? n("label", {
+                }) : e._e(), e._v(" "), e.player.label ? s("label", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: t.player.label,
+                        value: e.player.label,
                         expression: "player.label"
                     }],
                     attrs: {
                         for: "input"
                     }
-                }) : t._e(), t._v(" "), t.player.isMultiline ? n("textarea", {
+                }) : e._e(), e._v(" "), e.player.isMultiline ? s("textarea", {
                     attrs: {
                         id: "input",
-                        rows: t.player.lines || 2,
-                        placeholder: t.player.placeholder,
-                        disabled: t.player.isDisabled
+                        rows: e.player.lines || 2,
+                        placeholder: e.player.placeholder,
+                        disabled: e.player.isDisabled
                     },
                     domProps: {
-                        value: t.value
+                        value: e.value
                     },
                     on: {
-                        input: t.onValueInput
+                        input: e.onValueInput
                     }
-                }) : n("input", {
+                }) : s("input", {
                     attrs: {
                         id: "input",
                         type: "text",
-                        placeholder: t.player.placeholder,
-                        disabled: t.player.isDisabled
+                        placeholder: e.player.placeholder,
+                        disabled: e.player.isDisabled
                     },
                     domProps: {
-                        value: t.value
+                        value: e.value
                     },
                     on: {
-                        input: t.onValueInput
+                        input: e.onValueInput
                     }
-                }), t._v(" "), n("button", {
+                }), e._v(" "), s("button", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: t.player.submitText || "SUBMIT",
+                        value: e.player.submitText || "SUBMIT",
                         expression: "player.submitText || 'SUBMIT'"
                     }],
                     on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onSubmitClick.apply(null, arguments)
+                        click: function(t) {
+                            return t.preventDefault(), e.onSubmitClick.apply(null, arguments)
                         }
                     }
                 })])])
             };
-            T._withStripped = !0;
-            var I = n(44285);
-            const M = o().extend({
+            E._withStripped = !0;
+            var S = s(44285);
+            const O = i().extend({
                 props: {
                     player: Object
                 },
@@ -917,14 +697,14 @@
                     value: ""
                 }),
                 methods: {
-                    onValueInput(t) {
-                        const e = t.target;
-                        this.value = e.value
+                    onValueInput(e) {
+                        const t = e.target;
+                        this.value = t.value
                     },
                     isObjectResponseKey() {
                         if (!this.player.responseType) {
-                            const t = this.$ecast.entities[this.player.responseKey];
-                            if (t && t instanceof I.ObjectEntity) return !0
+                            const e = this.$ecast.entities[this.player.responseKey];
+                            if (e && e instanceof S.ObjectEntity) return !0
                         }
                         return "object" === this.player.responseType
                     },
@@ -932,95 +712,95 @@
                         this.isObjectResponseKey() ? this.sendAsObject() : this.sendAsText()
                     },
                     sendAsObject() {
-                        const t = this.player.send || {
+                        const e = this.player.send || {
                             action: this.player.action || "input"
                         };
-                        t[this.player.key || "value"] = this.value, this.$ecast.updateObject(this.player.responseKey, t).catch(this.$handleEcastError)
+                        e[this.player.key || "value"] = this.value, this.$ecast.updateObject(this.player.responseKey, e).catch(this.$handleEcastError)
                     },
                     sendAsText() {
                         this.$ecast.updateText(this.player.responseKey, this.value).catch(this.$handleEcastError)
                     }
                 }
             });
-            var B = (0, c.Z)(M, T, [], !1, null, null, null);
-            B.options.__file = "src/apps/vue/components/base/SingleTextEntry.vue";
-            const L = B.exports;
-            var j = function() {
-                var t = this,
-                    e = t.$createElement,
-                    n = t._self._c || e;
-                return n("div", {
+            var T = (0, c.Z)(O, E, [], !1, null, null, null);
+            T.options.__file = "src/apps/vue/components/base/SingleTextEntry.vue";
+            const $ = T.exports;
+            var k = function() {
+                var e = this,
+                    t = e.$createElement,
+                    s = e._self._c || t;
+                return s("div", {
                     staticClass: "multi-text-entry"
-                }, [n("div", {
+                }, [s("div", {
                     staticClass: "constrain"
-                }, [t.player.prompt ? n("p", {
+                }, [e.player.prompt ? s("p", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: t.player.prompt,
+                        value: e.player.prompt,
                         expression: "player.prompt"
                     }]
-                }) : t._e(), t._v(" "), t._l(t.player.inputs, (function(e, i) {
-                    return [e.label ? n("label", {
+                }) : e._e(), e._v(" "), e._l(e.player.inputs, (function(t, a) {
+                    return [t.label ? s("label", {
                         directives: [{
                             name: "bb",
                             rawName: "v-bb",
-                            value: e.label,
+                            value: t.label,
                             expression: "input.label"
                         }],
-                        key: "label-" + e.key,
+                        key: "label-" + t.key,
                         attrs: {
-                            for: "input-" + i
+                            for: "input-" + a
                         }
-                    }) : t._e(), t._v(" "), e.isMultiline ? n("textarea", {
-                        key: "input-" + i,
+                    }) : e._e(), e._v(" "), t.isMultiline ? s("textarea", {
+                        key: "input-" + a,
                         attrs: {
-                            id: "input-" + i,
-                            rows: e.lines || 2,
-                            placeholder: e.placeholder,
-                            disabled: e.isDisabled
+                            id: "input-" + a,
+                            rows: t.lines || 2,
+                            placeholder: t.placeholder,
+                            disabled: t.isDisabled
                         },
                         domProps: {
-                            value: t.values[i]
+                            value: e.values[a]
                         },
                         on: {
-                            input: function(e) {
-                                return t.onValueInput(e, i)
+                            input: function(t) {
+                                return e.onValueInput(t, a)
                             }
                         }
-                    }) : n("input", {
-                        key: "input-" + e.key,
+                    }) : s("input", {
+                        key: "input-" + t.key,
                         attrs: {
-                            id: "input-" + i,
+                            id: "input-" + a,
                             type: "text",
-                            placeholder: e.placeholder,
-                            disabled: e.isDisabled
+                            placeholder: t.placeholder,
+                            disabled: t.isDisabled
                         },
                         domProps: {
-                            value: t.values[i]
+                            value: e.values[a]
                         },
                         on: {
-                            input: function(e) {
-                                return t.onValueInput(e, i)
+                            input: function(t) {
+                                return e.onValueInput(t, a)
                             }
                         }
                     })]
-                })), t._v(" "), n("button", {
+                })), e._v(" "), s("button", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: t.player.submitText || "SUBMIT",
+                        value: e.player.submitText || "SUBMIT",
                         expression: "player.submitText || 'SUBMIT'"
                     }],
                     on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onSubmitClick.apply(null, arguments)
+                        click: function(t) {
+                            return t.preventDefault(), e.onSubmitClick.apply(null, arguments)
                         }
                     }
                 })], 2)])
             };
-            j._withStripped = !0;
-            const A = o().extend({
+            k._withStripped = !0;
+            const A = i().extend({
                 props: {
                     player: Object
                 },
@@ -1028,20 +808,20 @@
                     values: []
                 }),
                 beforeMount() {
-                    this.values = this.player.inputs.map((t => {
-                        var e;
-                        return null !== (e = t.value) && void 0 !== e ? e : ""
+                    this.values = this.player.inputs.map((e => {
+                        var t;
+                        return null !== (t = e.value) && void 0 !== t ? t : ""
                     }))
                 },
                 methods: {
-                    onValueInput(t, e) {
-                        const n = t.target;
-                        this.values[e] = n.value
+                    onValueInput(e, t) {
+                        const s = e.target;
+                        this.values[t] = s.value
                     },
                     isObjectResponseKey() {
                         if (!this.player.responseType) {
-                            const t = this.$ecast.entities[this.player.responseKey];
-                            if (t && t instanceof I.ObjectEntity) return !0
+                            const e = this.$ecast.entities[this.player.responseKey];
+                            if (e && e instanceof S.ObjectEntity) return !0
                         }
                         return "object" === this.player.responseType
                     },
@@ -1049,35 +829,35 @@
                         this.isObjectResponseKey() ? this.sendAsObject() : this.sendAsText()
                     },
                     sendAsObject() {
-                        const t = this.player.send || {
+                        const e = this.player.send || {
                             action: this.player.action || "input"
                         };
-                        this.player.inputs.forEach(((e, n) => {
-                            var i;
-                            const s = null !== (i = e.key) && void 0 !== i ? i : `input${n}`;
-                            t[s] = this.values[n]
-                        })), this.$ecast.updateObject(this.player.responseKey, t).catch(this.$handleEcastError)
+                        this.player.inputs.forEach(((t, s) => {
+                            var a;
+                            const n = null !== (a = t.key) && void 0 !== a ? a : `input${s}`;
+                            e[n] = this.values[s]
+                        })), this.$ecast.updateObject(this.player.responseKey, e).catch(this.$handleEcastError)
                     },
                     sendAsText() {
-                        const t = this.player.separator || "|";
-                        this.$ecast.updateText(this.player.responseKey, this.values.join(t)).catch(this.$handleEcastError)
+                        const e = this.player.separator || "|";
+                        this.$ecast.updateText(this.player.responseKey, this.values.join(e)).catch(this.$handleEcastError)
                     }
                 }
             });
-            var R = (0, c.Z)(A, j, [], !1, null, null, null);
-            R.options.__file = "src/apps/vue/components/base/MultiTextEntry.vue";
-            const N = R.exports;
-            var X = n(74634);
-            const Y = o().extend({
+            var P = (0, c.Z)(A, k, [], !1, null, null, null);
+            P.options.__file = "src/apps/vue/components/base/MultiTextEntry.vue";
+            const N = P.exports;
+            var j = s(74634);
+            const B = i().extend({
                 components: {
-                    Choices: d,
-                    Doodle: x,
-                    Draw: E.Z,
-                    Lobby: S,
-                    PostGame: D,
-                    SingleTextEntry: L,
+                    Choices: u,
+                    Doodle: h.Z,
+                    Draw: d.Z,
+                    Lobby: b,
+                    PostGame: C,
+                    SingleTextEntry: $,
                     MultiTextEntry: N,
-                    Waiting: X.Z
+                    Waiting: j.Z
                 },
                 props: {
                     applyStyling: {
@@ -1087,143 +867,143 @@
                     player: Object
                 }
             });
-            var F = (0, c.Z)(Y, a, [], !1, null, null, null);
-            F.options.__file = "src/apps/vue/components/Fallbacks.vue";
-            const z = F.exports;
-            var U = function() {
-                var t = this,
-                    e = t.$createElement,
-                    n = t._self._c || e;
-                return n("div", {
-                    class: t.component.classes
-                }, t._l(t.component.choices, (function(e, i) {
-                    return n("button", {
-                        key: i,
+            var I = (0, c.Z)(B, o, [], !1, null, null, null);
+            I.options.__file = "src/apps/vue/components/Fallbacks.vue";
+            const D = I.exports;
+            var L = function() {
+                var e = this,
+                    t = e.$createElement,
+                    s = e._self._c || t;
+                return s("div", {
+                    class: e.component.classes
+                }, e._l(e.component.choices, (function(t, a) {
+                    return s("button", {
+                        key: a,
                         staticClass: "choice",
-                        class: e.classes,
+                        class: t.classes,
                         attrs: {
-                            disabled: e.isDisabled
+                            disabled: t.isDisabled
                         },
                         on: {
-                            click: function(e) {
-                                return e.preventDefault(), t.onChoiceClick(i)
+                            click: function(t) {
+                                return t.preventDefault(), e.onChoiceClick(a)
                             }
                         }
-                    }, [t._v("\n        " + t._s(e.text) + "\n    ")])
+                    }, [e._v("\n        " + e._s(t.text) + "\n    ")])
                 })), 0)
             };
-            U._withStripped = !0;
-            const Z = o().extend({
+            L._withStripped = !0;
+            const M = i().extend({
                 props: {
                     component: Object
                 },
                 methods: {
-                    classesForChoice(t) {
-                        const e = t.classes || [];
-                        t.isSelected && e.push("selected")
+                    classesForChoice(e) {
+                        const t = e.classes || [];
+                        e.isSelected && t.push("selected")
                     },
-                    onChoiceClick(t) {
-                        var e, n, i;
-                        const s = this.component.choices[t];
-                        if (s.send) return void(this.component.responseEntity ? this.$ecast.updateObject(this.component.responseEntity, s.send).catch(this.$handleEcastError) : this.$ecast.mail(1, s.send).catch(this.$handleEcastError));
-                        const o = {
-                            action: null !== (e = this.component.action) && void 0 !== e ? e : "choice",
-                            [null !== (n = this.component.key) && void 0 !== n ? n : "value"]: null !== (i = s.value) && void 0 !== i ? i : t
+                    onChoiceClick(e) {
+                        var t, s, a;
+                        const n = this.component.choices[e];
+                        if (n.send) return void(this.component.responseEntity ? this.$ecast.updateObject(this.component.responseEntity, n.send).catch(this.$handleEcastError) : this.$ecast.mail(1, n.send).catch(this.$handleEcastError));
+                        const i = {
+                            action: null !== (t = this.component.action) && void 0 !== t ? t : "choice",
+                            [null !== (s = this.component.key) && void 0 !== s ? s : "value"]: null !== (a = n.value) && void 0 !== a ? a : e
                         };
-                        this.component.responseEntity ? this.$ecast.updateObject(this.component.responseEntity, o).catch(this.$handleEcastError) : this.$ecast.mail(1, o).catch(this.$handleEcastError)
+                        this.component.responseEntity ? this.$ecast.updateObject(this.component.responseEntity, i).catch(this.$handleEcastError) : this.$ecast.mail(1, i).catch(this.$handleEcastError)
                     }
                 }
             });
-            var K = (0, c.Z)(Z, U, [], !1, null, null, null);
-            K.options.__file = "src/games/internal/prototype/views/Choices.vue";
-            const V = K.exports;
-            var H = function() {
-                var t = this,
-                    e = t.$createElement,
-                    n = t._self._c || e;
-                return n("div", {
-                    class: t.component.classes,
+            var G = (0, c.Z)(M, L, [], !1, null, null, null);
+            G.options.__file = "src/games/internal/prototype/views/Choices.vue";
+            const R = G.exports;
+            var Z = function() {
+                var e = this,
+                    t = e.$createElement,
+                    s = e._self._c || t;
+                return s("div", {
+                    class: e.component.classes,
                     attrs: {
                         id: "doodle"
                     }
-                }, [t.component.prompt ? n("div", {
+                }, [e.component.prompt ? s("div", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: t.component.prompt,
+                        value: e.component.prompt,
                         expression: "component.prompt"
                     }]
-                }) : t._e(), t._v(" "), n("div", {
+                }) : e._e(), e._v(" "), s("div", {
                     attrs: {
                         id: "tools"
                     }
-                }, [t.component.doodles.length > 1 ? n("div", {
+                }, [e.component.doodles.length > 1 ? s("div", {
                     attrs: {
                         id: "frames"
                     }
-                }, [n("span", [t._v("Frame:")]), t._v(" "), n("select", {
+                }, [s("span", [e._v("Frame:")]), e._v(" "), s("select", {
                     directives: [{
                         name: "model",
                         rawName: "v-model",
-                        value: t.frame,
+                        value: e.frame,
                         expression: "frame"
                     }],
                     attrs: {
                         name: "frame"
                     },
                     on: {
-                        change: function(e) {
-                            var n = Array.prototype.filter.call(e.target.options, (function(t) {
-                                return t.selected
-                            })).map((function(t) {
-                                return "_value" in t ? t._value : t.value
+                        change: function(t) {
+                            var s = Array.prototype.filter.call(t.target.options, (function(e) {
+                                return e.selected
+                            })).map((function(e) {
+                                return "_value" in e ? e._value : e.value
                             }));
-                            t.frame = e.target.multiple ? n : n[0]
+                            e.frame = t.target.multiple ? s : s[0]
                         }
                     }
-                }, t._l(t.component.doodles, (function(e, i) {
-                    return n("option", {
-                        key: "doodle-" + i,
+                }, e._l(e.component.doodles, (function(t, a) {
+                    return s("option", {
+                        key: "doodle-" + a,
                         domProps: {
-                            value: i
+                            value: a
                         }
-                    }, [t._v("\n                    " + t._s(i) + "\n                ")])
-                })), 0)]) : t._e(), t._v(" "), t.component.layers ? n("div", {
+                    }, [e._v("\n                    " + e._s(a) + "\n                ")])
+                })), 0)]) : e._e(), e._v(" "), e.component.layers ? s("div", {
                     attrs: {
                         id: "layers"
                     }
-                }, [n("span", [t._v("Layer:")]), t._v(" "), n("select", {
+                }, [s("span", [e._v("Layer:")]), e._v(" "), s("select", {
                     directives: [{
                         name: "model",
                         rawName: "v-model",
-                        value: t.layer,
+                        value: e.layer,
                         expression: "layer"
                     }],
                     attrs: {
                         name: "layer"
                     },
                     on: {
-                        change: function(e) {
-                            var n = Array.prototype.filter.call(e.target.options, (function(t) {
-                                return t.selected
-                            })).map((function(t) {
-                                return "_value" in t ? t._value : t.value
+                        change: function(t) {
+                            var s = Array.prototype.filter.call(t.target.options, (function(e) {
+                                return e.selected
+                            })).map((function(e) {
+                                return "_value" in e ? e._value : e.value
                             }));
-                            t.layer = e.target.multiple ? n : n[0]
+                            e.layer = t.target.multiple ? s : s[0]
                         }
                     }
-                }, t._l(t.component.layers, (function(e) {
-                    return n("option", {
-                        key: "layer-" + e,
+                }, e._l(e.component.layers, (function(t) {
+                    return s("option", {
+                        key: "layer-" + t,
                         domProps: {
-                            value: e - 1
+                            value: t - 1
                         }
-                    }, [t._v("\n                    " + t._s(e - 1) + "\n                ")])
-                })), 0)]) : t._e(), t._v(" "), t.activeDoodle.weights && t.activeDoodle.weights.length ? n("div", {
+                    }, [e._v("\n                    " + e._s(t - 1) + "\n                ")])
+                })), 0)]) : e._e(), e._v(" "), e.activeDoodle.weights && e.activeDoodle.weights.length ? s("div", {
                     attrs: {
                         id: "weights"
                     }
-                }, [n("button", {
+                }, [s("button", {
                     staticClass: "weight",
                     attrs: {
                         "aria-label": "weight",
@@ -1231,65 +1011,65 @@
                         type: "radio"
                     },
                     on: {
-                        click: t.onChangeWeight
+                        click: e.onChangeWeight
                     }
-                }, [n("div", {
+                }, [s("div", {
                     staticClass: "circle",
                     style: {
-                        width: t.weight + "px",
-                        height: t.weight + "px",
-                        backgroundColor: t.color,
+                        width: e.weight + "px",
+                        height: e.weight + "px",
+                        backgroundColor: e.color,
                         borderRadius: "50%"
                     }
-                })])]) : t._e(), t._v(" "), t.activeDoodle.colors && t.activeDoodle.colors.length ? n("div", {
+                })])]) : e._e(), e._v(" "), e.activeDoodle.colors && e.activeDoodle.colors.length ? s("div", {
                     attrs: {
                         id: "colors"
                     }
-                }, t._l(t.activeDoodle.colors, (function(e, i) {
-                    return n("input", {
-                        key: "color-" + i,
+                }, e._l(e.activeDoodle.colors, (function(t, a) {
+                    return s("input", {
+                        key: "color-" + a,
                         staticClass: "color",
                         style: {
-                            backgroundColor: e
+                            backgroundColor: t
                         },
                         attrs: {
-                            "aria-label": "color " + e,
-                            "data-color": e,
+                            "aria-label": "color " + t,
+                            "data-color": t,
                             name: "colors",
                             type: "radio"
                         },
                         domProps: {
-                            checked: i === t.colorIndex
+                            checked: a === e.colorIndex
                         },
                         on: {
-                            change: function(e) {
-                                return t.onChangeColor(i)
+                            change: function(t) {
+                                return e.onChangeColor(a)
                             }
                         }
                     })
-                })), 0) : t._e()]), t._v(" "), n("div", {
+                })), 0) : e._e()]), e._v(" "), s("div", {
                     attrs: {
                         id: "doodles"
                     }
-                }, t._l(t.component.doodles, (function(e, i) {
-                    return n("BaseDoodle", {
-                        key: "doodle-" + i,
+                }, e._l(e.component.doodles, (function(t, a) {
+                    return s("BaseDoodle", {
+                        key: "doodle-" + a,
                         class: {
-                            inactive: i !== t.frame
+                            inactive: a !== e.frame
                         },
                         attrs: {
-                            "canvas-options": t.canvasOptions,
+                            "canvas-options": e.canvasOptions,
                             player: {
-                                doodle: e
+                                doodle: t
                             },
                             "hide-submit": ""
                         }
                     })
-                })), 1), t._v(" "), n("div", {
+                })), 1), e._v(" "), s("div", {
                     attrs: {
                         id: "actions"
                     }
-                }, [n("button", {
+                }, [s("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
@@ -1297,25 +1077,26 @@
                         expression: "'ACTION.SUBMIT'"
                     }],
                     attrs: {
-                        disabled: t.isSubmitting
+                        disabled: e.isSubmitting
                     },
                     on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onSubmit.apply(null, arguments)
+                        click: function(t) {
+                            return t.preventDefault(), e.onSubmit.apply(null, arguments)
                         }
                     }
                 })])])
             };
-            H._withStripped = !0;
-            const W = o().extend({
+            Z._withStripped = !0;
+            var K = s(65853);
+            const Y = i().extend({
                 components: {
-                    BaseDoodle: x
+                    BaseDoodle: h.Z
                 },
                 props: {
                     component: Object
                 },
                 i18n: {
-                    messages: m.s
+                    messages: K.s
                 },
                 data: () => ({
                     colorIndex: 0,
@@ -1337,48 +1118,48 @@
                         }
                     },
                     color() {
-                        var t, e;
-                        return null !== (e = null === (t = this.activeDoodle.colors) || void 0 === t ? void 0 : t[this.colorIndex]) && void 0 !== e ? e : "#000000"
+                        var e, t;
+                        return null !== (t = null === (e = this.activeDoodle.colors) || void 0 === e ? void 0 : e[this.colorIndex]) && void 0 !== t ? t : "#000000"
                     },
                     weight() {
-                        var t, e;
-                        return null !== (e = null === (t = this.activeDoodle.weights) || void 0 === t ? void 0 : t[this.weightIndex]) && void 0 !== e ? e : 4
+                        var e, t;
+                        return null !== (t = null === (e = this.activeDoodle.weights) || void 0 === e ? void 0 : e[this.weightIndex]) && void 0 !== t ? t : 4
                     }
                 },
                 methods: {
-                    onChangeColor(t) {
-                        var e;
-                        (null === (e = this.activeDoodle.colors) || void 0 === e ? void 0 : e.length) && (this.colorIndex = t)
+                    onChangeColor(e) {
+                        var t;
+                        (null === (t = this.activeDoodle.colors) || void 0 === t ? void 0 : t.length) && (this.colorIndex = e)
                     },
                     onChangeWeight() {
-                        var t;
-                        (null === (t = this.activeDoodle.weights) || void 0 === t ? void 0 : t.length) && (this.weightIndex = (this.weightIndex + 1) % this.activeDoodle.weights.length)
+                        var e;
+                        (null === (e = this.activeDoodle.weights) || void 0 === e ? void 0 : e.length) && (this.weightIndex = (this.weightIndex + 1) % this.activeDoodle.weights.length)
                     },
                     onSubmit() {
-                        this.isSubmitting = !0, this.component.doodles.forEach((t => {
-                            this.$ecast.lock(t.key).catch((t => {
-                                this.isSubmitting = !1, this.$handleEcastError(t)
+                        this.isSubmitting = !0, this.component.doodles.forEach((e => {
+                            this.$ecast.lock(e.key).catch((e => {
+                                this.isSubmitting = !1, this.$handleEcastError(e)
                             }))
                         }))
                     }
                 }
             });
-            var G = (0, c.Z)(W, H, [], !1, null, null, null);
-            G.options.__file = "src/games/internal/prototype/views/Doodle.vue";
-            const J = G.exports;
-            var q = function() {
-                var t = this.$createElement,
-                    e = this._self._c || t;
-                return e("div", {
+            var F = (0, c.Z)(Y, Z, [], !1, null, null, null);
+            F.options.__file = "src/games/internal/prototype/views/Doodle.vue";
+            const U = F.exports;
+            var W = function() {
+                var e = this.$createElement,
+                    t = this._self._c || e;
+                return t("div", {
                     staticClass: "draw"
-                }, [e("div", {
+                }, [t("div", {
                     ref: "stage",
                     staticClass: "stage"
                 })])
             };
-            q._withStripped = !0;
-            var Q = n(32530);
-            const tt = o().extend({
+            W._withStripped = !0;
+            var z = s(32530);
+            const V = i().extend({
                 props: {
                     component: Object
                 },
@@ -1386,109 +1167,109 @@
                     stage: null
                 }),
                 mounted() {
-                    const t = this.$refs.stage,
-                        e = {};
-                    this.component.size && (e.width = this.component.size.width, e.height = this.component.size.height), this.component.lines && (e.lines = this.component.lines), this.stage = new Q.U(t, e)
+                    const e = this.$refs.stage,
+                        t = {};
+                    this.component.size && (t.width = this.component.size.width, t.height = this.component.size.height), this.component.lines && (t.lines = this.component.lines), this.stage = new z.U(e, t)
                 }
             });
-            var et = (0, c.Z)(tt, q, [], !1, null, null, null);
-            et.options.__file = "src/games/internal/prototype/views/Draw.vue";
-            const nt = et.exports;
-            var it = function() {
-                var t = this,
-                    e = t.$createElement;
-                return (t._self._c || e)("img", {
-                    class: t.component.classes,
+            var H = (0, c.Z)(V, W, [], !1, null, null, null);
+            H.options.__file = "src/games/internal/prototype/views/Draw.vue";
+            const J = H.exports;
+            var q = function() {
+                var e = this,
+                    t = e.$createElement;
+                return (e._self._c || t)("img", {
+                    class: e.component.classes,
                     attrs: {
-                        src: t.component.url || t.component.image,
+                        src: e.component.url || e.component.image,
                         alt: "Image"
                     }
                 })
             };
-            it._withStripped = !0;
-            const st = o().extend({
+            q._withStripped = !0;
+            const Q = i().extend({
                 props: {
                     component: Object
                 }
             });
-            var ot = (0, c.Z)(st, it, [], !1, null, null, null);
-            ot.options.__file = "src/games/internal/prototype/views/Image.vue";
-            const at = ot.exports;
-            var rt = function() {
-                var t = this,
-                    e = t.$createElement,
-                    n = t._self._c || e;
-                return n("div", {
+            var X = (0, c.Z)(Q, q, [], !1, null, null, null);
+            X.options.__file = "src/games/internal/prototype/views/Image.vue";
+            const ee = X.exports;
+            var te = function() {
+                var e = this,
+                    t = e.$createElement,
+                    s = e._self._c || t;
+                return s("div", {
                     staticClass: "inputs",
-                    class: t.component.classes
-                }, [t._l(t.component.inputs, (function(e, i) {
-                    return [e.label ? n("label", {
-                        key: i,
-                        class: e.classes,
+                    class: e.component.classes
+                }, [e._l(e.component.inputs, (function(t, a) {
+                    return [t.label ? s("label", {
+                        key: a,
+                        class: t.classes,
                         attrs: {
-                            for: "input-" + i
+                            for: "input-" + a
                         }
-                    }, [t._v("\n            " + t._s(e.label) + "\n        ")]) : t._e(), t._v(" "), "textarea" === e.type ? n("textarea", {
+                    }, [e._v("\n            " + e._s(t.label) + "\n        ")]) : e._e(), e._v(" "), "textarea" === t.type ? s("textarea", {
                         directives: [{
                             name: "model",
                             rawName: "v-model",
-                            value: t.values[i],
+                            value: e.values[a],
                             expression: "values[index]"
                         }],
-                        key: i,
-                        class: e.classes,
+                        key: a,
+                        class: t.classes,
                         attrs: {
-                            id: "input-" + i,
-                            placeholder: e.placeholder,
-                            rows: e.rows || 2
+                            id: "input-" + a,
+                            placeholder: t.placeholder,
+                            rows: t.rows || 2
                         },
                         domProps: {
-                            value: t.values[i]
+                            value: e.values[a]
                         },
                         on: {
-                            input: function(e) {
-                                e.target.composing || t.$set(t.values, i, e.target.value)
+                            input: function(t) {
+                                t.target.composing || e.$set(e.values, a, t.target.value)
                             }
                         }
-                    }) : n("input", {
+                    }) : s("input", {
                         directives: [{
                             name: "model",
                             rawName: "v-model",
-                            value: t.values[i],
+                            value: e.values[a],
                             expression: "values[index]"
                         }],
-                        key: i,
-                        class: e.classes,
+                        key: a,
+                        class: t.classes,
                         attrs: {
                             type: "text",
-                            placeholder: e.placeholder
+                            placeholder: t.placeholder
                         },
                         domProps: {
-                            value: t.values[i]
+                            value: e.values[a]
                         },
                         on: {
-                            input: function(e) {
-                                e.target.composing || t.$set(t.values, i, e.target.value)
+                            input: function(t) {
+                                t.target.composing || e.$set(e.values, a, t.target.value)
                             }
                         }
                     })]
-                })), t._v(" "), t.component.submit ? n("button", {
-                    class: t.component.submit.classes,
+                })), e._v(" "), e.component.submit ? s("button", {
+                    class: e.component.submit.classes,
                     on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onSubmitClick.apply(null, arguments)
+                        click: function(t) {
+                            return t.preventDefault(), e.onSubmitClick.apply(null, arguments)
                         }
                     }
-                }, [t._v("\n        " + t._s(t.component.submit.text || "SUBMIT") + "\n    ")]) : n("button", {
+                }, [e._v("\n        " + e._s(e.component.submit.text || "SUBMIT") + "\n    ")]) : s("button", {
                     on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onSubmitClick.apply(null, arguments)
+                        click: function(t) {
+                            return t.preventDefault(), e.onSubmitClick.apply(null, arguments)
                         }
                     }
-                }, [t._v("SUBMIT")])], 2)
+                }, [e._v("SUBMIT")])], 2)
             };
-            rt._withStripped = !0;
-            const lt = o().extend({
+            te._withStripped = !0;
+            const se = i().extend({
                 props: {
                     component: Object
                 },
@@ -1496,66 +1277,66 @@
                     values: []
                 }),
                 beforeMount() {
-                    this.values = this.component.inputs.map((t => {
-                        var e;
-                        return null !== (e = t.value) && void 0 !== e ? e : ""
+                    this.values = this.component.inputs.map((e => {
+                        var t;
+                        return null !== (t = e.value) && void 0 !== t ? t : ""
                     }))
                 },
                 methods: {
                     onSubmitClick() {
-                        const t = this.component.send || {
+                        const e = this.component.send || {
                             action: this.component.action || "input"
                         };
-                        this.component.inputs.forEach(((e, n) => {
-                            var i;
-                            const s = null !== (i = e.key) && void 0 !== i ? i : `input${n}`;
-                            t[s] = this.values[n]
-                        })), this.component.responseEntity ? this.$ecast.updateObject(this.component.responseEntity, t).catch(this.$handleEcastError) : this.$ecast.mail(1, t).catch(this.$handleEcastError)
+                        this.component.inputs.forEach(((t, s) => {
+                            var a;
+                            const n = null !== (a = t.key) && void 0 !== a ? a : `input${s}`;
+                            e[n] = this.values[s]
+                        })), this.component.responseEntity ? this.$ecast.updateObject(this.component.responseEntity, e).catch(this.$handleEcastError) : this.$ecast.mail(1, e).catch(this.$handleEcastError)
                     }
                 }
             });
-            var ct = (0, c.Z)(lt, rt, [], !1, null, null, null);
-            ct.options.__file = "src/games/internal/prototype/views/Inputs.vue";
-            const ht = ct.exports;
-            var dt = function() {
-                var t = this,
-                    e = t.$createElement;
-                return (t._self._c || e)(t.component.tag || "p", {
+            var ae = (0, c.Z)(se, te, [], !1, null, null, null);
+            ae.options.__file = "src/games/internal/prototype/views/Inputs.vue";
+            const ne = ae.exports;
+            var ie = function() {
+                var e = this,
+                    t = e.$createElement;
+                return (e._self._c || t)(e.component.tag || "p", {
                     tag: "component",
-                    class: t.component.classes
-                }, [t._v(t._s(t.component.text))])
+                    class: e.component.classes
+                }, [e._v(e._s(e.component.text))])
             };
-            dt._withStripped = !0;
-            const pt = o().extend({
+            ie._withStripped = !0;
+            const oe = i().extend({
                 props: {
                     component: Object
                 }
             });
-            var ut = (0, c.Z)(pt, dt, [], !1, null, null, null);
-            ut.options.__file = "src/games/internal/prototype/views/Text.vue";
-            const vt = ut.exports,
-                mt = o().extend({
+            var le = (0, c.Z)(oe, ie, [], !1, null, null, null);
+            le.options.__file = "src/games/internal/prototype/views/Text.vue";
+            const re = le.exports,
+                ce = i().extend({
                     components: {
-                        choicesEl: V,
-                        doodleEl: J,
-                        drawEl: nt,
-                        imageEl: at,
-                        inputsEl: ht,
-                        textEl: vt,
-                        Fallbacks: z
+                        choicesEl: R,
+                        doodleEl: U,
+                        drawEl: J,
+                        imageEl: ee,
+                        inputsEl: ne,
+                        textEl: re,
+                        Fallbacks: D
                     },
                     ecastKeys: {
                         theme: ({
-                            id: t
-                        }) => `theme:${t}`,
+                            id: e
+                        }) => `theme:${e}`,
                         player: ({
-                            id: t
-                        }) => `player:${t}`,
+                            id: e
+                        }) => `player:${e}`,
                         components: {
                             hasDeepRefs: !0,
                             fn: ({
-                                id: t
-                            }) => `components:${t}`
+                                id: e
+                            }) => `components:${e}`
                         }
                     },
                     props: {
@@ -1565,21 +1346,21 @@
                     },
                     computed: {
                         classes() {
-                            var t, e;
-                            return null !== (e = null === (t = this.components) || void 0 === t ? void 0 : t.classes) && void 0 !== e ? e : []
+                            var e, t;
+                            return null !== (t = null === (e = this.components) || void 0 === e ? void 0 : e.classes) && void 0 !== t ? t : []
                         },
                         themeStyle() {
                             if (!this.theme) return "";
-                            const t = this.theme.colors;
-                            let e = "";
-                            return t && (e += `--theme-primary: ${t.primary};`, e += `--theme-secondary: ${t.secondary};`, e += `--theme-highlight: ${t.highlight};`, e += `--theme-background: ${t.background};`), e
+                            const e = this.theme.colors;
+                            let t = "";
+                            return e && (t += `--theme-primary: ${e.primary};`, t += `--theme-secondary: ${e.secondary};`, t += `--theme-highlight: ${e.highlight};`, t += `--theme-background: ${e.background};`), t
                         }
                     }
                 });
-            var yt = (0, c.Z)(mt, i, [], !1, null, null, null);
-            yt.options.__file = "src/games/internal/prototype/views/Main.vue";
-            const bt = yt.exports
+            var pe = (0, c.Z)(ce, a, [], !1, null, null, null);
+            pe.options.__file = "src/games/internal/prototype/views/Main.vue";
+            const ue = pe.exports
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/2903.39c651dd0e9e885970cf.js.map
+//# sourceMappingURL=sourcemaps/7986.18cd0cf878d212903f09.js.map

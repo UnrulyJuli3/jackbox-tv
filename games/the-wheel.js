@@ -286,73 +286,10 @@
                     }
                 }
         },
-        56623: (t, e, s) => {
-            "use strict";
-            s.d(e, {
-                Z: () => p
-            });
-            var n = function() {
-                var t = this,
-                    e = t.$createElement,
-                    s = t._self._c || e;
-                return t.link ? s("a", {
-                    staticClass: "artifact-link",
-                    class: {
-                        "no-content": !t.hasProvidedContent
-                    },
-                    attrs: {
-                        target: "_blank",
-                        href: t.link,
-                        "aria-label": t.$t("POST_GAME.GALLERY_LINK")
-                    },
-                    on: {
-                        click: t.onLinkClick
-                    }
-                }, [t._t("default")], 2) : t._e()
-            };
-            n._withStripped = !0;
-            var i = s(2934),
-                l = s.n(i),
-                a = s(81127),
-                c = s(65853);
-            const o = l().extend({
-                props: {
-                    artifact: Object
-                },
-                i18n: {
-                    messages: c.s
-                },
-                computed: {
-                    link() {
-                        if (this.artifact) return `${this.artifact.rootId.includes("test")?"http":"https"}://${this.artifact.rootId.includes("test")?"games-test.jackbox.tv":"games.jackbox.tv"}/artifact/${this.artifact.categoryId}/${this.artifact.artifactId}/`
-                    },
-                    hasProvidedContent() {
-                        return void 0 !== this.$slots.default
-                    }
-                },
-                mounted() {
-                    this.$analytics.trackEvent({
-                        category: "PostGame",
-                        action: "galleryShown"
-                    })
-                },
-                methods: {
-                    onLinkClick() {
-                        this.$analytics.trackEvent({
-                            category: "PostGame",
-                            action: "galleryClicked"
-                        }), a.Q.setAsViewed(0)
-                    }
-                }
-            });
-            var r = (0, s(51900).Z)(o, n, [], !1, null, null, null);
-            r.options.__file = "src/apps/vue/components/GalleryLink.vue";
-            const p = r.exports
-        },
         21057: (t, e, s) => {
             "use strict";
             s.r(e), s.d(e, {
-                default: () => Ns
+                default: () => ks
             });
             var n = function() {
                 var t = this,
@@ -1418,7 +1355,7 @@
                 })])
             };
             B._withStripped = !0;
-            const k = l().extend({
+            const N = l().extend({
                 props: {
                     theme: String,
                     disabled: Boolean,
@@ -1438,9 +1375,9 @@
                     }
                 }
             });
-            var N = (0, p.Z)(k, B, [], !1, null, "546fca46", null);
-            N.options.__file = "src/games/pp8/the-wheel/views/shared/GemButton.vue";
-            const P = N.exports;
+            var k = (0, p.Z)(N, B, [], !1, null, "546fca46", null);
+            k.options.__file = "src/games/pp8/the-wheel/views/shared/GemButton.vue";
+            const P = k.exports;
             var Z = function() {
                 var t = this,
                     e = t.$createElement,
@@ -3051,7 +2988,7 @@
                     o((n = n.apply(t, e || [])).next())
                 }))
             };
-            const kt = l().extend({
+            const Nt = l().extend({
                 components: {
                     SubmitButton: j,
                     PromptBox: R,
@@ -3127,9 +3064,9 @@
                     }
                 }
             });
-            var Nt = (0, p.Z)(kt, U, [], !1, null, "72218387", null);
-            Nt.options.__file = "src/games/pp8/the-wheel/views/slices/ChooseSlices.vue";
-            const Pt = Nt.exports;
+            var kt = (0, p.Z)(Nt, U, [], !1, null, "72218387", null);
+            kt.options.__file = "src/games/pp8/the-wheel/views/slices/ChooseSlices.vue";
+            const Pt = kt.exports;
             var Zt = function() {
                 var t = this,
                     e = t.$createElement,
@@ -4987,7 +4924,7 @@
             };
             Ae._withStripped = !0;
             var Be = s(55507);
-            const ke = l().extend({
+            const Ne = l().extend({
                 components: {
                     GemButton: P,
                     Input: It,
@@ -5049,9 +4986,9 @@
                     }
                 }
             });
-            var Ne = (0, p.Z)(ke, Ae, [], !1, null, "b7520044", null);
-            Ne.options.__file = "src/games/pp8/the-wheel/views/SingleTextEntry.vue";
-            const Pe = Ne.exports;
+            var ke = (0, p.Z)(Ne, Ae, [], !1, null, "b7520044", null);
+            ke.options.__file = "src/games/pp8/the-wheel/views/SingleTextEntry.vue";
+            const Pe = ke.exports;
             var Ze = function() {
                 var t = this,
                     e = t.$createElement,
@@ -7205,9 +7142,9 @@
                     }
                 }
             });
-            var ks = (0, p.Z)(Bs, n, [], !1, null, null, null);
-            ks.options.__file = "src/games/pp8/the-wheel/views/Main.vue";
-            const Ns = ks.exports
+            var Ns = (0, p.Z)(Bs, n, [], !1, null, null, null);
+            Ns.options.__file = "src/games/pp8/the-wheel/views/Main.vue";
+            const ks = Ns.exports
         },
         66261: t => {
             "use strict";
@@ -7291,4 +7228,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/1057.37cd09b3612f2ec6536c.js.map
+//# sourceMappingURL=sourcemaps/6559.06c89e01b089c6773c43.js.map

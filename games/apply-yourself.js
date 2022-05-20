@@ -1,68 +1,5 @@
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     ["games/apply-yourself"], {
-        56623: (e, t, s) => {
-            "use strict";
-            s.d(t, {
-                Z: () => d
-            });
-            var a = function() {
-                var e = this,
-                    t = e.$createElement,
-                    s = e._self._c || t;
-                return e.link ? s("a", {
-                    staticClass: "artifact-link",
-                    class: {
-                        "no-content": !e.hasProvidedContent
-                    },
-                    attrs: {
-                        target: "_blank",
-                        href: e.link,
-                        "aria-label": e.$t("POST_GAME.GALLERY_LINK")
-                    },
-                    on: {
-                        click: e.onLinkClick
-                    }
-                }, [e._t("default")], 2) : e._e()
-            };
-            a._withStripped = !0;
-            var r = s(2934),
-                n = s.n(r),
-                o = s(81127),
-                i = s(65853);
-            const c = n().extend({
-                props: {
-                    artifact: Object
-                },
-                i18n: {
-                    messages: i.s
-                },
-                computed: {
-                    link() {
-                        if (this.artifact) return `${this.artifact.rootId.includes("test")?"http":"https"}://${this.artifact.rootId.includes("test")?"games-test.jackbox.tv":"games.jackbox.tv"}/artifact/${this.artifact.categoryId}/${this.artifact.artifactId}/`
-                    },
-                    hasProvidedContent() {
-                        return void 0 !== this.$slots.default
-                    }
-                },
-                mounted() {
-                    this.$analytics.trackEvent({
-                        category: "PostGame",
-                        action: "galleryShown"
-                    })
-                },
-                methods: {
-                    onLinkClick() {
-                        this.$analytics.trackEvent({
-                            category: "PostGame",
-                            action: "galleryClicked"
-                        }), o.Q.setAsViewed(0)
-                    }
-                }
-            });
-            var l = (0, s(51900).Z)(c, a, [], !1, null, null, null);
-            l.options.__file = "src/apps/vue/components/GalleryLink.vue";
-            const d = l.exports
-        },
         24872: (e, t, s) => {
             "use strict";
             s.r(t), s.d(t, {
@@ -300,7 +237,7 @@
             var g = (0, c.Z)({}, b, [], !1, null, null, null);
             g.options.__file = "src/games/pp8/apply-yourself/assets/progress/checked.vue";
             const m = g.exports;
-            var y = function() {
+            var w = function() {
                 var e = this.$createElement,
                     t = this._self._c || e;
                 return t("svg", {
@@ -318,10 +255,10 @@
                     }
                 })])])])
             };
-            y._withStripped = !0;
-            var w = (0, c.Z)({}, y, [], !1, null, null, null);
-            w.options.__file = "src/games/pp8/apply-yourself/assets/progress/unchecked.vue";
-            const x = w.exports,
+            w._withStripped = !0;
+            var y = (0, c.Z)({}, w, [], !1, null, null, null);
+            y.options.__file = "src/games/pp8/apply-yourself/assets/progress/unchecked.vue";
+            const x = y.exports,
                 _ = n().extend({
                     components: {
                         Checked: m,
@@ -743,8 +680,8 @@
                     c((a = a.apply(e, t || [])).next())
                 }))
             };
-            const L = ["#9D53BE", "#2A63D9", "#78786A"],
-                j = n().extend({
+            const j = ["#9D53BE", "#2A63D9", "#78786A"],
+                L = n().extend({
                     components: {
                         draggable: R(),
                         TopBar: T,
@@ -825,7 +762,7 @@
                             const e = this.info.color;
                             return {
                                 backgroundColor: e,
-                                color: L.includes(e) ? "var(--highlight)" : "var(--text)",
+                                color: j.includes(e) ? "var(--highlight)" : "var(--text)",
                                 border: `2px solid ${e}`
                             }
                         }
@@ -867,7 +804,7 @@
                         }
                     }
                 });
-            var B = (0, c.Z)(j, P, [], !1, null, null, null);
+            var B = (0, c.Z)(L, P, [], !1, null, null, null);
             B.options.__file = "src/games/pp8/apply-yourself/views/player/Lobby.vue";
             const N = B.exports;
             var F = function() {
@@ -1443,7 +1380,7 @@
             }], !1, null, null, null);
             U.options.__file = "src/games/pp8/apply-yourself/views/player/Magnets.vue";
             const H = U.exports;
-            var Y = function() {
+            var X = function() {
                 var e = this,
                     t = e.$createElement,
                     a = e._self._c || t;
@@ -1545,8 +1482,8 @@
                     }
                 }, [e._v("Skip")])]) : e._e()])
             };
-            Y._withStripped = !0;
-            var X = function(e, t, s, a) {
+            X._withStripped = !0;
+            var Y = function(e, t, s, a) {
                 return new(s || (s = Promise))((function(r, n) {
                     function o(e) {
                         try {
@@ -1594,7 +1531,7 @@
                     },
                     methods: {
                         handleBriefcaseClick() {
-                            return X(this, void 0, void 0, (function*() {
+                            return Y(this, void 0, void 0, (function*() {
                                 if (this.isPlayer(this.player)) {
                                     const e = this.$storage.get(z);
                                     if (e) {
@@ -1625,7 +1562,7 @@
                         },
                         isPlayer: e => void 0 !== e.responseKey,
                         skip() {
-                            return X(this, void 0, void 0, (function*() {
+                            return Y(this, void 0, void 0, (function*() {
                                 if (this.isPlayer(this.player) && this.player.responseKey) try {
                                     yield this.$ecast.updateObject(this.player.responseKey, {
                                         action: "skip"
@@ -1637,7 +1574,7 @@
                         }
                     }
                 });
-            var q = (0, c.Z)(J, Y, [], !1, null, null, null);
+            var q = (0, c.Z)(J, X, [], !1, null, null, null);
             q.options.__file = "src/games/pp8/apply-yourself/views/Logo.vue";
             const Q = q.exports;
             var ee = function() {
@@ -2533,7 +2470,7 @@
                     c((a = a.apply(e, t || [])).next())
                 }))
             };
-            const ye = n().extend({
+            const we = n().extend({
                 props: {
                     audience: Object
                 },
@@ -2563,9 +2500,9 @@
                     }
                 }
             });
-            var we = (0, c.Z)(ye, ge, [], !1, null, null, null);
-            we.options.__file = "src/games/pp8/apply-yourself/views/audience/Voting.vue";
-            const xe = we.exports;
+            var ye = (0, c.Z)(we, ge, [], !1, null, null, null);
+            ye.options.__file = "src/games/pp8/apply-yourself/views/audience/Voting.vue";
+            const xe = ye.exports;
             var _e = function() {
                 var e = this,
                     t = e.$createElement,
@@ -3428,4 +3365,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/4872.af8c665b6be4b6980528.js.map
+//# sourceMappingURL=sourcemaps/2862.3370087ddca248fc7790.js.map

@@ -1,0 +1,731 @@
+@import url(https://fonts.googleapis.com/css?family=Rokkitt:400,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Rokkitt:400,700&display=swap);
+
+.episodes[data-v-468e05a0] {
+    max-height: 90%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #adadad;
+    font-family: "Rokkitt", serif;
+    font-size: 1.4rem;
+    text-align: center;
+    user-select: none;
+    overflow-y: auto
+}
+
+.episodes button[data-v-468e05a0] {
+    width: 100%;
+    margin: 2px 0;
+    padding: 8px 5px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #636363;
+    color: #fff;
+    font-family: inherit;
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -0.03rem;
+    box-shadow: 0 5px 3px 0 rgba(0, 0, 0, .5)
+}
+
+.episodes button[data-v-468e05a0]:active {
+    background-color: #000;
+    box-shadow: none
+}
+
+.episodes button[data-v-468e05a0]:disabled {
+    opacity: .65
+}
+
+.episodes .back[data-v-468e05a0] {
+    margin-bottom: 25px
+}
+
+.episodes .loader[data-v-468e05a0] {
+    margin-bottom: 15px
+}
+
+.episodes .loader .inline-input[data-v-468e05a0] {
+    overflow: hidden
+}
+
+.episodes .loader .inline-input input[data-v-468e05a0],
+.episodes .loader .inline-input input[data-v-468e05a0]::-webkit-input-placeholder {
+    float: left;
+    width: 100%;
+    font-family: inherit;
+    font-size: 2.4rem
+}
+
+.episodes .loader .submit[data-v-468e05a0] {
+    float: right;
+    width: auto;
+    height: 34px;
+    margin: 0;
+    padding: 2px 12px;
+    border-radius: 4px;
+    background-color: #000;
+    box-shadow: none
+}
+
+.episodes .episode[data-v-468e05a0] {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px
+}
+
+.episodes .episode .episode-id[data-v-468e05a0] {
+    display: block
+}
+
+.lobby[data-v-1e91a8ef] {
+    color: #000;
+    font-weight: bold
+}
+
+.lobby .avatars[data-v-1e91a8ef] {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+    -webkit-tap-highlight-color: transparent
+}
+
+.lobby .avatars .avatar[data-v-1e91a8ef] {
+    position: relative;
+    flex: 1 0 25%;
+    max-width: 25%;
+    margin: 0;
+    padding: 25% 0 0;
+    border: 0;
+    background-color: transparent;
+    box-shadow: none
+}
+
+.lobby .avatars .avatar.selected[data-v-1e91a8ef]:disabled {
+    opacity: 1
+}
+
+.lobby .avatars .avatar[data-v-1e91a8ef]:disabled {
+    opacity: .25
+}
+
+.lobby .avatars .avatar img[data-v-1e91a8ef] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+
+.lobby .episodes button[data-v-1e91a8ef],
+.lobby .episodes .episode-title[data-v-1e91a8ef] {
+    margin-top: 10px
+}
+
+.header[data-v-7c2ebeaf] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    background-repeat: repeat-x;
+    background-size: contain;
+    z-index: 1
+}
+
+.header .avatar[data-v-7c2ebeaf] {
+    height: 30px;
+    margin: 0 3px;
+    vertical-align: top
+}
+
+.header .name[data-v-7c2ebeaf] {
+    font-size: 2rem;
+    line-height: 40px;
+    letter-spacing: -0.07rem;
+    text-transform: uppercase
+}
+
+.artifact-link {
+    display: inline-block;
+    width: 100%
+}
+
+.artifact-link.no-content {
+    padding-bottom: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.post-game-actions[data-v-4c9fa129] button {
+    margin-bottom: 10px
+}
+
+.post-game-actions[data-v-4c9fa129] .message {
+    margin-bottom: 5px
+}
+
+.ugc {
+    font-size: 2rem
+}
+
+.ugc textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: inherit;
+    resize: none
+}
+
+.ugc textarea.prompt {
+    float: right;
+    width: calc(100% - 40px);
+    border-radius: 0px 4px 4px 0px
+}
+
+.ugc #prompt,
+.ugc #title {
+    margin-bottom: 20px;
+    text-align: right
+}
+
+.ugc #prompt .create,
+.ugc #title .create {
+    width: auto
+}
+
+.ugc .action-button {
+    width: 100%;
+    min-height: 48px;
+    margin: 5px 0;
+    cursor: pointer
+}
+
+.ugc .action-button:disabled {
+    cursor: not-allowed
+}
+
+.ugc .back {
+    width: auto;
+    margin: 20px auto 0px;
+    padding: 0px 10px
+}
+
+.ugc .episodes-list {
+    margin-top: 10px
+}
+
+.ugc .episodes-list .id {
+    display: block
+}
+
+.ugc .instruction {
+    margin-bottom: 10px;
+    font-weight: bold
+}
+
+.ugc .player-prompt {
+    position: relative;
+    width: 100%;
+    min-height: 40px;
+    padding: 0 50px;
+    background-color: #000 !important;
+    border: 0px solid transparent;
+    border-radius: 7px;
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-align: center;
+    text-transform: none;
+    overflow-wrap: break-word;
+    box-shadow: none
+}
+
+.ugc .player-prompt.other {
+    opacity: .5
+}
+
+.ugc .player-prompt.thriplash::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    width: 36px;
+    height: 19px;
+    background-image: url("quiplash3-tjsp/ugc_player-prompt_thriplash_before.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform: translateY(-50%)
+}
+
+.ugc .player-prompt::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 36px;
+    height: 36px;
+    background-image: url("quiplash3-tjsp/ugc_player-prompt_after.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform: translateY(-50%)
+}
+
+.ugc .prompts-list {
+    margin: 15px 0
+}
+
+.ugc .toggle-thriplash {
+    appearance: none;
+    float: left;
+    width: 40px;
+    height: 45px;
+    margin: 0
+}
+
+.ugc .toggle-thriplash::before {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #000;
+    background-image: url("quiplash3-tjsp/ugc_player-prompt_thriplash_before.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 36px 19px;
+    border-radius: 4px 0px 0px 4px;
+    opacity: .4
+}
+
+.ugc .toggle-thriplash:checked::before {
+    opacity: 1
+}
+
+.ugc .toggle-thriplash:checked:hover::before {
+    opacity: .8
+}
+
+.ugc .toggle-thriplash:hover::before {
+    opacity: .6
+}
+
+.ugc .toggle-visibility {
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    border: 0px solid transparent;
+    background-color: transparent !important;
+    box-shadow: none;
+    vertical-align: middle
+}
+
+.ugc .toggle-visibility img {
+    width: 64px;
+    height: 64px
+}
+
+.voting[data-v-22404244] {
+    color: #000;
+    letter-spacing: -0.08rem
+}
+
+.voting .choice[data-v-22404244] {
+    margin: 5px 0 10px;
+    font-size: 2.1rem;
+    overflow-wrap: break-word
+}
+
+.voting .choice.selected[data-v-22404244] {
+    background-color: #333
+}
+
+.voting .instructions[data-v-22404244] {
+    margin-top: 40px;
+    font-weight: bold
+}
+
+.voting .prompt[data-v-22404244] {
+    margin-top: 20px
+}
+
+.waiting[data-v-442df3a6] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+}
+
+.waiting .logo[data-v-442df3a6] {
+    flex-grow: 1;
+    text-align: start
+}
+
+.waiting .logo img[data-v-442df3a6] {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%)
+}
+
+.waiting .logo img.round[data-v-442df3a6] {
+    width: 50%;
+    max-width: 300px
+}
+
+.waiting .message[data-v-442df3a6] {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    letter-spacing: -0.05rem;
+    overflow-wrap: break-word
+}
+
+.writing[data-v-7d0e76b5] {
+    color: #000;
+    font-size: 2.3rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    text-align: center;
+    letter-spacing: -0.08rem
+}
+
+.writing .answer textarea[data-v-7d0e76b5] {
+    width: 100%;
+    padding: 2px 4px;
+    border: 2px solid rgba(0, 0, 0, .5);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 2.4rem;
+    letter-spacing: inherit;
+    resize: none
+}
+
+.writing .prompt[data-v-7d0e76b5] {
+    display: inline-block;
+    margin-bottom: 12px
+}
+
+.writing .prompt-counter[data-v-7d0e76b5] {
+    margin-top: 15px;
+    font-size: 1.8rem;
+    font-weight: normal
+}
+
+.writing .safety-quip[data-v-7d0e76b5] {
+    margin-top: 35px
+}
+
+.writing .submit[data-v-7d0e76b5] {
+    margin-top: 60px
+}
+
+:root {
+    font-size: 10px
+}
+
+.constrain {
+    height: 100%;
+    padding: 50px 5px 10px
+}
+
+.quiplash3 {
+    height: 100%;
+    background-color: #4c4267;
+    color: #000;
+    font-family: "Rokkitt", serif;
+    font-size: 2.3rem;
+    line-height: 2.3rem;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+.quiplash3.blue button {
+    background-color: #415591
+}
+
+.quiplash3.blue .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_blue_name-header.png")
+}
+
+.quiplash3.blue .stage {
+    background-color: #5e9df0;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_blue_stage.png")
+}
+
+.quiplash3.cactus button {
+    background-color: #2b391f
+}
+
+.quiplash3.cactus .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_cactus_name-header.png")
+}
+
+.quiplash3.cactus .stage {
+    background-color: #629335;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_cactus_stage.png")
+}
+
+.quiplash3.coffin button {
+    background-color: #636363
+}
+
+.quiplash3.coffin .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_coffin_name-header.png")
+}
+
+.quiplash3.coffin .stage {
+    background-color: #8f8f8f;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_coffin_stage.png")
+}
+
+.quiplash3.default button {
+    background-color: #636363
+}
+
+.quiplash3.default .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_coffin_name-header.png")
+}
+
+.quiplash3.default .stage {
+    background-color: #8f8f8f;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_default_stage.png")
+}
+
+.quiplash3.green button {
+    background-color: #35613b
+}
+
+.quiplash3.green .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_green_name-header.png")
+}
+
+.quiplash3.green .stage {
+    background-color: #6dc979;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_green_stage.png")
+}
+
+.quiplash3.kitten button {
+    background-color: #498c7e
+}
+
+.quiplash3.kitten .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_kitten_name-header.png")
+}
+
+.quiplash3.kitten .stage {
+    background-color: #74beac;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_kitten_stage.png")
+}
+
+.quiplash3.moon button {
+    background-color: #684c30
+}
+
+.quiplash3.moon .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_moon_name-header.png")
+}
+
+.quiplash3.moon .stage {
+    background-color: #edaf3f;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_moon_stage.png")
+}
+
+.quiplash3.orange button {
+    background-color: #785730
+}
+
+.quiplash3.orange .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_orange_name-header.png")
+}
+
+.quiplash3.orange .stage {
+    background-color: #e09b4a;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_orange_stage.png")
+}
+
+.quiplash3.pink button {
+    background-color: #6e426b
+}
+
+.quiplash3.pink .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_pink_name-header.png")
+}
+
+.quiplash3.pink .stage {
+    background-color: #e37df5;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_pink_stage.png")
+}
+
+.quiplash3.poop button {
+    background-color: #3b2726
+}
+
+.quiplash3.poop .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_poop_name-header.png")
+}
+
+.quiplash3.poop .stage {
+    background-color: #8f5c47;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_poop_stage.png")
+}
+
+.quiplash3.purple button {
+    background-color: #4a3396
+}
+
+.quiplash3.purple .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_purple_name-header.png")
+}
+
+.quiplash3.purple .stage {
+    background-color: #8c66ff;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_purple_stage.png")
+}
+
+.quiplash3.red button {
+    background-color: #8a4545
+}
+
+.quiplash3.red .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_red_name-header.png")
+}
+
+.quiplash3.red .stage {
+    background-color: #f26f6f;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_red_stage.png")
+}
+
+.quiplash3.star button {
+    background-color: #63802c
+}
+
+.quiplash3.star .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_star_name-header.png")
+}
+
+.quiplash3.star .stage {
+    background-color: #95b758;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_star_stage.png")
+}
+
+.quiplash3.teal button {
+    background-color: #2e657a
+}
+
+.quiplash3.teal .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_teal_name-header.png")
+}
+
+.quiplash3.teal .stage {
+    background-color: #00d5ff;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_teal_stage.png")
+}
+
+.quiplash3.tear button {
+    background-color: #202954
+}
+
+.quiplash3.tear .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_tear_name-header.png")
+}
+
+.quiplash3.tear .stage {
+    background-color: #3962b5;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_tear_stage.png")
+}
+
+.quiplash3.triclops button {
+    background-color: #6644a6
+}
+
+.quiplash3.triclops .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_triclops_name-header.png")
+}
+
+.quiplash3.triclops .stage {
+    background-color: #9d6dd2;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_triclops_stage.png")
+}
+
+.quiplash3.yellow button {
+    background-color: #73703a
+}
+
+.quiplash3.yellow .name-header {
+    background-image: url("quiplash3-tjsp/quiplash3_yellow_name-header.png")
+}
+
+.quiplash3.yellow .stage {
+    background-color: #e0da69;
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_yellow_stage.png")
+}
+
+.quiplash3 .artifact-link {
+    background-image: url("quiplash3-tjsp/quiplash3_artifact-link.png");
+    border-radius: 16px
+}
+
+.locale-de .quiplash3 .artifact-link {
+    background-image: url("quiplash3-tjsp/locale-de_quiplash3_artifact-link.png")
+}
+
+.locale-es .quiplash3 .artifact-link,
+.locale-es-XL .quiplash3 .artifact-link {
+    background-image: url("quiplash3-tjsp/locale-es_quiplash3_artifact-link.png")
+}
+
+.locale-fr .quiplash3 .artifact-link {
+    background-image: url("quiplash3-tjsp/locale-fr_quiplash3_artifact-link.png")
+}
+
+.locale-it .quiplash3 .artifact-link {
+    background-image: url("quiplash3-tjsp/locale-it_quiplash3_artifact-link.png")
+}
+
+.quiplash3 .stage {
+    height: 100%;
+    overflow: auto
+}
+
+.quiplash3 .stage.logo {
+    background: no-repeat center/cover url("quiplash3-tjsp/quiplash3_stage_logo.png")
+}
+
+.quiplash3 .stage.round {
+    background: #000
+}
+
+.quiplash3 button {
+    width: 100%;
+    margin: 2px 0;
+    padding: 8px 5px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #636363;
+    color: #fff;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -0.03rem;
+    box-shadow: 0 5px 3px 0 rgba(0, 0, 0, .5)
+}
+
+.quiplash3 button:active {
+    background-color: #000;
+    box-shadow: none
+}
+
+.quiplash3 button:disabled {
+    opacity: .65
+}
+
+/*# sourceMappingURL=sourcemaps/2427.css.map*/

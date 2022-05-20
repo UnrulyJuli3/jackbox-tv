@@ -9,24 +9,24 @@
                 o = i.n(s),
                 n = i(19755),
                 a = i.n(n),
-                r = i(72316),
-                l = i.n(r),
-                h = i(63574),
-                c = i.n(h),
+                l = i(72316),
+                r = i.n(l),
+                c = i(63574),
+                h = i.n(c),
                 d = i(10972),
                 p = i(2720);
 
-            function u(t, e, i, s, o, n, a) {
+            function m(t, e, i, s, o, n, a) {
                 try {
-                    var r = t[n](a),
-                        l = r.value
+                    var l = t[n](a),
+                        r = l.value
                 } catch (t) {
                     return void i(t)
                 }
-                r.done ? e(l) : Promise.resolve(l).then(s, o)
+                l.done ? e(r) : Promise.resolve(r).then(s, o)
             }
 
-            function m(t) {
+            function u(t) {
                 return function() {
                     var e = this,
                         i = arguments;
@@ -34,11 +34,11 @@
                         var n = t.apply(e, i);
 
                         function a(t) {
-                            u(n, s, o, a, r, "next", t)
+                            m(n, s, o, a, l, "next", t)
                         }
 
-                        function r(t) {
-                            u(n, s, o, a, r, "throw", t)
+                        function l(t) {
+                            m(n, s, o, a, l, "throw", t)
                         }
                         a(void 0)
                     }))
@@ -53,7 +53,7 @@
                     writable: !0
                 }) : t[e] = i, t
             }
-            const v = c().View.extend({
+            const v = h().View.extend({
                 el: "#banner",
                 template: o().template('\n        <div class="banner-image"></div>\n        <div class="banner-text"></div>\n        <div class="banner-cta"></div>\n    '),
                 events: {
@@ -110,15 +110,15 @@
                 }
                 static update(t, e) {
                     var i = this;
-                    return m((function*() {
+                    return u((function*() {
                         e && "PostGame" === e.lobbyState ? (i.view || (yield i.init(t, e)), i.show()) : i.hide()
                     }))()
                 }
                 static init(t) {
                     var e = this;
-                    return m((function*() {
+                    return u((function*() {
                         t ? (e.bannerData = yield e.loadBannerData(t), e.bannerData && (e.view = new v({
-                            model: new(l().Model)(e.bannerData)
+                            model: new(r().Model)(e.bannerData)
                         }), e.isInitialized = !0)) : e.bannerData = !1
                     }))()
                 }
@@ -133,7 +133,7 @@
                     })
                 }
                 static loadBannerData(t) {
-                    return m((function*() {
+                    return u((function*() {
                         try {
                             const e = yield fetch(p.v.banners.url), i = yield e.json();
                             return !(!i || !i.postGameBanners) && i.postGameBanners[t]
@@ -148,19 +148,19 @@
         29014: (t, e, i) => {
             "use strict";
             i.d(e, {
-                C: () => c
+                C: () => h
             });
             var s = i(72316),
                 o = i.n(s),
                 n = i(63574),
                 a = i.n(n),
-                r = i(49273),
-                l = i(19690),
-                h = i(24475);
-            const c = a().CollectionView.extend({
+                l = i(49273),
+                r = i(19690),
+                c = i(24475);
+            const h = a().CollectionView.extend({
                 tagName: "div",
                 className: "choices",
-                childView: t => "input" === t.get("type") ? l.E : "text" === t.get("type") ? h.y : r.r,
+                childView: t => "input" === t.get("type") ? r.E : "text" === t.get("type") ? c.y : l.r,
                 collection: new(o().Collection)([]),
                 initialize(t) {
                     this.listenTo(this.collection, "sync", this.render), this.mergeOptions(t, ["block", "action"])
@@ -184,13 +184,13 @@
                 o = i.n(s),
                 n = i(72316),
                 a = i.n(n),
-                r = i(63574),
-                l = i.n(r),
-                h = i(13469),
-                c = i.n(h),
+                l = i(63574),
+                r = i.n(l),
+                c = i(13469),
+                h = i.n(c),
                 d = i(91434);
-            const p = l().View.extend({
-                template: c().template(d.Z),
+            const p = r().View.extend({
+                template: h().template(d.Z),
                 model: new(a().Model)({}),
                 className() {
                     let t = "button-group btn-group";
@@ -281,33 +281,33 @@
         15059: (t, e, i) => {
             "use strict";
             i.d(e, {
-                P: () => C
+                P: () => w
             });
             var s = i(19755),
                 o = i.n(s),
                 n = i(13469),
                 a = i.n(n),
-                r = i(72316),
-                l = i.n(r),
-                h = i(63574),
-                c = i.n(h),
+                l = i(72316),
+                r = i.n(l),
+                c = i(63574),
+                h = i.n(c),
                 d = i(40543),
                 p = i(44442),
-                u = i(27091),
-                m = i.n(u),
+                m = i(27091),
+                u = i.n(m),
                 g = new URL(i(25900), i.b);
-            const v = '<div class="canvasContainer"> <video id="cameraVideo" class="cameraVideo" autoplay playsinline class=""></video> <canvas id="cameraCanvas" class="cameraCanvas resizableCanvas" width="300px" height="408px" class=""></canvas> <img id="cameraImage" class="cameraImage visuallyhidden"/> </div> <div class="cameraControls"> <button id="exitButton" class="button exitButton"></button> <div class="buttons pre"> <button id="switchButton" class="button switchButton"></button> <button id="snapshotButton" class="button snapshotButton"></button> </div> <div class="buttons post"> <button id="cancelButton" class="button cancelButton"></button> <button id="confirmButton" class="button confirmButton"></button> </div> </div> <div style="display:none"> <img id="Mask" src="' + m()(g) + '"/> </div>';
+            const v = '<div class="canvasContainer"> <video id="cameraVideo" class="cameraVideo" autoplay playsinline class=""></video> <canvas id="cameraCanvas" class="cameraCanvas resizableCanvas" width="300px" height="408px" class=""></canvas> <img id="cameraImage" class="cameraImage visuallyhidden"/> </div> <div class="cameraControls"> <button id="exitButton" class="button exitButton"></button> <div class="buttons pre"> <button id="switchButton" class="button switchButton"></button> <button id="snapshotButton" class="button snapshotButton"></button> </div> <div class="buttons post"> <button id="cancelButton" class="button cancelButton"></button> <button id="confirmButton" class="button confirmButton"></button> </div> </div> <div style="display:none"> <img id="Mask" src="' + u()(g) + '"/> </div>';
 
             function b(t, e, i, s, o, n, a) {
                 try {
-                    var r = t[n](a),
-                        l = r.value
+                    var l = t[n](a),
+                        r = l.value
                 } catch (t) {
                     return void i(t)
                 }
-                r.done ? e(l) : Promise.resolve(l).then(s, o)
+                l.done ? e(r) : Promise.resolve(r).then(s, o)
             }
-            const w = {
+            const C = {
                     type: "camera",
                     width: 300,
                     height: 408,
@@ -332,10 +332,10 @@
                         t.save(), t.translate(this.x, this.y), this.preview ? t.drawImage(this.preview, 0, 0) : this.mirror ? (t.scale(-1, 1), t.drawImage(this.video, this.offsetX - (0, p.o_)().width, this.offsetY, this.finalWidth, this.finalHeight)) : t.drawImage(this.video, this.offsetX, this.offsetY, this.finalWidth, this.finalHeight), t.restore(), !this.preview && this.mask && this.image && (t.scale(1, 1), t.drawImage(this.image, this.x, this.y, (0, p.o_)().width, (0, p.o_)().height))
                     }
                 },
-                C = c().View.extend({
+                w = h().View.extend({
                     template: a().template(v),
                     className: "CameraUser",
-                    model: new(l().Model)({
+                    model: new(r().Model)({
                         image: null,
                         width: 300,
                         height: 408,
@@ -392,7 +392,7 @@
                             }
                         });
                         for (let e = 0; e < t.sprites.length; e++) t.sprites[e].ttl = 0;
-                        this.cameraSprite = (0, p.jy)(w), this.cameraSprite.width = this.model.get("width"), this.cameraSprite.height = this.model.get("height"), this.cameraSprite.mask = this.model.get("mask"), t.sprites.push(this.cameraSprite), t.gameLoop.start(), this.facingMode = "user", this.startCamera(), this.onResize()
+                        this.cameraSprite = (0, p.jy)(C), this.cameraSprite.width = this.model.get("width"), this.cameraSprite.height = this.model.get("height"), this.cameraSprite.mask = this.model.get("mask"), t.sprites.push(this.cameraSprite), t.gameLoop.start(), this.facingMode = "user", this.startCamera(), this.onResize()
                     },
                     startCamera() {
                         var t, e = this;
@@ -433,11 +433,11 @@
                                 var n = t.apply(e, i);
 
                                 function a(t) {
-                                    b(n, s, o, a, r, "next", t)
+                                    b(n, s, o, a, l, "next", t)
                                 }
 
-                                function r(t) {
-                                    b(n, s, o, a, r, "throw", t)
+                                function l(t) {
+                                    b(n, s, o, a, l, "throw", t)
                                 }
                                 a(void 0)
                             }))
@@ -506,10 +506,10 @@
                         if (!i || !s) return;
                         const n = s.width(),
                             a = Math.max(o()(window).innerHeight(), 250),
-                            r = Math.min(n / t, a / e),
-                            l = t * r,
-                            h = e * r;
-                        i.style.width = `${l}px`, i.style.height = `${h}px`, i.width = l, i.height = h
+                            l = Math.min(n / t, a / e),
+                            r = t * l,
+                            c = e * l;
+                        i.style.width = `${r}px`, i.style.height = `${c}px`, i.width = r, i.height = c
                     }
                 })
         },
@@ -522,10 +522,10 @@
                 o = i.n(s),
                 n = i(63574),
                 a = i.n(n),
-                r = i(9659),
-                l = i(15059);
+                l = i(9659),
+                r = i(15059);
 
-            function h(t, e) {
+            function c(t, e) {
                 var i = Object.keys(t);
                 if (Object.getOwnPropertySymbols) {
                     var s = Object.getOwnPropertySymbols(t);
@@ -536,7 +536,7 @@
                 return i
             }
 
-            function c(t, e, i) {
+            function h(t, e, i) {
                 return e in t ? Object.defineProperty(t, e, {
                     value: i,
                     enumerable: !0,
@@ -544,7 +544,7 @@
                     writable: !0
                 }) : t[e] = i, t
             }
-            const d = r.S.extend({
+            const d = l.S.extend({
                     defaults: {
                         size: {
                             width: 300,
@@ -593,7 +593,7 @@
                         }
                     },
                     initialize(t) {
-                        this.cameraView = this.cameraView || new l.P(t), this.listenTo(this.model, "change", this.update, this), this.update()
+                        this.cameraView = this.cameraView || new r.P(t), this.listenTo(this.model, "change", this.update, this), this.update()
                     },
                     update() {
                         this.cameraView.model.set("width", this.model.get("size").width), this.cameraView.model.set("height", this.model.get("size").height), this.cameraView.model.set("mask", this.model.get("mask")), this.cameraView.model.set("sizesToSend", this.model.get("sizesToSend"))
@@ -608,9 +608,9 @@
                         1 === t.length ? this.triggerMethod("client:message", function(t) {
                             for (var e = 1; e < arguments.length; e++) {
                                 var i = null != arguments[e] ? arguments[e] : {};
-                                e % 2 ? h(Object(i), !0).forEach((function(e) {
-                                    c(t, e, i[e])
-                                })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i)) : h(Object(i)).forEach((function(e) {
+                                e % 2 ? c(Object(i), !0).forEach((function(e) {
+                                    h(t, e, i[e])
+                                })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i)) : c(Object(i)).forEach((function(e) {
                                     Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e))
                                 }))
                             }
@@ -635,19 +635,19 @@
         48886: (t, e, i) => {
             "use strict";
             i.d(e, {
-                N: () => c
+                N: () => h
             });
             var s = i(72316),
                 o = i.n(s),
                 n = i(63574),
                 a = i.n(n),
-                r = i(13469),
-                l = i.n(r);
+                l = i(13469),
+                r = i.n(l);
             i(70989);
-            const h = a().View.extend({
+            const c = a().View.extend({
                     tagName: "div",
                     className: "colorSwatch",
-                    template: l().template('<a class="change-color button-color btn"></a>'),
+                    template: r().template('<a class="change-color button-color btn"></a>'),
                     events: {
                         click: "onClick"
                     },
@@ -688,11 +688,11 @@
                         this.triggerMethod("palette:select", this.model)
                     }
                 }),
-                c = a().CollectionView.extend({
+                h = a().CollectionView.extend({
                     tagName: "div",
                     id: "color-buttons",
                     className: "colorPalette",
-                    childView: h,
+                    childView: c,
                     collection: new(o().Collection)([]),
                     initialize() {
                         this.listenTo(this.collection, "sync", this.render)
@@ -707,16 +707,16 @@
         74030: (t, e, i) => {
             "use strict";
             i.d(e, {
-                u: () => c
+                u: () => h
             });
             var s = i(13469),
                 o = i.n(s),
                 n = i(72316),
                 a = i.n(n),
-                r = i(63574),
-                l = i.n(r),
-                h = i(48886);
-            const c = l().View.extend({
+                l = i(63574),
+                r = i.n(l),
+                c = i(48886);
+            const h = r().View.extend({
                 tagName: "div",
                 className: "picker",
                 template: o().template('<ul class="nav nav-colors"> <li class="pull-left button-pad"> <button id="undoButton" class="undo button"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64"><image x="12" y="20" width="41" height="39" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAnCAQAAAA4Y6kNAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhCAUULQu6tVG/AAACyElEQVRIx62WO2gVQRSGvzOzsfAVO6NIKlELBUkhCRhsNZ2otYKNFhYS7MRC7AUt1EKwkmATLSx9oIabQnwRfCCCSpQghhDUSF73WOzs7Mze2eRK8g+77Lz+Pf95zK5wVq7rXwyKkEMRmgBs4wC97GYLm+hgjmm+M0aDp4wDYPz6fHf+xHsZxgAZ1l9gOcRdptBkm2KYASxgyHyz7s4oyk0ycBMARxipIQvbCIfB7yuagQaKcstZCpsZaoOuaEN0AdYrDCiVawjIft7+B6GivKMfHJ0T3vCTVznGzH8SKsoMR518G1u5kvZHDjpLLcawGlird9jHIkFmrRwbuME6msjqUcJeLtFEEaFBb1tblHEm+IWwka10+VorsUAfz9sNzyNO0UOnp+mkh9PcZ7Gy7l7uymUo5SUD3g5Tsa2P4Wj1rNkJS1POcoX1lJVssS1yT/Aj2HFxGUp5IEBwILiCq2AHr/yeMTqWtnKOQW+jLaujBd18dDvm2bN8eC5EwrOatNvFhFt/sp2ID1KcNVktJRx3qy+3l0TnKM8aW0NpeIiiDMObtg6G895Om0jyHP00UR5n3GY76uojXyyuXz4J3XTzGQu1hPCMUfrcd6EtlFGvPxfOoDzJECzR9y2wL+4LEo21ogH8zvwHk0B22Y9lamIsxFeafDNuibpLfF+8h4leUFibwjSTfDAtG8p++RRKrbcR5pnghQksxPuUyJPxaJ5UaazhE68L4QIJH1bvS3sSNtFg0lYI4v+b1tAA7n8phU75wk/BYIJwSJIkpm7WCxfVBePrg8h7IUU1PPV5Oa9NjInSOU4gqaQV0etTEAQN85IKdWllrKDOytyFhHlZlUwQKoKCXAqKVI8ASfZj8XWkuWI1QUCqglpnJKGkQFaMm4Qdoez0TIrQKyyEV2u7jG04o6QTPQtfaAunRhlZ9DVR3615aeL1/wCc0hAjJXcubgAAAABJRU5ErkJggg=="/></svg> </button> </li> <li class="pull-left button-pad"> <button id="thicknessButton" class="thickness button"> <div class="thickness-circle"></div> </button> </li> <li class="pull-right button-pad"> <button id="showPaletteButton" class="showPalette button"> </button> </li> <li class="pull-right button-pad"> <button aria-label="choose color" id="currentColorButton" class="button currentColorButton"> <div id="currentColor" class="currentColor"></div> </button> </li> <li id="color-palette" class="hide"> </li> </ul> <div id="colorPaletteRegion" class="colorPaletteRegion"> </div>'),
@@ -756,7 +756,7 @@
                     }
                 },
                 initialize() {
-                    this.colorPaletteComponent = this.colorPaletteComponent || new h.N({
+                    this.colorPaletteComponent = this.colorPaletteComponent || new c.N({
                         collection: new(a().Collection)
                     }), this.listenTo(this.model, "change", this.update, this)
                 },
@@ -790,20 +790,20 @@
         41393: (t, e, i) => {
             "use strict";
             i.d(e, {
-                d: () => w
+                d: () => C
             });
             var s = i(19755),
                 o = i.n(s),
                 n = i(13469),
                 a = i.n(n),
-                r = i(72316),
-                l = i.n(r),
-                h = i(63574),
-                c = i.n(h),
+                l = i(72316),
+                r = i.n(l),
+                c = i(63574),
+                h = i.n(c),
                 d = i(9659),
                 p = i(40543),
-                u = i(93618),
-                m = i(24475),
+                m = i(93618),
+                u = i(24475),
                 g = i(29014),
                 v = i(74030);
             const b = d.S.extend({
@@ -839,7 +839,7 @@
                         }
                     }
                 }),
-                w = c().View.extend({
+                C = h().View.extend({
                     className: "Draw",
                     template: a().template('<div class="controller-content"> <div class="canvas-container"> <div id="prompt" class="prompt"></div> <div id="toolbar" class="toolbar"></div> <div id="sketchpad"></div> <div id="buttons" class="buttons"></div> <div id="post-sketchpad" class="post-sketchpad"> <div id="submit"> <button id="submitdrawing" class="button submitDrawing">Submit</button><br/> </div> <button id="censorOptions" class="button">Censor Options</button> <div class="footer"></div> </div> </div> </div> '),
                     model: new b,
@@ -876,11 +876,11 @@
                         }
                     },
                     initialize() {
-                        this.promptComponent = this.promptComponent || new m.y({}), this.toolbarComponent = this.toolbarComponent || new v.u({
-                            model: new(l().Model)({})
-                        }), this.sketchpadComponent = this.sketchpadComponent || new u.e({
-                            model: new(l().Model)
-                        }), this.buttonsCollection = this.buttonsCollection || new(l().Collection)([]), this.buttonsComponent = this.buttonsComponent || new g.C({
+                        this.promptComponent = this.promptComponent || new u.y({}), this.toolbarComponent = this.toolbarComponent || new v.u({
+                            model: new(r().Model)({})
+                        }), this.sketchpadComponent = this.sketchpadComponent || new m.e({
+                            model: new(r().Model)
+                        }), this.buttonsCollection = this.buttonsCollection || new(r().Collection)([]), this.buttonsComponent = this.buttonsComponent || new g.C({
                             block: !1,
                             collection: this.buttonsCollection
                         }), this.options.thicknessIndex = -1, this.options.colorIndex = -1, this.drawId = this.model.get("drawId"), this.listenTo(this.model, "change", this.update, this), this.onResizeWithContext = this.onResize.bind(this), window.addEventListener("resize", this.onResizeWithContext)
@@ -990,7 +990,7 @@
                             lines: t,
                             submit: !0
                         }), this.triggerMethod("client:message", e), this.model.get("debug") && p.b.show("custom", {
-                            html: `<textarea style='width:100%; height:400px;'>${JSON.stringify(t)}</textarea>`
+                            html: `<textarea id="lines" style='width:100%; height:400px;'>${JSON.stringify(t)}</textarea><button type="button" onclick="(function(){var copyText = document.querySelector('#lines'); copyText.select(); document.execCommand('copy');})();">Copy to clipboard</button>`
                         }), !1
                     },
                     onObjectFilterError() {
@@ -1004,32 +1004,32 @@
                             s = parseInt(2 * parseInt(o()(".canvasContainer").css("border-left-width"), 10) || 0 + 2 * parseInt(o()(".canvasContainer").css("padding-left"), 10) || 0 + 2 * parseInt(o()(".Draw").css("padding-left"), 10) || 0, 10),
                             n = e.width,
                             a = e.height,
-                            r = Math.min(t.width() - s, 2 * n),
-                            l = Math.max(o()("#controller-container").innerHeight() - i, 250),
-                            h = Math.min(r / n, l / a),
-                            c = n * h,
-                            d = a * h;
-                        e.style.width = `${c}px`, e.style.height = `${d}px`, window.scrollTo(0, 0)
+                            l = Math.min(t.width() - s, 2 * n),
+                            r = Math.max(o()("#controller-container").innerHeight() - i, 250),
+                            c = Math.min(l / n, r / a),
+                            h = n * c,
+                            d = a * c;
+                        e.style.width = `${h}px`, e.style.height = `${d}px`, window.scrollTo(0, 0)
                     }
                 })
         },
         37231: (t, e, i) => {
             "use strict";
             i.d(e, {
-                G: () => w
+                G: () => C
             });
             var s = i(19755),
                 o = i.n(s),
                 n = i(13469),
                 a = i.n(n),
-                r = i(72316),
-                l = i.n(r),
-                h = i(63574),
-                c = i.n(h),
+                l = i(72316),
+                r = i.n(l),
+                c = i(63574),
+                h = i.n(c),
                 d = i(9659),
                 p = i(40543),
-                u = i(24475),
-                m = i(19690),
+                m = i(24475),
+                u = i(19690),
                 g = i(29014),
                 v = i(1169);
             const b = d.S.extend({
@@ -1061,7 +1061,7 @@
                         }
                     }
                 }),
-                w = c().View.extend({
+                C = h().View.extend({
                     className: "EnterSingleText scrollable",
                     template: a().template(v.Z),
                     model: new b,
@@ -1109,14 +1109,14 @@
                         }
                     },
                     initialize() {
-                        this.currentEntry = null, this.shouldSubmit = !1, this.promptComponent = new u.y({
-                            model: new(l().Model)({
+                        this.currentEntry = null, this.shouldSubmit = !1, this.promptComponent = new m.y({
+                            model: new(r().Model)({
                                 text: "",
                                 className: ""
                             })
-                        }), this.inputComponent = this.inputComponent || new m.E({
-                            model: new(l().Model)({})
-                        }), this.buttonsCollection = this.buttonsCollection || new(l().Collection)([{
+                        }), this.inputComponent = this.inputComponent || new u.E({
+                            model: new(r().Model)({})
+                        }), this.buttonsCollection = this.buttonsCollection || new(r().Collection)([{
                             text: "submit"
                         }]), this.buttonsComponent = this.buttonsComponent || new g.C({
                             block: !0,
@@ -1198,23 +1198,23 @@
         19690: (t, e, i) => {
             "use strict";
             i.d(e, {
-                E: () => u
+                E: () => m
             });
             var s = i(19755),
                 o = i.n(s),
                 n = i(13469),
                 a = i.n(n),
-                r = i(72316),
-                l = i.n(r),
-                h = i(63574),
-                c = i.n(h),
+                l = i(72316),
+                r = i.n(l),
+                c = i(63574),
+                h = i.n(c),
                 d = i(3682),
                 p = i(89446);
             i(70989);
-            const u = c().View.extend({
+            const m = h().View.extend({
                 tagName: "div",
                 className: "input",
-                model: new(l().Model)({}),
+                model: new(r().Model)({}),
                 template: a().template('<form> <div class="form-group"> <div class="inputGroup"> <textarea id="input-text-textarea" rows="1" class="form-control jbg-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea> <span class="inlineSubmit"> <button type="submit" class="btn btn-default inlineSubmitButton" type="button"><span class="inlineSubmitText">Send</span></button> </span> <span id="helpBlock2" class="help-block errorText"></span> <div class="charCountDisplay"><span class="charRemaining">70</span></div> </div> </div> </form>'),
                 events: {
                     "keypress textarea": "onKeypress",
@@ -1333,34 +1333,34 @@
         52650: (t, e, i) => {
             "use strict";
             i.d(e, {
-                W: () => f
+                W: () => k
             });
             var s = i(19755),
                 o = i.n(s),
                 n = i(40543),
                 a = i(81127),
-                r = i(72316),
-                l = i.n(r),
-                h = i(63574),
-                c = i.n(h),
+                l = i(72316),
+                r = i.n(l),
+                c = i(63574),
+                h = i.n(c),
                 d = i(9659),
                 p = i(89446),
-                u = i(24475),
-                m = i(29014),
+                m = i(24475),
+                u = i(29014),
                 g = i(13469),
                 v = i.n(g),
                 b = i(79023);
 
-            function w(t, e, i, s, o, n, a) {
+            function C(t, e, i, s, o, n, a) {
                 try {
-                    var r = t[n](a),
-                        l = r.value
+                    var l = t[n](a),
+                        r = l.value
                 } catch (t) {
                     return void i(t)
                 }
-                r.done ? e(l) : Promise.resolve(l).then(s, o)
+                l.done ? e(r) : Promise.resolve(r).then(s, o)
             }
-            const C = d.S.extend({
+            const w = d.S.extend({
                     defaults: {
                         canChangeName: !1,
                         playerIsVIP: !1,
@@ -1415,7 +1415,7 @@
                         }
                     }
                 }),
-                y = c().View.extend({
+                y = h().View.extend({
                     tagName: "button",
                     template: v().template('<span class="flex-item"></span>'),
                     className() {
@@ -1458,10 +1458,10 @@
                         this.stickit()
                     }
                 }),
-                f = c().View.extend({
+                k = h().View.extend({
                     className: "Lobby scrollable",
                     template: v().template(b.Z),
-                    model: new C,
+                    model: new w,
                     titleComponent: null,
                     choicesListView: null,
                     charactersListView: null,
@@ -1526,12 +1526,12 @@
                     },
                     strings: {},
                     initialize() {
-                        this.titleComponent = new u.y({
-                            model: new(l().Model)({})
-                        }), this.choicesListView = this.choicesListView || new m.C, this.charactersListView = new(c().CollectionView)({
+                        this.titleComponent = new m.y({
+                            model: new(r().Model)({})
+                        }), this.choicesListView = this.choicesListView || new u.C, this.charactersListView = new(h().CollectionView)({
                             childView: y,
                             className: "charactersList",
-                            collection: new(l().Collection)
+                            collection: new(r().Collection)
                         }), this.listenTo(this.model, "change", this.update, this)
                     },
                     update() {
@@ -1636,10 +1636,10 @@
                                             confirmButton: "cancelButton"
                                         },
                                         didOpen() {
-                                            const t = new m.C({
+                                            const t = new u.C({
                                                     el: ".censorOptionsModal",
                                                     action: "censor",
-                                                    collection: new(l().Collection)
+                                                    collection: new(r().Collection)
                                                 }),
                                                 i = [{
                                                     type: "text",
@@ -1672,10 +1672,10 @@
                                 background: e.model.get("playerInfo") && e.model.get("playerInfo").bgColor ? e.model.get("playerInfo").bgColor : null,
                                 padding: "10px 5px",
                                 didOpen: () => {
-                                    const t = new m.C({
+                                    const t = new u.C({
                                         el: ".episodesModal",
                                         action: "episode",
-                                        collection: new(l().Collection)([])
+                                        collection: new(r().Collection)([])
                                     });
                                     t.collection.add({
                                         html: i.model.get("strings").vip_episodes_back || "Back",
@@ -1720,11 +1720,11 @@
                                 var n = e.apply(t, i);
 
                                 function a(t) {
-                                    w(n, s, o, a, r, "next", t)
+                                    C(n, s, o, a, l, "next", t)
                                 }
 
-                                function r(t) {
-                                    w(n, s, o, a, r, "throw", t)
+                                function l(t) {
+                                    C(n, s, o, a, l, "throw", t)
                                 }
                                 a(void 0)
                             }))
@@ -1767,11 +1767,11 @@
                 o = i.n(s),
                 n = i(63574),
                 a = i.n(n),
-                r = i(9659),
-                l = i(81127),
-                h = i(13469),
-                c = i.n(h);
-            const d = r.S.extend({
+                l = i(9659),
+                r = i(81127),
+                c = i(13469),
+                h = i.n(c);
+            const d = l.S.extend({
                     defaults: {
                         message: {
                             text: null
@@ -1782,7 +1782,7 @@
                 }),
                 p = a().View.extend({
                     className: "Logo",
-                    template: c().template('<div id="image" class="logo logo-image"></div> <div id="message" class="message"><h2 class="messageText"></h2></div> <div id="action" class="action"></div> <div id="artifactId" class="artifactContainer text"> <a id="artifactLink" aria-label="Visit the Gallery" class="artifactLink" target="_blank"> <button id="artifactButton" class="artifactButton"></button> </a> </div> '),
+                    template: h().template('<div id="image" class="logo logo-image"></div> <div id="message" class="message"><h2 class="messageText"></h2></div> <div id="action" class="action"></div> <div id="artifactId" class="artifactContainer text"> <a id="artifactLink" aria-label="Visit the Gallery" class="artifactLink" target="_blank"> <button id="artifactButton" class="artifactButton"></button> </a> </div> '),
                     model: new d,
                     events: {
                         touchstart: "onTouchStart",
@@ -1842,27 +1842,27 @@
                         this.triggerMethod("track:event", {
                             category: "PostGame",
                             action: "galleryClicked"
-                        }), l.Q.setAsViewed(0)
+                        }), r.Q.setAsViewed(0)
                     }
                 })
         },
         24340: (t, e, i) => {
             "use strict";
             i.d(e, {
-                v: () => U
+                v: () => j
             });
             var s = i(19755),
                 o = i.n(s),
                 n = i(13469),
                 a = i.n(n),
-                r = i(72316),
-                l = i.n(r),
-                h = i(55507),
-                c = i(63574),
-                d = i.n(c),
+                l = i(72316),
+                r = i.n(l),
+                c = i(55507),
+                h = i(63574),
+                d = i.n(h),
                 p = i(10972),
-                u = i(40543),
-                m = i(81127);
+                m = i(40543),
+                u = i(81127);
             const g = {
                 en: {
                     LANGUAGE_NAME: "English",
@@ -1912,15 +1912,15 @@
             };
             var v = i(59965),
                 b = i(41393),
-                w = i(37231),
-                C = i(52650),
+                C = i(37231),
+                w = i(52650),
                 y = i(34813),
-                f = i(97079),
-                x = (i(70989), i(9659)),
-                k = i(49273),
-                _ = i(51474),
+                k = i(97079),
+                f = (i(70989), i(9659)),
+                x = i(49273),
+                T = i(51474),
                 S = i(24475);
-            const T = x.S.extend({
+            const I = f.S.extend({
                     defaults: {
                         choiceId: void 0,
                         type: "single",
@@ -1942,11 +1942,11 @@
                         }
                     }
                 }),
-                I = d().View.extend({
+                _ = d().View.extend({
                     tagName: "div",
                     className: "sortable-item",
                     template: a().template("<div class='text'></div>"),
-                    model: new(l().Model)({}),
+                    model: new(r().Model)({}),
                     bindings: {
                         ":el": {
                             attributes: [{
@@ -1960,19 +1960,19 @@
                         this.stickit()
                     }
                 }),
-                E = d().CollectionView.extend({
+                R = d().CollectionView.extend({
                     tagName: "div",
                     className: "sortable-collection",
-                    childView: I,
-                    collection: new(l().Collection)([]),
+                    childView: _,
+                    collection: new(r().Collection)([]),
                     initialize(t) {
                         this.listenTo(this.collection, "sync", this.render), this.mergeOptions(t, ["block"])
                     }
                 }),
-                R = d().View.extend({
+                E = d().View.extend({
                     className: "SorterView",
                     template: a().template('\n        <div id="rankedChoicesRegion"></div>\n        <div class="instructions">Choose where this item ranks:</div>\n        <div id="unrankedChoicesRegion"></div>\n        <div id="lockInRegion"></div>\n    '),
-                    model: new(l().Model)({
+                    model: new(r().Model)({
                         rankedLength: 1,
                         choices: []
                     }),
@@ -1999,14 +1999,14 @@
                         lockInRegion: "#lockInRegion"
                     },
                     initialize() {
-                        this.rankedCollectionView = this.rankedCollectionView || new E({
-                            collection: new(l().Collection)([])
-                        }), this.unrankedCollectionView = this.unrankedCollectionView || new E({
+                        this.rankedCollectionView = this.rankedCollectionView || new R({
+                            collection: new(r().Collection)([])
+                        }), this.unrankedCollectionView = this.unrankedCollectionView || new R({
                             className: "sortable-collection unranked",
-                            collection: new(l().Collection)([])
-                        }), this.lockInView = this.lockInView || new k.r({
+                            collection: new(r().Collection)([])
+                        }), this.lockInView = this.lockInView || new x.r({
                             block: !1,
-                            model: new(l().Model)({
+                            model: new(r().Model)({
                                 action: "lock",
                                 html: "Lock In"
                             })
@@ -2019,12 +2019,12 @@
                         const t = this.model.get("choices"),
                             e = t.slice(0, 1),
                             i = t.slice(1);
-                        this.rankedSortable && this.rankedSortable.destroy(), this.rankedCollectionView.collection.set(e), this.rankedSortable = _.ZP.create(this.rankedCollectionView.el, {
+                        this.rankedSortable && this.rankedSortable.destroy(), this.rankedCollectionView.collection.set(e), this.rankedSortable = T.ZP.create(this.rankedCollectionView.el, {
                             group: "shared",
                             onSort: this.handleOnSort.bind(this),
                             animation: 100,
                             delay: 100
-                        }), this.unrankedSortable && this.unrankedSortable.destroy(), this.unrankedCollectionView.collection.set(i), this.unrankedSortable = _.ZP.create(this.unrankedCollectionView.el, {
+                        }), this.unrankedSortable && this.unrankedSortable.destroy(), this.unrankedCollectionView.collection.set(i), this.unrankedSortable = T.ZP.create(this.unrankedCollectionView.el, {
                             className: "unranked",
                             group: {
                                 name: "shared",
@@ -2052,15 +2052,15 @@
                 L = d().View.extend({
                     className: "Sortable scrollable",
                     template: a().template('<div id="controller" class="state-controller controller-content"> <div id="prompt" class="prompt text"></div> <div class="error text-danger"></div> <div id="choicesRegion"></div> <div id="chosen" class="chosen text"></div> <div class="makeSingleChoiceDone"> <span class="doneText"></span> </div> </div>'),
-                    model: new T,
+                    model: new I,
                     regions: {
                         prompt: "#prompt",
                         choices: "#choicesRegion"
                     },
                     initialize() {
                         this.promptComponent = this.promptComponent || new S.y({
-                            model: new(l().Model)
-                        }), this.sorterView = this.sorterView || new R({}), this.listenTo(this.model, "change", this.update, this)
+                            model: new(r().Model)
+                        }), this.sorterView = this.sorterView || new E({}), this.listenTo(this.model, "change", this.update, this)
                     },
                     onAttach() {
                         this.showChildView("prompt", this.promptComponent), this.showChildView("choices", this.sorterView)
@@ -2087,7 +2087,7 @@
             const A = d().View.extend({
                     className: "RadialView",
                     template: a().template('<svg id="range-picker" class="range-picker" viewBox="-40 -40 80 80"> <defs> <radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"> <stop offset="0%" style="stop-color:#000;stop-opacity:.5"/> <stop offset="60%" style="stop-color:#000;stop-opacity:.9"/> <stop offset="80%" style="stop-color:#000;stop-opacity:.9"/> <stop offset="100%" style="stop-color:#000;stop-opacity:.7"/> </radialGradient> <svg id="Layer_3" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 263.67 271.33"> <title>astroIcon</title> <path class="cls-1" d="M253.83,108.17H210.89A57.83,57.83,0,0,1,160,138.5H140a57.83,57.83,0,0,1-50.89-30.33H46.17a19.5,19.5,0,0,0-19.5,19.5v11a19.5,19.5,0,0,0,19.5,19.5H70.4a19.5,19.5,0,0,1,19.5,19.5V259.8a17.37,17.37,0,0,0,17.36,17.37H115A17.37,17.37,0,0,0,132.4,259.8V236.53a17.37,17.37,0,0,1,17.37-17.36h0a17.36,17.36,0,0,1,17.36,17.36V259.8a17.37,17.37,0,0,0,17.37,17.37h9a17.37,17.37,0,0,0,17.36-17.37V177.67a19.5,19.5,0,0,1,19.5-19.5h23.49a19.5,19.5,0,0,0,19.5-19.5v-11A19.5,19.5,0,0,0,253.83,108.17Z" transform="translate(-18.17 -14.33)"/> <rect class="cls-1" x="64" y="8.5" width="135.67" height="115.67" rx="57.83" ry="57.83"/> </svg> <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" height="55" width="40" xml:space="preserve" viewBox="-20 -27.5 40 55" y="0px" x="0px" id="Layer_1" version="1.1"><metadata id="metadata10"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs id="defs8"/> <path style="fill:#fff" d="m -20,27.5 20,-55 20,55 -20,-13 z" class="st0" id="aimArrow"/> </svg> </defs> <circle class="background" r="16" cx="0" cy="0"/> <circle class="background-gradient" r="32" cx="0" cy="0" fill="url(#grad1)"/> <circle class="background-border" r="33" cx="0" cy="0" stroke="black" stroke-width="2" fill="none"/> <circle id="health-display" class="health-display" r="33" cx="0" cy="0"/> <circle class="circle-deadzone" fill="black" fill-opacity="0.8" r="1" cx="0" cy="0" stroke="white" stroke-width="0.3" stroke-dasharray="3.5 1.52"/> <circle class="crosshair-center" r="1" cx="0" cy="0"/> <circle class="circle-border-white" r="32" cx="0" cy="0" stroke="#ffffff" stroke-width="0.3" fill="none"/> <line class="line-helper-left" x1="-32" y1="0" x2="0" y2="0"></line> <line class="line-helper-right" x1="32" y1="0" x2="0" y2="0"></line> <circle class="locked-in-fade" r="17" cx="0" cy="0"/> <line class="locked-in-line" x1="0" y1="0" x2="0" y2="0" display="inline"></line> <use class="aimArrow" xlink:href="#Layer_1" transform="rotate(180)" x="-2" y="-2.5" width="4" height="5"></use> <use class="astro" xlink:href="#Layer_3" transform="translate(-8, -8)" width="16" height="16"></use> <text id="text" class="text" x="0" y="10" text-anchor="middle" font-size="30" stroke="white">H</text> </svg>'),
-                    model: new(l().Model)({
+                    model: new(r().Model)({
                         isTouching: !1,
                         angle: 0,
                         vector: {
@@ -2313,7 +2313,7 @@
                         return i
                     }
                 }),
-                V = x.S.extend({
+                V = f.S.extend({
                     defaults: {
                         shotId: void 0,
                         state: "Shoot",
@@ -2427,7 +2427,7 @@
                     },
                     initialize() {
                         this.radialComponent = new A({
-                            model: new(l().Model)({
+                            model: new(r().Model)({
                                 isTouching: !1,
                                 angle: 0,
                                 vector: {
@@ -2462,7 +2462,7 @@
                                     Stun: [45, 60, 45, 60, 45, 60],
                                     SuperBlaster: [45, 60, 45, 60, 45, 60]
                                 } [this.model.get("weapon").id];
-                                u.b.vibrate(t)
+                                m.b.vibrate(t)
                             }
                             this.notified = !0
                         } else this.notified = !1
@@ -2471,7 +2471,7 @@
                         this.showChildView("radial", this.radialComponent), this.stickit()
                     },
                     onAttach() {
-                        this.update(), this.onResize(), u.b.vibrate()
+                        this.update(), this.onResize(), m.b.vibrate()
                     },
                     onResize() {
                         const t = o()(".radial"),
@@ -2482,17 +2482,17 @@
                         t.css("width", `${n}px`), t.css("height", `${n}px`), window.scrollTo(0, 0)
                     }
                 });
-            var D = i(47214),
-                B = i(266);
+            var B = i(47214),
+                D = i(266);
 
             function N(t, e, i, s, o, n, a) {
                 try {
-                    var r = t[n](a),
-                        l = r.value
+                    var l = t[n](a),
+                        r = l.value
                 } catch (t) {
                     return void i(t)
                 }
-                r.done ? e(l) : Promise.resolve(l).then(s, o)
+                l.done ? e(r) : Promise.resolve(r).then(s, o)
             }
 
             function P(t, e) {
@@ -2510,7 +2510,7 @@
                 for (var e = 1; e < arguments.length; e++) {
                     var i = null != arguments[e] ? arguments[e] : {};
                     e % 2 ? P(Object(i), !0).forEach((function(e) {
-                        j(t, e, i[e])
+                        U(t, e, i[e])
                     })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i)) : P(Object(i)).forEach((function(e) {
                         Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e))
                     }))
@@ -2518,7 +2518,7 @@
                 return t
             }
 
-            function j(t, e, i) {
+            function U(t, e, i) {
                 return e in t ? Object.defineProperty(t, e, {
                     value: i,
                     enumerable: !0,
@@ -2526,13 +2526,13 @@
                     writable: !0
                 }) : t[e] = i, t
             }
-            const U = d().View.extend({
+            const j = d().View.extend({
                 appId: "main",
                 appTag: "main",
-                appVersion: "4.1.28",
+                appVersion: "4.2.0",
                 currentState: null,
                 currentLayout: null,
-                template: a().template(B.Z),
+                template: a().template(D.Z),
                 playerTopBar: null,
                 className() {
                     return `pt-page ${this.getOption("appTag")}`
@@ -2568,7 +2568,7 @@
                     }
                 },
                 initialize(t) {
-                    this.mergeOptions(t, ["appId", "appTag"]), this.locale = "en", this.playerTopBar = this.playerTopBar || new v.p, this.onEntityDidChangeWithContext = this.onEntityDidChange.bind(this), this.onTextDescriptionsWithContext = this.onTextDescriptions.bind(this), this.onRoomWasDestroyedWithContext = this.onRoomWasDestroyed.bind(this), this.onDisconnectedWithContext = this.onDisconnected.bind(this), this.onConnectionMessageWithContext = this.onConnectionMessage.bind(this), p.app.client.on("client:entityDidChange", this.onEntityDidChangeWithContext), p.app.client.on("client:textDescriptions", this.onTextDescriptionsWithContext), p.app.client.on("client:roomWasDestroyed", this.onRoomWasDestroyedWithContext), p.app.client.on("client:disconnected", this.onDisconnectedWithContext), p.app.client.on("client:connection", this.onConnectionMessageWithContext), this.model = new(l().Model)({});
+                    this.mergeOptions(t, ["appId", "appTag"]), this.locale = "en", this.playerTopBar = this.playerTopBar || new v.p, this.onEntityDidChangeWithContext = this.onEntityDidChange.bind(this), this.onTextDescriptionsWithContext = this.onTextDescriptions.bind(this), this.onRoomWasDestroyedWithContext = this.onRoomWasDestroyed.bind(this), this.onDisconnectedWithContext = this.onDisconnected.bind(this), this.onConnectionMessageWithContext = this.onConnectionMessage.bind(this), p.app.client.on("client:entityDidChange", this.onEntityDidChangeWithContext), p.app.client.on("client:textDescriptions", this.onTextDescriptionsWithContext), p.app.client.on("client:roomWasDestroyed", this.onRoomWasDestroyedWithContext), p.app.client.on("client:disconnected", this.onDisconnectedWithContext), p.app.client.on("client:connection", this.onConnectionMessageWithContext), this.model = new(r().Model)({});
                     const e = p.app.client.parseEntities();
                     this.model.set(e), this.model.on({
                         "change:player": this.setBlob,
@@ -2597,13 +2597,13 @@
                         case "Draw":
                             return this.setLayout(b.d);
                         case "EnterSingleText":
-                            return this.setLayout(w.G);
+                            return this.setLayout(C.G);
                         case "Lobby":
-                            return this.setLayout(C.W);
+                            return this.setLayout(w.W);
                         case "Logo":
                             return this.setLayout(y.s);
                         case "MakeSingleChoice":
-                            return this.setLayout(f.E);
+                            return this.setLayout(k.E);
                         case "Shoot":
                             return this.setLayout(G);
                         case "Sortable":
@@ -2640,7 +2640,7 @@
                 },
                 update: a().debounce((function() {
                     const t = this.model.get("blob");
-                    t && (this.willUpdate(), t.playerInfo ? this.playerTopBar.model.set(t.playerInfo) : this.playerTopBar.model.clear(), this.currentState && this.currentState === t.state ? this.currentLayout && this.currentLayout.model.set(t) : (this.updateLayout(), this.currentLayout && this.currentLayout.model.set(t), this.throttledTrackScreenView || (this.throttledTrackScreenView = a().throttle(this.trackScreenView.bind(this), 48e4)), this.throttledTrackScreenView(this.getOption("appTag"))), t.textDescriptions && this.setTextDescriptions(t.textDescriptions), D.E.update(this.getOption("appTag"), t), t.artifact && m.Q.add(t.artifact, p.app.client.appTag), this.didUpdate())
+                    t && (this.willUpdate(), t.playerInfo ? this.playerTopBar.model.set(t.playerInfo) : this.playerTopBar.model.clear(), this.currentState && this.currentState === t.state ? this.currentLayout && this.currentLayout.model.set(t) : (this.updateLayout(), this.currentLayout && this.currentLayout.model.set(t), this.throttledTrackScreenView || (this.throttledTrackScreenView = a().throttle(this.trackScreenView.bind(this), 48e4)), this.throttledTrackScreenView(this.getOption("appTag"))), t.textDescriptions && this.setTextDescriptions(t.textDescriptions), B.E.update(this.getOption("appTag"), t), t.artifact && u.Q.add(t.artifact, p.app.client.appTag), this.didUpdate())
                 }), 25),
                 willUpdate() {},
                 didUpdate() {},
@@ -2667,7 +2667,7 @@
                 },
                 showTwitchBroadcasterDialog(t) {
                     let e = `\n            <div class='icon-${p.app.client.roles.broadcaster.platform}'>\n                ${p.app.client.roles.broadcaster.name}\n            </div>`;
-                    e += "\n            <div class='success'>\n                You have successfully connected your account to the Jackbox Audience Kit Twitch Extension.\n            </div>", this.lacksAudience ? e += "<div class='warning'>THIS GAME DOESN'T HAVE AN AUDIENCE FEATURE</div>" : p.app.client.roomInfo.audienceEnabled || (e += "<div class='warning'>THIS ROOM DOESN'T HAVE THE AUDIENCE SETTING ENABLED</div>"), u.b.show("custom", {
+                    e += "\n            <div class='success'>\n                You have successfully connected your account to the Jackbox Audience Kit Twitch Extension.\n            </div>", this.lacksAudience ? e += "<div class='warning'>THIS GAME DOESN'T HAVE AN AUDIENCE FEATURE</div>" : p.app.client.roomInfo.audienceEnabled || (e += "<div class='warning'>THIS ROOM DOESN'T HAVE THE AUDIENCE SETTING ENABLED</div>"), m.b.show("custom", {
                         html: e,
                         position: "bottom",
                         timer: t,
@@ -2698,7 +2698,7 @@
                     })
                 },
                 onRoomWasDestroyed() {
-                    p.app.storage && p.app.storage.isSupported && (p.app.storage.remove("roomCode"), p.app.storage.remove("reconnect")), u.b.show("error", {
+                    p.app.storage && p.app.storage.isSupported && (p.app.storage.remove("roomCode"), p.app.storage.remove("reconnect")), m.b.show("error", {
                         titleText: g[this.locale].STRING_ERROR_SERVER_ROOM_DISCONNECTED,
                         text: g[this.locale].STRING_ERROR_SERVER_ROOM_DESTROYED,
                         willClose: () => {
@@ -2707,7 +2707,7 @@
                     })
                 },
                 onDisconnected() {
-                    u.b.show("error", {
+                    m.b.show("error", {
                         titleText: g[this.locale].STRING_ERROR_SERVER_ROOM_DISCONNECTED,
                         text: g[this.locale].STRING_ERROR_SERVER_ROOM_DISCONNECTED,
                         willClose: () => {
@@ -2717,7 +2717,7 @@
                 },
                 onConnectionMessage(t) {
                     const e = `${t.status} ${t.attempt?`${t.attempt}/5`:""}`;
-                    if (u.b.show("toast", {
+                    if (m.b.show("toast", {
                             text: e
                         }), "connected" === t.status) {
                         const t = p.app.client.parseEntities();
@@ -2731,17 +2731,17 @@
                             if (t.textKey) try {
                                 yield p.app.client.updateText(t.textKey, t.val)
                             } catch (e) {
-                                if (e instanceof h.EcastEntityNotFound || e instanceof h.EcastPermissionDenied) console.error(`Couldn't update text entity ${t.textKey}: ${e.message}`);
+                                if (e instanceof c.EcastEntityNotFound || e instanceof c.EcastPermissionDenied) console.error(`Couldn't update text entity ${t.textKey}: ${e.message}`);
                                 else {
-                                    if (!(e instanceof h.EcastFilterError)) throw console.error(`Unhandled error updating text entity ${t.textKey}`), e;
+                                    if (!(e instanceof c.EcastFilterError)) throw console.error(`Unhandled error updating text entity ${t.textKey}`), e;
                                     i.currentLayout.onTextFilterError && i.currentLayout.onTextFilterError(e)
                                 }
                             } else if (t.objectKey) try {
                                 yield p.app.client.updateObject(t.objectKey, t.val)
                             } catch (e) {
-                                if (e instanceof h.EcastEntityNotFound || e instanceof h.EcastPermissionDenied) console.error(`Couldn't update object entity ${t.objectKey}: ${e.message}`);
+                                if (e instanceof c.EcastEntityNotFound || e instanceof c.EcastPermissionDenied) console.error(`Couldn't update object entity ${t.objectKey}: ${e.message}`);
                                 else {
-                                    if (!(e instanceof h.EcastFilterError)) throw console.error(`Unhandled error updating object entity ${t.objectKey}`), e;
+                                    if (!(e instanceof c.EcastFilterError)) throw console.error(`Unhandled error updating object entity ${t.objectKey}`), e;
                                     i.currentLayout.onObjectFilterError && i.currentLayout.onObjectFilterError(e)
                                 }
                             } else {
@@ -2775,11 +2775,11 @@
                             var n = e.apply(t, i);
 
                             function a(t) {
-                                N(n, s, o, a, r, "next", t)
+                                N(n, s, o, a, l, "next", t)
                             }
 
-                            function r(t) {
-                                N(n, s, o, a, r, "throw", t)
+                            function l(t) {
+                                N(n, s, o, a, l, "throw", t)
                             }
                             a(void 0)
                         }))
@@ -2814,24 +2814,24 @@
         97079: (t, e, i) => {
             "use strict";
             i.d(e, {
-                E: () => C
+                E: () => w
             });
             var s = i(19755),
                 o = i.n(s),
                 n = i(13469),
                 a = i.n(n),
-                r = i(72316),
-                l = i.n(r),
-                h = i(63574),
-                c = i.n(h),
+                l = i(72316),
+                r = i.n(l),
+                c = i(63574),
+                h = i.n(c),
                 d = i(86455),
                 p = i.n(d),
-                u = i(40543),
-                m = i(9659),
+                m = i(40543),
+                u = i(9659),
                 g = i(24475),
                 v = i(29014),
                 b = i(66246);
-            const w = m.S.extend({
+            const C = u.S.extend({
                     defaults: {
                         choiceId: void 0,
                         type: "single",
@@ -2854,10 +2854,10 @@
                         }
                     }
                 }),
-                C = c().View.extend({
+                w = h().View.extend({
                     className: "MakeSingleChoice scrollable",
                     template: a().template(b.Z),
-                    model: new w,
+                    model: new C,
                     sessionModule: "vote",
                     sessionName: " Vote",
                     regions: {
@@ -2909,10 +2909,10 @@
                     },
                     initialize() {
                         this.promptComponent = this.promptComponent || new g.y({
-                            model: new(l().Model)
+                            model: new(r().Model)
                         }), this.choicesList = this.choicesList || new v.C({
                             action: "choose",
-                            collection: new(l().Collection)
+                            collection: new(r().Collection)
                         }), this.selected = [], this.listenTo(this.model, "change", this.update, this)
                     },
                     onBeforeDestroy() {
@@ -2936,7 +2936,7 @@
                         this.showChildView("prompt", this.promptComponent), this.showChildView("choices", this.choicesList), this.stickit()
                     },
                     onAttach() {
-                        this.update(), u.b.vibrate()
+                        this.update(), m.b.vibrate()
                     },
                     onChildviewChildviewButtonChoose(t) {
                         const e = t.get("action") || "choose",
@@ -3046,16 +3046,16 @@
         59965: (t, e, i) => {
             "use strict";
             i.d(e, {
-                p: () => h
+                p: () => c
             });
             var s = i(13469),
                 o = i.n(s),
                 n = i(72316),
                 a = i.n(n),
-                r = i(63574),
-                l = i.n(r);
+                l = i(63574),
+                r = i.n(l);
             i(70989);
-            const h = l().View.extend({
+            const c = r().View.extend({
                 className: "playerTopBarView",
                 template: o().template('<div id="player" class="playerTopBar"> <div id="playericon" class="playerIcon"></div> <div id="playername" class="playerName controller-text"></div> </div>'),
                 model: new(a().Model),
@@ -3197,32 +3197,32 @@
                     s * this.lastMouseChangeVector.x + o * this.lastMouseChangeVector.y < 0 && (this.tipCanvasCTX && this.canvasCTX.drawImage(this.tipCanvasCTX.canvas, 0, 0), this.smoothedMouseX = this.lastMouse.x, this.lastSmoothedMouse.x = this.lastMouse.x, this.smoothedMouseY = this.lastMouse.y, this.lastSmoothedMouse.y = this.lastMouse.y, this.lastRotation += Math.PI, this.lastThickness *= this.options.tipTaperFactor), this.smoothedMouseX += this.options.smoothingFactor * (e - this.smoothedMouseX), this.smoothedMouseY += this.options.smoothingFactor * (i - this.smoothedMouseY);
                     const n = this.smoothedMouseX - this.lastSmoothedMouse.x,
                         a = this.smoothedMouseY - this.lastSmoothedMouse.y,
-                        r = Math.sqrt(n * n + a * a);
-                    let l;
-                    l = 0 !== r ? Math.PI / 2 + Math.atan2(a, n) : 0;
-                    const h = this.options.minThickness * t + this.options.thicknessFactor * r,
-                        c = this.lastThickness + this.options.thicknessSmoothingFactor * (h - this.lastThickness);
-                    void 0 === this.lastRotation && (this.lastRotation = l);
-                    const d = null !== this.lastRotation ? Math.sin(this.lastRotation) : Math.sin(l),
-                        p = null !== this.lastRotation ? Math.cos(this.lastRotation) : Math.sin(l),
-                        u = Math.sin(l),
-                        m = Math.cos(l),
+                        l = Math.sqrt(n * n + a * a);
+                    let r;
+                    r = 0 !== l ? Math.PI / 2 + Math.atan2(a, n) : 0;
+                    const c = this.options.minThickness * t + this.options.thicknessFactor * l,
+                        h = this.lastThickness + this.options.thicknessSmoothingFactor * (c - this.lastThickness);
+                    void 0 === this.lastRotation && (this.lastRotation = r);
+                    const d = null !== this.lastRotation ? Math.sin(this.lastRotation) : Math.sin(r),
+                        p = null !== this.lastRotation ? Math.cos(this.lastRotation) : Math.sin(r),
+                        m = Math.sin(r),
+                        u = Math.cos(r),
                         g = this.lastThickness * d,
                         v = this.lastThickness * p,
-                        b = c * u,
-                        w = c * m,
-                        C = .33 * r * d,
-                        y = -.33 * r * p,
-                        f = this.lastSmoothedMouse.x + v + C,
-                        x = this.lastSmoothedMouse.y + g + y,
-                        k = this.lastSmoothedMouse.x - v + C,
-                        _ = this.lastSmoothedMouse.y - g + y;
-                    this.canvasCTX.beginPath(), this.canvasCTX.moveTo(this.lastSmoothedMouse.x + v, this.lastSmoothedMouse.y + g), this.canvasCTX.quadraticCurveTo(f, x, this.smoothedMouseX + w, this.smoothedMouseY + b), this.canvasCTX.lineTo(this.smoothedMouseX - w, this.smoothedMouseY - b), this.canvasCTX.quadraticCurveTo(k, _, this.lastSmoothedMouse.x - v, this.lastSmoothedMouse.y - g), this.canvasCTX.closePath(), this.canvasCTX.fill(), this.canvasCTX.stroke();
-                    const S = this.options.tipTaperFactor * c;
-                    this.tipCanvasCTX.clearRect(0, 0, this.tipCanvasCTX.canvas.width, this.tipCanvasCTX.canvas.height), this.tipCanvasCTX.beginPath(), this.tipCanvasCTX.arc(e, i, S, 0, 2 * Math.PI, !0), this.tipCanvasCTX.closePath(), this.tipCanvasCTX.fill(), this.tipCanvasCTX.stroke(), this.tipCanvasCTX.beginPath(), this.tipCanvasCTX.moveTo(this.smoothedMouseX + w, this.smoothedMouseY + b), this.tipCanvasCTX.lineTo(e + this.options.tipTaperFactor * w, i + this.options.tipTaperFactor * b), this.tipCanvasCTX.lineTo(e - this.options.tipTaperFactor * w, i - this.options.tipTaperFactor * b), this.tipCanvasCTX.lineTo(this.smoothedMouseX - w, this.smoothedMouseY - b), this.tipCanvasCTX.closePath(), this.tipCanvasCTX.fill(), this.tipCanvasCTX.stroke(), this.lastSmoothedMouse = {
+                        b = h * m,
+                        C = h * u,
+                        w = .33 * l * d,
+                        y = -.33 * l * p,
+                        k = this.lastSmoothedMouse.x + v + w,
+                        f = this.lastSmoothedMouse.y + g + y,
+                        x = this.lastSmoothedMouse.x - v + w,
+                        T = this.lastSmoothedMouse.y - g + y;
+                    this.canvasCTX.beginPath(), this.canvasCTX.moveTo(this.lastSmoothedMouse.x + v, this.lastSmoothedMouse.y + g), this.canvasCTX.quadraticCurveTo(k, f, this.smoothedMouseX + C, this.smoothedMouseY + b), this.canvasCTX.lineTo(this.smoothedMouseX - C, this.smoothedMouseY - b), this.canvasCTX.quadraticCurveTo(x, T, this.lastSmoothedMouse.x - v, this.lastSmoothedMouse.y - g), this.canvasCTX.closePath(), this.canvasCTX.fill(), this.canvasCTX.stroke();
+                    const S = this.options.tipTaperFactor * h;
+                    this.tipCanvasCTX.clearRect(0, 0, this.tipCanvasCTX.canvas.width, this.tipCanvasCTX.canvas.height), this.tipCanvasCTX.beginPath(), this.tipCanvasCTX.arc(e, i, S, 0, 2 * Math.PI, !0), this.tipCanvasCTX.closePath(), this.tipCanvasCTX.fill(), this.tipCanvasCTX.stroke(), this.tipCanvasCTX.beginPath(), this.tipCanvasCTX.moveTo(this.smoothedMouseX + C, this.smoothedMouseY + b), this.tipCanvasCTX.lineTo(e + this.options.tipTaperFactor * C, i + this.options.tipTaperFactor * b), this.tipCanvasCTX.lineTo(e - this.options.tipTaperFactor * C, i - this.options.tipTaperFactor * b), this.tipCanvasCTX.lineTo(this.smoothedMouseX - C, this.smoothedMouseY - b), this.tipCanvasCTX.closePath(), this.tipCanvasCTX.fill(), this.tipCanvasCTX.stroke(), this.lastSmoothedMouse = {
                         x: this.smoothedMouseX,
                         y: this.smoothedMouseY
-                    }, this.lastRotation = l, this.lastThickness = c, this.lastMouseChangeVector = {
+                    }, this.lastRotation = r, this.lastThickness = h, this.lastMouseChangeVector = {
                         x: s,
                         y: o
                     }, this.lastMouse = {
@@ -3245,17 +3245,17 @@
         93618: (t, e, i) => {
             "use strict";
             i.d(e, {
-                e: () => u
+                e: () => m
             });
             var s = i(19755),
                 o = i.n(s),
                 n = i(13469),
                 a = i.n(n),
-                r = i(63574),
-                l = i.n(r),
-                h = i(97718);
+                l = i(63574),
+                r = i.n(l),
+                c = i(97718);
 
-            function c(t, e, i) {
+            function h(t, e, i) {
                 return e in t ? Object.defineProperty(t, e, {
                     value: i,
                     enumerable: !0,
@@ -3281,8 +3281,8 @@
             class p {
                 constructor(t) {
                     let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                    c(this, "canvasSelector", void 0), c(this, "canvas", void 0), c(this, "ctx", void 0), c(this, "options", void 0), c(this, "history", void 0), c(this, "layerNames", ["backgroundSketch", "highlighterSketch", "highlighterLineSketch", "markerSketch", "markerLineSketch"]), this.canvasSelector = t, this.canvas = o()(this.canvasSelector)[0], this.ctx = this.canvas.getContext("2d"), this.options = Object.assign(d, e), this.history = [], this.layerNames.forEach((t => {
-                        const e = new h.v(this.canvas.width, this.canvas.height, this.options.sketchOptions);
+                    h(this, "canvasSelector", void 0), h(this, "canvas", void 0), h(this, "ctx", void 0), h(this, "options", void 0), h(this, "history", void 0), h(this, "layerNames", ["backgroundSketch", "highlighterSketch", "highlighterLineSketch", "markerSketch", "markerLineSketch"]), this.canvasSelector = t, this.canvas = o()(this.canvasSelector)[0], this.ctx = this.canvas.getContext("2d"), this.options = Object.assign(d, e), this.history = [], this.layerNames.forEach((t => {
+                        const e = new c.v(this.canvas.width, this.canvas.height, this.options.sketchOptions);
                         e.name = t, this[t] = e
                     }))
                 }
@@ -3361,7 +3361,7 @@
                     })), this.update()
                 }
             }
-            const u = l().View.extend({
+            const m = r().View.extend({
                 className: "Sketchpad canvasContainer",
                 template: a().template('<canvas id="fullLayer" class="sketchpad fullLayer" width="480" height="600" style=""></canvas>'),
                 images: {},
@@ -3414,13 +3414,13 @@
                         s = o()(i)[0].width / o()(i).width(),
                         n = i.getBoundingClientRect(),
                         a = this.model.get("size"),
-                        r = this.sketchpad.options.thickness;
-                    let l = (e.clientX - n.left) * s;
-                    l = Math.min(a.width - r, Math.max(r, l));
-                    let h = (e.clientY - n.top) * s;
-                    return h = Math.min(a.height - r, Math.max(r, h)), {
-                        x: l,
-                        y: h
+                        l = this.sketchpad.options.thickness;
+                    let r = (e.clientX - n.left) * s;
+                    r = Math.min(a.width - l, Math.max(l, r));
+                    let c = (e.clientY - n.top) * s;
+                    return c = Math.min(a.height - l, Math.max(l, c)), {
+                        x: r,
+                        y: c
                     }
                 },
                 fullImageCoord(t) {
@@ -3506,15 +3506,15 @@
                 o = i.n(s),
                 n = i(13469),
                 a = i.n(n),
-                r = i(72316),
-                l = i.n(r),
-                h = i(63574),
-                c = i.n(h);
+                l = i(72316),
+                r = i.n(l),
+                c = i(63574),
+                h = i.n(c);
             i(70989);
-            const d = c().View.extend({
+            const d = h().View.extend({
                 tagName: "div",
                 template: a().template('<div class="text"></div>'),
-                model: new(l().Model)({
+                model: new(r().Model)({
                     text: "",
                     className: ""
                 }),
@@ -3546,25 +3546,25 @@
         17756: (t, e, i) => {
             "use strict";
             i.d(e, {
-                a: () => _
+                a: () => T
             });
             var s = i(19755),
                 o = i.n(s),
                 n = i(40543),
                 a = i(72316),
-                r = i.n(a),
-                l = i(63574),
-                h = i.n(l),
-                c = i(9659),
+                l = i.n(a),
+                r = i(63574),
+                c = i.n(r),
+                h = i(9659),
                 d = i(86455),
                 p = i.n(d),
-                u = i(89446),
-                m = i(13469),
-                g = i.n(m),
+                m = i(89446),
+                u = i(13469),
+                g = i.n(u),
                 v = i(10972),
                 b = i(24475),
-                w = i(19690),
-                C = i(29014);
+                C = i(19690),
+                w = i(29014);
 
             function y(t, e) {
                 var i = Object.keys(t);
@@ -3577,11 +3577,11 @@
                 return i
             }
 
-            function f(t) {
+            function k(t) {
                 for (var e = 1; e < arguments.length; e++) {
                     var i = null != arguments[e] ? arguments[e] : {};
                     e % 2 ? y(Object(i), !0).forEach((function(e) {
-                        x(t, e, i[e])
+                        f(t, e, i[e])
                     })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i)) : y(Object(i)).forEach((function(e) {
                         Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e))
                     }))
@@ -3589,7 +3589,7 @@
                 return t
             }
 
-            function x(t, e, i) {
+            function f(t, e, i) {
                 return e in t ? Object.defineProperty(t, e, {
                     value: i,
                     enumerable: !0,
@@ -3597,7 +3597,7 @@
                     writable: !0
                 }) : t[e] = i, t
             }
-            const k = c.S.extend({
+            const x = h.S.extend({
                     defaults: {
                         controllerVisibility: !0,
                         episodes: [],
@@ -3639,10 +3639,10 @@
                         }
                     }
                 }),
-                _ = h().View.extend({
+                T = c().View.extend({
                     className: "UGC scrollable",
                     template: g().template('<div id="controller" class="state-controller controller-content"> <div class="ugc-action-toggle-visibility"> <span class="text toggle_prompts_prompt">toggle_prompts_prompt</span><br/> <button id="ugc-toggle-visibility-button-controller" class="ugc-toggle-visibility-button ugc-toggle-visibility-button-controller" data-target="controller"></button> <button id="ugc-toggle-visibility-button-screen" class="ugc-toggle-visibility-button ugc-toggle-visibility-button-screen" data-target="screen"></button> </div> <div class="ugc-action-play"> <div class="ugc-episode-name"></div> </div> <div class="ugc-action-new"> <button class="button action-button create_new_episode" type="button" id="ugc-new-button">create_new_episode</button> </div> <div class="ugc-action-load"> <p class="ugc-option text-box ugc-load previous_episodes">previous_episodes</p> <div id="episodesRegion"></div> </div> <div id="prompt" class="prompt ugc-text"></div> <div id="ugc-no-actions"> <div id="ugc-no-actions-text"></div> </div> <div class="ugc-action-add"> <div id="inputRegion"></div> </div> <div class="ugc-action-title"> <p class="text-box"> <span class="text create_new_name_prompt">create_new_name_prompt</span> </p> <div id="titleInputRegion"></div> </div> <div class="ugc-action-close"> <button class="button action-button button_close" data-action="close">button_close</button> </div> <div class="ugc-action-unlock"> <button class="button action-button button_edit" data-action="unlock">button_edit</button> </div> <div class="ugc-action-done"> <button class="button action-button button_done" data-action="done">button_done</button> </div> <div class="ugc-action-submit"> <button class="button action-button button_publish" data-action="submit">button_publish</button> </div> <div class="ugc-action-play"> <button class="button action-button button_play" data-action="play">button_play</button> </div> <div class="ugc-action-remove-content"> <button class="button action-button button_delete" data-action="remove-content">button_delete</button> </div> <div class="ugc-action-exit"> <button class="button action-button button_back_to_menu" data-action="exit">button_back_to_menu</button> </div> <div class="ugc-action-episodes"> <button class="button action-button button_back_to_episodes" data-action="episodes">button_back_to_episodes</button> </div> <div class="ugc-action-remove"> <div id="promptsCount" class="promptsCount"></div> <div id="promptsRegion"></div> </div> </div>'),
-                    model: new k,
+                    model: new x,
                     regions: {
                         prompt: "#prompt",
                         episodes: "#episodesRegion",
@@ -3800,25 +3800,25 @@
                     },
                     initialize() {
                         this.promptComponent = this.promptComponent || new b.y({
-                            model: new(r().Model)
-                        }), this.episodesList = this.episodesList || new C.C({
+                            model: new(l().Model)
+                        }), this.episodesList = this.episodesList || new w.C({
                             action: "load",
-                            collection: new(r().Collection)
-                        }), this.inputComponent = this.inputComponent || new w.E({
-                            model: new(r().Model)({
+                            collection: new(l().Collection)
+                        }), this.inputComponent = this.inputComponent || new C.E({
+                            model: new(l().Model)({
                                 inlineSubmit: !0,
                                 inlineSubmitText: "",
                                 className: "addPrompt",
                                 counter: !0
                             })
-                        }), this.titleInputComponent = this.titleInputComponent || new w.E({
-                            model: new(r().Model)({
+                        }), this.titleInputComponent = this.titleInputComponent || new C.E({
+                            model: new(l().Model)({
                                 inlineSubmit: !0,
                                 counter: !0
                             })
-                        }), this.promptsList = this.promptsList || new C.C({
+                        }), this.promptsList = this.promptsList || new w.C({
                             action: "remove",
-                            collection: new(r().Collection)
+                            collection: new(l().Collection)
                         }), this.selected = [], this.listenTo(this.model, "change", this.update, this)
                     },
                     onRender() {
@@ -3831,8 +3831,8 @@
                         const t = 0 === this.model.get("validActions").length ? this.model.get("noActionsText") : this.model.get("text");
                         this.promptComponent.model.set("text", t);
                         const e = this.model.get("episodes").map((t => {
-                            const e = u.c.htmlUnescape(t.metadata.title);
-                            let i = u.c.safeText(e);
+                            const e = m.c.htmlUnescape(t.metadata.title);
+                            let i = m.c.safeText(e);
                             return i += null !== t.remoteContentId ? `<br><div class='episodeId'>${t.formattedRemoteContentId}</div>` : "", {
                                 key: t.remoteContentId || t.localContentId,
                                 html: i
@@ -3840,9 +3840,9 @@
                         }));
                         this.episodesList.collection.set(e), this.inputComponent.model.set("maxLength", this.model.get("maxContentLength")), this.inputComponent.model.set("inlineSubmitText", this.model.get("strings").button_add), this.titleInputComponent.model.set("maxLength", this.model.get("maxTitleLength")), this.titleInputComponent.model.set("inlineSubmitText", this.model.get("strings").create_new_button), this.promptsList.collection.set(this.model.get("prompts").map((t => {
                             const e = g().extend({}, t);
-                            e.text = u.c.htmlUnescape(t.text);
+                            e.text = m.c.htmlUnescape(t.text);
                             let i = t.author !== v.app.client.userId ? "other" : "self";
-                            return t.className && (i += ` ${t.className}`), f(f({}, e), {}, {
+                            return t.className && (i += ` ${t.className}`), k(k({}, e), {}, {
                                 className: i
                             })
                         })))
@@ -3936,13 +3936,13 @@
         9659: (t, e, i) => {
             "use strict";
             i.d(e, {
-                S: () => r
+                S: () => l
             });
             var s = i(13469),
                 o = i.n(s),
                 n = i(72316),
                 a = i.n(n);
-            const r = a().Model.extend({
+            const l = a().Model.extend({
                 defaults: {},
                 set(t, e) {
                     const i = o().extend({}, this.attributes, this.defaults, t);
@@ -3953,582 +3953,6 @@
                     return a().Model.prototype.set.apply(this, [i, e]), this
                 }
             })
-        },
-        44442: (t, e, i) => {
-            "use strict";
-            i.d(e, {
-                S1: () => h,
-                o_: () => r,
-                Sy: () => l,
-                DX: () => m,
-                hg: () => L,
-                cx: () => f,
-                j: () => O,
-                Zw: () => M,
-                gr: () => A,
-                tN: () => V,
-                jy: () => $
-            });
-            let s, o, n = {};
-
-            function a(t) {
-                for (var e = arguments.length, i = new Array(e > 1 ? e - 1 : 0), s = 1; s < e; s++) i[s - 1] = arguments[s];
-                n[t] && n[t].map((t => t(...i)))
-            }
-
-            function r() {
-                return s
-            }
-
-            function l() {
-                return o
-            }
-
-            function h(t) {
-                if (s = document.getElementById(t) || t || document.querySelector("canvas"), !s) throw Error("You must provide a canvas element for the game");
-                return o = s.getContext("2d"), o.imageSmoothingEnabled = !1, a("init"), {
-                    canvas: s,
-                    context: o
-                }
-            }
-            class c {
-                constructor() {
-                    let {
-                        spriteSheet: t,
-                        frames: e,
-                        frameRate: i,
-                        loop: s = !0
-                    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    this.spriteSheet = t, this.frames = e, this.frameRate = i, this.loop = s;
-                    let {
-                        width: o,
-                        height: n,
-                        margin: a = 0
-                    } = t.frame;
-                    this.width = o, this.height = n, this.margin = a, this._f = 0, this._a = 0
-                }
-                clone() {
-                    return d(this)
-                }
-                reset() {
-                    this._f = 0, this._a = 0
-                }
-                update() {
-                    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1 / 60;
-                    if (this.loop || this._f != this.frames.length - 1)
-                        for (this._a += t; this._a * this.frameRate >= 1;) this._f = ++this._f % this.frames.length, this._a -= 1 / this.frameRate
-                }
-                render() {
-                    let {
-                        x: t,
-                        y: e,
-                        width: i = this.width,
-                        height: s = this.height,
-                        context: o = l()
-                    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, n = this.frames[this._f] / this.spriteSheet._f | 0, a = this.frames[this._f] % this.spriteSheet._f | 0;
-                    o.drawImage(this.spriteSheet.image, a * this.width + (2 * a + 1) * this.margin, n * this.height + (2 * n + 1) * this.margin, this.width, this.height, t, e, i, s)
-                }
-            }
-
-            function d(t) {
-                return new c(t)
-            }
-            d.prototype = c.prototype, d.class = c, new WeakMap;
-            const p = () => {};
-
-            function u() {
-                let t = r();
-                l().clearRect(0, 0, t.width, t.height)
-            }
-
-            function m() {
-                let {
-                    fps: t = 60,
-                    clearCanvas: e = !0,
-                    update: i,
-                    render: s
-                } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                if (!i || !s) throw Error("You must provide update() and render() functions");
-                let o, n, r, l, h, c = 0,
-                    d = 1e3 / t,
-                    m = 1 / t,
-                    g = e ? u : p;
-                const v = window.performance || Date;
-
-                function b() {
-                    if (n = requestAnimationFrame(b), r = v.now(), l = r - o, o = r, !(l > 1e3)) {
-                        for (a("tick"), c += l; c >= d;) h.update(m), c -= d;
-                        g(), h.render()
-                    }
-                }
-                return h = {
-                    update: i,
-                    render: s,
-                    isStopped: !0,
-                    start() {
-                        o = v.now(), this.isStopped = !1, requestAnimationFrame(b)
-                    },
-                    stop() {
-                        this.isStopped = !0, cancelAnimationFrame(n)
-                    },
-                    _frame: b,
-                    set _last(t) {
-                        o = t
-                    }
-                }, h
-            }
-            let g = [],
-                v = [],
-                b = {},
-                w = [],
-                C = {},
-                y = {
-                    0: "left",
-                    1: "middle",
-                    2: "right"
-                },
-                f = {
-                    x: 0,
-                    y: 0,
-                    radius: 5
-                };
-
-            function x(t, e) {
-                const i = e || f;
-                let s = t.x,
-                    o = t.y;
-                t.anchor && (s -= t.width * t.anchor.x, o -= t.height * t.anchor.y);
-                let n = i.x - Math.max(s, Math.min(i.x, s + t.width)),
-                    a = i.y - Math.max(o, Math.min(i.y, o + t.height));
-                return n * n + a * a < i.radius * i.radius
-            }
-
-            function k(t) {
-                const e = t || f;
-                let i, s, o = v.length ? v : g;
-                for (let t = o.length - 1; t >= 0; t--)
-                    if (i = o[t], s = i.collidesWithPointer ? i.collidesWithPointer(e) : x(i, e), s) return i
-            }
-
-            function _(t) {
-                let e = void 0 !== t.button ? y[t.button] : "left";
-                C[e] = !0, E(t, "onDown")
-            }
-
-            function S(t) {
-                let e = void 0 !== t.button ? y[t.button] : "left";
-                C[e] = !1, E(t, "onUp")
-            }
-
-            function T(t) {
-                E(t, "onOver")
-            }
-
-            function I() {
-                C = {}
-            }
-
-            function E(t, e) {
-                let i, s, o = r();
-                if (!o) return;
-                let n = o.height / o.offsetHeight,
-                    a = o.getBoundingClientRect(),
-                    l = -1 !== ["touchstart", "touchmove", "touchend"].indexOf(t.type);
-                if (l) {
-                    f.touches = {};
-                    for (var h = 0; h < t.touches.length; h++) f.touches[t.touches[h].identifier] = {
-                        id: t.touches[h].identifier,
-                        x: (t.touches[h].clientX - a.left) * n,
-                        y: (t.touches[h].clientY - a.top) * n,
-                        changed: !1
-                    };
-                    for (h = t.changedTouches.length; h--;) {
-                        const o = t.changedTouches[h].identifier;
-                        void 0 !== f.touches[o] && (f.touches[o].changed = !0), i = t.changedTouches[h].clientX, s = t.changedTouches[h].clientY, f.x = (i - a.left) * n, f.y = (s - a.top) * n;
-                        let r = k({
-                            id: o,
-                            x: (i - a.left) * n,
-                            y: (s - a.top) * n,
-                            radius: f.radius
-                        });
-                        r && r[e] && r[e](t), b[e] && b[e](t, r)
-                    }
-                } else i = t.clientX, s = t.clientY, f.x = (i - a.left) * n, f.y = (s - a.top) * n;
-                if (t.preventDefault(), !l) {
-                    let i = k();
-                    i && i[e] && i[e](t), b[e] && b[e](t, i)
-                }
-            }
-
-            function R() {
-                v.length = 0, g.map((t => {
-                    v.push(t)
-                })), g.length = 0
-            }
-
-            function L() {
-                let t = r();
-                var e, i;
-                t.removeEventListener("mousedown", _), t.removeEventListener("touchstart", _), t.removeEventListener("mouseup", S), t.removeEventListener("touchend", S), t.removeEventListener("touchcancel", S), t.removeEventListener("blur", I), t.removeEventListener("mousemove", T), t.removeEventListener("touchmove", T), t.addEventListener("mousedown", _), t.addEventListener("touchstart", _), t.addEventListener("mouseup", S), t.addEventListener("touchend", S), t.addEventListener("touchcancel", S), t.addEventListener("blur", I), t.addEventListener("mousemove", T), t.addEventListener("touchmove", T),
-                    function(t, e) {
-                        let i;
-                        !n[t] || (i = n[t].indexOf(e)) < 0 || n[t].splice(i, 1)
-                    }("tick", R), i = R, n[e = "tick"] = n[e] || [], n[e].push(i)
-            }
-
-            function O(t) {
-                [].concat(t).map((t => {
-                    t._r || (t._r = t.render, t.render = function() {
-                        g.push(this), this._r()
-                    }, w.push(t))
-                }))
-            }
-
-            function M(t) {
-                [].concat(t).map((t => {
-                    t.render = t._r, t._r = 0;
-                    let e = w.indexOf(t); - 1 !== e && w.splice(e, 1)
-                }))
-            }
-
-            function A(t) {
-                return !!w.includes(t) && k() === t
-            }
-
-            function V(t) {
-                return !!C[t]
-            }
-            class G {
-                constructor() {
-                    let t, {
-                        create: e,
-                        maxSize: i = 1024
-                    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    if (!e || !(t = e()) || !(t.update && t.init && t.isAlive)) throw Error("Must provide create() function which returns an object with init(), update(), and isAlive() functions");
-                    this._c = e, this.objects = [e()], this.size = 0, this.maxSize = i
-                }
-                get() {
-                    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    if (this.size === this.objects.length) {
-                        if (this.size === this.maxSize) return;
-                        for (let t = 0; t < this.size && this.objects.length < this.maxSize; t++) this.objects.push(this._c())
-                    }
-                    let e = this.objects[this.size];
-                    return this.size++, e.init(t), e
-                }
-                getAliveObjects() {
-                    return this.objects.slice(0, this.size)
-                }
-                clear() {
-                    this.size = this.objects.length = 0, this.objects.push(this._c())
-                }
-                update(t) {
-                    let e, i = !1;
-                    for (let s = this.size; s--;) e = this.objects[s], e.update(t), e.isAlive() || (i = !0, this.size--);
-                    i && this.objects.sort(((t, e) => e.isAlive() - t.isAlive()))
-                }
-                render() {
-                    for (let t = this.size; t--;) this.objects[t].render()
-                }
-            }
-
-            function D(t) {
-                return new G(t)
-            }
-
-            function B(t, e) {
-                let i = [],
-                    s = e.x + e.width / 2,
-                    o = e.y + e.height / 2,
-                    n = t.y < o && t.y + t.height >= e.y,
-                    a = t.y + t.height >= o && t.y < e.y + e.height;
-                return t.x < s && t.x + t.width >= e.x && (n && i.push(0), a && i.push(2)), t.x + t.width >= s && t.x < e.x + e.width && (n && i.push(1), a && i.push(3)), i
-            }
-            D.prototype = G.prototype, D.class = G;
-            class N {
-                constructor() {
-                    let {
-                        maxDepth: t = 3,
-                        maxObjects: e = 25,
-                        bounds: i
-                    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    this.maxDepth = t, this.maxObjects = e;
-                    let s = r();
-                    this.bounds = i || {
-                        x: 0,
-                        y: 0,
-                        width: s.width,
-                        height: s.height
-                    }, this._b = !1, this._d = 0, this._o = [], this._s = [], this._p = null
-                }
-                clear() {
-                    this._s.map((function(t) {
-                        t.clear()
-                    })), this._b = !1, this._o.length = 0
-                }
-                get(t) {
-                    let e, i, s = new Set;
-                    for (; this._s.length && this._b;) {
-                        for (e = B(t, this.bounds), i = 0; i < e.length; i++) this._s[e[i]].get(t).forEach((t => s.add(t)));
-                        return Array.from(s)
-                    }
-                    return this._o.filter((e => e !== t))
-                }
-                add() {
-                    let t, e, i, s;
-                    for (e = 0; e < arguments.length; e++)
-                        if (i = arguments[e], Array.isArray(i)) this.add.apply(this, i);
-                        else if (this._b) this._a(i);
-                    else if (this._o.push(i), this._o.length > this.maxObjects && this._d < this.maxDepth) {
-                        for (this._sp(), t = 0; s = this._o[t]; t++) this._a(s);
-                        this._o.length = 0
-                    }
-                }
-                _a(t, e, i) {
-                    for (e = B(t, this.bounds), i = 0; i < e.length; i++) this._s[e[i]].add(t)
-                }
-                _sp(t, e, i) {
-                    if (this._b = !0, !this._s.length)
-                        for (t = this.bounds.width / 2 | 0, e = this.bounds.height / 2 | 0, i = 0; i < 4; i++) this._s[i] = P({
-                            bounds: {
-                                x: this.bounds.x + (i % 2 == 1 ? t : 0),
-                                y: this.bounds.y + (i >= 2 ? e : 0),
-                                width: t,
-                                height: e
-                            },
-                            maxDepth: this.maxDepth,
-                            maxObjects: this.maxObjects
-                        }), this._s[i]._d = this._d + 1, this._s[i]._p = this
-                }
-            }
-
-            function P(t) {
-                return new N(t)
-            }
-            P.prototype = N.prototype, P.class = N;
-            class z {
-                constructor() {
-                    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-                        e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-                    this._x = t, this._y = e
-                }
-                add(t) {
-                    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-                    return j(this.x + (t.x || 0) * e, this.y + (t.y || 0) * e, this)
-                }
-                clamp(t, e, i, s) {
-                    this._c = !0, this._a = t, this._b = e, this._d = i, this._e = s
-                }
-                get x() {
-                    return this._x
-                }
-                get y() {
-                    return this._y
-                }
-                set x(t) {
-                    this._x = this._c ? Math.min(Math.max(this._a, t), this._d) : t
-                }
-                set y(t) {
-                    this._y = this._c ? Math.min(Math.max(this._b, t), this._e) : t
-                }
-            }
-
-            function j(t, e) {
-                let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                    s = new z(t, e);
-                return i._c && (s.clamp(i._a, i._b, i._d, i._e), s.x = t, s.y = e), s
-            }
-            j.prototype = z.prototype, j.class = z;
-            class U {
-                constructor(t) {
-                    this.init(t)
-                }
-                init() {
-                    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                        {
-                            x: e,
-                            y: i,
-                            dx: s,
-                            dy: o,
-                            ddx: n,
-                            ddy: a,
-                            width: r,
-                            height: h,
-                            image: c
-                        } = t;
-                    this.position = j(e, i), this.velocity = j(s, o), this.acceleration = j(n, a), this._fx = this._fy = 1, this.width = this.height = this.rotation = 0, this.ttl = 1 / 0, this.anchor = {
-                        x: 0,
-                        y: 0
-                    }, this.context = l();
-                    for (let e in t) this[e] = t[e];
-                    c && (this.width = void 0 !== r ? r : c.width, this.height = void 0 !== h ? h : c.height), this.sx = 0, this.sy = 0
-                }
-                get x() {
-                    return this.position.x
-                }
-                get y() {
-                    return this.position.y
-                }
-                get dx() {
-                    return this.velocity.x
-                }
-                get dy() {
-                    return this.velocity.y
-                }
-                get ddx() {
-                    return this.acceleration.x
-                }
-                get ddy() {
-                    return this.acceleration.y
-                }
-                get animations() {
-                    return this._a
-                }
-                get viewX() {
-                    return this.x - this.sx
-                }
-                get viewY() {
-                    return this.y - this.sy
-                }
-                get width() {
-                    return this._w
-                }
-                get height() {
-                    return this._h
-                }
-                set x(t) {
-                    this.position.x = t
-                }
-                set y(t) {
-                    this.position.y = t
-                }
-                set dx(t) {
-                    this.velocity.x = t
-                }
-                set dy(t) {
-                    this.velocity.y = t
-                }
-                set ddx(t) {
-                    this.acceleration.x = t
-                }
-                set ddy(t) {
-                    this.acceleration.y = t
-                }
-                set animations(t) {
-                    let e, i;
-                    for (e in this._a = {}, t) this._a[e] = t[e].clone(), i = i || this._a[e];
-                    this.currentAnimation = i, this.width = this.width || i.width, this.height = this.height || i.height
-                }
-                set viewX(t) {}
-                set viewY(t) {}
-                set width(t) {
-                    let e = t < 0 ? -1 : 1;
-                    this._fx = e, this._w = t * e
-                }
-                set height(t) {
-                    let e = t < 0 ? -1 : 1;
-                    this._fy = e, this._h = t * e
-                }
-                isAlive() {
-                    return this.ttl > 0
-                }
-                collidesWith(t) {
-                    if (this.rotation || t.rotation) return null;
-                    let e = this.x - this.width * this.anchor.x,
-                        i = this.y - this.height * this.anchor.y,
-                        s = t.x,
-                        o = t.y;
-                    return t.anchor && (s -= t.width * t.anchor.x, o -= t.height * t.anchor.y), e < s + t.width && e + this.width > s && i < o + t.height && i + this.height > o
-                }
-                update(t) {
-                    this.advance(t)
-                }
-                render() {
-                    this.draw()
-                }
-                playAnimation(t) {
-                    this.currentAnimation = this.animations[t], this.currentAnimation.loop || this.currentAnimation.reset()
-                }
-                advance(t) {
-                    this.velocity = this.velocity.add(this.acceleration, t), this.position = this.position.add(this.velocity, t), this.ttl--, this.currentAnimation && this.currentAnimation.update(t)
-                }
-                draw() {
-                    let t = -this.width * this.anchor.x,
-                        e = -this.height * this.anchor.y;
-                    if (this.context.save(), this.context.translate(this.viewX, this.viewY), this.rotation && this.context.rotate(this.rotation), -1 == this._fx || -1 == this._fy) {
-                        let i = this.width / 2 + t,
-                            s = this.height / 2 + e;
-                        this.context.translate(i, s), this.context.scale(this._fx, this._fy), this.context.translate(-i, -s)
-                    }
-                    this.image ? this.context.drawImage(this.image, t, e, this.width, this.height) : this.currentAnimation ? this.currentAnimation.render({
-                        x: t,
-                        y: e,
-                        width: this.width,
-                        height: this.height,
-                        context: this.context
-                    }) : (this.context.fillStyle = this.color, this.context.fillRect(t, e, this.width, this.height)), this.context.restore()
-                }
-            }
-
-            function $(t) {
-                return new U(t)
-            }
-
-            function X(t) {
-                if (+t === t) return t;
-                let e = [],
-                    i = t.split(".."),
-                    s = +i[0],
-                    o = +i[1],
-                    n = s;
-                if (s < o)
-                    for (; n <= o; n++) e.push(n);
-                else
-                    for (; n >= o; n--) e.push(n);
-                return e
-            }
-            $.prototype = U.prototype, $.class = U;
-            class W {
-                constructor() {
-                    let {
-                        image: t,
-                        frameWidth: e,
-                        frameHeight: i,
-                        frameMargin: s,
-                        animations: o
-                    } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    if (!t) throw Error("You must provide an Image for the SpriteSheet");
-                    this.animations = {}, this.image = t, this.frame = {
-                        width: e,
-                        height: i,
-                        margin: s
-                    }, this._f = t.width / e | 0, this.createAnimations(o)
-                }
-                createAnimations(t) {
-                    let e, i;
-                    for (i in t) {
-                        let {
-                            frames: s,
-                            frameRate: o,
-                            loop: n
-                        } = t[i];
-                        if (e = [], void 0 === s) throw Error("Animation " + i + " must provide a frames property");
-                        [].concat(s).map((t => {
-                            e = e.concat(X(t))
-                        })), this.animations[i] = d({
-                            spriteSheet: this,
-                            frames: e,
-                            frameRate: o,
-                            loop: n
-                        })
-                    }
-                }
-            }
-
-            function H(t) {
-                return new W(t)
-            }
-            H.prototype = W.prototype, H.class = W
         },
         91434: (t, e, i) => {
             "use strict";
@@ -4571,4 +3995,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/4340.467315cd4a9151ead406.js.map
+//# sourceMappingURL=sourcemaps/4340.2d49587304ceb764b1d9.js.map

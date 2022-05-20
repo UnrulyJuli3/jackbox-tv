@@ -1,68 +1,5 @@
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     ["games/drawful-animate"], {
-        56623: (t, e, s) => {
-            "use strict";
-            s.d(e, {
-                Z: () => u
-            });
-            var i = function() {
-                var t = this,
-                    e = t.$createElement,
-                    s = t._self._c || e;
-                return t.link ? s("a", {
-                    staticClass: "artifact-link",
-                    class: {
-                        "no-content": !t.hasProvidedContent
-                    },
-                    attrs: {
-                        target: "_blank",
-                        href: t.link,
-                        "aria-label": t.$t("POST_GAME.GALLERY_LINK")
-                    },
-                    on: {
-                        click: t.onLinkClick
-                    }
-                }, [t._t("default")], 2) : t._e()
-            };
-            i._withStripped = !0;
-            var a = s(2934),
-                n = s.n(a),
-                o = s(81127),
-                r = s(65853);
-            const l = n().extend({
-                props: {
-                    artifact: Object
-                },
-                i18n: {
-                    messages: r.s
-                },
-                computed: {
-                    link() {
-                        if (this.artifact) return `${this.artifact.rootId.includes("test")?"http":"https"}://${this.artifact.rootId.includes("test")?"games-test.jackbox.tv":"games.jackbox.tv"}/artifact/${this.artifact.categoryId}/${this.artifact.artifactId}/`
-                    },
-                    hasProvidedContent() {
-                        return void 0 !== this.$slots.default
-                    }
-                },
-                mounted() {
-                    this.$analytics.trackEvent({
-                        category: "PostGame",
-                        action: "galleryShown"
-                    })
-                },
-                methods: {
-                    onLinkClick() {
-                        this.$analytics.trackEvent({
-                            category: "PostGame",
-                            action: "galleryClicked"
-                        }), o.Q.setAsViewed(0)
-                    }
-                }
-            });
-            var c = (0, s(51900).Z)(l, i, [], !1, null, null, null);
-            c.options.__file = "src/apps/vue/components/GalleryLink.vue";
-            const u = c.exports
-        },
         94835: (t, e, s) => {
             "use strict";
             s.d(e, {
@@ -813,7 +750,7 @@
                     })])])])])
                 };
             C._withStripped = !0;
-            const f = n().extend({
+            const g = n().extend({
                 name: "SvgIcon",
                 props: {
                     hex: {
@@ -849,9 +786,9 @@
                     }
                 }
             });
-            var g = (0, p.Z)(f, C, [], !1, null, "96847278", null);
-            g.options.__file = "src/games/pp8/drawful-animate/views/ColorButton.vue";
-            const b = g.exports,
+            var f = (0, p.Z)(g, C, [], !1, null, "96847278", null);
+            f.options.__file = "src/games/pp8/drawful-animate/views/ColorButton.vue";
+            const b = f.exports,
                 E = m.Z.extend({
                     props: {
                         player: Object
@@ -1258,7 +1195,7 @@
             };
             P._withStripped = !0;
             var A = s(13494),
-                k = function() {
+                L = function() {
                     var t = this,
                         e = t.$createElement,
                         s = t._self._c || e;
@@ -1320,9 +1257,9 @@
                         }, [t._v(t._s(e.formattedRemoteContentId))]) : t._e()])
                     }))], 2) : t._e()])
                 };
-            k._withStripped = !0;
-            var L = s(79278);
-            n().use(L.ZP);
+            L._withStripped = !0;
+            var k = s(79278);
+            n().use(k.ZP);
             const R = n().extend({
                 props: {
                     episodes: Array
@@ -1357,7 +1294,7 @@
                     }
                 }
             });
-            var $ = (0, p.Z)(R, k, [], !1, null, null, null);
+            var $ = (0, p.Z)(R, L, [], !1, null, null, null);
             $.options.__file = "src/games/pp8/drawful-animate/views/EpisodesModal.vue";
             const B = $.exports;
             var U = function(t, e, s, i) {
@@ -1491,7 +1428,7 @@
             var F = (0, p.Z)(j, W, [], !1, null, null, null);
             F.options.__file = "src/games/pp8/drawful-animate/views/PostGame.vue";
             const Y = F.exports;
-            var Z = function() {
+            var z = function() {
                 var t = this,
                     e = t.$createElement,
                     s = t._self._c || e;
@@ -1787,8 +1724,8 @@
                     })])])
                 })), 0)])]) : t._e()])])
             };
-            Z._withStripped = !0;
-            var z = s(3682),
+            z._withStripped = !0;
+            var Z = s(3682),
                 X = s(89446),
                 q = function(t, e, s, i) {
                     return new(s || (s = Promise))((function(a, n) {
@@ -1817,7 +1754,7 @@
                         l((i = i.apply(t, e || [])).next())
                     }))
                 };
-            const Q = n().extend({
+            const J = n().extend({
                 props: {
                     player: Object
                 },
@@ -1857,7 +1794,7 @@
                     }
                 },
                 mounted() {
-                    (0, z.Z)([this.$refs.titleTextarea, this.$refs.promptTextarea])
+                    (0, Z.Z)([this.$refs.titleTextarea, this.$refs.promptTextarea])
                 },
                 methods: {
                     onKeypress(t, e) {
@@ -1945,9 +1882,9 @@
                     }
                 }
             });
-            var J = (0, p.Z)(Q, Z, [], !1, null, null, null);
-            J.options.__file = "src/games/pp8/drawful-animate/views/Ugc.vue";
-            const tt = J.exports;
+            var Q = (0, p.Z)(J, z, [], !1, null, null, null);
+            Q.options.__file = "src/games/pp8/drawful-animate/views/Ugc.vue";
+            const tt = Q.exports;
             var et = function() {
                 var t = this,
                     e = t.$createElement,
@@ -2140,7 +2077,7 @@
                     }
                 },
                 mounted() {
-                    this.autoSubmitter = (0, O.throttle)(this.autoSubmit.bind(this), 400), (0, z.Z)(this.$refs.textarea), this.player.textKey && this.restoreText()
+                    this.autoSubmitter = (0, O.throttle)(this.autoSubmit.bind(this), 400), (0, Z.Z)(this.$refs.textarea), this.player.textKey && this.restoreText()
                 },
                 beforeDestroy() {
                     var t;
@@ -2274,4 +2211,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/6333.07c45b573320a435a3d6.js.map
+//# sourceMappingURL=sourcemaps/7634.6aca5827a5251691761e.js.map

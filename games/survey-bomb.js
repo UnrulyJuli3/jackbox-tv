@@ -1,88 +1,25 @@
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     ["games/survey-bomb"], {
         23493: (e, t, s) => {
-            var a = s(23279),
-                n = s(13218);
+            var n = s(23279),
+                a = s(13218);
             e.exports = function(e, t, s) {
                 var i = !0,
                     r = !0;
                 if ("function" != typeof e) throw new TypeError("Expected a function");
-                return n(s) && (i = "leading" in s ? !!s.leading : i, r = "trailing" in s ? !!s.trailing : r), a(e, t, {
+                return a(s) && (i = "leading" in s ? !!s.leading : i, r = "trailing" in s ? !!s.trailing : r), n(e, t, {
                     leading: i,
                     maxWait: t,
                     trailing: r
                 })
             }
         },
-        56623: (e, t, s) => {
-            "use strict";
-            s.d(t, {
-                Z: () => d
-            });
-            var a = function() {
-                var e = this,
-                    t = e.$createElement,
-                    s = e._self._c || t;
-                return e.link ? s("a", {
-                    staticClass: "artifact-link",
-                    class: {
-                        "no-content": !e.hasProvidedContent
-                    },
-                    attrs: {
-                        target: "_blank",
-                        href: e.link,
-                        "aria-label": e.$t("POST_GAME.GALLERY_LINK")
-                    },
-                    on: {
-                        click: e.onLinkClick
-                    }
-                }, [e._t("default")], 2) : e._e()
-            };
-            a._withStripped = !0;
-            var n = s(2934),
-                i = s.n(n),
-                r = s(81127),
-                o = s(65853);
-            const c = i().extend({
-                props: {
-                    artifact: Object
-                },
-                i18n: {
-                    messages: o.s
-                },
-                computed: {
-                    link() {
-                        if (this.artifact) return `${this.artifact.rootId.includes("test")?"http":"https"}://${this.artifact.rootId.includes("test")?"games-test.jackbox.tv":"games.jackbox.tv"}/artifact/${this.artifact.categoryId}/${this.artifact.artifactId}/`
-                    },
-                    hasProvidedContent() {
-                        return void 0 !== this.$slots.default
-                    }
-                },
-                mounted() {
-                    this.$analytics.trackEvent({
-                        category: "PostGame",
-                        action: "galleryShown"
-                    })
-                },
-                methods: {
-                    onLinkClick() {
-                        this.$analytics.trackEvent({
-                            category: "PostGame",
-                            action: "galleryClicked"
-                        }), r.Q.setAsViewed(0)
-                    }
-                }
-            });
-            var l = (0, s(51900).Z)(c, a, [], !1, null, null, null);
-            l.options.__file = "src/apps/vue/components/GalleryLink.vue";
-            const d = l.exports
-        },
         6305: (e, t, s) => {
             "use strict";
             s.d(t, {
                 Z: () => c
             });
-            var a = function() {
+            var n = function() {
                 var e = this,
                     t = e.$createElement;
                 return (e._self._c || t)("input", {
@@ -95,9 +32,9 @@
                     }
                 })
             };
-            a._withStripped = !0;
-            var n = s(2934),
-                i = s.n(n);
+            n._withStripped = !0;
+            var a = s(2934),
+                i = s.n(a);
             const r = i().extend({
                 props: {
                     value: String
@@ -109,14 +46,14 @@
                 },
                 methods: {
                     onInput(e) {
-                        return t = this, s = void 0, n = function*() {
+                        return t = this, s = void 0, a = function*() {
                             const t = e.target,
                                 s = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
                             t.value.length > s ? t.value = t.value.substring(0, s) : (this.$emit("input", t.value), yield i().nextTick(), t.value !== this.value && (t.value = this.value))
-                        }, new((a = void 0) || (a = Promise))((function(e, i) {
+                        }, new((n = void 0) || (n = Promise))((function(e, i) {
                             function r(e) {
                                 try {
-                                    c(n.next(e))
+                                    c(a.next(e))
                                 } catch (e) {
                                     i(e)
                                 }
@@ -124,7 +61,7 @@
 
                             function o(e) {
                                 try {
-                                    c(n.throw(e))
+                                    c(a.throw(e))
                                 } catch (e) {
                                     i(e)
                                 }
@@ -132,17 +69,17 @@
 
                             function c(t) {
                                 var s;
-                                t.done ? e(t.value) : (s = t.value, s instanceof a ? s : new a((function(e) {
+                                t.done ? e(t.value) : (s = t.value, s instanceof n ? s : new n((function(e) {
                                     e(s)
                                 }))).then(r, o)
                             }
-                            c((n = n.apply(t, s || [])).next())
+                            c((a = a.apply(t, s || [])).next())
                         }));
-                        var t, s, a, n
+                        var t, s, n, a
                     }
                 }
             });
-            var o = (0, s(51900).Z)(r, a, [], !1, null, null, null);
+            var o = (0, s(51900).Z)(r, n, [], !1, null, null, null);
             o.options.__file = "src/apps/vue/components/Input.vue";
             const c = o.exports
         },
@@ -151,7 +88,7 @@
             s.r(t), s.d(t, {
                 default: () => fe
             });
-            var a = function() {
+            var n = function() {
                 var e = this,
                     t = e.$createElement,
                     s = e._self._c || t;
@@ -242,9 +179,9 @@
                     }
                 }) : e._e()] : e._e()], 2)])
             };
-            a._withStripped = !0;
-            var n = s(2934),
-                i = s.n(n),
+            n._withStripped = !0;
+            var a = s(2934),
+                i = s.n(a),
                 r = function() {
                     var e = this,
                         t = e.$createElement,
@@ -316,16 +253,16 @@
             var o = function() {
                 var e = this,
                     t = e.$createElement,
-                    a = e._self._c || t;
-                return a("div", {
+                    n = e._self._c || t;
+                return n("div", {
                     staticClass: "choice",
                     class: {
                         chosen: e.chosen, correct: e.correct, disabled: e.disabled, incorrect: e.incorrect, progress: !!e.choice.percent
                     },
                     style: e.cssProps
-                }, [e.rank ? [a("div", {
+                }, [e.rank ? [n("div", {
                     staticClass: "rank"
-                }, [e._v(e._s(e.rank)), a("sup", [e._v(e._s(e.getOrdinal(e.rank)))])])] : e._e(), e._v(" "), e.removable ? [a("input", {
+                }, [e._v(e._s(e.rank)), n("sup", [e._v(e._s(e.getOrdinal(e.rank)))])])] : e._e(), e._v(" "), e.removable ? [n("input", {
                     attrs: {
                         id: e.choice.index,
                         disabled: e.disabled,
@@ -336,7 +273,7 @@
                             return e.$emit("choose")
                         }
                     }
-                }), e._v(" "), e.disabled ? e._e() : a("svg", {
+                }), e._v(" "), e.disabled ? e._e() : n("svg", {
                     directives: [{
                         name: "svg",
                         rawName: "v-svg",
@@ -344,7 +281,7 @@
                         expression: "require('../assets/x.inline.svg')"
                     }],
                     staticClass: "remove"
-                }), e._v(" "), e.chosen ? [e.correct ? a("svg", {
+                }), e._v(" "), e.chosen ? [e.correct ? n("svg", {
                     directives: [{
                         name: "svg",
                         rawName: "v-svg",
@@ -355,7 +292,7 @@
                     attrs: {
                         "aria-label": "correct answer"
                     }
-                }) : e._e(), e._v(" "), e.incorrect ? a("svg", {
+                }) : e._e(), e._v(" "), e.incorrect ? n("svg", {
                     directives: [{
                         name: "svg",
                         rawName: "v-svg",
@@ -366,7 +303,7 @@
                     attrs: {
                         "aria-label": "incorrect answer"
                     }
-                }) : e._e()] : e._e()] : [a("svg", {
+                }) : e._e()] : e._e()] : [n("svg", {
                     directives: [{
                         name: "svg",
                         rawName: "v-svg",
@@ -374,7 +311,7 @@
                         expression: "require('../assets/door.inline.svg')"
                     }],
                     staticClass: "door"
-                }), e._v(" "), a("input", {
+                }), e._v(" "), n("input", {
                     attrs: {
                         id: e.choice.index,
                         disabled: e.disabled,
@@ -386,16 +323,16 @@
                             return e.$emit("choose")
                         }
                     }
-                }), e._v(" "), e.choice.percent ? a("div", {
+                }), e._v(" "), e.choice.percent ? n("div", {
                     staticClass: "percent",
                     domProps: {
                         textContent: e._s(e.choice.percent + "%")
                     }
-                }) : e._e()], e._v(" "), a("label", {
+                }) : e._e()], e._v(" "), n("label", {
                     attrs: {
                         for: e.choice.index
                     }
-                }, [a("span", {
+                }, [n("span", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
@@ -445,11 +382,11 @@
                     de: {},
                     es: {}
                 };
-            var m = function(e, t, s, a) {
-                return new(s || (s = Promise))((function(n, i) {
+            var m = function(e, t, s, n) {
+                return new(s || (s = Promise))((function(a, i) {
                     function r(e) {
                         try {
-                            c(a.next(e))
+                            c(n.next(e))
                         } catch (e) {
                             i(e)
                         }
@@ -457,7 +394,7 @@
 
                     function o(e) {
                         try {
-                            c(a.throw(e))
+                            c(n.throw(e))
                         } catch (e) {
                             i(e)
                         }
@@ -465,11 +402,11 @@
 
                     function c(e) {
                         var t;
-                        e.done ? n(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
+                        e.done ? a(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
                             e(t)
                         }))).then(r, o)
                     }
-                    c((a = a.apply(e, t || [])).next())
+                    c((n = n.apply(e, t || [])).next())
                 }))
             };
             const v = i().extend({
@@ -516,10 +453,10 @@
                                 return void console.warn(`failed to get countgroup ${this.player.countGroupName} during poll: ${e}`)
                             }
                             const t = Object.values(e).reduce(((e, t) => e + t), 0);
-                            Object.values(this.choices).forEach(((s, a) => {
-                                const n = Object.keys(e).find((e => e.endsWith(`:${s.index}`))),
-                                    r = e[n];
-                                i().set(this.choices[a], "percent", Math.round(r / t * 100))
+                            Object.values(this.choices).forEach(((s, n) => {
+                                const a = Object.keys(e).find((e => e.endsWith(`:${s.index}`))),
+                                    r = e[a];
+                                i().set(this.choices[n], "percent", Math.round(r / t * 100))
                             }))
                         }))
                     },
@@ -594,12 +531,12 @@
                     }
                 }) : e._e(), e._v(" "), s("div", {
                     staticClass: "dots"
-                }, e._l(e.steps, (function(t, a) {
+                }, e._l(e.steps, (function(t, n) {
                     return s("div", {
-                        key: a,
+                        key: n,
                         staticClass: "dot",
                         class: {
-                            active: e.player.stepIndex >= a
+                            active: e.player.stepIndex >= n
                         }
                     })
                 })), 0), e._v(" "), "avatar" === e.steps[e.player.stepIndex] ? s("div", {
@@ -608,9 +545,9 @@
                     staticClass: "instructions"
                 }, [e._v(e._s(e.$t("INSTRUCTION_AVATAR")))]), e._v(" "), s("div", {
                     staticClass: "avatars"
-                }, [e._l(e.player.avatars, (function(t, a) {
+                }, [e._l(e.player.avatars, (function(t, n) {
                     return [s("button", {
-                        key: "av" + a,
+                        key: "av" + n,
                         staticClass: "avatar",
                         class: {
                             selected: t.name === e.selectedAvatar.name
@@ -628,8 +565,8 @@
                             src: t.available ? e.avatarImages[t.name] && e.avatarImages[t.name].on : e.avatarImages[t.name] && e.avatarImages[t.name].off,
                             alt: e.avatarImages[t.name] && e.avatarImages[t.name].alt
                         }
-                    })]), e._v(" "), e.shouldEndAvatarRow(a + 1) ? s("div", {
-                        key: "break" + a,
+                    })]), e._v(" "), e.shouldEndAvatarRow(n + 1) ? s("div", {
+                        key: "break" + n,
                         staticClass: "row-break"
                     }) : e._e()]
                 }))], 2), e._v(" "), s("div", {
@@ -818,7 +755,7 @@
             var S = (0, d.Z)(I, C, [], !1, null, "1a51ff57", null);
             S.options.__file = "src/games/pp8/survey-bomb/views/SurveyForm.vue";
             const T = S.exports;
-            var k = function() {
+            var N = function() {
                 var e = this,
                     t = e.$createElement,
                     s = e._self._c || t;
@@ -852,10 +789,10 @@
                     staticClass: "arrow"
                 }), e._v("\n        " + e._s(e.$t("SWITCH_TEAMS")) + "\n    ")])])
             };
-            k._withStripped = !0;
-            var N = s(15516),
-                $ = s(66296);
-            const A = i().extend({
+            N._withStripped = !0;
+            var k = s(15516),
+                A = s(66296);
+            const $ = i().extend({
                 props: {
                     avatar: Object,
                     canSwitch: Boolean,
@@ -877,18 +814,18 @@
                 }),
                 methods: {
                     getArrowSrc() {
-                        return 0 === this.teamIndex ? $ : N
+                        return 0 === this.teamIndex ? A : k
                     }
                 }
             });
-            var R = (0, d.Z)(A, k, [], !1, null, "f57faf92", null);
+            var R = (0, d.Z)($, N, [], !1, null, "f57faf92", null);
             R.options.__file = "src/games/pp8/survey-bomb/views/TeamSwitcher.vue";
             const O = R.exports;
-            var M = function(e, t, s, a) {
-                return new(s || (s = Promise))((function(n, i) {
+            var M = function(e, t, s, n) {
+                return new(s || (s = Promise))((function(a, i) {
                     function r(e) {
                         try {
-                            c(a.next(e))
+                            c(n.next(e))
                         } catch (e) {
                             i(e)
                         }
@@ -896,7 +833,7 @@
 
                     function o(e) {
                         try {
-                            c(a.throw(e))
+                            c(n.throw(e))
                         } catch (e) {
                             i(e)
                         }
@@ -904,11 +841,11 @@
 
                     function c(e) {
                         var t;
-                        e.done ? n(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
+                        e.done ? a(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
                             e(t)
                         }))).then(r, o)
                     }
-                    c((a = a.apply(e, t || [])).next())
+                    c((n = n.apply(e, t || [])).next())
                 }))
             };
             const P = i().extend({
@@ -1049,20 +986,20 @@
             var U = function() {
                 var e = this,
                     t = e.$createElement,
-                    a = e._self._c || t;
-                return a("div", {
+                    n = e._self._c || t;
+                return n("div", {
                     staticClass: "header",
                     attrs: {
                         "aria-label": "name and torch section"
                     }
-                }, [e.name ? [a("div", {
+                }, [e.name ? [n("div", {
                     staticClass: "banner",
                     class: null != e.teamIndex ? "team-" + e.teamIndex : ""
-                }, [a("span", {
+                }, [n("span", {
                     staticClass: "name"
-                }, [e._v(e._s(e.name))])])] : e._e(), e._v(" "), null != e.torches ? a("div", {
+                }, [e._v(e._s(e.name))])])] : e._e(), e._v(" "), null != e.torches ? n("div", {
                     staticClass: "torches"
-                }, [0 === e.torches ? a("span", {
+                }, [0 === e.torches ? n("span", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
@@ -1071,7 +1008,7 @@
                     }],
                     staticClass: "torch-warning"
                 }) : e._l(e.torches, (function(e, t) {
-                    return a("svg", {
+                    return n("svg", {
                         directives: [{
                             name: "svg",
                             rawName: "v-svg",
@@ -1168,11 +1105,11 @@
                 })]], 2)
             };
             V._withStripped = !0;
-            var W = function(e, t, s, a) {
-                return new(s || (s = Promise))((function(n, i) {
+            var W = function(e, t, s, n) {
+                return new(s || (s = Promise))((function(a, i) {
                     function r(e) {
                         try {
-                            c(a.next(e))
+                            c(n.next(e))
                         } catch (e) {
                             i(e)
                         }
@@ -1180,7 +1117,7 @@
 
                     function o(e) {
                         try {
-                            c(a.throw(e))
+                            c(n.throw(e))
                         } catch (e) {
                             i(e)
                         }
@@ -1188,11 +1125,11 @@
 
                     function c(e) {
                         var t;
-                        e.done ? n(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
+                        e.done ? a(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
                             e(t)
                         }))).then(r, o)
                     }
-                    c((a = a.apply(e, t || [])).next())
+                    c((n = n.apply(e, t || [])).next())
                 }))
             };
             const Y = i().extend({
@@ -1267,8 +1204,8 @@
             });
             var J = (0, d.Z)(Y, V, [], !1, null, "25ca941a", null);
             J.options.__file = "src/games/pp8/survey-bomb/views/Survey.vue";
-            const Q = J.exports;
-            var z = function() {
+            const z = J.exports;
+            var Q = function() {
                 var e = this,
                     t = e.$createElement,
                     s = e._self._c || t;
@@ -1336,20 +1273,20 @@
                     }
                 }) : e._e()])])
             };
-            z._withStripped = !0;
+            Q._withStripped = !0;
             var ee = function() {
                 var e = this,
                     t = e.$createElement,
-                    a = e._self._c || t;
-                return a("div", {
+                    n = e._self._c || t;
+                return n("div", {
                     staticClass: "info",
                     attrs: {
                         "aria-label": "team section"
                     }
-                }, [a("div", {
+                }, [n("div", {
                     staticClass: "torches"
                 }, e._l(e.torches, (function(e, t) {
-                    return a("svg", {
+                    return n("svg", {
                         directives: [{
                             name: "svg",
                             rawName: "v-svg",
@@ -1359,13 +1296,13 @@
                         key: "torch" + t,
                         staticClass: "torch"
                     })
-                })), 0), e._v(" "), a("img", {
+                })), 0), e._v(" "), n("img", {
                     staticClass: "ribbon",
                     attrs: {
                         src: s(77589)("./ribbon-team-" + e.teamIndex + ".png"),
                         alt: "team ribbon"
                     }
-                }), e._v(" "), a("span", {
+                }), e._v(" "), n("span", {
                     staticClass: "team"
                 }, [e._v(e._s(e.teamName))])])
             };
@@ -1379,10 +1316,10 @@
             });
             var se = (0, d.Z)(te, ee, [], !1, null, "17ea6684", null);
             se.options.__file = "src/games/pp8/survey-bomb/views/TeamInfo.vue";
-            const ae = se.exports;
-            const ne = i().extend({
+            const ne = se.exports;
+            const ae = i().extend({
                 components: {
-                    TeamInfo: ae
+                    TeamInfo: ne
                 },
                 props: {
                     avatar: Object,
@@ -1471,7 +1408,7 @@
                         return !(!this.hasTeamData || null == this.info.teamIndex) && this.teams[e].finalChance
                     },
                     onSkip() {
-                        return e = this, t = void 0, a = function*() {
+                        return e = this, t = void 0, n = function*() {
                             if (this.player.responseKey) try {
                                 yield this.$ecast.updateObject(this.player.responseKey, {
                                     action: "skip"
@@ -1479,10 +1416,10 @@
                             } catch (e) {
                                 this.$handleEcastError(e)
                             }
-                        }, new((s = void 0) || (s = Promise))((function(n, i) {
+                        }, new((s = void 0) || (s = Promise))((function(a, i) {
                             function r(e) {
                                 try {
-                                    c(a.next(e))
+                                    c(n.next(e))
                                 } catch (e) {
                                     i(e)
                                 }
@@ -1490,7 +1427,7 @@
 
                             function o(e) {
                                 try {
-                                    c(a.throw(e))
+                                    c(n.throw(e))
                                 } catch (e) {
                                     i(e)
                                 }
@@ -1498,17 +1435,17 @@
 
                             function c(e) {
                                 var t;
-                                e.done ? n(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
+                                e.done ? a(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
                                     e(t)
                                 }))).then(r, o)
                             }
-                            c((a = a.apply(e, t || [])).next())
+                            c((n = n.apply(e, t || [])).next())
                         }));
-                        var e, t, s, a
+                        var e, t, s, n
                     }
                 }
             });
-            var ie = (0, d.Z)(ne, z, [], !1, null, "9c843cf8", null);
+            var ie = (0, d.Z)(ae, Q, [], !1, null, "9c843cf8", null);
             ie.options.__file = "src/games/pp8/survey-bomb/views/Waiting.vue";
             const re = ie.exports;
             var oe = function() {
@@ -1551,11 +1488,11 @@
             oe._withStripped = !0;
             var ce = s(23493),
                 le = s.n(ce),
-                de = function(e, t, s, a) {
-                    return new(s || (s = Promise))((function(n, i) {
+                de = function(e, t, s, n) {
+                    return new(s || (s = Promise))((function(a, i) {
                         function r(e) {
                             try {
-                                c(a.next(e))
+                                c(n.next(e))
                             } catch (e) {
                                 i(e)
                             }
@@ -1563,7 +1500,7 @@
 
                         function o(e) {
                             try {
-                                c(a.throw(e))
+                                c(n.throw(e))
                             } catch (e) {
                                 i(e)
                             }
@@ -1571,11 +1508,11 @@
 
                         function c(e) {
                             var t;
-                            e.done ? n(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
+                            e.done ? a(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
                                 e(t)
                             }))).then(r, o)
                         }
-                        c((a = a.apply(e, t || [])).next())
+                        c((n = n.apply(e, t || [])).next())
                     }))
                 };
             const he = i().extend({
@@ -1705,7 +1642,7 @@
                     Choices: b,
                     Lobby: D,
                     PostGame: X,
-                    Survey: Q,
+                    Survey: z,
                     Waiting: re,
                     Playalong: pe
                 },
@@ -1772,7 +1709,7 @@
                 },
                 methods: {
                     setAvatarImages() {
-                        return e = this, t = void 0, n = function*() {
+                        return e = this, t = void 0, a = function*() {
                             this.avatarImages = {
                                 0: {
                                     alt: "armored adventurer with sword",
@@ -1845,10 +1782,10 @@
                                     on: (yield Promise.resolve().then(s.t.bind(s, 96582, 17))).default
                                 }
                             }
-                        }, new((a = void 0) || (a = Promise))((function(s, i) {
+                        }, new((n = void 0) || (n = Promise))((function(s, i) {
                             function r(e) {
                                 try {
-                                    c(n.next(e))
+                                    c(a.next(e))
                                 } catch (e) {
                                     i(e)
                                 }
@@ -1856,7 +1793,7 @@
 
                             function o(e) {
                                 try {
-                                    c(n.throw(e))
+                                    c(a.throw(e))
                                 } catch (e) {
                                     i(e)
                                 }
@@ -1864,13 +1801,13 @@
 
                             function c(e) {
                                 var t;
-                                e.done ? s(e.value) : (t = e.value, t instanceof a ? t : new a((function(e) {
+                                e.done ? s(e.value) : (t = e.value, t instanceof n ? t : new n((function(e) {
                                     e(t)
                                 }))).then(r, o)
                             }
-                            c((n = n.apply(e, t || [])).next())
+                            c((a = a.apply(e, t || [])).next())
                         }));
-                        var e, t, a, n
+                        var e, t, n, a
                     },
                     setAudienceTorches(e) {
                         this.audienceInfo.torches = Math.max(0, e), this.$storage.isSupported && this.$storage.set("pm-torches", JSON.stringify(this.audienceInfo.torches))
@@ -1891,7 +1828,7 @@
                     }
                 }
             });
-            var ve = (0, d.Z)(me, a, [], !1, null, null, null);
+            var ve = (0, d.Z)(me, n, [], !1, null, null, null);
             ve.options.__file = "src/games/pp8/survey-bomb/views/Main.vue";
             const fe = ve.exports
         },
@@ -2044,27 +1981,27 @@
             e.exports = '<svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">\n    <path d="M13 1.5L1 13.5" stroke="#FF1515" stroke-width="2"/>\n    <path d="M13 13.5L1 1.5" stroke="#FF1515" stroke-width="2"/>\n</svg>\n'
         },
         77589: (e, t, s) => {
-            var a = {
+            var n = {
                 "./ribbon-team-0.png": 46739,
                 "./ribbon-team-1.png": 44846
             };
 
-            function n(e) {
+            function a(e) {
                 var t = i(e);
                 return s(t)
             }
 
             function i(e) {
-                if (!s.o(a, e)) {
+                if (!s.o(n, e)) {
                     var t = new Error("Cannot find module '" + e + "'");
                     throw t.code = "MODULE_NOT_FOUND", t
                 }
-                return a[e]
+                return n[e]
             }
-            n.keys = function() {
-                return Object.keys(a)
-            }, n.resolve = i, e.exports = n, n.id = 77589
+            a.keys = function() {
+                return Object.keys(n)
+            }, a.resolve = i, e.exports = a, a.id = 77589
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/1988.f259a438ea6780080d9a.js.map
+//# sourceMappingURL=sourcemaps/9290.6d6047ab62c0882f8d40.js.map

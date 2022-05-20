@@ -1,75 +1,89 @@
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     [2265], {
-        16479: (e, t, i) => {
-            var a;
+        16479: (t, e, i) => {
+            var s;
             ! function() {
                 "use strict";
 
-                function n(e, t, i) {
-                    var a = t.x,
-                        n = t.y,
-                        s = i.x - a,
+                function n(t, e, i) {
+                    var s = e.x,
+                        n = e.y,
+                        a = i.x - s,
                         o = i.y - n;
-                    if (0 !== s || 0 !== o) {
-                        var r = ((e.x - a) * s + (e.y - n) * o) / (s * s + o * o);
-                        r > 1 ? (a = i.x, n = i.y) : r > 0 && (a += s * r, n += o * r)
+                    if (0 !== a || 0 !== o) {
+                        var r = ((t.x - s) * a + (t.y - n) * o) / (a * a + o * o);
+                        r > 1 ? (s = i.x, n = i.y) : r > 0 && (s += a * r, n += o * r)
                     }
-                    return (s = e.x - a) * s + (o = e.y - n) * o
+                    return (a = t.x - s) * a + (o = t.y - n) * o
                 }
 
-                function s(e, t, i, a, o) {
-                    for (var r, c = a, E = t + 1; E < i; E++) {
-                        var l = n(e[E], e[t], e[i]);
-                        l > c && (r = E, c = l)
+                function a(t, e, i, s, o) {
+                    for (var r, c = s, l = e + 1; l < i; l++) {
+                        var h = n(t[l], t[e], t[i]);
+                        h > c && (r = l, c = h)
                     }
-                    c > a && (r - t > 1 && s(e, t, r, a, o), o.push(e[r]), i - r > 1 && s(e, r, i, a, o))
+                    c > s && (r - e > 1 && a(t, e, r, s, o), o.push(t[r]), i - r > 1 && a(t, r, i, s, o))
                 }
 
-                function o(e, t) {
-                    var i = e.length - 1,
-                        a = [e[0]];
-                    return s(e, 0, i, t, a), a.push(e[i]), a
+                function o(t, e) {
+                    var i = t.length - 1,
+                        s = [t[0]];
+                    return a(t, 0, i, e, s), s.push(t[i]), s
                 }
 
-                function r(e, t, i) {
-                    if (e.length <= 2) return e;
-                    var a = void 0 !== t ? t * t : 1;
-                    return o(e = i ? e : function(e, t) {
-                        for (var i, a, n, s, o, r = e[0], c = [r], E = 1, l = e.length; E < l; E++) n = r, void 0, void 0, (s = (a = i = e[E]).x - n.x) * s + (o = a.y - n.y) * o > t && (c.push(i), r = i);
+                function r(t, e, i) {
+                    if (t.length <= 2) return t;
+                    var s = void 0 !== e ? e * e : 1;
+                    return o(t = i ? t : function(t, e) {
+                        for (var i, s, n, a, o, r = t[0], c = [r], l = 1, h = t.length; l < h; l++) n = r, void 0, void 0, (a = (s = i = t[l]).x - n.x) * a + (o = s.y - n.y) * o > e && (c.push(i), r = i);
                         return r !== i && c.push(i), c
-                    }(e, a), a)
+                    }(t, s), s)
                 }
-                void 0 === (a = function() {
+                void 0 === (s = function() {
                     return r
-                }.call(t, i, t, e)) || (e.exports = a)
+                }.call(e, i, e, t)) || (t.exports = s)
             }()
         },
-        20854: (e, t, i) => {
+        20854: (t, e, i) => {
             "use strict";
-            i.d(t, {
-                J: () => s
+            i.d(e, {
+                J: () => o
             });
-            var a = i(16479),
-                n = i.n(a);
-            class s {
-                constructor(e, t, i) {
-                    var a, n, s, o;
-                    this.DEFAULT_WIDTH = 400, this.DEFAULT_HEIGHT = 400, this.color = "#000", this.layer = 0, this.layers = 1, this.maxPoints = Number.MAX_SAFE_INTEGER, this.points = [], this.weight = 4, this.isInteracting = !1, e.width = null !== (n = null === (a = t.size) || void 0 === a ? void 0 : a.width) && void 0 !== n ? n : this.DEFAULT_WIDTH, e.height = null !== (o = null === (s = t.size) || void 0 === s ? void 0 : s.height) && void 0 !== o ? o : this.DEFAULT_HEIGHT, this.canvas = e, this.ctx = e.getContext("2d"), this.doodle = t, (null == i ? void 0 : i.color) && (this.color = i.color), (null == i ? void 0 : i.layer) && (this.layer = i.layer), (null == i ? void 0 : i.layers) && (this.layers = i.layers), (null == i ? void 0 : i.maxPoints) && (this.maxPoints = i.maxPoints), (null == i ? void 0 : i.weight) && (this.weight = i.weight), this.drawLines()
+            var s = i(16479),
+                n = i.n(s),
+                a = i(89446);
+            class o {
+                constructor(t, e, i) {
+                    var s, n, a, o, r;
+                    this.DEFAULT_WIDTH = 400, this.DEFAULT_HEIGHT = 400, this.color = "#000", this.layer = 0, this.layers = 1, this.maxPoints = Number.MAX_SAFE_INTEGER, this.points = [], this.precision = 2, this.scale = {
+                        width: 1,
+                        height: 1
+                    }, this.weight = 4, this.isInteracting = !1, (null == i ? void 0 : i.color) && (this.color = i.color), (null == i ? void 0 : i.layer) && (this.layer = i.layer), (null == i ? void 0 : i.layers) && (this.layers = i.layers), (null == i ? void 0 : i.maxPoints) && (this.maxPoints = i.maxPoints), (null == i ? void 0 : i.precision) && (this.precision = i.precision), (null == i ? void 0 : i.scale) && (this.scale = i.scale), (null == i ? void 0 : i.weight) && (this.weight = i.weight), t.width = (null !== (n = null === (s = e.size) || void 0 === s ? void 0 : s.width) && void 0 !== n ? n : this.DEFAULT_WIDTH) * this.scale.width, t.height = (null !== (o = null === (a = e.size) || void 0 === a ? void 0 : a.height) && void 0 !== o ? o : this.DEFAULT_HEIGHT) * this.scale.height, this.canvas = t, this.ctx = t.getContext("2d"), null === (r = this.ctx) || void 0 === r || r.scale(this.scale.width, this.scale.height), this.doodle = e, this.drawLines()
                 }
-                addPoint(e) {
-                    const t = {
-                        x: Math.min(Math.max(.5 * this.weight, e.x), this.canvas.width - .5 * this.weight),
-                        y: Math.min(Math.max(.5 * this.weight, e.y), this.canvas.height - .5 * this.weight)
-                    };
+                addPoint(t) {
                     this.points.push(t)
+                }
+                normalizePoint(t) {
+                    const e = {
+                            x: t.x / this.scale.width,
+                            y: t.y / this.scale.height
+                        },
+                        i = {
+                            x: Math.min(Math.max(.5 * this.weight, e.x), this.canvas.width / this.scale.width - .5 * this.weight),
+                            y: Math.min(Math.max(.5 * this.weight, e.y), this.canvas.height / this.scale.height - .5 * this.weight)
+                        };
+                    return {
+                        x: a.c.toPrecision(i.x, this.precision),
+                        y: a.c.toPrecision(i.y, this.precision)
+                    }
                 }
                 drawLines() {
                     if (this.ctx) {
                         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-                        for (let e = 0; e < this.layers; e++) Object.values(this.doodle.lines).filter((t => {
+                        for (let t = 0; t < this.layers; t++) Object.values(this.doodle.lines).filter((e => {
                             var i;
-                            return (null !== (i = t.layer) && void 0 !== i ? i : 0) === e
-                        })).forEach((e => this.drawLine(e))), e === this.layer && this.drawLine({
+                            return (null !== (i = e.layer) && void 0 !== i ? i : 0) === t
+                        })).forEach((t => this.drawLine(t))), t === this.layer && this.drawLine({
                             color: this.color,
                             index: this.doodle.lines.length,
                             layer: this.layer,
@@ -78,533 +92,84 @@
                         })
                     }
                 }
-                drawLine(e) {
-                    this.ctx && (this.ctx.fillStyle = e.color, this.ctx.strokeStyle = e.color, this.ctx.lineCap = "round", this.ctx.lineJoin = "round", this.ctx.lineWidth = e.weight, this.ctx.beginPath(), e.points.forEach(((t, i) => {
-                        1 === e.points.length && 0 === i && (this.ctx.save(), this.ctx.arc(t.x, t.y, e.weight / 2, 0, 2 * Math.PI), this.ctx.fill(), this.ctx.restore(), this.ctx.beginPath()), this.ctx.lineTo(t.x, t.y)
+                drawLine(t) {
+                    this.ctx && (this.ctx.fillStyle = t.color, this.ctx.strokeStyle = t.color, this.ctx.lineCap = "round", this.ctx.lineJoin = "round", this.ctx.lineWidth = t.weight, this.ctx.beginPath(), t.points.forEach(((e, i) => {
+                        1 === t.points.length && 0 === i && (this.ctx.save(), this.ctx.arc(e.x, e.y, t.weight / 2, 0, 2 * Math.PI), this.ctx.fill(), this.ctx.restore(), this.ctx.beginPath()), this.ctx.lineTo(e.x, e.y)
                     })), this.ctx.stroke())
                 }
-                renderImage(e = "image/png") {
-                    return this.doodle.lines.length > 0 && this.drawLines(), this.canvas.toDataURL(e)
+                renderImage(t = "image/png") {
+                    return this.doodle.lines.length > 0 && this.drawLines(), this.canvas.toDataURL(t)
                 }
-                onStart(e) {
-                    this.isInteracting = !0, this.addPoint(e), this.drawLines()
+                onStart(t) {
+                    this.isInteracting = !0;
+                    const e = this.normalizePoint(t);
+                    this.addPoint(e), this.drawLines()
                 }
-                onMove(e) {
+                onMove(t) {
                     if (!this.isInteracting) return;
-                    const t = this.points[this.points.length - 1];
-                    if (!t) return void this.addPoint(e);
+                    const e = this.points[this.points.length - 1];
+                    if (!e) return void this.addPoint(this.normalizePoint(t));
                     const i = .5 * this.weight,
-                        a = {
-                            x: e.x - t.x,
-                            y: e.y - t.y
+                        s = {
+                            x: t.x - e.x,
+                            y: t.y - e.y
                         },
-                        n = Math.sqrt(Math.pow(a.x, 2) + Math.pow(a.y, 2));
+                        n = Math.sqrt(Math.pow(s.x, 2) + Math.pow(s.y, 2));
                     if (n > i) {
-                        const e = (n - i) / n,
-                            s = {
-                                x: a.x * e,
-                                y: a.y * e
+                        const t = (n - i) / n,
+                            a = {
+                                x: s.x * t,
+                                y: s.y * t
                             },
                             o = {
-                                x: t.x + s.x,
-                                y: t.y + s.y
+                                x: e.x + a.x,
+                                y: e.y + a.y
                             };
-                        this.addPoint(o), this.drawLines()
+                        this.addPoint(this.normalizePoint(o)), this.drawLines()
                     }
                 }
                 onEnd() {
                     if (!this.isInteracting) return null;
-                    const e = {
+                    const t = {
                         color: this.color,
                         index: this.doodle.lines.length,
                         layer: this.layer,
-                        points: n()(this.points),
+                        points: n()(this.points, .5).map((t => ({
+                            x: a.c.toPrecision(t.x, this.precision),
+                            y: a.c.toPrecision(t.y, this.precision)
+                        }))),
                         weight: this.weight
                     };
-                    return this.isInteracting = !1, this.points = [], e
+                    return this.isInteracting = !1, this.points = [], t
                 }
             }
         },
-        65853: (e, t, i) => {
+        52265: (t, e, i) => {
             "use strict";
-            i.d(t, {
-                s: () => a
+            i.r(e), i.d(e, {
+                default: () => J
             });
-            const a = {
-                en: {
-                    ACTION: {
-                        BACK: "Back",
-                        CANCEL: "Cancel",
-                        CLOSE: "Close",
-                        CREATE: "Create",
-                        DELETE: "Delete",
-                        DONE: "Done",
-                        EDIT: "Edit",
-                        OK: "OK",
-                        NO: "No",
-                        PLAY: "Play",
-                        PUBLISH: "Publish",
-                        SUBMIT: "Submit",
-                        TRY_AGAIN: "Try Again",
-                        UNDO: "Undo",
-                        YES: "Yes"
-                    },
-                    ALT: {
-                        UGC: {
-                            VISIBILITY_CONTROLLER_OFF: "prompts hidden on players' devices",
-                            VISIBILITY_CONTROLLER_ON: "prompts shown on players' devices",
-                            VISIBILITY_SCREEN_OFF: "prompts hidden on game screen",
-                            VISIBILITY_SCREEN_ON: "prompts shown on game screen"
-                        }
-                    },
-                    ERROR: {
-                        DISCONNECTED: "You have been disconnected.",
-                        ROOM_DESTROYED: "Thanks for playing!",
-                        ROOM_DISCONNECTED: "Disconnected",
-                        ROOM_NOT_FOUND: "Room not found",
-                        TITLE: "Error"
-                    },
-                    LOBBY: {
-                        JOINED_COUNT: "x | {count} of {maxPlayers} players joined | {count} of {maxPlayers} players joined",
-                        PLAYERS_NEEDED: "x | {count} player needed to start | {count} players needed to start",
-                        WAITING_FOR_VIP: "Waiting for {name} to start the game",
-                        WAITING_FOR_GAMEPAD: "Waiting for the game to start",
-                        GAME_STARTING: "Game is starting",
-                        BUTTON_START: "Press to Start",
-                        BUTTON_CANCEL: "Press to Cancel"
-                    },
-                    POST_GAME: {
-                        GALLERY_LINK: "Visit the Gallery",
-                        PLAY_AGAIN: "Play again?",
-                        BUTTON_SAME_PLAYERS: "Same Players",
-                        BUTTON_NEW_PLAYERS: "New Players"
-                    },
-                    TUTORIAL: {
-                        BUTTON_SKIP: "Skip",
-                        BUTTON_NEXT: "Next",
-                        BUTTON_DONE: "Let’s Go!"
-                    },
-                    AUDIENCE: {
-                        NAME: "AUDIENCE"
-                    },
-                    UGC: {
-                        EPISODE_REPORT: "Report Episode",
-                        EPISODE_UNLOAD: "Unload Episode",
-                        EPISODE_VIEW_AUTHOR: "View Author",
-                        EPISODES_LOAD: "Load an episode by id:",
-                        EPISODES_MENU: "Episodes Menu",
-                        EPISODES_SELECT: "Or select an epsiode:",
-                        EPISODES_WARNING: "Warning: user generated content is not rated",
-                        INSTRUCTION: {
-                            CREATE_TITLE: "first things first, enter a name for the episode that will contain all your prompts and hit create.",
-                            LOAD: "create or load?",
-                            PUBLISH: "publish your episode",
-                            TITLE: "name your episode",
-                            TOGGLE_VISIBILITY: "tap to show/hide prompts",
-                            WRITE: "write your prompts"
-                        },
-                        WARNING: {
-                            DELETE: "Are you sure you want to delete this episode?",
-                            TOS: "By sharing content, you agree to our [tos]Terms of Service[/tos]",
-                            TOS_AGREE: "agree and share"
-                        },
-                        BACK_TO_EPISODES: "back to episodes",
-                        BACK_TO_MENU: "back to menu",
-                        CREATE_NEW_EPISODE: "create a new episode",
-                        PREVIOUS_EPISODES: "previous episodes",
-                        PROMPT_ADD: "add prompt",
-                        PROMPT_PLACEHOLDER: "enter a prompt",
-                        PROMPTS_COUNT_HIDDEN: "({count} hidden)",
-                        TITLE_PLACEHOLDER: "enter a title"
-                    },
-                    PASSWORD_PLACEHOLDER: "ENTER 5-DIGIT PASSWORD",
-                    ROOM_CODE: "ROOM CODE",
-                    ROOM_CODE_PLACEHOLDER: "ENTER 4-LETTER CODE"
-                },
-                fr: {
-                    ACTION: {
-                        BACK: "Retour",
-                        CANCEL: "Annuler",
-                        CLOSE: "Fermer",
-                        CREATE: "Créer",
-                        DELETE: "Supprimer",
-                        DONE: "Terminé",
-                        EDIT: "Modifier",
-                        OK: "OK",
-                        NO: "Non",
-                        PLAY: "Jouer",
-                        PUBLISH: "Publier",
-                        SUBMIT: "Envoyer",
-                        TRY_AGAIN: "Réessayer",
-                        YES: "Oui"
-                    },
-                    ERROR: {
-                        DISCONNECTED: "Vous avez été déconnecté.",
-                        ROOM_DESTROYED: "Merci d'avoir joué !",
-                        ROOM_DISCONNECTED: "Déconnexion",
-                        ROOM_NOT_FOUND: "Salle introuvable",
-                        TITLE: "Erreur"
-                    },
-                    LOBBY: {
-                        JOINED_COUNT: "x | {count} joueur sur {maxPlayers} à rejoint la partie | {count} joueurs sur {maxPlayers} ont rejoint la partie",
-                        PLAYERS_NEEDED: "x | {count} joueur nécessaire pour commencer | {count} joueurs nécessaires pour commencer",
-                        WAITING_FOR_VIP: "En attente de {name} pour commencer la partie",
-                        WAITING_FOR_GAMEPAD: "En attente du début de la partie",
-                        GAME_STARTING: "La partie commence",
-                        BUTTON_START: "Appuyer pour commencer",
-                        BUTTON_CANCEL: "Appuyer pour annuler"
-                    },
-                    POST_GAME: {
-                        GALLERY_LINK: "Visiter la galerie",
-                        PLAY_AGAIN: "Rejouer ?",
-                        BUTTON_SAME_PLAYERS: "Les mêmes joueurs",
-                        BUTTON_NEW_PLAYERS: "De nouveaux joueurs"
-                    },
-                    TUTORIAL: {
-                        BUTTON_SKIP: "Passer",
-                        BUTTON_NEXT: "Suivant",
-                        BUTTON_DONE: "Allons-y !"
-                    },
-                    AUDIENCE: {
-                        NAME: "SPECTATEURS"
-                    },
-                    UGC: {
-                        EPISODE_REPORT: "Signaler l'épisode",
-                        EPISODE_UNLOAD: "Retirer l'épisode",
-                        EPISODE_VIEW_AUTHOR: "Voir l'auteur",
-                        EPISODES_LOAD: "Charger un épisode par id :",
-                        EPISODES_MENU: "Menu des épisodes",
-                        EPISODES_SELECT: "Ou sélectionner un épisode :",
-                        EPISODES_WARNING: "Attention : le contenu généré par les utilisateurs ne fait pas l'objet d'un classement",
-                        INSTRUCTION: {
-                            CREATE_TITLE: "commencez par donner un nom à l'épisode qui contiendra vos sujets, puis touchez créer.",
-                            TOGGLE_VISIBILITY: "touchez pour afficher/masquer les sujets"
-                        },
-                        WARNING: {
-                            DELETE: "Voulez-vous vraiment supprimer cet épisode ?",
-                            TOS: "En partageant votre contenu, vous acceptez nos [tos]Conditions de service[/tos]",
-                            TOS_AGREE: "accepter et partager"
-                        },
-                        BACK_TO_EPISODES: "retour aux épisodes",
-                        BACK_TO_MENU: "retour au menu",
-                        CREATE_NEW_EPISODE: "créer un nouvel épisode",
-                        PREVIOUS_EPISODES: "épisodes précédents",
-                        PROMPT_ADD: "ajouter un sujet",
-                        PROMPT_PLACEHOLDER: "taper un sujet",
-                        TITLE_PLACEHOLDER: "taper un titre"
-                    },
-                    PASSWORD_PLACEHOLDER: "ENTREZ UN MOT DE PASSE À 5 CHIFFRES",
-                    ROOM_CODE: "CODE DE SALLE",
-                    ROOM_CODE_PLACEHOLDER: "TAPEZ LE CODE 4 À LETTRES"
-                },
-                it: {
-                    ACTION: {
-                        BACK: "Indietro",
-                        CANCEL: "Annulla",
-                        CLOSE: "Chiuda",
-                        CREATE: "Crea",
-                        DELETE: "Elimina",
-                        DONE: "Fine",
-                        EDIT: "Modifica",
-                        OK: "OK",
-                        NO: "No",
-                        PLAY: "Gioca",
-                        PUBLISH: "Pubblica",
-                        SUBMIT: "Invia",
-                        TRY_AGAIN: "Riprova",
-                        YES: "Sì"
-                    },
-                    ERROR: {
-                        DISCONNECTED: "È stata effettuata la disconnessione.",
-                        ROOM_DESTROYED: "Grazie per aver scelto di giocare con noi!",
-                        ROOM_DISCONNECTED: "Disconnessione effettuata",
-                        ROOM_NOT_FOUND: "Sala non trovata",
-                        TITLE: "Errore"
-                    },
-                    LOBBY: {
-                        JOINED_COUNT: "x | Sta partecipando {count} giocatore su {maxPlayers} | Stanno partecipando {count} giocatori su {maxPlayers}",
-                        PLAYERS_NEEDED: "x | Manca {count} giocatore per iniziare | Mancano {count} giocatori per iniziare",
-                        WAITING_FOR_VIP: "In attesa di {name} per iniziare la partita",
-                        WAITING_FOR_GAMEPAD: "In attesa d'iniziare la partita",
-                        GAME_STARTING: "La partita sta per iniziare",
-                        BUTTON_START: "Premi per avviare",
-                        BUTTON_CANCEL: "Premi per annullare"
-                    },
-                    POST_GAME: {
-                        GALLERY_LINK: "Visita la galleria",
-                        PLAY_AGAIN: "Vuoi giocare di nuovo?",
-                        BUTTON_SAME_PLAYERS: "Stessi giocatori",
-                        BUTTON_NEW_PLAYERS: "Nuovi giocatori"
-                    },
-                    TUTORIAL: {
-                        BUTTON_SKIP: "Salta",
-                        BUTTON_NEXT: "Avanti",
-                        BUTTON_DONE: "Iniziamo!"
-                    },
-                    AUDIENCE: {
-                        NAME: "PUBBLICO"
-                    },
-                    UGC: {
-                        EPISODE_REPORT: "Segnala episodio",
-                        EPISODE_UNLOAD: "Rimuovi episodio",
-                        EPISODE_VIEW_AUTHOR: "Mostra autore",
-                        EPISODES_LOAD: "Carica un episodio in base al suo id:",
-                        EPISODES_MENU: "Menu Episodi",
-                        EPISODES_SELECT: "Oppure seleziona un episodio:",
-                        EPISODES_WARNING: "Attenzione: il contenuto generato dagli utenti non è classificato",
-                        INSTRUCTION: {
-                            CREATE_TITLE: "per prima cosa, inserisci un nome per l’episodio che contenga tutti i tuoi suggerimenti e premi crea.",
-                            TOGGLE_VISIBILITY: "tocca per mostrare/nascondere suggerimenti"
-                        },
-                        WARNING: {
-                            DELETE: "Vuoi davvero eliminare questo episodio?",
-                            TOS: "Condividendo i contenuti, accetti i nostri [tos]Condizioni del servizio[/tos]",
-                            TOS_AGREE: "accetta e condividi"
-                        },
-                        BACK_TO_EPISODES: "torna agli episodi",
-                        BACK_TO_MENU: "torna al menu",
-                        CREATE_NEW_EPISODE: "crea un nuovo episodio",
-                        PREVIOUS_EPISODES: "episodi precedenti",
-                        PROMPT_ADD: "aggiungi suggerimento",
-                        PROMPT_PLACEHOLDER: "inserisci suggerimento",
-                        TITLE_PLACEHOLDER: "inserisci un titolo"
-                    },
-                    PASSWORD_PLACEHOLDER: "INSERISCI LA PASSWORD DI 5 CARATTERI",
-                    ROOM_CODE: "CODICE STANZA",
-                    ROOM_CODE_PLACEHOLDER: "INSERISCI IL CODICE DI 4 LETTERE"
-                },
-                de: {
-                    ACTION: {
-                        BACK: "Zurück",
-                        CANCEL: "Abbrechen",
-                        CLOSE: "Schließen",
-                        CREATE: "Erstellen",
-                        DELETE: "Löschen",
-                        DONE: "Fertig",
-                        EDIT: "Bearbeiten",
-                        OK: "OK",
-                        NO: "Nein",
-                        PLAY: "Spielen",
-                        PUBLISH: "Veröffentlichen",
-                        SUBMIT: "Abschicken",
-                        TRY_AGAIN: "Erneut versuchen",
-                        YES: "Ja"
-                    },
-                    ERROR: {
-                        DISCONNECTED: "Deine Verbindung wurde getrennt.",
-                        ROOM_DESTROYED: "Danke fürs Spielen!",
-                        ROOM_DISCONNECTED: "Verbindung getrennt",
-                        ROOM_NOT_FOUND: "Raum wurde nicht gefunden.",
-                        TITLE: "Fehler"
-                    },
-                    LOBBY: {
-                        JOINED_COUNT: "x | {count} von {maxPlayers} Spielern sind beigetreten | {count} von {maxPlayers} Spielern sind beigetreten",
-                        PLAYERS_NEEDED: "x | {count} Spieler zum Starten benötigt | {count} Spieler zum Starten benötigt",
-                        WAITING_FOR_VIP: "Warten, bis {name} das Spiel startet",
-                        WAITING_FOR_GAMEPAD: "Warten, bis das Spiel startet",
-                        GAME_STARTING: "Das Spiel beginnt",
-                        BUTTON_START: "Zum Starten drücken",
-                        BUTTON_CANCEL: "Zum Abbrechen drücken"
-                    },
-                    POST_GAME: {
-                        GALLERY_LINK: "Galerie besuchen",
-                        PLAY_AGAIN: "Erneut spielen?",
-                        BUTTON_SAME_PLAYERS: "Selbe Spieler",
-                        BUTTON_NEW_PLAYERS: "Neue Spieler"
-                    },
-                    TUTORIAL: {
-                        BUTTON_SKIP: "Überspringen",
-                        BUTTON_NEXT: "Weiter",
-                        BUTTON_DONE: "Los geht's!"
-                    },
-                    AUDIENCE: {
-                        NAME: "PUBLIKUM"
-                    },
-                    UGC: {
-                        EPISODE_REPORT: "Episode melden",
-                        EPISODE_UNLOAD: "Episode deaktivieren",
-                        EPISODE_VIEW_AUTHOR: "Autor ansehen",
-                        EPISODES_LOAD: "Lade eine Episode über dessen ID:",
-                        EPISODES_MENU: "Episoden-Menü",
-                        EPISODES_SELECT: "Oder wähle eine Episode aus:",
-                        EPISODES_WARNING: "Achtung: Von Nutzern erstellte Inhalte werden nicht auf Familientauglichkeit geprüft",
-                        INSTRUCTION: {
-                            CREATE_TITLE: 'Benenne als allererstes deine Episode, die alle deine Prompts enthalten wird und drücke dann "Erstellen".',
-                            TOGGLE_VISIBILITY: "Drücken, um Prompts zu zeigen / zu verstecken"
-                        },
-                        WARNING: {
-                            DELETE: "Bist du sicher, dass du diese Episode löschen möchtest?",
-                            TOS: "Durch das Teilen von Inhalten stimmst du unseren [tos]Nutzungsbedingungen[/tos] zu",
-                            TOS_AGREE: "Zustimmen und teilen"
-                        },
-                        BACK_TO_EPISODES: "Zurück zu den Episoden",
-                        BACK_TO_MENU: "Zurück zum Menü",
-                        CREATE_NEW_EPISODE: "Eigene Episode erstellen",
-                        PREVIOUS_EPISODES: "Vorige Episoden",
-                        PROMPT_ADD: "Prompt hinzufügen",
-                        PROMPT_PLACEHOLDER: "Prompt eingeben",
-                        TITLE_PLACEHOLDER: "Titel eingeben"
-                    },
-                    PASSWORD_PLACEHOLDER: "FÜNFSTELLIGES PASSWORT EINGEBEN",
-                    ROOM_CODE: "RAUMCODE",
-                    ROOM_CODE_PLACEHOLDER: "GIB DEN 4-STELLIGEN CODE EIN"
-                },
-                es: {
-                    ACTION: {
-                        BACK: "Atrás",
-                        CANCEL: "Cancelar",
-                        CLOSE: "Cerrar",
-                        CREATE: "Crear",
-                        DELETE: "Borrar",
-                        DONE: "Hecho",
-                        EDIT: "Editar",
-                        OK: "Aceptar",
-                        NO: "No",
-                        PLAY: "Jugar",
-                        PUBLISH: "Publicar",
-                        SUBMIT: "Enviar",
-                        TRY_AGAIN: "Volver a intentarlo",
-                        YES: "Sí"
-                    },
-                    ERROR: {
-                        DISCONNECTED: "Te has desconectado.",
-                        ROOM_DESTROYED: "¡Gracias por jugar!",
-                        ROOM_DISCONNECTED: "Desconectado",
-                        ROOM_NOT_FOUND: "No se encuentra la sala",
-                        TITLE: "Error"
-                    },
-                    LOBBY: {
-                        JOINED_COUNT: "x | Se ha unido {count} de {maxPlayers} jugadores | Se han unido {count} de {maxPlayers} jugadores",
-                        PLAYERS_NEEDED: "x | Se necesita {count} jugador para empezar | Se necesitan {count} jugadores para empezar",
-                        WAITING_FOR_VIP: "Esperando a que {name} inicie la partida",
-                        WAITING_FOR_GAMEPAD: "Esperando a que empiece la partida",
-                        GAME_STARTING: "La partida va a empezar",
-                        BUTTON_START: "Pulsa para empezar",
-                        BUTTON_CANCEL: "Pulsa para cancelar"
-                    },
-                    POST_GAME: {
-                        GALLERY_LINK: "Visita la galería",
-                        PLAY_AGAIN: "¿Jugar otra vez?",
-                        BUTTON_SAME_PLAYERS: "Los mismos jugadores",
-                        BUTTON_NEW_PLAYERS: "Otros jugadores"
-                    },
-                    TUTORIAL: {
-                        BUTTON_SKIP: "Omitir",
-                        BUTTON_NEXT: "Siguiente",
-                        BUTTON_DONE: "¡Vamos!"
-                    },
-                    AUDIENCE: {
-                        NAME: "PÚBLICO"
-                    },
-                    UGC: {
-                        EPISODE_REPORT: "Denunciar episodio",
-                        EPISODE_UNLOAD: "Retirar episodio",
-                        EPISODE_VIEW_AUTHOR: "Ver autor",
-                        EPISODES_LOAD: "Cargar un episodio por ID:",
-                        EPISODES_MENU: "Menú de episodios",
-                        EPISODES_SELECT: "O selecciona un episodio:",
-                        EPISODES_WARNING: "Aviso: El contenido de los usuarios no tiene clasificación de edad",
-                        INSTRUCTION: {
-                            CREATE_TITLE: "en primer lugar, ponle un nombre al episodio que contendrá tus enunciados y dale a crear.",
-                            TOGGLE_VISIBILITY: "toca para mostrar u ocultar los enunciados"
-                        },
-                        WARNING: {
-                            DELETE: "¿Seguro que quieres borrar este episodio?",
-                            TOS: "Al compartir contenidos, aceptas las [tos]Condiciones del servicio[/tos]",
-                            TOS_AGREE: "aceptar y compartir"
-                        },
-                        BACK_TO_EPISODES: "volver a los episodios",
-                        BACK_TO_MENU: "volver al menú",
-                        CREATE_NEW_EPISODE: "crear nuevo episodio",
-                        PREVIOUS_EPISODES: "episodios anteriores",
-                        PROMPT_ADD: "añadir enunciado",
-                        PROMPT_PLACEHOLDER: "escribe un enunciado",
-                        TITLE_PLACEHOLDER: "escribe un título"
-                    },
-                    PASSWORD_PLACEHOLDER: "INTRODUCIR CONTRASEÑA DE 5 DÍGITOS",
-                    ROOM_CODE: "CÓDIGO DE LA SALA",
-                    ROOM_CODE_PLACEHOLDER: "INTRODUCIR CÓDIGO DE 4 CARACTERES"
-                },
-                "es-XL": {
-                    ACTION: {
-                        BACK: "Volver",
-                        CANCEL: "Cancelar",
-                        OK: "Aceptar",
-                        PLAY: "Jugar",
-                        SUBMIT: "Enviar",
-                        TRY_AGAIN: "Volver a intentarlo"
-                    },
-                    ERROR: {
-                        DISCONNECTED: "Te has desconectado.",
-                        ROOM_DESTROYED: "¡Gracias por jugar!",
-                        ROOM_DISCONNECTED: "Desconectado",
-                        ROOM_NOT_FOUND: "No se encuentra la sala",
-                        TITLE: "Error"
-                    },
-                    LOBBY: {
-                        JOINED_COUNT: "x | Se ha unido {count} de {maxPlayers} jugadores | Se han unido {count} de {maxPlayers} jugadores",
-                        PLAYERS_NEEDED: "x | Se necesita {count} jugador para empezar | Se necesitan {count} jugadores para empezar",
-                        WAITING_FOR_VIP: "Esperando a que {name} inicie la partida",
-                        WAITING_FOR_GAMEPAD: "Esperando a que empiece la partida",
-                        GAME_STARTING: "La partida va a empezar",
-                        BUTTON_START: "Pulsa para empezar",
-                        BUTTON_CANCEL: "Pulsa para cancelar"
-                    },
-                    POST_GAME: {
-                        GALLERY_LINK: "Visita la galería",
-                        PLAY_AGAIN: "¿Jugar otra vez?",
-                        BUTTON_SAME_PLAYERS: "Los mismos jugadores",
-                        BUTTON_NEW_PLAYERS: "Otros jugadores"
-                    },
-                    TUTORIAL: {
-                        BUTTON_SKIP: "Omitir",
-                        BUTTON_NEXT: "Siguiente",
-                        BUTTON_DONE: "¡Vamos!"
-                    },
-                    AUDIENCE: {
-                        NAME: "PÚBLICO"
-                    },
-                    UGC: {
-                        EPISODE_REPORT: "Denunciar episodio",
-                        EPISODE_UNLOAD: "Retirar episodio",
-                        EPISODE_VIEW_AUTHOR: "Ver autor",
-                        EPISODES_LOAD: "Carga un episodio por ID:",
-                        EPISODES_MENU: "Menú de episodios",
-                        EPISODES_SELECT: "O selecciona un episodio:",
-                        EPISODES_WARNING: "Aviso: El contenido de los usuarios no tiene clasificación de edad"
-                    },
-                    PASSWORD_PLACEHOLDER: "INTRODUCE CONTRASEÑA DE 5 DÍGITOS",
-                    ROOM_CODE: "CÓDIGO DE LA SALA",
-                    ROOM_CODE_PLACEHOLDER: "INTRODUCE EL CÓDIGO DE 4 CARACTERES"
-                }
-            }
-        },
-        52265: (e, t, i) => {
-            "use strict";
-            i.r(t), i.d(t, {
-                default: () => F
-            });
-            var a = function() {
-                var e = this,
-                    t = e.$createElement,
-                    i = e._self._c || t;
+            var s = function() {
+                var t = this,
+                    e = t.$createElement,
+                    i = t._self._c || e;
                 return i("div", {
                     staticClass: "jbg moderation"
-                }, [e._m(0), e._v(" "), e.isConnected ? i("Moderate", e._b({}, "Moderate", e.ecastValues, !1)) : i("Authenticate", {
+                }, [t._m(0), t._v(" "), t.isConnected ? i("Moderate", t._b({}, "Moderate", t.ecastValues, !1)) : i("Authenticate", {
                     on: {
-                        connectionChange: e.onConnectionChange
+                        connectionChange: t.onConnectionChange
                     }
                 })], 1)
             };
-            a._withStripped = !0;
+            s._withStripped = !0;
             var n = i(2934),
-                s = i.n(n),
+                a = i.n(n),
                 o = i(45222),
                 r = i(65853),
                 c = function() {
-                    var e = this,
-                        t = e.$createElement,
-                        i = e._self._c || t;
+                    var t = this,
+                        e = t.$createElement,
+                        i = t._self._c || e;
                     return i("div", {
                         staticClass: "authenticate"
                     }, [i("div", {
@@ -619,84 +184,84 @@
                             for: "roomcode",
                             type: "text"
                         }
-                    }, [e._v(e._s(e.$t("ROOM_CODE")))]), e._v(" "), i("Input", {
+                    }, [t._v(t._s(t.$t("ENTRY.ROOM_CODE")))]), t._v(" "), i("Input", {
                         attrs: {
                             id: "roomcode",
                             type: "text",
                             autocapitalize: "off",
                             autocorrect: "off",
                             autocomplete: "off",
-                            placeholder: e.$t("ROOM_CODE_PLACEHOLDER"),
-                            maxlength: e.codeLength
+                            placeholder: t.$t("ENTRY.ROOM_CODE_PLACEHOLDER"),
+                            maxlength: t.codeLength
                         },
                         on: {
-                            input: e.onCodeInput
+                            input: t.onCodeInput
                         },
                         model: {
-                            value: e.code,
-                            callback: function(t) {
-                                e.code = t
+                            value: t.code,
+                            callback: function(e) {
+                                t.code = e
                             },
                             expression: "code"
                         }
-                    }), e._v(" "), i("label", {
+                    }), t._v(" "), i("label", {
                         attrs: {
                             name: "password",
                             for: "password",
                             type: "text"
                         }
-                    }, [e._v(e._s(e.$t("PASSWORD")))]), e._v(" "), i("Input", {
+                    }, [t._v(t._s(t.$t("PASSWORD")))]), t._v(" "), i("Input", {
                         attrs: {
                             id: "password",
                             type: "text",
                             autocapitalize: "off",
                             autocorrect: "off",
                             autocomplete: "off",
-                            placeholder: e.$t("PASSWORD_PLACEHOLDER"),
-                            maxlength: e.passwordLength
+                            placeholder: t.$t("ENTRY.PASSWORD_PLACEHOLDER"),
+                            maxlength: t.passwordLength
                         },
                         on: {
-                            input: e.onPasswordInput
+                            input: t.onPasswordInput
                         },
                         model: {
-                            value: e.password,
-                            callback: function(t) {
-                                e.password = t
+                            value: t.password,
+                            callback: function(e) {
+                                t.password = e
                             },
                             expression: "password"
                         }
-                    }), e._v(" "), i("button", {
+                    }), t._v(" "), i("button", {
                         class: {
-                            connecting: e.isConnecting
+                            connecting: t.isConnecting
                         },
                         attrs: {
                             id: "button-join",
                             type: "submit",
-                            disabled: !e.canSubmit
+                            disabled: !t.canSubmit
                         },
                         on: {
-                            click: function(t) {
-                                return t.preventDefault(), e.onJoinClick.apply(null, arguments)
+                            click: function(e) {
+                                return e.preventDefault(), t.onJoinClick.apply(null, arguments)
                             }
                         }
-                    }, [i("span", [e._v(e._s(e.$t("MODERATE")))]), e._v(" "), i("div", {
+                    }, [i("span", [t._v(t._s(t.$t("MODERATE")))]), t._v(" "), i("div", {
                         staticClass: "loading"
-                    })])], 1), e._v(" "), e.room ? [e.isModerationSupported ? e.room.moderationEnabled ? e._e() : i("p", {
+                    })])], 1), t._v(" "), t.room ? [t.isModerationSupported ? t.room.moderationEnabled ? t._e() : i("p", {
                         staticClass: "warning"
-                    }, [e._v("\n                    " + e._s(e.$t("WARNING_MODERATION_DISABLED")) + "\n                ")]) : i("p", {
+                    }, [t._v("\n                    " + t._s(t.$t("WARNING_MODERATION_DISABLED")) + "\n                ")]) : i("p", {
                         staticClass: "warning"
-                    }, [e._v("\n                    " + e._s(e.$t("WARNING_MODERATION_UNSUPPORTED", {
-                        gameName: e.game && e.game.name
-                    })) + "\n                ")])] : e._e()], 2)])])
+                    }, [t._v("\n                    " + t._s(t.$t("WARNING_MODERATION_UNSUPPORTED", {
+                        gameName: t.game && t.game.name
+                    })) + "\n                ")])] : t._e()], 2)])])
                 };
             c._withStripped = !0;
-            var E = i(44285),
-                l = i(21944),
-                u = i(6305),
-                d = i(89446),
-                O = i(2720),
-                p = i(12360);
-            const _ = {
+            var l = i(44285),
+                h = i(21944),
+                d = i(6305),
+                u = i(89446),
+                p = i(2720),
+                m = i(12360);
+            const v = {
                 en: {
                     MODERATE: "Moderate",
                     PASSWORD: "Password",
@@ -758,39 +323,39 @@
                     WARNING_MODERATION_UNSUPPORTED: "{gameName} no tiene nada que moderar, pero ¡gracias por querer ayudar!"
                 }
             };
-            var T = function(e, t, i, a) {
-                return new(i || (i = Promise))((function(n, s) {
-                    function o(e) {
+            var _ = function(t, e, i, s) {
+                return new(i || (i = Promise))((function(n, a) {
+                    function o(t) {
                         try {
-                            c(a.next(e))
-                        } catch (e) {
-                            s(e)
+                            c(s.next(t))
+                        } catch (t) {
+                            a(t)
                         }
                     }
 
-                    function r(e) {
+                    function r(t) {
                         try {
-                            c(a.throw(e))
-                        } catch (e) {
-                            s(e)
+                            c(s.throw(t))
+                        } catch (t) {
+                            a(t)
                         }
                     }
 
-                    function c(e) {
-                        var t;
-                        e.done ? n(e.value) : (t = e.value, t instanceof i ? t : new i((function(e) {
-                            e(t)
+                    function c(t) {
+                        var e;
+                        t.done ? n(t.value) : (e = t.value, e instanceof i ? e : new i((function(t) {
+                            t(e)
                         }))).then(o, r)
                     }
-                    c((a = a.apply(e, t || [])).next())
+                    c((s = s.apply(t, e || [])).next())
                 }))
             };
-            const h = s().extend({
+            const g = a().extend({
                 components: {
-                    Input: u.Z
+                    Input: d.Z
                 },
                 i18n: {
-                    messages: _,
+                    messages: v,
                     sharedMessages: r.s
                 },
                 data: () => ({
@@ -803,27 +368,27 @@
                 }),
                 computed: {
                     canSubmit() {
-                        var e;
-                        return this.code.length === this.codeLength && this.password.length === this.passwordLength && !!this.isModerationSupported && !!(null === (e = this.room) || void 0 === e ? void 0 : e.moderationEnabled)
+                        var t;
+                        return this.code.length === this.codeLength && this.password.length === this.passwordLength && !!this.isModerationSupported && !!(null === (t = this.room) || void 0 === t ? void 0 : t.moderationEnabled)
                     },
                     game() {
-                        if (this.room) return (0, p.cF)(this.room.appTag)
+                        if (this.room) return (0, m.cF)(this.room.appTag)
                     },
                     isModerationSupported() {
-                        var e, t;
-                        return !!this.room && null !== (t = null === (e = this.game) || void 0 === e ? void 0 : e.hasModeration) && void 0 !== t && t
+                        var t, e;
+                        return !!this.room && null !== (e = null === (t = this.game) || void 0 === t ? void 0 : t.hasModeration) && void 0 !== e && e
                     }
                 },
                 beforeMount() {
-                    this.populateFromStorage(), this.$api = new E.APIClient({
-                        host: d.c.serverUrl,
+                    this.populateFromStorage(), this.$api = new l.APIClient({
+                        host: u.c.serverUrl,
                         scheme: "https"
                     })
                 },
                 methods: {
                     populateFromStorage() {
-                        var e;
-                        this.$storage.isSupported && (this.code = (null !== (e = this.$storage.get("mod-roomCode")) && void 0 !== e ? e : "").toUpperCase())
+                        var t;
+                        this.$storage.isSupported && (this.code = (null !== (t = this.$storage.get("mod-roomCode")) && void 0 !== t ? t : "").toUpperCase())
                     },
                     onCodeInput() {
                         this.code = this.code.replace(/\s/g, ""), this.code = this.code.trim().toUpperCase(), this.code.length < this.codeLength ? this.room = null : this.getRoomInfo()
@@ -835,19 +400,19 @@
                         this.connect()
                     },
                     getRoomInfo() {
-                        return T(this, void 0, void 0, (function*() {
+                        return _(this, void 0, void 0, (function*() {
                             try {
-                                const e = yield this.$api.getRoom({
+                                const t = yield this.$api.getRoom({
                                     code: this.code
                                 });
-                                this.room = e, l.o.setup(this.room.locale), this.$i18n.locale = l.o.locale
-                            } catch (e) {
-                                console.warn(e), this.room = null
+                                this.room = t, h.o.setup(this.room.locale), this.$root.$i18n.locale = h.o.locale
+                            } catch (t) {
+                                console.warn(t), this.room = null
                             }
                         }))
                     },
                     connect() {
-                        return T(this, void 0, void 0, (function*() {
+                        return _(this, void 0, void 0, (function*() {
                             if (this.isConnecting) return;
                             if (!this.canSubmit) return;
                             if (yield this.getRoomInfo(), !this.room) return void(yield this.$showModal("Error", {
@@ -855,39 +420,39 @@
                                 subtext: this.$t("ERROR.ROOM_NOT_FOUND"),
                                 dismissText: this.$t("ACTION.OK")
                             }));
-                            const e = {
+                            const t = {
                                 host: this.room.host,
                                 code: this.code.toUpperCase(),
                                 name: "moderator",
                                 password: this.password,
                                 role: "moderator",
-                                debug: O.v.debug
+                                debug: p.v.debug
                             };
-                            this.$ecast = new E.WSClient(e), this.isConnecting = !0;
+                            this.$ecast = new l.WSClient(t), this.isConnecting = !0;
                             try {
                                 yield this.$ecast.connect(), this.$syncEcast(), this.$debug.setup(this.$ecast, this.room), this.$storage.isSupported && this.$storage.set("mod-roomCode", this.code), this.$emit("connectionChange", !0)
-                            } catch (e) {
-                                console.error("[SignIn]", e), this.isConnecting = !1, this.onConnectionError(e)
+                            } catch (t) {
+                                console.error("[SignIn]", t), this.isConnecting = !1, this.onConnectionError(t)
                             }
                         }))
                     },
-                    onConnectionError(e) {
+                    onConnectionError(t) {
                         this.$showModal("Error", {
                             text: "Unable to connect",
-                            subtext: e.message,
+                            subtext: t.message,
                             dismissText: this.$t("ACTION.OK")
                         })
                     }
                 }
             });
-            var m = i(51900),
-                I = (0, m.Z)(h, c, [], !1, null, "2ea0b5fc", null);
-            I.options.__file = "src/apps/entry/views/moderation/Authenticate.vue";
-            const A = I.exports;
-            var S = function() {
-                var e = this,
-                    t = e.$createElement,
-                    i = e._self._c || t;
+            var f = i(51900),
+                x = (0, f.Z)(g, c, [], !1, null, "2ea0b5fc", null);
+            x.options.__file = "src/apps/entry/views/moderation/Authenticate.vue";
+            const E = x.exports;
+            var C = function() {
+                var t = this,
+                    e = t.$createElement,
+                    i = t._self._c || e;
                 return i("div", {
                     staticClass: "moderate"
                 }, [i("div", {
@@ -903,12 +468,12 @@
                     }],
                     staticClass: "approve",
                     attrs: {
-                        disabled: !e.pendingItems.length
+                        disabled: !t.pendingItems.length
                     },
                     on: {
-                        click: e.onAcceptAllClick
+                        click: t.onAcceptAllClick
                     }
-                }), e._v(" "), i("button", {
+                }), t._v(" "), i("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
@@ -917,55 +482,55 @@
                     }],
                     staticClass: "reject",
                     attrs: {
-                        disabled: !e.pendingItems.length
+                        disabled: !t.pendingItems.length
                     },
                     on: {
-                        click: e.onRejectAllClick
+                        click: t.onRejectAllClick
                     }
-                })]), e._v(" "), e.items.length ? i("transition-group", {
+                })]), t._v(" "), t.items.length ? i("transition-group", {
                     staticClass: "items",
                     attrs: {
                         name: "items",
                         tag: "div"
                     }
-                }, [e._l(e.items, (function(t) {
-                    return ["animation" === t.type ? i("AnimationItem", {
-                        key: t.key,
+                }, [t._l(t.items, (function(e) {
+                    return ["animation" === e.type ? i("AnimationItem", {
+                        key: e.key,
                         attrs: {
-                            item: t
+                            item: e
                         },
                         on: {
-                            acceptClick: e.onAcceptClick,
-                            rejectClick: e.onRejectClick
+                            acceptClick: t.onAcceptClick,
+                            rejectClick: t.onRejectClick
                         }
-                    }) : "doodle" === t.type ? i("DoodleItem", {
-                        key: t.key,
+                    }) : "doodle" === e.type ? i("DoodleItem", {
+                        key: e.key,
                         attrs: {
-                            item: t
+                            item: e
                         },
                         on: {
-                            acceptClick: e.onAcceptClick,
-                            rejectClick: e.onRejectClick
+                            acceptClick: t.onAcceptClick,
+                            rejectClick: t.onRejectClick
                         }
-                    }) : "drawing" === t.type ? i("DrawingItem", {
-                        key: t.key,
+                    }) : "drawing" === e.type ? i("DrawingItem", {
+                        key: e.key,
                         attrs: {
-                            item: t
+                            item: e
                         },
                         on: {
-                            acceptClick: e.onAcceptClick,
-                            rejectClick: e.onRejectClick
+                            acceptClick: t.onAcceptClick,
+                            rejectClick: t.onRejectClick
                         }
-                    }) : "text" === t.type ? i("TextItem", {
-                        key: t.key,
+                    }) : "text" === e.type ? i("TextItem", {
+                        key: e.key,
                         attrs: {
-                            item: t
+                            item: e
                         },
                         on: {
-                            acceptClick: e.onAcceptClick,
-                            rejectClick: e.onRejectClick
+                            acceptClick: t.onAcceptClick,
+                            rejectClick: t.onRejectClick
                         }
-                    }) : e._e()]
+                    }) : t._e()]
                 }))], 2) : i("div", {
                     staticClass: "empty"
                 }, [i("p", {
@@ -976,32 +541,32 @@
                         expression: "'WAITING_FOR_SUBMISSIONS'"
                     }],
                     staticClass: "empty-text"
-                }), e._v(" "), i("div", {
+                }), t._v(" "), i("div", {
                     staticClass: "loading disabled"
                 })])], 1)])
             };
-            S._withStripped = !0;
-            var N = function() {
-                var e = this,
-                    t = e.$createElement,
-                    i = e._self._c || t;
+            C._withStripped = !0;
+            var I = function() {
+                var t = this,
+                    e = t.$createElement,
+                    i = t._self._c || e;
                 return i("div", {
                     staticClass: "item text",
-                    class: e.item.status
+                    class: t.item.status
                 }, [i("p", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: e.htmlUnescape(e.item.context),
+                        value: t.htmlUnescape(t.item.context),
                         expression: "htmlUnescape(item.context)"
                     }],
                     staticClass: "context"
-                }), e._v(" "), i("div", {
+                }), t._v(" "), i("div", {
                     ref: "stage",
                     staticClass: "stage"
-                }), e._v(" "), i("p", {
+                }), t._v(" "), i("p", {
                     staticClass: "name"
-                }, [e._v(e._s(e.$t("SUBMITTED_BY")) + " "), i("span", [e._v(e._s(e.item.name))])]), e._v(" "), i("div", {
+                }, [t._v(t._s(t.$t("SUBMITTED_BY")) + " "), i("span", [t._v(t._s(t.item.name))])]), t._v(" "), i("div", {
                     staticClass: "item-buttons"
                 }, [i("button", {
                     staticClass: "accept",
@@ -1009,79 +574,79 @@
                         "aria-label": "accept"
                     },
                     on: {
-                        click: function(t) {
-                            return e.$emit("acceptClick", e.item)
+                        click: function(e) {
+                            return t.$emit("acceptClick", t.item)
                         }
                     }
-                }), e._v(" "), i("button", {
+                }), t._v(" "), i("button", {
                     staticClass: "reject",
                     attrs: {
                         "aria-label": "reject"
                     },
                     on: {
-                        click: function(t) {
-                            return e.$emit("rejectClick", e.item)
+                        click: function(e) {
+                            return t.$emit("rejectClick", t.item)
                         }
                     }
                 })])])
             };
-            N._withStripped = !0;
-            var R = i(32530);
-            const D = s().extend({
+            I._withStripped = !0;
+            var A = i(32530);
+            const w = a().extend({
                 props: {
                     item: Object
                 },
                 mounted() {
-                    const e = this.$refs.stage,
-                        t = this.item.value.size.width,
+                    const t = this.$refs.stage,
+                        e = this.item.value.size.width,
                         i = this.item.value.frames || [],
-                        a = new R.U(e, {
+                        s = new A.U(t, {
                             width: this.item.value.size.width * i.length,
                             height: this.item.value.size.height
                         }),
-                        n = a.canvas.renderCanvas.getContext("2d");
-                    n && i.forEach(((e, i) => {
-                        n.save(), n.translate(t * i, 0), a.canvas.parseLines(e).forEach((e => a.canvas.drawLine(n, e))), n.restore()
+                        n = s.canvas.renderCanvas.getContext("2d");
+                    n && i.forEach(((t, i) => {
+                        n.save(), n.translate(e * i, 0), s.canvas.parseLines(t).forEach((t => s.canvas.drawLine(n, t))), n.restore()
                     }))
                 },
                 i18n: {
-                    messages: _
+                    messages: v
                 },
                 methods: {
-                    htmlUnescape: e => d.c.htmlUnescape(e)
+                    htmlUnescape: t => u.c.htmlUnescape(t)
                 }
             });
-            var C = (0, m.Z)(D, N, [], !1, null, "748ebaa0", null);
-            C.options.__file = "src/apps/entry/views/moderation/AnimationItem.vue";
-            const v = C.exports;
-            var L = function() {
-                var e = this,
-                    t = e.$createElement,
-                    i = e._self._c || t;
+            var R = (0, f.Z)(w, I, [], !1, null, "748ebaa0", null);
+            R.options.__file = "src/apps/entry/views/moderation/AnimationItem.vue";
+            const y = R.exports;
+            var S = function() {
+                var t = this,
+                    e = t.$createElement,
+                    i = t._self._c || e;
                 return i("div", {
                     staticClass: "item text",
-                    class: e.item.status
+                    class: t.item.status
                 }, [i("p", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: e.htmlUnescape(e.item.context),
+                        value: t.htmlUnescape(t.item.context),
                         expression: "htmlUnescape(item.context)"
                     }],
                     staticClass: "context"
-                }), e._v(" "), i("div", {
+                }), t._v(" "), i("div", {
                     staticClass: "stage",
                     style: {
-                        background: e.item.value.background
+                        background: t.item.value.background
                     }
                 }, [i("img", {
                     attrs: {
-                        src: e.itemSrc,
+                        src: t.itemSrc,
                         alt: ""
                     }
-                })]), e._v(" "), i("p", {
+                })]), t._v(" "), i("p", {
                     staticClass: "name"
-                }, [e._v(e._s(e.$t("SUBMITTED_BY")) + " "), i("span", [e._v(e._s(e.item.name))])]), e._v(" "), i("div", {
+                }, [t._v(t._s(t.$t("SUBMITTED_BY")) + " "), i("span", [t._v(t._s(t.item.name))])]), t._v(" "), i("div", {
                     staticClass: "item-buttons"
                 }, [i("button", {
                     staticClass: "accept",
@@ -1089,30 +654,30 @@
                         "aria-label": "accept"
                     },
                     on: {
-                        click: function(t) {
-                            return e.$emit("acceptClick", e.item)
+                        click: function(e) {
+                            return t.$emit("acceptClick", t.item)
                         }
                     }
-                }), e._v(" "), i("button", {
+                }), t._v(" "), i("button", {
                     staticClass: "reject",
                     attrs: {
                         "aria-label": "reject"
                     },
                     on: {
-                        click: function(t) {
-                            return e.$emit("rejectClick", e.item)
+                        click: function(e) {
+                            return t.$emit("rejectClick", t.item)
                         }
                     }
                 })])])
             };
-            L._withStripped = !0;
-            var P = i(20854);
-            const g = s().extend({
+            S._withStripped = !0;
+            var O = i(20854);
+            const T = a().extend({
                 props: {
                     item: Object
                 },
                 i18n: {
-                    messages: _
+                    messages: v
                 },
                 data: () => ({
                     canvas: null
@@ -1123,36 +688,36 @@
                     }
                 },
                 mounted() {
-                    this.canvas = new P.J(document.createElement("canvas"), this.item.value.doodle)
+                    this.canvas = new O.J(document.createElement("canvas"), this.item.value.doodle)
                 },
                 methods: {
-                    htmlUnescape: e => d.c.htmlUnescape(e)
+                    htmlUnescape: t => u.c.htmlUnescape(t)
                 }
             });
-            var U = (0, m.Z)(g, L, [], !1, null, "1b51919a", null);
-            U.options.__file = "src/apps/entry/views/moderation/DoodleItem.vue";
-            const M = U.exports;
-            var f = function() {
-                var e = this,
-                    t = e.$createElement,
-                    i = e._self._c || t;
+            var b = (0, f.Z)(T, S, [], !1, null, "1b51919a", null);
+            b.options.__file = "src/apps/entry/views/moderation/DoodleItem.vue";
+            const N = b.exports;
+            var D = function() {
+                var t = this,
+                    e = t.$createElement,
+                    i = t._self._c || e;
                 return i("div", {
                     staticClass: "item text",
-                    class: e.item.status
+                    class: t.item.status
                 }, [i("p", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: e.htmlUnescape(e.item.context),
+                        value: t.htmlUnescape(t.item.context),
                         expression: "htmlUnescape(item.context)"
                     }],
                     staticClass: "context"
-                }), e._v(" "), i("div", {
+                }), t._v(" "), i("div", {
                     ref: "stage",
                     staticClass: "stage"
-                }), e._v(" "), i("p", {
+                }), t._v(" "), i("p", {
                     staticClass: "name"
-                }, [e._v(e._s(e.$t("SUBMITTED_BY")) + " "), i("span", [e._v(e._s(e.item.name))])]), e._v(" "), i("div", {
+                }, [t._v(t._s(t.$t("SUBMITTED_BY")) + " "), i("span", [t._v(t._s(t.item.name))])]), t._v(" "), i("div", {
                     staticClass: "item-buttons"
                 }, [i("button", {
                     staticClass: "accept",
@@ -1160,67 +725,67 @@
                         "aria-label": "accept"
                     },
                     on: {
-                        click: function(t) {
-                            return e.$emit("acceptClick", e.item)
+                        click: function(e) {
+                            return t.$emit("acceptClick", t.item)
                         }
                     }
-                }), e._v(" "), i("button", {
+                }), t._v(" "), i("button", {
                     staticClass: "reject",
                     attrs: {
                         "aria-label": "reject"
                     },
                     on: {
-                        click: function(t) {
-                            return e.$emit("rejectClick", e.item)
+                        click: function(e) {
+                            return t.$emit("rejectClick", t.item)
                         }
                     }
                 })])])
             };
-            f._withStripped = !0;
-            const x = s().extend({
+            D._withStripped = !0;
+            const M = a().extend({
                 props: {
                     item: Object
                 },
                 mounted() {
-                    const e = this.$refs.stage,
-                        t = new R.U(e, {
+                    const t = this.$refs.stage,
+                        e = new A.U(t, {
                             width: this.item.value.size.width,
                             height: this.item.value.size.height
                         }),
-                        i = t.canvas.parseLines(this.item.value.lines),
-                        a = t.canvas.renderCanvas.getContext("2d");
-                    a && i.forEach((e => t.canvas.drawLine(a, e)))
+                        i = e.canvas.parseLines(this.item.value.lines),
+                        s = e.canvas.renderCanvas.getContext("2d");
+                    s && i.forEach((t => e.canvas.drawLine(s, t)))
                 },
                 i18n: {
-                    messages: _
+                    messages: v
                 },
                 methods: {
-                    htmlUnescape: e => d.c.htmlUnescape(e)
+                    htmlUnescape: t => u.c.htmlUnescape(t)
                 }
             });
-            var y = (0, m.Z)(x, f, [], !1, null, "5975197a", null);
-            y.options.__file = "src/apps/entry/views/moderation/DrawingItem.vue";
-            const b = y.exports;
-            var B = function() {
-                var e = this,
-                    t = e.$createElement,
-                    i = e._self._c || t;
+            var k = (0, f.Z)(M, D, [], !1, null, "5975197a", null);
+            k.options.__file = "src/apps/entry/views/moderation/DrawingItem.vue";
+            const L = k.exports;
+            var P = function() {
+                var t = this,
+                    e = t.$createElement,
+                    i = t._self._c || e;
                 return i("div", {
                     staticClass: "item text",
-                    class: e.item.status
+                    class: t.item.status
                 }, [i("p", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: e.htmlUnescape(e.item.context),
+                        value: t.htmlUnescape(t.item.context),
                         expression: "htmlUnescape(item.context)"
                     }],
                     staticClass: "context"
-                }), e._v(" "), i("p", {
+                }), t._v(" "), i("p", {
                     staticClass: "value"
-                }, [e._v(e._s(e.htmlUnescape(e.item.value)))]), e._v(" "), i("p", {
+                }, [t._v(t._s(t.htmlUnescape(t.item.value)))]), t._v(" "), i("p", {
                     staticClass: "name"
-                }, [e._v(e._s(e.$t("SUBMITTED_BY")) + " "), i("span", [e._v(e._s(e.item.name))])]), e._v(" "), i("div", {
+                }, [t._v(t._s(t.$t("SUBMITTED_BY")) + " "), i("span", [t._v(t._s(t.item.name))])]), t._v(" "), i("div", {
                     staticClass: "item-buttons"
                 }, [i("button", {
                     staticClass: "accept",
@@ -1228,43 +793,43 @@
                         "aria-label": "accept"
                     },
                     on: {
-                        click: function(t) {
-                            return e.$emit("acceptClick", e.item)
+                        click: function(e) {
+                            return t.$emit("acceptClick", t.item)
                         }
                     }
-                }), e._v(" "), i("button", {
+                }), t._v(" "), i("button", {
                     staticClass: "reject",
                     attrs: {
                         "aria-label": "reject"
                     },
                     on: {
-                        click: function(t) {
-                            return e.$emit("rejectClick", e.item)
+                        click: function(e) {
+                            return t.$emit("rejectClick", t.item)
                         }
                     }
                 })])])
             };
-            B._withStripped = !0;
-            const w = s().extend({
+            P._withStripped = !0;
+            const $ = a().extend({
                 props: {
                     item: Object
                 },
                 i18n: {
-                    messages: _
+                    messages: v
                 },
                 methods: {
-                    htmlUnescape: e => d.c.htmlUnescape(e)
+                    htmlUnescape: t => u.c.htmlUnescape(t)
                 }
             });
-            var G = (0, m.Z)(w, B, [], !1, null, null, null);
-            G.options.__file = "src/apps/entry/views/moderation/TextItem.vue";
-            const k = G.exports;
-            const W = s().extend({
+            var U = (0, f.Z)($, P, [], !1, null, null, null);
+            U.options.__file = "src/apps/entry/views/moderation/TextItem.vue";
+            const j = U.exports;
+            const B = a().extend({
                 components: {
-                    AnimationItem: v,
-                    DoodleItem: M,
-                    DrawingItem: b,
-                    TextItem: k
+                    AnimationItem: y,
+                    DoodleItem: N,
+                    DrawingItem: L,
+                    TextItem: j
                 },
                 props: {
                     items: {
@@ -1275,34 +840,34 @@
                 ecastProviders: {
                     items: {
                         hasDeepRefs: !0,
-                        fn: e => {
-                            const t = [];
-                            return Object.keys(e).forEach((i => {
-                                const a = i.split(":");
-                                if ("moderate" !== a[0]) return;
-                                const n = a[1];
+                        fn: t => {
+                            const e = [];
+                            return Object.keys(t).forEach((i => {
+                                const s = i.split(":");
+                                if ("moderate" !== s[0]) return;
+                                const n = s[1];
                                 if (!["animation", "doodle", "drawing", "text"].includes(n)) return;
-                                const s = {
+                                const a = {
                                     key: i,
                                     type: n,
-                                    status: e[i].status,
-                                    name: e[i].name,
-                                    value: e[i].value,
+                                    status: t[i].status,
+                                    name: t[i].name,
+                                    value: t[i].value,
                                     context: ""
                                 };
-                                e[i].context && (e[i].context.bb ? s.context = e[i].context.bb : e[i].context.html ? s.context = d.c.htmlTagsToBBCode(e[i].context.html, [
+                                t[i].context && (t[i].context.bb ? a.context = t[i].context.bb : t[i].context.html ? a.context = u.c.htmlTagsToBBCode(t[i].context.html, [
                                     ["i", "i"]
-                                ]) : e[i].context.text ? s.context = e[i].context.text : "string" == typeof e[i].context && (s.context = e[i].context)), t.push(s)
-                            })), t
+                                ]) : t[i].context.text ? a.context = t[i].context.text : "string" == typeof t[i].context && (a.context = t[i].context)), e.push(a)
+                            })), e
                         }
                     }
                 },
                 i18n: {
-                    messages: _
+                    messages: v
                 },
                 computed: {
                     pendingItems() {
-                        return this.items.filter((e => "pending" === e.status))
+                        return this.items.filter((t => "pending" === t.status))
                     }
                 },
                 methods: {
@@ -1312,99 +877,99 @@
                     onRejectAllClick() {
                         this.updateStatus(this.pendingItems, "rejected")
                     },
-                    onAcceptClick(e) {
-                        "pending" === e.status && this.updateStatus([e], "accepted")
+                    onAcceptClick(t) {
+                        "pending" === t.status && this.updateStatus([t], "accepted")
                     },
-                    onRejectClick(e) {
-                        "rejected" !== e.status && this.updateStatus([e], "rejected")
+                    onRejectClick(t) {
+                        "rejected" !== t.status && this.updateStatus([t], "rejected")
                     },
-                    updateStatus(e, t) {
-                        return i = this, a = void 0, s = function*() {
+                    updateStatus(t, e) {
+                        return i = this, s = void 0, a = function*() {
                             try {
-                                const i = e.map((e => {
-                                    const i = this.$ecast.entities[e.key].val;
-                                    return i.status = t, this.$ecast.updateObject(e.key, i)
+                                const i = t.map((t => {
+                                    const i = this.$ecast.entities[t.key].val;
+                                    return i.status = e, this.$ecast.updateObject(t.key, i)
                                 }));
                                 yield Promise.all(i)
-                            } catch (e) {
-                                console.error("[Moderation] unable to update moderation entities", e)
+                            } catch (t) {
+                                console.error("[Moderation] unable to update moderation entities", t)
                             }
                             try {
                                 yield this.$ecast.mail(1, {
-                                    id: e.map((e => e.key)),
-                                    status: t
+                                    id: t.map((t => t.key)),
+                                    status: e
                                 })
-                            } catch (e) {
-                                console.error("[Moderation] unable to notify host by mail", e)
+                            } catch (t) {
+                                console.error("[Moderation] unable to notify host by mail", t)
                             }
                             this.$syncEcast()
-                        }, new((n = void 0) || (n = Promise))((function(e, t) {
-                            function o(e) {
+                        }, new((n = void 0) || (n = Promise))((function(t, e) {
+                            function o(t) {
                                 try {
-                                    c(s.next(e))
-                                } catch (e) {
-                                    t(e)
+                                    c(a.next(t))
+                                } catch (t) {
+                                    e(t)
                                 }
                             }
 
-                            function r(e) {
+                            function r(t) {
                                 try {
-                                    c(s.throw(e))
-                                } catch (e) {
-                                    t(e)
+                                    c(a.throw(t))
+                                } catch (t) {
+                                    e(t)
                                 }
                             }
 
-                            function c(t) {
+                            function c(e) {
                                 var i;
-                                t.done ? e(t.value) : (i = t.value, i instanceof n ? i : new n((function(e) {
-                                    e(i)
+                                e.done ? t(e.value) : (i = e.value, i instanceof n ? i : new n((function(t) {
+                                    t(i)
                                 }))).then(o, r)
                             }
-                            c((s = s.apply(i, a || [])).next())
+                            c((a = a.apply(i, s || [])).next())
                         }));
-                        var i, a, n, s
+                        var i, s, n, a
                     }
                 }
             });
-            var Y = (0, m.Z)(W, S, [], !1, null, "7686b6ac", null);
-            Y.options.__file = "src/apps/entry/views/moderation/Moderate.vue";
-            const j = Y.exports;
-            var $ = function(e, t, i, a) {
-                return new(i || (i = Promise))((function(n, s) {
-                    function o(e) {
+            var W = (0, f.Z)(B, C, [], !1, null, "7686b6ac", null);
+            W.options.__file = "src/apps/entry/views/moderation/Moderate.vue";
+            const G = W.exports;
+            var z = function(t, e, i, s) {
+                return new(i || (i = Promise))((function(n, a) {
+                    function o(t) {
                         try {
-                            c(a.next(e))
-                        } catch (e) {
-                            s(e)
+                            c(s.next(t))
+                        } catch (t) {
+                            a(t)
                         }
                     }
 
-                    function r(e) {
+                    function r(t) {
                         try {
-                            c(a.throw(e))
-                        } catch (e) {
-                            s(e)
+                            c(s.throw(t))
+                        } catch (t) {
+                            a(t)
                         }
                     }
 
-                    function c(e) {
-                        var t;
-                        e.done ? n(e.value) : (t = e.value, t instanceof i ? t : new i((function(e) {
-                            e(t)
+                    function c(t) {
+                        var e;
+                        t.done ? n(t.value) : (e = t.value, e instanceof i ? e : new i((function(t) {
+                            t(e)
                         }))).then(o, r)
                     }
-                    c((a = a.apply(e, t || [])).next())
+                    c((s = s.apply(t, e || [])).next())
                 }))
             };
-            const V = s().extend({
+            const F = a().extend({
                 components: {
-                    Authenticate: A,
-                    Moderate: j
+                    Authenticate: E,
+                    Moderate: G
                 },
                 mixins: [o.e],
                 i18n: {
-                    messages: _,
+                    messages: v,
                     sharedMessages: r.s
                 },
                 data: () => ({
@@ -1416,15 +981,15 @@
                     }
                 },
                 methods: {
-                    onConnectionChange(e) {
-                        this.isConnected = e, e && (this.$ecast.on("room/exit", (() => {
+                    onConnectionChange(t) {
+                        this.isConnected = t, t && (this.$ecast.on("room/exit", (() => {
                             this.onRoomExit()
                         })), this.$ecast.on("socketClose", (() => {
                             this.onSocketCloseEvent()
                         })))
                     },
                     onRoomExit() {
-                        return $(this, void 0, void 0, (function*() {
+                        return z(this, void 0, void 0, (function*() {
                             yield this.$showModal("Error", {
                                 text: this.$t("ERROR.ROOM_DISCONNECTED"),
                                 subtext: this.$t("ERROR.ROOM_DESTROYED"),
@@ -1433,7 +998,7 @@
                         }))
                     },
                     onSocketCloseEvent() {
-                        return $(this, void 0, void 0, (function*() {
+                        return z(this, void 0, void 0, (function*() {
                             this.$storage.isSupported && this.$storage.remove("mod-roomCode"), yield this.$showModal("Error", {
                                 text: this.$t("ERROR.DISCONNECTED"),
                                 dismissText: this.$t("ACTION.OK")
@@ -1442,87 +1007,87 @@
                     }
                 }
             });
-            var z = (0, m.Z)(V, a, [function() {
-                var e = this.$createElement,
-                    t = this._self._c || e;
-                return t("header", {
+            var Y = (0, f.Z)(F, s, [function() {
+                var t = this.$createElement,
+                    e = this._self._c || t;
+                return e("header", {
                     staticClass: "header"
-                }, [t("div", {
+                }, [e("div", {
                     staticClass: "logo"
                 })])
             }], !1, null, "05d701e0", null);
-            z.options.__file = "src/apps/entry/views/moderation/Main.vue";
-            const F = z.exports
+            Y.options.__file = "src/apps/entry/views/moderation/Main.vue";
+            const J = Y.exports
         },
-        6305: (e, t, i) => {
+        6305: (t, e, i) => {
             "use strict";
-            i.d(t, {
+            i.d(e, {
                 Z: () => c
             });
-            var a = function() {
-                var e = this,
-                    t = e.$createElement;
-                return (e._self._c || t)("input", {
+            var s = function() {
+                var t = this,
+                    e = t.$createElement;
+                return (t._self._c || e)("input", {
                     ref: "input",
                     domProps: {
-                        value: e.value
+                        value: t.value
                     },
                     on: {
-                        input: e.onInput
+                        input: t.onInput
                     }
                 })
             };
-            a._withStripped = !0;
+            s._withStripped = !0;
             var n = i(2934),
-                s = i.n(n);
-            const o = s().extend({
+                a = i.n(n);
+            const o = a().extend({
                 props: {
                     value: String
                 },
                 watch: {
-                    value(e, t) {
-                        e !== t && (this.$refs.input.value = e)
+                    value(t, e) {
+                        t !== e && (this.$refs.input.value = t)
                     }
                 },
                 methods: {
-                    onInput(e) {
-                        return t = this, i = void 0, n = function*() {
-                            const t = e.target,
-                                i = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
-                            t.value.length > i ? t.value = t.value.substring(0, i) : (this.$emit("input", t.value), yield s().nextTick(), t.value !== this.value && (t.value = this.value))
-                        }, new((a = void 0) || (a = Promise))((function(e, s) {
-                            function o(e) {
+                    onInput(t) {
+                        return e = this, i = void 0, n = function*() {
+                            const e = t.target,
+                                i = -1 === e.maxLength ? Number.MAX_SAFE_INTEGER : e.maxLength;
+                            e.value.length > i ? e.value = e.value.substring(0, i) : (this.$emit("input", e.value), yield a().nextTick(), e.value !== this.value && (e.value = this.value))
+                        }, new((s = void 0) || (s = Promise))((function(t, a) {
+                            function o(t) {
                                 try {
-                                    c(n.next(e))
-                                } catch (e) {
-                                    s(e)
+                                    c(n.next(t))
+                                } catch (t) {
+                                    a(t)
                                 }
                             }
 
-                            function r(e) {
+                            function r(t) {
                                 try {
-                                    c(n.throw(e))
-                                } catch (e) {
-                                    s(e)
+                                    c(n.throw(t))
+                                } catch (t) {
+                                    a(t)
                                 }
                             }
 
-                            function c(t) {
+                            function c(e) {
                                 var i;
-                                t.done ? e(t.value) : (i = t.value, i instanceof a ? i : new a((function(e) {
-                                    e(i)
+                                e.done ? t(e.value) : (i = e.value, i instanceof s ? i : new s((function(t) {
+                                    t(i)
                                 }))).then(o, r)
                             }
-                            c((n = n.apply(t, i || [])).next())
+                            c((n = n.apply(e, i || [])).next())
                         }));
-                        var t, i, a, n
+                        var e, i, s, n
                     }
                 }
             });
-            var r = (0, i(51900).Z)(o, a, [], !1, null, null, null);
+            var r = (0, i(51900).Z)(o, s, [], !1, null, null, null);
             r.options.__file = "src/apps/vue/components/Input.vue";
             const c = r.exports
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/2265.c9a4a9a3992091b57e6c.js.map
+//# sourceMappingURL=sourcemaps/2265.44a820dd3322bb19115b.js.map

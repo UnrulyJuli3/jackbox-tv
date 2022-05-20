@@ -496,10 +496,10 @@
                     } else this.resetDirection();
                     return t
                 };
-                var C = T;
+                var I = T;
 
-                function I(t, e) {
-                    return this.nipples = [], this.idles = [], this.actives = [], this.ids = [], this.pressureIntervals = {}, this.manager = t, this.id = I.id, I.id += 1, this.defaults = {
+                function C(t, e) {
+                    return this.nipples = [], this.idles = [], this.actives = [], this.ids = [], this.pressureIntervals = {}, this.manager = t, this.id = C.id, C.id += 1, this.defaults = {
                         zone: document.body,
                         multitouch: !1,
                         maxNumberOfNipples: 10,
@@ -523,7 +523,7 @@
                         follow: !1
                     }, this.config(e), "static" !== this.options.mode && "semi" !== this.options.mode || (this.options.multitouch = !1), this.options.multitouch || (this.options.maxNumberOfNipples = 1), this.updateBox(), this.prepareNipples(), this.bindings(), this.begin(), this.nipples
                 }
-                I.prototype = new x, I.constructor = I, I.id = 0, I.prototype.prepareNipples = function() {
+                C.prototype = new x, C.constructor = C, C.id = 0, C.prototype.prepareNipples = function() {
                     var t = this.nipples;
                     t.on = this.on.bind(this), t.off = this.off.bind(this), t.options = this.options, t.destroy = this.destroy.bind(this), t.ids = this.ids, t.id = this.id, t.processOnMove = this.processOnMove.bind(this), t.processOnEnd = this.processOnEnd.bind(this), t.get = function(e) {
                         if (void 0 === e) return t[0];
@@ -531,15 +531,15 @@
                             if (t[i].identifier === e) return t[i];
                         return !1
                     }
-                }, I.prototype.bindings = function() {
+                }, C.prototype.bindings = function() {
                     this.bindEvt(this.options.zone, "start"), this.options.zone.style.touchAction = "none", this.options.zone.style.msTouchAction = "none"
-                }, I.prototype.begin = function() {
+                }, C.prototype.begin = function() {
                     var t = this.options;
                     if ("static" === t.mode) {
                         var e = this.createNipple(t.position, this.manager.getIdentifier());
                         e.add(), this.idles.push(e)
                     }
-                }, I.prototype.createNipple = function(t, e) {
+                }, C.prototype.createNipple = function(t, e) {
                     var i = this.manager.scroll,
                         s = {},
                         n = this.options;
@@ -556,7 +556,7 @@
                             y: r.top + i.y
                         }
                     }
-                    var a = new C(this, {
+                    var a = new I(this, {
                         color: n.color,
                         size: n.size,
                         threshold: n.threshold,
@@ -575,22 +575,22 @@
                         shape: n.shape
                     });
                     return n.dataOnly || (u(a.ui.el, s), u(a.ui.front, a.frontPosition)), this.nipples.push(a), this.trigger("added " + a.identifier + ":added", a), this.manager.trigger("added " + a.identifier + ":added", a), this.bindNipple(a), a
-                }, I.prototype.updateBox = function() {
+                }, C.prototype.updateBox = function() {
                     this.box = this.options.zone.getBoundingClientRect()
-                }, I.prototype.bindNipple = function(t) {
+                }, C.prototype.bindNipple = function(t) {
                     var e, i = this,
                         s = function(t, s) {
                             e = t.type + " " + s.id + ":" + t.type, i.trigger(e, s)
                         };
                     t.on("destroyed", i.onDestroyed.bind(i)), t.on("shown hidden rested dir plain", s), t.on("dir:up dir:right dir:down dir:left", s), t.on("plain:up plain:right plain:down plain:left", s)
-                }, I.prototype.pressureFn = function(t, e, i) {
+                }, C.prototype.pressureFn = function(t, e, i) {
                     var s = this,
                         n = 0;
                     clearInterval(s.pressureIntervals[i]), s.pressureIntervals[i] = setInterval(function() {
                         var i = t.force || t.pressure || t.webkitForce || 0;
                         i !== n && (e.trigger("pressure", i), s.trigger("pressure " + e.identifier + ":pressure", i), n = i)
                     }.bind(s), 100)
-                }, I.prototype.onstart = function(t) {
+                }, C.prototype.onstart = function(t) {
                     var e = this,
                         i = e.options,
                         s = t;
@@ -604,7 +604,7 @@
                             }
                         })), e.actives.length < i.maxNumberOfNipples && e.processOnStart(n))
                     })), e.manager.bindDocument(), !1
-                }, I.prototype.processOnStart = function(t) {
+                }, C.prototype.processOnStart = function(t) {
                     var e, i = this,
                         s = i.options,
                         o = i.manager.getIdentifier(t),
@@ -624,10 +624,10 @@
                         c(l)
                     }
                     return l
-                }, I.prototype.getOrCreate = function(t, e) {
+                }, C.prototype.getOrCreate = function(t, e) {
                     var i, s = this.options;
                     return /(semi|static)/.test(s.mode) ? (i = this.idles[0]) ? (this.idles.splice(0, 1), i) : "semi" === s.mode ? this.createNipple(e, t) : (console.warn("Coudln't find the needed nipple."), !1) : i = this.createNipple(e, t)
-                }, I.prototype.processOnMove = function(t) {
+                }, C.prototype.processOnMove = function(t) {
                     var e = this.options,
                         i = this.manager.getIdentifier(t),
                         s = this.nipples.get(i),
@@ -656,7 +656,7 @@
                             }(Math.atan2(v, p))),
                             x = o(E),
                             T = w / l,
-                            C = {
+                            I = {
                                 distance: w,
                                 position: c
                             };
@@ -670,18 +670,18 @@
                                 }
                             }(c, s.position, l), m = n(f, s.position)), e.follow) {
                             if (w > l) {
-                                var I = c.x - f.x,
+                                var C = c.x - f.x,
                                     O = c.y - f.y;
-                                s.position.x += I, s.position.y += O, s.el.style.top = s.position.y - (this.box.top + r.y) + "px", s.el.style.left = s.position.x - (this.box.left + r.x) + "px", w = n(c, s.position)
+                                s.position.x += C, s.position.y += O, s.el.style.top = s.position.y - (this.box.top + r.y) + "px", s.el.style.left = s.position.x - (this.box.left + r.x) + "px", w = n(c, s.position)
                             }
                         } else c = f, w = m;
                         var S = c.x - s.position.x,
-                            k = c.y - s.position.y;
+                            M = c.y - s.position.y;
                         s.frontPosition = {
                             x: S,
-                            y: k
+                            y: M
                         }, e.dataOnly || u(s.ui.front, s.frontPosition);
-                        var M = {
+                        var k = {
                             identifier: s.identifier,
                             position: c,
                             force: T,
@@ -693,19 +693,19 @@
                             },
                             vector: {
                                 x: S / l,
-                                y: -k / l
+                                y: -M / l
                             },
-                            raw: C,
+                            raw: I,
                             instance: s,
                             lockX: e.lockX,
                             lockY: e.lockY
                         };
-                        (M = s.computeDirection(M)).angle = {
+                        (k = s.computeDirection(k)).angle = {
                             radian: o(180 - E),
                             degree: 180 - E
-                        }, s.trigger("move", M), this.trigger("move " + s.id + ":move", M)
+                        }, s.trigger("move", k), this.trigger("move " + s.id + ":move", k)
                     } else this.processOnEnd(t)
-                }, I.prototype.processOnEnd = function(t) {
+                }, C.prototype.processOnEnd = function(t) {
                     var e = this,
                         i = e.options,
                         s = e.manager.getIdentifier(t),
@@ -714,15 +714,15 @@
                     n && (i.dataOnly || n.hide((function() {
                         "dynamic" === i.mode && (n.trigger("removed", n), e.trigger("removed " + n.id + ":removed", n), e.manager.trigger("removed " + n.id + ":removed", n), n.destroy())
                     })), clearInterval(e.pressureIntervals[n.identifier]), n.resetDirection(), n.trigger("end", n), e.trigger("end " + n.id + ":end", n), e.ids.indexOf(n.identifier) >= 0 && e.ids.splice(e.ids.indexOf(n.identifier), 1), e.actives.indexOf(n) >= 0 && e.actives.splice(e.actives.indexOf(n), 1), /(semi|static)/.test(i.mode) ? e.idles.push(n) : e.nipples.indexOf(n) >= 0 && e.nipples.splice(e.nipples.indexOf(n), 1), e.manager.unbindDocument(), /(semi|static)/.test(i.mode) && (e.manager.ids[o.id] = o.identifier))
-                }, I.prototype.onDestroyed = function(t, e) {
+                }, C.prototype.onDestroyed = function(t, e) {
                     this.nipples.indexOf(e) >= 0 && this.nipples.splice(this.nipples.indexOf(e), 1), this.actives.indexOf(e) >= 0 && this.actives.splice(this.actives.indexOf(e), 1), this.idles.indexOf(e) >= 0 && this.idles.splice(this.idles.indexOf(e), 1), this.ids.indexOf(e.identifier) >= 0 && this.ids.splice(this.ids.indexOf(e.identifier), 1), this.manager.removeIdentifier(e.identifier), this.manager.unbindDocument()
-                }, I.prototype.destroy = function() {
+                }, C.prototype.destroy = function() {
                     for (var t in this.unbindEvt(this.options.zone, "start"), this.nipples.forEach((function(t) {
                             t.destroy()
                         })), this.pressureIntervals) this.pressureIntervals.hasOwnProperty(t) && clearInterval(this.pressureIntervals[t]);
                     this.trigger("destroyed", this.nipples), this.manager.unbindDocument(), this.off()
                 };
-                var O = I;
+                var O = C;
 
                 function S(t) {
                     var e = this;
@@ -803,77 +803,14 @@
                     if (this.collections.indexOf(e) < 0) return !1;
                     this.collections.splice(this.collections.indexOf(e), 1)
                 };
-                var k = new S;
+                var M = new S;
                 e.default = {
                     create: function(t) {
-                        return k.create(t)
+                        return M.create(t)
                     },
-                    factory: k
+                    factory: M
                 }
             }]).default
-        },
-        56623: (t, e, i) => {
-            "use strict";
-            i.d(e, {
-                Z: () => d
-            });
-            var s = function() {
-                var t = this,
-                    e = t.$createElement,
-                    i = t._self._c || e;
-                return t.link ? i("a", {
-                    staticClass: "artifact-link",
-                    class: {
-                        "no-content": !t.hasProvidedContent
-                    },
-                    attrs: {
-                        target: "_blank",
-                        href: t.link,
-                        "aria-label": t.$t("POST_GAME.GALLERY_LINK")
-                    },
-                    on: {
-                        click: t.onLinkClick
-                    }
-                }, [t._t("default")], 2) : t._e()
-            };
-            s._withStripped = !0;
-            var n = i(2934),
-                o = i.n(n),
-                r = i(81127),
-                a = i(65853);
-            const l = o().extend({
-                props: {
-                    artifact: Object
-                },
-                i18n: {
-                    messages: a.s
-                },
-                computed: {
-                    link() {
-                        if (this.artifact) return `${this.artifact.rootId.includes("test")?"http":"https"}://${this.artifact.rootId.includes("test")?"games-test.jackbox.tv":"games.jackbox.tv"}/artifact/${this.artifact.categoryId}/${this.artifact.artifactId}/`
-                    },
-                    hasProvidedContent() {
-                        return void 0 !== this.$slots.default
-                    }
-                },
-                mounted() {
-                    this.$analytics.trackEvent({
-                        category: "PostGame",
-                        action: "galleryShown"
-                    })
-                },
-                methods: {
-                    onLinkClick() {
-                        this.$analytics.trackEvent({
-                            category: "PostGame",
-                            action: "galleryClicked"
-                        }), r.Q.setAsViewed(0)
-                    }
-                }
-            });
-            var c = (0, i(51900).Z)(l, s, [], !1, null, null, null);
-            c.options.__file = "src/apps/vue/components/GalleryLink.vue";
-            const d = c.exports
         },
         94835: (t, e, i) => {
             "use strict";
@@ -1837,7 +1774,7 @@
             E._withStripped = !0;
             var x = i(17819),
                 T = i(32530);
-            const C = x.Z.extend({
+            const I = x.Z.extend({
                 props: {
                     player: Object,
                     info: Object
@@ -1913,9 +1850,9 @@
                     }
                 }
             });
-            var I = (0, b.Z)(C, E, [], !1, null, null, null);
-            I.options.__file = "src/games/pp8/murder-detectives/views/Drawing.vue";
-            const O = I.exports;
+            var C = (0, b.Z)(I, E, [], !1, null, null, null);
+            C.options.__file = "src/games/pp8/murder-detectives/views/Drawing.vue";
+            const O = C.exports;
             var S = function() {
                 var t = this,
                     e = t.$createElement,
@@ -1982,8 +1919,8 @@
                 })), 0)])])])
             };
             S._withStripped = !0;
-            var k = i(59694),
-                M = i.n(k);
+            var M = i(59694),
+                k = i.n(M);
             const N = w.extend({
                 props: {
                     player: Object,
@@ -2017,7 +1954,7 @@
                             size: 10,
                             follow: !0
                         };
-                    M().create(e).on("move", ((e, i) => {
+                    k().create(e).on("move", ((e, i) => {
                         if (Date.now() - this.lastUpdate < 100) return;
                         this.lastUpdate = Date.now();
                         const s = t.getBoundingClientRect(),
@@ -2923,4 +2860,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/8274.b3e74472e18844c6f417.js.map
+//# sourceMappingURL=sourcemaps/9457.f3632695e4622d604e1c.js.map

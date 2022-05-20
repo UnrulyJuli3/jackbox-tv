@@ -1,0 +1,1356 @@
+.choices[data-v-72482f88] {
+    display: flex;
+    flex-direction: column
+}
+
+.choices .action[data-v-72482f88] {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    background-color: #000;
+    font-family: "Lost and Forelorn";
+    font-size: 3rem
+}
+
+.choices .action.selected[data-v-72482f88] {
+    background-color: #fff;
+    color: #000
+}
+
+.choices .action[data-v-72482f88]:disabled {
+    opacity: 60%
+}
+
+.choices .button-image[data-v-72482f88] {
+    max-height: 100%;
+    max-width: 100%;
+    vertical-align: middle
+}
+
+.choices .button-image.chalices[data-v-72482f88] {
+    max-width: 95px
+}
+
+.choices .button-image.gifts[data-v-72482f88] {
+    max-width: 96px
+}
+
+.choices .button-image.keys[data-v-72482f88] {
+    max-height: 64px
+}
+
+.choices .checkbox-image[data-v-72482f88] {
+    height: 50px
+}
+
+.choices .choice-container[data-v-72482f88] {
+    display: flex;
+    flex-direction: column
+}
+
+.choices .choice[data-v-72482f88] {
+    align-self: center;
+    margin: 2px;
+    font-size: 3.4rem
+}
+
+.choices .chosen[data-v-72482f88] {
+    font-size: 2.8rem
+}
+
+.choices .object-container[data-v-72482f88] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.choices .option-container[data-v-72482f88] {
+    display: flex;
+    flex-direction: row
+}
+
+.choices .prompt[data-v-72482f88] {
+    position: relative;
+    top: -10px;
+    left: calc(-50vw + 50%);
+    width: 100vw;
+    padding: 10px 15px;
+    background-color: #fff;
+    font-size: 2.4rem;
+    line-height: 2.4rem
+}
+
+.choices .submit[data-v-72482f88] {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    border-radius: 15px;
+    font-family: "Lost and Forelorn";
+    font-size: 3.8rem;
+    color: #fff
+}
+
+.choices .submit[data-v-72482f88]:active {
+    background-color: #fff;
+    color: #000
+}
+
+.choices .finger-cut-1[data-v-72482f88] {
+    background-image: url("triviadeath2-tjsp/choices_finger-cut-1[data-v-72482f88].png");
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain
+}
+
+.choices .finger-cut-2[data-v-72482f88] {
+    background-image: url("triviadeath2-tjsp/choices_finger-cut-2[data-v-72482f88].png");
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain
+}
+
+.choices .finger-cut-3[data-v-72482f88] {
+    background-image: url("triviadeath2-tjsp/choices_finger-cut-3[data-v-72482f88].png");
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain
+}
+
+.choices .finger-cut-4[data-v-72482f88] {
+    background-image: url("triviadeath2-tjsp/choices_finger-cut-4[data-v-72482f88].png");
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain
+}
+
+.choices .GhostBlue[data-v-72482f88] {
+    background-image: url("triviadeath2-tjsp/choices_GhostBlue[data-v-72482f88].png")
+}
+
+.choices .GhostGray[data-v-72482f88] {
+    background-image: url("triviadeath2-tjsp/choices_GhostGray[data-v-72482f88].png")
+}
+
+.choices .GhostGreen[data-v-72482f88] {
+    background-image: url("triviadeath2-tjsp/choices_GhostGreen[data-v-72482f88].png")
+}
+
+.choices .GhostOrange[data-v-72482f88] {
+    background-image: url("triviadeath2-tjsp/choices_GhostOrange[data-v-72482f88].png")
+}
+
+.choices .GhostPink[data-v-72482f88] {
+    background-image: url("triviadeath2-tjsp/choices_GhostPink[data-v-72482f88].png")
+}
+
+.choices .GhostPurple[data-v-72482f88] {
+    background-image: url("triviadeath2-tjsp/choices_GhostPurple[data-v-72482f88].png")
+}
+
+.choices .GhostRed[data-v-72482f88] {
+    background-image: url("triviadeath2-tjsp/choices_GhostRed[data-v-72482f88].png")
+}
+
+.choices .GhostYellow[data-v-72482f88] {
+    background-image: url("triviadeath2-tjsp/choices_GhostYellow[data-v-72482f88].png")
+}
+
+.choices .red[data-v-72482f88] {
+    background-color: red;
+    color: red !important;
+    text-shadow: 1px 1px #000
+}
+
+.choices .orange[data-v-72482f88] {
+    background-color: orange;
+    color: orange !important;
+    text-shadow: 1px 1px #000
+}
+
+.choices .yellow[data-v-72482f88] {
+    background-color: #ff0;
+    color: #ff0 !important;
+    text-shadow: 1px 1px #000
+}
+
+.choices .green[data-v-72482f88] {
+    background-color: green;
+    color: green !important;
+    text-shadow: 1px 1px #000
+}
+
+.choices .blue[data-v-72482f88] {
+    background-color: blue;
+    color: blue !important;
+    text-shadow: 1px 1px #000
+}
+
+.choices .purple[data-v-72482f88] {
+    background-color: purple;
+    color: purple !important;
+    text-shadow: 1px 1px #000
+}
+
+.choices .white[data-v-72482f88] {
+    background-color: #fff;
+    color: #fff !important;
+    text-shadow: 1px 1px #000
+}
+
+.choices .black[data-v-72482f88] {
+    background-color: #000;
+    color: #000 !important;
+    text-shadow: 1px 1px #fff
+}
+
+.dialing[data-v-6373af08] {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.dialing canvas[data-v-6373af08] {
+    width: clamp(150px, min(100%, 60vh), 640px)
+}
+
+.dialing .reset[data-v-6373af08] {
+    display: block;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 15px;
+    background-color: #000;
+    color: red !important;
+    font-family: "Lost and Forelorn";
+    font-size: 4rem;
+    line-height: 3rem
+}
+
+.drawing .prompt {
+    position: relative;
+    top: -10px;
+    left: calc(-50vw + 50%);
+    width: 100vw;
+    padding: 10px 15px;
+    background-color: #fff;
+    font-size: 2.4rem;
+    line-height: 2.4rem
+}
+
+.drawing #stage #doodle {
+    margin: 0 auto;
+    border: 1px solid #000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    touch-action: none
+}
+
+.drawing #stage #doodle canvas {
+    width: 100%
+}
+
+.drawing #stage #doodle.mirror {
+    background-image: url("triviadeath2-tjsp/drawing_#stage_#doodle_mirror.jpg")
+}
+
+.drawing #stage #doodle.tattoo {
+    width: clamp(200px, min(90vw, 64vh), 512px);
+    height: clamp(250px, min(112.5vw, 80vh), 640px);
+    background-image: url("triviadeath2-tjsp/drawing_#stage_#doodle_tattoo.jpg")
+}
+
+.drawing #stage #doodle.tattoo canvas {
+    height: clamp(250px, min(112.5vw, 80vh), 640px)
+}
+
+.dropping[data-v-5c80288a] {
+    display: flex;
+    flex-direction: column
+}
+
+.dropping canvas[data-v-5c80288a] {
+    width: 100%;
+    align-self: center
+}
+
+.dropping .prompt[data-v-5c80288a] {
+    position: relative;
+    top: -10px;
+    left: calc(-50vw + 50%);
+    width: 100vw;
+    padding: 10px 15px;
+    background-color: #fff;
+    font-size: 2.4rem;
+    line-height: 2.4rem
+}
+
+.grid-selecting[data-v-36c9dfd6] {
+    display: flex;
+    flex-direction: column
+}
+
+.grid-selecting .error[data-v-36c9dfd6] {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #fff;
+    color: red !important;
+    font-size: 24px
+}
+
+.grid-selecting .prompt[data-v-36c9dfd6] {
+    position: relative;
+    top: -10px;
+    left: calc(-50vw + 50%);
+    width: 100vw;
+    padding: 10px 15px;
+    background-color: #fff;
+    font-size: 2.4rem;
+    line-height: 2.4rem
+}
+
+.grid-selecting .x-row[data-v-36c9dfd6] {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    margin: 2px auto
+}
+
+.grid-selecting .y-column[data-v-36c9dfd6] {
+    width: clamp(50px, 15vw, 90px);
+    height: clamp(50px, 15vw, 90px);
+    min-width: 50px;
+    min-height: 50px
+}
+
+.grid-selecting .action[data-v-36c9dfd6],
+.grid-selecting .spacer[data-v-36c9dfd6] {
+    width: clamp(50px, 15vw, 90px);
+    height: clamp(50px, 15vw, 90px);
+    border: none;
+    border-radius: 5px;
+    background-color: #000
+}
+
+.grid-selecting .action[data-v-36c9dfd6]:disabled,
+.grid-selecting .spacer[data-v-36c9dfd6] {
+    opacity: 60%
+}
+
+.grid-selecting .grid-button.arrow[data-v-36c9dfd6] {
+    display: flex;
+    align-items: flex-end;
+    width: clamp(38px, 11vw, 68px);
+    height: clamp(50px, 15vw, 90px);
+    margin: 0 auto
+}
+
+.grid-selecting .grid-button.arrow.left[data-v-36c9dfd6] {
+    transform: rotate(90deg)
+}
+
+.grid-selecting .grid-button.arrow.right[data-v-36c9dfd6] {
+    transform: rotate(-90deg)
+}
+
+.grid-selecting .grid-button.arrow .arrow-image[data-v-36c9dfd6] {
+    margin: 0 auto;
+    padding-bottom: 5px;
+    width: 75%
+}
+
+.grid-selecting .sword-image[data-v-36c9dfd6] {
+    height: clamp(50px, 15vw, 90px);
+    margin: 15px 0;
+    object-fit: scale-down
+}
+
+.lobby[data-v-2f536c28] {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center
+}
+
+.lobby .lobby-actions[data-v-2f536c28] .action {
+    font-family: "Lost and Forelorn";
+    font-size: 3.2rem;
+    background-color: #000;
+    border-radius: 15px;
+    width: 100%;
+    border: none
+}
+
+.lobby .lobby-actions[data-v-2f536c28] .message,
+.lobby .lobby-actions[data-v-2f536c28] .status {
+    position: relative;
+    top: -10px;
+    left: calc(-50vw + 50%);
+    width: 100vw;
+    padding: 10px 15px;
+    background-color: #fff;
+    font-size: 2.4rem;
+    line-height: 2.4rem
+}
+
+.artifact-link {
+    display: inline-block;
+    width: 100%
+}
+
+.artifact-link.no-content {
+    padding-bottom: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.post-game-actions[data-v-458a030c] button {
+    width: 100%;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #000;
+    font-family: "Lost and Forelorn";
+    font-size: 3.2rem
+}
+
+.post-game-actions[data-v-458a030c] button:active {
+    background-color: #fff;
+    color: #000
+}
+
+.post-game-actions[data-v-458a030c] .message {
+    position: relative;
+    top: -10px;
+    left: calc(-50vw + 50%);
+    width: 100vw;
+    padding: 10px 15px;
+    background-color: #fff;
+    font-size: 2.4rem;
+    line-height: 2.4rem
+}
+
+.scratching[data-v-80719cfc] {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.scratching canvas[data-v-80719cfc] {
+    width: clamp(150px, min(100%, 65vh), 640px);
+    border: none;
+    background-color: transparent;
+    background-image: url("triviadeath2-tjsp/scratching_canvas[data-v-80719cfc].png");
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.locale-de .scratching canvas[data-v-80719cfc],
+.locale-es .scratching canvas[data-v-80719cfc],
+.locale-es-XL .scratching canvas[data-v-80719cfc],
+.locale-fr .scratching canvas[data-v-80719cfc],
+.locale-it .scratching canvas[data-v-80719cfc] {
+    background-image: url("triviadeath2-tjsp/locale-de_scratching_canvas[data-v-80719cfc].png")
+}
+
+.waiting[data-v-a1636d3a] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+}
+
+.waiting .logo[data-v-a1636d3a] {
+    flex-grow: 1
+}
+
+.waiting .logo img[data-v-a1636d3a] {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%)
+}
+
+.writing[data-v-2fa2671c] {
+    display: flex;
+    flex-direction: column
+}
+
+.writing .prompt[data-v-2fa2671c] {
+    position: relative;
+    top: -10px;
+    left: calc(-50vw + 50%);
+    width: 100vw;
+    padding: 10px 15px;
+    background-color: #fff;
+    font-size: 2.4rem;
+    line-height: 2.4rem
+}
+
+.writing form[data-v-2fa2671c] {
+    display: flex;
+    flex-direction: column
+}
+
+.writing form .player-input[data-v-2fa2671c] {
+    padding-left: 10px;
+    width: 100%;
+    font-family: "Lost and Forelorn";
+    font-size: 2rem;
+    resize: none;
+    border-radius: 5px
+}
+
+.writing form .error[data-v-2fa2671c] {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #fff;
+    color: red !important;
+    font-size: 24px
+}
+
+.writing form .hint-wrapper[data-v-2fa2671c] {
+    align-self: center;
+    display: flex;
+    flex-direction: row
+}
+
+.writing form .password-hint[data-v-2fa2671c] {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px
+}
+
+.writing form .hint-element[data-v-2fa2671c] {
+    min-height: 45px;
+    min-width: 25px;
+    margin-left: 2px;
+    margin-right: 2px;
+    font-family: "Lost and Forelorn";
+    font-size: 2.8rem;
+    height: 100%;
+    border-radius: 3px
+}
+
+.writing form .hint-element.inactive[data-v-2fa2671c] {
+    background-color: #000
+}
+
+.writing form .hint-element.active[data-v-2fa2671c] {
+    background-color: gray;
+    color: #000
+}
+
+.writing form .submit[data-v-2fa2671c] {
+    font-family: "Lost and Forelorn";
+    border-radius: 15px;
+    width: 100%;
+    border: none;
+    font-size: 3.8rem;
+    margin-top: 20px;
+    color: #fff
+}
+
+.writing form .submit[data-v-2fa2671c]:active {
+    background-color: #fff;
+    color: #000
+}
+
+.BTTF .choice,
+.NowThatsWhatICallMadness .choice {
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+    animation-name: half-disappear;
+    animation-timing-function: ease-in
+}
+
+.BTTF .disappear-0,
+.NowThatsWhatICallMadness .disappear-0 {
+    animation-delay: 0s;
+    animation-duration: 3.5s;
+    animation-fill-mode: forwards;
+    animation-name: disappear;
+    animation-timing-function: linear
+}
+
+.BTTF .disappear-1,
+.NowThatsWhatICallMadness .disappear-1 {
+    animation-delay: 1.5s;
+    animation-duration: 3.5s;
+    animation-fill-mode: forwards;
+    animation-name: disappear;
+    animation-timing-function: linear
+}
+
+.BTTF .disappear-2,
+.NowThatsWhatICallMadness .disappear-2 {
+    animation-delay: 3s;
+    animation-duration: 3.5s;
+    animation-fill-mode: forwards;
+    animation-name: disappear;
+    animation-timing-function: linear
+}
+
+.BTTF .disappear-3,
+.NowThatsWhatICallMadness .disappear-3 {
+    animation-delay: 4.5s;
+    animation-duration: 3.5s;
+    animation-fill-mode: forwards;
+    animation-name: disappear;
+    animation-timing-function: linear
+}
+
+.BTTF .disappear-4,
+.NowThatsWhatICallMadness .disappear-4 {
+    animation-delay: 6s;
+    animation-duration: 3.5s;
+    animation-fill-mode: forwards;
+    animation-name: disappear;
+    animation-timing-function: linear
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1
+    }
+
+    88% {
+        color: red
+    }
+
+    100% {
+        color: red;
+        opacity: 0
+    }
+}
+
+@keyframes half-disappear {
+    0% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: .5;
+        color: red
+    }
+}
+
+.Bugs,
+.NowThatsWhatICallMadness {
+    position: relative
+}
+
+.Bugs .stage::after,
+.NowThatsWhatICallMadness .stage::after {
+    content: "";
+    position: absolute;
+    left: -200px;
+    top: -200px;
+    width: 167px;
+    height: 131px;
+    background-image: url("triviadeath2-tjsp/Bugs_stage_after.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: moveX 1.6s cubic-bezier(0.11, 0.58, 0.86, 0.43) normal, moveY 1.6s ease-in-out normal, skitter 1.6s linear normal;
+    animation-delay: .6s, .6s, .6s;
+    animation-fill-mode: forwards, forwards, forwards;
+    z-index: 1000
+}
+
+@keyframes moveX {
+    0% {
+        left: -217px
+    }
+
+    100% {
+        left: 100vw
+    }
+}
+
+@keyframes moveY {
+    0% {
+        top: 50px
+    }
+
+    100% {
+        top: calc(100vh - 217px)
+    }
+}
+
+@keyframes skitter {
+    0% {
+        transform: rotate(90deg)
+    }
+
+    40% {
+        transform: rotate(165deg)
+    }
+
+    60% {
+        transform: rotate(170deg)
+    }
+
+    100% {
+        transform: rotate(95deg)
+    }
+}
+
+.Drift .prompt,
+.NowThatsWhatICallMadness .prompt {
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+    animation-name: drift0;
+    animation-timing-function: ease-in
+}
+
+.Drift .option-container,
+.NowThatsWhatICallMadness .option-container {
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in
+}
+
+.Drift .option-container:nth-of-type(4n+1),
+.NowThatsWhatICallMadness .option-container:nth-of-type(4n+1) {
+    animation-name: drift1
+}
+
+.Drift .option-container:nth-of-type(4n+2),
+.NowThatsWhatICallMadness .option-container:nth-of-type(4n+2) {
+    animation-name: drift2
+}
+
+.Drift .option-container:nth-of-type(4n+3),
+.NowThatsWhatICallMadness .option-container:nth-of-type(4n+3) {
+    animation-name: drift3
+}
+
+.Drift .option-container:nth-of-type(4n+4),
+.NowThatsWhatICallMadness .option-container:nth-of-type(4n+4) {
+    animation-name: drift4
+}
+
+@keyframes drift0 {
+    0% {
+        transform: translate(0vw, 0vh) rotate(0deg)
+    }
+
+    100% {
+        transform: translate(-60vw, 75vh) rotate(-90deg)
+    }
+}
+
+@keyframes drift1 {
+    0% {
+        transform: translate(0vw, 0vh) rotate(0deg)
+    }
+
+    100% {
+        transform: translate(-90vw, -25vh) rotate(-90deg)
+    }
+}
+
+@keyframes drift2 {
+    0% {
+        transform: translate(0vw, 0vh) rotate(0deg)
+    }
+
+    100% {
+        transform: translate(110vw, -15vh) rotate(45deg)
+    }
+}
+
+@keyframes drift3 {
+    0% {
+        transform: translate(0vw, 0vh) rotate(0deg)
+    }
+
+    100% {
+        transform: translate(100vw, 35vh) rotate(90deg)
+    }
+}
+
+@keyframes drift4 {
+    0% {
+        transform: translate(0vw, 0vh) rotate(0deg)
+    }
+
+    100% {
+        transform: translate(-100vw, 55vh) rotate(-135deg)
+    }
+}
+
+.Drips::before,
+.Drips::after,
+.Drips .play-area::before,
+.Drips .play-area::after,
+.NowThatsWhatICallMadness::before,
+.NowThatsWhatICallMadness::after,
+.NowThatsWhatICallMadness .play-area::before,
+.NowThatsWhatICallMadness .play-area::after {
+    content: "";
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(0, 0);
+    animation: drip 1.4s cubic-bezier(0.075, 0.82, 0.165, 1) normal;
+    animation-fill-mode: forwards;
+    opacity: .95;
+    z-index: 1000;
+    pointer-events: none
+}
+
+.Drips::before,
+.NowThatsWhatICallMadness::before {
+    background-image: url("triviadeath2-tjsp/Drips_before.png");
+    width: 48px;
+    height: 48px;
+    top: 75vh;
+    left: 25vw;
+    animation-delay: 2.3s
+}
+
+.Drips::after,
+.NowThatsWhatICallMadness::after {
+    background-image: url("triviadeath2-tjsp/Drips_after.png");
+    width: 48px;
+    height: 48px;
+    top: 78vh;
+    left: 65vw;
+    animation-delay: 2.7s
+}
+
+.Drips .play-area::before,
+.NowThatsWhatICallMadness .play-area::before {
+    background-image: url("triviadeath2-tjsp/Drips_play-area_before.png");
+    width: 92px;
+    height: 92px;
+    top: 25vh;
+    left: 25vw;
+    animation-delay: .7s
+}
+
+.Drips .play-area::after,
+.NowThatsWhatICallMadness .play-area::after {
+    background-image: url("triviadeath2-tjsp/Drips_play-area_after.png");
+    width: 128px;
+    height: 128px;
+    top: 50vh;
+    left: 50vw;
+    animation-delay: 1.6s
+}
+
+@keyframes drip {
+    0% {
+        transform: scale(0, 0)
+    }
+
+    100% {
+        transform: scale(1, 1)
+    }
+}
+
+.Rainbow .prompt,
+.NowThatsWhatICallMadness .prompt {
+    animation: rainbow-shadow 1s infinite
+}
+
+.Rainbow .choice,
+.NowThatsWhatICallMadness .choice {
+    animation: rainbow-shadow 1s infinite
+}
+
+@keyframes rainbow-shadow {
+    0% {
+        text-shadow: 0px 0px transparent, -11px 3px red, 7px -1px orange, 5px -7px orange, 2px 0px yellow, 11px -9px yellow, 2px 4px green, -1px 9px green, 2px -9px blue, 10px -9px blue, 10px 3px purple, 5px -5px purple, 11px 4px red
+    }
+
+    8.3333333333% {
+        text-shadow: 0px 0px transparent, -11px 10px orange, 5px 3px orange, 12px -11px yellow, -2px 5px yellow, -11px -4px green, -1px 1px green, 12px 7px blue, 12px -8px blue, 9px 7px purple, 9px 11px purple, -9px -11px red, -9px 8px red
+    }
+
+    16.6666666667% {
+        text-shadow: 0px 0px transparent, 9px 9px orange, 11px 0px yellow, -7px 1px yellow, -9px -8px green, -2px 8px green, 10px 1px blue, 8px -8px blue, -8px -8px purple, -9px -3px purple, 6px 7px red, -11px -2px red, 5px 8px orange
+    }
+
+    25% {
+        text-shadow: 0px 0px transparent, -7px -8px yellow, 11px 4px yellow, 0px -11px green, 10px 6px green, -9px 4px blue, 12px 7px blue, -9px -2px purple, 11px 10px purple, 3px 7px red, -11px 9px red, 1px 12px orange, -11px -10px orange
+    }
+
+    33.3333333333% {
+        text-shadow: 0px 0px transparent, 2px 5px yellow, 11px 2px green, 6px 0px green, -11px 9px blue, 9px -6px blue, 3px -7px purple, -11px 7px purple, -2px -1px red, 0px -9px red, -10px 6px orange, -4px 11px orange, 1px -7px yellow
+    }
+
+    41.6666666667% {
+        text-shadow: 0px 0px transparent, 8px 11px green, 0px 9px green, 3px 1px blue, 2px 3px blue, 7px 0px purple, 0px 5px purple, -1px -10px red, -4px -5px red, -4px -8px orange, -9px -2px orange, -3px 0px yellow, 4px -4px yellow
+    }
+
+    50% {
+        text-shadow: 0px 0px transparent, -5px -11px green, -7px 12px blue, 1px 0px blue, 2px -5px purple, 5px 12px purple, -11px -10px red, -11px 4px red, 4px -9px orange, -5px -7px orange, -1px -3px yellow, 10px -8px yellow, -1px -8px green
+    }
+
+    58.3333333333% {
+        text-shadow: 0px 0px transparent, 7px -6px blue, -2px 10px blue, 4px -4px purple, -9px -11px purple, 7px -11px red, 0px 7px red, -6px 6px orange, -7px 4px orange, -8px 8px yellow, -11px -7px yellow, -6px 12px green, 6px -1px green
+    }
+
+    66.6666666667% {
+        text-shadow: 0px 0px transparent, 1px 10px blue, -9px -6px purple, -4px 6px purple, 11px 7px red, 0px -4px red, -6px -7px orange, -10px -1px orange, -8px 4px yellow, 4px 1px yellow, 6px -8px green, -11px 2px green, -3px -7px blue
+    }
+
+    75% {
+        text-shadow: 0px 0px transparent, -7px -10px purple, -11px 6px purple, -4px -3px red, 4px -1px red, 11px 2px orange, 8px 7px orange, -2px -5px yellow, 0px -8px yellow, -5px 3px green, 8px 10px green, -8px -7px blue, -7px 12px blue
+    }
+
+    83.3333333333% {
+        text-shadow: 0px 0px transparent, -7px -10px purple, 0px -1px red, 7px -3px red, 3px -9px orange, -2px 6px orange, 11px -5px yellow, 6px -10px yellow, -6px -10px green, 6px 2px green, 4px 0px blue, 11px 7px blue, 11px -4px purple
+    }
+
+    91.6666666667% {
+        text-shadow: 0px 0px transparent, 12px 1px red, 3px -6px red, 9px 8px orange, 12px -6px orange, -5px 0px yellow, -4px 5px yellow, -11px -7px green, -10px -8px green, 8px -2px blue, 9px 12px blue, 0px 9px purple, 6px -2px purple
+    }
+
+    100% {
+        text-shadow: 0px 0px transparent, -2px 2px red, 0px 9px orange, -5px -2px orange, -4px 6px yellow, 5px -1px yellow, 11px -5px green, 2px -9px green, 10px 10px blue, -10px 4px blue, -11px -8px purple, -9px 5px purple, -8px 2px red
+    }
+}
+
+@font-face {
+    font-family: "nokian11regular";
+    src: url("triviadeath2-tjsp/8194da89bedb4f0320d0.woff2") format("woff2"), url("triviadeath2-tjsp/c7df18dc86359a6362f3.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Lost and Forelorn";
+    src: url("triviadeath2-tjsp/388bce62875607fcc3a3.woff") format("woff")
+}
+
+@font-face {
+    font-family: "Coldstyle";
+    src: url("triviadeath2-tjsp/fae280770c9d719a6586.woff") format("woff")
+}
+
+:root {
+    font-size: 10px
+}
+
+.constrain {
+    height: 100%;
+    padding: 10px 5px;
+    max-width: 640px
+}
+
+.tmp2 {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+.tmp2.audience {
+    background-image: url("triviadeath2-tjsp/tmp2_audience.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.tmp2.audience .name-header {
+    background-color: #503c2d;
+    color: #f0d2be
+}
+
+.tmp2.audience .message {
+    color: #503c2d
+}
+
+.tmp2.audience .status {
+    color: #503c2d
+}
+
+.tmp2.audience .action:active,
+.tmp2.audience .submit:active {
+    background-color: #fff;
+    color: #000
+}
+
+.tmp2.audience .action {
+    color: #f0d2be
+}
+
+.tmp2.audience .action.selected {
+    color: #503c2d
+}
+
+.tmp2.audience .submit {
+    background-color: #f0d2be
+}
+
+.tmp2.green {
+    background-image: url("triviadeath2-tjsp/tmp2_green.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.tmp2.green .name-header {
+    background-color: #193c19;
+    color: #89b478
+}
+
+.tmp2.green .message {
+    color: #193c19
+}
+
+.tmp2.green .status {
+    color: #193c19
+}
+
+.tmp2.green .action:active,
+.tmp2.green .submit:active {
+    background-color: #fff;
+    color: #000
+}
+
+.tmp2.green .action {
+    color: #89b478
+}
+
+.tmp2.green .action.selected {
+    color: #193c19
+}
+
+.tmp2.green .submit {
+    background-color: #89b478
+}
+
+.tmp2.purple {
+    background-image: url("triviadeath2-tjsp/tmp2_purple.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.tmp2.purple .name-header {
+    background-color: #3c2846;
+    color: #9b7daf
+}
+
+.tmp2.purple .message {
+    color: #3c2846
+}
+
+.tmp2.purple .status {
+    color: #3c2846
+}
+
+.tmp2.purple .action:active,
+.tmp2.purple .submit:active {
+    background-color: #fff;
+    color: #000
+}
+
+.tmp2.purple .action {
+    color: #9b7daf
+}
+
+.tmp2.purple .action.selected {
+    color: #3c2846
+}
+
+.tmp2.purple .submit {
+    background-color: #9b7daf
+}
+
+.tmp2.blue {
+    background-image: url("triviadeath2-tjsp/tmp2_blue.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.tmp2.blue .name-header {
+    background-color: #1e3755;
+    color: #6e9be1
+}
+
+.tmp2.blue .message {
+    color: #1e3755
+}
+
+.tmp2.blue .status {
+    color: #1e3755
+}
+
+.tmp2.blue .action:active,
+.tmp2.blue .submit:active {
+    background-color: #fff;
+    color: #000
+}
+
+.tmp2.blue .action {
+    color: #6e9be1
+}
+
+.tmp2.blue .action.selected {
+    color: #1e3755
+}
+
+.tmp2.blue .submit {
+    background-color: #6e9be1
+}
+
+.tmp2.gray {
+    background-image: url("triviadeath2-tjsp/tmp2_gray.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.tmp2.gray .name-header {
+    background-color: #383838;
+    color: #afafaf
+}
+
+.tmp2.gray .message {
+    color: #383838
+}
+
+.tmp2.gray .status {
+    color: #383838
+}
+
+.tmp2.gray .action:active,
+.tmp2.gray .submit:active {
+    background-color: #fff;
+    color: #000
+}
+
+.tmp2.gray .action {
+    color: #afafaf
+}
+
+.tmp2.gray .action.selected {
+    color: #383838
+}
+
+.tmp2.gray .submit {
+    background-color: #afafaf
+}
+
+.tmp2.yellow {
+    background-image: url("triviadeath2-tjsp/tmp2_yellow.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.tmp2.yellow .name-header {
+    background-color: #50461e;
+    color: #ebdca0
+}
+
+.tmp2.yellow .message {
+    color: #50461e
+}
+
+.tmp2.yellow .status {
+    color: #50461e
+}
+
+.tmp2.yellow .action:active,
+.tmp2.yellow .submit:active {
+    background-color: #fff;
+    color: #000
+}
+
+.tmp2.yellow .action {
+    color: #ebdca0
+}
+
+.tmp2.yellow .action.selected {
+    color: #50461e
+}
+
+.tmp2.yellow .submit {
+    background-color: #ebdca0
+}
+
+.tmp2.orange {
+    background-image: url("triviadeath2-tjsp/tmp2_orange.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.tmp2.orange .name-header {
+    background-color: #5f3c28;
+    color: #e1af78
+}
+
+.tmp2.orange .message {
+    color: #5f3c28
+}
+
+.tmp2.orange .status {
+    color: #5f3c28
+}
+
+.tmp2.orange .action:active,
+.tmp2.orange .submit:active {
+    background-color: #fff;
+    color: #000
+}
+
+.tmp2.orange .action {
+    color: #e1af78
+}
+
+.tmp2.orange .action.selected {
+    color: #5f3c28
+}
+
+.tmp2.orange .submit {
+    background-color: #e1af78
+}
+
+.tmp2.red {
+    background-image: url("triviadeath2-tjsp/tmp2_red.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.tmp2.red .name-header {
+    background-color: #5a1919;
+    color: #fa9696
+}
+
+.tmp2.red .message {
+    color: #5a1919
+}
+
+.tmp2.red .status {
+    color: #5a1919
+}
+
+.tmp2.red .action:active,
+.tmp2.red .submit:active {
+    background-color: #fff;
+    color: #000
+}
+
+.tmp2.red .action {
+    color: #fa9696
+}
+
+.tmp2.red .action.selected {
+    color: #5a1919
+}
+
+.tmp2.red .submit {
+    background-color: #fa9696
+}
+
+.tmp2.pink {
+    background-image: url("triviadeath2-tjsp/tmp2_pink.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.tmp2.pink .name-header {
+    background-color: #873250;
+    color: #e191a5
+}
+
+.tmp2.pink .message {
+    color: #873250
+}
+
+.tmp2.pink .status {
+    color: #873250
+}
+
+.tmp2.pink .action:active,
+.tmp2.pink .submit:active {
+    background-color: #fff;
+    color: #000
+}
+
+.tmp2.pink .action {
+    color: #e191a5
+}
+
+.tmp2.pink .action.selected {
+    color: #873250
+}
+
+.tmp2.pink .submit {
+    background-color: #e191a5
+}
+
+.tmp2.waiting .stage {
+    background-color: #000
+}
+
+.tmp2 .artifact-link {
+    background-image: url("triviadeath2-tjsp/tmp2_artifact-link.png");
+    border-radius: 15px
+}
+
+.locale-de .tmp2 .artifact-link {
+    background-image: url("triviadeath2-tjsp/locale-de_tmp2_artifact-link.png")
+}
+
+.locale-es .tmp2 .artifact-link,
+.locale-es-XL .tmp2 .artifact-link {
+    background-image: url("triviadeath2-tjsp/locale-es_tmp2_artifact-link.png")
+}
+
+.locale-fr .tmp2 .artifact-link {
+    background-image: url("triviadeath2-tjsp/locale-fr_tmp2_artifact-link.png")
+}
+
+.locale-it .tmp2 .artifact-link {
+    background-image: url("triviadeath2-tjsp/locale-it_tmp2_artifact-link.png")
+}
+
+.tmp2 .play-area {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: "Lost and Forelorn";
+    text-align: center
+}
+
+.tmp2 .play-area .name-header {
+    padding: 5px 0;
+    font-size: 2.4rem;
+    line-height: 2.8rem
+}
+
+.tmp2 .play-area .stage {
+    flex: 1 1 auto
+}
+
+/*# sourceMappingURL=sourcemaps/6068.css.map*/
