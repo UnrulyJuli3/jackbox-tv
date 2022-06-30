@@ -19,8 +19,8 @@
 
                 function a(t, e, i, s, o) {
                     for (var r, c = s, l = e + 1; l < i; l++) {
-                        var h = n(t[l], t[e], t[i]);
-                        h > c && (r = l, c = h)
+                        var d = n(t[l], t[e], t[i]);
+                        d > c && (r = l, c = d)
                     }
                     c > s && (r - e > 1 && a(t, e, r, s, o), o.push(t[r]), i - r > 1 && a(t, r, i, s, o))
                 }
@@ -35,7 +35,7 @@
                     if (t.length <= 2) return t;
                     var s = void 0 !== e ? e * e : 1;
                     return o(t = i ? t : function(t, e) {
-                        for (var i, s, n, a, o, r = t[0], c = [r], l = 1, h = t.length; l < h; l++) n = r, void 0, void 0, (a = (s = i = t[l]).x - n.x) * a + (o = s.y - n.y) * o > e && (c.push(i), r = i);
+                        for (var i, s, n, a, o, r = t[0], c = [r], l = 1, d = t.length; l < d; l++) n = r, void 0, void 0, (a = (s = i = t[l]).x - n.x) * a + (o = s.y - n.y) * o > e && (c.push(i), r = i);
                         return r !== i && c.push(i), c
                     }(t, s), s)
                 }
@@ -147,7 +147,7 @@
         52265: (t, e, i) => {
             "use strict";
             i.r(e), i.d(e, {
-                default: () => J
+                default: () => Y
             });
             var s = function() {
                 var t = this,
@@ -155,7 +155,14 @@
                     i = t._self._c || e;
                 return i("div", {
                     staticClass: "jbg moderation"
-                }, [t._m(0), t._v(" "), t.isConnected ? i("Moderate", t._b({}, "Moderate", t.ecastValues, !1)) : i("Authenticate", {
+                }, [t._m(0), t._v(" "), t.isConnected ? i("Moderate", t._b({
+                    attrs: {
+                        players: t.players
+                    },
+                    on: {
+                        kick: t.setPlayerKicked
+                    }
+                }, "Moderate", t.ecastValues, !1)) : i("Authenticate", {
                     on: {
                         connectionChange: t.onConnectionChange
                     }
@@ -246,7 +253,7 @@
                         }
                     }, [i("span", [t._v(t._s(t.$t("MODERATE")))]), t._v(" "), i("div", {
                         staticClass: "loading"
-                    })])], 1), t._v(" "), t.room ? [t.isModerationSupported ? t.room.moderationEnabled ? t._e() : i("p", {
+                    })])], 1), t._v(" "), t.room ? [t.hasModeration ? t.room.moderationEnabled ? t._e() : i("p", {
                         staticClass: "warning"
                     }, [t._v("\n                    " + t._s(t.$t("WARNING_MODERATION_DISABLED")) + "\n                ")]) : i("p", {
                         staticClass: "warning"
@@ -256,8 +263,8 @@
                 };
             c._withStripped = !0;
             var l = i(44285),
-                h = i(21944),
-                d = i(6305),
+                d = i(21944),
+                h = i(6305),
                 u = i(89446),
                 p = i(2720),
                 m = i(12360);
@@ -269,6 +276,8 @@
                     REJECT_ALL: "Reject All",
                     SUBMITTED_BY: "Submitted by:",
                     WAITING_FOR_SUBMISSIONS: "Waiting for submissions",
+                    KICK: "Kick?",
+                    KICKED: "Kicked",
                     WARNING_MODERATION_DISABLED: "The moderation setting for this game is turned off. Turn it on and restart the game to moderate content.",
                     WARNING_MODERATION_UNSUPPORTED: "{gameName} doesn't have anything to moderate, but thanks for wanting to help out!"
                 },
@@ -352,7 +361,7 @@
             };
             const g = a().extend({
                 components: {
-                    Input: d.Z
+                    Input: h.Z
                 },
                 i18n: {
                     messages: v,
@@ -369,14 +378,14 @@
                 computed: {
                     canSubmit() {
                         var t;
-                        return this.code.length === this.codeLength && this.password.length === this.passwordLength && !!this.isModerationSupported && !!(null === (t = this.room) || void 0 === t ? void 0 : t.moderationEnabled)
+                        return this.code.length === this.codeLength && this.password.length === this.passwordLength && !!this.hasModeration && !!(null === (t = this.room) || void 0 === t ? void 0 : t.moderationEnabled)
                     },
                     game() {
                         if (this.room) return (0, m.cF)(this.room.appTag)
                     },
-                    isModerationSupported() {
-                        var t, e;
-                        return !!this.room && null !== (e = null === (t = this.game) || void 0 === t ? void 0 : t.hasModeration) && void 0 !== e && e
+                    hasModeration() {
+                        var t, e, i;
+                        return !!this.room && null !== (i = null === (e = null === (t = this.game) || void 0 === t ? void 0 : t.features) || void 0 === e ? void 0 : e.includes("moderation")) && void 0 !== i && i
                     }
                 },
                 beforeMount() {
@@ -405,7 +414,7 @@
                                 const t = yield this.$api.getRoom({
                                     code: this.code
                                 });
-                                this.room = t, h.o.setup(this.room.locale), this.$root.$i18n.locale = h.o.locale
+                                this.room = t, d.o.setup(this.room.locale), this.$root.$i18n.locale = d.o.locale
                             } catch (t) {
                                 console.warn(t), this.room = null
                             }
@@ -430,7 +439,8 @@
                             };
                             this.$ecast = new l.WSClient(t), this.isConnecting = !0;
                             try {
-                                yield this.$ecast.connect(), this.$syncEcast(), this.$debug.setup(this.$ecast, this.room), this.$storage.isSupported && this.$storage.set("mod-roomCode", this.code), this.$emit("connectionChange", !0)
+                                const t = yield this.$ecast.connect();
+                                this.$clientWelcome = t, this.$syncEcast(), this.$debug.setup(this.$ecast, this.room), this.$storage.isSupported && this.$storage.set("mod-roomCode", this.code), this.$emit("connectionChange", !0)
                             } catch (t) {
                                 console.error("[SignIn]", t), this.isConnecting = !1, this.onConnectionError(t)
                             }
@@ -457,7 +467,42 @@
                     staticClass: "moderate"
                 }, [i("div", {
                     staticClass: "constrain"
-                }, [i("div", {
+                }, [t.hasKicking ? i("div", {
+                    staticClass: "player-container"
+                }, t._l(t.players, (function(e) {
+                    return i("div", {
+                        key: "player-" + e.id,
+                        staticClass: "player-item"
+                    }, [i("span", {
+                        staticClass: "player-name",
+                        domProps: {
+                            textContent: t._s(e.name)
+                        }
+                    }), t._v(" "), e.isKicked ? i("span", {
+                        directives: [{
+                            name: "t",
+                            rawName: "v-t",
+                            value: "KICKED",
+                            expression: "'KICKED'"
+                        }],
+                        staticClass: "kicked-message"
+                    }) : i("button", {
+                        staticClass: "kick-button",
+                        on: {
+                            click: function(i) {
+                                return t.kick(e)
+                            }
+                        }
+                    }, [i("span", {
+                        directives: [{
+                            name: "t",
+                            rawName: "v-t",
+                            value: "KICK",
+                            expression: "'KICK'"
+                        }],
+                        staticClass: "kick-button-text"
+                    })])])
+                })), 0) : t._e(), t._v(" "), i("div", {
                     staticClass: "top-buttons"
                 }, [i("button", {
                     directives: [{
@@ -546,7 +591,7 @@
                 })])], 1)])
             };
             C._withStripped = !0;
-            var I = function() {
+            var y = function() {
                 var t = this,
                     e = t.$createElement,
                     i = t._self._c || e;
@@ -590,8 +635,8 @@
                     }
                 })])])
             };
-            I._withStripped = !0;
-            var A = i(32530);
+            y._withStripped = !0;
+            var I = i(32530);
             const w = a().extend({
                 props: {
                     item: Object
@@ -600,7 +645,7 @@
                     const t = this.$refs.stage,
                         e = this.item.value.size.width,
                         i = this.item.value.frames || [],
-                        s = new A.U(t, {
+                        s = new I.U(t, {
                             width: this.item.value.size.width * i.length,
                             height: this.item.value.size.height
                         }),
@@ -616,10 +661,10 @@
                     htmlUnescape: t => u.c.htmlUnescape(t)
                 }
             });
-            var R = (0, f.Z)(w, I, [], !1, null, "748ebaa0", null);
-            R.options.__file = "src/apps/entry/views/moderation/AnimationItem.vue";
-            const y = R.exports;
-            var S = function() {
+            var A = (0, f.Z)(w, y, [], !1, null, "748ebaa0", null);
+            A.options.__file = "src/apps/entry/views/moderation/AnimationItem.vue";
+            const k = A.exports;
+            var R = function() {
                 var t = this,
                     e = t.$createElement,
                     i = t._self._c || e;
@@ -670,9 +715,9 @@
                     }
                 })])])
             };
-            S._withStripped = !0;
+            R._withStripped = !0;
             var O = i(20854);
-            const T = a().extend({
+            const S = a().extend({
                 props: {
                     item: Object
                 },
@@ -694,10 +739,10 @@
                     htmlUnescape: t => u.c.htmlUnescape(t)
                 }
             });
-            var b = (0, f.Z)(T, S, [], !1, null, "1b51919a", null);
+            var b = (0, f.Z)(S, R, [], !1, null, "1b51919a", null);
             b.options.__file = "src/apps/entry/views/moderation/DoodleItem.vue";
-            const N = b.exports;
-            var D = function() {
+            const T = b.exports;
+            var N = function() {
                 var t = this,
                     e = t.$createElement,
                     i = t._self._c || e;
@@ -741,14 +786,14 @@
                     }
                 })])])
             };
-            D._withStripped = !0;
-            const M = a().extend({
+            N._withStripped = !0;
+            const D = a().extend({
                 props: {
                     item: Object
                 },
                 mounted() {
                     const t = this.$refs.stage,
-                        e = new A.U(t, {
+                        e = new I.U(t, {
                             width: this.item.value.size.width,
                             height: this.item.value.size.height
                         }),
@@ -763,9 +808,9 @@
                     htmlUnescape: t => u.c.htmlUnescape(t)
                 }
             });
-            var k = (0, f.Z)(M, D, [], !1, null, "5975197a", null);
-            k.options.__file = "src/apps/entry/views/moderation/DrawingItem.vue";
-            const L = k.exports;
+            var $ = (0, f.Z)(D, N, [], !1, null, "5975197a", null);
+            $.options.__file = "src/apps/entry/views/moderation/DrawingItem.vue";
+            const M = $.exports;
             var P = function() {
                 var t = this,
                     e = t.$createElement,
@@ -810,7 +855,7 @@
                 })])])
             };
             P._withStripped = !0;
-            const $ = a().extend({
+            const L = a().extend({
                 props: {
                     item: Object
                 },
@@ -821,21 +866,49 @@
                     htmlUnescape: t => u.c.htmlUnescape(t)
                 }
             });
-            var U = (0, f.Z)($, P, [], !1, null, null, null);
+            var U = (0, f.Z)(L, P, [], !1, null, null, null);
             U.options.__file = "src/apps/entry/views/moderation/TextItem.vue";
             const j = U.exports;
+            var W = function(t, e, i, s) {
+                return new(i || (i = Promise))((function(n, a) {
+                    function o(t) {
+                        try {
+                            c(s.next(t))
+                        } catch (t) {
+                            a(t)
+                        }
+                    }
+
+                    function r(t) {
+                        try {
+                            c(s.throw(t))
+                        } catch (t) {
+                            a(t)
+                        }
+                    }
+
+                    function c(t) {
+                        var e;
+                        t.done ? n(t.value) : (e = t.value, e instanceof i ? e : new i((function(t) {
+                            t(e)
+                        }))).then(o, r)
+                    }
+                    c((s = s.apply(t, e || [])).next())
+                }))
+            };
             const B = a().extend({
                 components: {
-                    AnimationItem: y,
-                    DoodleItem: N,
-                    DrawingItem: L,
+                    AnimationItem: k,
+                    DoodleItem: T,
+                    DrawingItem: M,
                     TextItem: j
                 },
                 props: {
                     items: {
                         default: () => [],
                         type: Array
-                    }
+                    },
+                    players: Array
                 },
                 ecastProviders: {
                     items: {
@@ -865,12 +938,46 @@
                 i18n: {
                     messages: v
                 },
+                data: () => ({
+                    room: null
+                }),
                 computed: {
+                    hasKicking() {
+                        var t, e;
+                        if (!this.room) return !1;
+                        const i = (0, m.cF)(this.room.appTag);
+                        return null !== (e = null === (t = null == i ? void 0 : i.features) || void 0 === t ? void 0 : t.includes("kicking")) && void 0 !== e && e
+                    },
                     pendingItems() {
                         return this.items.filter((t => "pending" === t.status))
                     }
                 },
+                beforeMount() {
+                    return W(this, void 0, void 0, (function*() {
+                        try {
+                            const t = yield this.$api.getRoom({
+                                code: this.$ecast.code
+                            });
+                            this.room = t
+                        } catch (t) {
+                            console.warn(t), this.room = null
+                        }
+                    }))
+                },
                 methods: {
+                    kick(t) {
+                        return W(this, void 0, void 0, (function*() {
+                            this.$emit("kick", {
+                                id: t.id,
+                                kickedValue: !0
+                            }), yield this.$ecast.kick(t.id, !0).catch((e => {
+                                this.$emit("kick", {
+                                    id: t.id,
+                                    kickedValue: !1
+                                }), this.$handleEcastError(e)
+                            }))
+                        }))
+                    },
                     onAcceptAllClick() {
                         this.updateStatus(this.pendingItems, "accepted")
                     },
@@ -884,7 +991,7 @@
                         "rejected" !== t.status && this.updateStatus([t], "rejected")
                     },
                     updateStatus(t, e) {
-                        return i = this, s = void 0, a = function*() {
+                        return W(this, void 0, void 0, (function*() {
                             try {
                                 const i = t.map((t => {
                                     const i = this.$ecast.entities[t.key].val;
@@ -903,38 +1010,13 @@
                                 console.error("[Moderation] unable to notify host by mail", t)
                             }
                             this.$syncEcast()
-                        }, new((n = void 0) || (n = Promise))((function(t, e) {
-                            function o(t) {
-                                try {
-                                    c(a.next(t))
-                                } catch (t) {
-                                    e(t)
-                                }
-                            }
-
-                            function r(t) {
-                                try {
-                                    c(a.throw(t))
-                                } catch (t) {
-                                    e(t)
-                                }
-                            }
-
-                            function c(e) {
-                                var i;
-                                e.done ? t(e.value) : (i = e.value, i instanceof n ? i : new n((function(t) {
-                                    t(i)
-                                }))).then(o, r)
-                            }
-                            c((a = a.apply(i, s || [])).next())
-                        }));
-                        var i, s, n, a
+                        }))
                     }
                 }
             });
-            var W = (0, f.Z)(B, C, [], !1, null, "7686b6ac", null);
-            W.options.__file = "src/apps/entry/views/moderation/Moderate.vue";
-            const G = W.exports;
+            var K = (0, f.Z)(B, C, [], !1, null, "7686b6ac", null);
+            K.options.__file = "src/apps/entry/views/moderation/Moderate.vue";
+            const G = K.exports;
             var z = function(t, e, i, s) {
                 return new(i || (i = Promise))((function(n, a) {
                     function o(t) {
@@ -973,7 +1055,8 @@
                     sharedMessages: r.s
                 },
                 data: () => ({
-                    isConnected: !1
+                    isConnected: !1,
+                    players: []
                 }),
                 computed: {
                     ecastValues() {
@@ -986,7 +1069,32 @@
                             this.onRoomExit()
                         })), this.$ecast.on("socketClose", (() => {
                             this.onSocketCloseEvent()
+                        })), this.$ecast.on("client/connected", (t => {
+                            if ("player" === t.role) {
+                                const e = this.players.findIndex((e => e.id === t.id)); - 1 === e ? this.players.push({
+                                    name: t.name,
+                                    id: t.id,
+                                    isKicked: !1
+                                }) : this.players[e].isKicked = !1
+                            }
+                        })), this.$ecast.on("client/kicked", (t => {
+                            this.setPlayerKicked({
+                                id: t.id,
+                                kickedValue: !0
+                            })
+                        })), this.$ecast.on("client/disconnected", (t => {
+                            const e = this.players.findIndex((e => e.id === t.id)); - 1 === e || this.players[e].isKicked || this.players.splice(e, 1)
+                        })), Object.values(this.$clientWelcome.here).forEach((t => {
+                            t.roles.player && this.players.push({
+                                name: t.roles.player.name,
+                                id: t.id,
+                                isKicked: t.roles.kicked
+                            })
                         })))
+                    },
+                    setPlayerKicked(t) {
+                        const e = this.players.findIndex((e => e.id === t.id));
+                        this.players[e].isKicked = t.kickedValue
                     },
                     onRoomExit() {
                         return z(this, void 0, void 0, (function*() {
@@ -1007,7 +1115,7 @@
                     }
                 }
             });
-            var Y = (0, f.Z)(F, s, [function() {
+            var V = (0, f.Z)(F, s, [function() {
                 var t = this.$createElement,
                     e = this._self._c || t;
                 return e("header", {
@@ -1016,8 +1124,8 @@
                     staticClass: "logo"
                 })])
             }], !1, null, "05d701e0", null);
-            Y.options.__file = "src/apps/entry/views/moderation/Main.vue";
-            const J = Y.exports
+            V.options.__file = "src/apps/entry/views/moderation/Main.vue";
+            const Y = V.exports
         },
         6305: (t, e, i) => {
             "use strict";
@@ -1029,6 +1137,9 @@
                     e = t.$createElement;
                 return (t._self._c || e)("input", {
                     ref: "input",
+                    attrs: {
+                        enterkeyhint: "done"
+                    },
                     domProps: {
                         value: t.value
                     },
@@ -1052,8 +1163,9 @@
                 methods: {
                     onInput(t) {
                         return e = this, i = void 0, n = function*() {
-                            const e = t.target,
-                                i = -1 === e.maxLength ? Number.MAX_SAFE_INTEGER : e.maxLength;
+                            const e = t.target;
+                            if (!(null == e ? void 0 : e.value)) return;
+                            const i = -1 === e.maxLength ? Number.MAX_SAFE_INTEGER : e.maxLength;
                             e.value.length > i ? e.value = e.value.substring(0, i) : (this.$emit("input", e.value), yield a().nextTick(), e.value !== this.value && (e.value = this.value))
                         }, new((s = void 0) || (s = Promise))((function(t, a) {
                             function o(t) {
@@ -1090,4 +1202,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/2265.44a820dd3322bb19115b.js.map
+//# sourceMappingURL=sourcemaps/2265.e0321f5cc8e34c6a3a22.js.map

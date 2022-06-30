@@ -954,6 +954,55 @@
     background-color: transparent
 }
 
+.player-container[data-v-7686b6ac] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: flex-start;
+    flex-basis: auto
+}
+
+.player-container .player-item[data-v-7686b6ac] {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 5px;
+    flex-basis: calc(20% - 10px);
+    align-content: center;
+    align-items: center
+}
+
+.player-container .player-item .player-name[data-v-7686b6ac] {
+    font-size: 14px;
+    color: gray;
+    margin-top: 5px;
+    text-align: center
+}
+
+.player-container .player-item .kick-button[data-v-7686b6ac] {
+    border-radius: 20px;
+    background-color: #a23636;
+    height: 30px;
+    width: 80%;
+    box-shadow: 0px 3px 3px gray
+}
+
+.player-container .player-item .kick-button .kick-button-text[data-v-7686b6ac] {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase
+}
+
+.player-container .player-item .kicked-message[data-v-7686b6ac] {
+    color: gray;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase
+}
+
 .top-buttons[data-v-7686b6ac] {
     margin: 75px -20px 20px;
     padding-bottom: 20px;

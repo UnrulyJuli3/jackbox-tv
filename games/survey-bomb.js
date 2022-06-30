@@ -24,6 +24,9 @@
                     t = e.$createElement;
                 return (e._self._c || t)("input", {
                     ref: "input",
+                    attrs: {
+                        enterkeyhint: "done"
+                    },
                     domProps: {
                         value: e.value
                     },
@@ -47,8 +50,9 @@
                 methods: {
                     onInput(e) {
                         return t = this, s = void 0, a = function*() {
-                            const t = e.target,
-                                s = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
+                            const t = e.target;
+                            if (!(null == t ? void 0 : t.value)) return;
+                            const s = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
                             t.value.length > s ? t.value = t.value.substring(0, s) : (this.$emit("input", t.value), yield i().nextTick(), t.value !== this.value && (t.value = this.value))
                         }, new((n = void 0) || (n = Promise))((function(e, i) {
                             function r(e) {
@@ -518,7 +522,7 @@
             var f = (0, d.Z)(v, r, [], !1, null, "74b7c7a9", null);
             f.options.__file = "src/games/pp8/survey-bomb/views/Choices.vue";
             const b = f.exports;
-            var g = function() {
+            var y = function() {
                 var e = this,
                     t = e.$createElement,
                     s = e._self._c || t;
@@ -633,8 +637,8 @@
                     }
                 })] : e._e()], 2)
             };
-            g._withStripped = !0;
-            var y = s(55507),
+            y._withStripped = !0;
+            var g = s(55507),
                 _ = s(6305),
                 x = s(13494),
                 w = s(65853),
@@ -961,7 +965,7 @@
                                 try {
                                     yield this.$ecast.updateText(this.player.textKey, this.teamName)
                                 } catch (e) {
-                                    if (e instanceof y.EcastFilterError) return void(this.filterError = !0);
+                                    if (e instanceof g.EcastFilterError) return void(this.filterError = !0);
                                     this.$handleEcastError(e)
                                 }
                             }
@@ -980,7 +984,7 @@
                     }
                 }
             });
-            var L = (0, d.Z)(P, g, [], !1, null, "6f411366", null);
+            var L = (0, d.Z)(P, y, [], !1, null, "6f411366", null);
             L.options.__file = "src/games/pp8/survey-bomb/views/Lobby.vue";
             const D = L.exports;
             var U = function() {
@@ -1618,7 +1622,7 @@
                             try {
                                 yield this.$ecast.decrementPNCounter(e)
                             } catch (t) {
-                                t instanceof y.EcastEntityNotFound ? console.warn(`PNCounter ${e} not found, can't subtract vote`) : this.$handleEcastError(t)
+                                t instanceof g.EcastEntityNotFound ? console.warn(`PNCounter ${e} not found, can't subtract vote`) : this.$handleEcastError(t)
                             }
                         }))
                     },
@@ -1627,7 +1631,7 @@
                             try {
                                 yield this.$ecast.incrementPNCounter(e)
                             } catch (t) {
-                                t instanceof y.EcastEntityNotFound ? console.warn(`PNCounter ${e} not found, can't add vote`) : this.$handleEcastError(t)
+                                t instanceof g.EcastEntityNotFound ? console.warn(`PNCounter ${e} not found, can't add vote`) : this.$handleEcastError(t)
                             }
                         }))
                     }
@@ -2004,4 +2008,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/9290.6d6047ab62c0882f8d40.js.map
+//# sourceMappingURL=sourcemaps/9290.9c6980f3c10657d97cf5.js.map

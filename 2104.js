@@ -111,11 +111,11 @@
                 r = n(13218),
                 c = n(81704),
                 l = n(36390);
-            t.exports = function t(e, n, u, p, d) {
+            t.exports = function t(e, n, u, d, p) {
                 e !== n && s(n, (function(s, c) {
-                    if (d || (d = new o), r(s)) a(e, n, c, u, t, p, d);
+                    if (p || (p = new o), r(s)) a(e, n, c, u, t, d, p);
                     else {
-                        var v = p ? p(l(e, c), s, c + "", e, n, d) : void 0;
+                        var v = d ? d(l(e, c), s, c + "", e, n, p) : void 0;
                         void 0 === v && (v = s), i(e, c, v)
                     }
                 }), c)
@@ -130,8 +130,8 @@
                 c = n(35694),
                 l = n(1469),
                 u = n(29246),
-                p = n(44144),
-                d = n(23560),
+                d = n(44144),
+                p = n(23560),
                 v = n(13218),
                 h = n(68630),
                 T = n(36719),
@@ -139,19 +139,19 @@
                 m = n(59881);
             t.exports = function(t, e, n, f, N, C, g) {
                 var y = E(t, n),
-                    b = E(e, n),
-                    x = g.get(b);
-                if (x) o(t, n, x);
+                    x = E(e, n),
+                    b = g.get(x);
+                if (b) o(t, n, b);
                 else {
-                    var O = C ? C(y, b, n + "", t, e, g) : void 0,
+                    var O = C ? C(y, x, n + "", t, e, g) : void 0,
                         _ = void 0 === O;
                     if (_) {
-                        var S = l(b),
-                            k = !S && p(b),
-                            w = !S && !k && T(b);
-                        O = b, S || k || w ? l(y) ? O = y : u(y) ? O = a(y) : k ? (_ = !1, O = i(b, !0)) : w ? (_ = !1, O = s(b, !0)) : O = [] : h(b) || c(b) ? (O = y, c(y) ? O = m(y) : v(y) && !d(y) || (O = r(b))) : _ = !1
+                        var k = l(x),
+                            R = !k && d(x),
+                            S = !k && !R && T(x);
+                        O = x, k || R || S ? l(y) ? O = y : u(y) ? O = a(y) : R ? (_ = !1, O = i(x, !0)) : S ? (_ = !1, O = s(x, !0)) : O = [] : h(x) || c(x) ? (O = y, c(y) ? O = m(y) : v(y) && !p(y) || (O = r(x))) : _ = !1
                     }
-                    _ && (g.set(b, O), N(O, b, f, C, g), g.delete(b)), o(t, n, O)
+                    _ && (g.set(x, O), N(O, x, f, C, g), g.delete(x)), o(t, n, O)
                 }
             }
         },
@@ -354,8 +354,8 @@
                 c = n.n(r),
                 l = n(82492),
                 u = n.n(l),
-                p = n(70236),
-                d = n(35029),
+                d = n(70236),
+                p = n(35029),
                 v = n(21944),
                 h = n(47865),
                 T = n(54905),
@@ -379,8 +379,8 @@
                 }
             };
             var y = n(35271),
-                b = n(89768),
-                x = n(65853),
+                x = n(89768),
+                b = n(65853),
                 O = n(99159),
                 _ = function() {
                     var t = this,
@@ -401,7 +401,7 @@
                     })), 0)
                 };
             _._withStripped = !0;
-            const S = a().extend({
+            const k = a().extend({
                 props: {
                     textDescriptions: Object
                 },
@@ -428,14 +428,14 @@
                     }
                 }
             });
-            var k = n(51900),
-                w = (0, k.Z)(S, _, [], !1, null, null, null);
-            w.options.__file = "src/services/vue/text-descriptions/TextDescriptions.vue";
-            const R = w.exports,
+            var R = n(51900),
+                S = (0, R.Z)(k, _, [], !1, null, null, null);
+            S.options.__file = "src/services/vue/text-descriptions/TextDescriptions.vue";
+            const w = S.exports,
                 A = {
                     instance: void 0,
                     install(t) {
-                        t.prototype.$announce || (t.component("TextDescriptions", R), t.prototype.$registerTextDescriptions = t => {
+                        t.prototype.$announce || (t.component("TextDescriptions", w), t.prototype.$registerTextDescriptions = t => {
                             this.instance = t
                         }, t.prototype.$announce = t => {
                             if (!this.instance) throw new Error("No TextDescriptions is registered");
@@ -497,7 +497,7 @@
                     }
                 }
             });
-            var U = (0, k.Z)(D, $, [], !1, null, "18efc1be", null);
+            var U = (0, R.Z)(D, $, [], !1, null, "18efc1be", null);
             U.options.__file = "src/services/vue/toast/Toast.vue";
             const X = U.exports,
                 B = {
@@ -617,7 +617,7 @@
                 }, [t._v("Next")])])])]) : t._e()
             };
             L._withStripped = !0;
-            const P = a().extend({
+            const M = a().extend({
                 props: {
                     replayer: Object
                 },
@@ -662,9 +662,9 @@
                     }
                 }
             });
-            var M = (0, k.Z)(P, L, [], !1, null, "61a8aafc", null);
-            M.options.__file = "src/apps/vue/components/DebugNav.vue";
-            const G = M.exports;
+            var P = (0, R.Z)(M, L, [], !1, null, "61a8aafc", null);
+            P.options.__file = "src/apps/vue/components/DebugNav.vue";
+            const G = P.exports;
             var V = function() {
                 var t = this,
                     e = t.$createElement,
@@ -712,16 +712,16 @@
             V._withStripped = !0;
             const H = a().extend({
                 i18n: {
-                    messages: x.s
+                    messages: b.s
                 },
                 data: () => ({
                     message: ""
                 })
             });
-            var j = (0, k.Z)(H, V, [], !1, null, "4579deee", null);
-            j.options.__file = "src/apps/vue/components/SendDebugModal.vue";
-            const F = j.exports;
-            var K = function() {
+            var K = (0, R.Z)(H, V, [], !1, null, "4579deee", null);
+            K.options.__file = "src/apps/vue/components/SendDebugModal.vue";
+            const j = K.exports;
+            var F = function() {
                 var t = this,
                     e = t.$createElement,
                     n = t._self._c || e;
@@ -732,12 +732,12 @@
                     }
                 }, [t._v("FEEDBACK")]) : t._e()
             };
-            K._withStripped = !0;
+            F._withStripped = !0;
             var J = n(50361),
                 W = n.n(J),
                 Z = n(2720),
-                z = n(12360),
-                Y = function(t, e, n, o) {
+                Y = n(12360),
+                z = function(t, e, n, o) {
                     return new(n || (n = Promise))((function(i, s) {
                         function a(t) {
                             try {
@@ -860,7 +860,7 @@
             Q._withStripped = !0;
             const tt = a().extend({
                 i18n: {
-                    messages: x.s
+                    messages: b.s
                 },
                 data: () => ({
                     vibe: null,
@@ -883,7 +883,7 @@
                     }
                 }
             });
-            var et = (0, k.Z)(tt, Q, [], !1, null, "091793f8", null);
+            var et = (0, R.Z)(tt, Q, [], !1, null, "091793f8", null);
             et.options.__file = "src/apps/vue/components/SendFeedbackModal.vue";
             const nt = et.exports;
             const ot = a().extend({
@@ -900,7 +900,7 @@
                                 e = yield this.$showModal(nt);
                             void 0 !== e && class {
                                 static send(t) {
-                                    return Y(this, void 0, void 0, (function*() {
+                                    return z(this, void 0, void 0, (function*() {
                                         const e = {
                                             appTag: t.room.appTag,
                                             state: {
@@ -926,7 +926,7 @@
                                     return (null === (e = t.player) || void 0 === e ? void 0 : e.prompt) ? t.player.prompt : (null === (n = t.audience) || void 0 === n ? void 0 : n.prompt) ? t.audience.prompt : (null === (o = t.audiencePlayer) || void 0 === o ? void 0 : o.prompt) ? t.audiencePlayer.prompt : t.prompt ? t.prompt : "unknown"
                                 }
                                 static sendToEcast(t) {
-                                    return Y(this, void 0, void 0, (function*() {
+                                    return z(this, void 0, void 0, (function*() {
                                         const e = yield fetch("https://ecast.jackboxgames.com/api/v2/controller/state", {
                                             method: "POST",
                                             body: JSON.stringify(t)
@@ -936,8 +936,8 @@
                                 }
                                 static sendToSlack(t, e) {
                                     var n;
-                                    return Y(this, void 0, void 0, (function*() {
-                                        const o = (0, z.cF)(e.room.appTag),
+                                    return z(this, void 0, void 0, (function*() {
+                                        const o = (0, Y.cF)(e.room.appTag),
                                             i = Z.v.slack.feedbackUrl;
                                         if (!i) return;
                                         const s = {
@@ -977,7 +977,7 @@
                                                 method: "POST",
                                                 body: JSON.stringify(s)
                                             }), e = yield t.text();
-                                            (0, b.c)("[Feedback] sendToSlack", e)
+                                            (0, x.c)("[Feedback] sendToSlack", e)
                                         } catch (t) {
                                             console.error("[Feedback] sendToSlack", t)
                                         }
@@ -1020,7 +1020,7 @@
                     }
                 }
             });
-            var it = (0, k.Z)(ot, K, [], !1, null, "5ddc1e31", null);
+            var it = (0, R.Z)(ot, F, [], !1, null, "5ddc1e31", null);
             it.options.__file = "src/apps/vue/components/Feedback.vue";
             const st = it.exports,
                 at = {
@@ -1187,12 +1187,12 @@
 
             function ct(t, e) {
                 return rt(this, void 0, void 0, (function*() {
-                    return (0, b.c)("[Vue] load", t), new Promise((n => {
+                    return (0, x.c)("[Vue] load", t), new Promise((n => {
                         var o;
-                        a().prototype.$analytics = p.c.shared, a().prototype.$debug = d.W.shared, a().prototype.$storage = h.K.shared, a().use(c()), a().use(T._), a().use(E.M), a().use(m.S), a().use(g), a().use(y.L), a().use(O.M), a().use(A), a().use(I.p), a().use(B);
+                        a().prototype.$analytics = d.c.shared, a().prototype.$debug = p.W.shared, a().prototype.$storage = h.K.shared, a().use(c()), a().use(T._), a().use(E.M), a().use(m.S), a().use(g), a().use(y.L), a().use(O.M), a().use(A), a().use(I.p), a().use(B);
                         const s = new(c())({
                             fallbackLocale: "en",
-                            messages: u()(x.s, at)
+                            messages: u()(b.s, at)
                         });
                         new(a())({
                             i18n: s,
@@ -1209,7 +1209,8 @@
                             mixins: [E.e, m.b],
                             data: () => ({
                                 timerId: null,
-                                debugReplayer: t.debugReplayer
+                                debugReplayer: t.debugReplayer,
+                                isKicked: !1
                             }),
                             computed: {
                                 ecastValues() {
@@ -1233,12 +1234,14 @@
                                     this.onClientDisconnected(t)
                                 })), this.$ecast.on("room/exit", (() => {
                                     this.onRoomExit()
+                                })), this.$ecast.on("client/kicked", (() => {
+                                    this.onClientKicked()
                                 })), this.$ecast.on("socketClose", (() => {
                                     this.onSocketClose()
                                 })), this.setupI18n(), this.setupSentry(), this.sendScreenView(), this.timerId = window.setInterval(this.sendScreenView.bind(this), 48e4), this.$analytics.setApplication({
                                     appTag: t.room.appTag,
                                     appId: t.room.appId,
-                                    appVersion: "4.2.1"
+                                    appVersion: "4.2.2"
                                 }), this.$storage.isSupported && this.$storage.setTag(`played-${t.room.appTag}`), n()
                             },
                             mounted() {
@@ -1316,17 +1319,26 @@
                                         }), window.location.reload()
                                     }))
                                 },
-                                onSocketClose() {
+                                onClientKicked() {
                                     return rt(this, void 0, void 0, (function*() {
-                                        this.$hideToast(), yield this.$showModal("Error", {
+                                        this.isKicked = !0, this.$hideToast(), yield this.$showModal("Error", {
                                             text: this.$t("ERROR.ROOM_DISCONNECTED"),
+                                            subtext: this.$t("ERROR.PLAYER_KICKED"),
                                             dismissText: this.$t("ACTION.OK")
                                         }), window.location.reload()
                                     }))
                                 },
+                                onSocketClose() {
+                                    return rt(this, void 0, void 0, (function*() {
+                                        this.isKicked || (this.$hideToast(), yield this.$showModal("Error", {
+                                            text: this.$t("ERROR.ROOM_DISCONNECTED"),
+                                            dismissText: this.$t("ACTION.OK")
+                                        }), window.location.reload())
+                                    }))
+                                },
                                 initKonami() {
                                     new(i())((() => rt(this, void 0, void 0, (function*() {
-                                        const t = yield this.$showModal(F);
+                                        const t = yield this.$showModal(j);
                                         void 0 !== t && this.$debug.send(t)
                                     }))))
                                 }
@@ -1359,4 +1371,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/2104.1e53229e1d69a68bfa2d.js.map
+//# sourceMappingURL=sourcemaps/2104.17a8fb201a62566afd0d.js.map

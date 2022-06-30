@@ -5,7 +5,7 @@
             a.d(t, {
                 Z: () => u
             });
-            var n, r, s = "function" == typeof Map ? new Map : (n = [], r = [], {
+            var n, r, i = "function" == typeof Map ? new Map : (n = [], r = [], {
                     has: function(e) {
                         return n.indexOf(e) > -1
                     },
@@ -20,7 +20,7 @@
                         t > -1 && (n.splice(t, 1), r.splice(t, 1))
                     }
                 }),
-                i = function(e) {
+                s = function(e) {
                     return new Event(e, {
                         bubbles: !0
                     })
@@ -28,19 +28,19 @@
             try {
                 new Event("test")
             } catch (n) {
-                i = function(e) {
+                s = function(e) {
                     var t = document.createEvent("Event");
                     return t.initEvent(e, !0, !1), t
                 }
             }
 
             function o(e) {
-                var t = s.get(e);
+                var t = i.get(e);
                 t && t.destroy()
             }
 
             function l(e) {
-                var t = s.get(e);
+                var t = i.get(e);
                 t && t.update()
             }
             var c = null;
@@ -53,7 +53,7 @@
             }) : ((c = function(e, t) {
                 return e && Array.prototype.forEach.call(e.length ? e : [e], (function(e) {
                     return function(e) {
-                        if (e && e.nodeName && "TEXTAREA" === e.nodeName && !s.has(e)) {
+                        if (e && e.nodeName && "TEXTAREA" === e.nodeName && !i.has(e)) {
                             var t, a = null,
                                 n = null,
                                 r = null,
@@ -63,7 +63,7 @@
                                 l = function(t) {
                                     window.removeEventListener("resize", o, !1), e.removeEventListener("input", p, !1), e.removeEventListener("keyup", p, !1), e.removeEventListener("autosize:destroy", l, !1), e.removeEventListener("autosize:update", p, !1), Object.keys(t).forEach((function(a) {
                                         e.style[a] = t[a]
-                                    })), s.delete(e)
+                                    })), i.delete(e)
                                 }.bind(e, {
                                     height: e.style.height,
                                     resize: e.style.resize,
@@ -71,7 +71,7 @@
                                     overflowX: e.style.overflowX,
                                     wordWrap: e.style.wordWrap
                                 });
-                            e.addEventListener("autosize:destroy", l, !1), "onpropertychange" in e && "oninput" in e && e.addEventListener("keyup", p, !1), window.addEventListener("resize", o, !1), e.addEventListener("input", p, !1), e.addEventListener("autosize:update", p, !1), e.style.overflowX = "hidden", e.style.wordWrap = "break-word", s.set(e, {
+                            e.addEventListener("autosize:destroy", l, !1), "onpropertychange" in e && "oninput" in e && e.addEventListener("keyup", p, !1), window.addEventListener("resize", o, !1), e.addEventListener("input", p, !1), e.addEventListener("autosize:update", p, !1), e.style.overflowX = "hidden", e.style.wordWrap = "break-word", i.set(e, {
                                 destroy: l,
                                 update: p
                             }), "vertical" === (t = window.getComputedStyle(e, null)).resize ? e.style.resize = "none" : "both" === t.resize && (e.style.resize = "horizontal"), a = "content-box" === t.boxSizing ? -(parseFloat(t.paddingTop) + parseFloat(t.paddingBottom)) : parseFloat(t.borderTopWidth) + parseFloat(t.borderBottomWidth), isNaN(a) && (a = 0), p()
@@ -105,9 +105,9 @@
                                 n = "content-box" === a.boxSizing ? Math.round(parseFloat(a.height)) : e.offsetHeight;
                             if (n < t ? "hidden" === a.overflowY && (c("scroll"), u(), n = "content-box" === a.boxSizing ? Math.round(parseFloat(window.getComputedStyle(e, null).height)) : e.offsetHeight) : "hidden" !== a.overflowY && (c("hidden"), u(), n = "content-box" === a.boxSizing ? Math.round(parseFloat(window.getComputedStyle(e, null).height)) : e.offsetHeight), r !== n) {
                                 r = n;
-                                var s = i("autosize:resized");
+                                var i = s("autosize:resized");
                                 try {
-                                    e.dispatchEvent(s)
+                                    e.dispatchEvent(i)
                                 } catch (e) {}
                             }
                         }
@@ -123,12 +123,12 @@
         48598: (e, t, a) => {
             "use strict";
             a.d(t, {
-                I: () => v
+                I: () => A
             });
             const n = [169, 174, 8252, 8265, 8482, 8505, 8596, 8597, 8598, 8599, 8600, 8601, 8617, 8618, 9e3, 8986, 8987, 9167, 9193, 9194, 9195, 9196, 9197, 9198, 9199, 9200, 9201, 9202, 9203, 9209, 9210, 9410, 9642, 9643, 9654, 9664, 9723, 9724, 9725, 9726, 9728, 9729, 9730, 9731, 9732, 9742, 9745, 9748, 9749, 9752, 9757, 9760, 9762, 9763, 9766, 9770, 9774, 9775, 9784, 9785, 9786, 9792, 9794, 9800, 9801, 9802, 9803, 9804, 9805, 9806, 9807, 9808, 9809, 9810, 9811, 9824, 9827, 9829, 9830, 9832, 9851, 9854, 9855, 9874, 9875, 9876, 9877, 9878, 9879, 9881, 9883, 9884, 9888, 9823, 9889, 9895, 9898, 9899, 9904, 9905, 9917, 9918, 9924, 9925, 9928, 9934, 9935, 9937, 9939, 9940, 9961, 9962, 9968, 9969, 9970, 9971, 9972, 9973, 9974, 9975, 9976, 9977, 9978, 9981, 9986, 9989, 9992, 9993, 9994, 9995, 9996, 9997, 9999, 10002, 10004, 10006, 10013, 10017, 10024, 10035, 10036, 10052, 10055, 10060, 10062, 10067, 10068, 10069, 10071, 10083, 10084, 10085, 10133, 10134, 10135, 10145, 10160, 10175, 10548, 10549, 11013, 11014, 11015, 11035, 11036, 11088, 11093, 12336, 12349, 12951, 12953, 58634],
                 r = [128104, 128105, 129489],
-                s = [127995, 127996, 127997, 127998, 127999, 129456, 129457, 129458, 129459],
-                i = 65039,
+                i = [127995, 127996, 127997, 127998, 127999, 129456, 129457, 129458, 129459],
+                s = 65039,
                 o = 8205,
                 l = (e, t) => {
                     const a = parseInt(e.charCodeAt(0).toString(16), 16),
@@ -142,18 +142,18 @@
                 u = (e, t) => !!e && parseInt(e.charCodeAt(0).toString(16), 16) === t,
                 p = e => /[\uD800-\uDB7F]/.test(e),
                 d = e => /[\u0023\u002A\u0030-\u0039]/.test(e),
-                A = e => {
+                h = e => {
                     const t = parseInt(e.toString(16), 16);
                     return t >= 127462 && t <= 127487
                 },
-                h = (e, t) => {
+                v = (e, t) => {
                     let a = "",
                         n = !0;
                     for (; n && t < e.length;) {
                         const r = e[t];
                         if (p(r)) {
-                            const i = l(r, e[t + 1]);
-                            s.includes(i) ? (a = a + r + e[t + 1], t += 2) : n = !1
+                            const s = l(r, e[t + 1]);
+                            i.includes(s) ? (a = a + r + e[t + 1], t += 2) : n = !1
                         } else u(r, o) ? (a = a + r + e[t + 1] + e[t + 2], t += 3) : n = !1
                     }
                     return {
@@ -161,73 +161,73 @@
                         newPosition: t
                     }
                 },
-                v = (e, t) => {
+                A = (e, t) => {
                     if (!/[^\u00A1\u0020-\u0022\u0024-\u0029\u002B-\u002F\u003A-\u007E\u00BF-\u00FF’]/gi.test(e)) return t && e && e.length > t && (e = e.substring(0, t)), {
                         result: e,
                         charCount: e.length
                     };
                     const a = e.split("");
                     let n = 0,
-                        v = "";
+                        A = "";
                     for (let e = 0; e < a.length && (!t || n < t); e += 1) {
                         const t = a[e];
-                        if (/[\u00A1\u0020-\u0022\u0024-\u0029\u002B-\u002F\u003A-\u007E\u00BF-\u00FF’]/gi.test(t)) v += t, n += 1;
+                        if (/[\u00A1\u0020-\u0022\u0024-\u0029\u002B-\u002F\u003A-\u007E\u00BF-\u00FF’]/gi.test(t)) A += t, n += 1;
                         else {
                             if (c(t)) {
-                                if (v += t, u(t, 9977)) {
+                                if (A += t, u(t, 9977)) {
                                     e += 1;
                                     const {
                                         modifyingChars: t,
                                         newPosition: n
-                                    } = h(a, e);
-                                    v += t, e = n - 1
+                                    } = v(a, e);
+                                    A += t, e = n - 1
                                 }
                                 n += 1;
                                 continue
                             }
                             if (u(t, 8220) || u(t, 8221)) {
-                                e += 1, v = `${v}"`, n += 1;
+                                e += 1, A = `${A}"`, n += 1;
                                 continue
                             }
                             if (p(t)) {
                                 const c = a[e + 1];
-                                v = v + t + c, e += 1;
+                                A = A + t + c, e += 1;
                                 const p = l(t, c);
                                 if (r.includes(p)) {
                                     const {
                                         modifyingChars: t,
                                         newPosition: r
-                                    } = h(a, e + 1);
-                                    v += t, n += 1, e = r - 1;
+                                    } = v(a, e + 1);
+                                    A += t, n += 1, e = r - 1;
                                     continue
                                 }
-                                if (A(p)) {
+                                if (h(p)) {
                                     const t = l(a[e + 1], a[e + 2]);
-                                    A(t) && (v = v + a[e + 1] + a[e + 2], e += 1), n += 1;
+                                    h(t) && (A = A + a[e + 1] + a[e + 2], e += 1), n += 1;
                                     continue
                                 }
                                 if (127988 === p) {
                                     const t = a[e + 1];
-                                    u(t, o) && (v = v + t + a[e + 2] + a[e + 3], e += 3), n += 1;
+                                    u(t, o) && (A = A + t + a[e + 2] + a[e + 3], e += 3), n += 1;
                                     continue
                                 }
                                 if (127987 === p) {
                                     const t = a[e + 1];
-                                    u(t, i) && (e += 1, u(a[e + 1], o) && (v = v + t + a[e + 1] + a[e + 2] + a[e + 3], e += 3)), n += 1;
+                                    u(t, s) && (e += 1, u(a[e + 1], o) && (A = A + t + a[e + 1] + a[e + 2] + a[e + 3], e += 3)), n += 1;
                                     continue
                                 }
-                                s.includes(p) || (n += 1);
+                                i.includes(p) || (n += 1);
                                 continue
                             }
                             if (d(t)) {
                                 const r = a[e + 1];
-                                r && u(r, i) ? (v = v + t + a[e + 1] + a[e + 2], e += 2) : v += t, n += 1;
+                                r && u(r, s) ? (A = A + t + a[e + 1] + a[e + 2], e += 2) : A += t, n += 1;
                                 continue
-                            }(u(t, i) || u(t, o) || u(t, 8419)) && (v += t)
+                            }(u(t, s) || u(t, o) || u(t, 8419)) && (A += t)
                         }
                     }
                     return {
-                        result: v,
+                        result: A,
                         charCount: n
                     }
                 }
@@ -252,7 +252,7 @@
                 }) : e[t] = a, e
             }
 
-            function s(e, t) {
+            function i(e, t) {
                 var a = Object.keys(e);
                 if (Object.getOwnPropertySymbols) {
                     var n = Object.getOwnPropertySymbols(e);
@@ -263,12 +263,12 @@
                 return a
             }
 
-            function i(e) {
+            function s(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var a = null != arguments[t] ? arguments[t] : {};
-                    t % 2 ? s(Object(a), !0).forEach((function(t) {
+                    t % 2 ? i(Object(a), !0).forEach((function(t) {
                         r(e, t, a[t])
-                    })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a)) : s(Object(a)).forEach((function(t) {
+                    })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(a)) : i(Object(a)).forEach((function(t) {
                         Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(a, t))
                     }))
                 }
@@ -302,28 +302,28 @@
                     indexes: a
                 }
             }
-            var A = [],
-                h = "";
+            var h = [],
+                v = "";
 
-            function v() {
-                var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h,
-                    t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : A,
+            function A() {
+                var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v,
+                    t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h,
                     a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
                 if (!p(t)) {
                     if (n(t) !== l) throw new Error("Text-mask:conformToMask; The mask property must be an array.");
                     t = d(t = t(e, a)).maskWithoutCaretTraps
                 }
                 var r = a.guide,
-                    s = void 0 === r || r,
-                    i = a.previousConformedValue,
-                    c = void 0 === i ? h : i,
-                    v = a.placeholderChar,
-                    f = void 0 === v ? o : v,
+                    i = void 0 === r || r,
+                    s = a.previousConformedValue,
+                    c = void 0 === s ? v : s,
+                    A = a.placeholderChar,
+                    f = void 0 === A ? o : A,
                     m = a.placeholder,
                     T = void 0 === m ? u(t, f) : m,
                     _ = a.currentCaretPosition,
                     y = a.keepCharPositions,
-                    E = !1 === s && void 0 !== c,
+                    E = !1 === i && void 0 !== c,
                     O = e.length,
                     b = c.length,
                     g = T.length,
@@ -333,10 +333,10 @@
                     L = _ + (I ? -R : 0),
                     N = L + Math.abs(R);
                 if (!0 === y && !I) {
-                    for (var x = h, P = L; P < N; P++) T[P] === f && (x += f);
+                    for (var x = v, P = L; P < N; P++) T[P] === f && (x += f);
                     e = e.slice(0, L) + x + e.slice(L, O)
                 }
-                for (var S = e.split(h).map((function(e, t) {
+                for (var S = e.split(v).map((function(e, t) {
                         return {
                             char: e,
                             isNew: t >= L && t < N
@@ -348,7 +348,7 @@
                         G === T[V ? w - R : w] && S.splice(w, 1)
                     }
                 }
-                var U = h,
+                var U = v,
                     k = !1;
                 e: for (var $ = 0; $ < g; $++) {
                     var D = T[$];
@@ -363,7 +363,7 @@
                                     continue e
                                 }
                                 if (t[$].test(M)) {
-                                    if (!0 === y && !1 !== j && c !== h && !1 !== s && I) {
+                                    if (!0 === y && !1 !== j && c !== v && !1 !== i && I) {
                                         for (var B = S.length, H = null, z = 0; z < B; z++) {
                                             var W = S[z];
                                             if (W.char !== f && !1 === W.isNew) break;
@@ -384,7 +384,7 @@
                 }
                 if (E && !1 === I) {
                     for (var K = null, q = 0; q < U.length; q++) T[q] === f && (K = q);
-                    U = null !== K ? U.substr(0, K + 1) : h
+                    U = null !== K ? U.substr(0, K + 1) : v
                 }
                 return {
                     conformedValue: U,
@@ -421,9 +421,9 @@
                 var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m;
                 return e.map((function(e, a, n) {
                     var r = t[e] || e,
-                        s = n[a - 1],
-                        i = t[s] || s;
-                    return r === f ? null : i === f ? T(_(r)) : r
+                        i = n[a - 1],
+                        s = t[i] || i;
+                    return r === f ? null : s === f ? T(_(r)) : r
                 })).filter(Boolean)
             }
 
@@ -448,11 +448,11 @@
                         };
 
                     function a(a) {
-                        return e.get(a) || i({}, t)
+                        return e.get(a) || s({}, t)
                     }
                     return {
                         partiallyUpdate: function(t, n) {
-                            e.set(t, i(i({}, a(t)), n))
+                            e.set(t, s(s({}, a(t)), n))
                         },
                         remove: function(t) {
                             e.delete(t)
@@ -473,12 +473,12 @@
                     a = e.value,
                     n = C.get(e),
                     r = n.previousValue,
-                    s = n.mask,
-                    i = a !== r,
+                    i = n.mask,
+                    s = a !== r,
                     o = a.length > r.length,
-                    l = a && i && o;
-                if ((t || l) && s) {
-                    var c = v(a, s, {
+                    l = a && s && o;
+                if ((t || l) && i) {
+                    var c = A(a, i, {
                             guide: !1
                         }),
                         u = c.conformedValue;
@@ -507,7 +507,7 @@
                 var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m;
                 return null === e || Array.isArray(e) || "object" !== n(e) ? t : Object.keys(e).reduce((function(t, a) {
                     var n = e[a];
-                    return null === n || n instanceof RegExp ? i(i({}, t), {}, r({}, a, n)) : t
+                    return null === n || n instanceof RegExp ? s(s({}, t), {}, r({}, a, n)) : t
                 }), t)
             }
 
@@ -529,8 +529,8 @@
                         var n = a.value,
                             r = a.oldValue;
                         e = O(e);
-                        var s = b(n) || x(r) !== x(n);
-                        s && L(e, n, t), I(e, s)
+                        var i = b(n) || x(r) !== x(n);
+                        i && L(e, n, t), I(e, i)
                     },
                     unbind: function(e) {
                         e = O(e), C.remove(e)
@@ -540,7 +540,7 @@
             P();
             var S = function(e, t) {
                 var a = E(t);
-                return g(e) || Number.isFinite(e) ? v("".concat(e), a, {
+                return g(e) || Number.isFinite(e) ? A("".concat(e), a, {
                     guide: !1
                 }).conformedValue : e
             };
@@ -559,6 +559,9 @@
                     t = e.$createElement;
                 return (e._self._c || t)("input", {
                     ref: "input",
+                    attrs: {
+                        enterkeyhint: "done"
+                    },
                     domProps: {
                         value: e.value
                     },
@@ -569,8 +572,8 @@
             };
             n._withStripped = !0;
             var r = a(2934),
-                s = a.n(r);
-            const i = s().extend({
+                i = a.n(r);
+            const s = i().extend({
                 props: {
                     value: String
                 },
@@ -582,15 +585,16 @@
                 methods: {
                     onInput(e) {
                         return t = this, a = void 0, r = function*() {
-                            const t = e.target,
-                                a = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
-                            t.value.length > a ? t.value = t.value.substring(0, a) : (this.$emit("input", t.value), yield s().nextTick(), t.value !== this.value && (t.value = this.value))
-                        }, new((n = void 0) || (n = Promise))((function(e, s) {
-                            function i(e) {
+                            const t = e.target;
+                            if (!(null == t ? void 0 : t.value)) return;
+                            const a = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
+                            t.value.length > a ? t.value = t.value.substring(0, a) : (this.$emit("input", t.value), yield i().nextTick(), t.value !== this.value && (t.value = this.value))
+                        }, new((n = void 0) || (n = Promise))((function(e, i) {
+                            function s(e) {
                                 try {
                                     l(r.next(e))
                                 } catch (e) {
-                                    s(e)
+                                    i(e)
                                 }
                             }
 
@@ -598,7 +602,7 @@
                                 try {
                                     l(r.throw(e))
                                 } catch (e) {
-                                    s(e)
+                                    i(e)
                                 }
                             }
 
@@ -606,7 +610,7 @@
                                 var a;
                                 t.done ? e(t.value) : (a = t.value, a instanceof n ? a : new n((function(e) {
                                     e(a)
-                                }))).then(i, o)
+                                }))).then(s, o)
                             }
                             l((r = r.apply(t, a || [])).next())
                         }));
@@ -614,7 +618,7 @@
                     }
                 }
             });
-            var o = (0, a(51900).Z)(i, n, [], !1, null, null, null);
+            var o = (0, a(51900).Z)(s, n, [], !1, null, null, null);
             o.options.__file = "src/apps/vue/components/Input.vue";
             const l = o.exports
         },
@@ -628,22 +632,25 @@
                     t = e.$createElement;
                 return (e._self._c || t)("textarea", {
                     ref: "textarea",
+                    attrs: {
+                        enterkeyhint: "done"
+                    },
                     domProps: {
                         value: e.value
                     },
                     on: {
                         input: e.onInput,
-                        keypress: function(t) {
-                            return !t.type.indexOf("key") && e._k(t.keyCode, "enter", 13, t.key, "Enter") ? null : e.onKeypressEnter.apply(null, arguments)
+                        keydown: function(t) {
+                            return !t.type.indexOf("key") && e._k(t.keyCode, "enter", 13, t.key, "Enter") ? null : e.onKeydownEnter.apply(null, arguments)
                         }
                     }
                 })
             };
             n._withStripped = !0;
             var r = a(2934),
-                s = a.n(r),
-                i = a(3682);
-            const o = s().extend({
+                i = a.n(r),
+                s = a(3682);
+            const o = i().extend({
                 props: {
                     autosize: Boolean,
                     value: String
@@ -654,20 +661,22 @@
                     }
                 },
                 mounted() {
-                    this.autosize && (0, i.Z)(this.$refs.textarea)
+                    this.autosize && (0, s.Z)(this.$refs.textarea)
                 },
                 methods: {
                     onInput(e) {
                         return t = this, a = void 0, r = function*() {
-                            const t = e.target,
-                                a = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
-                            t.value = t.value.replaceAll("\n", ""), t.value.length > a ? t.value = t.value.substring(0, a) : (this.$emit("input", t.value), yield s().nextTick(), t.value !== this.value && (t.value = this.value))
-                        }, new((n = void 0) || (n = Promise))((function(e, s) {
-                            function i(e) {
+                            const t = e.target;
+                            if (!(null == t ? void 0 : t.value)) return;
+                            t.value = t.value.replaceAll("\n", "");
+                            const a = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
+                            t.value.length > a ? t.value = t.value.substring(0, a) : (this.$emit("input", t.value), yield i().nextTick(), t.value !== this.value && (t.value = this.value))
+                        }, new((n = void 0) || (n = Promise))((function(e, i) {
+                            function s(e) {
                                 try {
                                     l(r.next(e))
                                 } catch (e) {
-                                    s(e)
+                                    i(e)
                                 }
                             }
 
@@ -675,7 +684,7 @@
                                 try {
                                     l(r.throw(e))
                                 } catch (e) {
-                                    s(e)
+                                    i(e)
                                 }
                             }
 
@@ -683,14 +692,14 @@
                                 var a;
                                 t.done ? e(t.value) : (a = t.value, a instanceof n ? a : new n((function(e) {
                                     e(a)
-                                }))).then(i, o)
+                                }))).then(s, o)
                             }
                             l((r = r.apply(t, a || [])).next())
                         }));
                         var t, a, n, r
                     },
-                    onKeypressEnter(e) {
-                        this.$emit("keypress", e)
+                    onKeydownEnter(e) {
+                        this.$emit("keydown", e)
                     }
                 }
             });
@@ -767,8 +776,8 @@
             };
             n._withStripped = !0;
             var r = a(2934),
-                s = a.n(r),
-                i = a(65853),
+                i = a.n(r),
+                s = a(65853),
                 o = function() {
                     var e = this,
                         t = e.$createElement,
@@ -1203,8 +1212,8 @@
                     }
                 }
             };
-            s().use(u.ZP);
-            const A = s().extend({
+            i().use(u.ZP);
+            const h = i().extend({
                 components: {
                     Input: p.Z
                 },
@@ -1240,17 +1249,17 @@
                     }
                 }
             });
-            var h = a(51900),
-                v = (0, h.Z)(A, c, [], !1, null, "468e05a0", null);
-            v.options.__file = "src/games/tjsp/quiplash3/views/UGC/EpisodesModal.vue";
-            const f = v.exports;
+            var v = a(51900),
+                A = (0, v.Z)(h, c, [], !1, null, "468e05a0", null);
+            A.options.__file = "src/games/tjsp/quiplash3/views/UGC/EpisodesModal.vue";
+            const f = A.exports;
             var m = function(e, t, a, n) {
-                return new(a || (a = Promise))((function(r, s) {
-                    function i(e) {
+                return new(a || (a = Promise))((function(r, i) {
+                    function s(e) {
                         try {
                             l(n.next(e))
                         } catch (e) {
-                            s(e)
+                            i(e)
                         }
                     }
 
@@ -1258,7 +1267,7 @@
                         try {
                             l(n.throw(e))
                         } catch (e) {
-                            s(e)
+                            i(e)
                         }
                     }
 
@@ -1266,12 +1275,12 @@
                         var t;
                         e.done ? r(e.value) : (t = e.value, t instanceof a ? t : new a((function(e) {
                             e(t)
-                        }))).then(i, o)
+                        }))).then(s, o)
                     }
                     l((n = n.apply(e, t || [])).next())
                 }))
             };
-            const T = s().extend({
+            const T = i().extend({
                 components: {
                     LobbyActions: l.Z
                 },
@@ -1360,7 +1369,7 @@
                     }
                 }
             });
-            var _ = (0, h.Z)(T, o, [], !1, null, "1e91a8ef", null);
+            var _ = (0, v.Z)(T, o, [], !1, null, "1e91a8ef", null);
             _.options.__file = "src/games/tjsp/quiplash3/views/Lobby.vue";
             const y = _.exports;
             var E = function() {
@@ -1386,13 +1395,13 @@
                 })])
             };
             E._withStripped = !0;
-            const O = s().extend({
+            const O = i().extend({
                 props: {
                     avatar: Object,
                     name: String
                 }
             });
-            var b = (0, h.Z)(O, E, [], !1, null, "7c2ebeaf", null);
+            var b = (0, v.Z)(O, E, [], !1, null, "7c2ebeaf", null);
             b.options.__file = "src/games/tjsp/quiplash3/views/NameHeader.vue";
             const g = b.exports;
             var C = function() {
@@ -1414,7 +1423,7 @@
             C._withStripped = !0;
             var R = a(56623),
                 I = a(83933);
-            const L = s().extend({
+            const L = i().extend({
                 components: {
                     GalleryLink: R.Z,
                     PostGameActions: I.Z
@@ -1424,7 +1433,7 @@
                     player: Object
                 }
             });
-            var N = (0, h.Z)(L, C, [], !1, null, "4c9fa129", null);
+            var N = (0, v.Z)(L, C, [], !1, null, "4c9fa129", null);
             N.options.__file = "src/games/tjsp/quiplash3/views/PostGame.vue";
             const x = N.exports;
             var P = function() {
@@ -1560,8 +1569,8 @@
                                 n = t.target,
                                 r = !!n.checked;
                             if (Array.isArray(a)) {
-                                var s = e._i(a, null);
-                                n.checked ? s < 0 && (e.isThriplash = a.concat([null])) : s > -1 && (e.isThriplash = a.slice(0, s).concat(a.slice(s + 1)))
+                                var i = e._i(a, null);
+                                n.checked ? i < 0 && (e.isThriplash = a.concat([null])) : i > -1 && (e.isThriplash = a.slice(0, i).concat(a.slice(i + 1)))
                             } else e.isThriplash = r
                         }
                     }
@@ -1577,7 +1586,7 @@
                     },
                     on: {
                         input: e.onInputPrompt,
-                        keypress: function(t) {
+                        keydown: function(t) {
                             return !t.type.indexOf("key") && e._k(t.keyCode, "enter", 13, t.key, "Enter") ? null : (t.preventDefault(), e.createNewPrompt.apply(null, arguments))
                         }
                     },
@@ -1632,7 +1641,7 @@
                     },
                     on: {
                         input: e.onInputTitle,
-                        keypress: function(t) {
+                        keydown: function(t) {
                             return !t.type.indexOf("key") && e._k(t.keyCode, "enter", 13, t.key, "Enter") ? null : (t.preventDefault(), e.createNewEpisode.apply(null, arguments))
                         }
                     },
@@ -1790,12 +1799,12 @@
                 w = a(38266),
                 G = a(89446),
                 V = function(e, t, a, n) {
-                    return new(a || (a = Promise))((function(r, s) {
-                        function i(e) {
+                    return new(a || (a = Promise))((function(r, i) {
+                        function s(e) {
                             try {
                                 l(n.next(e))
                             } catch (e) {
-                                s(e)
+                                i(e)
                             }
                         }
 
@@ -1803,7 +1812,7 @@
                             try {
                                 l(n.throw(e))
                             } catch (e) {
-                                s(e)
+                                i(e)
                             }
                         }
 
@@ -1811,12 +1820,12 @@
                             var t;
                             e.done ? r(e.value) : (t = e.value, t instanceof a ? t : new a((function(e) {
                                 e(t)
-                            }))).then(i, o)
+                            }))).then(s, o)
                         }
                         l((n = n.apply(e, t || [])).next())
                     }))
                 };
-            const U = s().extend({
+            const U = i().extend({
                 components: {
                     TextArea: w.Z
                 },
@@ -1966,7 +1975,7 @@
                     }
                 }
             });
-            var k = (0, h.Z)(U, P, [], !1, null, null, null);
+            var k = (0, v.Z)(U, P, [], !1, null, null, null);
             k.options.__file = "src/games/tjsp/quiplash3/views/UGC/Ugc.vue";
             const $ = k.exports;
             var D = function() {
@@ -2018,7 +2027,7 @@
                 }))], 2)
             };
             D._withStripped = !0;
-            const F = s().extend({
+            const F = i().extend({
                 props: {
                     player: Object
                 },
@@ -2042,12 +2051,12 @@
                                 this.isSubmitting = !1, this.selected = null, this.$handleEcastError(e)
                             }
                             this.hasSubmit = !0
-                        }, new((n = void 0) || (n = Promise))((function(e, s) {
-                            function i(e) {
+                        }, new((n = void 0) || (n = Promise))((function(e, i) {
+                            function s(e) {
                                 try {
                                     l(r.next(e))
                                 } catch (e) {
-                                    s(e)
+                                    i(e)
                                 }
                             }
 
@@ -2055,7 +2064,7 @@
                                 try {
                                     l(r.throw(e))
                                 } catch (e) {
-                                    s(e)
+                                    i(e)
                                 }
                             }
 
@@ -2063,7 +2072,7 @@
                                 var a;
                                 t.done ? e(t.value) : (a = t.value, a instanceof n ? a : new n((function(e) {
                                     e(a)
-                                }))).then(i, o)
+                                }))).then(s, o)
                             }
                             l((r = r.apply(t, a || [])).next())
                         }));
@@ -2071,7 +2080,7 @@
                     }
                 }
             });
-            var M = (0, h.Z)(F, D, [], !1, null, "22404244", null);
+            var M = (0, v.Z)(F, D, [], !1, null, "22404244", null);
             M.options.__file = "src/games/tjsp/quiplash3/views/Voting.vue";
             const j = M.exports;
             var B = function() {
@@ -2120,7 +2129,7 @@
                 })], 1)
             };
             B._withStripped = !0;
-            const H = s().extend({
+            const H = i().extend({
                 components: {
                     GalleryLink: R.Z
                 },
@@ -2132,7 +2141,7 @@
                     messages: d
                 }
             });
-            var z = (0, h.Z)(H, B, [], !1, null, "442df3a6", null);
+            var z = (0, v.Z)(H, B, [], !1, null, "442df3a6", null);
             z.options.__file = "src/games/tjsp/quiplash3/views/Waiting.vue";
             const W = z.exports;
             var K = function() {
@@ -2177,6 +2186,7 @@
                             autocorrect: "off",
                             autosize: "",
                             disabled: e.isSubmitting,
+                            enterkeyhint: n === e.answers.length - 1 ? "done" : "next",
                             placeholder: e.$t("WRITING.ANSWER_PLACEHOLDER"),
                             rows: "1",
                             spellcheck: "false"
@@ -2185,7 +2195,7 @@
                             input: function(t) {
                                 return e.onInput(t, n)
                             },
-                            keypress: function(t) {
+                            keydown: function(t) {
                                 return !t.type.indexOf("key") && e._k(t.keyCode, "enter", 13, t.key, "Enter") ? null : (t.preventDefault(), e.focusNext(n))
                             }
                         },
@@ -2245,12 +2255,12 @@
             var q = a(55507),
                 Q = a(48598),
                 Y = function(e, t, a, n) {
-                    return new(a || (a = Promise))((function(r, s) {
-                        function i(e) {
+                    return new(a || (a = Promise))((function(r, i) {
+                        function s(e) {
                             try {
                                 l(n.next(e))
                             } catch (e) {
-                                s(e)
+                                i(e)
                             }
                         }
 
@@ -2258,7 +2268,7 @@
                             try {
                                 l(n.throw(e))
                             } catch (e) {
-                                s(e)
+                                i(e)
                             }
                         }
 
@@ -2266,12 +2276,12 @@
                             var t;
                             e.done ? r(e.value) : (t = e.value, t instanceof a ? t : new a((function(e) {
                                 e(t)
-                            }))).then(i, o)
+                            }))).then(s, o)
                         }
                         l((n = n.apply(e, t || [])).next())
                     }))
                 };
-            const Z = s().extend({
+            const Z = i().extend({
                 components: {
                     TextArea: w.Z
                 },
@@ -2372,13 +2382,13 @@
                     }
                 }
             });
-            var X = (0, h.Z)(Z, K, [], !1, null, "7d0e76b5", null);
+            var X = (0, v.Z)(Z, K, [], !1, null, "7d0e76b5", null);
             X.options.__file = "src/games/tjsp/quiplash3/views/Writing.vue";
             const J = X.exports,
                 ee = {
                     isWaiting: e => "waiting" === e.kind
                 };
-            const te = s().extend({
+            const te = i().extend({
                 components: {
                     NameHeader: g,
                     Lobby: y,
@@ -2418,7 +2428,7 @@
                 },
                 i18n: {
                     messages: d,
-                    sharedMessages: i.s
+                    sharedMessages: s.s
                 },
                 data: () => ({
                     avatarImages: {},
@@ -2555,12 +2565,12 @@
                                     selected: (yield Promise.resolve().then(a.t.bind(a, 88247, 17))).default
                                 }
                             }
-                        }, new((n = void 0) || (n = Promise))((function(a, s) {
-                            function i(e) {
+                        }, new((n = void 0) || (n = Promise))((function(a, i) {
+                            function s(e) {
                                 try {
                                     l(r.next(e))
                                 } catch (e) {
-                                    s(e)
+                                    i(e)
                                 }
                             }
 
@@ -2568,7 +2578,7 @@
                                 try {
                                     l(r.throw(e))
                                 } catch (e) {
-                                    s(e)
+                                    i(e)
                                 }
                             }
 
@@ -2576,7 +2586,7 @@
                                 var t;
                                 e.done ? a(e.value) : (t = e.value, t instanceof n ? t : new n((function(e) {
                                     e(t)
-                                }))).then(i, o)
+                                }))).then(s, o)
                             }
                             l((r = r.apply(e, t || [])).next())
                         }));
@@ -2584,7 +2594,7 @@
                     }
                 }
             });
-            var ae = (0, h.Z)(te, n, [], !1, null, null, null);
+            var ae = (0, v.Z)(te, n, [], !1, null, null, null);
             ae.options.__file = "src/games/tjsp/quiplash3/views/Main.vue";
             const ne = ae.exports
         },
@@ -2750,4 +2760,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/2427.25d3279c08b95a218dee.js.map
+//# sourceMappingURL=sourcemaps/2427.7c257803be968a38cd84.js.map

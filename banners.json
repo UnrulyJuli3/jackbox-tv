@@ -38,6 +38,19 @@
         },
         {
             "start": "2021-08-13",
+            "end": "2022-06-30",
+            "text": "COMING SOON",
+            "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/JBPS_ControllerBanner.png",
+            "href": "https://www.jackboxgames.com/the-jackbox-party-starter/?utm_source=jbgtvtjps&utm_medium=jbgtvtjps&utm_campaign=jbgtvtjps"
+        },
+        {
+            "start": "2022-06-30",
+            "text": "AVAILABLE NOW! $19.99",
+            "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/JBPS_ControllerBanner.png",
+            "href": "https://www.jackboxgames.com/the-jackbox-party-starter/?utm_source=jbgtvtjps&utm_medium=jbgtvtjps&utm_campaign=jbgtvtjps"
+        },
+        {
+            "start": "2021-08-13",
             "text": "ON SALE! $20.99",
             "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/PP8 banner .png",
             "href": "https://www.jackboxgames.com/party-pack-eight/?utm_source=jbgtvpp8&utm_medium=jbgtvpp8&utm_campaign=jbgtvpp8"
@@ -56,7 +69,7 @@
         },
         {
             "start": "2021-07-23",
-            "text": "ON SALE! $14.99",
+            "text": "ON SALE! $16.49",
             "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/PP5.png",
             "href": "https://jackboxgames.com/party-pack-five/?utm_source=jackboxtv&utm_campaign=jbgtvpp5&utm_content=jbgtvpp5"
         },
@@ -68,25 +81,25 @@
         },
         {
             "start": "2021-07-23",
-            "text": "ON SALE! $14.99",
+            "text": "ON SALE! $16.24",
             "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/PP3.png",
             "href": "https://jackboxgames.com/party-pack-three/?utm_source=jackboxtv&utm_campaign=jbgtvpp3&utm_content=jbgtvpp3"
         },
         {
             "start": "2021-07-23",
-            "text": "ON SALE! $3.99",
+            "text": "ON SALE! $4.99",
             "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/D2.png",
             "href": "https://jackboxgames.com/drawful-two/?utm_source=jackboxtv&utm_campaign=jbgtvdraw&utm_content=jbgtvdraw"
         },
         {
             "start": "2021-07-23",
-            "text": "ON SALE! $9.99",
+            "text": "ON SALE! $12.49",
             "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/PP2.png",
             "href": "https://jackboxgames.com/party-pack-two/?utm_source=jackboxtv&utm_campaign=jbgtvpp2&utm_content=jbgtvpp2"
         },
         {
             "start": "2021-07-23",
-            "text": "ON SALE! $9.99",
+            "text": "ON SALE! $12.49",
             "src": "https://s3.amazonaws.com/static.jackboxgames.com/banners/PP1.png",
             "href": "https://jackboxgames.com/party-pack/?utm_source=jackboxtv&utm_campaign=jbgtvpp1&utm_content=jbgtvpp1"
         }

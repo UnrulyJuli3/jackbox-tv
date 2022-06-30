@@ -54,6 +54,9 @@
                     t = e.$createElement;
                 return (e._self._c || t)("input", {
                     ref: "input",
+                    attrs: {
+                        enterkeyhint: "done"
+                    },
                     domProps: {
                         value: e.value
                     },
@@ -77,8 +80,9 @@
                 methods: {
                     onInput(e) {
                         return t = this, a = void 0, i = function*() {
-                            const t = e.target,
-                                a = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
+                            const t = e.target;
+                            if (!(null == t ? void 0 : t.value)) return;
+                            const a = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
                             t.value.length > a ? t.value = t.value.substring(0, a) : (this.$emit("input", t.value), yield r().nextTick(), t.value !== this.value && (t.value = this.value))
                         }, new((s = void 0) || (s = Promise))((function(e, r) {
                             function n(e) {
@@ -2597,4 +2601,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/4494.ee0cf75ed4b78ae996ba.js.map
+//# sourceMappingURL=sourcemaps/4494.64f81b16359212d29841.js.map

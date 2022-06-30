@@ -174,6 +174,9 @@
                     t = e.$createElement;
                 return (e._self._c || t)("input", {
                     ref: "input",
+                    attrs: {
+                        enterkeyhint: "done"
+                    },
                     domProps: {
                         value: e.value
                     },
@@ -197,8 +200,9 @@
                 methods: {
                     onInput(e) {
                         return t = this, s = void 0, a = function*() {
-                            const t = e.target,
-                                s = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
+                            const t = e.target;
+                            if (!(null == t ? void 0 : t.value)) return;
+                            const s = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
                             t.value.length > s ? t.value = t.value.substring(0, s) : (this.$emit("input", t.value), yield r().nextTick(), t.value !== this.value && (t.value = this.value))
                         }, new((i = void 0) || (i = Promise))((function(e, r) {
                             function n(e) {
@@ -243,13 +247,16 @@
                     t = e.$createElement;
                 return (e._self._c || t)("textarea", {
                     ref: "textarea",
+                    attrs: {
+                        enterkeyhint: "done"
+                    },
                     domProps: {
                         value: e.value
                     },
                     on: {
                         input: e.onInput,
-                        keypress: function(t) {
-                            return !t.type.indexOf("key") && e._k(t.keyCode, "enter", 13, t.key, "Enter") ? null : e.onKeypressEnter.apply(null, arguments)
+                        keydown: function(t) {
+                            return !t.type.indexOf("key") && e._k(t.keyCode, "enter", 13, t.key, "Enter") ? null : e.onKeydownEnter.apply(null, arguments)
                         }
                     }
                 })
@@ -274,9 +281,11 @@
                 methods: {
                     onInput(e) {
                         return t = this, s = void 0, a = function*() {
-                            const t = e.target,
-                                s = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
-                            t.value = t.value.replaceAll("\n", ""), t.value.length > s ? t.value = t.value.substring(0, s) : (this.$emit("input", t.value), yield r().nextTick(), t.value !== this.value && (t.value = this.value))
+                            const t = e.target;
+                            if (!(null == t ? void 0 : t.value)) return;
+                            t.value = t.value.replaceAll("\n", "");
+                            const s = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
+                            t.value.length > s ? t.value = t.value.substring(0, s) : (this.$emit("input", t.value), yield r().nextTick(), t.value !== this.value && (t.value = this.value))
                         }, new((i = void 0) || (i = Promise))((function(e, r) {
                             function n(e) {
                                 try {
@@ -304,8 +313,8 @@
                         }));
                         var t, s, i, a
                     },
-                    onKeypressEnter(e) {
-                        this.$emit("keypress", e)
+                    onKeydownEnter(e) {
+                        this.$emit("keydown", e)
                     }
                 }
             });
@@ -1636,7 +1645,7 @@
             var w = (0, h.Z)(I, C, [], !1, null, null, null);
             w.options.__file = "src/games/tjsp/triviadeath2/views/Drawing.vue";
             const L = w.exports;
-            var S = function() {
+            var T = function() {
                 var e = this,
                     t = e.$createElement,
                     s = e._self._c || t;
@@ -1658,8 +1667,8 @@
                     }
                 })])
             };
-            S._withStripped = !0;
-            var A = function(e, t, s, i) {
+            T._withStripped = !0;
+            var K = function(e, t, s, i) {
                 return new(s || (s = Promise))((function(a, r) {
                     function n(e) {
                         try {
@@ -1686,8 +1695,8 @@
                     l((i = i.apply(e, t || [])).next())
                 }))
             };
-            const K = 128,
-                T = r().extend({
+            const S = 128,
+                A = r().extend({
                     props: {
                         color: String,
                         player: Object
@@ -1704,7 +1713,7 @@
                                 x: .5,
                                 y: .5
                             },
-                            width: K,
+                            width: S,
                             height: 20,
                             color: "black"
                         },
@@ -1713,8 +1722,8 @@
                                 x: .5,
                                 y: .5
                             },
-                            height: K,
-                            width: K,
+                            height: S,
+                            width: S,
                             x: 320,
                             y: 64,
                             ddy: 0,
@@ -1729,7 +1738,7 @@
                             render() {
                                 if (this.draw(), !this.isDropped) {
                                     const e = (0, f.Sy)();
-                                    e.save(), e.translate(this.x, this.y + 64), e.fillStyle = this.color, e.beginPath(), e.moveTo(-1 / 6 * this.width, 0), e.lineTo(1 / 6 * this.width, 0), e.lineTo(0, 1 / 6 * K), e.fill(), e.restore()
+                                    e.save(), e.translate(this.x, this.y + 64), e.fillStyle = this.color, e.beginPath(), e.moveTo(-1 / 6 * this.width, 0), e.lineTo(1 / 6 * this.width, 0), e.lineTo(0, 1 / 6 * S), e.fill(), e.restore()
                                 }
                             },
                             update(e) {
@@ -1740,7 +1749,7 @@
                         sprites: []
                     }),
                     mounted() {
-                        return A(this, void 0, void 0, (function*() {
+                        return K(this, void 0, void 0, (function*() {
                             yield this.setChipImages(), (0, f.S1)("drop"), (0, f.hg)(), this.gameLoop = (0, f.DX)({
                                 fps: 60,
                                 update: e => {
@@ -1752,7 +1761,7 @@
                             });
                             for (let e = 0; e < this.sprites.length; e++) this.sprites[e].ttl = 0;
                             const e = (0, f.jy)(this.bar);
-                            e.x = .5 * (0, f.o_)().width, e.y = 64, e.width = (0, f.o_)().width - K, this.sprites.push(e), this.puck.image.src = this.chipImages[this.color];
+                            e.x = .5 * (0, f.o_)().width, e.y = 64, e.width = (0, f.o_)().width - S, this.sprites.push(e), this.puck.image.src = this.chipImages[this.color];
                             const t = (0, f.jy)(this.puck);
                             (0, f.o_)().addEventListener("mouseleave", this.puck.onUp), t.dropped = () => {
                                 const e = (0, f.o_)().width - 64 - 64;
@@ -1767,7 +1776,7 @@
                     },
                     methods: {
                         setChipImages() {
-                            return A(this, void 0, void 0, (function*() {
+                            return K(this, void 0, void 0, (function*() {
                                 this.chipImages = {
                                     blue: (yield Promise.resolve().then(s.t.bind(s, 50241, 17))).default,
                                     gray: (yield Promise.resolve().then(s.t.bind(s, 68969, 17))).default,
@@ -1781,7 +1790,7 @@
                             }))
                         },
                         onDrop() {
-                            return A(this, void 0, void 0, (function*() {
+                            return K(this, void 0, void 0, (function*() {
                                 this.isSubmitting = !0;
                                 try {
                                     yield this.$ecast.updateObject(this.player.responseKey, {
@@ -1795,10 +1804,10 @@
                         }
                     }
                 });
-            var N = (0, h.Z)(T, S, [], !1, null, "5c80288a", null);
+            var N = (0, h.Z)(A, T, [], !1, null, "5c80288a", null);
             N.options.__file = "src/games/tjsp/triviadeath2/views/Dropping.vue";
-            const O = N.exports;
-            var k = function() {
+            const k = N.exports;
+            var O = function() {
                 var e = this,
                     t = e.$createElement,
                     i = e._self._c || t;
@@ -1859,7 +1868,7 @@
                     }
                 }) : e._e()], 2)
             };
-            k._withStripped = !0;
+            O._withStripped = !0;
             var Y = function(e, t, s, i) {
                 return new(s || (s = Promise))((function(a, r) {
                     function n(e) {
@@ -1942,7 +1951,7 @@
                     }
                 }
             });
-            var P = (0, h.Z)(G, k, [], !1, null, "36c9dfd6", null);
+            var P = (0, h.Z)(G, O, [], !1, null, "36c9dfd6", null);
             P.options.__file = "src/games/tjsp/triviadeath2/views/GridSelecting.vue";
             const D = P.exports;
             var H = function() {
@@ -2284,6 +2293,7 @@
                         expression: "currentText"
                     }
                 }) : s("TextArea", {
+                    ref: "textarea",
                     staticClass: "player-input",
                     attrs: {
                         "aria-label": "text input",
@@ -2293,9 +2303,8 @@
                     },
                     on: {
                         input: e.onInput,
-                        keypress: function(t) {
-                            if (!t.type.indexOf("key") && e._k(t.keyCode, "enter", 13, t.key, "Enter")) return null;
-                            t.preventDefault(), "dictation" !== e.player.type && e.onSubmit
+                        keydown: function(t) {
+                            return !t.type.indexOf("key") && e._k(t.keyCode, "enter", 13, t.key, "Enter") ? null : (t.preventDefault(), e.onSubmit.apply(null, arguments))
                         }
                     },
                     model: {
@@ -2320,10 +2329,7 @@
                         value: "ACTION.SUBMIT",
                         expression: "'ACTION.SUBMIT'"
                     }],
-                    staticClass: "submit",
-                    attrs: {
-                        type: "submit"
-                    }
+                    staticClass: "submit"
                 }) : e._e()], 1)])
             };
             re._withStripped = !0;
@@ -2395,16 +2401,22 @@
                     },
                     onSubmit() {
                         return ce(this, void 0, void 0, (function*() {
-                            this.isSubmitting = !0;
-                            try {
-                                yield this.$ecast.updateObject(this.player.responseKey, {
-                                    action: "submit"
-                                })
-                            } catch (e) {
-                                if (e instanceof ne.EcastFilterError) return void(this.error = this.$t("ERROR.TEXT_NAUGHTY"));
-                                this.$handleEcastError(e)
-                            } finally {
-                                this.isSubmitting = !1
+                            if ("dictation" !== this.player.type) {
+                                this.isSubmitting = !0;
+                                try {
+                                    yield this.$ecast.updateText(this.player.textKey, this.currentText), yield this.$ecast.updateObject(this.player.responseKey, {
+                                        action: "submit"
+                                    })
+                                } catch (e) {
+                                    if (e instanceof ne.EcastFilterError) return void(this.error = this.$t("ERROR.TEXT_NAUGHTY"));
+                                    this.$handleEcastError(e)
+                                } finally {
+                                    this.isSubmitting = !1, "password" === this.player.type && (this.currentText = "", this.$nextTick((() => {
+                                        const e = this.$refs.textarea,
+                                            t = null == e ? void 0 : e.$el;
+                                        null == t || t.focus()
+                                    })))
+                                }
                             }
                         }))
                     }
@@ -2420,7 +2432,7 @@
                         Choices: u,
                         Dialing: b,
                         Drawing: L,
-                        Dropping: O,
+                        Dropping: k,
                         GridSelecting: D,
                         Scratching: J,
                         Waiting: ae,
@@ -2742,4 +2754,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/6068.556f6778b136c624d698.js.map
+//# sourceMappingURL=sourcemaps/6068.618149d4dd176b84df77.js.map

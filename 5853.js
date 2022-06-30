@@ -27,8 +27,8 @@
                     },
                     ALT: {
                         UGC: {
-                            VISIBILITY_CONTROLLER_OFF: "prompts hidden on players' devices",
-                            VISIBILITY_CONTROLLER_ON: "prompts shown on players' devices",
+                            VISIBILITY_CONTROLLER_OFF: "prompts hidden on players’ devices",
+                            VISIBILITY_CONTROLLER_ON: "prompts shown on players’ devices",
                             VISIBILITY_SCREEN_OFF: "prompts hidden on game screen",
                             VISIBILITY_SCREEN_ON: "prompts shown on game screen"
                         }
@@ -41,6 +41,7 @@
                     ERROR: {
                         DISCONNECTED: "You have been disconnected.",
                         DRAWING_NOTHING: "You have to draw something!",
+                        PLAYER_KICKED: "You’ve been kicked.",
                         ROOM_DESTROYED: "Thanks for playing!",
                         ROOM_DISCONNECTED: "Disconnected",
                         ROOM_NOT_FOUND: "Room not found",
@@ -605,4 +606,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/5853.fce767d57bf5c240ca58.js.map
+//# sourceMappingURL=sourcemaps/5853.a999ac848425d660b820.js.map
