@@ -1,125 +1,5 @@
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     ["games/triviadeath2-tjsp"], {
-        3682: (e, t, s) => {
-            "use strict";
-            s.d(t, {
-                Z: () => d
-            });
-            var i, a, r = "function" == typeof Map ? new Map : (i = [], a = [], {
-                    has: function(e) {
-                        return i.indexOf(e) > -1
-                    },
-                    get: function(e) {
-                        return a[i.indexOf(e)]
-                    },
-                    set: function(e, t) {
-                        -1 === i.indexOf(e) && (i.push(e), a.push(t))
-                    },
-                    delete: function(e) {
-                        var t = i.indexOf(e);
-                        t > -1 && (i.splice(t, 1), a.splice(t, 1))
-                    }
-                }),
-                n = function(e) {
-                    return new Event(e, {
-                        bubbles: !0
-                    })
-                };
-            try {
-                new Event("test")
-            } catch (i) {
-                n = function(e) {
-                    var t = document.createEvent("Event");
-                    return t.initEvent(e, !0, !1), t
-                }
-            }
-
-            function o(e) {
-                var t = r.get(e);
-                t && t.destroy()
-            }
-
-            function l(e) {
-                var t = r.get(e);
-                t && t.update()
-            }
-            var c = null;
-            "undefined" == typeof window || "function" != typeof window.getComputedStyle ? ((c = function(e) {
-                return e
-            }).destroy = function(e) {
-                return e
-            }, c.update = function(e) {
-                return e
-            }) : ((c = function(e, t) {
-                return e && Array.prototype.forEach.call(e.length ? e : [e], (function(e) {
-                    return function(e) {
-                        if (e && e.nodeName && "TEXTAREA" === e.nodeName && !r.has(e)) {
-                            var t, s = null,
-                                i = null,
-                                a = null,
-                                o = function() {
-                                    e.clientWidth !== i && h()
-                                },
-                                l = function(t) {
-                                    window.removeEventListener("resize", o, !1), e.removeEventListener("input", h, !1), e.removeEventListener("keyup", h, !1), e.removeEventListener("autosize:destroy", l, !1), e.removeEventListener("autosize:update", h, !1), Object.keys(t).forEach((function(s) {
-                                        e.style[s] = t[s]
-                                    })), r.delete(e)
-                                }.bind(e, {
-                                    height: e.style.height,
-                                    resize: e.style.resize,
-                                    overflowY: e.style.overflowY,
-                                    overflowX: e.style.overflowX,
-                                    wordWrap: e.style.wordWrap
-                                });
-                            e.addEventListener("autosize:destroy", l, !1), "onpropertychange" in e && "oninput" in e && e.addEventListener("keyup", h, !1), window.addEventListener("resize", o, !1), e.addEventListener("input", h, !1), e.addEventListener("autosize:update", h, !1), e.style.overflowX = "hidden", e.style.wordWrap = "break-word", r.set(e, {
-                                destroy: l,
-                                update: h
-                            }), "vertical" === (t = window.getComputedStyle(e, null)).resize ? e.style.resize = "none" : "both" === t.resize && (e.style.resize = "horizontal"), s = "content-box" === t.boxSizing ? -(parseFloat(t.paddingTop) + parseFloat(t.paddingBottom)) : parseFloat(t.borderTopWidth) + parseFloat(t.borderBottomWidth), isNaN(s) && (s = 0), h()
-                        }
-
-                        function c(t) {
-                            var s = e.style.width;
-                            e.style.width = "0px", e.style.width = s, e.style.overflowY = t
-                        }
-
-                        function d() {
-                            if (0 !== e.scrollHeight) {
-                                var t = function(e) {
-                                        for (var t = []; e && e.parentNode && e.parentNode instanceof Element;) e.parentNode.scrollTop && t.push({
-                                            node: e.parentNode,
-                                            scrollTop: e.parentNode.scrollTop
-                                        }), e = e.parentNode;
-                                        return t
-                                    }(e),
-                                    a = document.documentElement && document.documentElement.scrollTop;
-                                e.style.height = "", e.style.height = e.scrollHeight + s + "px", i = e.clientWidth, t.forEach((function(e) {
-                                    e.node.scrollTop = e.scrollTop
-                                })), a && (document.documentElement.scrollTop = a)
-                            }
-                        }
-
-                        function h() {
-                            d();
-                            var t = Math.round(parseFloat(e.style.height)),
-                                s = window.getComputedStyle(e, null),
-                                i = "content-box" === s.boxSizing ? Math.round(parseFloat(s.height)) : e.offsetHeight;
-                            if (i < t ? "hidden" === s.overflowY && (c("scroll"), d(), i = "content-box" === s.boxSizing ? Math.round(parseFloat(window.getComputedStyle(e, null).height)) : e.offsetHeight) : "hidden" !== s.overflowY && (c("hidden"), d(), i = "content-box" === s.boxSizing ? Math.round(parseFloat(window.getComputedStyle(e, null).height)) : e.offsetHeight), a !== i) {
-                                a = i;
-                                var r = n("autosize:resized");
-                                try {
-                                    e.dispatchEvent(r)
-                                } catch (e) {}
-                            }
-                        }
-                    }(e)
-                })), e
-            }).destroy = function(e) {
-                return e && Array.prototype.forEach.call(e.length ? e : [e], o), e
-            }, c.update = function(e) {
-                return e && Array.prototype.forEach.call(e.length ? e : [e], l), e
-            });
-            const d = c
-        },
         16479: (e, t, s) => {
             var i;
             ! function() {
@@ -164,168 +44,10 @@
                 }.call(t, s, t, e)) || (e.exports = i)
             }()
         },
-        6305: (e, t, s) => {
-            "use strict";
-            s.d(t, {
-                Z: () => l
-            });
-            var i = function() {
-                var e = this,
-                    t = e.$createElement;
-                return (e._self._c || t)("input", {
-                    ref: "input",
-                    attrs: {
-                        enterkeyhint: "done"
-                    },
-                    domProps: {
-                        value: e.value
-                    },
-                    on: {
-                        input: e.onInput
-                    }
-                })
-            };
-            i._withStripped = !0;
-            var a = s(2934),
-                r = s.n(a);
-            const n = r().extend({
-                props: {
-                    value: String
-                },
-                watch: {
-                    value(e, t) {
-                        e !== t && (this.$refs.input.value = e)
-                    }
-                },
-                methods: {
-                    onInput(e) {
-                        return t = this, s = void 0, a = function*() {
-                            const t = e.target;
-                            if (!(null == t ? void 0 : t.value)) return;
-                            const s = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
-                            t.value.length > s ? t.value = t.value.substring(0, s) : (this.$emit("input", t.value), yield r().nextTick(), t.value !== this.value && (t.value = this.value))
-                        }, new((i = void 0) || (i = Promise))((function(e, r) {
-                            function n(e) {
-                                try {
-                                    l(a.next(e))
-                                } catch (e) {
-                                    r(e)
-                                }
-                            }
-
-                            function o(e) {
-                                try {
-                                    l(a.throw(e))
-                                } catch (e) {
-                                    r(e)
-                                }
-                            }
-
-                            function l(t) {
-                                var s;
-                                t.done ? e(t.value) : (s = t.value, s instanceof i ? s : new i((function(e) {
-                                    e(s)
-                                }))).then(n, o)
-                            }
-                            l((a = a.apply(t, s || [])).next())
-                        }));
-                        var t, s, i, a
-                    }
-                }
-            });
-            var o = (0, s(51900).Z)(n, i, [], !1, null, null, null);
-            o.options.__file = "src/apps/vue/components/Input.vue";
-            const l = o.exports
-        },
-        38266: (e, t, s) => {
-            "use strict";
-            s.d(t, {
-                Z: () => c
-            });
-            var i = function() {
-                var e = this,
-                    t = e.$createElement;
-                return (e._self._c || t)("textarea", {
-                    ref: "textarea",
-                    attrs: {
-                        enterkeyhint: "done"
-                    },
-                    domProps: {
-                        value: e.value
-                    },
-                    on: {
-                        input: e.onInput,
-                        keydown: function(t) {
-                            return !t.type.indexOf("key") && e._k(t.keyCode, "enter", 13, t.key, "Enter") ? null : e.onKeydownEnter.apply(null, arguments)
-                        }
-                    }
-                })
-            };
-            i._withStripped = !0;
-            var a = s(2934),
-                r = s.n(a),
-                n = s(3682);
-            const o = r().extend({
-                props: {
-                    autosize: Boolean,
-                    value: String
-                },
-                watch: {
-                    value(e, t) {
-                        e !== t && (this.$refs.textarea.value = e)
-                    }
-                },
-                mounted() {
-                    this.autosize && (0, n.Z)(this.$refs.textarea)
-                },
-                methods: {
-                    onInput(e) {
-                        return t = this, s = void 0, a = function*() {
-                            const t = e.target;
-                            if (!(null == t ? void 0 : t.value)) return;
-                            t.value = t.value.replaceAll("\n", "");
-                            const s = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
-                            t.value.length > s ? t.value = t.value.substring(0, s) : (this.$emit("input", t.value), yield r().nextTick(), t.value !== this.value && (t.value = this.value))
-                        }, new((i = void 0) || (i = Promise))((function(e, r) {
-                            function n(e) {
-                                try {
-                                    l(a.next(e))
-                                } catch (e) {
-                                    r(e)
-                                }
-                            }
-
-                            function o(e) {
-                                try {
-                                    l(a.throw(e))
-                                } catch (e) {
-                                    r(e)
-                                }
-                            }
-
-                            function l(t) {
-                                var s;
-                                t.done ? e(t.value) : (s = t.value, s instanceof i ? s : new i((function(e) {
-                                    e(s)
-                                }))).then(n, o)
-                            }
-                            l((a = a.apply(t, s || [])).next())
-                        }));
-                        var t, s, i, a
-                    },
-                    onKeydownEnter(e) {
-                        this.$emit("keydown", e)
-                    }
-                }
-            });
-            var l = (0, s(51900).Z)(o, i, [], !1, null, null, null);
-            l.options.__file = "src/apps/vue/components/TextArea.vue";
-            const c = l.exports
-        },
         87383: (e, t, s) => {
             "use strict";
             s.r(t), s.d(t, {
-                default: () => fe
+                default: () => me
             });
             var i = function() {
                 var e = this,
@@ -878,7 +600,7 @@
                     }, [s("button", {
                         staticClass: "action choice",
                         attrs: {
-                            disabled: e.isSubmitting
+                            disabled: !e.canSubmit
                         },
                         on: {
                             click: function(t) {
@@ -914,7 +636,7 @@
                         staticClass: "action choice",
                         class: e.generateChoiceClasses(i, t),
                         attrs: {
-                            disabled: e.isSubmitting || t.disabled || t.isFingerCutOff
+                            disabled: !e.canSubmit || t.disabled || t.isFingerCutOff
                         },
                         on: {
                             click: function(t) {
@@ -999,6 +721,9 @@
                     selected: []
                 }),
                 computed: {
+                    canSubmit() {
+                        return !this.isSubmitting && !this.hasSubmitted
+                    },
                     choices() {
                         if (!this.madness) return this.player.choices;
                         switch (this.madness) {
@@ -1073,7 +798,7 @@
                                 "player" === this.$ecast.role ? yield this.$ecast.updateObject(this.player.responseKey, {
                                     action: s,
                                     choice: e
-                                }): "audience" === this.$ecast.role && "submit" === s && (yield this.$ecast.incrementCountGroupCounter(this.player.countGroupKey, String(e)), this.hasSubmitted = !0)
+                                }): "audience" === this.$ecast.role && "submit" === s && (yield this.$ecast.incrementCountGroupCounter(this.player.countGroupKey, String(e))), this.player.category && (this.hasSubmitted = !0)
                             } catch (e) {
                                 this.$handleEcastError(e)
                             } finally {
@@ -1312,7 +1037,7 @@
                 p = (0, h.Z)(d, l, [], !1, null, "72482f88", null);
             p.options.__file = "src/games/tjsp/triviadeath2/views/Choices.vue";
             const u = p.exports;
-            var v = function() {
+            var g = function() {
                 var e = this,
                     t = e.$createElement,
                     s = e._self._c || t;
@@ -1341,9 +1066,9 @@
                     }
                 })])
             };
-            v._withStripped = !0;
-            var f = s(44442),
-                g = function(e, t, s, i) {
+            g._withStripped = !0;
+            var m = s(44442),
+                f = function(e, t, s, i) {
                     return new(s || (s = Promise))((function(a, r) {
                         function n(e) {
                             try {
@@ -1370,11 +1095,11 @@
                         l((i = i.apply(e, t || [])).next())
                     }))
                 };
-            const m = [0, .178, .424, .608, .735, .824, .888, .934, .965, .986, .997, 1, .997, .988, .973, .951, .921, .883, .836, .779, .712, .632, .54, .436, .322, .201, .087, 0, .015, .032, .049, .066, .083, .098, .112, .125, .136, .145, .151, .154, .151, .144, .134, .121, .106, .09, .072, .054, .035, .017, 0],
-                y = function(e) {
+            const v = [0, .178, .424, .608, .735, .824, .888, .934, .965, .986, .997, 1, .997, .988, .973, .951, .921, .883, .836, .779, .712, .632, .54, .436, .322, .201, .087, 0, .015, .032, .049, .066, .083, .098, .112, .125, .136, .145, .151, .154, .151, .144, .134, .121, .106, .09, .072, .054, .035, .017, 0],
+                _ = function(e) {
                     return e * (Math.PI / 180)
                 },
-                _ = r().extend({
+                E = r().extend({
                     props: {
                         player: Object
                     },
@@ -1396,8 +1121,8 @@
                             render() {
                                 if (this.flash) return;
                                 const e = this.status || this.dialed,
-                                    t = (0, f.Sy)();
-                                t.save(), t.font = "48px nokian11regular", t.fillStyle = "#6b8d45", t.textAlign = "center", t.fillText(e, .5 * (0, f.o_)().width + 1, this.y + 2), t.fillStyle = "#1c3c29", t.textAlign = "center", t.fillText(e, .5 * (0, f.o_)().width, this.y), t.restore()
+                                    t = (0, m.Sy)();
+                                t.save(), t.font = "48px nokian11regular", t.fillStyle = "#6b8d45", t.textAlign = "center", t.fillText(e, .5 * (0, m.o_)().width + 1, this.y + 2), t.fillStyle = "#1c3c29", t.textAlign = "center", t.fillText(e, .5 * (0, m.o_)().width, this.y), t.restore()
                             }
                         },
                         fingerStop: {
@@ -1412,7 +1137,7 @@
                             color: "gray",
                             image: null,
                             update(e) {
-                                return g(this, void 0, void 0, (function*() {
+                                return f(this, void 0, void 0, (function*() {
                                     if (!this.image) {
                                         const e = new Image;
                                         e.src = (yield Promise.resolve().then(s.t.bind(s, 37787, 17))).default, this.image = e
@@ -1438,47 +1163,47 @@
                             maxRotation: 0,
                             pointAngle: 0,
                             rotation: 0,
-                            rotationSpeed: y(300) / 60,
+                            rotationSpeed: _(300) / 60,
                             startAngle: 0,
                             bounceFrame: 0,
                             onDown() {
                                 if (this.rotation > 0) return;
                                 if (this.bounceFrame > 0) return;
                                 const e = {
-                                    x: f.cx.x - this.x,
-                                    y: f.cx.y - this.y
+                                    x: m.cx.x - this.x,
+                                    y: m.cx.y - this.y
                                 };
                                 let t = Math.atan2(e.y, e.x);
                                 t = t < 0 ? Math.abs(t) : 2 * Math.PI - t;
-                                const s = Math.floor(t / y(30));
-                                0 !== s && 11 !== s && (this.startAngle = t, this.maxRotation = (s + 1) * y(30), this.currentDigit = s, this.isSelected = !0)
+                                const s = Math.floor(t / _(30));
+                                0 !== s && 11 !== s && (this.startAngle = t, this.maxRotation = (s + 1) * _(30), this.currentDigit = s, this.isSelected = !0)
                             },
                             onUp() {
                                 if (!this.isSelected) return;
                                 this.isSelected = !1;
-                                let e = Math.floor(this.rotation / y(30));
-                                0 === e && (this.bounceFrame = m.length - 1), 0 !== e && 11 !== e && (10 === e && (e = 0), this.dialNumber(e))
+                                let e = Math.floor(this.rotation / _(30));
+                                0 === e && (this.bounceFrame = v.length - 1), 0 !== e && 11 !== e && (10 === e && (e = 0), this.dialNumber(e))
                             },
                             dialNumber(e) {},
                             update(e) {
-                                return g(this, void 0, void 0, (function*() {
+                                return f(this, void 0, void 0, (function*() {
                                     if (!this.image) {
                                         const e = new Image;
                                         e.src = (yield Promise.resolve().then(s.t.bind(s, 30210, 17))).default, this.image = e
                                     }
                                     if (this.isSelected) {
                                         const e = {
-                                            x: f.cx.x - this.x,
-                                            y: f.cx.y - this.y
+                                            x: m.cx.x - this.x,
+                                            y: m.cx.y - this.y
                                         };
                                         let t = Math.atan2(e.y, e.x);
                                         t = t < 0 ? Math.abs(t) : 2 * Math.PI - t, this.pointAngle = t;
                                         let s = this.startAngle - t;
-                                        s < 0 && (s += 2 * Math.PI), s > 0 && s < this.maxRotation && (this.rotation = s), (0, f.tN)("left") || this.onUp()
+                                        s < 0 && (s += 2 * Math.PI), s > 0 && s < this.maxRotation && (this.rotation = s), (0, m.tN)("left") || this.onUp()
                                     }
                                     if (this.isSelected || (this.rotation -= this.rotationSpeed, this.rotation = Math.max(0, this.rotation)), this.bounceFrame > 0) {
-                                        const e = m.length - 1 - this.bounceFrame;
-                                        this.rotation = y(13 * m[e]), this.bounceFrame += -1
+                                        const e = v.length - 1 - this.bounceFrame;
+                                        this.rotation = _(13 * v[e]), this.bounceFrame += -1
                                     }
                                     this.advance(e)
                                 }))
@@ -1496,7 +1221,7 @@
                             color: "#333333",
                             image: null,
                             update(e) {
-                                return g(this, void 0, void 0, (function*() {
+                                return f(this, void 0, void 0, (function*() {
                                     if (!this.image) {
                                         const e = new Image;
                                         e.src = (yield Promise.resolve().then(s.t.bind(s, 25891, 17))).default, this.image = e
@@ -1514,7 +1239,7 @@
                         }
                     },
                     mounted() {
-                        (0, f.S1)("phone"), (0, f.hg)(), this.gameLoop = (0, f.DX)({
+                        (0, m.S1)("phone"), (0, m.hg)(), this.gameLoop = (0, m.DX)({
                             fps: 60,
                             update: e => {
                                 this.sprites.forEach((t => t.update(e))), this.sprites = this.sprites.filter((e => e.isAlive()))
@@ -1523,26 +1248,26 @@
                                 this.sprites.forEach((e => e.render()))
                             }
                         });
-                        const e = (0, f.jy)(this.numberPlate);
+                        const e = (0, m.jy)(this.numberPlate);
                         this.sprites.push(e);
-                        const t = (0, f.jy)(this.fingerWheel);
+                        const t = (0, m.jy)(this.fingerWheel);
                         t.dialNumber = e => {
                             const t = [],
                                 s = Math.min(e, 10);
                             for (let e = 0; e < s && !(e > 10); e++) t.push(20), t.push(120);
                             this.$vibrate(t), this.onDialed(e), this.sprites.find((e => "dialedLabel" === e.id)).dialed += e
-                        }, (0, f.j)(t), this.sprites.push(t);
-                        const s = (0, f.jy)(this.fingerStop);
+                        }, (0, m.j)(t), this.sprites.push(t);
+                        const s = (0, m.jy)(this.fingerStop);
                         this.sprites.push(s);
-                        const i = (0, f.jy)(this.dialedLabel);
-                        this.sprites.push(i), this.gameLoop.start(), (0, f.o_)().addEventListener("mouseleave", (e => {
+                        const i = (0, m.jy)(this.dialedLabel);
+                        this.sprites.push(i), this.gameLoop.start(), (0, m.o_)().addEventListener("mouseleave", (e => {
                             t.onUp(e)
                         })), this.setDialedLabel(this.player.dialed)
                     },
                     beforeDestroy() {
                         var e, t;
                         const s = this.sprites.findIndex((e => "fingerWheel" === e.id));
-                        s >= 0 && (0, f.Zw)(this.sprites[s]);
+                        s >= 0 && (0, m.Zw)(this.sprites[s]);
                         for (let e = 0; e < this.sprites.length; e++) this.sprites[e].ttl = 0;
                         null === (e = this.gameLoop) || void 0 === e || e.update(1 / 60), null === (t = this.gameLoop) || void 0 === t || t.stop()
                     },
@@ -1564,7 +1289,7 @@
                             }
                         },
                         onDialed(e) {
-                            return g(this, void 0, void 0, (function*() {
+                            return f(this, void 0, void 0, (function*() {
                                 try {
                                     yield this.$ecast.updateObject(this.player.responseKey, {
                                         action: "dial",
@@ -1576,7 +1301,7 @@
                             }))
                         },
                         onReset() {
-                            return g(this, void 0, void 0, (function*() {
+                            return f(this, void 0, void 0, (function*() {
                                 try {
                                     yield this.$ecast.updateObject(this.player.responseKey, {
                                         action: "hangup"
@@ -1588,9 +1313,9 @@
                         }
                     }
                 });
-            var E = (0, h.Z)(_, v, [], !1, null, "6373af08", null);
-            E.options.__file = "src/games/tjsp/triviadeath2/views/Dialing.vue";
-            const b = E.exports;
+            var y = (0, h.Z)(E, g, [], !1, null, "6373af08", null);
+            y.options.__file = "src/games/tjsp/triviadeath2/views/Dialing.vue";
+            const b = y.exports;
             var C = function() {
                 var e = this,
                     t = e.$createElement,
@@ -1645,7 +1370,7 @@
             var w = (0, h.Z)(I, C, [], !1, null, null, null);
             w.options.__file = "src/games/tjsp/triviadeath2/views/Drawing.vue";
             const L = w.exports;
-            var T = function() {
+            var K = function() {
                 var e = this,
                     t = e.$createElement,
                     s = e._self._c || t;
@@ -1667,8 +1392,8 @@
                     }
                 })])
             };
-            T._withStripped = !0;
-            var K = function(e, t, s, i) {
+            K._withStripped = !0;
+            var A = function(e, t, s, i) {
                 return new(s || (s = Promise))((function(a, r) {
                     function n(e) {
                         try {
@@ -1696,7 +1421,7 @@
                 }))
             };
             const S = 128,
-                A = r().extend({
+                T = r().extend({
                     props: {
                         color: String,
                         player: Object
@@ -1737,20 +1462,20 @@
                             },
                             render() {
                                 if (this.draw(), !this.isDropped) {
-                                    const e = (0, f.Sy)();
+                                    const e = (0, m.Sy)();
                                     e.save(), e.translate(this.x, this.y + 64), e.fillStyle = this.color, e.beginPath(), e.moveTo(-1 / 6 * this.width, 0), e.lineTo(1 / 6 * this.width, 0), e.lineTo(0, 1 / 6 * S), e.fill(), e.restore()
                                 }
                             },
                             update(e) {
-                                this.isSelected && !(0, f.tN)("left") && this.onUp(), !this.isDropped && (0, f.tN)("left") && (this.x = Math.max(64, Math.min((0, f.o_)().width - 64, f.cx.x)), this.isSelected = !0), this.advance(e)
+                                this.isSelected && !(0, m.tN)("left") && this.onUp(), !this.isDropped && (0, m.tN)("left") && (this.x = Math.max(64, Math.min((0, m.o_)().width - 64, m.cx.x)), this.isSelected = !0), this.advance(e)
                             }
                         },
                         gameLoop: null,
                         sprites: []
                     }),
                     mounted() {
-                        return K(this, void 0, void 0, (function*() {
-                            yield this.setChipImages(), (0, f.S1)("drop"), (0, f.hg)(), this.gameLoop = (0, f.DX)({
+                        return A(this, void 0, void 0, (function*() {
+                            yield this.setChipImages(), (0, m.S1)("drop"), (0, m.hg)(), this.gameLoop = (0, m.DX)({
                                 fps: 60,
                                 update: e => {
                                     this.sprites.forEach((t => t.update(e))), this.sprites = this.sprites.filter((e => e.isAlive()))
@@ -1760,11 +1485,11 @@
                                 }
                             });
                             for (let e = 0; e < this.sprites.length; e++) this.sprites[e].ttl = 0;
-                            const e = (0, f.jy)(this.bar);
-                            e.x = .5 * (0, f.o_)().width, e.y = 64, e.width = (0, f.o_)().width - S, this.sprites.push(e), this.puck.image.src = this.chipImages[this.color];
-                            const t = (0, f.jy)(this.puck);
-                            (0, f.o_)().addEventListener("mouseleave", this.puck.onUp), t.dropped = () => {
-                                const e = (0, f.o_)().width - 64 - 64;
+                            const e = (0, m.jy)(this.bar);
+                            e.x = .5 * (0, m.o_)().width, e.y = 64, e.width = (0, m.o_)().width - S, this.sprites.push(e), this.puck.image.src = this.chipImages[this.color];
+                            const t = (0, m.jy)(this.puck);
+                            (0, m.o_)().addEventListener("mouseleave", this.puck.onUp), t.dropped = () => {
+                                const e = (0, m.o_)().width - 64 - 64;
                                 this.percent = Math.max(0, Math.min(100, Math.floor((t.x - 64) / e * 100))), this.onDrop()
                             }, this.sprites.push(t), this.gameLoop.start()
                         }))
@@ -1776,7 +1501,7 @@
                     },
                     methods: {
                         setChipImages() {
-                            return K(this, void 0, void 0, (function*() {
+                            return A(this, void 0, void 0, (function*() {
                                 this.chipImages = {
                                     blue: (yield Promise.resolve().then(s.t.bind(s, 50241, 17))).default,
                                     gray: (yield Promise.resolve().then(s.t.bind(s, 68969, 17))).default,
@@ -1790,7 +1515,7 @@
                             }))
                         },
                         onDrop() {
-                            return K(this, void 0, void 0, (function*() {
+                            return A(this, void 0, void 0, (function*() {
                                 this.isSubmitting = !0;
                                 try {
                                     yield this.$ecast.updateObject(this.player.responseKey, {
@@ -1804,10 +1529,10 @@
                         }
                     }
                 });
-            var N = (0, h.Z)(A, T, [], !1, null, "5c80288a", null);
-            N.options.__file = "src/games/tjsp/triviadeath2/views/Dropping.vue";
-            const k = N.exports;
-            var O = function() {
+            var O = (0, h.Z)(T, K, [], !1, null, "5c80288a", null);
+            O.options.__file = "src/games/tjsp/triviadeath2/views/Dropping.vue";
+            const N = O.exports;
+            var Y = function() {
                 var e = this,
                     t = e.$createElement,
                     i = e._self._c || t;
@@ -1868,8 +1593,8 @@
                     }
                 }) : e._e()], 2)
             };
-            O._withStripped = !0;
-            var Y = function(e, t, s, i) {
+            Y._withStripped = !0;
+            var k = function(e, t, s, i) {
                 return new(s || (s = Promise))((function(a, r) {
                     function n(e) {
                         try {
@@ -1909,7 +1634,7 @@
                 },
                 methods: {
                     setImages() {
-                        return Y(this, void 0, void 0, (function*() {
+                        return k(this, void 0, void 0, (function*() {
                             this.images = {
                                 swordLength2: {
                                     alt: this.$t("ALT.SWORD_2"),
@@ -1934,7 +1659,7 @@
                         return [s]
                     },
                     onSubmit(e, t) {
-                        return Y(this, void 0, void 0, (function*() {
+                        return k(this, void 0, void 0, (function*() {
                             this.isSubmitting = !0;
                             try {
                                 yield this.$ecast.updateObject(this.player.responseKey, {
@@ -1951,9 +1676,9 @@
                     }
                 }
             });
-            var P = (0, h.Z)(G, O, [], !1, null, "36c9dfd6", null);
-            P.options.__file = "src/games/tjsp/triviadeath2/views/GridSelecting.vue";
-            const D = P.exports;
+            var D = (0, h.Z)(G, Y, [], !1, null, "36c9dfd6", null);
+            D.options.__file = "src/games/tjsp/triviadeath2/views/GridSelecting.vue";
+            const P = D.exports;
             var H = function() {
                 var e = this,
                     t = e.$createElement,
@@ -1968,7 +1693,7 @@
             };
             H._withStripped = !0;
             var R = s(13494);
-            const F = r().extend({
+            const $ = r().extend({
                 components: {
                     LobbyActions: R.Z
                 },
@@ -1976,10 +1701,10 @@
                     player: Object
                 }
             });
-            var $ = (0, h.Z)(F, H, [], !1, null, "2f536c28", null);
-            $.options.__file = "src/games/tjsp/triviadeath2/views/Lobby.vue";
-            const z = $.exports;
-            var M = function() {
+            var F = (0, h.Z)($, H, [], !1, null, "2f536c28", null);
+            F.options.__file = "src/games/tjsp/triviadeath2/views/Lobby.vue";
+            const M = F.exports;
+            var B = function() {
                 var e = this,
                     t = e.$createElement,
                     s = e._self._c || t;
@@ -1995,22 +1720,22 @@
                     }
                 })], 1)
             };
-            M._withStripped = !0;
-            var B = s(56623),
-                j = s(83933);
-            const W = r().extend({
+            B._withStripped = !0;
+            var j = s(56623),
+                z = s(83933);
+            const U = r().extend({
                 components: {
-                    GalleryLink: B.Z,
-                    PostGameActions: j.Z
+                    GalleryLink: j.Z,
+                    PostGameActions: z.Z
                 },
                 props: {
                     artifact: Object,
                     player: Object
                 }
             });
-            var U = (0, h.Z)(W, M, [], !1, null, "458a030c", null);
-            U.options.__file = "src/games/tjsp/triviadeath2/views/PostGame.vue";
-            const Z = U.exports;
+            var W = (0, h.Z)(U, B, [], !1, null, "458a030c", null);
+            W.options.__file = "src/games/tjsp/triviadeath2/views/PostGame.vue";
+            const Z = W.exports;
             var X = function() {
                 var e = this,
                     t = e.$createElement,
@@ -2082,13 +1807,13 @@
                         isDrawing: !1,
                         isRevealed: !1,
                         onOver() {
-                            if (this.isDrawing && (0, f.gr)(this) && this.lines) {
+                            if (this.isDrawing && (0, m.gr)(this) && this.lines) {
                                 const e = this.lines[this.lines.length - 1];
                                 if (!e) return;
                                 const t = e[e.length - 1],
                                     s = {
-                                        x: f.cx.x - this.x,
-                                        y: f.cx.y - this.y
+                                        x: m.cx.x - this.x,
+                                        y: m.cx.y - this.y
                                     };
                                 e.push(s);
                                 const i = {
@@ -2110,7 +1835,7 @@
                                 e.beginPath(), e.moveTo(t[0].x, t[0].y), t.forEach((t => {
                                     e.lineTo(t.x, t.y)
                                 })), e.stroke()
-                            }))), e.restore(), (0, f.Sy)().drawImage(this.hiddenCanvas, this.x, this.y))
+                            }))), e.restore(), (0, m.Sy)().drawImage(this.hiddenCanvas, this.x, this.y))
                         },
                         update() {
                             return q(this, void 0, void 0, (function*() {
@@ -2122,9 +1847,9 @@
                                     const e = new Image;
                                     e.src = (yield Promise.resolve().then(s.t.bind(s, 18706, 17))).default, this.failImage = e
                                 }
-                                this.isRevealed && (this.imageThickness = Math.min(this.imageThickness + 10 / 60, 2 * this.width)), this.isDrawing = (0, f.tN)("left"), this.isDrawing && (0, f.gr)(this) && this.lines.push([{
-                                    x: f.cx.x - this.x,
-                                    y: f.cx.y - this.y
+                                this.isRevealed && (this.imageThickness = Math.min(this.imageThickness + 10 / 60, 2 * this.width)), this.isDrawing = (0, m.tN)("left"), this.isDrawing && (0, m.gr)(this) && this.lines.push([{
+                                    x: m.cx.x - this.x,
+                                    y: m.cx.y - this.y
                                 }])
                             }))
                         }
@@ -2147,7 +1872,7 @@
                     }
                 },
                 mounted() {
-                    (0, f.S1)("scratch"), (0, f.hg)(), this.gameLoop = (0, f.DX)({
+                    (0, m.S1)("scratch"), (0, m.hg)(), this.gameLoop = (0, m.DX)({
                         fps: 60,
                         update: e => {
                             this.sprites.forEach((t => t.update(e))), this.sprites = this.sprites.filter((e => e.isAlive()))
@@ -2158,16 +1883,16 @@
                     });
                     for (let e = 0; e < 3; e++)
                         for (let t = 0; t < 3; t++) {
-                            const s = (0, f.jy)(this.scratchBox);
+                            const s = (0, m.jy)(this.scratchBox);
                             s.x = 117 + t * (s.width + 14), s.y = 372 + e * (s.height + 14), s.index = 3 * e + t, s.onReveal = () => {
                                 this.onReveal(s.index)
-                            }, (0, f.j)(s), this.sprites.push(s)
+                            }, (0, m.j)(s), this.sprites.push(s)
                         }
                     this.setSpriteColors(), this.gameLoop.start()
                 },
                 beforeDestroy() {
                     var e, t;
-                    for (let e = 0; e < this.sprites.length; e++)(0, f.Zw)(this.sprites[e]), this.sprites[e].ttl = 0;
+                    for (let e = 0; e < this.sprites.length; e++)(0, m.Zw)(this.sprites[e]), this.sprites[e].ttl = 0;
                     null === (e = this.gameLoop) || void 0 === e || e.update(1 / 60), null === (t = this.gameLoop) || void 0 === t || t.stop()
                 },
                 methods: {
@@ -2221,7 +1946,7 @@
             ee._withStripped = !0;
             const se = r().extend({
                 components: {
-                    GalleryLink: B.Z
+                    GalleryLink: j.Z
                 },
                 props: {
                     artifact: Object,
@@ -2427,13 +2152,13 @@
             const pe = he.exports,
                 ue = r().extend({
                     components: {
-                        Lobby: z,
+                        Lobby: M,
                         PostGame: Z,
                         Choices: u,
                         Dialing: b,
                         Drawing: L,
-                        Dropping: k,
-                        GridSelecting: D,
+                        Dropping: N,
+                        GridSelecting: P,
                         Scratching: J,
                         Waiting: ae,
                         Writing: pe
@@ -2476,9 +2201,9 @@
                         }
                     }
                 });
-            var ve = (0, h.Z)(ue, i, [], !1, null, null, null);
-            ve.options.__file = "src/games/tjsp/triviadeath2/views/Main.vue";
-            const fe = ve.exports
+            var ge = (0, h.Z)(ue, i, [], !1, null, null, null);
+            ge.options.__file = "src/games/tjsp/triviadeath2/views/Main.vue";
+            const me = ge.exports
         },
         43195: (e, t, s) => {
             "use strict";
@@ -2754,4 +2479,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/6068.618149d4dd176b84df77.js.map
+//# sourceMappingURL=sourcemaps/6068.ec98e7883f8e54df45d3.js.map

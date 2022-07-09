@@ -1,4 +1,4 @@
-/*! For license information please see 8990.20101bdccf98c280f57c.js.LICENSE.txt */
+/*! For license information please see 8990.d157e476aaecb25bea97.js.LICENSE.txt */
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     [8990], {
         2376: (t, r, n) => {
@@ -18,12 +18,63 @@
                 return i(o, e[t].prototype[r], n)
             }
         },
+        54986: (t, r, n) => {
+            var e = n(88113);
+            t.exports = /Version\/10(?:\.\d+){1,2}(?: [\w./]+)?(?: Mobile\/\w+)? Safari\//.test(e)
+        },
+        76650: (t, r, n) => {
+            var e = n(17466),
+                i = n(38415),
+                o = n(84488),
+                a = Math.ceil,
+                s = function(t) {
+                    return function(r, n, s) {
+                        var u, c, f = String(o(r)),
+                            p = f.length,
+                            v = void 0 === s ? " " : String(s),
+                            g = e(n);
+                        return g <= p || "" == v ? f : (u = g - p, (c = i.call(v, a(u / v.length))).length > u && (c = c.slice(0, u)), t ? f + c : c + f)
+                    }
+                };
+            t.exports = {
+                start: s(!1),
+                end: s(!0)
+            }
+        },
+        38415: (t, r, n) => {
+            "use strict";
+            var e = n(99958),
+                i = n(84488);
+            t.exports = function(t) {
+                var r = String(i(this)),
+                    n = "",
+                    o = e(t);
+                if (o < 0 || o == 1 / 0) throw RangeError("Wrong number of repetitions");
+                for (; o > 0;
+                    (o >>>= 1) && (r += r)) 1 & o && (n += r);
+                return n
+            }
+        },
+        83112: (t, r, n) => {
+            "use strict";
+            var e = n(82109),
+                i = n(76650).start;
+            e({
+                target: "String",
+                proto: !0,
+                forced: n(54986)
+            }, {
+                padStart: function(t) {
+                    return i(this, t, arguments.length > 1 ? arguments[1] : void 0)
+                }
+            })
+        },
         9707: (t, r, n) => {
             "use strict";
             n.d(r, {
-                FB: () => H
+                FB: () => B
             });
-            var e, i, o, a, s, u, c, f, p, v, l, g, h = n(20909),
+            var e, i, o, a, s, u, c, f, p, v, g, l, h = n(20909),
                 d = h.H.getByTarget,
                 m = function() {
                     return e || "undefined" != typeof window && (e = window.gsap) && e.registerPlugin && e
@@ -31,36 +82,36 @@
                 y = function(t) {
                     return "number" == typeof t
                 },
-                k = function(t) {
+                x = function(t) {
                     return "object" == typeof t
                 },
-                _ = function(t) {
+                k = function(t) {
                     return "function" == typeof t
                 },
-                x = Array.isArray,
+                _ = Array.isArray,
                 w = function(t) {
                     return t
                 },
-                F = 1e10,
-                b = function(t, r, n) {
+                b = 1e10,
+                F = function(t, r, n) {
                     for (var e in r) e in t || e === n || (t[e] = r[e]);
                     return t
                 },
-                T = function t(r) {
+                M = function t(r) {
                     var n, e, i = {};
-                    for (n in r) i[n] = k(e = r[n]) ? t(e) : e;
+                    for (n in r) i[n] = x(e = r[n]) ? t(e) : e;
                     return i
                 },
-                M = function(t, r, n, e, i) {
+                T = function(t, r, n, e, i) {
                     var o, a, s, u, c = r.length,
                         f = 0,
-                        p = F;
-                    if (k(t)) {
+                        p = b;
+                    if (x(t)) {
                         for (; c--;) {
                             for (s in o = r[c], a = 0, t) a += (u = o[s] - t[s]) * u;
                             a < p && (f = c, p = a)
                         }
-                        if ((i || F) < F && i < Math.sqrt(p)) return t
+                        if ((i || b) < b && i < Math.sqrt(p)) return t
                     } else
                         for (; c--;)(a = (o = r[c]) - t) < 0 && (a = -a), a < p && o >= e && o <= n && (f = c, p = a);
                     return r[f]
@@ -68,13 +119,13 @@
                 N = function(t, r, n, e, i, o) {
                     if ("auto" === t.end) return t;
                     var a, s, u = t.end;
-                    if (n = isNaN(n) ? F : n, e = isNaN(e) ? -F : e, k(r)) {
-                        if (a = r.calculated ? r : (_(u) ? u(r) : M(r, u, n, e, o)) || r, !r.calculated) {
+                    if (n = isNaN(n) ? b : n, e = isNaN(e) ? -b : e, x(r)) {
+                        if (a = r.calculated ? r : (k(u) ? u(r) : T(r, u, n, e, o)) || r, !r.calculated) {
                             for (s in a) r[s] = a[s];
                             r.calculated = !0
                         }
                         a = a[i]
-                    } else a = _(u) ? u(r) : x(u) ? M(r, u, n, e, o) : parseFloat(u);
+                    } else a = k(u) ? u(r) : _(u) ? T(r, u, n, e, o) : parseFloat(u);
                     return a > n ? a = n : a < e && (a = e), {
                         max: a,
                         min: a,
@@ -84,13 +135,13 @@
                 P = function(t, r, n) {
                     return isNaN(t[r]) ? n : +t[r]
                 },
-                A = function(t, r) {
+                S = function(t, r) {
                     return .05 * r * t / v
                 },
-                C = function(t, r, n) {
+                A = function(t, r, n) {
                     return Math.abs((r - t) * v / n / .05)
                 },
-                E = {
+                C = {
                     resistance: 1,
                     checkpoint: 1,
                     preventOvershoot: 1,
@@ -98,16 +149,16 @@
                     radius: 1,
                     duration: 1
                 },
-                O = function(t, r, n, e) {
+                E = function(t, r, n, e) {
                     if (r.linkedProps) {
                         var i, o, a, s, u, c, f = r.linkedProps.split(","),
                             p = {};
-                        for (i = 0; i < f.length; i++)(a = r[o = f[i]]) && (s = y(a.velocity) ? a.velocity : (u = u || d(t)) && u.isTracking(o) ? u.get(o) : 0, c = Math.abs(s / P(a, "resistance", e)), p[o] = parseFloat(n(t, o)) + A(s, c));
+                        for (i = 0; i < f.length; i++)(a = r[o = f[i]]) && (s = y(a.velocity) ? a.velocity : (u = u || d(t)) && u.isTracking(o) ? u.get(o) : 0, c = Math.abs(s / P(a, "resistance", e)), p[o] = parseFloat(n(t, o)) + S(s, c));
                         return p
                     }
                 },
-                B = function() {
-                    (e = m()) && (o = e.parseEase, a = e.utils.toArray, c = e.utils.getUnit, p = e.core.getCache, l = e.utils.clamp, s = o("power3"), v = s(.05), f = e.core.PropTween, e.config({
+                O = function() {
+                    (e = m()) && (o = e.parseEase, a = e.utils.toArray, c = e.utils.getUnit, p = e.core.getCache, g = e.utils.clamp, s = o("power3"), v = s(.05), f = e.core.PropTween, e.config({
                         resistance: 100,
                         unitFactors: {
                             time: 1e3,
@@ -117,42 +168,42 @@
                         }
                     }), u = e.config(), e.registerPlugin(h.H), i = 1)
                 },
-                H = {
+                B = {
                     version: "3.7.0",
                     name: "inertia",
                     register: function(t) {
-                        e = t, B()
+                        e = t, O()
                     },
                     init: function(t, r, n, e, o) {
-                        i || B();
+                        i || O();
                         var s = d(t);
                         if ("auto" === r) {
                             if (!s) return void console.warn("No inertia tracking on " + t + ". InertiaPlugin.track(target) first.");
                             r = s.getAll()
                         }
-                        this.target = t, this.tween = n, g = r;
-                        var v, h, m, x, M, H, j, I, R, S = t._gsap,
-                            U = S.get,
-                            V = r.duration,
-                            q = k(V),
-                            z = r.preventOvershoot || q && 0 === V.overshoot,
-                            D = P(r, "resistance", u.resistance),
-                            G = y(V) ? V : function(t, r, n, e, i, o) {
+                        this.target = t, this.tween = n, l = r;
+                        var v, h, m, _, T, B, H, R, j, I = t._gsap,
+                            V = I.get,
+                            U = r.duration,
+                            q = x(U),
+                            W = r.preventOvershoot || q && 0 === U.overshoot,
+                            z = P(r, "resistance", u.resistance),
+                            D = y(U) ? U : function(t, r, n, e, i, o) {
                                 if (void 0 === n && (n = 10), void 0 === e && (e = .2), void 0 === i && (i = 1), void 0 === o && (o = 0), "string" == typeof t && (t = a(t)[0]), !t) return 0;
-                                var s, c, f, v, h, m, _, x, w, M, B = 0,
-                                    H = F,
-                                    j = r.inertia || r,
-                                    I = p(t).get,
-                                    R = P(j, "resistance", u.resistance);
-                                for (s in M = O(t, j, I, R), j) E[s] || (c = j[s], k(c) || ((x = x || d(t)) && x.isTracking(s) ? c = y(c) ? {
+                                var s, c, f, v, h, m, k, _, w, T, O = 0,
+                                    B = b,
+                                    H = r.inertia || r,
+                                    R = p(t).get,
+                                    j = P(H, "resistance", u.resistance);
+                                for (s in T = E(t, H, R, j), H) C[s] || (c = H[s], x(c) || ((_ = _ || d(t)) && _.isTracking(s) ? c = y(c) ? {
                                     velocity: c
                                 } : {
-                                    velocity: x.get(s)
-                                } : (v = +c || 0, f = Math.abs(v / R))), k(c) && (v = y(c.velocity) ? c.velocity : (x = x || d(t)) && x.isTracking(s) ? x.get(s) : 0, f = l(e, n, Math.abs(v / P(c, "resistance", R))), m = (h = parseFloat(I(t, s)) || 0) + A(v, f), "end" in c && (c = N(c, M && s in M ? M : m, c.max, c.min, s, j.radius), o && (g === r && (g = j = T(r)), j[s] = b(c, j[s], "end"))), "max" in c && m > +c.max + 1e-10 ? (w = c.unitFactor || u.unitFactors[s] || 1, (_ = h > c.max && c.min !== c.max || v * w > -15 && v * w < 45 ? e + .1 * (n - e) : C(h, c.max, v)) + i < H && (H = _ + i)) : "min" in c && m < +c.min - 1e-10 && (w = c.unitFactor || u.unitFactors[s] || 1, (_ = h < c.min && c.min !== c.max || v * w > -45 && v * w < 15 ? e + .1 * (n - e) : C(h, c.min, v)) + i < H && (H = _ + i)), _ > B && (B = _)), f > B && (B = f));
-                                return B > H && (B = H), B > n ? n : B < e ? e : B
-                            }(t, r, q && V.max || 10, q && V.min || .2, q && "overshoot" in V ? +V.overshoot : z ? 0 : 1, !0);
-                        for (v in r = g, g = 0, R = O(t, r, U, D), r) E[v] || (h = r[v], _(h) && (h = h(e, t, o)), y(h) ? M = h : k(h) && !isNaN(h.velocity) ? M = +h.velocity : s && s.isTracking(v) ? M = s.get(v) : console.warn("ERROR: No velocity was defined for " + t + " property: " + v), H = A(M, G), I = 0, m = U(t, v), x = c(m), m = parseFloat(m), k(h) && (j = m + H, "end" in h && (h = N(h, R && v in R ? R : j, h.max, h.min, v, r.radius)), "max" in h && +h.max < j ? z || h.preventOvershoot ? H = h.max - m : I = h.max - m - H : "min" in h && +h.min > j && (z || h.preventOvershoot ? H = h.min - m : I = h.min - m - H)), this._props.push(v), this._pt = new f(this._pt, t, v, m, 0, w, 0, S.set(t, v, this)), this._pt.u = x || 0, this._pt.c1 = H, this._pt.c2 = I);
-                        return n.duration(G), 1
+                                    velocity: _.get(s)
+                                } : (v = +c || 0, f = Math.abs(v / j))), x(c) && (v = y(c.velocity) ? c.velocity : (_ = _ || d(t)) && _.isTracking(s) ? _.get(s) : 0, f = g(e, n, Math.abs(v / P(c, "resistance", j))), m = (h = parseFloat(R(t, s)) || 0) + S(v, f), "end" in c && (c = N(c, T && s in T ? T : m, c.max, c.min, s, H.radius), o && (l === r && (l = H = M(r)), H[s] = F(c, H[s], "end"))), "max" in c && m > +c.max + 1e-10 ? (w = c.unitFactor || u.unitFactors[s] || 1, (k = h > c.max && c.min !== c.max || v * w > -15 && v * w < 45 ? e + .1 * (n - e) : A(h, c.max, v)) + i < B && (B = k + i)) : "min" in c && m < +c.min - 1e-10 && (w = c.unitFactor || u.unitFactors[s] || 1, (k = h < c.min && c.min !== c.max || v * w > -45 && v * w < 15 ? e + .1 * (n - e) : A(h, c.min, v)) + i < B && (B = k + i)), k > O && (O = k)), f > O && (O = f));
+                                return O > B && (O = B), O > n ? n : O < e ? e : O
+                            }(t, r, q && U.max || 10, q && U.min || .2, q && "overshoot" in U ? +U.overshoot : W ? 0 : 1, !0);
+                        for (v in r = l, l = 0, j = E(t, r, V, z), r) C[v] || (h = r[v], k(h) && (h = h(e, t, o)), y(h) ? T = h : x(h) && !isNaN(h.velocity) ? T = +h.velocity : s && s.isTracking(v) ? T = s.get(v) : console.warn("ERROR: No velocity was defined for " + t + " property: " + v), B = S(T, D), R = 0, m = V(t, v), _ = c(m), m = parseFloat(m), x(h) && (H = m + B, "end" in h && (h = N(h, j && v in j ? j : H, h.max, h.min, v, r.radius)), "max" in h && +h.max < H ? W || h.preventOvershoot ? B = h.max - m : R = h.max - m - B : "min" in h && +h.min > H && (W || h.preventOvershoot ? B = h.min - m : R = h.min - m - B)), this._props.push(v), this._pt = new f(this._pt, t, v, m, 0, w, 0, I.set(t, v, this)), this._pt.u = _ || 0, this._pt.c1 = B, this._pt.c2 = R);
+                        return n.duration(D), 1
                     },
                     render: function(t, r) {
                         var n, e = r._pt;
@@ -160,23 +211,23 @@
                     }
                 };
             "track,untrack,isTracking,getVelocity,getByTarget".split(",").forEach((function(t) {
-                return H[t] = h.H[t]
-            })), m() && e.registerPlugin(H)
+                return B[t] = h.H[t]
+            })), m() && e.registerPlugin(B)
         },
         20909: (t, r, n) => {
             "use strict";
             n.d(r, {
-                H: () => k
+                H: () => x
             });
             var e, i, o, a, s, u, c, f, p = function() {
                     return e || "undefined" != typeof window && (e = window.gsap)
                 },
                 v = {},
-                l = function(t) {
+                g = function(t) {
                     return f(t).id
                 },
-                g = function(t) {
-                    return v[l("string" == typeof t ? o(t)[0] : t)]
+                l = function(t) {
+                    return v[g("string" == typeof t ? o(t)[0] : t)]
                 },
                 h = function(t) {
                     var r, n = s;
@@ -193,9 +244,9 @@
                 y = function(t, r, n, e) {
                     this.t = t, this.p = r, this.g = t._gsap.get, this.rCap = d[n || a(this.g(t, r))], this.v1 = this.v2 = 0, this.t1 = this.t2 = u.time, e && (this._next = e, e._prev = this)
                 },
-                k = function() {
+                x = function() {
                     function t(t, r) {
-                        i || m(), this.target = o(t)[0], v[l(this.target)] = this, this._props = {}, r && this.add(r)
+                        i || m(), this.target = o(t)[0], v[g(this.target)] = this, this._props = {}, r && this.add(r)
                     }
                     t.register = function(t) {
                         e = t, m()
@@ -218,31 +269,31 @@
                         e && (r = e._prev, n = e._next, r && (r._next = n), n ? n._prev = r : s === e && (u.remove(h), s = 0), delete this._props[t])
                     }, r.kill = function(t) {
                         for (var r in this._props) this.remove(r);
-                        t || delete v[l(this.target)]
+                        t || delete v[g(this.target)]
                     }, t.track = function(r, n, e) {
                         i || m();
                         for (var a, s, u = [], c = o(r), f = n.split(","), p = (e || "").split(","), v = c.length; v--;) {
-                            for (a = g(c[v]) || new t(c[v]), s = f.length; s--;) a.add(f[s], p[s] || p[0]);
+                            for (a = l(c[v]) || new t(c[v]), s = f.length; s--;) a.add(f[s], p[s] || p[0]);
                             u.push(a)
                         }
                         return u
                     }, t.untrack = function(t, r) {
                         var n = (r || "").split(",");
                         o(t).forEach((function(t) {
-                            var r = g(t);
+                            var r = l(t);
                             r && (n.length ? n.forEach((function(t) {
                                 return r.remove(t)
                             })) : r.kill(1))
                         }))
                     }, t.isTracking = function(t, r) {
-                        var n = g(t);
+                        var n = l(t);
                         return n && n.isTracking(r)
                     }, t.getVelocity = function(t, r) {
-                        var n = g(t);
+                        var n = l(t);
                         return n && n.isTracking(r) ? n.get(r) : console.warn("Not tracking velocity of " + r)
                     }, t
                 }();
-            k.getByTarget = g, p() && e.registerPlugin(k)
+            x.getByTarget = l, p() && e.registerPlugin(x)
         },
         69877: t => {
             var r = Math.floor,
@@ -289,4 +340,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/8990.20101bdccf98c280f57c.js.map
+//# sourceMappingURL=sourcemaps/8990.d157e476aaecb25bea97.js.map

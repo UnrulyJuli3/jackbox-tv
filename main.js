@@ -3465,7 +3465,7 @@
                         d.o.setup(), S.locale = d.o.locale, this.$setSentryTag("app", "entry"), this.$analytics.setApplication({
                             appTag: "SignIn",
                             appId: "signin",
-                            appVersion: "4.2.2"
+                            appVersion: "4.2.4"
                         })
                     },
                     computed: {
@@ -3589,14 +3589,14 @@
                         app: "marionette",
                         tag: "ecast-test-client",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/ecast-test-client")]).then(n.bind(n, 67363))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/ecast-test-client")]).then(n.bind(n, 67363))
                         }))
                     }, {
                         name: "House of Jackbox",
                         app: "marionette",
                         tag: "house-of-jackbox",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/house-of-jackbox")]).then(n.bind(n, 79004))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/house-of-jackbox")]).then(n.bind(n, 79004))
                         }))
                     }, {
                         name: "Quiplash 2 International",
@@ -3604,14 +3604,14 @@
                         tag: "quiplash2-international",
                         categoryId: "quiplash2-internationalGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/quiplash2-international")]).then(n.bind(n, 43141))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/quiplash2-international")]).then(n.bind(n, 43141))
                         }))
                     }, {
                         name: "Guesspionage Crowdplay",
                         app: "marionette",
                         tag: "guesspionage-crowdplay",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/guesspionage-crowdplay")]).then(n.bind(n, 50310))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/guesspionage-crowdplay")]).then(n.bind(n, 50310))
                         }))
                     }, {
                         name: "Drawful 2",
@@ -3620,7 +3620,7 @@
                         categoryId: "DrawfulGame",
                         shopItems: ["shirts"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(972), n.e("games/drawful2")]).then(n.bind(n, 17411))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(972), n.e("games/drawful2")]).then(n.bind(n, 17411))
                         }))
                     }, {
                         name: "Drawful 2",
@@ -3628,91 +3628,91 @@
                         tag: "drawful2international",
                         features: ["moderation"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/drawful2international")]).then(n.bind(n, 76490))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/drawful2international")]).then(n.bind(n, 76490))
                         }))
                     }, {
                         name: "Acquisitions, Inc.",
                         app: "marionette",
                         tag: "acquisitions-inc",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/acquisitions-inc")]).then(n.bind(n, 44489))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/acquisitions-inc")]).then(n.bind(n, 44489))
                         }))
                     }, {
                         name: "You Don't Know Jack 2015",
                         app: "marionette",
                         tag: "ydkj2015",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(972), n.e("games/ydkj2015")]).then(n.bind(n, 35519))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(972), n.e("games/ydkj2015")]).then(n.bind(n, 35519))
                         }))
                     }, {
                         name: "Drawful",
                         app: "marionette",
                         tag: "drawful",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(972), n.e("games/drawful")]).then(n.bind(n, 81099))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(972), n.e("games/drawful")]).then(n.bind(n, 81099))
                         }))
                     }, {
                         name: "Word Spud",
                         app: "marionette",
                         tag: "wordspud",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(972), n.e("games/wordspud")]).then(n.bind(n, 50977))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(972), n.e("games/wordspud")]).then(n.bind(n, 50977))
                         }))
                     }, {
                         name: "Lie Swatter",
                         app: "marionette",
                         tag: "lieswatter",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(972), n.e("games/lieswatter")]).then(n.bind(n, 93119))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(972), n.e("games/lieswatter")]).then(n.bind(n, 93119))
                         }))
                     }, {
                         name: "Fibbage",
                         app: "marionette",
                         tag: "fibbage",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(972), n.e("games/fibbage")]).then(n.bind(n, 21304))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(972), n.e("games/fibbage")]).then(n.bind(n, 21304))
                         }))
                     }, {
                         name: "Fibbage 2",
                         app: "marionette",
                         tag: "fibbage2",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(972), n.e("games/fibbage2")]).then(n.bind(n, 91791))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(972), n.e("games/fibbage2")]).then(n.bind(n, 91791))
                         }))
                     }, {
                         name: "Earwax",
                         app: "marionette",
                         tag: "earwax",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(972), n.e("games/earwax")]).then(n.bind(n, 36024))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(972), n.e("games/earwax")]).then(n.bind(n, 36024))
                         }))
                     }, {
                         name: "Bidiots",
                         app: "marionette",
                         tag: "auction",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(972), n.e("games/auction")]).then(n.bind(n, 41571))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(972), n.e("games/auction")]).then(n.bind(n, 41571))
                         }))
                     }, {
                         name: "Bomb Corp",
                         app: "marionette",
                         tag: "bombintern",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(972), n.e("games/bombintern")]).then(n.bind(n, 63191))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(972), n.e("games/bombintern")]).then(n.bind(n, 63191))
                         }))
                     }, {
                         name: "Quiplash",
                         app: "marionette",
                         tag: "quiplash",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(972), n.e("games/quiplash")]).then(n.bind(n, 64304))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(972), n.e("games/quiplash")]).then(n.bind(n, 64304))
                         }))
                     }, {
                         name: "Fakin' It",
                         app: "marionette",
                         tag: "fakinit",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(972), n.e("games/fakinit")]).then(n.bind(n, 22987))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(972), n.e("games/fakinit")]).then(n.bind(n, 22987))
                         }))
                     }, {
                         name: "Tee K.O.",
@@ -3721,7 +3721,7 @@
                         categoryId: "TeeKOGame",
                         shopItems: ["shirts"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(382), n.e(972), n.e("games/awshirt")]).then(n.bind(n, 79039))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(382), n.e(972), n.e("games/awshirt")]).then(n.bind(n, 79039))
                         }))
                     }, {
                         name: "Quiplash 2",
@@ -3729,7 +3729,7 @@
                         tag: "quiplash2",
                         categoryId: "Quiplash2Game",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(972), n.e("games/quiplash2")]).then(n.bind(n, 16190))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(972), n.e("games/quiplash2")]).then(n.bind(n, 16190))
                         }))
                     }, {
                         name: "Trivia Murder Party",
@@ -3737,21 +3737,21 @@
                         tag: "triviadeath",
                         categoryId: "TriviaDeathResults",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(972), n.e("games/triviadeath")]).then(n.bind(n, 77342))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(972), n.e("games/triviadeath")]).then(n.bind(n, 77342))
                         }))
                     }, {
                         name: "Guesspionage",
                         app: "marionette",
                         tag: "pollposition",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(6368), n.e(972), n.e("games/pollposition")]).then(n.bind(n, 57879))
+                            return Promise.all([n.e(7416), n.e(524), n.e(6368), n.e(972), n.e("games/pollposition")]).then(n.bind(n, 57879))
                         }))
                     }, {
                         name: "Fibbage 3",
                         app: "marionette",
                         tag: "fibbage3",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/fibbage3")]).then(n.bind(n, 76516))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/fibbage3")]).then(n.bind(n, 76516))
                         }))
                     }, {
                         name: "Survive the Internet",
@@ -3759,7 +3759,7 @@
                         tag: "survivetheinternet",
                         categoryId: "STIGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/survivetheinternet")]).then(n.bind(n, 73315))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/survivetheinternet")]).then(n.bind(n, 73315))
                         }))
                     }, {
                         name: "Monster Seeking Monster",
@@ -3767,7 +3767,7 @@
                         tag: "monstermingle",
                         categoryId: "MonsterMingleGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/monstermingle")]).then(n.bind(n, 54750))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/monstermingle")]).then(n.bind(n, 54750))
                         }))
                     }, {
                         name: "Bracketeering",
@@ -3775,7 +3775,7 @@
                         tag: "bracketeering",
                         categoryId: "BRKGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/bracketeering")]).then(n.bind(n, 10335))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/bracketeering")]).then(n.bind(n, 10335))
                         }))
                     }, {
                         name: "Civic Doodle",
@@ -3784,7 +3784,7 @@
                         categoryId: "OverdrawnGame",
                         shopItems: ["shirts"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/overdrawn")]).then(n.bind(n, 4342))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/overdrawn")]).then(n.bind(n, 4342))
                         }))
                     }, {
                         name: "You Don't Know Jack 2018",
@@ -3792,7 +3792,7 @@
                         tag: "ydkj2018",
                         categoryId: "YDKJ2018Game",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/ydkj2018")]).then(n.bind(n, 94239))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/ydkj2018")]).then(n.bind(n, 94239))
                         }))
                     }, {
                         name: "Split the Room",
@@ -3800,7 +3800,7 @@
                         tag: "splittheroom",
                         categoryId: "SplitTheRoomGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/splittheroom")]).then(n.bind(n, 14433))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/splittheroom")]).then(n.bind(n, 14433))
                         }))
                     }, {
                         name: "Mad Verse City",
@@ -3808,7 +3808,7 @@
                         tag: "rapbattle",
                         categoryId: "RapBattleGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/rapbattle")]).then(n.bind(n, 94059))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/rapbattle")]).then(n.bind(n, 94059))
                         }))
                     }, {
                         name: "Zeeple Dome",
@@ -3816,7 +3816,7 @@
                         tag: "slingshoot",
                         categoryId: "SlingShootGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/slingshoot")]).then(n.bind(n, 41919))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/slingshoot")]).then(n.bind(n, 41919))
                         }))
                     }, {
                         name: "Patently Stupid",
@@ -3825,7 +3825,7 @@
                         categoryId: "PatentlyStupidGame",
                         shopItems: ["mugs"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/patentlystupid")]).then(n.bind(n, 41073))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/patentlystupid")]).then(n.bind(n, 41073))
                         }))
                     }, {
                         name: "Trivia Murder Party 2",
@@ -3833,7 +3833,7 @@
                         tag: "triviadeath2",
                         categoryId: "TriviaDeath2Game",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/triviadeath2")]).then(n.bind(n, 20188))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/triviadeath2")]).then(n.bind(n, 20188))
                         }))
                     }, {
                         name: "Role Models",
@@ -3843,7 +3843,7 @@
                         shopItems: ["shirts"],
                         features: ["camera"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/rolemodels")]).then(n.bind(n, 24970))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/rolemodels")]).then(n.bind(n, 24970))
                         }))
                     }, {
                         name: "Joke Boat",
@@ -3851,7 +3851,7 @@
                         tag: "jokeboat",
                         categoryId: "JokeboatGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/jokeboat")]).then(n.bind(n, 50946))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/jokeboat")]).then(n.bind(n, 50946))
                         }))
                     }, {
                         name: "Dictionarium",
@@ -3859,7 +3859,7 @@
                         tag: "ridictionary",
                         categoryId: "RidictionaryGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/ridictionary")]).then(n.bind(n, 85993))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/ridictionary")]).then(n.bind(n, 85993))
                         }))
                     }, {
                         name: "Push the Button",
@@ -3867,7 +3867,7 @@
                         tag: "pushthebutton",
                         categoryId: "PushTheButtonGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/pushthebutton")]).then(n.bind(n, 56716))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/pushthebutton")]).then(n.bind(n, 56716))
                         }))
                     }, {
                         name: "Talking Points",
@@ -3876,7 +3876,7 @@
                         features: ["camera", "moderation"],
                         categoryId: "JackboxTalksGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/jackbox-talks")]).then(n.bind(n, 54677))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/jackbox-talks")]).then(n.bind(n, 54677))
                         }))
                     }, {
                         name: "Quiplash 3",
@@ -3885,7 +3885,7 @@
                         features: ["moderation"],
                         categoryId: "quiplash3Game",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/quiplash3")]).then(n.bind(n, 99499))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/quiplash3")]).then(n.bind(n, 99499))
                         }))
                     }, {
                         name: "The Devils and the Details",
@@ -3894,7 +3894,7 @@
                         categoryId: "EverydayGame",
                         shopItems: ["mugs"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(1978), n.e(38), n.e(972), n.e(4442), n.e(4340), n.e("games/everyday")]).then(n.bind(n, 7851))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(1978), n.e(38), n.e(972), n.e(4442), n.e(4340), n.e("games/everyday")]).then(n.bind(n, 7851))
                         }))
                     }, {
                         name: "Champ'd Up",
@@ -3904,7 +3904,7 @@
                         categoryId: "WorldChampionsGame",
                         shopItems: ["cards"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/worldchamps")]).then(n.bind(n, 35783))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(972), n.e(4442), n.e(4340), n.e("games/worldchamps")]).then(n.bind(n, 35783))
                         }))
                     }, {
                         name: "Blather 'Round",
@@ -3912,7 +3912,7 @@
                         tag: "blanky-blank",
                         categoryId: "BlankyBlankGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(524), n.e(990), n.e(1916), n.e(972), n.e(4442), n.e(4340), n.e("games/blanky-blank")]).then(n.bind(n, 47642))
+                            return Promise.all([n.e(7416), n.e(524), n.e(990), n.e(1916), n.e(972), n.e(4442), n.e(4340), n.e("games/blanky-blank")]).then(n.bind(n, 47642))
                         }))
                     }, {
                         name: "Job Job",
@@ -3930,7 +3930,7 @@
                         tag: "the-wheel",
                         categoryId: "TheWheelGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(6498), n.e(1978), n.e(8990), n.e(5853), n.e(7381), n.e("games/the-wheel")]).then(n.bind(n, 21057))
+                            return Promise.all([n.e(7416), n.e(1978), n.e(8990), n.e(5853), n.e(7381), n.e("games/the-wheel")]).then(n.bind(n, 21057))
                         }))
                     }, {
                         name: "The Poll Mine",
@@ -3964,13 +3964,14 @@
                         tag: "quiplash3-tjsp",
                         features: ["moderation"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(5853), n.e(7381), n.e("games/quiplash3-tjsp")]).then(n.bind(n, 64785))
+                            return Promise.all([n.e(7416), n.e(5853), n.e(7381), n.e(2828), n.e("games/quiplash3-tjsp")]).then(n.bind(n, 64785))
                         }))
                     }, {
                         name: "Tee K.O.",
                         app: "vue",
                         tag: "awshirt-tjsp",
                         features: ["moderation"],
+                        shopItems: ["shirts"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
                             return Promise.all([n.e(2529), n.e(5853), n.e(7381), n.e(3317), n.e("games/awshirt-tjsp")]).then(n.bind(n, 12659))
                         }))
@@ -3979,7 +3980,7 @@
                         app: "vue",
                         tag: "triviadeath2-tjsp",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(4442), n.e(5853), n.e(7381), n.e(3317), n.e("games/triviadeath2-tjsp")]).then(n.bind(n, 87383))
+                            return Promise.all([n.e(7416), n.e(4442), n.e(5853), n.e(7381), n.e(3317), n.e(2828), n.e("games/triviadeath2-tjsp")]).then(n.bind(n, 87383))
                         }))
                     }],
                     o = e => i.includes(e),
@@ -4317,7 +4318,7 @@
                                 c = `${r} ${1===r?"entity":"entities"}`,
                                 l = [{
                                     type: "mrkdwn",
-                                    text: "*Version:* 4.2.2"
+                                    text: "*Version:* 4.2.4"
                                 }, {
                                     type: "mrkdwn",
                                     text: `*Domain:* ${window.location.hostname}`
@@ -4875,7 +4876,7 @@
                             environment: s.c.clientEnvironment,
                             ignoreErrors: ["ceCurrentVideo.currentTime", "chrome-extension", "ResizeObserver", "webkitExitFullScreen", "window.webkit.messageHandlers.selectedTextHandler.postMessage", "promiseResolveThenableJob", "Cannot read property 'then' of undefined", "null is not an object (evaluating 't.scrollHeight')", "Cannot read properties of null (reading 'removeEventListener')"],
                             logErrors: !0,
-                            release: "jackbox-tv@4.2.2",
+                            release: "jackbox-tv@4.2.4",
                             beforeSend: (e, t) => {
                                 return n = this, r = void 0, c = function*() {
                                     if (t.originalException instanceof a.EcastEntityNotFound) return i.uT("no entity found having key", {
@@ -4972,7 +4973,7 @@
                             const r = null !== (t = null === (e = this.error.event) || void 0 === e ? void 0 : e.event_id) && void 0 !== t ? t : "Unknown";
                             let i = "";
                             const a = null === (n = this.error.hint) || void 0 === n ? void 0 : n.originalException;
-                            return i = a ? "string" == typeof a ? a : a.message : "An unknown error occured", `Version:\n4.2.2\n\nEvent ID:\n${r}\n\n${i}`
+                            return i = a ? "string" == typeof a ? a : a.message : "An unknown error occured", `Version:\n4.2.4\n\nEvent ID:\n${r}\n\n${i}`
                         }
                     },
                     methods: {
@@ -5478,4 +5479,4 @@
     var u = l.O(void 0, [5221], (() => l(61966)));
     u = l.O(u)
 })();
-//# sourceMappingURL=sourcemaps/main.1ac3d031adeb3b14f04c.js.map
+//# sourceMappingURL=sourcemaps/main.c6470b53c02689ac3a08.js.map

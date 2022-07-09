@@ -1,242 +1,122 @@
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     ["games/quiplash3-tjsp"], {
-        3682: (e, t, a) => {
-            "use strict";
-            a.d(t, {
-                Z: () => u
-            });
-            var n, r, i = "function" == typeof Map ? new Map : (n = [], r = [], {
-                    has: function(e) {
-                        return n.indexOf(e) > -1
-                    },
-                    get: function(e) {
-                        return r[n.indexOf(e)]
-                    },
-                    set: function(e, t) {
-                        -1 === n.indexOf(e) && (n.push(e), r.push(t))
-                    },
-                    delete: function(e) {
-                        var t = n.indexOf(e);
-                        t > -1 && (n.splice(t, 1), r.splice(t, 1))
-                    }
-                }),
-                s = function(e) {
-                    return new Event(e, {
-                        bubbles: !0
-                    })
-                };
-            try {
-                new Event("test")
-            } catch (n) {
-                s = function(e) {
-                    var t = document.createEvent("Event");
-                    return t.initEvent(e, !0, !1), t
-                }
-            }
-
-            function o(e) {
-                var t = i.get(e);
-                t && t.destroy()
-            }
-
-            function l(e) {
-                var t = i.get(e);
-                t && t.update()
-            }
-            var c = null;
-            "undefined" == typeof window || "function" != typeof window.getComputedStyle ? ((c = function(e) {
-                return e
-            }).destroy = function(e) {
-                return e
-            }, c.update = function(e) {
-                return e
-            }) : ((c = function(e, t) {
-                return e && Array.prototype.forEach.call(e.length ? e : [e], (function(e) {
-                    return function(e) {
-                        if (e && e.nodeName && "TEXTAREA" === e.nodeName && !i.has(e)) {
-                            var t, a = null,
-                                n = null,
-                                r = null,
-                                o = function() {
-                                    e.clientWidth !== n && p()
-                                },
-                                l = function(t) {
-                                    window.removeEventListener("resize", o, !1), e.removeEventListener("input", p, !1), e.removeEventListener("keyup", p, !1), e.removeEventListener("autosize:destroy", l, !1), e.removeEventListener("autosize:update", p, !1), Object.keys(t).forEach((function(a) {
-                                        e.style[a] = t[a]
-                                    })), i.delete(e)
-                                }.bind(e, {
-                                    height: e.style.height,
-                                    resize: e.style.resize,
-                                    overflowY: e.style.overflowY,
-                                    overflowX: e.style.overflowX,
-                                    wordWrap: e.style.wordWrap
-                                });
-                            e.addEventListener("autosize:destroy", l, !1), "onpropertychange" in e && "oninput" in e && e.addEventListener("keyup", p, !1), window.addEventListener("resize", o, !1), e.addEventListener("input", p, !1), e.addEventListener("autosize:update", p, !1), e.style.overflowX = "hidden", e.style.wordWrap = "break-word", i.set(e, {
-                                destroy: l,
-                                update: p
-                            }), "vertical" === (t = window.getComputedStyle(e, null)).resize ? e.style.resize = "none" : "both" === t.resize && (e.style.resize = "horizontal"), a = "content-box" === t.boxSizing ? -(parseFloat(t.paddingTop) + parseFloat(t.paddingBottom)) : parseFloat(t.borderTopWidth) + parseFloat(t.borderBottomWidth), isNaN(a) && (a = 0), p()
-                        }
-
-                        function c(t) {
-                            var a = e.style.width;
-                            e.style.width = "0px", e.style.width = a, e.style.overflowY = t
-                        }
-
-                        function u() {
-                            if (0 !== e.scrollHeight) {
-                                var t = function(e) {
-                                        for (var t = []; e && e.parentNode && e.parentNode instanceof Element;) e.parentNode.scrollTop && t.push({
-                                            node: e.parentNode,
-                                            scrollTop: e.parentNode.scrollTop
-                                        }), e = e.parentNode;
-                                        return t
-                                    }(e),
-                                    r = document.documentElement && document.documentElement.scrollTop;
-                                e.style.height = "", e.style.height = e.scrollHeight + a + "px", n = e.clientWidth, t.forEach((function(e) {
-                                    e.node.scrollTop = e.scrollTop
-                                })), r && (document.documentElement.scrollTop = r)
-                            }
-                        }
-
-                        function p() {
-                            u();
-                            var t = Math.round(parseFloat(e.style.height)),
-                                a = window.getComputedStyle(e, null),
-                                n = "content-box" === a.boxSizing ? Math.round(parseFloat(a.height)) : e.offsetHeight;
-                            if (n < t ? "hidden" === a.overflowY && (c("scroll"), u(), n = "content-box" === a.boxSizing ? Math.round(parseFloat(window.getComputedStyle(e, null).height)) : e.offsetHeight) : "hidden" !== a.overflowY && (c("hidden"), u(), n = "content-box" === a.boxSizing ? Math.round(parseFloat(window.getComputedStyle(e, null).height)) : e.offsetHeight), r !== n) {
-                                r = n;
-                                var i = s("autosize:resized");
-                                try {
-                                    e.dispatchEvent(i)
-                                } catch (e) {}
-                            }
-                        }
-                    }(e)
-                })), e
-            }).destroy = function(e) {
-                return e && Array.prototype.forEach.call(e.length ? e : [e], o), e
-            }, c.update = function(e) {
-                return e && Array.prototype.forEach.call(e.length ? e : [e], l), e
-            });
-            const u = c
-        },
         48598: (e, t, a) => {
             "use strict";
             a.d(t, {
-                I: () => A
+                I: () => v
             });
-            const n = [169, 174, 8252, 8265, 8482, 8505, 8596, 8597, 8598, 8599, 8600, 8601, 8617, 8618, 9e3, 8986, 8987, 9167, 9193, 9194, 9195, 9196, 9197, 9198, 9199, 9200, 9201, 9202, 9203, 9209, 9210, 9410, 9642, 9643, 9654, 9664, 9723, 9724, 9725, 9726, 9728, 9729, 9730, 9731, 9732, 9742, 9745, 9748, 9749, 9752, 9757, 9760, 9762, 9763, 9766, 9770, 9774, 9775, 9784, 9785, 9786, 9792, 9794, 9800, 9801, 9802, 9803, 9804, 9805, 9806, 9807, 9808, 9809, 9810, 9811, 9824, 9827, 9829, 9830, 9832, 9851, 9854, 9855, 9874, 9875, 9876, 9877, 9878, 9879, 9881, 9883, 9884, 9888, 9823, 9889, 9895, 9898, 9899, 9904, 9905, 9917, 9918, 9924, 9925, 9928, 9934, 9935, 9937, 9939, 9940, 9961, 9962, 9968, 9969, 9970, 9971, 9972, 9973, 9974, 9975, 9976, 9977, 9978, 9981, 9986, 9989, 9992, 9993, 9994, 9995, 9996, 9997, 9999, 10002, 10004, 10006, 10013, 10017, 10024, 10035, 10036, 10052, 10055, 10060, 10062, 10067, 10068, 10069, 10071, 10083, 10084, 10085, 10133, 10134, 10135, 10145, 10160, 10175, 10548, 10549, 11013, 11014, 11015, 11035, 11036, 11088, 11093, 12336, 12349, 12951, 12953, 58634],
+            const s = [169, 174, 8252, 8265, 8482, 8505, 8596, 8597, 8598, 8599, 8600, 8601, 8617, 8618, 9e3, 8986, 8987, 9167, 9193, 9194, 9195, 9196, 9197, 9198, 9199, 9200, 9201, 9202, 9203, 9209, 9210, 9410, 9642, 9643, 9654, 9664, 9723, 9724, 9725, 9726, 9728, 9729, 9730, 9731, 9732, 9742, 9745, 9748, 9749, 9752, 9757, 9760, 9762, 9763, 9766, 9770, 9774, 9775, 9784, 9785, 9786, 9792, 9794, 9800, 9801, 9802, 9803, 9804, 9805, 9806, 9807, 9808, 9809, 9810, 9811, 9824, 9827, 9829, 9830, 9832, 9851, 9854, 9855, 9874, 9875, 9876, 9877, 9878, 9879, 9881, 9883, 9884, 9888, 9823, 9889, 9895, 9898, 9899, 9904, 9905, 9917, 9918, 9924, 9925, 9928, 9934, 9935, 9937, 9939, 9940, 9961, 9962, 9968, 9969, 9970, 9971, 9972, 9973, 9974, 9975, 9976, 9977, 9978, 9981, 9986, 9989, 9992, 9993, 9994, 9995, 9996, 9997, 9999, 10002, 10004, 10006, 10013, 10017, 10024, 10035, 10036, 10052, 10055, 10060, 10062, 10067, 10068, 10069, 10071, 10083, 10084, 10085, 10133, 10134, 10135, 10145, 10160, 10175, 10548, 10549, 11013, 11014, 11015, 11035, 11036, 11088, 11093, 12336, 12349, 12951, 12953, 58634],
                 r = [128104, 128105, 129489],
                 i = [127995, 127996, 127997, 127998, 127999, 129456, 129457, 129458, 129459],
-                s = 65039,
+                n = 65039,
                 o = 8205,
                 l = (e, t) => {
                     const a = parseInt(e.charCodeAt(0).toString(16), 16),
-                        n = parseInt(t.charCodeAt(0).toString(16), 16);
-                    return parseInt((1024 * (a - 55296) + n - 56320 + 65536).toString(16), 16)
+                        s = parseInt(t.charCodeAt(0).toString(16), 16);
+                    return parseInt((1024 * (a - 55296) + s - 56320 + 65536).toString(16), 16)
                 },
                 c = e => {
                     const t = parseInt(e.charCodeAt(0).toString(16), 16);
-                    return n.includes(t)
+                    return s.includes(t)
                 },
                 u = (e, t) => !!e && parseInt(e.charCodeAt(0).toString(16), 16) === t,
                 p = e => /[\uD800-\uDB7F]/.test(e),
                 d = e => /[\u0023\u002A\u0030-\u0039]/.test(e),
-                h = e => {
+                A = e => {
                     const t = parseInt(e.toString(16), 16);
                     return t >= 127462 && t <= 127487
                 },
-                v = (e, t) => {
+                h = (e, t) => {
                     let a = "",
-                        n = !0;
-                    for (; n && t < e.length;) {
+                        s = !0;
+                    for (; s && t < e.length;) {
                         const r = e[t];
                         if (p(r)) {
-                            const s = l(r, e[t + 1]);
-                            i.includes(s) ? (a = a + r + e[t + 1], t += 2) : n = !1
-                        } else u(r, o) ? (a = a + r + e[t + 1] + e[t + 2], t += 3) : n = !1
+                            const n = l(r, e[t + 1]);
+                            i.includes(n) ? (a = a + r + e[t + 1], t += 2) : s = !1
+                        } else u(r, o) ? (a = a + r + e[t + 1] + e[t + 2], t += 3) : s = !1
                     }
                     return {
                         modifyingChars: a,
                         newPosition: t
                     }
                 },
-                A = (e, t) => {
+                v = (e, t) => {
                     if (!/[^\u00A1\u0020-\u0022\u0024-\u0029\u002B-\u002F\u003A-\u007E\u00BF-\u00FF’]/gi.test(e)) return t && e && e.length > t && (e = e.substring(0, t)), {
                         result: e,
                         charCount: e.length
                     };
                     const a = e.split("");
-                    let n = 0,
-                        A = "";
-                    for (let e = 0; e < a.length && (!t || n < t); e += 1) {
+                    let s = 0,
+                        v = "";
+                    for (let e = 0; e < a.length && (!t || s < t); e += 1) {
                         const t = a[e];
-                        if (/[\u00A1\u0020-\u0022\u0024-\u0029\u002B-\u002F\u003A-\u007E\u00BF-\u00FF’]/gi.test(t)) A += t, n += 1;
+                        if (/[\u00A1\u0020-\u0022\u0024-\u0029\u002B-\u002F\u003A-\u007E\u00BF-\u00FF’]/gi.test(t)) v += t, s += 1;
                         else {
                             if (c(t)) {
-                                if (A += t, u(t, 9977)) {
+                                if (v += t, u(t, 9977)) {
                                     e += 1;
                                     const {
                                         modifyingChars: t,
-                                        newPosition: n
-                                    } = v(a, e);
-                                    A += t, e = n - 1
+                                        newPosition: s
+                                    } = h(a, e);
+                                    v += t, e = s - 1
                                 }
-                                n += 1;
+                                s += 1;
                                 continue
                             }
                             if (u(t, 8220) || u(t, 8221)) {
-                                e += 1, A = `${A}"`, n += 1;
+                                e += 1, v = `${v}"`, s += 1;
                                 continue
                             }
                             if (p(t)) {
                                 const c = a[e + 1];
-                                A = A + t + c, e += 1;
+                                v = v + t + c, e += 1;
                                 const p = l(t, c);
                                 if (r.includes(p)) {
                                     const {
                                         modifyingChars: t,
                                         newPosition: r
-                                    } = v(a, e + 1);
-                                    A += t, n += 1, e = r - 1;
+                                    } = h(a, e + 1);
+                                    v += t, s += 1, e = r - 1;
                                     continue
                                 }
-                                if (h(p)) {
+                                if (A(p)) {
                                     const t = l(a[e + 1], a[e + 2]);
-                                    h(t) && (A = A + a[e + 1] + a[e + 2], e += 1), n += 1;
+                                    A(t) && (v = v + a[e + 1] + a[e + 2], e += 1), s += 1;
                                     continue
                                 }
                                 if (127988 === p) {
                                     const t = a[e + 1];
-                                    u(t, o) && (A = A + t + a[e + 2] + a[e + 3], e += 3), n += 1;
+                                    u(t, o) && (v = v + t + a[e + 2] + a[e + 3], e += 3), s += 1;
                                     continue
                                 }
                                 if (127987 === p) {
                                     const t = a[e + 1];
-                                    u(t, s) && (e += 1, u(a[e + 1], o) && (A = A + t + a[e + 1] + a[e + 2] + a[e + 3], e += 3)), n += 1;
+                                    u(t, n) && (e += 1, u(a[e + 1], o) && (v = v + t + a[e + 1] + a[e + 2] + a[e + 3], e += 3)), s += 1;
                                     continue
                                 }
-                                i.includes(p) || (n += 1);
+                                i.includes(p) || (s += 1);
                                 continue
                             }
                             if (d(t)) {
                                 const r = a[e + 1];
-                                r && u(r, s) ? (A = A + t + a[e + 1] + a[e + 2], e += 2) : A += t, n += 1;
+                                r && u(r, n) ? (v = v + t + a[e + 1] + a[e + 2], e += 2) : v += t, s += 1;
                                 continue
-                            }(u(t, s) || u(t, o) || u(t, 8419)) && (A += t)
+                            }(u(t, n) || u(t, o) || u(t, 8419)) && (v += t)
                         }
                     }
                     return {
-                        result: A,
-                        charCount: n
+                        result: v,
+                        charCount: s
                     }
                 }
         },
         79278: (e, t, a) => {
             "use strict";
 
-            function n(e) {
-                return (n = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
+            function s(e) {
+                return (s = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
                     return typeof e
                 } : function(e) {
                     return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
@@ -255,15 +135,15 @@
             function i(e, t) {
                 var a = Object.keys(e);
                 if (Object.getOwnPropertySymbols) {
-                    var n = Object.getOwnPropertySymbols(e);
-                    t && (n = n.filter((function(t) {
+                    var s = Object.getOwnPropertySymbols(e);
+                    t && (s = s.filter((function(t) {
                         return Object.getOwnPropertyDescriptor(e, t).enumerable
-                    }))), a.push.apply(a, n)
+                    }))), a.push.apply(a, s)
                 }
                 return a
             }
 
-            function s(e) {
+            function n(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var a = null != arguments[t] ? arguments[t] : {};
                     t % 2 ? i(Object(a), !0).forEach((function(t) {
@@ -275,7 +155,7 @@
                 return e
             }
             a.d(t, {
-                ZP: () => w
+                ZP: () => G
             });
             var o = "_",
                 l = "function",
@@ -302,108 +182,108 @@
                     indexes: a
                 }
             }
-            var h = [],
-                v = "";
+            var A = [],
+                h = "";
 
-            function A() {
-                var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v,
-                    t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h,
+            function v() {
+                var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : h,
+                    t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : A,
                     a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
                 if (!p(t)) {
-                    if (n(t) !== l) throw new Error("Text-mask:conformToMask; The mask property must be an array.");
+                    if (s(t) !== l) throw new Error("Text-mask:conformToMask; The mask property must be an array.");
                     t = d(t = t(e, a)).maskWithoutCaretTraps
                 }
                 var r = a.guide,
                     i = void 0 === r || r,
-                    s = a.previousConformedValue,
-                    c = void 0 === s ? v : s,
-                    A = a.placeholderChar,
-                    f = void 0 === A ? o : A,
-                    m = a.placeholder,
-                    T = void 0 === m ? u(t, f) : m,
+                    n = a.previousConformedValue,
+                    c = void 0 === n ? h : n,
+                    v = a.placeholderChar,
+                    f = void 0 === v ? o : v,
+                    T = a.placeholder,
+                    m = void 0 === T ? u(t, f) : T,
                     _ = a.currentCaretPosition,
                     y = a.keepCharPositions,
                     E = !1 === i && void 0 !== c,
                     O = e.length,
                     b = c.length,
-                    g = T.length,
-                    C = t.length,
-                    R = O - b,
-                    I = R > 0,
-                    L = _ + (I ? -R : 0),
-                    N = L + Math.abs(R);
+                    C = m.length,
+                    R = t.length,
+                    g = O - b,
+                    I = g > 0,
+                    L = _ + (I ? -g : 0),
+                    N = L + Math.abs(g);
                 if (!0 === y && !I) {
-                    for (var x = v, P = L; P < N; P++) T[P] === f && (x += f);
-                    e = e.slice(0, L) + x + e.slice(L, O)
+                    for (var P = h, S = L; S < N; S++) m[S] === f && (P += f);
+                    e = e.slice(0, L) + P + e.slice(L, O)
                 }
-                for (var S = e.split(v).map((function(e, t) {
+                for (var x = e.split(h).map((function(e, t) {
                         return {
                             char: e,
                             isNew: t >= L && t < N
                         }
-                    })), w = O - 1; w >= 0; w--) {
-                    var G = S[w].char;
-                    if (G !== f) {
-                        var V = w >= L && b === C;
-                        G === T[V ? w - R : w] && S.splice(w, 1)
+                    })), G = O - 1; G >= 0; G--) {
+                    var V = x[G].char;
+                    if (V !== f) {
+                        var U = G >= L && b === R;
+                        V === m[U ? G - g : G] && x.splice(G, 1)
                     }
                 }
-                var U = v,
-                    k = !1;
-                e: for (var $ = 0; $ < g; $++) {
-                    var D = T[$];
+                var w = h,
+                    $ = !1;
+                e: for (var k = 0; k < C; k++) {
+                    var D = m[k];
                     if (D === f) {
-                        if (S.length > 0)
-                            for (; S.length > 0;) {
-                                var F = S.shift(),
-                                    M = F.char,
-                                    j = F.isNew;
-                                if (M === f && !0 !== E) {
-                                    U += f;
+                        if (x.length > 0)
+                            for (; x.length > 0;) {
+                                var j = x.shift(),
+                                    F = j.char,
+                                    M = j.isNew;
+                                if (F === f && !0 !== E) {
+                                    w += f;
                                     continue e
                                 }
-                                if (t[$].test(M)) {
-                                    if (!0 === y && !1 !== j && c !== v && !1 !== i && I) {
-                                        for (var B = S.length, H = null, z = 0; z < B; z++) {
-                                            var W = S[z];
+                                if (t[k].test(F)) {
+                                    if (!0 === y && !1 !== M && c !== h && !1 !== i && I) {
+                                        for (var B = x.length, H = null, K = 0; K < B; K++) {
+                                            var W = x[K];
                                             if (W.char !== f && !1 === W.isNew) break;
                                             if (W.char === f) {
-                                                H = z;
+                                                H = K;
                                                 break
                                             }
                                         }
-                                        null !== H ? (U += M, S.splice(H, 1)) : $--
-                                    } else U += M;
+                                        null !== H ? (w += F, x.splice(H, 1)) : k--
+                                    } else w += F;
                                     continue e
                                 }
-                                k = !0
-                            }!1 === E && (U += T.substr($, g));
+                                $ = !0
+                            }!1 === E && (w += m.substr(k, C));
                         break
                     }
-                    U += D
+                    w += D
                 }
                 if (E && !1 === I) {
-                    for (var K = null, q = 0; q < U.length; q++) T[q] === f && (K = q);
-                    U = null !== K ? U.substr(0, K + 1) : v
+                    for (var q = null, Q = 0; Q < w.length; Q++) m[Q] === f && (q = Q);
+                    w = null !== q ? w.substr(0, q + 1) : h
                 }
                 return {
-                    conformedValue: U,
+                    conformedValue: w,
                     meta: {
-                        someCharsRejected: k
+                        someCharsRejected: $
                     }
                 }
             }
             var f = {
                     __nextCharOptional__: !0
                 },
-                m = {
+                T = {
                     "#": /\d/,
                     A: /[a-z]/i,
                     N: /[a-z0-9]/i,
                     "?": f,
                     X: /./
                 },
-                T = function(e) {
+                m = function(e) {
                     return a = (t = e.toString().replace(/.(\/)[gmiyus]{0,6}$/, (function(e) {
                         return e.replace("/", "?/")
                     }))).lastIndexOf("/"), new RegExp(t.slice(1, a), t.slice(a + 1));
@@ -418,17 +298,17 @@
                 };
 
             function y(e) {
-                var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m;
-                return e.map((function(e, a, n) {
+                var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T;
+                return e.map((function(e, a, s) {
                     var r = t[e] || e,
-                        i = n[a - 1],
-                        s = t[i] || i;
-                    return r === f ? null : s === f ? T(_(r)) : r
+                        i = s[a - 1],
+                        n = t[i] || i;
+                    return r === f ? null : n === f ? m(_(r)) : r
                 })).filter(Boolean)
             }
 
             function E(e) {
-                var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m;
+                var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T;
                 return y(e.split(""), t)
             }
             var O = function(e) {
@@ -437,10 +317,10 @@
                 b = function(e) {
                     return "function" == typeof e
                 },
-                g = function(e) {
+                C = function(e) {
                     return "string" == typeof e
                 },
-                C = function() {
+                R = function() {
                     var e = new Map,
                         t = {
                             previousValue: "",
@@ -448,11 +328,11 @@
                         };
 
                     function a(a) {
-                        return e.get(a) || s({}, t)
+                        return e.get(a) || n({}, t)
                     }
                     return {
-                        partiallyUpdate: function(t, n) {
-                            e.set(t, s(s({}, a(t)), n))
+                        partiallyUpdate: function(t, s) {
+                            e.set(t, n(n({}, a(t)), s))
                         },
                         remove: function(t) {
                             e.delete(t)
@@ -461,7 +341,7 @@
                     }
                 }();
 
-            function R(e) {
+            function g(e) {
                 ! function(e, t) {
                     var a = document.createEvent("HTMLEvents");
                     a.initEvent("input", !0, !0), e.dispatchEvent(a)
@@ -471,248 +351,90 @@
             function I(e) {
                 var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     a = e.value,
-                    n = C.get(e),
-                    r = n.previousValue,
-                    i = n.mask,
-                    s = a !== r,
+                    s = R.get(e),
+                    r = s.previousValue,
+                    i = s.mask,
+                    n = a !== r,
                     o = a.length > r.length,
-                    l = a && s && o;
+                    l = a && n && o;
                 if ((t || l) && i) {
-                    var c = A(a, i, {
+                    var c = v(a, i, {
                             guide: !1
                         }),
                         u = c.conformedValue;
-                    e.value = u, R(e)
+                    e.value = u, g(e)
                 }
-                C.partiallyUpdate(e, {
+                R.partiallyUpdate(e, {
                     previousValue: a
                 })
             }
 
             function L(e, t, a) {
-                var n;
-                n = Array.isArray(t) ? function(e) {
-                    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m;
+                var s;
+                s = Array.isArray(t) ? function(e) {
+                    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T;
                     return y(e.map((function(e) {
                         return e instanceof RegExp ? e : "string" == typeof e ? e.split("") : null
                     })).filter(Boolean).reduce((function(e, t) {
                         return e.concat(t)
                     }), []), t)
-                }(t, a) : b(t) ? t : g(t) && t.length > 0 ? E(t, a) : t, C.partiallyUpdate(e, {
-                    mask: n
+                }(t, a) : b(t) ? t : C(t) && t.length > 0 ? E(t, a) : t, R.partiallyUpdate(e, {
+                    mask: s
                 })
             }
 
             function N(e) {
-                var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m;
-                return null === e || Array.isArray(e) || "object" !== n(e) ? t : Object.keys(e).reduce((function(t, a) {
-                    var n = e[a];
-                    return null === n || n instanceof RegExp ? s(s({}, t), {}, r({}, a, n)) : t
+                var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T;
+                return null === e || Array.isArray(e) || "object" !== s(e) ? t : Object.keys(e).reduce((function(t, a) {
+                    var s = e[a];
+                    return null === s || s instanceof RegExp ? n(n({}, t), {}, r({}, a, s)) : t
                 }), t)
             }
 
-            function x(e) {
+            function P(e) {
                 return (Array.isArray(e) ? e : [e]).filter((function(e) {
-                    return g(e) || e instanceof RegExp
+                    return C(e) || e instanceof RegExp
                 })).toString()
             }
 
-            function P() {
+            function S() {
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                     t = N(e && e.placeholders);
                 return {
                     bind: function(e, a) {
-                        var n = a.value;
-                        L(e = O(e), n, t), I(e)
+                        var s = a.value;
+                        L(e = O(e), s, t), I(e)
                     },
                     componentUpdated: function(e, a) {
-                        var n = a.value,
+                        var s = a.value,
                             r = a.oldValue;
                         e = O(e);
-                        var i = b(n) || x(r) !== x(n);
-                        i && L(e, n, t), I(e, i)
+                        var i = b(s) || P(r) !== P(s);
+                        i && L(e, s, t), I(e, i)
                     },
                     unbind: function(e) {
-                        e = O(e), C.remove(e)
+                        e = O(e), R.remove(e)
                     }
                 }
             }
-            P();
-            var S = function(e, t) {
+            S();
+            var x = function(e, t) {
                 var a = E(t);
-                return g(e) || Number.isFinite(e) ? A("".concat(e), a, {
+                return C(e) || Number.isFinite(e) ? v("".concat(e), a, {
                     guide: !1
                 }).conformedValue : e
             };
-            const w = function(e) {
+            const G = function(e) {
                 var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                e.directive("mask", P(t)), e.filter("VMask", S)
+                e.directive("mask", S(t)), e.filter("VMask", x)
             }
-        },
-        6305: (e, t, a) => {
-            "use strict";
-            a.d(t, {
-                Z: () => l
-            });
-            var n = function() {
-                var e = this,
-                    t = e.$createElement;
-                return (e._self._c || t)("input", {
-                    ref: "input",
-                    attrs: {
-                        enterkeyhint: "done"
-                    },
-                    domProps: {
-                        value: e.value
-                    },
-                    on: {
-                        input: e.onInput
-                    }
-                })
-            };
-            n._withStripped = !0;
-            var r = a(2934),
-                i = a.n(r);
-            const s = i().extend({
-                props: {
-                    value: String
-                },
-                watch: {
-                    value(e, t) {
-                        e !== t && (this.$refs.input.value = e)
-                    }
-                },
-                methods: {
-                    onInput(e) {
-                        return t = this, a = void 0, r = function*() {
-                            const t = e.target;
-                            if (!(null == t ? void 0 : t.value)) return;
-                            const a = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
-                            t.value.length > a ? t.value = t.value.substring(0, a) : (this.$emit("input", t.value), yield i().nextTick(), t.value !== this.value && (t.value = this.value))
-                        }, new((n = void 0) || (n = Promise))((function(e, i) {
-                            function s(e) {
-                                try {
-                                    l(r.next(e))
-                                } catch (e) {
-                                    i(e)
-                                }
-                            }
-
-                            function o(e) {
-                                try {
-                                    l(r.throw(e))
-                                } catch (e) {
-                                    i(e)
-                                }
-                            }
-
-                            function l(t) {
-                                var a;
-                                t.done ? e(t.value) : (a = t.value, a instanceof n ? a : new n((function(e) {
-                                    e(a)
-                                }))).then(s, o)
-                            }
-                            l((r = r.apply(t, a || [])).next())
-                        }));
-                        var t, a, n, r
-                    }
-                }
-            });
-            var o = (0, a(51900).Z)(s, n, [], !1, null, null, null);
-            o.options.__file = "src/apps/vue/components/Input.vue";
-            const l = o.exports
-        },
-        38266: (e, t, a) => {
-            "use strict";
-            a.d(t, {
-                Z: () => c
-            });
-            var n = function() {
-                var e = this,
-                    t = e.$createElement;
-                return (e._self._c || t)("textarea", {
-                    ref: "textarea",
-                    attrs: {
-                        enterkeyhint: "done"
-                    },
-                    domProps: {
-                        value: e.value
-                    },
-                    on: {
-                        input: e.onInput,
-                        keydown: function(t) {
-                            return !t.type.indexOf("key") && e._k(t.keyCode, "enter", 13, t.key, "Enter") ? null : e.onKeydownEnter.apply(null, arguments)
-                        }
-                    }
-                })
-            };
-            n._withStripped = !0;
-            var r = a(2934),
-                i = a.n(r),
-                s = a(3682);
-            const o = i().extend({
-                props: {
-                    autosize: Boolean,
-                    value: String
-                },
-                watch: {
-                    value(e, t) {
-                        e !== t && (this.$refs.textarea.value = e)
-                    }
-                },
-                mounted() {
-                    this.autosize && (0, s.Z)(this.$refs.textarea)
-                },
-                methods: {
-                    onInput(e) {
-                        return t = this, a = void 0, r = function*() {
-                            const t = e.target;
-                            if (!(null == t ? void 0 : t.value)) return;
-                            t.value = t.value.replaceAll("\n", "");
-                            const a = -1 === t.maxLength ? Number.MAX_SAFE_INTEGER : t.maxLength;
-                            t.value.length > a ? t.value = t.value.substring(0, a) : (this.$emit("input", t.value), yield i().nextTick(), t.value !== this.value && (t.value = this.value))
-                        }, new((n = void 0) || (n = Promise))((function(e, i) {
-                            function s(e) {
-                                try {
-                                    l(r.next(e))
-                                } catch (e) {
-                                    i(e)
-                                }
-                            }
-
-                            function o(e) {
-                                try {
-                                    l(r.throw(e))
-                                } catch (e) {
-                                    i(e)
-                                }
-                            }
-
-                            function l(t) {
-                                var a;
-                                t.done ? e(t.value) : (a = t.value, a instanceof n ? a : new n((function(e) {
-                                    e(a)
-                                }))).then(s, o)
-                            }
-                            l((r = r.apply(t, a || [])).next())
-                        }));
-                        var t, a, n, r
-                    },
-                    onKeydownEnter(e) {
-                        this.$emit("keydown", e)
-                    }
-                }
-            });
-            var l = (0, a(51900).Z)(o, n, [], !1, null, null, null);
-            l.options.__file = "src/apps/vue/components/TextArea.vue";
-            const c = l.exports
         },
         64785: (e, t, a) => {
             "use strict";
             a.r(t), a.d(t, {
-                default: () => ne
+                default: () => se
             });
-            var n = function() {
+            var s = function() {
                 var e = this,
                     t = e.$createElement,
                     a = e._self._c || t;
@@ -774,10 +496,10 @@
                     }
                 }) : e._e()] : e._e()], 2)])], 1)
             };
-            n._withStripped = !0;
+            s._withStripped = !0;
             var r = a(2934),
                 i = a.n(r),
-                s = a(65853),
+                n = a(65853),
                 o = function() {
                     var e = this,
                         t = e.$createElement,
@@ -794,9 +516,9 @@
                         staticClass: "instructions"
                     }), e._v(" "), a("div", {
                         staticClass: "avatars"
-                    }, [e._l(e.player.avatars, (function(t, n) {
+                    }, [e._l(e.player.avatars, (function(t, s) {
                         return [a("button", {
-                            key: "av" + n,
+                            key: "av" + s,
                             staticClass: "avatar",
                             class: {
                                 selected: t.name === e.selectedAvatar.name
@@ -941,13 +663,13 @@
                             value: "UGC.EPISODES_SELECT",
                             expression: "'UGC.EPISODES_SELECT'"
                         }]
-                    }), e._v(" "), e._l(e.episodes, (function(t, n) {
+                    }), e._v(" "), e._l(e.episodes, (function(t, s) {
                         return a("button", {
                             key: t.remoteContentId || t.localContentId,
                             staticClass: "episode",
                             on: {
                                 click: function(t) {
-                                    return t.preventDefault(), e.onLoadSelection(n)
+                                    return t.preventDefault(), e.onLoadSelection(s)
                                 }
                             }
                         }, [e._v("\n            " + e._s(t.metadata.title) + "\n            "), t.remoteContentId ? a("span", {
@@ -1213,7 +935,7 @@
                 }
             };
             i().use(u.ZP);
-            const h = i().extend({
+            const A = i().extend({
                 components: {
                     Input: p.Z
                 },
@@ -1249,15 +971,15 @@
                     }
                 }
             });
-            var v = a(51900),
-                A = (0, v.Z)(h, c, [], !1, null, "468e05a0", null);
-            A.options.__file = "src/games/tjsp/quiplash3/views/UGC/EpisodesModal.vue";
-            const f = A.exports;
-            var m = function(e, t, a, n) {
+            var h = a(51900),
+                v = (0, h.Z)(A, c, [], !1, null, "468e05a0", null);
+            v.options.__file = "src/games/tjsp/quiplash3/views/UGC/EpisodesModal.vue";
+            const f = v.exports;
+            var T = function(e, t, a, s) {
                 return new(a || (a = Promise))((function(r, i) {
-                    function s(e) {
+                    function n(e) {
                         try {
-                            l(n.next(e))
+                            l(s.next(e))
                         } catch (e) {
                             i(e)
                         }
@@ -1265,7 +987,7 @@
 
                     function o(e) {
                         try {
-                            l(n.throw(e))
+                            l(s.throw(e))
                         } catch (e) {
                             i(e)
                         }
@@ -1275,12 +997,12 @@
                         var t;
                         e.done ? r(e.value) : (t = e.value, t instanceof a ? t : new a((function(e) {
                             e(t)
-                        }))).then(s, o)
+                        }))).then(n, o)
                     }
-                    l((n = n.apply(e, t || [])).next())
+                    l((s = s.apply(e, t || [])).next())
                 }))
             };
-            const T = i().extend({
+            const m = i().extend({
                 components: {
                     LobbyActions: l.Z
                 },
@@ -1315,7 +1037,7 @@
                         window.location.href = `mailto:support@jackboxgames.com?subject=Report episode id ${this.player.formattedActiveContentId}`
                     },
                     onEpisodeUnload() {
-                        return m(this, void 0, void 0, (function*() {
+                        return T(this, void 0, void 0, (function*() {
                             if (this.player.responseKey) try {
                                 yield this.$ecast.updateObject(this.player.responseKey, {
                                     action: "ugc-unload"
@@ -1326,7 +1048,7 @@
                         }))
                     },
                     onEpisodeViewAuthor() {
-                        return m(this, void 0, void 0, (function*() {
+                        return T(this, void 0, void 0, (function*() {
                             if (this.player.responseKey) try {
                                 yield this.$ecast.updateObject(this.player.responseKey, {
                                     action: "ugc-view-author"
@@ -1337,7 +1059,7 @@
                         }))
                     },
                     onEpisodeViewMenu() {
-                        return m(this, void 0, void 0, (function*() {
+                        return T(this, void 0, void 0, (function*() {
                             if (!this.player.responseKey) return;
                             const e = yield this.$showModal(f, {
                                 episodes: this.player.history
@@ -1353,7 +1075,7 @@
                         }))
                     },
                     onSelectAvatar(e) {
-                        return m(this, void 0, void 0, (function*() {
+                        return T(this, void 0, void 0, (function*() {
                             if (this.player.responseKey) {
                                 try {
                                     yield this.$ecast.updateObject(this.player.responseKey, {
@@ -1369,7 +1091,7 @@
                     }
                 }
             });
-            var _ = (0, v.Z)(T, o, [], !1, null, "1e91a8ef", null);
+            var _ = (0, h.Z)(m, o, [], !1, null, "1e91a8ef", null);
             _.options.__file = "src/games/tjsp/quiplash3/views/Lobby.vue";
             const y = _.exports;
             var E = function() {
@@ -1401,10 +1123,10 @@
                     name: String
                 }
             });
-            var b = (0, v.Z)(O, E, [], !1, null, "7c2ebeaf", null);
+            var b = (0, h.Z)(O, E, [], !1, null, "7c2ebeaf", null);
             b.options.__file = "src/games/tjsp/quiplash3/views/NameHeader.vue";
-            const g = b.exports;
-            var C = function() {
+            const C = b.exports;
+            var R = function() {
                 var e = this,
                     t = e.$createElement,
                     a = e._self._c || t;
@@ -1420,12 +1142,12 @@
                     }
                 })], 1)
             };
-            C._withStripped = !0;
-            var R = a(56623),
+            R._withStripped = !0;
+            var g = a(56623),
                 I = a(83933);
             const L = i().extend({
                 components: {
-                    GalleryLink: R.Z,
+                    GalleryLink: g.Z,
                     PostGameActions: I.Z
                 },
                 props: {
@@ -1433,62 +1155,62 @@
                     player: Object
                 }
             });
-            var N = (0, v.Z)(L, C, [], !1, null, "4c9fa129", null);
+            var N = (0, h.Z)(L, R, [], !1, null, "4c9fa129", null);
             N.options.__file = "src/games/tjsp/quiplash3/views/PostGame.vue";
-            const x = N.exports;
-            var P = function() {
+            const P = N.exports;
+            var S = function() {
                 var e = this,
                     t = e.$createElement,
-                    n = e._self._c || t;
-                return n("div", {
+                    s = e._self._c || t;
+                return s("div", {
                     staticClass: "ugc"
-                }, [n("div", {
+                }, [s("div", {
                     staticClass: "instruction",
                     domProps: {
                         textContent: e._s(e.instruction)
                     }
-                }), e._v(" "), e.player.validActions.length > 0 ? [e.player.validActions.includes("toggle-visibility") ? [n("div", {
+                }), e._v(" "), e.player.validActions.length > 0 ? [e.player.validActions.includes("toggle-visibility") ? [s("div", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
                         value: "UGC.INSTRUCTION.TOGGLE_VISIBILITY",
                         expression: "'UGC.INSTRUCTION.TOGGLE_VISIBILITY'"
                     }]
-                }), e._v(" "), n("button", {
+                }), e._v(" "), s("button", {
                     staticClass: "toggle-visibility controller",
                     on: {
                         click: function(t) {
                             return t.preventDefault(), e.onToggleVisibility("controller")
                         }
                     }
-                }, [e.player.controllerVisibility ? [n("img", {
+                }, [e.player.controllerVisibility ? [s("img", {
                     attrs: {
                         src: a(73816),
                         alt: e.$t("ALT.UGC.VISIBILITY_CONTROLLER_ON")
                     }
-                })] : [n("img", {
+                })] : [s("img", {
                     attrs: {
                         src: a(88348),
                         alt: e.$t("ALT.UGC.VISIBILITY_CONTROLLER_OFF")
                     }
-                })]], 2), e._v(" "), n("button", {
+                })]], 2), e._v(" "), s("button", {
                     staticClass: "toggle-visibility screen",
                     on: {
                         click: function(t) {
                             return t.preventDefault(), e.onToggleVisibility("screen")
                         }
                     }
-                }, [e.player.screenVisibility ? [n("img", {
+                }, [e.player.screenVisibility ? [s("img", {
                     attrs: {
                         src: a(97131),
                         alt: e.$t("ALT.UGC.VISIBILITY_SCREEN_ON")
                     }
-                })] : [n("img", {
+                })] : [s("img", {
                     attrs: {
                         src: a(57009),
                         alt: e.$t("ALT.UGC.VISIBILITY_SCREEN_OFF")
                     }
-                })]], 2)] : e._e(), e._v(" "), e.player.validActions.includes("new") ? [n("button", {
+                })]], 2)] : e._e(), e._v(" "), e.player.validActions.includes("new") ? [s("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
@@ -1501,9 +1223,9 @@
                             return t.preventDefault(), e.onAction("new")
                         }
                     }
-                })] : e._e(), e._v(" "), e.player.validActions.includes("load") && e.player.episodes.length > 0 ? [n("div", {
+                })] : e._e(), e._v(" "), e.player.validActions.includes("load") && e.player.episodes.length > 0 ? [s("div", {
                     staticClass: "episodes-list"
-                }, [n("span", {
+                }, [s("span", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
@@ -1511,44 +1233,44 @@
                         expression: "'UGC.PREVIOUS_EPISODES'"
                     }]
                 }), e._v(" "), e._l(e.player.episodes, (function(t, a) {
-                    return n("div", {
+                    return s("div", {
                         key: t.remoteContentId || t.localContentId
-                    }, [n("button", {
+                    }, [s("button", {
                         staticClass: "action-button",
                         on: {
                             click: function(t) {
                                 return t.preventDefault(), e.onEpisodeClick(a)
                             }
                         }
-                    }, [n("span", {
+                    }, [s("span", {
                         domProps: {
                             textContent: e._s(t.metadata.title)
                         }
-                    }), e._v(" "), null != t.remoteContentId ? n("span", {
+                    }), e._v(" "), null != t.remoteContentId ? s("span", {
                         staticClass: "id",
                         domProps: {
                             textContent: e._s(t.formattedRemoteContentId)
                         }
                     }) : e._e()])])
-                }))], 2)] : e._e()] : [n("div", {
+                }))], 2)] : e._e()] : [s("div", {
                     domProps: {
                         textContent: e._s(e.player.noActionsText)
                     }
-                })], e._v(" "), e.player.text ? n("div", {
+                })], e._v(" "), e.player.text ? s("div", {
                     staticClass: "prompt ugc-text",
                     attrs: {
                         id: "prompt",
                         "v-text": e.player.text
                     }
-                }) : e._e(), e._v(" "), e.player.validActions.length > 0 ? [e.player.validActions.includes("add") ? [n("div", {
+                }) : e._e(), e._v(" "), e.player.validActions.length > 0 ? [e.player.validActions.includes("add") ? [s("div", {
                     attrs: {
                         id: "prompt"
                     }
-                }, [null != e.promptCharacterCount ? n("div", {
+                }, [null != e.promptCharacterCount ? s("div", {
                     domProps: {
                         textContent: e._s(e.promptCharacterCount)
                     }
-                }) : e._e(), e._v(" "), n("input", {
+                }) : e._e(), e._v(" "), s("input", {
                     directives: [{
                         name: "model",
                         rawName: "v-model",
@@ -1566,15 +1288,15 @@
                     on: {
                         change: function(t) {
                             var a = e.isThriplash,
-                                n = t.target,
-                                r = !!n.checked;
+                                s = t.target,
+                                r = !!s.checked;
                             if (Array.isArray(a)) {
                                 var i = e._i(a, null);
-                                n.checked ? i < 0 && (e.isThriplash = a.concat([null])) : i > -1 && (e.isThriplash = a.slice(0, i).concat(a.slice(i + 1)))
+                                s.checked ? i < 0 && (e.isThriplash = a.concat([null])) : i > -1 && (e.isThriplash = a.slice(0, i).concat(a.slice(i + 1)))
                             } else e.isThriplash = r
                         }
                     }
-                }), e._v(" "), n("TextArea", {
+                }), e._v(" "), s("TextArea", {
                     ref: "prompt",
                     staticClass: "prompt",
                     attrs: {
@@ -1597,7 +1319,7 @@
                         },
                         expression: "promptText"
                     }
-                }), e._v(" "), n("button", {
+                }), e._v(" "), s("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
@@ -1613,26 +1335,26 @@
                             return t.preventDefault(), e.createNewPrompt.apply(null, arguments)
                         }
                     }
-                })], 1)] : e._e(), e._v(" "), e.player.validActions.includes("title") ? [n("label", {
+                })], 1)] : e._e(), e._v(" "), e.player.validActions.includes("title") ? [s("label", {
                     attrs: {
                         for: "title"
                     }
-                }, [n("span", {
+                }, [s("span", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
                         value: "UGC.INSTRUCTION.CREATE_TITLE",
                         expression: "'UGC.INSTRUCTION.CREATE_TITLE'"
                     }]
-                })]), e._v(" "), n("div", {
+                })]), e._v(" "), s("div", {
                     attrs: {
                         id: "title"
                     }
-                }, [null != e.titleCharacterCount ? n("div", {
+                }, [null != e.titleCharacterCount ? s("div", {
                     domProps: {
                         textContent: e._s(e.titleCharacterCount)
                     }
-                }) : e._e(), e._v(" "), n("TextArea", {
+                }) : e._e(), e._v(" "), s("TextArea", {
                     ref: "title",
                     attrs: {
                         rows: "1",
@@ -1652,7 +1374,7 @@
                         },
                         expression: "titleText"
                     }
-                }), e._v(" "), n("button", {
+                }), e._v(" "), s("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
@@ -1665,7 +1387,7 @@
                             return t.preventDefault(), e.createNewEpisode.apply(null, arguments)
                         }
                     }
-                })], 1)] : e._e(), e._v(" "), e.player.validActions.includes("close") ? [n("button", {
+                })], 1)] : e._e(), e._v(" "), e.player.validActions.includes("close") ? [s("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
@@ -1678,7 +1400,7 @@
                             return t.preventDefault(), e.onAction("close")
                         }
                     }
-                })] : e._e(), e._v(" "), e.player.validActions.includes("unlock") ? [n("button", {
+                })] : e._e(), e._v(" "), e.player.validActions.includes("unlock") ? [s("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
@@ -1691,7 +1413,7 @@
                             return t.preventDefault(), e.onAction("unlock")
                         }
                     }
-                })] : e._e(), e._v(" "), e.player.validActions.includes("done") ? [n("button", {
+                })] : e._e(), e._v(" "), e.player.validActions.includes("done") ? [s("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
@@ -1704,7 +1426,7 @@
                             return t.preventDefault(), e.onAction("done")
                         }
                     }
-                })] : e._e(), e._v(" "), e.player.validActions.includes("submit") ? [n("button", {
+                })] : e._e(), e._v(" "), e.player.validActions.includes("submit") ? [s("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
@@ -1717,7 +1439,7 @@
                             return t.preventDefault(), e.showTermsOfService.apply(null, arguments)
                         }
                     }
-                })] : e._e(), e._v(" "), e.player.validActions.includes("play") ? [n("button", {
+                })] : e._e(), e._v(" "), e.player.validActions.includes("play") ? [s("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
@@ -1730,7 +1452,7 @@
                             return t.preventDefault(), e.onAction("play")
                         }
                     }
-                })] : e._e(), e._v(" "), e.player.validActions.includes("remove-content") ? [n("button", {
+                })] : e._e(), e._v(" "), e.player.validActions.includes("remove-content") ? [s("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
@@ -1743,7 +1465,7 @@
                             return t.preventDefault(), e.confirmDeleteEpisode.apply(null, arguments)
                         }
                     }
-                })] : e._e(), e._v(" "), e.player.validActions.includes("exit") ? [n("button", {
+                })] : e._e(), e._v(" "), e.player.validActions.includes("exit") ? [s("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
@@ -1756,7 +1478,7 @@
                             return t.preventDefault(), e.onAction("exit")
                         }
                     }
-                })] : e._e(), e._v(" "), e.player.validActions.includes("episodes") ? [n("button", {
+                })] : e._e(), e._v(" "), e.player.validActions.includes("episodes") ? [s("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
@@ -1769,16 +1491,16 @@
                             return t.preventDefault(), e.onAction("episodes")
                         }
                     }
-                })] : e._e(), e._v(" "), e.player.validActions.includes("remove") ? [n("div", {
+                })] : e._e(), e._v(" "), e.player.validActions.includes("remove") ? [s("div", {
                     staticClass: "prompts-list"
-                }, [n("span", {
+                }, [s("span", {
                     domProps: {
                         textContent: e._s(e.promptsCount)
                     }
                 }), e._v(" "), e._l(e.player.prompts, (function(t, a) {
-                    return n("div", {
+                    return s("div", {
                         key: a
-                    }, [n("button", {
+                    }, [s("button", {
                         staticClass: "player-prompt",
                         class: {
                             other: t.author !== e.userId, thriplash: "thriplash" === t.type
@@ -1794,15 +1516,15 @@
                     })])
                 }))], 2)] : e._e()] : e._e()], 2)
             };
-            P._withStripped = !0;
-            var S = a(3682),
-                w = a(38266),
-                G = a(89446),
-                V = function(e, t, a, n) {
+            S._withStripped = !0;
+            var x = a(3682),
+                G = a(38266),
+                V = a(89446),
+                U = function(e, t, a, s) {
                     return new(a || (a = Promise))((function(r, i) {
-                        function s(e) {
+                        function n(e) {
                             try {
-                                l(n.next(e))
+                                l(s.next(e))
                             } catch (e) {
                                 i(e)
                             }
@@ -1810,7 +1532,7 @@
 
                         function o(e) {
                             try {
-                                l(n.throw(e))
+                                l(s.throw(e))
                             } catch (e) {
                                 i(e)
                             }
@@ -1820,14 +1542,14 @@
                             var t;
                             e.done ? r(e.value) : (t = e.value, t instanceof a ? t : new a((function(e) {
                                 e(t)
-                            }))).then(s, o)
+                            }))).then(n, o)
                         }
-                        l((n = n.apply(e, t || [])).next())
+                        l((s = s.apply(e, t || [])).next())
                     }))
                 };
-            const U = i().extend({
+            const w = i().extend({
                 components: {
-                    TextArea: w.Z
+                    TextArea: G.Z
                 },
                 props: {
                     player: Object
@@ -1856,8 +1578,8 @@
                             maxCount: t,
                             prompts: a
                         } = this.player;
-                        let n = `${e}/${t}`;
-                        return a.length < e && (n += ` ${this.$t("UGC.PROMPTS_COUNT_HIDDEN",{count:e-a.length})}`), n
+                        let s = `${e}/${t}`;
+                        return a.length < e && (s += ` ${this.$t("UGC.PROMPTS_COUNT_HIDDEN",{count:e-a.length})}`), s
                     },
                     titleCharacterCount() {
                         return this.player.maxTitleLength ? this.player.maxTitleLength - this.titleText.length : null
@@ -1867,11 +1589,11 @@
                     }
                 },
                 mounted() {
-                    (0, S.Z)([this.$refs.prompt, this.$refs.title])
+                    (0, x.Z)([this.$refs.prompt, this.$refs.title])
                 },
                 methods: {
                     confirmDeleteEpisode() {
-                        return V(this, void 0, void 0, (function*() {
+                        return U(this, void 0, void 0, (function*() {
                             "confirm" === (yield this.$showModal("Options", {
                                 text: this.$t("UGC.WARNING.DELETE"),
                                 options: [{
@@ -1889,7 +1611,7 @@
                         }))
                     },
                     createNewEpisode() {
-                        return V(this, void 0, void 0, (function*() {
+                        return U(this, void 0, void 0, (function*() {
                             try {
                                 yield this.$ecast.updateObject(this.player.responseKey, {
                                     action: "title",
@@ -1903,7 +1625,7 @@
                         }))
                     },
                     createNewPrompt() {
-                        return V(this, void 0, void 0, (function*() {
+                        return U(this, void 0, void 0, (function*() {
                             if (!this.promptText) return;
                             if (this.player.count === this.player.maxCount) return;
                             const e = {
@@ -1925,7 +1647,7 @@
                         }))
                     },
                     showTermsOfService() {
-                        return V(this, void 0, void 0, (function*() {
+                        return U(this, void 0, void 0, (function*() {
                             "confirm" === (yield this.$showModal("Options", {
                                 text: this.$t("UGC.WARNING.TOS"),
                                 options: [{
@@ -1956,10 +1678,10 @@
                         }).catch(this.$handleEcastError)
                     },
                     onInputPrompt() {
-                        this.promptText = G.c.sanitizeInput(this.promptText)
+                        this.promptText = V.c.sanitizeInput(this.promptText)
                     },
                     onInputTitle() {
-                        this.titleText = G.c.sanitizeInput(this.titleText)
+                        this.titleText = V.c.sanitizeInput(this.titleText)
                     },
                     onPromptClick(e) {
                         this.$ecast.updateObject(this.player.responseKey, {
@@ -1975,9 +1697,9 @@
                     }
                 }
             });
-            var k = (0, v.Z)(U, P, [], !1, null, null, null);
-            k.options.__file = "src/games/tjsp/quiplash3/views/UGC/Ugc.vue";
-            const $ = k.exports;
+            var $ = (0, h.Z)(w, S, [], !1, null, null, null);
+            $.options.__file = "src/games/tjsp/quiplash3/views/UGC/Ugc.vue";
+            const k = $.exports;
             var D = function() {
                 var e = this,
                     t = e.$createElement,
@@ -2027,7 +1749,7 @@
                 }))], 2)
             };
             D._withStripped = !0;
-            const F = i().extend({
+            const j = i().extend({
                 props: {
                     player: Object
                 },
@@ -2051,8 +1773,8 @@
                                 this.isSubmitting = !1, this.selected = null, this.$handleEcastError(e)
                             }
                             this.hasSubmit = !0
-                        }, new((n = void 0) || (n = Promise))((function(e, i) {
-                            function s(e) {
+                        }, new((s = void 0) || (s = Promise))((function(e, i) {
+                            function n(e) {
                                 try {
                                     l(r.next(e))
                                 } catch (e) {
@@ -2070,51 +1792,51 @@
 
                             function l(t) {
                                 var a;
-                                t.done ? e(t.value) : (a = t.value, a instanceof n ? a : new n((function(e) {
+                                t.done ? e(t.value) : (a = t.value, a instanceof s ? a : new s((function(e) {
                                     e(a)
-                                }))).then(s, o)
+                                }))).then(n, o)
                             }
                             l((r = r.apply(t, a || [])).next())
                         }));
-                        var t, a, n, r
+                        var t, a, s, r
                     }
                 }
             });
-            var M = (0, v.Z)(F, D, [], !1, null, "22404244", null);
-            M.options.__file = "src/games/tjsp/quiplash3/views/Voting.vue";
-            const j = M.exports;
+            var F = (0, h.Z)(j, D, [], !1, null, "22404244", null);
+            F.options.__file = "src/games/tjsp/quiplash3/views/Voting.vue";
+            const M = F.exports;
             var B = function() {
                 var e = this,
                     t = e.$createElement,
-                    n = e._self._c || t;
-                return n("div", {
+                    s = e._self._c || t;
+                return s("div", {
                     staticClass: "waiting"
-                }, [n("div", {
+                }, [s("div", {
                     staticClass: "logo"
-                }, [1 === e.player.round ? n("img", {
+                }, [1 === e.player.round ? s("img", {
                     staticClass: "round",
                     attrs: {
                         alt: e.$t("ALT.LOGO_1"),
                         src: a(24374)
                     }
-                }) : 2 === e.player.round ? n("img", {
+                }) : 2 === e.player.round ? s("img", {
                     staticClass: "round",
                     attrs: {
                         alt: e.$t("ALT.LOGO_2"),
                         src: a(59865)
                     }
-                }) : 3 === e.player.round ? n("img", {
+                }) : 3 === e.player.round ? s("img", {
                     staticClass: "round",
                     attrs: {
                         alt: e.$t("ALT.LOGO_3"),
                         src: a(87692)
                     }
-                }) : n("img", {
+                }) : s("img", {
                     attrs: {
                         alt: e.$t("ALT.LOGO_GAME"),
                         src: a(52237)
                     }
-                })]), e._v(" "), e.player.message ? n("p", {
+                })]), e._v(" "), e.player.message ? s("p", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
@@ -2122,7 +1844,7 @@
                         expression: "player.message"
                     }],
                     staticClass: "message"
-                }) : e._e(), e._v(" "), n("GalleryLink", {
+                }) : e._e(), e._v(" "), s("GalleryLink", {
                     attrs: {
                         artifact: e.artifact
                     }
@@ -2131,7 +1853,7 @@
             B._withStripped = !0;
             const H = i().extend({
                 components: {
-                    GalleryLink: R.Z
+                    GalleryLink: g.Z
                 },
                 props: {
                     artifact: Object,
@@ -2141,10 +1863,10 @@
                     messages: d
                 }
             });
-            var z = (0, v.Z)(H, B, [], !1, null, "442df3a6", null);
-            z.options.__file = "src/games/tjsp/quiplash3/views/Waiting.vue";
-            const W = z.exports;
-            var K = function() {
+            var K = (0, h.Z)(H, B, [], !1, null, "442df3a6", null);
+            K.options.__file = "src/games/tjsp/quiplash3/views/Waiting.vue";
+            const W = K.exports;
+            var q = function() {
                 var e = this,
                     t = e.$createElement,
                     a = e._self._c || t;
@@ -2172,37 +1894,37 @@
                     attrs: {
                         for: "textarea"
                     }
-                }), e._v(" "), e._l(e.answers, (function(t, n) {
+                }), e._v(" "), e._l(e.answers, (function(t, s) {
                     return a("div", {
-                        key: "answer" + n,
+                        key: "answer" + s,
                         staticClass: "answer"
                     }, [a("div", {
                         staticClass: "character-counter"
-                    }, [e._v(e._s(e.answers[n].charCount) + "/" + e._s(e.player.maxLength))]), e._v(" "), a("TextArea", {
-                        ref: "answer" + n,
+                    }, [e._v(e._s(e.answers[s].charCount) + "/" + e._s(e.player.maxLength))]), e._v(" "), a("TextArea", {
+                        ref: "answer" + s,
                         refInFor: !0,
                         attrs: {
                             autocomplete: "off",
                             autocorrect: "off",
                             autosize: "",
                             disabled: e.isSubmitting,
-                            enterkeyhint: n === e.answers.length - 1 ? "done" : "next",
+                            enterkeyhint: s === e.answers.length - 1 ? "done" : "next",
                             placeholder: e.$t("WRITING.ANSWER_PLACEHOLDER"),
                             rows: "1",
                             spellcheck: "false"
                         },
                         on: {
                             input: function(t) {
-                                return e.onInput(t, n)
+                                return e.onInput(t, s)
                             },
                             keydown: function(t) {
-                                return !t.type.indexOf("key") && e._k(t.keyCode, "enter", 13, t.key, "Enter") ? null : (t.preventDefault(), e.focusNext(n))
+                                return !t.type.indexOf("key") && e._k(t.keyCode, "enter", 13, t.key, "Enter") ? null : (t.preventDefault(), e.focusNext(s))
                             }
                         },
                         model: {
-                            value: e.answers[n].text,
+                            value: e.answers[s].text,
                             callback: function(t) {
-                                e.$set(e.answers[n], "text", t)
+                                e.$set(e.answers[s], "text", t)
                             },
                             expression: "answers[idx].text"
                         }
@@ -2251,14 +1973,14 @@
                     }
                 })])])
             };
-            K._withStripped = !0;
-            var q = a(55507),
-                Q = a(48598),
-                Y = function(e, t, a, n) {
+            q._withStripped = !0;
+            var Q = a(55507),
+                z = a(48598),
+                Y = function(e, t, a, s) {
                     return new(a || (a = Promise))((function(r, i) {
-                        function s(e) {
+                        function n(e) {
                             try {
-                                l(n.next(e))
+                                l(s.next(e))
                             } catch (e) {
                                 i(e)
                             }
@@ -2266,7 +1988,7 @@
 
                         function o(e) {
                             try {
-                                l(n.throw(e))
+                                l(s.throw(e))
                             } catch (e) {
                                 i(e)
                             }
@@ -2276,14 +1998,14 @@
                             var t;
                             e.done ? r(e.value) : (t = e.value, t instanceof a ? t : new a((function(e) {
                                 e(t)
-                            }))).then(s, o)
+                            }))).then(n, o)
                         }
-                        l((n = n.apply(e, t || [])).next())
+                        l((s = s.apply(e, t || [])).next())
                     }))
                 };
             const Z = i().extend({
                 components: {
-                    TextArea: w.Z
+                    TextArea: G.Z
                 },
                 props: {
                     player: Object
@@ -2326,7 +2048,7 @@
                             try {
                                 yield this.$ecast.updateText(this.player.textKey, this.answer)
                             } catch (e) {
-                                e instanceof q.EcastFilterError || this.$handleEcastError(e)
+                                e instanceof Q.EcastFilterError || this.$handleEcastError(e)
                             }
                         }))
                     },
@@ -2348,9 +2070,9 @@
                             this.resetError();
                             const {
                                 charCount: a,
-                                result: n
-                            } = (0, Q.I)(e, this.player.maxLength);
-                            this.answers[t].charCount = a, this.answers[t].text = n, yield this.autoSubmit()
+                                result: s
+                            } = (0, z.I)(e, this.player.maxLength);
+                            this.answers[t].charCount = a, this.answers[t].text = s, yield this.autoSubmit()
                         }))
                     },
                     onSubmit() {
@@ -2362,7 +2084,7 @@
                                         action: "submit"
                                     })
                                 } catch (e) {
-                                    if (this.isSubmitting = !1, e instanceof q.EcastFilterError) return void(this.error = this.$t("ERROR.TEXT_NAUGHTY"));
+                                    if (this.isSubmitting = !1, e instanceof Q.EcastFilterError) return void(this.error = this.$t("ERROR.TEXT_NAUGHTY"));
                                     this.$handleEcastError(e)
                                 }
                             } else this.error = this.$t("ERROR.TEXT_NOTHING")
@@ -2382,7 +2104,7 @@
                     }
                 }
             });
-            var X = (0, v.Z)(Z, K, [], !1, null, "7d0e76b5", null);
+            var X = (0, h.Z)(Z, q, [], !1, null, "7d0e76b5", null);
             X.options.__file = "src/games/tjsp/quiplash3/views/Writing.vue";
             const J = X.exports,
                 ee = {
@@ -2390,11 +2112,11 @@
                 };
             const te = i().extend({
                 components: {
-                    NameHeader: g,
+                    NameHeader: C,
                     Lobby: y,
-                    PostGame: x,
-                    Ugc: $,
-                    Voting: j,
+                    PostGame: P,
+                    Ugc: k,
+                    Voting: M,
                     Waiting: W,
                     Writing: J
                 },
@@ -2428,7 +2150,7 @@
                 },
                 i18n: {
                     messages: d,
-                    sharedMessages: s.s
+                    sharedMessages: n.s
                 },
                 data: () => ({
                     avatarImages: {},
@@ -2565,8 +2287,8 @@
                                     selected: (yield Promise.resolve().then(a.t.bind(a, 88247, 17))).default
                                 }
                             }
-                        }, new((n = void 0) || (n = Promise))((function(a, i) {
-                            function s(e) {
+                        }, new((s = void 0) || (s = Promise))((function(a, i) {
+                            function n(e) {
                                 try {
                                     l(r.next(e))
                                 } catch (e) {
@@ -2584,19 +2306,19 @@
 
                             function l(e) {
                                 var t;
-                                e.done ? a(e.value) : (t = e.value, t instanceof n ? t : new n((function(e) {
+                                e.done ? a(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
                                     e(t)
-                                }))).then(s, o)
+                                }))).then(n, o)
                             }
                             l((r = r.apply(e, t || [])).next())
                         }));
-                        var e, t, n, r
+                        var e, t, s, r
                     }
                 }
             });
-            var ae = (0, v.Z)(te, n, [], !1, null, null, null);
+            var ae = (0, h.Z)(te, s, [], !1, null, null, null);
             ae.options.__file = "src/games/tjsp/quiplash3/views/Main.vue";
-            const ne = ae.exports
+            const se = ae.exports
         },
         67294: (e, t, a) => {
             "use strict";
@@ -2760,4 +2482,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/2427.7c257803be968a38cd84.js.map
+//# sourceMappingURL=sourcemaps/2427.4c85541451745ff0f3a9.js.map

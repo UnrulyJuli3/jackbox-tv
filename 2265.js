@@ -389,15 +389,15 @@
                     }
                 },
                 beforeMount() {
-                    this.populateFromStorage(), this.$api = new l.APIClient({
+                    this.$api = new l.APIClient({
                         host: u.c.serverUrl,
                         scheme: "https"
-                    })
+                    }), this.populateFromStorage()
                 },
                 methods: {
                     populateFromStorage() {
                         var t;
-                        this.$storage.isSupported && (this.code = (null !== (t = this.$storage.get("mod-roomCode")) && void 0 !== t ? t : "").toUpperCase())
+                        this.$storage.isSupported && (this.code = (null !== (t = this.$storage.get("mod-roomCode")) && void 0 !== t ? t : "").toUpperCase(), this.code.length === this.codeLength && this.getRoomInfo())
                     },
                     onCodeInput() {
                         this.code = this.code.replace(/\s/g, ""), this.code = this.code.trim().toUpperCase(), this.code.length < this.codeLength ? this.room = null : this.getRoomInfo()
@@ -430,19 +430,22 @@
                                 dismissText: this.$t("ACTION.OK")
                             }));
                             const t = {
-                                host: this.room.host,
-                                code: this.code.toUpperCase(),
-                                name: "moderator",
-                                password: this.password,
-                                role: "moderator",
-                                debug: p.v.debug
-                            };
-                            this.$ecast = new l.WSClient(t), this.isConnecting = !0;
+                                    host: this.room.host,
+                                    code: this.code.toUpperCase(),
+                                    name: "moderator",
+                                    password: this.password,
+                                    role: "moderator",
+                                    debug: p.v.debug
+                                },
+                                e = new l.WSClient(t);
                             try {
-                                const t = yield this.$ecast.connect();
-                                this.$clientWelcome = t, this.$syncEcast(), this.$debug.setup(this.$ecast, this.room), this.$storage.isSupported && this.$storage.set("mod-roomCode", this.code), this.$emit("connectionChange", !0)
+                                this.isConnecting = !0;
+                                const t = yield e.connect();
+                                this.$clientWelcome = t, this.$ecast = e, this.$syncEcast(), this.$debug.setup(this.$ecast, this.room), this.$storage.isSupported && this.$storage.set("mod-roomCode", this.code), this.$emit("connectionChange", !0)
                             } catch (t) {
-                                console.error("[SignIn]", t), this.isConnecting = !1, this.onConnectionError(t)
+                                console.error("[SignIn]", t), this.onConnectionError(t)
+                            } finally {
+                                this.isConnecting = !1
                             }
                         }))
                     },
@@ -808,9 +811,9 @@
                     htmlUnescape: t => u.c.htmlUnescape(t)
                 }
             });
-            var $ = (0, f.Z)(D, N, [], !1, null, "5975197a", null);
-            $.options.__file = "src/apps/entry/views/moderation/DrawingItem.vue";
-            const M = $.exports;
+            var M = (0, f.Z)(D, N, [], !1, null, "5975197a", null);
+            M.options.__file = "src/apps/entry/views/moderation/DrawingItem.vue";
+            const $ = M.exports;
             var P = function() {
                 var t = this,
                     e = t.$createElement,
@@ -900,7 +903,7 @@
                 components: {
                     AnimationItem: k,
                     DoodleItem: T,
-                    DrawingItem: M,
+                    DrawingItem: $,
                     TextItem: j
                 },
                 props: {
@@ -1202,4 +1205,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/2265.e0321f5cc8e34c6a3a22.js.map
+//# sourceMappingURL=sourcemaps/2265.3c132874f3e7407a1c8f.js.map

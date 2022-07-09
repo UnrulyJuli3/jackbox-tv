@@ -1,4 +1,4 @@
-/*! For license information please see 524.8bc57255d3be2f8648b8.js.LICENSE.txt */
+/*! For license information please see 524.190fb43a0ad52f0fd539.js.LICENSE.txt */
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     [524], {
         63574: function(t, e, n) {
@@ -5115,6 +5115,29 @@
                 charAt: o(!0)
             }
         },
+        54986: (t, e, n) => {
+            var r = n(88113);
+            t.exports = /Version\/10(?:\.\d+){1,2}(?: [\w./]+)?(?: Mobile\/\w+)? Safari\//.test(r)
+        },
+        76650: (t, e, n) => {
+            var r = n(17466),
+                i = n(38415),
+                o = n(84488),
+                s = Math.ceil,
+                a = function(t) {
+                    return function(e, n, a) {
+                        var c, l, u = String(o(e)),
+                            h = u.length,
+                            f = void 0 === a ? " " : String(a),
+                            d = r(n);
+                        return d <= h || "" == f ? u : (c = d - h, (l = i.call(f, s(c / f.length))).length > c && (l = l.slice(0, c)), t ? u + l : l + u)
+                    }
+                };
+            t.exports = {
+                start: a(!1),
+                end: a(!0)
+            }
+        },
         33197: t => {
             "use strict";
             var e = 2147483647,
@@ -5175,6 +5198,20 @@
                     s = t.toLowerCase().replace(r, ".").split(".");
                 for (e = 0; e < s.length; e++) i = s[e], o.push(n.test(i) ? "xn--" + l(i) : i);
                 return o.join(".")
+            }
+        },
+        38415: (t, e, n) => {
+            "use strict";
+            var r = n(99958),
+                i = n(84488);
+            t.exports = function(t) {
+                var e = String(i(this)),
+                    n = "",
+                    o = r(t);
+                if (o < 0 || o == 1 / 0) throw RangeError("Wrong number of repetitions");
+                for (; o > 0;
+                    (o >>>= 1) && (e += e)) 1 & o && (n += e);
+                return n
             }
         },
         76091: (t, e, n) => {
@@ -8319,6 +8356,20 @@
                 forced: n(54986)
             }, {
                 padEnd: function(t) {
+                    return i(this, t, arguments.length > 1 ? arguments[1] : void 0)
+                }
+            })
+        },
+        83112: (t, e, n) => {
+            "use strict";
+            var r = n(82109),
+                i = n(76650).start;
+            r({
+                target: "String",
+                proto: !0,
+                forced: n(54986)
+            }, {
+                padStart: function(t) {
                     return i(this, t, arguments.length > 1 ? arguments[1] : void 0)
                 }
             })
@@ -16202,4 +16253,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/524.8bc57255d3be2f8648b8.js.map
+//# sourceMappingURL=sourcemaps/524.190fb43a0ad52f0fd539.js.map

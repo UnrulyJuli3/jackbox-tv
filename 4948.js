@@ -1227,7 +1227,7 @@
                     messages: U
                 },
                 data: () => ({
-                    version: "4.2.2"
+                    version: "4.2.4"
                 }),
                 computed: {
                     isTwitchAuthenticated() {
@@ -2125,7 +2125,7 @@
                                             const i = "vue" === t.app ? () => b(this, void 0, void 0, (function*() {
                                                 return s.e(2104).then(s.bind(s, 52104))
                                             })) : () => b(this, void 0, void 0, (function*() {
-                                                return Promise.all([s.e(6498), s.e(524), s.e(972)]).then(s.bind(s, 10972))
+                                                return Promise.all([s.e(7416), s.e(524), s.e(972)]).then(s.bind(s, 10972))
                                             }));
                                             try {
                                                 const s = yield i();
@@ -2299,4 +2299,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/4948.2ce9df2f7021b25b9f77.js.map
+//# sourceMappingURL=sourcemaps/4948.d72f51e3423d0453f994.js.map
