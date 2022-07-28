@@ -39,18 +39,18 @@
                 e && e.destroy()
             }
 
-            function l(t) {
+            function c(t) {
                 var e = o.get(t);
                 e && e.update()
             }
-            var c = null;
-            "undefined" == typeof window || "function" != typeof window.getComputedStyle ? ((c = function(t) {
+            var l = null;
+            "undefined" == typeof window || "function" != typeof window.getComputedStyle ? ((l = function(t) {
                 return t
             }).destroy = function(t) {
                 return t
-            }, c.update = function(t) {
+            }, l.update = function(t) {
                 return t
-            }) : ((c = function(t, e) {
+            }) : ((l = function(t, e) {
                 return t && Array.prototype.forEach.call(t.length ? t : [t], (function(t) {
                     return function(t) {
                         if (t && t.nodeName && "TEXTAREA" === t.nodeName && !o.has(t)) {
@@ -60,8 +60,8 @@
                                 a = function() {
                                     t.clientWidth !== s && h()
                                 },
-                                l = function(e) {
-                                    window.removeEventListener("resize", a, !1), t.removeEventListener("input", h, !1), t.removeEventListener("keyup", h, !1), t.removeEventListener("autosize:destroy", l, !1), t.removeEventListener("autosize:update", h, !1), Object.keys(e).forEach((function(i) {
+                                c = function(e) {
+                                    window.removeEventListener("resize", a, !1), t.removeEventListener("input", h, !1), t.removeEventListener("keyup", h, !1), t.removeEventListener("autosize:destroy", c, !1), t.removeEventListener("autosize:update", h, !1), Object.keys(e).forEach((function(i) {
                                         t.style[i] = e[i]
                                     })), o.delete(t)
                                 }.bind(t, {
@@ -71,13 +71,13 @@
                                     overflowX: t.style.overflowX,
                                     wordWrap: t.style.wordWrap
                                 });
-                            t.addEventListener("autosize:destroy", l, !1), "onpropertychange" in t && "oninput" in t && t.addEventListener("keyup", h, !1), window.addEventListener("resize", a, !1), t.addEventListener("input", h, !1), t.addEventListener("autosize:update", h, !1), t.style.overflowX = "hidden", t.style.wordWrap = "break-word", o.set(t, {
-                                destroy: l,
+                            t.addEventListener("autosize:destroy", c, !1), "onpropertychange" in t && "oninput" in t && t.addEventListener("keyup", h, !1), window.addEventListener("resize", a, !1), t.addEventListener("input", h, !1), t.addEventListener("autosize:update", h, !1), t.style.overflowX = "hidden", t.style.wordWrap = "break-word", o.set(t, {
+                                destroy: c,
                                 update: h
                             }), "vertical" === (e = window.getComputedStyle(t, null)).resize ? t.style.resize = "none" : "both" === e.resize && (t.style.resize = "horizontal"), i = "content-box" === e.boxSizing ? -(parseFloat(e.paddingTop) + parseFloat(e.paddingBottom)) : parseFloat(e.borderTopWidth) + parseFloat(e.borderBottomWidth), isNaN(i) && (i = 0), h()
                         }
 
-                        function c(e) {
+                        function l(e) {
                             var i = t.style.width;
                             t.style.width = "0px", t.style.width = i, t.style.overflowY = e
                         }
@@ -103,7 +103,7 @@
                             var e = Math.round(parseFloat(t.style.height)),
                                 i = window.getComputedStyle(t, null),
                                 s = "content-box" === i.boxSizing ? Math.round(parseFloat(i.height)) : t.offsetHeight;
-                            if (s < e ? "hidden" === i.overflowY && (c("scroll"), d(), s = "content-box" === i.boxSizing ? Math.round(parseFloat(window.getComputedStyle(t, null).height)) : t.offsetHeight) : "hidden" !== i.overflowY && (c("hidden"), d(), s = "content-box" === i.boxSizing ? Math.round(parseFloat(window.getComputedStyle(t, null).height)) : t.offsetHeight), n !== s) {
+                            if (s < e ? "hidden" === i.overflowY && (l("scroll"), d(), s = "content-box" === i.boxSizing ? Math.round(parseFloat(window.getComputedStyle(t, null).height)) : t.offsetHeight) : "hidden" !== i.overflowY && (l("hidden"), d(), s = "content-box" === i.boxSizing ? Math.round(parseFloat(window.getComputedStyle(t, null).height)) : t.offsetHeight), n !== s) {
                                 n = s;
                                 var o = r("autosize:resized");
                                 try {
@@ -115,10 +115,10 @@
                 })), t
             }).destroy = function(t) {
                 return t && Array.prototype.forEach.call(t.length ? t : [t], a), t
-            }, c.update = function(t) {
-                return t && Array.prototype.forEach.call(t.length ? t : [t], l), t
+            }, l.update = function(t) {
+                return t && Array.prototype.forEach.call(t.length ? t : [t], c), t
             });
-            const d = c
+            const d = l
         },
         70151: (t, e, i) => {
             var s = i(278),
@@ -254,10 +254,10 @@
                     a = function(t) {
                         r.has(t) && clearTimeout(r.get(t)), r.set(t, setTimeout(t, 100))
                     },
-                    l = function(t, e, i) {
+                    c = function(t, e, i) {
                         for (var s, n = e.split(/[ ,]+/g), o = 0; o < n.length; o += 1) s = n[o], t.addEventListener ? t.addEventListener(s, i, !1) : t.attachEvent && t.attachEvent(s, i)
                     },
-                    c = function(t, e, i) {
+                    l = function(t, e, i) {
                         for (var s, n = e.split(/[ ,]+/g), o = 0; o < n.length; o += 1) s = n[o], t.removeEventListener ? t.removeEventListener(s, i) : t.detachEvent && t.detachEvent(s, i)
                     },
                     d = function(t) {
@@ -273,7 +273,7 @@
                         e.top || e.right || e.bottom || e.left ? (t.style.top = e.top, t.style.right = e.right, t.style.bottom = e.bottom, t.style.left = e.left) : (t.style.left = e.x + "px", t.style.top = e.y + "px")
                     },
                     p = function(t, e, i) {
-                        var s = v(t);
+                        var s = m(t);
                         for (var n in s)
                             if (s.hasOwnProperty(n))
                                 if ("string" == typeof e) s[n] = e + " " + i;
@@ -282,13 +282,13 @@
                                     s[n] = o.slice(0, -2)
                                 } return s
                     },
-                    v = function(t) {
+                    m = function(t) {
                         var e = {};
                         return e[t] = "", ["webkit", "Moz", "o"].forEach((function(i) {
                             e[i + t.charAt(0).toUpperCase() + t.slice(1)] = ""
                         })), e
                     },
-                    m = function(t, e) {
+                    v = function(t, e) {
                         for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]);
                         return t
                     },
@@ -347,13 +347,13 @@
                     var i = this;
                     return i._domHandlers_ = i._domHandlers_ || {}, i._domHandlers_[e] = function() {
                         "function" == typeof i["on" + e] ? i["on" + e].apply(i, arguments) : console.warn('[WARNING] : Missing "on' + e + '" handler.')
-                    }, l(t, s[e], i._domHandlers_[e]), w[e] && l(t, w[e], i._domHandlers_[e]), i
+                    }, c(t, s[e], i._domHandlers_[e]), w[e] && c(t, w[e], i._domHandlers_[e]), i
                 }, E.prototype.unbindEvt = function(t, e) {
-                    return this._domHandlers_ = this._domHandlers_ || {}, c(t, s[e], this._domHandlers_[e]), w[e] && c(t, w[e], this._domHandlers_[e]), delete this._domHandlers_[e], this
+                    return this._domHandlers_ = this._domHandlers_ || {}, l(t, s[e], this._domHandlers_[e]), w[e] && l(t, w[e], this._domHandlers_[e]), delete this._domHandlers_[e], this
                 };
-                var x = E;
+                var T = E;
 
-                function T(t, e) {
+                function x(t, e) {
                     return this.identifier = e.identifier, this.position = e.position, this.frontPosition = e.frontPosition, this.collection = t, this.defaults = {
                         size: 100,
                         threshold: .1,
@@ -367,7 +367,7 @@
                         lockX: !1,
                         lockY: !1,
                         shape: "circle"
-                    }, this.config(e), "dynamic" === this.options.mode && (this.options.restOpacity = 0), this.id = T.id, T.id += 1, this.buildEl().stylize(), this.instance = {
+                    }, this.config(e), "dynamic" === this.options.mode && (this.options.restOpacity = 0), this.id = x.id, x.id += 1, this.buildEl().stylize(), this.instance = {
                         el: this.ui.el,
                         on: this.on.bind(this),
                         off: this.off.bind(this),
@@ -388,13 +388,13 @@
                         options: this.options
                     }, this.instance
                 }
-                T.prototype = new x, T.constructor = T, T.id = 0, T.prototype.buildEl = function(t) {
+                x.prototype = new T, x.constructor = x, x.id = 0, x.prototype.buildEl = function(t) {
                     return this.ui = {}, this.options.dataOnly || (this.ui.el = document.createElement("div"), this.ui.back = document.createElement("div"), this.ui.front = document.createElement("div"), this.ui.el.className = "nipple collection_" + this.collection.id, this.ui.back.className = "back", this.ui.front.className = "front", this.ui.el.setAttribute("id", "nipple_" + this.collection.id + "_" + this.id), this.ui.el.appendChild(this.ui.back), this.ui.el.appendChild(this.ui.front)), this
-                }, T.prototype.stylize = function() {
+                }, x.prototype.stylize = function() {
                     if (this.options.dataOnly) return this;
                     var t = this.options.fadeTime + "ms",
                         e = function(t, e) {
-                            var i = v("borderRadius");
+                            var i = m("borderRadius");
                             for (var s in i) i.hasOwnProperty(s) && (i[s] = "50%");
                             return i
                         }(),
@@ -423,26 +423,26 @@
                         marginTop: -this.options.size / 4 + "px",
                         background: this.options.color,
                         opacity: ".5"
-                    }, m(s.el, i), "circle" === this.options.shape && m(s.back, e), m(s.front, e), this.applyStyles(s), this
-                }, T.prototype.applyStyles = function(t) {
+                    }, v(s.el, i), "circle" === this.options.shape && v(s.back, e), v(s.front, e), this.applyStyles(s), this
+                }, x.prototype.applyStyles = function(t) {
                     for (var e in this.ui)
                         if (this.ui.hasOwnProperty(e))
                             for (var i in t[e]) this.ui[e].style[i] = t[e][i];
                     return this
-                }, T.prototype.addToDom = function() {
+                }, x.prototype.addToDom = function() {
                     return this.options.dataOnly || document.body.contains(this.ui.el) || this.options.zone.appendChild(this.ui.el), this
-                }, T.prototype.removeFromDom = function() {
+                }, x.prototype.removeFromDom = function() {
                     return this.options.dataOnly || !document.body.contains(this.ui.el) || this.options.zone.removeChild(this.ui.el), this
-                }, T.prototype.destroy = function() {
+                }, x.prototype.destroy = function() {
                     clearTimeout(this.removeTimeout), clearTimeout(this.showTimeout), clearTimeout(this.restTimeout), this.trigger("destroyed", this.instance), this.removeFromDom(), this.off()
-                }, T.prototype.show = function(t) {
+                }, x.prototype.show = function(t) {
                     var e = this;
                     return e.options.dataOnly || (clearTimeout(e.removeTimeout), clearTimeout(e.showTimeout), clearTimeout(e.restTimeout), e.addToDom(), e.restCallback(), setTimeout((function() {
                         e.ui.el.style.opacity = 1
                     }), 0), e.showTimeout = setTimeout((function() {
                         e.trigger("shown", e.instance), "function" == typeof t && t.call(this)
                     }), e.options.fadeTime)), e
-                }, T.prototype.hide = function(t) {
+                }, x.prototype.hide = function(t) {
                     var e = this;
                     return e.options.dataOnly || (e.ui.el.style.opacity = e.options.restOpacity, clearTimeout(e.removeTimeout), clearTimeout(e.showTimeout), clearTimeout(e.restTimeout), e.removeTimeout = setTimeout((function() {
                         var i = "dynamic" === e.options.mode ? "none" : "block";
@@ -451,7 +451,7 @@
                         x: 0,
                         y: 0
                     })), e
-                }, T.prototype.setPosition = function(t, e) {
+                }, x.prototype.setPosition = function(t, e) {
                     var i = this;
                     i.frontPosition = {
                         x: e.x,
@@ -469,37 +469,37 @@
                     }, i.applyStyles(n), i.applyStyles(o), i.restTimeout = setTimeout((function() {
                         "function" == typeof t && t.call(i), i.restCallback()
                     }), i.options.fadeTime)
-                }, T.prototype.restCallback = function() {
+                }, x.prototype.restCallback = function() {
                     var t = {};
                     t.front = p("transition", "none", ""), this.applyStyles(t), this.trigger("rested", this.instance)
-                }, T.prototype.resetDirection = function() {
+                }, x.prototype.resetDirection = function() {
                     this.direction = {
                         x: !1,
                         y: !1,
                         angle: !1
                     }
-                }, T.prototype.computeDirection = function(t) {
+                }, x.prototype.computeDirection = function(t) {
                     var e, i, s, n = t.angle.radian,
                         o = Math.PI / 4,
                         r = Math.PI / 2;
                     if (n > o && n < 3 * o && !t.lockX ? e = "up" : n > -o && n <= o && !t.lockY ? e = "left" : n > 3 * -o && n <= -o && !t.lockX ? e = "down" : t.lockY || (e = "right"), t.lockY || (i = n > -r && n < r ? "left" : "right"), t.lockX || (s = n > 0 ? "up" : "down"), t.force > this.options.threshold) {
-                        var a, l = {};
-                        for (a in this.direction) this.direction.hasOwnProperty(a) && (l[a] = this.direction[a]);
-                        var c = {};
+                        var a, c = {};
+                        for (a in this.direction) this.direction.hasOwnProperty(a) && (c[a] = this.direction[a]);
+                        var l = {};
                         for (a in this.direction = {
                                 x: i,
                                 y: s,
                                 angle: e
-                            }, t.direction = this.direction, l) l[a] === this.direction[a] && (c[a] = !0);
-                        if (c.x && c.y && c.angle) return t;
-                        c.x && c.y || this.trigger("plain", t), c.x || this.trigger("plain:" + i, t), c.y || this.trigger("plain:" + s, t), c.angle || this.trigger("dir dir:" + e, t)
+                            }, t.direction = this.direction, c) c[a] === this.direction[a] && (l[a] = !0);
+                        if (l.x && l.y && l.angle) return t;
+                        l.x && l.y || this.trigger("plain", t), l.x || this.trigger("plain:" + i, t), l.y || this.trigger("plain:" + s, t), l.angle || this.trigger("dir dir:" + e, t)
                     } else this.resetDirection();
                     return t
                 };
-                var I = T;
+                var O = x;
 
-                function C(t, e) {
-                    return this.nipples = [], this.idles = [], this.actives = [], this.ids = [], this.pressureIntervals = {}, this.manager = t, this.id = C.id, C.id += 1, this.defaults = {
+                function I(t, e) {
+                    return this.nipples = [], this.idles = [], this.actives = [], this.ids = [], this.pressureIntervals = {}, this.manager = t, this.id = I.id, I.id += 1, this.defaults = {
                         zone: document.body,
                         multitouch: !1,
                         maxNumberOfNipples: 10,
@@ -523,7 +523,7 @@
                         follow: !1
                     }, this.config(e), "static" !== this.options.mode && "semi" !== this.options.mode || (this.options.multitouch = !1), this.options.multitouch || (this.options.maxNumberOfNipples = 1), this.updateBox(), this.prepareNipples(), this.bindings(), this.begin(), this.nipples
                 }
-                C.prototype = new x, C.constructor = C, C.id = 0, C.prototype.prepareNipples = function() {
+                I.prototype = new T, I.constructor = I, I.id = 0, I.prototype.prepareNipples = function() {
                     var t = this.nipples;
                     t.on = this.on.bind(this), t.off = this.off.bind(this), t.options = this.options, t.destroy = this.destroy.bind(this), t.ids = this.ids, t.id = this.id, t.processOnMove = this.processOnMove.bind(this), t.processOnEnd = this.processOnEnd.bind(this), t.get = function(e) {
                         if (void 0 === e) return t[0];
@@ -531,15 +531,15 @@
                             if (t[i].identifier === e) return t[i];
                         return !1
                     }
-                }, C.prototype.bindings = function() {
+                }, I.prototype.bindings = function() {
                     this.bindEvt(this.options.zone, "start"), this.options.zone.style.touchAction = "none", this.options.zone.style.msTouchAction = "none"
-                }, C.prototype.begin = function() {
+                }, I.prototype.begin = function() {
                     var t = this.options;
                     if ("static" === t.mode) {
                         var e = this.createNipple(t.position, this.manager.getIdentifier());
                         e.add(), this.idles.push(e)
                     }
-                }, C.prototype.createNipple = function(t, e) {
+                }, I.prototype.createNipple = function(t, e) {
                     var i = this.manager.scroll,
                         s = {},
                         n = this.options;
@@ -556,7 +556,7 @@
                             y: r.top + i.y
                         }
                     }
-                    var a = new I(this, {
+                    var a = new O(this, {
                         color: n.color,
                         size: n.size,
                         threshold: n.threshold,
@@ -575,22 +575,22 @@
                         shape: n.shape
                     });
                     return n.dataOnly || (u(a.ui.el, s), u(a.ui.front, a.frontPosition)), this.nipples.push(a), this.trigger("added " + a.identifier + ":added", a), this.manager.trigger("added " + a.identifier + ":added", a), this.bindNipple(a), a
-                }, C.prototype.updateBox = function() {
+                }, I.prototype.updateBox = function() {
                     this.box = this.options.zone.getBoundingClientRect()
-                }, C.prototype.bindNipple = function(t) {
+                }, I.prototype.bindNipple = function(t) {
                     var e, i = this,
                         s = function(t, s) {
                             e = t.type + " " + s.id + ":" + t.type, i.trigger(e, s)
                         };
                     t.on("destroyed", i.onDestroyed.bind(i)), t.on("shown hidden rested dir plain", s), t.on("dir:up dir:right dir:down dir:left", s), t.on("plain:up plain:right plain:down plain:left", s)
-                }, C.prototype.pressureFn = function(t, e, i) {
+                }, I.prototype.pressureFn = function(t, e, i) {
                     var s = this,
                         n = 0;
                     clearInterval(s.pressureIntervals[i]), s.pressureIntervals[i] = setInterval(function() {
                         var i = t.force || t.pressure || t.webkitForce || 0;
                         i !== n && (e.trigger("pressure", i), s.trigger("pressure " + e.identifier + ":pressure", i), n = i)
                     }.bind(s), 100)
-                }, C.prototype.onstart = function(t) {
+                }, I.prototype.onstart = function(t) {
                     var e = this,
                         i = e.options,
                         s = t;
@@ -604,7 +604,7 @@
                             }
                         })), e.actives.length < i.maxNumberOfNipples && e.processOnStart(n))
                     })), e.manager.bindDocument(), !1
-                }, C.prototype.processOnStart = function(t) {
+                }, I.prototype.processOnStart = function(t) {
                     var e, i = this,
                         s = i.options,
                         o = i.manager.getIdentifier(t),
@@ -613,21 +613,21 @@
                             x: t.pageX,
                             y: t.pageY
                         },
-                        l = i.getOrCreate(o, a);
-                    l.identifier !== o && i.manager.removeIdentifier(l.identifier), l.identifier = o;
-                    var c = function(e) {
+                        c = i.getOrCreate(o, a);
+                    c.identifier !== o && i.manager.removeIdentifier(c.identifier), c.identifier = o;
+                    var l = function(e) {
                         e.trigger("start", e), i.trigger("start " + e.id + ":start", e), e.show(), r > 0 && i.pressureFn(t, e, e.identifier), i.processOnMove(t)
                     };
-                    if ((e = i.idles.indexOf(l)) >= 0 && i.idles.splice(e, 1), i.actives.push(l), i.ids.push(l.identifier), "semi" !== s.mode) c(l);
+                    if ((e = i.idles.indexOf(c)) >= 0 && i.idles.splice(e, 1), i.actives.push(c), i.ids.push(c.identifier), "semi" !== s.mode) l(c);
                     else {
-                        if (!(n(a, l.position) <= s.catchDistance)) return l.destroy(), void i.processOnStart(t);
-                        c(l)
+                        if (!(n(a, c.position) <= s.catchDistance)) return c.destroy(), void i.processOnStart(t);
+                        l(c)
                     }
-                    return l
-                }, C.prototype.getOrCreate = function(t, e) {
+                    return c
+                }, I.prototype.getOrCreate = function(t, e) {
                     var i, s = this.options;
                     return /(semi|static)/.test(s.mode) ? (i = this.idles[0]) ? (this.idles.splice(0, 1), i) : "semi" === s.mode ? this.createNipple(e, t) : (console.warn("Coudln't find the needed nipple."), !1) : i = this.createNipple(e, t)
-                }, C.prototype.processOnMove = function(t) {
+                }, I.prototype.processOnMove = function(t) {
                     var e = this.options,
                         i = this.manager.getIdentifier(t),
                         s = this.nipples.get(i),
@@ -644,23 +644,23 @@
                             }
                         }
                         s.identifier = i;
-                        var l = s.options.size / 2,
-                            c = {
+                        var c = s.options.size / 2,
+                            l = {
                                 x: t.pageX,
                                 y: t.pageY
                             };
-                        e.lockX && (c.y = s.position.y), e.lockY && (c.x = s.position.x);
-                        var d, h, p, v, m, f, y, g, b, _, w = n(c, s.position),
-                            E = (d = c, p = (h = s.position).x - d.x, v = h.y - d.y, function(t) {
+                        e.lockX && (l.y = s.position.y), e.lockY && (l.x = s.position.x);
+                        var d, h, p, m, v, f, y, g, b, _, w = n(l, s.position),
+                            E = (d = l, p = (h = s.position).x - d.x, m = h.y - d.y, function(t) {
                                 return t * (180 / Math.PI)
-                            }(Math.atan2(v, p))),
-                            x = o(E),
-                            T = w / l,
-                            I = {
+                            }(Math.atan2(m, p))),
+                            T = o(E),
+                            x = w / c,
+                            O = {
                                 distance: w,
-                                position: c
+                                position: l
                             };
-                        if ("circle" === s.options.shape ? (m = Math.min(w, l), y = s.position, g = m, _ = {
+                        if ("circle" === s.options.shape ? (v = Math.min(w, c), y = s.position, g = v, _ = {
                                 x: 0,
                                 y: 0
                             }, b = o(b = E), _.x = y.x - g * Math.cos(b), _.y = y.y - g * Math.sin(b), f = _) : (f = function(t, e, i) {
@@ -668,34 +668,34 @@
                                     x: Math.min(Math.max(t.x, e.x - i), e.x + i),
                                     y: Math.min(Math.max(t.y, e.y - i), e.y + i)
                                 }
-                            }(c, s.position, l), m = n(f, s.position)), e.follow) {
-                            if (w > l) {
-                                var C = c.x - f.x,
-                                    O = c.y - f.y;
-                                s.position.x += C, s.position.y += O, s.el.style.top = s.position.y - (this.box.top + r.y) + "px", s.el.style.left = s.position.x - (this.box.left + r.x) + "px", w = n(c, s.position)
+                            }(l, s.position, c), v = n(f, s.position)), e.follow) {
+                            if (w > c) {
+                                var I = l.x - f.x,
+                                    C = l.y - f.y;
+                                s.position.x += I, s.position.y += C, s.el.style.top = s.position.y - (this.box.top + r.y) + "px", s.el.style.left = s.position.x - (this.box.left + r.x) + "px", w = n(l, s.position)
                             }
-                        } else c = f, w = m;
-                        var S = c.x - s.position.x,
-                            M = c.y - s.position.y;
+                        } else l = f, w = v;
+                        var S = l.x - s.position.x,
+                            M = l.y - s.position.y;
                         s.frontPosition = {
                             x: S,
                             y: M
                         }, e.dataOnly || u(s.ui.front, s.frontPosition);
                         var k = {
                             identifier: s.identifier,
-                            position: c,
-                            force: T,
+                            position: l,
+                            force: x,
                             pressure: t.force || t.pressure || t.webkitForce || 0,
                             distance: w,
                             angle: {
-                                radian: x,
+                                radian: T,
                                 degree: E
                             },
                             vector: {
-                                x: S / l,
-                                y: -M / l
+                                x: S / c,
+                                y: -M / c
                             },
-                            raw: I,
+                            raw: O,
                             instance: s,
                             lockX: e.lockX,
                             lockY: e.lockY
@@ -705,7 +705,7 @@
                             degree: 180 - E
                         }, s.trigger("move", k), this.trigger("move " + s.id + ":move", k)
                     } else this.processOnEnd(t)
-                }, C.prototype.processOnEnd = function(t) {
+                }, I.prototype.processOnEnd = function(t) {
                     var e = this,
                         i = e.options,
                         s = e.manager.getIdentifier(t),
@@ -714,15 +714,15 @@
                     n && (i.dataOnly || n.hide((function() {
                         "dynamic" === i.mode && (n.trigger("removed", n), e.trigger("removed " + n.id + ":removed", n), e.manager.trigger("removed " + n.id + ":removed", n), n.destroy())
                     })), clearInterval(e.pressureIntervals[n.identifier]), n.resetDirection(), n.trigger("end", n), e.trigger("end " + n.id + ":end", n), e.ids.indexOf(n.identifier) >= 0 && e.ids.splice(e.ids.indexOf(n.identifier), 1), e.actives.indexOf(n) >= 0 && e.actives.splice(e.actives.indexOf(n), 1), /(semi|static)/.test(i.mode) ? e.idles.push(n) : e.nipples.indexOf(n) >= 0 && e.nipples.splice(e.nipples.indexOf(n), 1), e.manager.unbindDocument(), /(semi|static)/.test(i.mode) && (e.manager.ids[o.id] = o.identifier))
-                }, C.prototype.onDestroyed = function(t, e) {
+                }, I.prototype.onDestroyed = function(t, e) {
                     this.nipples.indexOf(e) >= 0 && this.nipples.splice(this.nipples.indexOf(e), 1), this.actives.indexOf(e) >= 0 && this.actives.splice(this.actives.indexOf(e), 1), this.idles.indexOf(e) >= 0 && this.idles.splice(this.idles.indexOf(e), 1), this.ids.indexOf(e.identifier) >= 0 && this.ids.splice(this.ids.indexOf(e.identifier), 1), this.manager.removeIdentifier(e.identifier), this.manager.unbindDocument()
-                }, C.prototype.destroy = function() {
+                }, I.prototype.destroy = function() {
                     for (var t in this.unbindEvt(this.options.zone, "start"), this.nipples.forEach((function(t) {
                             t.destroy()
                         })), this.pressureIntervals) this.pressureIntervals.hasOwnProperty(t) && clearInterval(this.pressureIntervals[t]);
                     this.trigger("destroyed", this.nipples), this.manager.unbindDocument(), this.off()
                 };
-                var O = C;
+                var C = I;
 
                 function S(t) {
                     var e = this;
@@ -738,17 +738,17 @@
                             }))
                         }))
                     };
-                    l(window, "resize", (function() {
+                    c(window, "resize", (function() {
                         a(i)
                     }));
                     var s = function() {
                         e.scroll = h()
                     };
-                    return l(window, "scroll", (function() {
+                    return c(window, "scroll", (function() {
                         a(s)
                     })), e.collections
                 }
-                S.prototype = new x, S.constructor = S, S.prototype.prepareCollections = function() {
+                S.prototype = new T, S.constructor = S, S.prototype.prepareCollections = function() {
                     var t = this;
                     t.collections.create = t.create.bind(t), t.collections.on = t.on.bind(t), t.collections.off = t.off.bind(t), t.collections.destroy = t.destroy.bind(t), t.collections.get = function(e) {
                         var i;
@@ -759,7 +759,7 @@
                 }, S.prototype.create = function(t) {
                     return this.createCollection(t)
                 }, S.prototype.createCollection = function(t) {
-                    var e = new O(this, t);
+                    var e = new C(this, t);
                     return this.bindCollection(e), this.collections.push(e), e
                 }, S.prototype.bindCollection = function(t) {
                     var e, i = this,
@@ -811,255 +811,6 @@
                     factory: M
                 }
             }]).default
-        },
-        94835: (t, e, i) => {
-            "use strict";
-            i.d(e, {
-                Z: () => h
-            });
-            var s = function() {
-                var t = this,
-                    e = t.$createElement,
-                    i = t._self._c || e;
-                return i("div", {
-                    directives: [{
-                        name: "touch",
-                        rawName: "v-touch:swipe",
-                        value: t.swipeHandler,
-                        expression: "swipeHandler",
-                        arg: "swipe"
-                    }],
-                    staticClass: "tutorial"
-                }, [i("div", {
-                    staticClass: "container"
-                }, [i("svg", {
-                    staticClass: "ratio-svg",
-                    attrs: {
-                        width: "2",
-                        height: "3"
-                    }
-                }), t._v(" "), t._l(t.slides, (function(e, s) {
-                    return i("div", {
-                        key: s,
-                        staticClass: "slide",
-                        class: t.slideClasses[s]
-                    }, [i("div", {
-                        staticClass: "text"
-                    }, [i("h3", {
-                        staticClass: "title"
-                    }, [t._v(t._s(e.title))]), t._v(" "), e.listItems ? i("ul", t._l(e.listItems, (function(e, s) {
-                        return i("li", {
-                            key: s
-                        }, [t._v(t._s(e))])
-                    })), 0) : t._e()]), t._v(" "), e.imageClass ? i("div", {
-                        staticClass: "image",
-                        class: e.imageClass
-                    }) : t._e(), t._v(" "), e.arrow ? i("div", {
-                        staticClass: "arrow",
-                        style: e.arrow
-                    }, [i("svg", {
-                        attrs: {
-                            viewBox: "0 0 50 50"
-                        }
-                    }, [i("path", {
-                        attrs: {
-                            d: "M -50,0 L 0,0",
-                            "vector-effect": "non-scaling-stroke"
-                        }
-                    }), t._v(" "), i("path", {
-                        attrs: {
-                            d: "M -25,-20 L 0,0 L -25,20",
-                            "vector-effect": "non-scaling-stroke"
-                        }
-                    })])]) : t._e()])
-                })), t._v(" "), i("div", {
-                    staticClass: "dots"
-                }, t._l(t.slides.length, (function(e) {
-                    return i("button", {
-                        key: e,
-                        staticClass: "dot",
-                        class: {
-                            current: t.currentIndex === e - 1
-                        },
-                        on: {
-                            click: function(i) {
-                                return t.onDotClick(e - 1)
-                            }
-                        }
-                    })
-                })), 0), t._v(" "), i("div", {
-                    staticClass: "buttons"
-                }, [t.isFinalSlide ? t._e() : i("button", {
-                    staticClass: "skip",
-                    on: {
-                        click: t.onDoneClick
-                    }
-                }, [t._v(t._s(t.$t("TUTORIAL.BUTTON_SKIP")))]), t._v(" "), t.isFinalSlide ? i("button", {
-                    staticClass: "done",
-                    on: {
-                        click: t.onDoneClick
-                    }
-                }, [t._v(t._s(t.$t("TUTORIAL.BUTTON_DONE")))]) : i("button", {
-                    staticClass: "next",
-                    on: {
-                        click: t.onNextClick
-                    }
-                }, [t._v(t._s(t.$t("TUTORIAL.BUTTON_NEXT")))])])], 2)])
-            };
-            s._withStripped = !0;
-            var n = i(2934),
-                o = i.n(n),
-                r = i(78627),
-                a = i.n(r),
-                l = i(65853);
-            o().use(a());
-            const c = o().extend({
-                props: {
-                    slides: Array
-                },
-                i18n: {
-                    messages: l.s
-                },
-                data: () => ({
-                    currentIndex: 0
-                }),
-                computed: {
-                    isFinalSlide() {
-                        return this.currentIndex === this.slides.length - 1
-                    },
-                    slideClasses() {
-                        return this.slides.map(((t, e) => e < this.currentIndex ? ["left"] : e > this.currentIndex ? ["right"] : ["current"]))
-                    }
-                },
-                methods: {
-                    swipeHandler(t) {
-                        if ("right" === t) {
-                            if (0 === this.currentIndex) return;
-                            this.currentIndex -= 1
-                        }
-                        if ("left" === t) {
-                            if (this.isFinalSlide) return void this.onDoneClick();
-                            this.currentIndex += 1
-                        }
-                    },
-                    onPointerMoved() {},
-                    onPointerUp() {},
-                    onNextClick() {
-                        this.isFinalSlide ? this.onDoneClick() : this.currentIndex += 1
-                    },
-                    onDotClick(t) {
-                        this.currentIndex = t
-                    },
-                    onDoneClick() {
-                        this.$emit("tutorialComplete")
-                    }
-                }
-            });
-            var d = (0, i(51900).Z)(c, s, [], !1, null, "2df46cec", null);
-            d.options.__file = "src/apps/vue/components/Tutorial.vue";
-            const h = d.exports
-        },
-        17819: (t, e, i) => {
-            "use strict";
-            i.d(e, {
-                Z: () => d
-            });
-            var s = function() {
-                var t = this,
-                    e = t.$createElement,
-                    i = t._self._c || e;
-                return i("div", {
-                    staticClass: "draw"
-                }, [i("div", {
-                    ref: "content",
-                    staticClass: "content"
-                }, [i("div", {
-                    staticClass: "constrain"
-                }, [t.player.prompt ? i("div", {
-                    directives: [{
-                        name: "bb",
-                        rawName: "v-bb",
-                        value: t.player.prompt,
-                        expression: "player.prompt"
-                    }]
-                }) : t._e(), t._v(" "), i("div", {
-                    ref: "stage",
-                    staticClass: "stage",
-                    style: t.stageDimensions
-                }), t._v(" "), i("button", {
-                    on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onSubmitClick.apply(null, arguments)
-                        }
-                    }
-                }, [t._v(t._s(t.player.submitText || "SUBMIT"))])])])])
-            };
-            s._withStripped = !0;
-            var n = i(2934),
-                o = i.n(n),
-                r = i(32530),
-                a = i(96486);
-            const l = o().extend({
-                props: {
-                    player: Object
-                },
-                data: () => ({
-                    stage: null,
-                    windowHeight: window.innerHeight,
-                    isSubmitting: !1
-                }),
-                computed: {
-                    stageDimensions() {
-                        if (!this.stage) return {
-                            width: "auto",
-                            height: "auto"
-                        };
-                        const t = this.$refs.content.getBoundingClientRect(),
-                            e = this.$refs.stage,
-                            i = e.getBoundingClientRect(),
-                            s = e.parentElement.getBoundingClientRect(),
-                            n = Math.max(.9 * s.width, 240),
-                            o = Math.max(this.windowHeight - t.height + i.height, 240),
-                            r = this.stage.canvas.width,
-                            a = this.stage.canvas.height,
-                            l = Math.min(n / r, o / a);
-                        return {
-                            width: r * l + "px",
-                            height: a * l + "px"
-                        }
-                    }
-                },
-                mounted() {
-                    this.onResizeWithContext = (0, a.throttle)(this.onResize.bind(this), 400), window.addEventListener("resize", this.onResizeWithContext), this.setupStage()
-                },
-                beforeDestroy() {
-                    window.removeEventListener("resize", this.onResizeWithContext), this.stage && this.stage.beforeDestroy()
-                },
-                methods: {
-                    setupStage() {
-                        const t = this.$refs.stage,
-                            e = {};
-                        this.player.size && (e.width = this.player.size.width, e.height = this.player.size.height), this.player.thicknesses && (e.thickness = this.player.thicknesses[0]), this.player.colors && (e.color = this.player.colors[0]), this.player.maxPoints && (e.maxPoints = this.player.maxPoints), this.stage = new r.U(t, e), this.stage.on("up", (() => {
-                            var t;
-                            if (!this.player.live) return;
-                            const e = (null === (t = this.stage) || void 0 === t ? void 0 : t.getObject()) || {};
-                            e.done = !1, this.$ecast.updateObject(this.player.responseKey, e).catch(this.$handleEcastError)
-                        }))
-                    },
-                    onSubmitClick() {
-                        if (!this.stage) return;
-                        this.isSubmitting = !0, this.stage.canvas.submitting = !0;
-                        const t = this.stage.getObject();
-                        t.done = !0, t.action = "submit", this.$ecast.updateObject(this.player.responseKey, t).catch(this.$handleEcastError)
-                    },
-                    onResize() {
-                        this.windowHeight = window.innerHeight
-                    }
-                }
-            });
-            var c = (0, i(51900).Z)(l, s, [], !1, null, null, null);
-            c.options.__file = "src/apps/vue/components/base/Draw.vue";
-            const d = c.exports
         },
         74634: (t, e, i) => {
             "use strict";
@@ -1212,7 +963,7 @@
                 o = i.n(n),
                 r = i(94835),
                 a = i(89446),
-                l = function() {
+                c = function() {
                     var t = this,
                         e = t.$createElement,
                         i = t._self._c || e;
@@ -1283,13 +1034,13 @@
                         }]
                     })])]) : t._e()])
                 };
-            l._withStripped = !0;
-            var c = i(96486),
+            c._withStripped = !0;
+            var l = i(96486),
                 d = i(30328),
                 h = i(71319),
                 u = i(79429),
                 p = i(6812);
-            class v extends d.f {
+            class m extends d.f {
                 constructor(t, e, i, s) {
                     super(t, e, i, s), this.currentMode = "draw", this.interaction = "translate", this.symbol = [], this.minScale = .1, this.maxScale = 1, s.mode && (this.currentMode = s.mode), s.symbol && (this.symbol = s.symbol, this.getCanvasObject("symbol").dirty = !0), s.minScale && (this.minScale = s.minScale), s.maxScale && (this.maxScale = s.maxScale), this.transform = {
                         translate: {
@@ -1404,8 +1155,8 @@
                         } = this.transform;
                     let r = Number.MAX_SAFE_INTEGER,
                         a = 0,
-                        l = Number.MAX_SAFE_INTEGER,
-                        c = 0;
+                        c = Number.MAX_SAFE_INTEGER,
+                        l = 0;
                     const d = t.map((t => Object.assign(Object.assign({}, t), {
                             points: t.points.map((t => {
                                 const {
@@ -1413,7 +1164,7 @@
                                     y: h
                                 } = t;
                                 let u, p;
-                                return u = Math.cos(o) * (d - e) - Math.sin(o) * (h - i) + e, p = Math.sin(o) * (d - e) + Math.cos(o) * (h - i) + i, u -= e, p -= i, u = (u + e) * n, p = (p + i) * n, u += s.x - e * n, p += s.y - i * n, r = Math.min(r, u), a = Math.max(a, u), l = Math.min(l, p), c = Math.max(c, p), {
+                                return u = Math.cos(o) * (d - e) - Math.sin(o) * (h - i) + e, p = Math.sin(o) * (d - e) + Math.cos(o) * (h - i) + i, u -= e, p -= i, u = (u + e) * n, p = (p + i) * n, u += s.x - e * n, p += s.y - i * n, r = Math.min(r, u), a = Math.max(a, u), c = Math.min(c, p), l = Math.max(l, p), {
                                     x: u,
                                     y: p
                                 }
@@ -1421,18 +1172,18 @@
                         }))),
                         h = t[0].thickness,
                         u = Math.min((this.renderCanvas.width - h) / (a - r), 1),
-                        p = Math.min((this.renderCanvas.height - h) / (c - l), 1),
-                        v = Math.min(u, p),
-                        m = .5 * h,
-                        f = Math.min(0, r - m) + Math.max(0, a - (this.renderCanvas.width - m)),
-                        y = Math.min(0, l - m) + Math.max(0, c - (this.renderCanvas.height - m)),
+                        p = Math.min((this.renderCanvas.height - h) / (l - c), 1),
+                        m = Math.min(u, p),
+                        v = .5 * h,
+                        f = Math.min(0, r - v) + Math.max(0, a - (this.renderCanvas.width - v)),
+                        y = Math.min(0, c - v) + Math.max(0, l - (this.renderCanvas.height - v)),
                         g = d.map((t => Object.assign(Object.assign({}, t), {
                             points: t.points.map((t => ({
-                                x: v * (t.x - f),
-                                y: v * (t.y - y)
+                                x: m * (t.x - f),
+                                y: m * (t.y - y)
                             })))
                         })));
-                    this.transform.translate.x -= f, this.transform.translate.y -= y, this.transform.scale *= v, this.lines2 = g
+                    this.transform.translate.x -= f, this.transform.translate.y -= y, this.transform.scale *= m, this.lines2 = g
                 }
                 draw() {
                     const t = this.renderCanvas.getContext("2d");
@@ -1464,10 +1215,10 @@
                         x: r,
                         y: a
                     } = this.transform.translate, {
-                        width: l,
-                        height: c
+                        width: c,
+                        height: l
                     } = this.renderCanvas;
-                    t.save(), t.translate(r, a), t.scale(n, n), t.rotate(o), t.save(), t.strokeStyle = "black", t.lineWidth = 6 / n, t.strokeRect(-.5 * l, -.5 * c, l, c), t.translate(-.5 * l, -.5 * c), t.scale(1 / n, 1 / n), t.rotate(-1 * o), t.restore(), this.moveImage && (t.save(), t.scale(1 / n, 1 / n), t.rotate(-1 * o), t.drawImage(this.moveImage, -32, -32, 64, 64), t.restore()), this.scaleImage && (t.save(), t.translate(.5 * l, -.5 * c), t.scale(1 / n, 1 / n), t.rotate(-1 * o), t.drawImage(this.scaleImage, -32, -32, 64, 64), t.restore()), this.rotateImage && (t.save(), t.translate(.5 * l, .5 * c), t.scale(1 / n, 1 / n), t.rotate(-1 * o), t.drawImage(this.rotateImage, -32, -32, 64, 64), t.restore()), t.restore()
+                    t.save(), t.translate(r, a), t.scale(n, n), t.rotate(o), t.save(), t.strokeStyle = "black", t.lineWidth = 6 / n, t.strokeRect(-.5 * c, -.5 * l, c, l), t.translate(-.5 * c, -.5 * l), t.scale(1 / n, 1 / n), t.rotate(-1 * o), t.restore(), this.moveImage && (t.save(), t.scale(1 / n, 1 / n), t.rotate(-1 * o), t.drawImage(this.moveImage, -32, -32, 64, 64), t.restore()), this.scaleImage && (t.save(), t.translate(.5 * c, -.5 * l), t.scale(1 / n, 1 / n), t.rotate(-1 * o), t.drawImage(this.scaleImage, -32, -32, 64, 64), t.restore()), this.rotateImage && (t.save(), t.translate(.5 * c, .5 * l), t.scale(1 / n, 1 / n), t.rotate(-1 * o), t.drawImage(this.rotateImage, -32, -32, 64, 64), t.restore()), t.restore()
                 }
                 drawLine(t, e) {
                     t.lineWidth = e.thickness, t.lineCap = "butt", t.lineJoin = "round", t.fillStyle = e.color, t.strokeStyle = e.color, t.save(), t.lineWidth = 1.4 * e.thickness, t.strokeStyle = "#686868", t.beginPath(), e.points.forEach(((e, i) => {
@@ -1480,7 +1231,7 @@
                     }))
                 }
             }
-            const m = {
+            const v = {
                     AUDIENCE_NAME: "AUDIENCE",
                     SENT: "sent",
                     STRUCK: "struck",
@@ -1568,18 +1319,18 @@
                     }
                 },
                 f = {
-                    en: m,
-                    fr: m,
-                    it: m,
-                    de: m,
-                    es: m,
-                    "es-XL": m
+                    en: v,
+                    fr: v,
+                    it: v,
+                    de: v,
+                    es: v,
+                    "es-XL": v
                 };
             var y = function(t, e, i, s) {
                 return new(i || (i = Promise))((function(n, o) {
                     function r(t) {
                         try {
-                            l(s.next(t))
+                            c(s.next(t))
                         } catch (t) {
                             o(t)
                         }
@@ -1587,19 +1338,19 @@
 
                     function a(t) {
                         try {
-                            l(s.throw(t))
+                            c(s.throw(t))
                         } catch (t) {
                             o(t)
                         }
                     }
 
-                    function l(t) {
+                    function c(t) {
                         var e;
                         t.done ? n(t.value) : (e = t.value, e instanceof i ? e : new i((function(t) {
                             t(e)
                         }))).then(r, a)
                     }
-                    l((s = s.apply(t, e || [])).next())
+                    c((s = s.apply(t, e || [])).next())
                 }))
             };
             const g = o().extend({
@@ -1631,7 +1382,7 @@
                     "player.choiceId": "resetData"
                 },
                 mounted() {
-                    this.audience ? this.throttledSubmitVote = (0, c.throttle)(this.submitAudienceVote.bind(this), 400) : this.throttledSubmitVote = (0, c.throttle)(this.submitVote.bind(this), 400)
+                    this.audience ? this.throttledSubmitVote = (0, l.throttle)(this.submitAudienceVote.bind(this), 400) : this.throttledSubmitVote = (0, l.throttle)(this.submitVote.bind(this), 400)
                 },
                 beforeDestroy() {
                     var t;
@@ -1640,7 +1391,7 @@
                 methods: {
                     getWeaponImage(t) {
                         if (!t.lines || !t.size) return "";
-                        const e = new v(document.createElement("p"), t.size.width, t.size.height, {
+                        const e = new m(document.createElement("p"), t.size.width, t.size.height, {
                             thickness: t.thickness
                         });
                         return e.lines = e.parseLines(t.lines), e.getCanvasObject("drawing").dirty = !0, e.draw(), e.canvasElement.toDataURL("image/png")
@@ -1690,7 +1441,7 @@
                 }
             });
             var b = i(51900),
-                _ = (0, b.Z)(g, l, [], !1, null, null, null);
+                _ = (0, b.Z)(g, c, [], !1, null, null, null);
             _.options.__file = "src/games/pp8/murder-detectives/views/Choosing.vue";
             const w = _.exports;
             var E = function() {
@@ -1772,9 +1523,9 @@
                 }, [t._v("\n                        " + t._s(t.$t("DRAWING.BUTTON_SUBMIT")) + "\n                    ")])])])])])])
             };
             E._withStripped = !0;
-            var x = i(17819),
-                T = i(32530);
-            const I = x.Z.extend({
+            var T = i(17819),
+                x = i(32530);
+            const O = T.Z.extend({
                 props: {
                     player: Object,
                     info: Object
@@ -1812,10 +1563,10 @@
                     setupStage() {
                         const t = this.$refs.stage,
                             e = {
-                                InteractCanvas: v,
+                                InteractCanvas: m,
                                 mode: "move"
                             };
-                        this.player.size && (e.width = this.player.size.width, e.height = this.player.size.height), this.player.thicknesses && (e.thickness = this.player.thicknesses[0]), this.player.colors && (e.color = this.player.colors[0]), this.player.symbol && (e.symbol = this.player.symbol), this.player.minScale && (e.minScale = this.player.minScale), this.player.maxScale && (e.maxScale = this.player.maxScale), this.stage = new T.U(t, e), this.stage.on("up", (() => {
+                        this.player.size && (e.width = this.player.size.width, e.height = this.player.size.height), this.player.thicknesses && (e.thickness = this.player.thicknesses[0]), this.player.colors && (e.color = this.player.colors[0]), this.player.symbol && (e.symbol = this.player.symbol), this.player.minScale && (e.minScale = this.player.minScale), this.player.maxScale && (e.maxScale = this.player.maxScale), this.stage = new x.U(t, e), this.stage.on("up", (() => {
                             var t;
                             if (!this.player.live) return;
                             const e = (null === (t = this.stage) || void 0 === t ? void 0 : t.getObject()) || {};
@@ -1850,9 +1601,9 @@
                     }
                 }
             });
-            var C = (0, b.Z)(I, E, [], !1, null, null, null);
-            C.options.__file = "src/games/pp8/murder-detectives/views/Drawing.vue";
-            const O = C.exports;
+            var I = (0, b.Z)(O, E, [], !1, null, null, null);
+            I.options.__file = "src/games/pp8/murder-detectives/views/Drawing.vue";
+            const C = I.exports;
             var S = function() {
                 var t = this,
                     e = t.$createElement,
@@ -2120,8 +1871,8 @@
                 })), 0)])])])
             };
             Y._withStripped = !0;
-            var K = i(55507);
-            const V = o().extend({
+            var V = i(55507);
+            const X = o().extend({
                 i18n: {
                     messages: f
                 },
@@ -2147,7 +1898,7 @@
                     }
                 },
                 mounted() {
-                    this.throttledSubmit = (0, c.throttle)(this.submit.bind(this), 400)
+                    this.throttledSubmit = (0, l.throttle)(this.submit.bind(this), 400)
                 },
                 beforeDestroy() {
                     var t;
@@ -2167,12 +1918,12 @@
                                     this.$delete(this.coolDownTimeouts, t)
                                 }), 3e3))
                             } catch (t) {
-                                t instanceof K.EcastRateLimitExceeded || this.$handleEcastError(t)
+                                t instanceof V.EcastRateLimitExceeded || this.$handleEcastError(t)
                             }
                         }, new((s = void 0) || (s = Promise))((function(t, o) {
                             function r(t) {
                                 try {
-                                    l(n.next(t))
+                                    c(n.next(t))
                                 } catch (t) {
                                     o(t)
                                 }
@@ -2180,27 +1931,27 @@
 
                             function a(t) {
                                 try {
-                                    l(n.throw(t))
+                                    c(n.throw(t))
                                 } catch (t) {
                                     o(t)
                                 }
                             }
 
-                            function l(e) {
+                            function c(e) {
                                 var i;
                                 e.done ? t(e.value) : (i = e.value, i instanceof s ? i : new s((function(t) {
                                     t(i)
                                 }))).then(r, a)
                             }
-                            l((n = n.apply(e, i || [])).next())
+                            c((n = n.apply(e, i || [])).next())
                         }));
                         var e, i, s, n
                     }
                 }
             });
-            var X = (0, b.Z)(V, Y, [], !1, null, null, null);
-            X.options.__file = "src/games/pp8/murder-detectives/views/Soundboard.vue";
-            const F = X.exports;
+            var K = (0, b.Z)(X, Y, [], !1, null, null, null);
+            K.options.__file = "src/games/pp8/murder-detectives/views/Soundboard.vue";
+            const F = K.exports;
             var Z = function() {
                 var t = this,
                     e = t.$createElement,
@@ -2421,13 +2172,13 @@
             };
             rt._withStripped = !0;
             var at = i(3682),
-                lt = i(23493),
-                ct = i.n(lt),
+                ct = i(23493),
+                lt = i.n(ct),
                 dt = function(t, e, i, s) {
                     return new(i || (i = Promise))((function(n, o) {
                         function r(t) {
                             try {
-                                l(s.next(t))
+                                c(s.next(t))
                             } catch (t) {
                                 o(t)
                             }
@@ -2435,19 +2186,19 @@
 
                         function a(t) {
                             try {
-                                l(s.throw(t))
+                                c(s.throw(t))
                             } catch (t) {
                                 o(t)
                             }
                         }
 
-                        function l(t) {
+                        function c(t) {
                             var e;
                             t.done ? n(t.value) : (e = t.value, e instanceof i ? e : new i((function(t) {
                                 t(e)
                             }))).then(r, a)
                         }
-                        l((s = s.apply(t, e || [])).next())
+                        c((s = s.apply(t, e || [])).next())
                     }))
                 };
             const ht = o().extend({
@@ -2481,7 +2232,7 @@
                     }
                 },
                 mounted() {
-                    this.autoSubmitter = ct()(this.autoSubmit.bind(this), 400), (0, at.Z)(this.$refs.textarea), this.player.textKey && this.restoreText()
+                    this.autoSubmitter = lt()(this.autoSubmit.bind(this), 400), (0, at.Z)(this.$refs.textarea), this.player.textKey && this.restoreText()
                 },
                 beforeDestroy() {
                     this.autoSubmitter.cancel()
@@ -2498,7 +2249,7 @@
                             if (!this.isSubmitting) try {
                                 yield this.$ecast.updateText(this.player.textKey, this.sanitizedAnswer)
                             } catch (t) {
-                                t instanceof K.EcastFilterError || this.$handleEcastError(t), yield this.$ecast.updateText(this.player.textKey, "")
+                                t instanceof V.EcastFilterError || this.$handleEcastError(t), yield this.$ecast.updateText(this.player.textKey, "")
                             }
                         }))
                     },
@@ -2530,7 +2281,7 @@
             var ut = (0, b.Z)(ht, rt, [], !1, null, null, null);
             ut.options.__file = "src/games/pp8/murder-detectives/views/Writing.vue";
             const pt = ut.exports;
-            const vt = o().extend({
+            const mt = o().extend({
                 bb: {
                     header: (t, e) => `<h3>${e}</h3>`,
                     rank: (t, e) => `<div>${e}</div>`,
@@ -2553,7 +2304,7 @@
                     Lobby: j,
                     PostGame: H,
                     Choosing: w,
-                    Drawing: O,
+                    Drawing: C,
                     Inspecting: L,
                     Soundboard: F,
                     Stabbing: et,
@@ -2642,7 +2393,7 @@
                         }, new((n = void 0) || (n = Promise))((function(t, e) {
                             function r(t) {
                                 try {
-                                    l(o.next(t))
+                                    c(o.next(t))
                                 } catch (t) {
                                     e(t)
                                 }
@@ -2650,19 +2401,19 @@
 
                             function a(t) {
                                 try {
-                                    l(o.throw(t))
+                                    c(o.throw(t))
                                 } catch (t) {
                                     e(t)
                                 }
                             }
 
-                            function l(e) {
+                            function c(e) {
                                 var i;
                                 e.done ? t(e.value) : (i = e.value, i instanceof n ? i : new n((function(t) {
                                     t(i)
                                 }))).then(r, a)
                             }
-                            l((o = o.apply(i, s || [])).next())
+                            c((o = o.apply(i, s || [])).next())
                         }));
                         var i, s, n, o
                     }
@@ -2671,9 +2422,9 @@
                     messages: f
                 }
             });
-            var mt = (0, b.Z)(vt, s, [], !1, null, null, null);
-            mt.options.__file = "src/games/pp8/murder-detectives/views/Main.vue";
-            const ft = mt.exports
+            var vt = (0, b.Z)(mt, s, [], !1, null, null, null);
+            vt.options.__file = "src/games/pp8/murder-detectives/views/Main.vue";
+            const ft = vt.exports
         },
         78627: t => {
             function e(t) {
@@ -2713,12 +2464,12 @@
                                 o = t.type.indexOf("touch") >= 0,
                                 r = t.type.indexOf("mouse") >= 0,
                                 a = this;
-                            o && (n = t.timeStamp), r && n && t.timeStamp - n < 350 || s.touchStarted || (v(this), s.touchStarted = !0, s.touchMoved = !1, s.swipeOutBounded = !1, s.startX = e(t), s.startY = i(t), s.currentX = 0, s.currentY = 0, s.touchStartTime = t.timeStamp, s.touchHoldTimer = setTimeout((function() {
+                            o && (n = t.timeStamp), r && n && t.timeStamp - n < 350 || s.touchStarted || (m(this), s.touchStarted = !0, s.touchMoved = !1, s.swipeOutBounded = !1, s.startX = e(t), s.startY = i(t), s.currentX = 0, s.currentY = 0, s.touchStartTime = t.timeStamp, s.touchHoldTimer = setTimeout((function() {
                                 s.touchHoldTimer = null, p(t, a, "touchhold")
                             }), s.options.touchHoldTolerance), p(t, this, "start"))
                         }
 
-                        function l(t) {
+                        function c(t) {
                             var s = this.$$touchObj;
                             if (s.currentX = e(t), s.currentY = i(t), s.touchMoved) {
                                 if (!s.swipeOutBounded) {
@@ -2732,9 +2483,9 @@
                             s.touchMoved && p(t, this, "moving")
                         }
 
-                        function c() {
+                        function l() {
                             var t = this.$$touchObj;
-                            f(t), m(this), t.touchStarted = t.touchMoved = !1, t.startX = t.startY = 0
+                            f(t), v(this), t.touchStarted = t.touchMoved = !1, t.startX = t.startY = 0
                         }
 
                         function d(t) {
@@ -2743,13 +2494,13 @@
                                 s = t.type.indexOf("mouse") >= 0;
                             i && (n = t.timeStamp);
                             var o = i && !e.touchHoldTimer;
-                            if (f(e), e.touchStarted = !1, m(this), !(s && n && t.timeStamp - n < 350))
+                            if (f(e), e.touchStarted = !1, v(this), !(s && n && t.timeStamp - n < 350))
                                 if (p(t, this, "end"), e.touchMoved) {
                                     if (!e.swipeOutBounded) {
                                         var r, a = e.options.swipeTolerance,
-                                            l = Math.abs(e.startY - e.currentY),
-                                            c = Math.abs(e.startX - e.currentX);
-                                        (l > a || c > a) && (r = l > a ? e.startY > e.currentY ? "top" : "bottom" : e.startX > e.currentX ? "left" : "right", e.callbacks["swipe." + r] ? p(t, this, "swipe." + r, r) : p(t, this, "swipe", r))
+                                            c = Math.abs(e.startY - e.currentY),
+                                            l = Math.abs(e.startX - e.currentX);
+                                        (c > a || l > a) && (r = c > a ? e.startY > e.currentY ? "top" : "bottom" : e.startX > e.currentX ? "left" : "right", e.callbacks["swipe." + r] ? p(t, this, "swipe." + r, r) : p(t, this, "swipe", r))
                                     }
                                 } else if (e.callbacks.longtap && t.timeStamp - e.touchStartTime > e.options.longTapTimeInterval) t.cancelable && t.preventDefault(), p(t, this, "longtap");
                             else {
@@ -2759,11 +2510,11 @@
                         }
 
                         function h() {
-                            v(this)
+                            m(this)
                         }
 
                         function u() {
-                            m(this)
+                            v(this)
                         }
 
                         function p(t, e, i, s) {
@@ -2776,12 +2527,12 @@
                             }
                         }
 
-                        function v(t) {
+                        function m(t) {
                             var e = t.$$touchObj.options.touchClass;
                             e && t.classList.add(e)
                         }
 
-                        function m(t) {
+                        function v(t) {
                             var e = t.$$touchObj.options.touchClass;
                             e && t.classList.remove(e)
                         }
@@ -2811,8 +2562,8 @@
                                         if (r.left || r.right || r.top || r.bottom) {
                                             for (var p in e.modifiers)
                                                 if (["left", "right", "top", "bottom"].indexOf(p) >= 0) {
-                                                    var v = "swipe." + p;
-                                                    i.callbacks[v] = i.callbacks[v] || [], i.callbacks[v].push(e)
+                                                    var m = "swipe." + p;
+                                                    i.callbacks[m] = i.callbacks[m] || [], i.callbacks[m].push(e)
                                                 }
                                         } else i.callbacks.swipe = i.callbacks.swipe || [], i.callbacks.swipe.push(e);
                                         break;
@@ -2822,10 +2573,10 @@
                                     default:
                                         i.callbacks[o] = i.callbacks[o] || [], i.callbacks[o].push(e)
                                 }
-                                i.hasBindTouchEvents || (t.addEventListener("touchstart", a, n), t.addEventListener("touchmove", l, n), t.addEventListener("touchcancel", c), t.addEventListener("touchend", d), i.options.disableClick || (t.addEventListener("mousedown", a), t.addEventListener("mousemove", l), t.addEventListener("mouseup", d), t.addEventListener("mouseenter", h), t.addEventListener("mouseleave", u)), i.hasBindTouchEvents = !0)
+                                i.hasBindTouchEvents || (t.addEventListener("touchstart", a, n), t.addEventListener("touchmove", c, n), t.addEventListener("touchcancel", l), t.addEventListener("touchend", d), i.options.disableClick || (t.addEventListener("mousedown", a), t.addEventListener("mousemove", c), t.addEventListener("mouseup", d), t.addEventListener("mouseenter", h), t.addEventListener("mouseleave", u)), i.hasBindTouchEvents = !0)
                             },
                             unbind: function(t) {
-                                t.removeEventListener("touchstart", a), t.removeEventListener("touchmove", l), t.removeEventListener("touchcancel", c), t.removeEventListener("touchend", d), t.$$touchObj && !t.$$touchObj.options.disableClick && (t.removeEventListener("mousedown", a), t.removeEventListener("mousemove", l), t.removeEventListener("mouseup", d), t.removeEventListener("mouseenter", h), t.removeEventListener("mouseleave", u)), delete t.$$touchObj
+                                t.removeEventListener("touchstart", a), t.removeEventListener("touchmove", c), t.removeEventListener("touchcancel", l), t.removeEventListener("touchend", d), t.$$touchObj && !t.$$touchObj.options.disableClick && (t.removeEventListener("mousedown", a), t.removeEventListener("mousemove", c), t.removeEventListener("mouseup", d), t.removeEventListener("mouseenter", h), t.removeEventListener("mouseleave", u)), delete t.$$touchObj
                             }
                         }), t.directive(r.namespace + "-class", {
                             bind: function(t, e) {
@@ -2860,4 +2611,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/9457.f3632695e4622d604e1c.js.map
+//# sourceMappingURL=sourcemaps/7859.8c56342f730a1f1dc596.js.map

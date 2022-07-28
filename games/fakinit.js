@@ -82,7 +82,7 @@
                         action: "SlideBannerClicked",
                         label: this.getCampaign(),
                         value: 0
-                    }), this.model.get("url") && window.open(this.model.get("url"), "_blank")
+                    }, !0), this.model.get("url") && window.open(this.model.get("url"), "_blank")
                 },
                 onRender() {
                     this.stickit()
@@ -95,7 +95,7 @@
                         action: "SlideBannerOn",
                         label: this.getCampaign(),
                         value: 0
-                    })
+                    }, !0)
                 },
                 getCampaign() {
                     const t = this.model.get("url");
@@ -176,7 +176,7 @@
             const m = d().View.extend({
                 appId: "legacymain",
                 appTag: "legacymain",
-                appVersion: "4.2.4",
+                appVersion: "4.2.9",
                 template: null,
                 initialize(t) {
                     this.mergeOptions(t, ["appId", "appTag"]), p.app.analytics.setApplication({
@@ -610,4 +610,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/2987.a3a88a08c2c7b1aa3e15.js.map
+//# sourceMappingURL=sourcemaps/2987.bdd675ba7426a80372b0.js.map

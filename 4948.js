@@ -1227,7 +1227,7 @@
                     messages: U
                 },
                 data: () => ({
-                    version: "4.2.4"
+                    version: "4.2.9"
                 }),
                 computed: {
                     isTwitchAuthenticated() {
@@ -1985,16 +1985,18 @@
                             value: t
                         })
                     },
-                    trackConnectEvent() {
-                        this.room && (this.$analytics.trackEvent({
+                    trackConnectEvent(e) {
+                        if (!this.room) return;
+                        const t = {
                             category: "SignIn",
                             action: "roomJoined",
                             label: this.room.appTag
-                        }), this.twitch.user && this.$analytics.trackEvent({
+                        };
+                        this.$analytics.trackEvent(t, !0), this.$analytics.segmentTrack(`${t.category}:${t.action}`, e), this.twitch.user && this.$analytics.trackEvent({
                             category: "SignIn",
                             action: "twitchUserRoomJoined",
                             label: this.room.appTag
-                        }))
+                        })
                     },
                     onCodeInput() {
                         this.code = this.code.replace(/\s/g, ""), this.code = this.code.trim().toUpperCase(), this.code.length < this.codeLength ? this.room = null : this.getRoomInfo()
@@ -2116,7 +2118,7 @@
                             const i = new T.WSClient(t);
                             try {
                                 const a = yield i.connect();
-                                this.$ecast = i, this.$syncEcast(), this.$setSentryTag("role", this.$ecast.role), this.$debug.setup(this.$ecast, this.room), this.trackConnectEvent(), this.$storage.isSupported && (this.$storage.set("name", t.name), this.$storage.set("roomCode", this.code), this.$storage.set("reconnect", `${a.id}:${e}:${a.secret}`)), yield class {
+                                this.$ecast = i, this.$syncEcast(), this.$setSentryTag("role", this.$ecast.role), this.$debug.setup(this.$ecast, this.room), this.trackConnectEvent(t), this.$storage.isSupported && (this.$storage.set("name", t.name), this.$storage.set("roomCode", this.code), this.$storage.set("reconnect", `${a.id}:${e}:${a.secret}`)), yield class {
                                     static load(e) {
                                         return b(this, void 0, void 0, (function*() {
                                             (0, A.c)("[GameLoader] load", e);
@@ -2299,4 +2301,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/4948.d72f51e3423d0453f994.js.map
+//# sourceMappingURL=sourcemaps/4948.4c0a117e9491731eb82c.js.map

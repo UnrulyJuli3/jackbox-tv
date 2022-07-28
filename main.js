@@ -153,11 +153,11 @@
                     var T, M = {},
                         A = /^(?:(?:https?|mailto|ftp):|[^:/?#]*(?:[/?#]|$))/i;
                     e: {
-                        var G = o.navigator;
-                        if (G) {
-                            var $ = G.userAgent;
-                            if ($) {
-                                T = $;
+                        var $ = o.navigator;
+                        if ($) {
+                            var G = $.userAgent;
+                            if (G) {
+                                T = G;
                                 break e
                             }
                         }
@@ -179,11 +179,11 @@
                         U = document,
                         K = navigator,
                         W = U.currentScript && U.currentScript.src,
-                        B = function(e, t) {
+                        J = function(e, t) {
                             var n = R[e];
                             return R[e] = void 0 === n ? t : n, R[e]
                         },
-                        J = {
+                        B = {
                             async: 1,
                             nonce: 1,
                             onerror: 1,
@@ -194,7 +194,7 @@
                         H = function(e, t, n, r) {
                             var i = U.createElement("script");
                             return r && v(r, (function(e, t) {
-                                    e = e.toLowerCase(), J.hasOwnProperty(e) || i.setAttribute(e, t)
+                                    e = e.toLowerCase(), B.hasOwnProperty(e) || i.setAttribute(e, t)
                                 })), i.type = "text/javascript", i.async = !0,
                                 function(e, t) {
                                     e.src = t instanceof I && t.constructor === I ? t.m : "type_error:TrustedResourceUrl";
@@ -624,12 +624,12 @@
                         Te = "https://www.googletagmanager.com/a?id=" + xe.J + "&cv=1",
                         Me = {},
                         Ae = {},
-                        Ge = function() {
+                        $e = function() {
                             var e = Ee.sequence || 1;
                             return Ee.sequence = e + 1, e
                         };
                     xe.Yg = "", xe.ed = "";
-                    var $e = {},
+                    var Ge = {},
                         Ne = new w,
                         Le = {},
                         De = {},
@@ -667,14 +667,14 @@
                             }))
                         },
                         Ke = function(e, t, n) {
-                            $e[e] = $e[e] || {}, $e[e][t] = We(t, n)
+                            Ge[e] = Ge[e] || {}, Ge[e][t] = We(t, n)
                         },
                         We = function(e, t) {
                             var n = 1 !== (void 0 === t ? 2 : t) ? Ve(e) : Ne.get(e);
                             return "array" === X(n) || "object" === X(n) ? ne(n) : n
                         },
-                        Be = new RegExp(/^(.*\.)?(google|youtube|blogger|withgoogle)(\.com?)?(\.[a-z]{2})?\.?$/),
-                        Je = {
+                        Je = new RegExp(/^(.*\.)?(google|youtube|blogger|withgoogle)(\.com?)?(\.[a-z]{2})?\.?$/),
+                        Be = {
                             cl: ["ecl"],
                             customPixels: ["nonGooglePixels"],
                             ecl: ["cl"],
@@ -702,7 +702,7 @@
                         Ze = function(e) {
                             var t = qe("gtm.allowlist") || qe("gtm.whitelist");
                             t && ke(9);
-                            var n = (t = "google gtagfl lcl zone oid op".split(" ")) && S(b(t), Je),
+                            var n = (t = "google gtagfl lcl zone oid op".split(" ")) && S(b(t), Be),
                                 r = qe("gtm.blocklist") || qe("gtm.blacklist");
                             r || (r = qe("tagTypeBlacklist")) && ke(3), r ? ke(8) : r = [], Qe() && (r = b(r)).push("nonGooglePixels", "nonGoogleScripts", "sandboxedScripts"), 0 <= b(r).indexOf("google") && ke(2);
                             var i = r && S(b(r), He),
@@ -745,7 +745,7 @@
                             }
                         },
                         Qe = function() {
-                            return Be.test(R.location && R.location.hostname)
+                            return Je.test(R.location && R.location.hostname)
                         },
                         Ye = {
                             active: !0,
@@ -782,7 +782,7 @@
                         ot = [];
 
                     function st() {
-                        var e = B("google_tag_data", {});
+                        var e = J("google_tag_data", {});
                         return e.ics || (e.ics = {
                             entries: {},
                             set: ct,
@@ -1017,7 +1017,7 @@
                                 port: t.port
                             }
                         };
-                    var At, Gt, $t = function(e, t, n, r) {
+                    var At, $t, Gt = function(e, t, n, r) {
                             return Lt(r) ? function(e, t, n) {
                                 for (var r = [], i = t.split(";"), a = 0; a < i.length; a++) {
                                     var o = i[a].split("="),
@@ -1046,7 +1046,7 @@
                         At = At || function() {
                             var e = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
                             return (e += e.toLowerCase() + "0123456789-_") + "."
-                        }(), Gt = Gt || function() {
+                        }(), $t = $t || function() {
                             for (var e = At, t = {}, n = 0; n < e.length; ++n) t[e[n]] = n;
                             return t
                         }();
@@ -1106,7 +1106,7 @@
                         };
 
                     function Rt() {
-                        var e = B("google_tag_data", {}),
+                        var e = J("google_tag_data", {}),
                             t = e.gl;
                         return t && t.decorators || (t = {
                             decorators: []
@@ -1122,7 +1122,7 @@
                             } var a = r.join("*");
                         if (void 0 !== t) {
                             var o = "xp_" + t,
-                                s = Jt[t](a);
+                                s = Bt[t](a);
                             a = a + "*" + [o, Dt(String(s))].join("*")
                         }
                         return ["1", Wt(a), a].join("*")
@@ -1132,16 +1132,16 @@
                         var n = [R.navigator.userAgent, (new Date).getTimezoneOffset(), Q(), Math.floor(_() / 60 / 1e3) - (void 0 === t ? 0 : t), e].join("*");
                         return qt(n).toString(36)
                     }
-                    var Bt = {},
-                        Jt = (Bt[1] = function(e, t) {
+                    var Jt = {},
+                        Bt = (Jt[1] = function(e, t) {
                             var n = [(new Date).getTimezoneOffset(), Q(), Math.floor(_() / 60 / 1e3) - (void 0 === t ? 0 : t), e].join("*");
                             return qt(n).toString(36)
-                        }, Bt[2] = function(e, t) {
+                        }, Jt[2] = function(e, t) {
                             if (K.userAgentData) {
                                 var n = [(new Date).getTimezoneOffset(), Q(), Math.floor(_() / 60 / 1e3) - (void 0 === t ? 0 : t), K.userAgentData.brands, K.userAgentData.mobile, K.userAgentData.platform, e].join("*");
                                 return qt(n).toString(36)
                             }
-                        }, Bt);
+                        }, Jt);
 
                     function Ht(e, t, n, r) {
                         function i(t) {
@@ -1418,7 +1418,7 @@
                                 }, r.onerror = function() {
                                     r.onerror = null, n && n()
                                 }, r.src = e
-                            }(En(!0)), In[Nn] = !0, An = Gn = $n = Mn = Tn = ""))
+                            }(En(!0)), In[Nn] = !0, An = $n = Gn = Mn = Tn = ""))
                         },
                         En = function(e) {
                             var t = Nn;
@@ -1427,7 +1427,7 @@
                                 r = we("TAGGING");
                             return [jn, In[t] ? "" : "&es=1", Ln[t], void 0, n ? "&u=" + n : "", r ? "&ut=" + r : "", "&tc=" + ce.filter((function(e) {
                                 return e
-                            })).length, Tn, Mn, $n, Gn, void 0, An, "&z=0"].join("")
+                            })).length, Tn, Mn, Gn, $n, void 0, An, "&z=0"].join("")
                         },
                         Cn = function() {
                             jn = Sn()
@@ -1447,8 +1447,8 @@
                         Tn = "",
                         Mn = "",
                         An = "",
-                        Gn = "",
                         $n = "",
+                        Gn = "",
                         Nn = void 0,
                         Ln = {},
                         Dn = {},
@@ -1562,11 +1562,11 @@
                                                 }
                                             }(r, i, n), {
                                                 onSuccess: function() {
-                                                    t[e] = Bn;
+                                                    t[e] = Jn;
                                                     for (var n = 0; n < r.length; n++) r[n]()
                                                 },
                                                 onFailure: function() {
-                                                    t[e] = Jn;
+                                                    t[e] = Bn;
                                                     for (var n = 0; n < i.length; n++) i[n]()
                                                 }
                                             }
@@ -1592,11 +1592,11 @@
                         return a
                     }
 
-                    function Bn(e) {
+                    function Jn(e) {
                         e()
                     }
 
-                    function Jn(e, t) {
+                    function Bn(e, t) {
                         t()
                     }
 
@@ -2075,7 +2075,7 @@
                                 }(i.gaData || i.adData) && Sr(Ir, r)(r.Pa, i, r.options)
                             }
                         },
-                        Gr = function(e, t, n) {
+                        $r = function(e, t, n) {
                             if (ht() && (!n.isGtmEvent || !qr[e])) {
                                 var r = !kt(me.H),
                                     i = function() {
@@ -2084,7 +2084,7 @@
                                             l = c.ja._useUp;
                                         if (n.isGtmEvent || mi(t, c.ja)) {
                                             var u = !0;
-                                            n.isGtmEvent && (i = "gtm" + Ge(), a = c.ja, c.gtmTrackerName && (a.name = i), u = !1, u = !0), u && s((function() {
+                                            n.isGtmEvent && (i = "gtm" + $e(), a = c.ja, c.gtmTrackerName && (a.name = i), u = !1, u = !0), u && s((function() {
                                                 var e = s.getByName(t);
                                                 e && (o = e.get("clientId")), n.isGtmEvent || s.remove(t)
                                             })), s("create", e, n.isGtmEvent ? a : c.ja), r && kt(me.H) && (r = !1, s((function() {
@@ -2098,7 +2098,7 @@
                                 mt(i, me.H), mt(i, me.C), n.isGtmEvent && (qr[e] = !0)
                             }
                         },
-                        $r = function(e, t, n) {
+                        Gr = function(e, t, n) {
                             function r() {
                                 if (m.displayfeatures) {
                                     var e = "_dc_gtm_" + a.replace(/[^A-Za-z0-9-]/g, "");
@@ -2196,7 +2196,7 @@
                                         var i = bn();
                                         i(e + "require", "linker"), i(e + "linker:autoLink", t, n, r)
                                     }(t + ".", e[me.N] || "", void 0 === n ? !!e.use_anchor : "fragment" === n, !!e[me.Kb])
-                                }(k, u), p("set", m.qc), n.isGtmEvent && m.enableLinkId && p("require", "linkid", "linkid.js"), n.isGtmEvent && ht() && Gr(a, u, n);
+                                }(k, u), p("set", m.qc), n.isGtmEvent && m.enableLinkId && p("require", "linkid", "linkid.js"), n.isGtmEvent && ht() && $r(a, u, n);
                                 var x = m.ja[me.Ja] ? m.ja[me.Ja] : void 0;
                                 if (t === me.Wb)
                                     if (n.isGtmEvent) {
@@ -2293,13 +2293,13 @@
                                             }), 1)
                                         }
                                     }
-                                }(), _n(u + ".")), 0 != m.sendPageView && p("send", "pageview", m.ka), Gr(a, u, n)) : t === me.Ia ? function(e, t) {
+                                }(), _n(u + ".")), 0 != m.sendPageView && p("send", "pageview", m.ka), $r(a, u, n)) : t === me.Ia ? function(e, t) {
                                     var n = t.getWithConfig(me.Ka),
                                         r = t.getWithConfig(me.Wa),
                                         i = t.getWithConfig(n);
                                     if (void 0 === i) {
                                         var a = void 0;
-                                        Rr.hasOwnProperty(n) ? a = Rr[n] : Jr.hasOwnProperty(n) && (a = Jr[n]), 1 === a && (a = ri(n)), l(a) ? bn()((function() {
+                                        Rr.hasOwnProperty(n) ? a = Rr[n] : Br.hasOwnProperty(n) && (a = Br[n]), 1 === a && (a = ri(n)), l(a) ? bn()((function() {
                                             var t = bn().getByName(e).get(a);
                                             r(t)
                                         })) : r(void 0)
@@ -2332,7 +2332,7 @@
                                     } else e({})
                                 }(e, t)
                             }((function() {
-                                $r(e, t, r)
+                                Gr(e, t, r)
                             }), [me.H, me.C])
                         },
                         Lr = function(e, t) {
@@ -2371,15 +2371,15 @@
                         Wr = Object.freeze({
                             anonymize_ip: 1
                         }),
-                        Br = {},
-                        Jr = Object.freeze((Br.campaign = {
+                        Jr = {},
+                        Br = Object.freeze((Jr.campaign = {
                             content: "campaignContent",
                             id: "campaignId",
                             medium: "campaignMedium",
                             name: "campaignName",
                             source: "campaignSource",
                             term: "campaignKeyword"
-                        }, Br.app_id = 1, Br.app_installer_id = 1, Br.app_name = 1, Br.app_version = 1, Br.description = "exDescription", Br.fatal = "exFatal", Br.language = 1, Br.page_hostname = "hostname", Br.transport_type = "transport", Br[me.aa] = "currencyCode", Br[me.wf] = 1, Br[me.nb] = "location", Br[me.Yd] = "page", Br[me.La] = "referrer", Br[me.Tc] = "title", Br[me.Df] = 1, Br[me.pb] = 1, Br)),
+                        }, Jr.app_id = 1, Jr.app_installer_id = 1, Jr.app_name = 1, Jr.app_version = 1, Jr.description = "exDescription", Jr.fatal = "exFatal", Jr.language = 1, Jr.page_hostname = "hostname", Jr.transport_type = "transport", Jr[me.aa] = "currencyCode", Jr[me.wf] = 1, Jr[me.nb] = "location", Jr[me.Yd] = "page", Jr[me.La] = "referrer", Jr[me.Tc] = "title", Jr[me.Df] = 1, Jr[me.pb] = 1, Jr)),
                         Hr = {},
                         zr = Object.freeze((Hr.content_id = 1, Hr.event_action = 1, Hr.event_category = 1, Hr.event_label = 1, Hr.link_attribution = 1, Hr.name = 1, Hr[me.fa] = 1, Hr[me.vf] = 1, Hr[me.Lb] = 1, Hr[me.ca] = 1, Hr)),
                         Zr = Object.freeze({
@@ -2471,7 +2471,7 @@
                                     var b;
                                     if (b = g !== me.ba ? r(g) : Ct(n, g), zr.hasOwnProperty(g)) ni(zr[g], g, b, i);
                                     else if (Wr.hasOwnProperty(g)) ni(Wr[g], g, b, o);
-                                    else if (Jr.hasOwnProperty(g)) ni(Jr[g], g, b, a);
+                                    else if (Br.hasOwnProperty(g)) ni(Br[g], g, b, a);
                                     else if (Rr.hasOwnProperty(g)) ni(Rr[g], g, b, s);
                                     else if (/^(dimension|metric|content_group)\d+$/.test(g)) ni(1, g, b, a);
                                     else if (g === me.ba) {
@@ -2709,7 +2709,7 @@
                                 if (On && !Dn[c]) {
                                     c !== Nn && (xn(), Nn = c);
                                     var d = l + "." + Math.floor(o - a) + "." + Math.floor(u);
-                                    Gn = Gn ? Gn + "," + d : "&cl=" + d
+                                    $n = $n ? $n + "," + d : "&cl=" + d
                                 }
                                 delete _i[i.containerId]
                             }
@@ -2906,8 +2906,8 @@
                                 Mi[t[n]] = r, 0 > r.indexOf(e) && r.push(e)
                             }
                         },
-                        Gi = "HA GF G UA AW DC".split(" "),
-                        $i = !1,
+                        $i = "HA GF G UA AW DC".split(" "),
+                        Gi = !1,
                         Ni = !1;
 
                     function Li(e, t) {
@@ -2919,14 +2919,14 @@
 
                     function Di(e) {
                         return e.hasOwnProperty("gtm.uniqueEventId") || Object.defineProperty(e, "gtm.uniqueEventId", {
-                            value: Ge()
+                            value: $e()
                         }), e["gtm.uniqueEventId"]
                     }
 
                     function Fi() {
-                        return $i || Ee.gtagRegistered || ($i = Ee.gtagRegistered = !0, Ee.addTargetToGroup = function(e) {
+                        return Gi || Ee.gtagRegistered || (Gi = Ee.gtagRegistered = !0, Ee.addTargetToGroup = function(e) {
                             Ai(e, "default")
-                        }), $i
+                        }), Gi
                     }
                     var qi = {
                             config: function(e) {
@@ -2944,7 +2944,7 @@
                                                     var r = n.indexOf(e);
                                                     0 <= r && n.splice(r, 1)
                                                 }))
-                                            }(i.id), Ai(i.id, r[me.Ud] || "default"), delete r[me.Ud], Ni || ke(43), Fi() && -1 !== Gi.indexOf(i.prefix)) return "G" === i.prefix && (r[me.ic] = !0), delete r[me.Hb], void
+                                            }(i.id), Ai(i.id, r[me.Ud] || "default"), delete r[me.Ud], Ni || ke(43), Fi() && -1 !== $i.indexOf(i.prefix)) return "G" === i.prefix && (r[me.ic] = !0), delete r[me.Hb], void
                                         function(e, t) {
                                             bi().push("config", [e], t)
                                         }(r, i.id);
@@ -2962,7 +2962,7 @@
                                 }
                                 if (3 === e.length) {
                                     ke(39);
-                                    var n = Ge(),
+                                    var n = $e(),
                                         r = e[1];
                                     "default" === r ? (t(), yt(e[2])) : "update" === r && (t(), wt(e[2], n))
                                 }
@@ -3007,7 +3007,7 @@
                                     if (!p) return;
                                     for (var h = Fi(), g = [], m = 0; h && m < p.length; m++) {
                                         var b = p[m];
-                                        if (-1 !== Gi.indexOf(b.prefix)) {
+                                        if (-1 !== $i.indexOf(b.prefix)) {
                                             var y = ne(n);
                                             "G" === b.prefix && (y[me.ic] = !0), delete y[me.Hb], yi(t, y, b.id)
                                         }
@@ -3021,8 +3021,8 @@
                                     var t = Er(e[1]),
                                         n = String(e[2]),
                                         r = e[3];
-                                    if (t && (Ni || ke(43), Fi() && -1 !== Gi.indexOf(t.prefix))) {
-                                        Ge();
+                                    if (t && (Ni || ke(43), Fi() && -1 !== $i.indexOf(t.prefix))) {
+                                        $e();
                                         var i = {};
                                         ne((i[me.Ka] = n, i[me.Wa] = r, i)),
                                             function(e, t, n, r) {
@@ -3048,7 +3048,7 @@
                             set: function(e) {
                                 var t;
                                 if (2 == e.length && te(e[1]) ? t = ne(e[1]) : 3 == e.length && l(e[1]) && (t = {}, te(e[2]) || d(e[2]) ? t[e[1]] = ne(e[2]) : t[e[1]] = e[2]), t) {
-                                    if (Ge(), Fi()) {
+                                    if ($e(), Fi()) {
                                         ne(t);
                                         var n = ne(t);
                                         bi().push("set", [n])
@@ -3073,15 +3073,15 @@
                     Ri.prototype.getUntrustedUpdateValue = Ri.prototype.Ai;
                     var Ki = [],
                         Wi = !1,
-                        Bi = !1;
+                        Ji = !1;
 
-                    function Ji(e) {
+                    function Bi(e) {
                         var t = e._clear;
                         v(e, (function(e, n) {
                             "_clear" !== e && (t && Re(e, void 0), Re(e, n))
                         })), je || (je = e["gtm.start"]);
                         var n = e["gtm.uniqueEventId"];
-                        return !!e.event && (n || (n = Ge(), e["gtm.uniqueEventId"] = n, Re("gtm.uniqueEventId", n)), Qn(e))
+                        return !!e.event && (n || (n = $e(), e["gtm.uniqueEventId"] = n, Re("gtm.uniqueEventId", n)), Qn(e))
                     }
 
                     function Hi() {
@@ -3096,7 +3096,7 @@
                     }
 
                     function zi() {
-                        for (var e = !1; !Bi && 0 < Ki.length;) {
+                        for (var e = !1; !Ji && 0 < Ki.length;) {
                             if (!Wi && Hi()) {
                                 var t = {},
                                     n = (t.event = "gtm.init_consent", t),
@@ -3105,7 +3105,7 @@
                                     a = Ki[0]["gtm.uniqueEventId"];
                                 a && (n["gtm.uniqueEventId"] = a - 2, i["gtm.uniqueEventId"] = a - 1), Ki.unshift(n, i), Wi = !0
                             }
-                            Bi = !0, delete Le.eventModel, Ue();
+                            Ji = !0, delete Le.eventModel, Ue();
                             var o = Ki.shift();
                             if (null != o) {
                                 var s = Ui(o);
@@ -3146,17 +3146,17 @@
                                                 o = void 0
                                             }
                                             if (!o) {
-                                                Bi = !1;
+                                                Ji = !1;
                                                 continue
                                             }
                                         }
-                                        e = Ji(o) || e
+                                        e = Bi(o) || e
                                     }
                                 } finally {
                                     s && Ue(!0)
                                 }
                             }
-                            Bi = !1
+                            Ji = !1
                         }
                         return !e
                     }
@@ -3201,7 +3201,7 @@
                         };
                     ta.g.e = ["google"], ta.__e = function(e) {
                         var t = String(function(e, t) {
-                            if ($e[e]) return $e[e].event
+                            if (Ge[e]) return Ge[e].event
                         }(e.vtp_gtmEventId));
                         return e.vtp_gtmCachedValues && (t = String(e.vtp_gtmCachedValues.event)), t
                     }, ta.__e.h = "e", ta.__e.isVendorTemplate = !0, ta.__e.priorityOverride = 0, ta.g.v = ["google"], ta.__v = function(e) {
@@ -3257,7 +3257,7 @@
                                     t = "cct.google" === jt(n, "host")
                                 }
                                 if (!t) {
-                                    var r = $t("googTaggyReferrer");
+                                    var r = Gt("googTaggyReferrer");
                                     t = r.length && r[0].length
                                 }
                                 t && (R.__TAGGY_INSTALLED = !0, H("https://cct.google/taggy/agent.js"))
@@ -3268,7 +3268,7 @@
                                 "tagassistant.google.com" === jt(a, "host") && (i = 3)
                             }
                             if (!i) {
-                                var o = $t("__TAG_ASSISTANT");
+                                var o = Gt("__TAG_ASSISTANT");
                                 o.length && o[0].length && (i = 4)
                             }
                             i || Yi(U.documentElement.getAttribute("data-tag-assistant-present")) && (i = 5), i && W ? function(t) {
@@ -3300,8 +3300,8 @@
                                     oe.push(f)
                                 }
                                 if (ue = ta, q = Ti, Ee[xe.J] = na, E(Ae, ta.g), V = ge, function() {
-                                        var e = B("dataLayer", []),
-                                            t = B("google_tag_manager", {});
+                                        var e = J("dataLayer", []),
+                                            t = J("google_tag_manager", {});
                                         t = t.dataLayer = t.dataLayer || {},
                                             function(e) {
                                                 an ? e() : sn.push(e)
@@ -3465,7 +3465,7 @@
                         d.o.setup(), S.locale = d.o.locale, this.$setSentryTag("app", "entry"), this.$analytics.setApplication({
                             appTag: "SignIn",
                             appId: "signin",
-                            appVersion: "4.2.4"
+                            appVersion: "4.2.9"
                         })
                     },
                     computed: {
@@ -3516,6 +3516,9 @@
                     },
                     twitch: {
                         clientId: ""
+                    },
+                    segment: {
+                        writeKey: ""
                     }
                 }, {
                     debug: !1,
@@ -3540,6 +3543,9 @@
                     },
                     twitch: {
                         clientId: "yn2iepd23vskpmkzgeg2lkfsct7gsc"
+                    },
+                    segment: {
+                        writeKey: "5jpRh5iJsedO3JHHfKe9TZkl2FwxQLom"
                     }
                 })
             },
@@ -3582,7 +3588,7 @@
                         app: "vue",
                         tag: "prototype",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(9623), n.e(5853), n.e(2530), n.e(3317), n.e("games/prototype")]).then(n.bind(n, 87986))
+                            return Promise.all([n.e(9623), n.e(5853), n.e(572), n.e(2530), n.e("games/prototype")]).then(n.bind(n, 87986))
                         }))
                     }, {
                         name: "EcastTestClient",
@@ -3922,7 +3928,7 @@
                         categoryId: "JobGameGame",
                         hasPreviews: !0,
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(9980), n.e(5853), n.e(7381), n.e("games/apply-yourself")]).then(n.bind(n, 24872))
+                            return Promise.all([n.e(9980), n.e(5853), n.e("games/apply-yourself")]).then(n.bind(n, 24872))
                         }))
                     }, {
                         name: "The Wheel of Enormous Proportions",
@@ -3930,7 +3936,7 @@
                         tag: "the-wheel",
                         categoryId: "TheWheelGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(7416), n.e(1978), n.e(8990), n.e(5853), n.e(7381), n.e("games/the-wheel")]).then(n.bind(n, 21057))
+                            return Promise.all([n.e(7416), n.e(1978), n.e(8990), n.e(5853), n.e(572), n.e("games/the-wheel")]).then(n.bind(n, 21057))
                         }))
                     }, {
                         name: "The Poll Mine",
@@ -3938,7 +3944,7 @@
                         tag: "survey-bomb",
                         categoryId: "SurveyBombGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(5853), n.e(7381), n.e("games/survey-bomb")]).then(n.bind(n, 81988))
+                            return Promise.all([n.e(5853), n.e("games/survey-bomb")]).then(n.bind(n, 81988))
                         }))
                     }, {
                         name: "Weapons Drawn",
@@ -3947,7 +3953,7 @@
                         features: ["moderation"],
                         categoryId: "MurderDetectivesGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(9623), n.e(5853), n.e(7381), n.e(2530), n.e("games/murder-detectives")]).then(n.bind(n, 28274))
+                            return Promise.all([n.e(9623), n.e(5853), n.e(2530), n.e(4396), n.e("games/murder-detectives")]).then(n.bind(n, 28274))
                         }))
                     }, {
                         name: "Drawful Animate",
@@ -3956,7 +3962,7 @@
                         features: ["moderation"],
                         categoryId: "DrawfulAnimateGame",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(9623), n.e(7611), n.e(5853), n.e(7381), n.e(2530), n.e("games/drawful-animate")]).then(n.bind(n, 66333))
+                            return Promise.all([n.e(9623), n.e(7611), n.e(5853), n.e(2530), n.e(4396), n.e("games/drawful-animate")]).then(n.bind(n, 66333))
                         }))
                     }, {
                         name: "Quiplash 3",
@@ -3964,7 +3970,7 @@
                         tag: "quiplash3-tjsp",
                         features: ["moderation"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(7416), n.e(5853), n.e(7381), n.e(2828), n.e("games/quiplash3-tjsp")]).then(n.bind(n, 64785))
+                            return Promise.all([n.e(7416), n.e(5853), n.e(1512), n.e("games/quiplash3-tjsp")]).then(n.bind(n, 64785))
                         }))
                     }, {
                         name: "Tee K.O.",
@@ -3973,14 +3979,14 @@
                         features: ["moderation"],
                         shopItems: ["shirts"],
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(2529), n.e(5853), n.e(7381), n.e(3317), n.e("games/awshirt-tjsp")]).then(n.bind(n, 12659))
+                            return Promise.all([n.e(2529), n.e(5853), n.e(572), n.e("games/awshirt-tjsp")]).then(n.bind(n, 12659))
                         }))
                     }, {
                         name: "Trivia Murder Party 2",
                         app: "vue",
                         tag: "triviadeath2-tjsp",
                         importFn: () => r(void 0, void 0, void 0, (function*() {
-                            return Promise.all([n.e(7416), n.e(4442), n.e(5853), n.e(7381), n.e(3317), n.e(2828), n.e("games/triviadeath2-tjsp")]).then(n.bind(n, 87383))
+                            return Promise.all([n.e(7416), n.e(4442), n.e(5853), n.e(572), n.e(1512), n.e("games/triviadeath2-tjsp")]).then(n.bind(n, 8406))
                         }))
                     }],
                     o = e => i.includes(e),
@@ -3989,11 +3995,12 @@
             70236: (e, t, n) => {
                 "use strict";
                 n.d(t, {
-                    c: () => a
+                    c: () => o
                 });
                 var r = n(2720),
-                    i = n(89768);
-                class a {
+                    i = n(89768),
+                    a = n(88651);
+                class o {
                     constructor() {
                         try {
                             window.dataLayer = window.dataLayer || [], this.gtag = function() {
@@ -4004,6 +4011,9 @@
                         } catch (e) {
                             console.error("[Analytics] Error connecting to Google Tags", e)
                         }
+                        this.segmentAnalytics = a.b.load({
+                            writeKey: r.v.segment.writeKey
+                        })
                     }
                     setApplication(e) {
                         if (!this.gtag) return;
@@ -4016,12 +4026,12 @@
                             send_to: r.v.analytics.trackingId
                         }), (0, i.c)(`[Analytics] trackScreenView ${e}`))
                     }
-                    trackEvent(e) {
-                        var t;
-                        this.gtag && (this.gtag("event", e.action, {
+                    trackEvent(e, t) {
+                        var n;
+                        t || this.segmentTrack(`${e.category}:${e.action}`, e), this.gtag && (this.gtag("event", e.action, {
                             value: e.value || 0,
                             event_category: e.category,
-                            event_label: null !== (t = e.label) && void 0 !== t ? t : "",
+                            event_label: null !== (n = e.label) && void 0 !== n ? n : "",
                             send_to: r.v.analytics.trackingId
                         }), (0, i.c)(`[Analytics] trackEvent ${e.category} ${e.action} ${e.label}`))
                     }
@@ -4040,11 +4050,17 @@
                             send_to: r.v.analytics.trackingId
                         }), (0, i.c)(`[Analytics] trackTiming ${e.name} ${e.value}`))
                     }
+                    segmentIdentify(e, t) {
+                        this.segmentAnalytics && this.segmentAnalytics.identify(e, t)
+                    }
+                    segmentTrack(e, t) {
+                        this.segmentAnalytics && this.segmentAnalytics.track(e, t)
+                    }
                     static get shared() {
-                        return a.sharedInstance || (a.sharedInstance = new a), a.sharedInstance
+                        return o.sharedInstance || (o.sharedInstance = new o), o.sharedInstance
                     }
                 }
-                a.shared
+                o.shared
             },
             81127: (e, t, n) => {
                 "use strict";
@@ -4318,7 +4334,7 @@
                                 c = `${r} ${1===r?"entity":"entities"}`,
                                 l = [{
                                     type: "mrkdwn",
-                                    text: "*Version:* 4.2.4"
+                                    text: "*Version:* 4.2.9"
                                 }, {
                                     type: "mrkdwn",
                                     text: `*Domain:* ${window.location.hostname}`
@@ -4876,7 +4892,7 @@
                             environment: s.c.clientEnvironment,
                             ignoreErrors: ["ceCurrentVideo.currentTime", "chrome-extension", "ResizeObserver", "webkitExitFullScreen", "window.webkit.messageHandlers.selectedTextHandler.postMessage", "promiseResolveThenableJob", "Cannot read property 'then' of undefined", "null is not an object (evaluating 't.scrollHeight')", "Cannot read properties of null (reading 'removeEventListener')"],
                             logErrors: !0,
-                            release: "jackbox-tv@4.2.4",
+                            release: "jackbox-tv@4.2.9",
                             beforeSend: (e, t) => {
                                 return n = this, r = void 0, c = function*() {
                                     if (t.originalException instanceof a.EcastEntityNotFound) return i.uT("no entity found having key", {
@@ -4973,7 +4989,7 @@
                             const r = null !== (t = null === (e = this.error.event) || void 0 === e ? void 0 : e.event_id) && void 0 !== t ? t : "Unknown";
                             let i = "";
                             const a = null === (n = this.error.hint) || void 0 === n ? void 0 : n.originalException;
-                            return i = a ? "string" == typeof a ? a : a.message : "An unknown error occured", `Version:\n4.2.4\n\nEvent ID:\n${r}\n\n${i}`
+                            return i = a ? "string" == typeof a ? a : a.message : "An unknown error occured", `Version:\n4.2.9\n\nEvent ID:\n${r}\n\n${i}`
                         }
                     },
                     methods: {
@@ -5298,7 +5314,99 @@
             enumerable: !0,
             get: t[n]
         })
-    }, l.f = {}, l.e = e => Promise.all(Object.keys(l.f).reduce(((t, n) => (l.f[n](e, t), t)), [])), l.u = e => e + ".js", l.miniCssF = e => e + ".css", l.g = function() {
+    }, l.f = {}, l.e = e => Promise.all(Object.keys(l.f).reduce(((t, n) => (l.f[n](e, t), t)), [])), l.u = e => (({
+        3096: "queryString",
+        5826: "middleware",
+        7493: "schemaFilter",
+        8119: "auto-track",
+        8150: "legacyVideos",
+        9214: "remoteMiddleware",
+        9464: "ajs-destination"
+    } [e] || e) + "." + {
+        38: "6ab163f8816a2d0d257d",
+        382: "2a71f21c977e051a602a",
+        524: "190fb43a0ad52f0fd539",
+        572: "7f6c862b84567c697aa8",
+        834: "288352f2c65f46de79c7",
+        972: "95dac8993bf14ef71634",
+        977: "5da34009f30993f107eb",
+        990: "6d57f4c313c0c58d00d7",
+        1024: "ac79cbb44f7badcb18ce",
+        1057: "13174ac8f8c473e7e750",
+        1099: "d4deb4443f83db287702",
+        1304: "c6a78a7e2dae1611bc36",
+        1447: "9e59de10203fcfdfb278",
+        1512: "ad4d3c9e32d8267c799b",
+        1571: "9182da4f04159f0a002e",
+        1791: "fcbdff8a7083072e2cf5",
+        1882: "c7e8a8bbe18ce3b7c753",
+        1916: "7355acd5f5cd895479d1",
+        1978: "eea835c18a16bd2a0798",
+        1988: "330932b7753193086f8b",
+        2104: "99bbf64b31f52e3d0f17",
+        2265: "3c132874f3e7407a1c8f",
+        2427: "70259103259802ae47b4",
+        2529: "18b5d2c0a0903bc58e40",
+        2530: "1081d1b94dc700d4d21b",
+        2639: "65bd8bdebe0eb5e1276e",
+        2659: "a13083534e886e9e810f",
+        2987: "bdd675ba7426a80372b0",
+        3096: "8272d80cf579e5bd58ba",
+        3119: "7bc5f257343514b0dd08",
+        3191: "8e4469083b2747848475",
+        3632: "456e725f6703348f3c73",
+        3718: "675fd0757de156722f62",
+        4036: "59c341771cb9cd59f359",
+        4340: "7d372300ce6bc90f10ce",
+        4396: "d4367a28dc99ac83ff97",
+        4442: "3b27229aa246df0fd7b8",
+        4872: "9d6d0518f4ea486c2af6",
+        4948: "4c0a117e9491731eb82c",
+        5022: "ca087b0e1a4d4462145c",
+        5157: "ba169dde0364583813f7",
+        5519: "0d3a62b336b06c4119b5",
+        5826: "bf535e1849dc5625232a",
+        5853: "a999ac848425d660b820",
+        5863: "64a8c2bdcbfe25aa47aa",
+        5988: "8bcc28dd94ea011fcf73",
+        6024: "d6a6377005d52d001081",
+        6190: "3bae97ddea547026f740",
+        6244: "d0d8480c801e1082b7bd",
+        6368: "566637434f26f9004f9f",
+        6390: "ab49db8f7ddfd23779ef",
+        6507: "0af62b1ee9526df37bf8",
+        6533: "d9ce436275e92ab0e637",
+        6656: "c46ca8ff89f591a3157a",
+        7088: "35a708f56c71a06e6619",
+        7263: "c19266bd64940cc8584f",
+        7265: "73ee6eb8be97c8016ca9",
+        7342: "9b107183632ee523594c",
+        7411: "e2425ca6ae97bd0c893b",
+        7416: "e7b86b10c9329fa78a68",
+        7493: "6208dc91aa78fa3e121b",
+        7611: "9adaad213db43a3256d2",
+        7786: "e4905a9fb46c5e6d5f66",
+        7859: "8c56342f730a1f1dc596",
+        7879: "8b167b86774326bc3c99",
+        7986: "a5416026dd9aa948591c",
+        8049: "fb6ed963bc18ebc8bce8",
+        8081: "a65401f58ac05e53ab95",
+        8119: "8cad8ff57b5870e9383c",
+        8150: "35d033fffa5f3396c230",
+        8428: "a5e232285575e1ae4588",
+        8990: "d157e476aaecb25bea97",
+        9039: "cf5c291965040f8a8b16",
+        9082: "a63a51cc6834ce845ecf",
+        9115: "ab69ffb55abe06904abc",
+        9187: "1b7b3d898938e4f5f3a8",
+        9214: "093dc150e11e590e3d71",
+        9464: "6ddf22d358735ec78d36",
+        9618: "6de4a0f25f5cafdb1c87",
+        9623: "e9d2ff246e09733d2594",
+        9725: "e12e744ac64bd6eafa54",
+        9805: "3ded6da0d04733e72512",
+        9980: "3c7566ab8fe818d30c1a"
+    } [e] + ".js"), l.miniCssF = e => e + ".css", l.g = function() {
         if ("object" == typeof globalThis) return globalThis;
         try {
             return this || new Function("return this")()
@@ -5384,22 +5492,26 @@
             972: 1,
             "games/wordspud": 1,
             "games/ecast-test-client": 1,
+            "games/the-wheel": 1,
             "games/drawful": 1,
             "games/fibbage": 1,
+            "games/drawful-animate": 1,
             "games/auction": 1,
             "games/fibbage2": 1,
             "games/survivetheinternet": 1,
+            "games/survey-bomb": 1,
             2104: 1,
             2265: 1,
             "games/quiplash3-tjsp": 1,
             "games/bracketeering": 1,
-            "games/apply-yourself": 1,
+            "games/awshirt-tjsp": 1,
             "games/fakinit": 1,
             "games/lieswatter": 1,
             "games/bombintern": 1,
+            "games/triviadeath2-tjsp": 1,
             "games/ridictionary": 1,
             "games/ydkj2018": 1,
-            "games/awshirt-tjsp": 1,
+            "games/apply-yourself": 1,
             4948: 1,
             "games/guesspionage-crowdplay": 1,
             "games/fibbage3": 1,
@@ -5407,22 +5519,20 @@
             "games/splittheroom": 1,
             "games/jokeboat": 1,
             "games/earwax": 1,
-            "games/triviadeath2-tjsp": 1,
             "games/quiplash2": 1,
             "games/rapbattle": 1,
             6368: 1,
             "games/quiplash3": 1,
             "games/overdrawn": 1,
             "games/monstermingle": 1,
-            "games/the-wheel": 1,
             "games/quiplash": 1,
             "games/rolemodels": 1,
             "games/patentlystupid": 1,
             "games/worldchamps": 1,
             "games/triviadeath": 1,
             "games/drawful2": 1,
-            "games/drawful-animate": 1,
             "games/quiplash2-international": 1,
+            "games/murder-detectives": 1,
             "games/pollposition": 1,
             "games/prototype": 1,
             "games/jackbox-talks": 1,
@@ -5432,8 +5542,6 @@
             "games/drawful2international": 1,
             "games/blanky-blank": 1,
             "games/triviadeath2": 1,
-            "games/survey-bomb": 1,
-            "games/murder-detectives": 1,
             "games/slingshoot": 1,
             "games/everyday": 1,
             "games/acquisitions-inc": 1
@@ -5476,7 +5584,7 @@
             n = self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || [];
         n.forEach(t.bind(null, 0)), n.push = t.bind(null, n.push.bind(n))
     })();
-    var u = l.O(void 0, [5221], (() => l(61966)));
+    var u = l.O(void 0, [9023], (() => l(61966)));
     u = l.O(u)
 })();
-//# sourceMappingURL=sourcemaps/main.c6470b53c02689ac3a08.js.map
+//# sourceMappingURL=sourcemaps/main.87609c1fd5f67b0f21e2.js.map

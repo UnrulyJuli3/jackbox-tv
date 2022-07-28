@@ -1,258 +1,9 @@
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     ["games/drawful-animate"], {
-        94835: (t, e, s) => {
-            "use strict";
-            s.d(e, {
-                Z: () => d
-            });
-            var i = function() {
-                var t = this,
-                    e = t.$createElement,
-                    s = t._self._c || e;
-                return s("div", {
-                    directives: [{
-                        name: "touch",
-                        rawName: "v-touch:swipe",
-                        value: t.swipeHandler,
-                        expression: "swipeHandler",
-                        arg: "swipe"
-                    }],
-                    staticClass: "tutorial"
-                }, [s("div", {
-                    staticClass: "container"
-                }, [s("svg", {
-                    staticClass: "ratio-svg",
-                    attrs: {
-                        width: "2",
-                        height: "3"
-                    }
-                }), t._v(" "), t._l(t.slides, (function(e, i) {
-                    return s("div", {
-                        key: i,
-                        staticClass: "slide",
-                        class: t.slideClasses[i]
-                    }, [s("div", {
-                        staticClass: "text"
-                    }, [s("h3", {
-                        staticClass: "title"
-                    }, [t._v(t._s(e.title))]), t._v(" "), e.listItems ? s("ul", t._l(e.listItems, (function(e, i) {
-                        return s("li", {
-                            key: i
-                        }, [t._v(t._s(e))])
-                    })), 0) : t._e()]), t._v(" "), e.imageClass ? s("div", {
-                        staticClass: "image",
-                        class: e.imageClass
-                    }) : t._e(), t._v(" "), e.arrow ? s("div", {
-                        staticClass: "arrow",
-                        style: e.arrow
-                    }, [s("svg", {
-                        attrs: {
-                            viewBox: "0 0 50 50"
-                        }
-                    }, [s("path", {
-                        attrs: {
-                            d: "M -50,0 L 0,0",
-                            "vector-effect": "non-scaling-stroke"
-                        }
-                    }), t._v(" "), s("path", {
-                        attrs: {
-                            d: "M -25,-20 L 0,0 L -25,20",
-                            "vector-effect": "non-scaling-stroke"
-                        }
-                    })])]) : t._e()])
-                })), t._v(" "), s("div", {
-                    staticClass: "dots"
-                }, t._l(t.slides.length, (function(e) {
-                    return s("button", {
-                        key: e,
-                        staticClass: "dot",
-                        class: {
-                            current: t.currentIndex === e - 1
-                        },
-                        on: {
-                            click: function(s) {
-                                return t.onDotClick(e - 1)
-                            }
-                        }
-                    })
-                })), 0), t._v(" "), s("div", {
-                    staticClass: "buttons"
-                }, [t.isFinalSlide ? t._e() : s("button", {
-                    staticClass: "skip",
-                    on: {
-                        click: t.onDoneClick
-                    }
-                }, [t._v(t._s(t.$t("TUTORIAL.BUTTON_SKIP")))]), t._v(" "), t.isFinalSlide ? s("button", {
-                    staticClass: "done",
-                    on: {
-                        click: t.onDoneClick
-                    }
-                }, [t._v(t._s(t.$t("TUTORIAL.BUTTON_DONE")))]) : s("button", {
-                    staticClass: "next",
-                    on: {
-                        click: t.onNextClick
-                    }
-                }, [t._v(t._s(t.$t("TUTORIAL.BUTTON_NEXT")))])])], 2)])
-            };
-            i._withStripped = !0;
-            var a = s(2934),
-                n = s.n(a),
-                o = s(78627),
-                r = s.n(o),
-                l = s(65853);
-            n().use(r());
-            const c = n().extend({
-                props: {
-                    slides: Array
-                },
-                i18n: {
-                    messages: l.s
-                },
-                data: () => ({
-                    currentIndex: 0
-                }),
-                computed: {
-                    isFinalSlide() {
-                        return this.currentIndex === this.slides.length - 1
-                    },
-                    slideClasses() {
-                        return this.slides.map(((t, e) => e < this.currentIndex ? ["left"] : e > this.currentIndex ? ["right"] : ["current"]))
-                    }
-                },
-                methods: {
-                    swipeHandler(t) {
-                        if ("right" === t) {
-                            if (0 === this.currentIndex) return;
-                            this.currentIndex -= 1
-                        }
-                        if ("left" === t) {
-                            if (this.isFinalSlide) return void this.onDoneClick();
-                            this.currentIndex += 1
-                        }
-                    },
-                    onPointerMoved() {},
-                    onPointerUp() {},
-                    onNextClick() {
-                        this.isFinalSlide ? this.onDoneClick() : this.currentIndex += 1
-                    },
-                    onDotClick(t) {
-                        this.currentIndex = t
-                    },
-                    onDoneClick() {
-                        this.$emit("tutorialComplete")
-                    }
-                }
-            });
-            var u = (0, s(51900).Z)(c, i, [], !1, null, "2df46cec", null);
-            u.options.__file = "src/apps/vue/components/Tutorial.vue";
-            const d = u.exports
-        },
-        17819: (t, e, s) => {
-            "use strict";
-            s.d(e, {
-                Z: () => u
-            });
-            var i = function() {
-                var t = this,
-                    e = t.$createElement,
-                    s = t._self._c || e;
-                return s("div", {
-                    staticClass: "draw"
-                }, [s("div", {
-                    ref: "content",
-                    staticClass: "content"
-                }, [s("div", {
-                    staticClass: "constrain"
-                }, [t.player.prompt ? s("div", {
-                    directives: [{
-                        name: "bb",
-                        rawName: "v-bb",
-                        value: t.player.prompt,
-                        expression: "player.prompt"
-                    }]
-                }) : t._e(), t._v(" "), s("div", {
-                    ref: "stage",
-                    staticClass: "stage",
-                    style: t.stageDimensions
-                }), t._v(" "), s("button", {
-                    on: {
-                        click: function(e) {
-                            return e.preventDefault(), t.onSubmitClick.apply(null, arguments)
-                        }
-                    }
-                }, [t._v(t._s(t.player.submitText || "SUBMIT"))])])])])
-            };
-            i._withStripped = !0;
-            var a = s(2934),
-                n = s.n(a),
-                o = s(32530),
-                r = s(96486);
-            const l = n().extend({
-                props: {
-                    player: Object
-                },
-                data: () => ({
-                    stage: null,
-                    windowHeight: window.innerHeight,
-                    isSubmitting: !1
-                }),
-                computed: {
-                    stageDimensions() {
-                        if (!this.stage) return {
-                            width: "auto",
-                            height: "auto"
-                        };
-                        const t = this.$refs.content.getBoundingClientRect(),
-                            e = this.$refs.stage,
-                            s = e.getBoundingClientRect(),
-                            i = e.parentElement.getBoundingClientRect(),
-                            a = Math.max(.9 * i.width, 240),
-                            n = Math.max(this.windowHeight - t.height + s.height, 240),
-                            o = this.stage.canvas.width,
-                            r = this.stage.canvas.height,
-                            l = Math.min(a / o, n / r);
-                        return {
-                            width: o * l + "px",
-                            height: r * l + "px"
-                        }
-                    }
-                },
-                mounted() {
-                    this.onResizeWithContext = (0, r.throttle)(this.onResize.bind(this), 400), window.addEventListener("resize", this.onResizeWithContext), this.setupStage()
-                },
-                beforeDestroy() {
-                    window.removeEventListener("resize", this.onResizeWithContext), this.stage && this.stage.beforeDestroy()
-                },
-                methods: {
-                    setupStage() {
-                        const t = this.$refs.stage,
-                            e = {};
-                        this.player.size && (e.width = this.player.size.width, e.height = this.player.size.height), this.player.thicknesses && (e.thickness = this.player.thicknesses[0]), this.player.colors && (e.color = this.player.colors[0]), this.player.maxPoints && (e.maxPoints = this.player.maxPoints), this.stage = new o.U(t, e), this.stage.on("up", (() => {
-                            var t;
-                            if (!this.player.live) return;
-                            const e = (null === (t = this.stage) || void 0 === t ? void 0 : t.getObject()) || {};
-                            e.done = !1, this.$ecast.updateObject(this.player.responseKey, e).catch(this.$handleEcastError)
-                        }))
-                    },
-                    onSubmitClick() {
-                        if (!this.stage) return;
-                        this.isSubmitting = !0, this.stage.canvas.submitting = !0;
-                        const t = this.stage.getObject();
-                        t.done = !0, t.action = "submit", this.$ecast.updateObject(this.player.responseKey, t).catch(this.$handleEcastError)
-                    },
-                    onResize() {
-                        this.windowHeight = window.innerHeight
-                    }
-                }
-            });
-            var c = (0, s(51900).Z)(l, i, [], !1, null, null, null);
-            c.options.__file = "src/apps/vue/components/base/Draw.vue";
-            const u = c.exports
-        },
         66333: (t, e, s) => {
             "use strict";
             s.r(e), s.d(e, {
-                default: () => pt
+                default: () => dt
             });
             var i = function() {
                 var t = this,
@@ -549,7 +300,7 @@
                     l((i = i.apply(t, e || [])).next())
                 }))
             };
-            const d = n().extend({
+            const p = n().extend({
                 props: {
                     player: Object,
                     audience: Boolean,
@@ -610,11 +361,11 @@
                     }
                 }
             });
-            var p = s(51900),
-                h = (0, p.Z)(d, o, [], !1, null, null, null);
+            var d = s(51900),
+                h = (0, d.Z)(p, o, [], !1, null, null, null);
             h.options.__file = "src/games/pp8/drawful-animate/views/Choosing.vue";
-            const v = h.exports;
-            var _ = function() {
+            const _ = h.exports;
+            var v = function() {
                 var t = this,
                     e = t.$createElement,
                     s = t._self._c || e;
@@ -701,10 +452,10 @@
                     }
                 }) : t._e()], 1)
             };
-            _._withStripped = !0;
+            v._withStripped = !0;
             var m = s(17819),
                 y = s(94835),
-                C = function() {
+                E = function() {
                     var t = this,
                         e = t.$createElement,
                         s = t._self._c || e;
@@ -749,8 +500,8 @@
                         }
                     })])])])])
                 };
-            C._withStripped = !0;
-            const g = n().extend({
+            E._withStripped = !0;
+            const C = n().extend({
                 name: "SvgIcon",
                 props: {
                     hex: {
@@ -786,10 +537,10 @@
                     }
                 }
             });
-            var f = (0, p.Z)(g, C, [], !1, null, "96847278", null);
-            f.options.__file = "src/games/pp8/drawful-animate/views/ColorButton.vue";
-            const b = f.exports,
-                E = m.Z.extend({
+            var b = (0, d.Z)(C, E, [], !1, null, "96847278", null);
+            b.options.__file = "src/games/pp8/drawful-animate/views/ColorButton.vue";
+            const f = b.exports,
+                g = m.Z.extend({
                     props: {
                         player: Object
                     },
@@ -798,7 +549,7 @@
                     },
                     components: {
                         Tutorial: y.Z,
-                        ColorButton: b
+                        ColorButton: f
                     },
                     data() {
                         return {
@@ -865,10 +616,10 @@
                         }
                     }
                 });
-            var I = (0, p.Z)(E, _, [], !1, null, null, null);
+            var I = (0, d.Z)(g, v, [], !1, null, null, null);
             I.options.__file = "src/games/pp8/drawful-animate/views/Drawing.vue";
             const T = I.exports;
-            var w = function() {
+            var O = function() {
                 var t = this,
                     e = t.$createElement,
                     s = t._self._c || e;
@@ -986,8 +737,8 @@
                     class: t.completeName
                 })]) : t._e()])])
             };
-            w._withStripped = !0;
-            var O = s(96486),
+            O._withStripped = !0;
+            var w = s(96486),
                 S = function(t, e, s, i) {
                     return new(s || (s = Promise))((function(a, n) {
                         function o(t) {
@@ -1015,7 +766,7 @@
                         l((i = i.apply(t, e || [])).next())
                     }))
                 };
-            const x = n().extend({
+            const N = n().extend({
                 props: {
                     player: Object,
                     timer: Object
@@ -1077,7 +828,7 @@
                     }
                 },
                 mounted() {
-                    this.throttledSubmitVote = (0, O.throttle)(this.submitVote.bind(this), 400)
+                    this.throttledSubmitVote = (0, w.throttle)(this.submitVote.bind(this), 400)
                 },
                 beforeDestroy() {
                     var t;
@@ -1112,10 +863,10 @@
                     }
                 }
             });
-            var N = (0, p.Z)(x, w, [], !1, null, "c1eff0c0", null);
-            N.options.__file = "src/games/pp8/drawful-animate/views/Flipping.vue";
-            const D = N.exports;
-            var P = function() {
+            var D = (0, d.Z)(N, O, [], !1, null, "c1eff0c0", null);
+            D.options.__file = "src/games/pp8/drawful-animate/views/Flipping.vue";
+            const P = D.exports;
+            var A = function() {
                 var t = this,
                     e = t.$createElement,
                     s = t._self._c || e;
@@ -1193,8 +944,8 @@
                     }
                 })]), t._v(" "), t.player.lastUGCResult && t.player.lastUGCResult.error ? s("div", [t._v("\n                " + t._s(t.player.lastUGCResult.error) + "\n            ")]) : t._e()]) : t._e()], 1)])
             };
-            P._withStripped = !0;
-            var A = s(13494),
+            A._withStripped = !0;
+            var x = s(13494),
                 L = function() {
                     var t = this,
                         e = t.$createElement,
@@ -1258,9 +1009,9 @@
                     }))], 2) : t._e()])
                 };
             L._withStripped = !0;
-            var k = s(79278);
-            n().use(k.ZP);
-            const R = n().extend({
+            var R = s(79278);
+            n().use(R.ZP);
+            const k = n().extend({
                 props: {
                     episodes: Array
                 },
@@ -1294,7 +1045,7 @@
                     }
                 }
             });
-            var $ = (0, p.Z)(R, L, [], !1, null, null, null);
+            var $ = (0, d.Z)(k, L, [], !1, null, null, null);
             $.options.__file = "src/games/pp8/drawful-animate/views/EpisodesModal.vue";
             const B = $.exports;
             var U = function(t, e, s, i) {
@@ -1326,7 +1077,7 @@
             };
             const G = n().extend({
                 components: {
-                    LobbyActions: A.Z
+                    LobbyActions: x.Z
                 },
                 props: {
                     info: Object,
@@ -1382,7 +1133,7 @@
                     }
                 }
             });
-            var M = (0, p.Z)(G, P, [], !1, null, null, null);
+            var M = (0, d.Z)(G, A, [], !1, null, null, null);
             M.options.__file = "src/games/pp8/drawful-animate/views/Lobby.vue";
             const K = M.exports;
             var W = function() {
@@ -1425,10 +1176,10 @@
                     player: Object
                 }
             });
-            var F = (0, p.Z)(j, W, [], !1, null, null, null);
+            var F = (0, d.Z)(j, W, [], !1, null, null, null);
             F.options.__file = "src/games/pp8/drawful-animate/views/PostGame.vue";
             const Y = F.exports;
-            var z = function() {
+            var X = function() {
                 var t = this,
                     e = t.$createElement,
                     s = t._self._c || e;
@@ -1724,9 +1475,9 @@
                     })])])
                 })), 0)])]) : t._e()])])
             };
-            z._withStripped = !0;
+            X._withStripped = !0;
             var Z = s(3682),
-                X = s(89446),
+                z = s(89446),
                 q = function(t, e, s, i) {
                     return new(s || (s = Promise))((function(a, n) {
                         function o(t) {
@@ -1803,7 +1554,7 @@
                     onInput(t) {
                         const e = t.target;
                         let s = Number.MAX_SAFE_INTEGER;
-                        this.player.validActions.includes("title") && (s = this.player.maxTitleLength), this.player.validActions.includes("add") && (s = this.player.maxContentLength), e.value.length > s && (e.value = e.value.substring(0, s)), e.value = X.c.sanitizeInput(e.value), this.answer = e.value
+                        this.player.validActions.includes("title") && (s = this.player.maxTitleLength), this.player.validActions.includes("add") && (s = this.player.maxContentLength), e.value.length > s && (e.value = e.value.substring(0, s)), e.value = z.c.sanitizeInput(e.value), this.answer = e.value
                     },
                     onToggleVisibility(t) {
                         this.$ecast.updateObject(this.player.responseKey, {
@@ -1882,7 +1633,7 @@
                     }
                 }
             });
-            var Q = (0, p.Z)(J, z, [], !1, null, null, null);
+            var Q = (0, d.Z)(J, X, [], !1, null, null, null);
             Q.options.__file = "src/games/pp8/drawful-animate/views/Ugc.vue";
             const tt = Q.exports;
             var et = function() {
@@ -1922,7 +1673,7 @@
                     }
                 }
             });
-            var it = (0, p.Z)(st, et, [], !1, null, null, null);
+            var it = (0, d.Z)(st, et, [], !1, null, null, null);
             it.options.__file = "src/games/pp8/drawful-animate/views/Waiting.vue";
             const at = it.exports;
             var nt = function() {
@@ -2052,7 +1803,7 @@
                 }),
                 computed: {
                     sanitizedAnswer() {
-                        return X.c.sanitizeInput(this.answer).trim()
+                        return z.c.sanitizeInput(this.answer).trim()
                     },
                     prompt() {
                         return this.player.prompt || this.$t("WRITING.PROMPT")
@@ -2077,7 +1828,7 @@
                     }
                 },
                 mounted() {
-                    this.autoSubmitter = (0, O.throttle)(this.autoSubmit.bind(this), 400), (0, Z.Z)(this.$refs.textarea), this.player.textKey && this.restoreText()
+                    this.autoSubmitter = (0, w.throttle)(this.autoSubmit.bind(this), 400), (0, Z.Z)(this.$refs.textarea), this.player.textKey && this.restoreText()
                 },
                 beforeDestroy() {
                     var t;
@@ -2109,7 +1860,7 @@
                     onInput(t) {
                         const e = t.target,
                             s = this.player.maxLength || Number.MAX_SAFE_INTEGER;
-                        e.value.length > s && (e.value = e.value.substring(0, s)), e.value = X.c.sanitizeInput(e.value), this.answer = e.value, this.filterError = !1, this.player.responseKey && this.autoSubmitter && this.autoSubmitter()
+                        e.value.length > s && (e.value = e.value.substring(0, s)), e.value = z.c.sanitizeInput(e.value), this.answer = e.value, this.filterError = !1, this.player.responseKey && this.autoSubmitter && this.autoSubmitter()
                     },
                     onSubmit() {
                         return ot(this, void 0, void 0, (function*() {
@@ -2135,7 +1886,7 @@
                     }
                 }
             });
-            var lt = (0, p.Z)(rt, nt, [], !1, null, null, null);
+            var lt = (0, d.Z)(rt, nt, [], !1, null, null, null);
             lt.options.__file = "src/games/pp8/drawful-animate/views/Writing.vue";
             const ct = lt.exports,
                 ut = n().extend({
@@ -2145,8 +1896,8 @@
                         Lobby: K,
                         PostGame: Y,
                         Writing: ct,
-                        Choosing: v,
-                        Flipping: D,
+                        Choosing: _,
+                        Flipping: P,
                         Ugc: tt
                     },
                     themeColor: "#611785",
@@ -2201,9 +1952,9 @@
                         this.$debug.setAutomarkIgnoredKeys(["timer"])
                     }
                 });
-            var dt = (0, p.Z)(ut, i, [], !1, null, "31bec97a", null);
-            dt.options.__file = "src/games/pp8/drawful-animate/views/Main.vue";
-            const pt = dt.exports
+            var pt = (0, d.Z)(ut, i, [], !1, null, "31bec97a", null);
+            pt.options.__file = "src/games/pp8/drawful-animate/views/Main.vue";
+            const dt = pt.exports
         },
         57095: (t, e, s) => {
             "use strict";
@@ -2211,4 +1962,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/7634.6aca5827a5251691761e.js.map
+//# sourceMappingURL=sourcemaps/1447.9e59de10203fcfdfb278.js.map

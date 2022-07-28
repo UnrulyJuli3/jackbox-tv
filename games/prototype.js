@@ -1,273 +1,212 @@
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     ["games/prototype"], {
-        13494: (e, t, s) => {
+        20854: (t, e, s) => {
             "use strict";
-            s.d(t, {
-                Z: () => c
+            s.d(e, {
+                J: () => o
             });
-            var a = function() {
-                var e = this,
-                    t = e.$createElement,
-                    s = e._self._c || t;
-                return s("div", {
-                    staticClass: "lobby-actions",
-                    class: {
-                        vip: e.player.hasControls
-                    }
-                }, [e.messageLocation && "top" !== e.messageLocation ? e._e() : s("p", {
-                    class: e.localClasses.message,
-                    domProps: {
-                        textContent: e._s(e.joinedCountText)
-                    }
-                }), e._v(" "), e.player.hasControls ? ["waitingForMore" === e.player.status ? s("p", {
-                    class: e.localClasses.status
-                }, [e._v(e._s(e.neededText))]) : e._e(), e._v(" "), "canStart" === e.player.status ? s("button", {
-                    class: e.localClasses.action,
-                    domProps: {
-                        textContent: e._s(e.startText || e.$t("LOBBY.BUTTON_START"))
-                    },
-                    on: {
-                        click: e.onStartClick
-                    }
-                }) : e._e(), e._v(" "), "countdown" === e.player.status ? s("button", {
-                    class: e.localClasses.action,
-                    domProps: {
-                        textContent: e._s(e.cancelText || e.$t("LOBBY.BUTTON_CANCEL"))
-                    },
-                    on: {
-                        click: e.onCancelClick
-                    }
-                }) : e._e()] : e.player.gamepadStart ? ["waitingForMore" === e.player.status ? s("p", {
-                    class: e.localClasses.status
-                }, [e._v(e._s(e.neededText))]) : e._e(), e._v(" "), "canStart" === e.player.status ? s("p", {
-                    directives: [{
-                        name: "t",
-                        rawName: "v-t",
-                        value: "LOBBY.WAITING_FOR_GAMEPAD",
-                        expression: "'LOBBY.WAITING_FOR_GAMEPAD'"
-                    }],
-                    class: e.localClasses.status
-                }) : e._e(), e._v(" "), "countdown" === e.player.status ? s("p", {
-                    directives: [{
-                        name: "t",
-                        rawName: "v-t",
-                        value: "LOBBY.GAME_STARTING",
-                        expression: "'LOBBY.GAME_STARTING'"
-                    }],
-                    class: e.localClasses.status
-                }) : e._e()] : ["waitingForMore" === e.player.status ? s("p", {
-                    class: e.localClasses.status
-                }, [e._v(e._s(e.neededText))]) : e._e(), e._v(" "), "canStart" === e.player.status ? s("p", {
-                    class: e.localClasses.status
-                }, [e._v(e._s(e.waitingForVIPText))]) : e._e(), e._v(" "), "countdown" === e.player.status ? s("p", {
-                    directives: [{
-                        name: "t",
-                        rawName: "v-t",
-                        value: "LOBBY.GAME_STARTING",
-                        expression: "'LOBBY.GAME_STARTING'"
-                    }],
-                    class: e.localClasses.status
-                }) : e._e()], e._v(" "), "bottom" === e.messageLocation ? s("p", {
-                    class: e.localClasses.message,
-                    domProps: {
-                        textContent: e._s(e.joinedCountText)
-                    }
-                }) : e._e()], 2)
-            };
-            a._withStripped = !0;
-            var n = s(2934),
-                i = s.n(n),
-                o = s(65853);
-            const l = i().extend({
-                props: {
-                    cancelText: String,
-                    classes: Object,
-                    messageLocation: String,
-                    player: Object,
-                    shouldStart: Function,
-                    startText: String
-                },
-                i18n: {
-                    messages: o.s
-                },
-                computed: {
-                    joinedCountText() {
-                        return this.$tc("LOBBY.JOINED_COUNT", this.player.joinedPlayers, {
-                            count: this.player.joinedPlayers,
-                            maxPlayers: this.player.maxPlayers
-                        })
-                    },
-                    localClasses() {
-                        var e, t, s, a, n, i;
-                        return {
-                            message: null !== (t = null === (e = this.classes) || void 0 === e ? void 0 : e.message) && void 0 !== t ? t : "message",
-                            status: null !== (a = null === (s = this.classes) || void 0 === s ? void 0 : s.status) && void 0 !== a ? a : "status",
-                            action: null !== (i = null === (n = this.classes) || void 0 === n ? void 0 : n.action) && void 0 !== i ? i : "action"
-                        }
-                    },
-                    neededText() {
-                        return this.$tc("LOBBY.PLAYERS_NEEDED", this.player.minPlayers - this.player.joinedPlayers)
-                    },
-                    waitingForVIPText() {
-                        return this.$t("LOBBY.WAITING_FOR_VIP", {
-                            name: this.player.vipName
-                        })
-                    }
-                },
-                methods: {
-                    onCancelClick() {
-                        this.player.responseKey && this.$ecast.updateObject(this.player.responseKey, {
-                            action: "cancel"
-                        }).catch(this.$handleEcastError)
-                    },
-                    onStartClick() {
-                        return e = this, t = void 0, a = function*() {
-                            if (this.player.responseKey) {
-                                if (this.shouldStart && !(yield Promise.resolve(this.shouldStart()))) return;
-                                this.$ecast.updateObject(this.player.responseKey, {
-                                    action: "start"
-                                }).catch(this.$handleEcastError)
-                            }
-                        }, new((s = void 0) || (s = Promise))((function(n, i) {
-                            function o(e) {
-                                try {
-                                    r(a.next(e))
-                                } catch (e) {
-                                    i(e)
-                                }
-                            }
-
-                            function l(e) {
-                                try {
-                                    r(a.throw(e))
-                                } catch (e) {
-                                    i(e)
-                                }
-                            }
-
-                            function r(e) {
-                                var t;
-                                e.done ? n(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
-                                    e(t)
-                                }))).then(o, l)
-                            }
-                            r((a = a.apply(e, t || [])).next())
-                        }));
-                        var e, t, s, a
+            var i = s(16479),
+                n = s.n(i),
+                a = s(89446);
+            class o {
+                constructor(t, e, s) {
+                    var i, n, a, o, l;
+                    this.DEFAULT_WIDTH = 400, this.DEFAULT_HEIGHT = 400, this.color = "#000", this.layer = 0, this.layers = 1, this.maxPoints = Number.MAX_SAFE_INTEGER, this.points = [], this.precision = 2, this.scale = {
+                        width: 1,
+                        height: 1
+                    }, this.weight = 4, this.isInteracting = !1, (null == s ? void 0 : s.color) && (this.color = s.color), (null == s ? void 0 : s.layer) && (this.layer = s.layer), (null == s ? void 0 : s.layers) && (this.layers = s.layers), (null == s ? void 0 : s.maxPoints) && (this.maxPoints = s.maxPoints), (null == s ? void 0 : s.precision) && (this.precision = s.precision), (null == s ? void 0 : s.scale) && (this.scale = s.scale), (null == s ? void 0 : s.weight) && (this.weight = s.weight), t.width = (null !== (n = null === (i = e.size) || void 0 === i ? void 0 : i.width) && void 0 !== n ? n : this.DEFAULT_WIDTH) * this.scale.width, t.height = (null !== (o = null === (a = e.size) || void 0 === a ? void 0 : a.height) && void 0 !== o ? o : this.DEFAULT_HEIGHT) * this.scale.height, this.canvas = t, this.ctx = t.getContext("2d"), null === (l = this.ctx) || void 0 === l || l.scale(this.scale.width, this.scale.height), this.doodle = e, this.drawLines()
+                }
+                addPoint(t) {
+                    this.points.push(t)
+                }
+                normalizePoint(t) {
+                    const e = {
+                            x: t.x / this.scale.width,
+                            y: t.y / this.scale.height
+                        },
+                        s = {
+                            x: Math.min(Math.max(.5 * this.weight, e.x), this.canvas.width / this.scale.width - .5 * this.weight),
+                            y: Math.min(Math.max(.5 * this.weight, e.y), this.canvas.height / this.scale.height - .5 * this.weight)
+                        };
+                    return {
+                        x: a.c.toPrecision(s.x, this.precision),
+                        y: a.c.toPrecision(s.y, this.precision)
                     }
                 }
-            });
-            var r = (0, s(51900).Z)(l, a, [], !1, null, null, null);
-            r.options.__file = "src/apps/vue/components/LobbyActions.vue";
-            const c = r.exports
+                drawLines() {
+                    if (this.ctx) {
+                        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                        for (let t = 0; t < this.layers; t++) Object.values(this.doodle.lines).filter((e => {
+                            var s;
+                            return (null !== (s = e.layer) && void 0 !== s ? s : 0) === t
+                        })).forEach((t => this.drawLine(t))), t === this.layer && this.drawLine({
+                            color: this.color,
+                            index: this.doodle.lines.length,
+                            layer: this.layer,
+                            points: this.points,
+                            weight: this.weight
+                        })
+                    }
+                }
+                drawLine(t) {
+                    this.ctx && (this.ctx.fillStyle = t.color, this.ctx.strokeStyle = t.color, this.ctx.lineCap = "round", this.ctx.lineJoin = "round", this.ctx.lineWidth = t.weight, this.ctx.beginPath(), t.points.forEach(((e, s) => {
+                        1 === t.points.length && 0 === s && (this.ctx.save(), this.ctx.arc(e.x, e.y, t.weight / 2, 0, 2 * Math.PI), this.ctx.fill(), this.ctx.restore(), this.ctx.beginPath()), this.ctx.lineTo(e.x, e.y)
+                    })), this.ctx.stroke())
+                }
+                renderImage(t = "image/png") {
+                    return this.doodle.lines.length > 0 && this.drawLines(), this.canvas.toDataURL(t)
+                }
+                onStart(t) {
+                    this.isInteracting = !0;
+                    const e = this.normalizePoint(t);
+                    this.addPoint(e), this.drawLines()
+                }
+                onMove(t) {
+                    if (!this.isInteracting) return;
+                    const e = this.points[this.points.length - 1];
+                    if (!e) return void this.addPoint(this.normalizePoint(t));
+                    const s = .5 * this.weight,
+                        i = {
+                            x: t.x - e.x,
+                            y: t.y - e.y
+                        },
+                        n = Math.sqrt(Math.pow(i.x, 2) + Math.pow(i.y, 2));
+                    if (n > s) {
+                        const t = (n - s) / n,
+                            a = {
+                                x: i.x * t,
+                                y: i.y * t
+                            },
+                            o = {
+                                x: e.x + a.x,
+                                y: e.y + a.y
+                            };
+                        this.addPoint(this.normalizePoint(o)), this.drawLines()
+                    }
+                }
+                onEnd() {
+                    if (!this.isInteracting) return null;
+                    const t = {
+                        color: this.color,
+                        index: this.doodle.lines.length,
+                        layer: this.layer,
+                        points: n()(this.points, .5).map((t => ({
+                            x: a.c.toPrecision(t.x, this.precision),
+                            y: a.c.toPrecision(t.y, this.precision)
+                        }))),
+                        weight: this.weight
+                    };
+                    return this.isInteracting = !1, this.points = [], t
+                }
+            }
         },
-        83933: (e, t, s) => {
+        83933: (t, e, s) => {
             "use strict";
-            s.d(t, {
-                Z: () => p
+            s.d(e, {
+                Z: () => h
             });
-            var a = function() {
-                var e = this,
-                    t = e.$createElement,
-                    s = e._self._c || t;
-                return e.player && e.player.status ? s("div", {
+            var i = function() {
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
+                return t.player && t.player.status ? s("div", {
                     staticClass: "post-game-actions",
                     class: {
-                        vip: e.player.hasControls
+                        vip: t.player.hasControls
                     }
-                }, [e.messageLocation && "top" !== e.messageLocation ? e._e() : s("p", {
+                }, [t.messageLocation && "top" !== t.messageLocation ? t._e() : s("p", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
                         value: "POST_GAME.PLAY_AGAIN",
                         expression: "'POST_GAME.PLAY_AGAIN'"
                     }],
-                    class: e.localClasses.message
-                }), e._v(" "), e.player.hasControls ? ["waiting" === e.player.status ? s("button", {
+                    class: t.localClasses.message
+                }), t._v(" "), t.player.hasControls ? ["waiting" === t.player.status ? s("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
                         value: "POST_GAME.BUTTON_SAME_PLAYERS",
                         expression: "'POST_GAME.BUTTON_SAME_PLAYERS'"
                     }],
-                    class: e.localClasses.action,
+                    class: t.localClasses.action,
                     on: {
-                        click: e.onSamePlayersClick
+                        click: t.onSamePlayersClick
                     }
-                }) : e._e(), e._v(" "), "waiting" === e.player.status ? s("button", {
+                }) : t._e(), t._v(" "), "waiting" === t.player.status ? s("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
                         value: "POST_GAME.BUTTON_NEW_PLAYERS",
                         expression: "'POST_GAME.BUTTON_NEW_PLAYERS'"
                     }],
-                    class: e.localClasses.action,
+                    class: t.localClasses.action,
                     on: {
-                        click: e.onNewPlayersClick
+                        click: t.onNewPlayersClick
                     }
-                }) : e._e(), e._v(" "), "countdown" === e.player.status ? s("button", {
+                }) : t._e(), t._v(" "), "countdown" === t.player.status ? s("button", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
                         value: "LOBBY.BUTTON_CANCEL",
                         expression: "'LOBBY.BUTTON_CANCEL'"
                     }],
-                    class: e.localClasses.action,
+                    class: t.localClasses.action,
                     on: {
-                        click: e.onCancelClick
+                        click: t.onCancelClick
                     }
-                }) : e._e()] : e.player.gamepadStart ? [s("p", {
+                }) : t._e()] : t.player.gamepadStart ? [s("p", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
                         value: "LOBBY.WAITING_FOR_GAMEPAD",
                         expression: "'LOBBY.WAITING_FOR_GAMEPAD'"
                     }],
-                    class: e.localClasses.status
+                    class: t.localClasses.status
                 })] : [s("p", {
-                    class: e.localClasses.status
-                }, [e._v(e._s(e.waitingForVIPText))])], e._v(" "), "bottom" === e.messageLocation ? s("p", {
+                    class: t.localClasses.status
+                }, [t._v(t._s(t.waitingForVIPText))])], t._v(" "), "bottom" === t.messageLocation ? s("p", {
                     directives: [{
                         name: "t",
                         rawName: "v-t",
                         value: "POST_GAME.PLAY_AGAIN",
                         expression: "'POST_GAME.PLAY_AGAIN'"
                     }],
-                    class: e.localClasses.message
-                }) : e._e()], 2) : e._e()
+                    class: t.localClasses.message
+                }) : t._e()], 2) : t._e()
             };
-            a._withStripped = !0;
+            i._withStripped = !0;
             var n = s(2934),
-                i = s.n(n),
+                a = s.n(n),
                 o = s(65853),
-                l = function(e, t, s, a) {
-                    return new(s || (s = Promise))((function(n, i) {
-                        function o(e) {
+                l = function(t, e, s, i) {
+                    return new(s || (s = Promise))((function(n, a) {
+                        function o(t) {
                             try {
-                                r(a.next(e))
-                            } catch (e) {
-                                i(e)
+                                r(i.next(t))
+                            } catch (t) {
+                                a(t)
                             }
                         }
 
-                        function l(e) {
+                        function l(t) {
                             try {
-                                r(a.throw(e))
-                            } catch (e) {
-                                i(e)
+                                r(i.throw(t))
+                            } catch (t) {
+                                a(t)
                             }
                         }
 
-                        function r(e) {
-                            var t;
-                            e.done ? n(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
-                                e(t)
+                        function r(t) {
+                            var e;
+                            t.done ? n(t.value) : (e = t.value, e instanceof s ? e : new s((function(t) {
+                                t(e)
                             }))).then(o, l)
                         }
-                        r((a = a.apply(e, t || [])).next())
+                        r((i = i.apply(t, e || [])).next())
                     }))
                 };
-            const r = i().extend({
+            const r = a().extend({
                 props: {
                     shouldStart: Function,
                     messageLocation: String,
@@ -279,11 +218,11 @@
                 },
                 computed: {
                     localClasses() {
-                        var e, t, s, a, n, i;
+                        var t, e, s, i, n, a;
                         return {
-                            message: null !== (t = null === (e = this.classes) || void 0 === e ? void 0 : e.message) && void 0 !== t ? t : "message",
-                            status: null !== (a = null === (s = this.classes) || void 0 === s ? void 0 : s.status) && void 0 !== a ? a : "status",
-                            action: null !== (i = null === (n = this.classes) || void 0 === n ? void 0 : n.action) && void 0 !== i ? i : "action"
+                            message: null !== (e = null === (t = this.classes) || void 0 === t ? void 0 : t.message) && void 0 !== e ? e : "message",
+                            status: null !== (i = null === (s = this.classes) || void 0 === s ? void 0 : s.status) && void 0 !== i ? i : "status",
+                            action: null !== (a = null === (n = this.classes) || void 0 === n ? void 0 : n.action) && void 0 !== a ? a : "action"
                         }
                     },
                     waitingForVIPText() {
@@ -320,19 +259,232 @@
                     }
                 }
             });
-            var c = (0, s(51900).Z)(r, a, [], !1, null, null, null);
+            var c = (0, s(51900).Z)(r, i, [], !1, null, null, null);
             c.options.__file = "src/apps/vue/components/PostGameActions.vue";
-            const p = c.exports
+            const h = c.exports
         },
-        17819: (e, t, s) => {
+        3317: (t, e, s) => {
             "use strict";
-            s.d(t, {
-                Z: () => p
+            s.d(e, {
+                Z: () => u
             });
-            var a = function() {
-                var e = this,
-                    t = e.$createElement,
-                    s = e._self._c || t;
+            var i = function() {
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
+                return s("div", {
+                    staticClass: "doodle"
+                }, [s("div", {
+                    directives: [{
+                        name: "pointerBox",
+                        rawName: "v-pointerBox"
+                    }],
+                    staticClass: "stage",
+                    on: {
+                        pointerboxstart: t.onPointerBoxStart,
+                        pointerboxmove: t.onPointerBoxMove,
+                        pointerboxend: t.onPointerBoxEnd
+                    }
+                }, [s("canvas", {
+                    directives: [{
+                        name: "pointerboxtranslate",
+                        rawName: "v-pointerboxtranslate",
+                        value: {
+                            id: "doodleCanvas",
+                            width: t.pointerBoxWidth,
+                            height: t.pointerBoxHeight
+                        },
+                        expression: "{\n                id: 'doodleCanvas',\n                width: pointerBoxWidth,\n                height: pointerBoxHeight\n            }"
+                    }],
+                    ref: "canvas"
+                })]), t._v(" "), t.hideUndo ? t._e() : s("button", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "ACTION.UNDO",
+                        expression: "'ACTION.UNDO'"
+                    }],
+                    attrs: {
+                        disabled: !t.canSubmit
+                    },
+                    on: {
+                        click: function(e) {
+                            return e.preventDefault(), t.onUndo.apply(null, arguments)
+                        }
+                    }
+                }), t._v(" "), t.hideSubmit ? t._e() : s("button", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "ACTION.SUBMIT",
+                        expression: "'ACTION.SUBMIT'"
+                    }],
+                    attrs: {
+                        disabled: !t.canSubmit
+                    },
+                    on: {
+                        click: function(e) {
+                            return e.preventDefault(), t.onSubmit.apply(null, arguments)
+                        }
+                    }
+                })])
+            };
+            i._withStripped = !0;
+            var n = s(2934),
+                a = s.n(n),
+                o = s(20854),
+                l = s(19734),
+                r = s(65853),
+                c = function(t, e, s, i) {
+                    return new(s || (s = Promise))((function(n, a) {
+                        function o(t) {
+                            try {
+                                r(i.next(t))
+                            } catch (t) {
+                                a(t)
+                            }
+                        }
+
+                        function l(t) {
+                            try {
+                                r(i.throw(t))
+                            } catch (t) {
+                                a(t)
+                            }
+                        }
+
+                        function r(t) {
+                            var e;
+                            t.done ? n(t.value) : (e = t.value, e instanceof s ? e : new s((function(t) {
+                                t(e)
+                            }))).then(o, l)
+                        }
+                        r((i = i.apply(t, e || [])).next())
+                    }))
+                };
+            a().use(l.O);
+            const h = a().extend({
+                props: {
+                    canvasOptions: Object,
+                    hideSubmit: Boolean,
+                    hideUndo: Boolean,
+                    player: Object
+                },
+                i18n: {
+                    messages: r.s
+                },
+                data: () => ({
+                    canvas: null,
+                    isSubmitting: !1,
+                    isUndoing: !1
+                }),
+                computed: {
+                    canSubmit() {
+                        return !(this.isSubmitting || this.isUndoing || this.player.doodle.lines.length <= 0)
+                    },
+                    pointerBoxWidth() {
+                        var t, e, s;
+                        let i = 320;
+                        return (null === (t = this.player.doodle.size) || void 0 === t ? void 0 : t.width) && (i = this.player.doodle.size.width), i * (null !== (s = null === (e = this.canvasOptions.scale) || void 0 === e ? void 0 : e.width) && void 0 !== s ? s : 1)
+                    },
+                    pointerBoxHeight() {
+                        var t, e, s;
+                        let i = 320;
+                        return (null === (t = this.player.doodle.size) || void 0 === t ? void 0 : t.height) && (i = this.player.doodle.size.height), i * (null !== (s = null === (e = this.canvasOptions.scale) || void 0 === e ? void 0 : e.height) && void 0 !== s ? s : 1)
+                    }
+                },
+                watch: {
+                    canvasOptions: function(t) {
+                        var e, s, i, n, a, o, l;
+                        this.canvas && (this.canvas.color = null !== (e = t.color) && void 0 !== e ? e : "#000000", this.canvas.layer = null !== (s = t.layer) && void 0 !== s ? s : 0, this.canvas.layers = null !== (i = t.layers) && void 0 !== i ? i : 1, this.canvas.maxPoints = null !== (n = t.maxPoints) && void 0 !== n ? n : Number.MAX_SAFE_INTEGER, this.canvas.precision = null !== (a = t.precision) && void 0 !== a ? a : 2, this.canvas.scale = null !== (o = t.scale) && void 0 !== o ? o : {
+                            width: 1,
+                            height: 1
+                        }, this.canvas.weight = null !== (l = t.weight) && void 0 !== l ? l : 4)
+                    },
+                    "player.doodle": function() {
+                        this.canvas && (this.canvas.doodle = this.player.doodle)
+                    },
+                    "player.doodle.key": function() {
+                        this.createCanvas()
+                    },
+                    "player.doodle.lines": function() {
+                        this.canvas && this.canvas.drawLines()
+                    }
+                },
+                mounted() {
+                    this.createCanvas()
+                },
+                methods: {
+                    createCanvas() {
+                        const t = this.$refs.canvas;
+                        this.canvas = new o.J(t, this.player.doodle, this.canvasOptions)
+                    },
+                    onPointerBoxStart(t) {
+                        if (!this.canvas) return;
+                        const e = {
+                            x: t.detail.translations.doodleCanvas.x,
+                            y: t.detail.translations.doodleCanvas.y
+                        };
+                        this.canvas.onStart(e)
+                    },
+                    onPointerBoxMove(t) {
+                        if (!this.canvas) return;
+                        const e = {
+                            x: t.detail.translations.doodleCanvas.x,
+                            y: t.detail.translations.doodleCanvas.y
+                        };
+                        this.canvas.onMove(e)
+                    },
+                    onPointerBoxEnd() {
+                        return c(this, void 0, void 0, (function*() {
+                            if (!this.canvas) return;
+                            const t = this.canvas.onEnd();
+                            if (t) try {
+                                yield this.$ecast.strokeDoodle(this.player.doodle.key, t)
+                            } catch (t) {
+                                this.$handleEcastError(t)
+                            }
+                        }))
+                    },
+                    onSubmit() {
+                        return c(this, void 0, void 0, (function*() {
+                            this.isSubmitting = !0;
+                            try {
+                                yield this.$ecast.lock(this.player.doodle.key)
+                            } catch (t) {
+                                this.isSubmitting = !1, this.$handleEcastError(t)
+                            }
+                        }))
+                    },
+                    onUndo() {
+                        return c(this, void 0, void 0, (function*() {
+                            if (this.canvas) {
+                                this.isUndoing = !0;
+                                try {
+                                    yield this.$ecast.undoDoodle(this.player.doodle.key)
+                                } catch (t) {
+                                    this.$handleEcastError(t)
+                                } finally {
+                                    this.isUndoing = !1
+                                }
+                            }
+                        }))
+                    }
+                }
+            });
+            var p = (0, s(51900).Z)(h, i, [], !1, null, null, null);
+            p.options.__file = "src/apps/vue/components/base/Doodle.vue";
+            const u = p.exports
+        },
+        17819: (t, e, s) => {
+            "use strict";
+            s.d(e, {
+                Z: () => h
+            });
+            var i = function() {
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
                 return s("div", {
                     staticClass: "draw"
                 }, [s("div", {
@@ -340,31 +492,31 @@
                     staticClass: "content"
                 }, [s("div", {
                     staticClass: "constrain"
-                }, [e.player.prompt ? s("div", {
+                }, [t.player.prompt ? s("div", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: e.player.prompt,
+                        value: t.player.prompt,
                         expression: "player.prompt"
                     }]
-                }) : e._e(), e._v(" "), s("div", {
+                }) : t._e(), t._v(" "), s("div", {
                     ref: "stage",
                     staticClass: "stage",
-                    style: e.stageDimensions
-                }), e._v(" "), s("button", {
+                    style: t.stageDimensions
+                }), t._v(" "), s("button", {
                     on: {
-                        click: function(t) {
-                            return t.preventDefault(), e.onSubmitClick.apply(null, arguments)
+                        click: function(e) {
+                            return e.preventDefault(), t.onSubmitClick.apply(null, arguments)
                         }
                     }
-                }, [e._v(e._s(e.player.submitText || "SUBMIT"))])])])])
+                }, [t._v(t._s(t.player.submitText || "SUBMIT"))])])])])
             };
-            a._withStripped = !0;
+            i._withStripped = !0;
             var n = s(2934),
-                i = s.n(n),
+                a = s.n(n),
                 o = s(32530),
                 l = s(96486);
-            const r = i().extend({
+            const r = a().extend({
                 props: {
                     player: Object
                 },
@@ -379,15 +531,15 @@
                             width: "auto",
                             height: "auto"
                         };
-                        const e = this.$refs.content.getBoundingClientRect(),
-                            t = this.$refs.stage,
-                            s = t.getBoundingClientRect(),
-                            a = t.parentElement.getBoundingClientRect(),
-                            n = Math.max(.9 * a.width, 240),
-                            i = Math.max(this.windowHeight - e.height + s.height, 240),
+                        const t = this.$refs.content.getBoundingClientRect(),
+                            e = this.$refs.stage,
+                            s = e.getBoundingClientRect(),
+                            i = e.parentElement.getBoundingClientRect(),
+                            n = Math.max(.9 * i.width, 240),
+                            a = Math.max(this.windowHeight - t.height + s.height, 240),
                             o = this.stage.canvas.width,
                             l = this.stage.canvas.height,
-                            r = Math.min(n / o, i / l);
+                            r = Math.min(n / o, a / l);
                         return {
                             width: o * r + "px",
                             height: l * r + "px"
@@ -402,189 +554,189 @@
                 },
                 methods: {
                     setupStage() {
-                        const e = this.$refs.stage,
-                            t = {};
-                        this.player.size && (t.width = this.player.size.width, t.height = this.player.size.height), this.player.thicknesses && (t.thickness = this.player.thicknesses[0]), this.player.colors && (t.color = this.player.colors[0]), this.player.maxPoints && (t.maxPoints = this.player.maxPoints), this.stage = new o.U(e, t), this.stage.on("up", (() => {
-                            var e;
+                        const t = this.$refs.stage,
+                            e = {};
+                        this.player.size && (e.width = this.player.size.width, e.height = this.player.size.height), this.player.thicknesses && (e.thickness = this.player.thicknesses[0]), this.player.colors && (e.color = this.player.colors[0]), this.player.maxPoints && (e.maxPoints = this.player.maxPoints), this.stage = new o.U(t, e), this.stage.on("up", (() => {
+                            var t;
                             if (!this.player.live) return;
-                            const t = (null === (e = this.stage) || void 0 === e ? void 0 : e.getObject()) || {};
-                            t.done = !1, this.$ecast.updateObject(this.player.responseKey, t).catch(this.$handleEcastError)
+                            const e = (null === (t = this.stage) || void 0 === t ? void 0 : t.getObject()) || {};
+                            e.done = !1, this.$ecast.updateObject(this.player.responseKey, e).catch(this.$handleEcastError)
                         }))
                     },
                     onSubmitClick() {
                         if (!this.stage) return;
                         this.isSubmitting = !0, this.stage.canvas.submitting = !0;
-                        const e = this.stage.getObject();
-                        e.done = !0, e.action = "submit", this.$ecast.updateObject(this.player.responseKey, e).catch(this.$handleEcastError)
+                        const t = this.stage.getObject();
+                        t.done = !0, t.action = "submit", this.$ecast.updateObject(this.player.responseKey, t).catch(this.$handleEcastError)
                     },
                     onResize() {
                         this.windowHeight = window.innerHeight
                     }
                 }
             });
-            var c = (0, s(51900).Z)(r, a, [], !1, null, null, null);
+            var c = (0, s(51900).Z)(r, i, [], !1, null, null, null);
             c.options.__file = "src/apps/vue/components/base/Draw.vue";
-            const p = c.exports
+            const h = c.exports
         },
-        74634: (e, t, s) => {
+        74634: (t, e, s) => {
             "use strict";
-            s.d(t, {
+            s.d(e, {
                 Z: () => l
             });
-            var a = function() {
-                var e = this,
-                    t = e.$createElement,
-                    s = e._self._c || t;
+            var i = function() {
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
                 return s("div", {
                     staticClass: "waiting"
                 }, [s("div", {
                     staticClass: "constrain"
-                }, [e.player.message ? s("p", {
+                }, [t.player.message ? s("p", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: e.player.message,
+                        value: t.player.message,
                         expression: "player.message"
                     }]
-                }) : e._e()])])
+                }) : t._e()])])
             };
-            a._withStripped = !0;
+            i._withStripped = !0;
             var n = s(2934);
-            const i = s.n(n)().extend({
+            const a = s.n(n)().extend({
                 props: {
                     player: Object
                 }
             });
-            var o = (0, s(51900).Z)(i, a, [], !1, null, null, null);
+            var o = (0, s(51900).Z)(a, i, [], !1, null, null, null);
             o.options.__file = "src/apps/vue/components/base/Waiting.vue";
             const l = o.exports
         },
-        87986: (e, t, s) => {
+        87986: (t, e, s) => {
             "use strict";
-            s.r(t), s.d(t, {
-                default: () => ue
+            s.r(e), s.d(e, {
+                default: () => pt
             });
-            var a = function() {
-                var e = this,
-                    t = e.$createElement,
-                    s = e._self._c || t;
+            var i = function() {
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
                 return s("div", {
                     staticClass: "main",
-                    class: e.classes,
-                    style: e.themeStyle
-                }, [e.player ? s("div", {
+                    class: t.classes,
+                    style: t.themeStyle
+                }, [t.player ? s("div", {
                     staticClass: "player",
-                    class: e.player.classes
+                    class: t.player.classes
                 }, [s("div", {
                     staticClass: "name"
-                }, [e._v(e._s(e.player.name))])]) : e._e(), e._v(" "), e.player ? s("Fallbacks", {
+                }, [t._v(t._s(t.player.name))])]) : t._e(), t._v(" "), t.player ? s("Fallbacks", {
                     attrs: {
-                        player: e.player
+                        player: t.player
                     }
-                }) : e._e(), e._v(" "), e.components ? s("div", {
+                }) : t._e(), t._v(" "), t.components ? s("div", {
                     staticClass: "constrain"
-                }, e._l(e.components.components, (function(e, t) {
-                    return s(e.type + "El", {
-                        key: t,
+                }, t._l(t.components.components, (function(t, e) {
+                    return s(t.type + "El", {
+                        key: e,
                         tag: "component",
                         staticClass: "component",
                         attrs: {
-                            component: e
+                            component: t
                         }
                     })
-                })), 1) : e._e()], 1)
+                })), 1) : t._e()], 1)
             };
-            a._withStripped = !0;
+            i._withStripped = !0;
             var n = s(2934),
-                i = s.n(n),
+                a = s.n(n),
                 o = function() {
-                    var e = this,
-                        t = e.$createElement,
-                        s = e._self._c || t;
-                    return e.player ? s(e.player.kind, {
+                    var t = this,
+                        e = t.$createElement,
+                        s = t._self._c || e;
+                    return t.player ? s(t.player.kind, {
                         tag: "component",
                         class: {
-                            fallback: e.applyStyling
+                            fallback: t.applyStyling
                         },
                         attrs: {
-                            player: e.player
+                            player: t.player
                         }
-                    }) : e._e()
+                    }) : t._e()
                 };
             o._withStripped = !0;
             var l = function() {
-                var e = this,
-                    t = e.$createElement,
-                    s = e._self._c || t;
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
                 return s("div", {
                     staticClass: "choices"
                 }, [s("div", {
                     staticClass: "constrain"
-                }, [e.player.prompt ? s("p", {
+                }, [t.player.prompt ? s("p", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: e.player.prompt,
+                        value: t.player.prompt,
                         expression: "player.prompt"
                     }]
-                }) : e._e(), e._v(" "), e._l(e.player.choices, (function(t, a) {
+                }) : t._e(), t._v(" "), t._l(t.player.choices, (function(e, i) {
                     return s("button", {
-                        key: a,
+                        key: i,
                         class: {
-                            selected: t.isSelected
+                            selected: e.isSelected
                         },
                         attrs: {
-                            disabled: t.isDisabled
+                            disabled: e.isDisabled
                         },
                         on: {
-                            click: function(t) {
-                                return t.preventDefault(), e.onChoiceClick(a)
+                            click: function(e) {
+                                return e.preventDefault(), t.onChoiceClick(i)
                             }
                         }
-                    }, [e._v("\n            " + e._s(t.text) + "\n        ")])
+                    }, [t._v("\n            " + t._s(e.text) + "\n        ")])
                 }))], 2)])
             };
             l._withStripped = !0;
-            const r = i().extend({
+            const r = a().extend({
                 props: {
                     player: Object
                 },
                 methods: {
-                    onChoiceClick(e) {
-                        var t, s, a;
-                        const n = this.player.choices[e];
+                    onChoiceClick(t) {
+                        var e, s, i;
+                        const n = this.player.choices[t];
                         if (n.send) return void this.$ecast.updateObject(this.player.responseKey, n.send).catch(this.$handleEcastError);
-                        const i = {
-                            action: null !== (t = this.player.action) && void 0 !== t ? t : "choice",
-                            [null !== (s = this.player.key) && void 0 !== s ? s : "value"]: null !== (a = n.value) && void 0 !== a ? a : e
+                        const a = {
+                            action: null !== (e = this.player.action) && void 0 !== e ? e : "choice",
+                            [null !== (s = this.player.key) && void 0 !== s ? s : "value"]: null !== (i = n.value) && void 0 !== i ? i : t
                         };
-                        this.$ecast.updateObject(this.player.responseKey, i).catch(this.$handleEcastError)
+                        this.$ecast.updateObject(this.player.responseKey, a).catch(this.$handleEcastError)
                     }
                 }
             });
             var c = s(51900),
-                p = (0, c.Z)(r, l, [], !1, null, null, null);
-            p.options.__file = "src/apps/vue/components/base/Choices.vue";
-            const u = p.exports;
-            var h = s(3317),
+                h = (0, c.Z)(r, l, [], !1, null, null, null);
+            h.options.__file = "src/apps/vue/components/base/Choices.vue";
+            const p = h.exports;
+            var u = s(3317),
                 d = s(17819),
                 v = function() {
-                    var e = this,
-                        t = e.$createElement,
-                        s = e._self._c || t;
+                    var t = this,
+                        e = t.$createElement,
+                        s = t._self._c || e;
                     return s("div", {
                         staticClass: "lobby"
                     }, [s("div", {
                         staticClass: "constrain"
                     }, [s("LobbyActions", {
                         attrs: {
-                            player: e.player
+                            player: t.player
                         }
                     })], 1)])
                 };
             v._withStripped = !0;
             var m = s(13494);
-            const y = i().extend({
+            const y = a().extend({
                 components: {
                     LobbyActions: m.Z
                 },
@@ -592,104 +744,104 @@
                     player: Object
                 }
             });
-            var _ = (0, c.Z)(y, v, [], !1, null, null, null);
-            _.options.__file = "src/apps/vue/components/base/Lobby.vue";
-            const b = _.exports;
-            var g = function() {
-                var e = this,
-                    t = e.$createElement,
-                    s = e._self._c || t;
+            var b = (0, c.Z)(y, v, [], !1, null, null, null);
+            b.options.__file = "src/apps/vue/components/base/Lobby.vue";
+            const g = b.exports;
+            var _ = function() {
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
                 return s("div", {
                     staticClass: "post-game"
                 }, [s("div", {
                     staticClass: "constrain"
                 }, [s("PostGameActions", {
                     attrs: {
-                        player: e.player
+                        player: t.player
                     }
                 })], 1)])
             };
-            g._withStripped = !0;
-            var f = s(83933);
-            const x = i().extend({
+            _._withStripped = !0;
+            var x = s(83933);
+            const f = a().extend({
                 components: {
-                    PostGameActions: f.Z
+                    PostGameActions: x.Z
                 },
                 props: {
                     player: Object
                 }
             });
-            var w = (0, c.Z)(x, g, [], !1, null, null, null);
+            var w = (0, c.Z)(f, _, [], !1, null, null, null);
             w.options.__file = "src/apps/vue/components/base/PostGame.vue";
-            const C = w.exports;
-            var E = function() {
-                var e = this,
-                    t = e.$createElement,
-                    s = e._self._c || t;
+            const E = w.exports;
+            var C = function() {
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
                 return s("div", {
                     staticClass: "single-text-entry"
                 }, [s("div", {
                     staticClass: "constrain"
-                }, [e.player.prompt ? s("p", {
+                }, [t.player.prompt ? s("p", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: e.player.prompt,
+                        value: t.player.prompt,
                         expression: "player.prompt"
                     }]
-                }) : e._e(), e._v(" "), e.player.label ? s("label", {
+                }) : t._e(), t._v(" "), t.player.label ? s("label", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: e.player.label,
+                        value: t.player.label,
                         expression: "player.label"
                     }],
                     attrs: {
                         for: "input"
                     }
-                }) : e._e(), e._v(" "), e.player.isMultiline ? s("textarea", {
+                }) : t._e(), t._v(" "), t.player.isMultiline ? s("textarea", {
                     attrs: {
                         id: "input",
-                        rows: e.player.lines || 2,
-                        placeholder: e.player.placeholder,
-                        disabled: e.player.isDisabled
+                        rows: t.player.lines || 2,
+                        placeholder: t.player.placeholder,
+                        disabled: t.player.isDisabled
                     },
                     domProps: {
-                        value: e.value
+                        value: t.value
                     },
                     on: {
-                        input: e.onValueInput
+                        input: t.onValueInput
                     }
                 }) : s("input", {
                     attrs: {
                         id: "input",
                         type: "text",
-                        placeholder: e.player.placeholder,
-                        disabled: e.player.isDisabled
+                        placeholder: t.player.placeholder,
+                        disabled: t.player.isDisabled
                     },
                     domProps: {
-                        value: e.value
+                        value: t.value
                     },
                     on: {
-                        input: e.onValueInput
+                        input: t.onValueInput
                     }
-                }), e._v(" "), s("button", {
+                }), t._v(" "), s("button", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: e.player.submitText || "SUBMIT",
+                        value: t.player.submitText || "SUBMIT",
                         expression: "player.submitText || 'SUBMIT'"
                     }],
                     on: {
-                        click: function(t) {
-                            return t.preventDefault(), e.onSubmitClick.apply(null, arguments)
+                        click: function(e) {
+                            return e.preventDefault(), t.onSubmitClick.apply(null, arguments)
                         }
                     }
                 })])])
             };
-            E._withStripped = !0;
+            C._withStripped = !0;
             var S = s(44285);
-            const O = i().extend({
+            const O = a().extend({
                 props: {
                     player: Object
                 },
@@ -697,14 +849,14 @@
                     value: ""
                 }),
                 methods: {
-                    onValueInput(e) {
-                        const t = e.target;
-                        this.value = t.value
+                    onValueInput(t) {
+                        const e = t.target;
+                        this.value = e.value
                     },
                     isObjectResponseKey() {
                         if (!this.player.responseType) {
-                            const e = this.$ecast.entities[this.player.responseKey];
-                            if (e && e instanceof S.ObjectEntity) return !0
+                            const t = this.$ecast.entities[this.player.responseKey];
+                            if (t && t instanceof S.ObjectEntity) return !0
                         }
                         return "object" === this.player.responseType
                     },
@@ -712,95 +864,95 @@
                         this.isObjectResponseKey() ? this.sendAsObject() : this.sendAsText()
                     },
                     sendAsObject() {
-                        const e = this.player.send || {
+                        const t = this.player.send || {
                             action: this.player.action || "input"
                         };
-                        e[this.player.key || "value"] = this.value, this.$ecast.updateObject(this.player.responseKey, e).catch(this.$handleEcastError)
+                        t[this.player.key || "value"] = this.value, this.$ecast.updateObject(this.player.responseKey, t).catch(this.$handleEcastError)
                     },
                     sendAsText() {
                         this.$ecast.updateText(this.player.responseKey, this.value).catch(this.$handleEcastError)
                     }
                 }
             });
-            var T = (0, c.Z)(O, E, [], !1, null, null, null);
-            T.options.__file = "src/apps/vue/components/base/SingleTextEntry.vue";
-            const $ = T.exports;
-            var k = function() {
-                var e = this,
-                    t = e.$createElement,
-                    s = e._self._c || t;
+            var k = (0, c.Z)(O, C, [], !1, null, null, null);
+            k.options.__file = "src/apps/vue/components/base/SingleTextEntry.vue";
+            const $ = k.exports;
+            var P = function() {
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
                 return s("div", {
                     staticClass: "multi-text-entry"
                 }, [s("div", {
                     staticClass: "constrain"
-                }, [e.player.prompt ? s("p", {
+                }, [t.player.prompt ? s("p", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: e.player.prompt,
+                        value: t.player.prompt,
                         expression: "player.prompt"
                     }]
-                }) : e._e(), e._v(" "), e._l(e.player.inputs, (function(t, a) {
-                    return [t.label ? s("label", {
+                }) : t._e(), t._v(" "), t._l(t.player.inputs, (function(e, i) {
+                    return [e.label ? s("label", {
                         directives: [{
                             name: "bb",
                             rawName: "v-bb",
-                            value: t.label,
+                            value: e.label,
                             expression: "input.label"
                         }],
-                        key: "label-" + t.key,
+                        key: "label-" + e.key,
                         attrs: {
-                            for: "input-" + a
+                            for: "input-" + i
                         }
-                    }) : e._e(), e._v(" "), t.isMultiline ? s("textarea", {
-                        key: "input-" + a,
+                    }) : t._e(), t._v(" "), e.isMultiline ? s("textarea", {
+                        key: "input-" + i,
                         attrs: {
-                            id: "input-" + a,
-                            rows: t.lines || 2,
-                            placeholder: t.placeholder,
-                            disabled: t.isDisabled
+                            id: "input-" + i,
+                            rows: e.lines || 2,
+                            placeholder: e.placeholder,
+                            disabled: e.isDisabled
                         },
                         domProps: {
-                            value: e.values[a]
+                            value: t.values[i]
                         },
                         on: {
-                            input: function(t) {
-                                return e.onValueInput(t, a)
+                            input: function(e) {
+                                return t.onValueInput(e, i)
                             }
                         }
                     }) : s("input", {
-                        key: "input-" + t.key,
+                        key: "input-" + e.key,
                         attrs: {
-                            id: "input-" + a,
+                            id: "input-" + i,
                             type: "text",
-                            placeholder: t.placeholder,
-                            disabled: t.isDisabled
+                            placeholder: e.placeholder,
+                            disabled: e.isDisabled
                         },
                         domProps: {
-                            value: e.values[a]
+                            value: t.values[i]
                         },
                         on: {
-                            input: function(t) {
-                                return e.onValueInput(t, a)
+                            input: function(e) {
+                                return t.onValueInput(e, i)
                             }
                         }
                     })]
-                })), e._v(" "), s("button", {
+                })), t._v(" "), s("button", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: e.player.submitText || "SUBMIT",
+                        value: t.player.submitText || "SUBMIT",
                         expression: "player.submitText || 'SUBMIT'"
                     }],
                     on: {
-                        click: function(t) {
-                            return t.preventDefault(), e.onSubmitClick.apply(null, arguments)
+                        click: function(e) {
+                            return e.preventDefault(), t.onSubmitClick.apply(null, arguments)
                         }
                     }
                 })], 2)])
             };
-            k._withStripped = !0;
-            const A = i().extend({
+            P._withStripped = !0;
+            const T = a().extend({
                 props: {
                     player: Object
                 },
@@ -808,20 +960,20 @@
                     values: []
                 }),
                 beforeMount() {
-                    this.values = this.player.inputs.map((e => {
-                        var t;
-                        return null !== (t = e.value) && void 0 !== t ? t : ""
+                    this.values = this.player.inputs.map((t => {
+                        var e;
+                        return null !== (e = t.value) && void 0 !== e ? e : ""
                     }))
                 },
                 methods: {
-                    onValueInput(e, t) {
-                        const s = e.target;
-                        this.values[t] = s.value
+                    onValueInput(t, e) {
+                        const s = t.target;
+                        this.values[e] = s.value
                     },
                     isObjectResponseKey() {
                         if (!this.player.responseType) {
-                            const e = this.$ecast.entities[this.player.responseKey];
-                            if (e && e instanceof S.ObjectEntity) return !0
+                            const t = this.$ecast.entities[this.player.responseKey];
+                            if (t && t instanceof S.ObjectEntity) return !0
                         }
                         return "object" === this.player.responseType
                     },
@@ -829,35 +981,35 @@
                         this.isObjectResponseKey() ? this.sendAsObject() : this.sendAsText()
                     },
                     sendAsObject() {
-                        const e = this.player.send || {
+                        const t = this.player.send || {
                             action: this.player.action || "input"
                         };
-                        this.player.inputs.forEach(((t, s) => {
-                            var a;
-                            const n = null !== (a = t.key) && void 0 !== a ? a : `input${s}`;
-                            e[n] = this.values[s]
-                        })), this.$ecast.updateObject(this.player.responseKey, e).catch(this.$handleEcastError)
+                        this.player.inputs.forEach(((e, s) => {
+                            var i;
+                            const n = null !== (i = e.key) && void 0 !== i ? i : `input${s}`;
+                            t[n] = this.values[s]
+                        })), this.$ecast.updateObject(this.player.responseKey, t).catch(this.$handleEcastError)
                     },
                     sendAsText() {
-                        const e = this.player.separator || "|";
-                        this.$ecast.updateText(this.player.responseKey, this.values.join(e)).catch(this.$handleEcastError)
+                        const t = this.player.separator || "|";
+                        this.$ecast.updateText(this.player.responseKey, this.values.join(t)).catch(this.$handleEcastError)
                     }
                 }
             });
-            var P = (0, c.Z)(A, k, [], !1, null, null, null);
-            P.options.__file = "src/apps/vue/components/base/MultiTextEntry.vue";
-            const N = P.exports;
-            var j = s(74634);
-            const B = i().extend({
+            var A = (0, c.Z)(T, P, [], !1, null, null, null);
+            A.options.__file = "src/apps/vue/components/base/MultiTextEntry.vue";
+            const I = A.exports;
+            var N = s(74634);
+            const D = a().extend({
                 components: {
-                    Choices: u,
-                    Doodle: h.Z,
+                    Choices: p,
+                    Doodle: u.Z,
                     Draw: d.Z,
-                    Lobby: b,
-                    PostGame: C,
+                    Lobby: g,
+                    PostGame: E,
                     SingleTextEntry: $,
-                    MultiTextEntry: N,
-                    Waiting: j.Z
+                    MultiTextEntry: I,
+                    Waiting: N.Z
                 },
                 props: {
                     applyStyling: {
@@ -867,139 +1019,139 @@
                     player: Object
                 }
             });
-            var I = (0, c.Z)(B, o, [], !1, null, null, null);
-            I.options.__file = "src/apps/vue/components/Fallbacks.vue";
-            const D = I.exports;
-            var L = function() {
-                var e = this,
-                    t = e.$createElement,
-                    s = e._self._c || t;
+            var j = (0, c.Z)(D, o, [], !1, null, null, null);
+            j.options.__file = "src/apps/vue/components/Fallbacks.vue";
+            const B = j.exports;
+            var M = function() {
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
                 return s("div", {
-                    class: e.component.classes
-                }, e._l(e.component.choices, (function(t, a) {
+                    class: t.component.classes
+                }, t._l(t.component.choices, (function(e, i) {
                     return s("button", {
-                        key: a,
+                        key: i,
                         staticClass: "choice",
-                        class: t.classes,
+                        class: e.classes,
                         attrs: {
-                            disabled: t.isDisabled
+                            disabled: e.isDisabled
                         },
                         on: {
-                            click: function(t) {
-                                return t.preventDefault(), e.onChoiceClick(a)
+                            click: function(e) {
+                                return e.preventDefault(), t.onChoiceClick(i)
                             }
                         }
-                    }, [e._v("\n        " + e._s(t.text) + "\n    ")])
+                    }, [t._v("\n        " + t._s(e.text) + "\n    ")])
                 })), 0)
             };
-            L._withStripped = !0;
-            const M = i().extend({
+            M._withStripped = !0;
+            const L = a().extend({
                 props: {
                     component: Object
                 },
                 methods: {
-                    classesForChoice(e) {
-                        const t = e.classes || [];
-                        e.isSelected && t.push("selected")
+                    classesForChoice(t) {
+                        const e = t.classes || [];
+                        t.isSelected && e.push("selected")
                     },
-                    onChoiceClick(e) {
-                        var t, s, a;
-                        const n = this.component.choices[e];
+                    onChoiceClick(t) {
+                        var e, s, i;
+                        const n = this.component.choices[t];
                         if (n.send) return void(this.component.responseEntity ? this.$ecast.updateObject(this.component.responseEntity, n.send).catch(this.$handleEcastError) : this.$ecast.mail(1, n.send).catch(this.$handleEcastError));
-                        const i = {
-                            action: null !== (t = this.component.action) && void 0 !== t ? t : "choice",
-                            [null !== (s = this.component.key) && void 0 !== s ? s : "value"]: null !== (a = n.value) && void 0 !== a ? a : e
+                        const a = {
+                            action: null !== (e = this.component.action) && void 0 !== e ? e : "choice",
+                            [null !== (s = this.component.key) && void 0 !== s ? s : "value"]: null !== (i = n.value) && void 0 !== i ? i : t
                         };
-                        this.component.responseEntity ? this.$ecast.updateObject(this.component.responseEntity, i).catch(this.$handleEcastError) : this.$ecast.mail(1, i).catch(this.$handleEcastError)
+                        this.component.responseEntity ? this.$ecast.updateObject(this.component.responseEntity, a).catch(this.$handleEcastError) : this.$ecast.mail(1, a).catch(this.$handleEcastError)
                     }
                 }
             });
-            var G = (0, c.Z)(M, L, [], !1, null, null, null);
-            G.options.__file = "src/games/internal/prototype/views/Choices.vue";
-            const R = G.exports;
-            var Z = function() {
-                var e = this,
-                    t = e.$createElement,
-                    s = e._self._c || t;
+            var U = (0, c.Z)(L, M, [], !1, null, null, null);
+            U.options.__file = "src/games/internal/prototype/views/Choices.vue";
+            const Z = U.exports;
+            var G = function() {
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
                 return s("div", {
-                    class: e.component.classes,
+                    class: t.component.classes,
                     attrs: {
                         id: "doodle"
                     }
-                }, [e.component.prompt ? s("div", {
+                }, [t.component.prompt ? s("div", {
                     directives: [{
                         name: "bb",
                         rawName: "v-bb",
-                        value: e.component.prompt,
+                        value: t.component.prompt,
                         expression: "component.prompt"
                     }]
-                }) : e._e(), e._v(" "), s("div", {
+                }) : t._e(), t._v(" "), s("div", {
                     attrs: {
                         id: "tools"
                     }
-                }, [e.component.doodles.length > 1 ? s("div", {
+                }, [t.component.doodles.length > 1 ? s("div", {
                     attrs: {
                         id: "frames"
                     }
-                }, [s("span", [e._v("Frame:")]), e._v(" "), s("select", {
+                }, [s("span", [t._v("Frame:")]), t._v(" "), s("select", {
                     directives: [{
                         name: "model",
                         rawName: "v-model",
-                        value: e.frame,
+                        value: t.frame,
                         expression: "frame"
                     }],
                     attrs: {
                         name: "frame"
                     },
                     on: {
-                        change: function(t) {
-                            var s = Array.prototype.filter.call(t.target.options, (function(e) {
-                                return e.selected
-                            })).map((function(e) {
-                                return "_value" in e ? e._value : e.value
+                        change: function(e) {
+                            var s = Array.prototype.filter.call(e.target.options, (function(t) {
+                                return t.selected
+                            })).map((function(t) {
+                                return "_value" in t ? t._value : t.value
                             }));
-                            e.frame = t.target.multiple ? s : s[0]
+                            t.frame = e.target.multiple ? s : s[0]
                         }
                     }
-                }, e._l(e.component.doodles, (function(t, a) {
+                }, t._l(t.component.doodles, (function(e, i) {
                     return s("option", {
-                        key: "doodle-" + a,
+                        key: "doodle-" + i,
                         domProps: {
-                            value: a
+                            value: i
                         }
-                    }, [e._v("\n                    " + e._s(a) + "\n                ")])
-                })), 0)]) : e._e(), e._v(" "), e.component.layers ? s("div", {
+                    }, [t._v("\n                    " + t._s(i) + "\n                ")])
+                })), 0)]) : t._e(), t._v(" "), t.component.layers ? s("div", {
                     attrs: {
                         id: "layers"
                     }
-                }, [s("span", [e._v("Layer:")]), e._v(" "), s("select", {
+                }, [s("span", [t._v("Layer:")]), t._v(" "), s("select", {
                     directives: [{
                         name: "model",
                         rawName: "v-model",
-                        value: e.layer,
+                        value: t.layer,
                         expression: "layer"
                     }],
                     attrs: {
                         name: "layer"
                     },
                     on: {
-                        change: function(t) {
-                            var s = Array.prototype.filter.call(t.target.options, (function(e) {
-                                return e.selected
-                            })).map((function(e) {
-                                return "_value" in e ? e._value : e.value
+                        change: function(e) {
+                            var s = Array.prototype.filter.call(e.target.options, (function(t) {
+                                return t.selected
+                            })).map((function(t) {
+                                return "_value" in t ? t._value : t.value
                             }));
-                            e.layer = t.target.multiple ? s : s[0]
+                            t.layer = e.target.multiple ? s : s[0]
                         }
                     }
-                }, e._l(e.component.layers, (function(t) {
+                }, t._l(t.component.layers, (function(e) {
                     return s("option", {
-                        key: "layer-" + t,
+                        key: "layer-" + e,
                         domProps: {
-                            value: t - 1
+                            value: e - 1
                         }
-                    }, [e._v("\n                    " + e._s(t - 1) + "\n                ")])
-                })), 0)]) : e._e(), e._v(" "), e.activeDoodle.weights && e.activeDoodle.weights.length ? s("div", {
+                    }, [t._v("\n                    " + t._s(e - 1) + "\n                ")])
+                })), 0)]) : t._e(), t._v(" "), t.activeDoodle.weights && t.activeDoodle.weights.length ? s("div", {
                     attrs: {
                         id: "weights"
                     }
@@ -1011,61 +1163,61 @@
                         type: "radio"
                     },
                     on: {
-                        click: e.onChangeWeight
+                        click: t.onChangeWeight
                     }
                 }, [s("div", {
                     staticClass: "circle",
                     style: {
-                        width: e.weight + "px",
-                        height: e.weight + "px",
-                        backgroundColor: e.color,
+                        width: t.weight + "px",
+                        height: t.weight + "px",
+                        backgroundColor: t.color,
                         borderRadius: "50%"
                     }
-                })])]) : e._e(), e._v(" "), e.activeDoodle.colors && e.activeDoodle.colors.length ? s("div", {
+                })])]) : t._e(), t._v(" "), t.activeDoodle.colors && t.activeDoodle.colors.length ? s("div", {
                     attrs: {
                         id: "colors"
                     }
-                }, e._l(e.activeDoodle.colors, (function(t, a) {
+                }, t._l(t.activeDoodle.colors, (function(e, i) {
                     return s("input", {
-                        key: "color-" + a,
+                        key: "color-" + i,
                         staticClass: "color",
                         style: {
-                            backgroundColor: t
+                            backgroundColor: e
                         },
                         attrs: {
-                            "aria-label": "color " + t,
-                            "data-color": t,
+                            "aria-label": "color " + e,
+                            "data-color": e,
                             name: "colors",
                             type: "radio"
                         },
                         domProps: {
-                            checked: a === e.colorIndex
+                            checked: i === t.colorIndex
                         },
                         on: {
-                            change: function(t) {
-                                return e.onChangeColor(a)
+                            change: function(e) {
+                                return t.onChangeColor(i)
                             }
                         }
                     })
-                })), 0) : e._e()]), e._v(" "), s("div", {
+                })), 0) : t._e()]), t._v(" "), s("div", {
                     attrs: {
                         id: "doodles"
                     }
-                }, e._l(e.component.doodles, (function(t, a) {
+                }, t._l(t.component.doodles, (function(e, i) {
                     return s("BaseDoodle", {
-                        key: "doodle-" + a,
+                        key: "doodle-" + i,
                         class: {
-                            inactive: a !== e.frame
+                            inactive: i !== t.frame
                         },
                         attrs: {
-                            "canvas-options": e.canvasOptions,
+                            "canvas-options": t.canvasOptions,
                             player: {
-                                doodle: t
+                                doodle: e
                             },
                             "hide-submit": ""
                         }
                     })
-                })), 1), e._v(" "), s("div", {
+                })), 1), t._v(" "), s("div", {
                     attrs: {
                         id: "actions"
                     }
@@ -1077,26 +1229,26 @@
                         expression: "'ACTION.SUBMIT'"
                     }],
                     attrs: {
-                        disabled: e.isSubmitting
+                        disabled: t.isSubmitting
                     },
                     on: {
-                        click: function(t) {
-                            return t.preventDefault(), e.onSubmit.apply(null, arguments)
+                        click: function(e) {
+                            return e.preventDefault(), t.onSubmit.apply(null, arguments)
                         }
                     }
                 })])])
             };
-            Z._withStripped = !0;
-            var K = s(65853);
-            const Y = i().extend({
+            G._withStripped = !0;
+            var R = s(65853);
+            const z = a().extend({
                 components: {
-                    BaseDoodle: h.Z
+                    BaseDoodle: u.Z
                 },
                 props: {
                     component: Object
                 },
                 i18n: {
-                    messages: K.s
+                    messages: R.s
                 },
                 data: () => ({
                     colorIndex: 0,
@@ -1118,48 +1270,48 @@
                         }
                     },
                     color() {
-                        var e, t;
-                        return null !== (t = null === (e = this.activeDoodle.colors) || void 0 === e ? void 0 : e[this.colorIndex]) && void 0 !== t ? t : "#000000"
+                        var t, e;
+                        return null !== (e = null === (t = this.activeDoodle.colors) || void 0 === t ? void 0 : t[this.colorIndex]) && void 0 !== e ? e : "#000000"
                     },
                     weight() {
-                        var e, t;
-                        return null !== (t = null === (e = this.activeDoodle.weights) || void 0 === e ? void 0 : e[this.weightIndex]) && void 0 !== t ? t : 4
+                        var t, e;
+                        return null !== (e = null === (t = this.activeDoodle.weights) || void 0 === t ? void 0 : t[this.weightIndex]) && void 0 !== e ? e : 4
                     }
                 },
                 methods: {
-                    onChangeColor(e) {
-                        var t;
-                        (null === (t = this.activeDoodle.colors) || void 0 === t ? void 0 : t.length) && (this.colorIndex = e)
+                    onChangeColor(t) {
+                        var e;
+                        (null === (e = this.activeDoodle.colors) || void 0 === e ? void 0 : e.length) && (this.colorIndex = t)
                     },
                     onChangeWeight() {
-                        var e;
-                        (null === (e = this.activeDoodle.weights) || void 0 === e ? void 0 : e.length) && (this.weightIndex = (this.weightIndex + 1) % this.activeDoodle.weights.length)
+                        var t;
+                        (null === (t = this.activeDoodle.weights) || void 0 === t ? void 0 : t.length) && (this.weightIndex = (this.weightIndex + 1) % this.activeDoodle.weights.length)
                     },
                     onSubmit() {
-                        this.isSubmitting = !0, this.component.doodles.forEach((e => {
-                            this.$ecast.lock(e.key).catch((e => {
-                                this.isSubmitting = !1, this.$handleEcastError(e)
+                        this.isSubmitting = !0, this.component.doodles.forEach((t => {
+                            this.$ecast.lock(t.key).catch((t => {
+                                this.isSubmitting = !1, this.$handleEcastError(t)
                             }))
                         }))
                     }
                 }
             });
-            var F = (0, c.Z)(Y, Z, [], !1, null, null, null);
-            F.options.__file = "src/games/internal/prototype/views/Doodle.vue";
-            const U = F.exports;
-            var W = function() {
-                var e = this.$createElement,
-                    t = this._self._c || e;
-                return t("div", {
+            var K = (0, c.Z)(z, G, [], !1, null, null, null);
+            K.options.__file = "src/games/internal/prototype/views/Doodle.vue";
+            const W = K.exports;
+            var F = function() {
+                var t = this.$createElement,
+                    e = this._self._c || t;
+                return e("div", {
                     staticClass: "draw"
-                }, [t("div", {
+                }, [e("div", {
                     ref: "stage",
                     staticClass: "stage"
                 })])
             };
-            W._withStripped = !0;
-            var z = s(32530);
-            const V = i().extend({
+            F._withStripped = !0;
+            var H = s(32530);
+            const Y = a().extend({
                 props: {
                     component: Object
                 },
@@ -1167,109 +1319,109 @@
                     stage: null
                 }),
                 mounted() {
-                    const e = this.$refs.stage,
-                        t = {};
-                    this.component.size && (t.width = this.component.size.width, t.height = this.component.size.height), this.component.lines && (t.lines = this.component.lines), this.stage = new z.U(e, t)
+                    const t = this.$refs.stage,
+                        e = {};
+                    this.component.size && (e.width = this.component.size.width, e.height = this.component.size.height), this.component.lines && (e.lines = this.component.lines), this.stage = new H.U(t, e)
                 }
             });
-            var H = (0, c.Z)(V, W, [], !1, null, null, null);
-            H.options.__file = "src/games/internal/prototype/views/Draw.vue";
-            const J = H.exports;
-            var q = function() {
-                var e = this,
-                    t = e.$createElement;
-                return (e._self._c || t)("img", {
-                    class: e.component.classes,
+            var V = (0, c.Z)(Y, F, [], !1, null, null, null);
+            V.options.__file = "src/games/internal/prototype/views/Draw.vue";
+            const J = V.exports;
+            var X = function() {
+                var t = this,
+                    e = t.$createElement;
+                return (t._self._c || e)("img", {
+                    class: t.component.classes,
                     attrs: {
-                        src: e.component.url || e.component.image,
+                        src: t.component.url || t.component.image,
                         alt: "Image"
                     }
                 })
             };
-            q._withStripped = !0;
-            const Q = i().extend({
+            X._withStripped = !0;
+            const q = a().extend({
                 props: {
                     component: Object
                 }
             });
-            var X = (0, c.Z)(Q, q, [], !1, null, null, null);
-            X.options.__file = "src/games/internal/prototype/views/Image.vue";
-            const ee = X.exports;
-            var te = function() {
-                var e = this,
-                    t = e.$createElement,
-                    s = e._self._c || t;
+            var Q = (0, c.Z)(q, X, [], !1, null, null, null);
+            Q.options.__file = "src/games/internal/prototype/views/Image.vue";
+            const tt = Q.exports;
+            var et = function() {
+                var t = this,
+                    e = t.$createElement,
+                    s = t._self._c || e;
                 return s("div", {
                     staticClass: "inputs",
-                    class: e.component.classes
-                }, [e._l(e.component.inputs, (function(t, a) {
-                    return [t.label ? s("label", {
-                        key: a,
-                        class: t.classes,
+                    class: t.component.classes
+                }, [t._l(t.component.inputs, (function(e, i) {
+                    return [e.label ? s("label", {
+                        key: i,
+                        class: e.classes,
                         attrs: {
-                            for: "input-" + a
+                            for: "input-" + i
                         }
-                    }, [e._v("\n            " + e._s(t.label) + "\n        ")]) : e._e(), e._v(" "), "textarea" === t.type ? s("textarea", {
+                    }, [t._v("\n            " + t._s(e.label) + "\n        ")]) : t._e(), t._v(" "), "textarea" === e.type ? s("textarea", {
                         directives: [{
                             name: "model",
                             rawName: "v-model",
-                            value: e.values[a],
+                            value: t.values[i],
                             expression: "values[index]"
                         }],
-                        key: a,
-                        class: t.classes,
+                        key: i,
+                        class: e.classes,
                         attrs: {
-                            id: "input-" + a,
-                            placeholder: t.placeholder,
-                            rows: t.rows || 2
+                            id: "input-" + i,
+                            placeholder: e.placeholder,
+                            rows: e.rows || 2
                         },
                         domProps: {
-                            value: e.values[a]
+                            value: t.values[i]
                         },
                         on: {
-                            input: function(t) {
-                                t.target.composing || e.$set(e.values, a, t.target.value)
+                            input: function(e) {
+                                e.target.composing || t.$set(t.values, i, e.target.value)
                             }
                         }
                     }) : s("input", {
                         directives: [{
                             name: "model",
                             rawName: "v-model",
-                            value: e.values[a],
+                            value: t.values[i],
                             expression: "values[index]"
                         }],
-                        key: a,
-                        class: t.classes,
+                        key: i,
+                        class: e.classes,
                         attrs: {
                             type: "text",
-                            placeholder: t.placeholder
+                            placeholder: e.placeholder
                         },
                         domProps: {
-                            value: e.values[a]
+                            value: t.values[i]
                         },
                         on: {
-                            input: function(t) {
-                                t.target.composing || e.$set(e.values, a, t.target.value)
+                            input: function(e) {
+                                e.target.composing || t.$set(t.values, i, e.target.value)
                             }
                         }
                     })]
-                })), e._v(" "), e.component.submit ? s("button", {
-                    class: e.component.submit.classes,
+                })), t._v(" "), t.component.submit ? s("button", {
+                    class: t.component.submit.classes,
                     on: {
-                        click: function(t) {
-                            return t.preventDefault(), e.onSubmitClick.apply(null, arguments)
+                        click: function(e) {
+                            return e.preventDefault(), t.onSubmitClick.apply(null, arguments)
                         }
                     }
-                }, [e._v("\n        " + e._s(e.component.submit.text || "SUBMIT") + "\n    ")]) : s("button", {
+                }, [t._v("\n        " + t._s(t.component.submit.text || "SUBMIT") + "\n    ")]) : s("button", {
                     on: {
-                        click: function(t) {
-                            return t.preventDefault(), e.onSubmitClick.apply(null, arguments)
+                        click: function(e) {
+                            return e.preventDefault(), t.onSubmitClick.apply(null, arguments)
                         }
                     }
-                }, [e._v("SUBMIT")])], 2)
+                }, [t._v("SUBMIT")])], 2)
             };
-            te._withStripped = !0;
-            const se = i().extend({
+            et._withStripped = !0;
+            const st = a().extend({
                 props: {
                     component: Object
                 },
@@ -1277,66 +1429,66 @@
                     values: []
                 }),
                 beforeMount() {
-                    this.values = this.component.inputs.map((e => {
-                        var t;
-                        return null !== (t = e.value) && void 0 !== t ? t : ""
+                    this.values = this.component.inputs.map((t => {
+                        var e;
+                        return null !== (e = t.value) && void 0 !== e ? e : ""
                     }))
                 },
                 methods: {
                     onSubmitClick() {
-                        const e = this.component.send || {
+                        const t = this.component.send || {
                             action: this.component.action || "input"
                         };
-                        this.component.inputs.forEach(((t, s) => {
-                            var a;
-                            const n = null !== (a = t.key) && void 0 !== a ? a : `input${s}`;
-                            e[n] = this.values[s]
-                        })), this.component.responseEntity ? this.$ecast.updateObject(this.component.responseEntity, e).catch(this.$handleEcastError) : this.$ecast.mail(1, e).catch(this.$handleEcastError)
+                        this.component.inputs.forEach(((e, s) => {
+                            var i;
+                            const n = null !== (i = e.key) && void 0 !== i ? i : `input${s}`;
+                            t[n] = this.values[s]
+                        })), this.component.responseEntity ? this.$ecast.updateObject(this.component.responseEntity, t).catch(this.$handleEcastError) : this.$ecast.mail(1, t).catch(this.$handleEcastError)
                     }
                 }
             });
-            var ae = (0, c.Z)(se, te, [], !1, null, null, null);
-            ae.options.__file = "src/games/internal/prototype/views/Inputs.vue";
-            const ne = ae.exports;
-            var ie = function() {
-                var e = this,
-                    t = e.$createElement;
-                return (e._self._c || t)(e.component.tag || "p", {
+            var it = (0, c.Z)(st, et, [], !1, null, null, null);
+            it.options.__file = "src/games/internal/prototype/views/Inputs.vue";
+            const nt = it.exports;
+            var at = function() {
+                var t = this,
+                    e = t.$createElement;
+                return (t._self._c || e)(t.component.tag || "p", {
                     tag: "component",
-                    class: e.component.classes
-                }, [e._v(e._s(e.component.text))])
+                    class: t.component.classes
+                }, [t._v(t._s(t.component.text))])
             };
-            ie._withStripped = !0;
-            const oe = i().extend({
+            at._withStripped = !0;
+            const ot = a().extend({
                 props: {
                     component: Object
                 }
             });
-            var le = (0, c.Z)(oe, ie, [], !1, null, null, null);
-            le.options.__file = "src/games/internal/prototype/views/Text.vue";
-            const re = le.exports,
-                ce = i().extend({
+            var lt = (0, c.Z)(ot, at, [], !1, null, null, null);
+            lt.options.__file = "src/games/internal/prototype/views/Text.vue";
+            const rt = lt.exports,
+                ct = a().extend({
                     components: {
-                        choicesEl: R,
-                        doodleEl: U,
+                        choicesEl: Z,
+                        doodleEl: W,
                         drawEl: J,
-                        imageEl: ee,
-                        inputsEl: ne,
-                        textEl: re,
-                        Fallbacks: D
+                        imageEl: tt,
+                        inputsEl: nt,
+                        textEl: rt,
+                        Fallbacks: B
                     },
                     ecastKeys: {
                         theme: ({
-                            id: e
-                        }) => `theme:${e}`,
+                            id: t
+                        }) => `theme:${t}`,
                         player: ({
-                            id: e
-                        }) => `player:${e}`,
+                            id: t
+                        }) => `player:${t}`,
                         components: {
                             hasDeepRefs: !0,
                             fn: ({
-                                id: e
-                            }) => `components:${e}`
+                                id: t
+                            }) => `components:${t}`
                         }
                     },
                     props: {
@@ -1346,21 +1498,21 @@
                     },
                     computed: {
                         classes() {
-                            var e, t;
-                            return null !== (t = null === (e = this.components) || void 0 === e ? void 0 : e.classes) && void 0 !== t ? t : []
+                            var t, e;
+                            return null !== (e = null === (t = this.components) || void 0 === t ? void 0 : t.classes) && void 0 !== e ? e : []
                         },
                         themeStyle() {
                             if (!this.theme) return "";
-                            const e = this.theme.colors;
-                            let t = "";
-                            return e && (t += `--theme-primary: ${e.primary};`, t += `--theme-secondary: ${e.secondary};`, t += `--theme-highlight: ${e.highlight};`, t += `--theme-background: ${e.background};`), t
+                            const t = this.theme.colors;
+                            let e = "";
+                            return t && (e += `--theme-primary: ${t.primary};`, e += `--theme-secondary: ${t.secondary};`, e += `--theme-highlight: ${t.highlight};`, e += `--theme-background: ${t.background};`), e
                         }
                     }
                 });
-            var pe = (0, c.Z)(ce, a, [], !1, null, null, null);
-            pe.options.__file = "src/games/internal/prototype/views/Main.vue";
-            const ue = pe.exports
+            var ht = (0, c.Z)(ct, i, [], !1, null, null, null);
+            ht.options.__file = "src/games/internal/prototype/views/Main.vue";
+            const pt = ht.exports
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/7986.18cd0cf878d212903f09.js.map
+//# sourceMappingURL=sourcemaps/7986.a5416026dd9aa948591c.js.map

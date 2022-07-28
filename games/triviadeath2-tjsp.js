@@ -44,10 +44,323 @@
                 }.call(t, s, t, e)) || (e.exports = i)
             }()
         },
-        87383: (e, t, s) => {
+        20854: (e, t, s) => {
+            "use strict";
+            s.d(t, {
+                J: () => n
+            });
+            var i = s(16479),
+                a = s.n(i),
+                r = s(89446);
+            class n {
+                constructor(e, t, s) {
+                    var i, a, r, n, o;
+                    this.DEFAULT_WIDTH = 400, this.DEFAULT_HEIGHT = 400, this.color = "#000", this.layer = 0, this.layers = 1, this.maxPoints = Number.MAX_SAFE_INTEGER, this.points = [], this.precision = 2, this.scale = {
+                        width: 1,
+                        height: 1
+                    }, this.weight = 4, this.isInteracting = !1, (null == s ? void 0 : s.color) && (this.color = s.color), (null == s ? void 0 : s.layer) && (this.layer = s.layer), (null == s ? void 0 : s.layers) && (this.layers = s.layers), (null == s ? void 0 : s.maxPoints) && (this.maxPoints = s.maxPoints), (null == s ? void 0 : s.precision) && (this.precision = s.precision), (null == s ? void 0 : s.scale) && (this.scale = s.scale), (null == s ? void 0 : s.weight) && (this.weight = s.weight), e.width = (null !== (a = null === (i = t.size) || void 0 === i ? void 0 : i.width) && void 0 !== a ? a : this.DEFAULT_WIDTH) * this.scale.width, e.height = (null !== (n = null === (r = t.size) || void 0 === r ? void 0 : r.height) && void 0 !== n ? n : this.DEFAULT_HEIGHT) * this.scale.height, this.canvas = e, this.ctx = e.getContext("2d"), null === (o = this.ctx) || void 0 === o || o.scale(this.scale.width, this.scale.height), this.doodle = t, this.drawLines()
+                }
+                addPoint(e) {
+                    this.points.push(e)
+                }
+                normalizePoint(e) {
+                    const t = {
+                            x: e.x / this.scale.width,
+                            y: e.y / this.scale.height
+                        },
+                        s = {
+                            x: Math.min(Math.max(.5 * this.weight, t.x), this.canvas.width / this.scale.width - .5 * this.weight),
+                            y: Math.min(Math.max(.5 * this.weight, t.y), this.canvas.height / this.scale.height - .5 * this.weight)
+                        };
+                    return {
+                        x: r.c.toPrecision(s.x, this.precision),
+                        y: r.c.toPrecision(s.y, this.precision)
+                    }
+                }
+                drawLines() {
+                    if (this.ctx) {
+                        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                        for (let e = 0; e < this.layers; e++) Object.values(this.doodle.lines).filter((t => {
+                            var s;
+                            return (null !== (s = t.layer) && void 0 !== s ? s : 0) === e
+                        })).forEach((e => this.drawLine(e))), e === this.layer && this.drawLine({
+                            color: this.color,
+                            index: this.doodle.lines.length,
+                            layer: this.layer,
+                            points: this.points,
+                            weight: this.weight
+                        })
+                    }
+                }
+                drawLine(e) {
+                    this.ctx && (this.ctx.fillStyle = e.color, this.ctx.strokeStyle = e.color, this.ctx.lineCap = "round", this.ctx.lineJoin = "round", this.ctx.lineWidth = e.weight, this.ctx.beginPath(), e.points.forEach(((t, s) => {
+                        1 === e.points.length && 0 === s && (this.ctx.save(), this.ctx.arc(t.x, t.y, e.weight / 2, 0, 2 * Math.PI), this.ctx.fill(), this.ctx.restore(), this.ctx.beginPath()), this.ctx.lineTo(t.x, t.y)
+                    })), this.ctx.stroke())
+                }
+                renderImage(e = "image/png") {
+                    return this.doodle.lines.length > 0 && this.drawLines(), this.canvas.toDataURL(e)
+                }
+                onStart(e) {
+                    this.isInteracting = !0;
+                    const t = this.normalizePoint(e);
+                    this.addPoint(t), this.drawLines()
+                }
+                onMove(e) {
+                    if (!this.isInteracting) return;
+                    const t = this.points[this.points.length - 1];
+                    if (!t) return void this.addPoint(this.normalizePoint(e));
+                    const s = .5 * this.weight,
+                        i = {
+                            x: e.x - t.x,
+                            y: e.y - t.y
+                        },
+                        a = Math.sqrt(Math.pow(i.x, 2) + Math.pow(i.y, 2));
+                    if (a > s) {
+                        const e = (a - s) / a,
+                            r = {
+                                x: i.x * e,
+                                y: i.y * e
+                            },
+                            n = {
+                                x: t.x + r.x,
+                                y: t.y + r.y
+                            };
+                        this.addPoint(this.normalizePoint(n)), this.drawLines()
+                    }
+                }
+                onEnd() {
+                    if (!this.isInteracting) return null;
+                    const e = {
+                        color: this.color,
+                        index: this.doodle.lines.length,
+                        layer: this.layer,
+                        points: a()(this.points, .5).map((e => ({
+                            x: r.c.toPrecision(e.x, this.precision),
+                            y: r.c.toPrecision(e.y, this.precision)
+                        }))),
+                        weight: this.weight
+                    };
+                    return this.isInteracting = !1, this.points = [], e
+                }
+            }
+        },
+        3317: (e, t, s) => {
+            "use strict";
+            s.d(t, {
+                Z: () => p
+            });
+            var i = function() {
+                var e = this,
+                    t = e.$createElement,
+                    s = e._self._c || t;
+                return s("div", {
+                    staticClass: "doodle"
+                }, [s("div", {
+                    directives: [{
+                        name: "pointerBox",
+                        rawName: "v-pointerBox"
+                    }],
+                    staticClass: "stage",
+                    on: {
+                        pointerboxstart: e.onPointerBoxStart,
+                        pointerboxmove: e.onPointerBoxMove,
+                        pointerboxend: e.onPointerBoxEnd
+                    }
+                }, [s("canvas", {
+                    directives: [{
+                        name: "pointerboxtranslate",
+                        rawName: "v-pointerboxtranslate",
+                        value: {
+                            id: "doodleCanvas",
+                            width: e.pointerBoxWidth,
+                            height: e.pointerBoxHeight
+                        },
+                        expression: "{\n                id: 'doodleCanvas',\n                width: pointerBoxWidth,\n                height: pointerBoxHeight\n            }"
+                    }],
+                    ref: "canvas"
+                })]), e._v(" "), e.hideUndo ? e._e() : s("button", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "ACTION.UNDO",
+                        expression: "'ACTION.UNDO'"
+                    }],
+                    attrs: {
+                        disabled: !e.canSubmit
+                    },
+                    on: {
+                        click: function(t) {
+                            return t.preventDefault(), e.onUndo.apply(null, arguments)
+                        }
+                    }
+                }), e._v(" "), e.hideSubmit ? e._e() : s("button", {
+                    directives: [{
+                        name: "t",
+                        rawName: "v-t",
+                        value: "ACTION.SUBMIT",
+                        expression: "'ACTION.SUBMIT'"
+                    }],
+                    attrs: {
+                        disabled: !e.canSubmit
+                    },
+                    on: {
+                        click: function(t) {
+                            return t.preventDefault(), e.onSubmit.apply(null, arguments)
+                        }
+                    }
+                })])
+            };
+            i._withStripped = !0;
+            var a = s(2934),
+                r = s.n(a),
+                n = s(20854),
+                o = s(19734),
+                l = s(65853),
+                c = function(e, t, s, i) {
+                    return new(s || (s = Promise))((function(a, r) {
+                        function n(e) {
+                            try {
+                                l(i.next(e))
+                            } catch (e) {
+                                r(e)
+                            }
+                        }
+
+                        function o(e) {
+                            try {
+                                l(i.throw(e))
+                            } catch (e) {
+                                r(e)
+                            }
+                        }
+
+                        function l(e) {
+                            var t;
+                            e.done ? a(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
+                                e(t)
+                            }))).then(n, o)
+                        }
+                        l((i = i.apply(e, t || [])).next())
+                    }))
+                };
+            r().use(o.O);
+            const d = r().extend({
+                props: {
+                    canvasOptions: Object,
+                    hideSubmit: Boolean,
+                    hideUndo: Boolean,
+                    player: Object
+                },
+                i18n: {
+                    messages: l.s
+                },
+                data: () => ({
+                    canvas: null,
+                    isSubmitting: !1,
+                    isUndoing: !1
+                }),
+                computed: {
+                    canSubmit() {
+                        return !(this.isSubmitting || this.isUndoing || this.player.doodle.lines.length <= 0)
+                    },
+                    pointerBoxWidth() {
+                        var e, t, s;
+                        let i = 320;
+                        return (null === (e = this.player.doodle.size) || void 0 === e ? void 0 : e.width) && (i = this.player.doodle.size.width), i * (null !== (s = null === (t = this.canvasOptions.scale) || void 0 === t ? void 0 : t.width) && void 0 !== s ? s : 1)
+                    },
+                    pointerBoxHeight() {
+                        var e, t, s;
+                        let i = 320;
+                        return (null === (e = this.player.doodle.size) || void 0 === e ? void 0 : e.height) && (i = this.player.doodle.size.height), i * (null !== (s = null === (t = this.canvasOptions.scale) || void 0 === t ? void 0 : t.height) && void 0 !== s ? s : 1)
+                    }
+                },
+                watch: {
+                    canvasOptions: function(e) {
+                        var t, s, i, a, r, n, o;
+                        this.canvas && (this.canvas.color = null !== (t = e.color) && void 0 !== t ? t : "#000000", this.canvas.layer = null !== (s = e.layer) && void 0 !== s ? s : 0, this.canvas.layers = null !== (i = e.layers) && void 0 !== i ? i : 1, this.canvas.maxPoints = null !== (a = e.maxPoints) && void 0 !== a ? a : Number.MAX_SAFE_INTEGER, this.canvas.precision = null !== (r = e.precision) && void 0 !== r ? r : 2, this.canvas.scale = null !== (n = e.scale) && void 0 !== n ? n : {
+                            width: 1,
+                            height: 1
+                        }, this.canvas.weight = null !== (o = e.weight) && void 0 !== o ? o : 4)
+                    },
+                    "player.doodle": function() {
+                        this.canvas && (this.canvas.doodle = this.player.doodle)
+                    },
+                    "player.doodle.key": function() {
+                        this.createCanvas()
+                    },
+                    "player.doodle.lines": function() {
+                        this.canvas && this.canvas.drawLines()
+                    }
+                },
+                mounted() {
+                    this.createCanvas()
+                },
+                methods: {
+                    createCanvas() {
+                        const e = this.$refs.canvas;
+                        this.canvas = new n.J(e, this.player.doodle, this.canvasOptions)
+                    },
+                    onPointerBoxStart(e) {
+                        if (!this.canvas) return;
+                        const t = {
+                            x: e.detail.translations.doodleCanvas.x,
+                            y: e.detail.translations.doodleCanvas.y
+                        };
+                        this.canvas.onStart(t)
+                    },
+                    onPointerBoxMove(e) {
+                        if (!this.canvas) return;
+                        const t = {
+                            x: e.detail.translations.doodleCanvas.x,
+                            y: e.detail.translations.doodleCanvas.y
+                        };
+                        this.canvas.onMove(t)
+                    },
+                    onPointerBoxEnd() {
+                        return c(this, void 0, void 0, (function*() {
+                            if (!this.canvas) return;
+                            const e = this.canvas.onEnd();
+                            if (e) try {
+                                yield this.$ecast.strokeDoodle(this.player.doodle.key, e)
+                            } catch (e) {
+                                this.$handleEcastError(e)
+                            }
+                        }))
+                    },
+                    onSubmit() {
+                        return c(this, void 0, void 0, (function*() {
+                            this.isSubmitting = !0;
+                            try {
+                                yield this.$ecast.lock(this.player.doodle.key)
+                            } catch (e) {
+                                this.isSubmitting = !1, this.$handleEcastError(e)
+                            }
+                        }))
+                    },
+                    onUndo() {
+                        return c(this, void 0, void 0, (function*() {
+                            if (this.canvas) {
+                                this.isUndoing = !0;
+                                try {
+                                    yield this.$ecast.undoDoodle(this.player.doodle.key)
+                                } catch (e) {
+                                    this.$handleEcastError(e)
+                                } finally {
+                                    this.isUndoing = !1
+                                }
+                            }
+                        }))
+                    }
+                }
+            });
+            var h = (0, s(51900).Z)(d, i, [], !1, null, null, null);
+            h.options.__file = "src/apps/vue/components/base/Doodle.vue";
+            const p = h.exports
+        },
+        8406: (e, t, s) => {
             "use strict";
             s.r(t), s.d(t, {
-                default: () => me
+                default: () => de
             });
             var i = function() {
                 var e = this,
@@ -71,13 +384,9 @@
                     attrs: {
                         player: e.player
                     }
-                }) : "postGame" === e.player.kind ? s("PostGame", {
-                    attrs: {
-                        artifact: e.artifact,
-                        player: e.player
-                    }
                 }) : "choices" === e.player.kind ? s("Choices", {
                     attrs: {
+                        artifact: e.artifact,
                         player: e.player,
                         madness: e.info.madness
                     }
@@ -592,7 +901,7 @@
                         expression: "'CHOICES.NONE'"
                     }]
                 })]) : [s("div", {
-                    class: e.player.category && -1 === ["fingers", "keys", "wires"].indexOf(e.player.category) ? "object-container" : "choice-container"
+                    class: e.player.category && -1 === ["fingers", "keys", "postGame", "wires"].indexOf(e.player.category) ? "object-container" : "choice-container"
                 }, ["Choices" === e.madness || "NowThatsWhatICallMadness" === e.madness ? e._l(10, (function(t) {
                     return s("div", {
                         key: "madness-" + t,
@@ -643,21 +952,21 @@
                                 return e.onSelect(i)
                             }
                         }
-                    }, [e.player.category && "wires" !== e.player.category ? e.buttonImages[t.optionType + t.objectIndex] ? s("img", {
-                        staticClass: "button-image",
-                        class: e.player.category,
-                        attrs: {
-                            src: e.buttonImages[t.optionType + t.objectIndex].src,
-                            alt: e.buttonImages[t.optionType + t.objectIndex].alt
-                        }
-                    }) : e._e() : s("span", {
+                    }, [e.showChoiceText ? s("span", {
                         directives: [{
                             name: "bb",
                             rawName: "v-bb",
                             value: t.text,
                             expression: "choice.text"
                         }]
-                    })]), e._v(" "), e.player.hasSubmit && e.buttonImages.checkedBox && e.buttonImages.uncheckedBox ? s("img", {
+                    }) : e.buttonImages[t.optionType + t.objectIndex] ? s("img", {
+                        staticClass: "button-image",
+                        class: e.player.category,
+                        attrs: {
+                            src: e.buttonImages[t.optionType + t.objectIndex].src,
+                            alt: e.buttonImages[t.optionType + t.objectIndex].alt
+                        }
+                    }) : e._e()]), e._v(" "), e.player.hasSubmit && e.buttonImages.checkedBox && e.buttonImages.uncheckedBox ? s("img", {
                         staticClass: "checkbox-image",
                         attrs: {
                             src: e.buttonImages[-1 !== e.selected.indexOf(i) ? "checkedBox" : "uncheckedBox"].src,
@@ -672,38 +981,47 @@
                     on: {
                         click: e.onSubmit
                     }
-                }) : e._e()]], 2)
+                }) : e._e()], e._v(" "), "postGame" === e.player.category ? s("GalleryLink", {
+                    attrs: {
+                        artifact: e.artifact
+                    }
+                }) : e._e()], 2)
             };
             l._withStripped = !0;
-            var c = function(e, t, s, i) {
-                return new(s || (s = Promise))((function(a, r) {
-                    function n(e) {
-                        try {
-                            l(i.next(e))
-                        } catch (e) {
-                            r(e)
+            var c = s(56623),
+                d = function(e, t, s, i) {
+                    return new(s || (s = Promise))((function(a, r) {
+                        function n(e) {
+                            try {
+                                l(i.next(e))
+                            } catch (e) {
+                                r(e)
+                            }
                         }
-                    }
 
-                    function o(e) {
-                        try {
-                            l(i.throw(e))
-                        } catch (e) {
-                            r(e)
+                        function o(e) {
+                            try {
+                                l(i.throw(e))
+                            } catch (e) {
+                                r(e)
+                            }
                         }
-                    }
 
-                    function l(e) {
-                        var t;
-                        e.done ? a(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
-                            e(t)
-                        }))).then(n, o)
-                    }
-                    l((i = i.apply(e, t || [])).next())
-                }))
-            };
-            const d = r().extend({
+                        function l(e) {
+                            var t;
+                            e.done ? a(e.value) : (t = e.value, t instanceof s ? t : new s((function(e) {
+                                e(t)
+                            }))).then(n, o)
+                        }
+                        l((i = i.apply(e, t || [])).next())
+                    }))
+                };
+            const h = r().extend({
+                components: {
+                    GalleryLink: c.Z
+                },
                 props: {
+                    artifact: Object,
                     madness: String,
                     player: Object
                 },
@@ -758,6 +1076,9 @@
                     },
                     selections() {
                         return this.player.choices.filter(((e, t) => this.selected.includes(t))).map((e => e.text)).join(", ")
+                    },
+                    showChoiceText() {
+                        return "postGame" === this.player.category || "wires" === this.player.category || !this.player.category
                     }
                 },
                 watch: {
@@ -790,7 +1111,7 @@
                     },
                     stripBBCode: e => e.replace(/\[\/?(?:b|i|u|url|quote|code|img|color|size)*?.*?\]/gim, ""),
                     onSelect(e) {
-                        return c(this, void 0, void 0, (function*() {
+                        return d(this, void 0, void 0, (function*() {
                             const t = this.selected.indexOf(e);
                             let s;
                             this.player.hasSubmit ? -1 === t ? (this.selected.push(e), s = "select") : (this.selected.splice(t, 1), s = "unselect") : (this.selected.push(e), s = "submit"), this.isSubmitting = !0;
@@ -807,7 +1128,7 @@
                         }))
                     },
                     onSubmit() {
-                        return c(this, void 0, void 0, (function*() {
+                        return d(this, void 0, void 0, (function*() {
                             this.isSubmitting = !0;
                             try {
                                 if ("player" === this.$ecast.role) yield this.$ecast.updateObject(this.player.responseKey, {
@@ -826,7 +1147,7 @@
                         }))
                     },
                     setButtonImages() {
-                        return c(this, void 0, void 0, (function*() {
+                        return d(this, void 0, void 0, (function*() {
                             this.buttonImages = {
                                 checkedBox: {
                                     alt: this.$t("ALT.CHECKED_BOX"),
@@ -1033,10 +1354,10 @@
                     }
                 }
             });
-            var h = s(51900),
-                p = (0, h.Z)(d, l, [], !1, null, "72482f88", null);
-            p.options.__file = "src/games/tjsp/triviadeath2/views/Choices.vue";
-            const u = p.exports;
+            var p = s(51900),
+                u = (0, p.Z)(h, l, [], !1, null, "72482f88", null);
+            u.options.__file = "src/games/tjsp/triviadeath2/views/Choices.vue";
+            const v = u.exports;
             var g = function() {
                 var e = this,
                     t = e.$createElement,
@@ -1095,7 +1416,7 @@
                         l((i = i.apply(e, t || [])).next())
                     }))
                 };
-            const v = [0, .178, .424, .608, .735, .824, .888, .934, .965, .986, .997, 1, .997, .988, .973, .951, .921, .883, .836, .779, .712, .632, .54, .436, .322, .201, .087, 0, .015, .032, .049, .066, .083, .098, .112, .125, .136, .145, .151, .154, .151, .144, .134, .121, .106, .09, .072, .054, .035, .017, 0],
+            const y = [0, .178, .424, .608, .735, .824, .888, .934, .965, .986, .997, 1, .997, .988, .973, .951, .921, .883, .836, .779, .712, .632, .54, .436, .322, .201, .087, 0, .015, .032, .049, .066, .083, .098, .112, .125, .136, .145, .151, .154, .151, .144, .134, .121, .106, .09, .072, .054, .035, .017, 0],
                 _ = function(e) {
                     return e * (Math.PI / 180)
                 },
@@ -1182,7 +1503,7 @@
                                 if (!this.isSelected) return;
                                 this.isSelected = !1;
                                 let e = Math.floor(this.rotation / _(30));
-                                0 === e && (this.bounceFrame = v.length - 1), 0 !== e && 11 !== e && (10 === e && (e = 0), this.dialNumber(e))
+                                0 === e && (this.bounceFrame = y.length - 1), 0 !== e && 11 !== e && (10 === e && (e = 0), this.dialNumber(e))
                             },
                             dialNumber(e) {},
                             update(e) {
@@ -1202,8 +1523,8 @@
                                         s < 0 && (s += 2 * Math.PI), s > 0 && s < this.maxRotation && (this.rotation = s), (0, m.tN)("left") || this.onUp()
                                     }
                                     if (this.isSelected || (this.rotation -= this.rotationSpeed, this.rotation = Math.max(0, this.rotation)), this.bounceFrame > 0) {
-                                        const e = v.length - 1 - this.bounceFrame;
-                                        this.rotation = _(13 * v[e]), this.bounceFrame += -1
+                                        const e = y.length - 1 - this.bounceFrame;
+                                        this.rotation = _(13 * y[e]), this.bounceFrame += -1
                                     }
                                     this.advance(e)
                                 }))
@@ -1313,10 +1634,10 @@
                         }
                     }
                 });
-            var y = (0, h.Z)(E, g, [], !1, null, "6373af08", null);
-            y.options.__file = "src/games/tjsp/triviadeath2/views/Dialing.vue";
-            const b = y.exports;
-            var C = function() {
+            var b = (0, p.Z)(E, g, [], !1, null, "6373af08", null);
+            b.options.__file = "src/games/tjsp/triviadeath2/views/Dialing.vue";
+            const C = b.exports;
+            var x = function() {
                 var e = this,
                     t = e.$createElement,
                     s = e._self._c || t;
@@ -1351,11 +1672,11 @@
                     }
                 })], 1)])])
             };
-            C._withStripped = !0;
-            var x = s(3317);
-            const I = r().extend({
+            x._withStripped = !0;
+            var I = s(3317);
+            const w = r().extend({
                 components: {
-                    BaseDoodle: x.Z
+                    BaseDoodle: I.Z
                 },
                 props: {
                     player: Object
@@ -1367,10 +1688,10 @@
                     isSubmitting: !1
                 })
             });
-            var w = (0, h.Z)(I, C, [], !1, null, null, null);
-            w.options.__file = "src/games/tjsp/triviadeath2/views/Drawing.vue";
-            const L = w.exports;
-            var K = function() {
+            var L = (0, p.Z)(w, x, [], !1, null, null, null);
+            L.options.__file = "src/games/tjsp/triviadeath2/views/Drawing.vue";
+            const S = L.exports;
+            var T = function() {
                 var e = this,
                     t = e.$createElement,
                     s = e._self._c || t;
@@ -1392,7 +1713,7 @@
                     }
                 })])
             };
-            K._withStripped = !0;
+            T._withStripped = !0;
             var A = function(e, t, s, i) {
                 return new(s || (s = Promise))((function(a, r) {
                     function n(e) {
@@ -1420,8 +1741,8 @@
                     l((i = i.apply(e, t || [])).next())
                 }))
             };
-            const S = 128,
-                T = r().extend({
+            const K = 128,
+                O = r().extend({
                     props: {
                         color: String,
                         player: Object
@@ -1438,7 +1759,7 @@
                                 x: .5,
                                 y: .5
                             },
-                            width: S,
+                            width: K,
                             height: 20,
                             color: "black"
                         },
@@ -1447,8 +1768,8 @@
                                 x: .5,
                                 y: .5
                             },
-                            height: S,
-                            width: S,
+                            height: K,
+                            width: K,
                             x: 320,
                             y: 64,
                             ddy: 0,
@@ -1463,7 +1784,7 @@
                             render() {
                                 if (this.draw(), !this.isDropped) {
                                     const e = (0, m.Sy)();
-                                    e.save(), e.translate(this.x, this.y + 64), e.fillStyle = this.color, e.beginPath(), e.moveTo(-1 / 6 * this.width, 0), e.lineTo(1 / 6 * this.width, 0), e.lineTo(0, 1 / 6 * S), e.fill(), e.restore()
+                                    e.save(), e.translate(this.x, this.y + 64), e.fillStyle = this.color, e.beginPath(), e.moveTo(-1 / 6 * this.width, 0), e.lineTo(1 / 6 * this.width, 0), e.lineTo(0, 1 / 6 * K), e.fill(), e.restore()
                                 }
                             },
                             update(e) {
@@ -1486,7 +1807,7 @@
                             });
                             for (let e = 0; e < this.sprites.length; e++) this.sprites[e].ttl = 0;
                             const e = (0, m.jy)(this.bar);
-                            e.x = .5 * (0, m.o_)().width, e.y = 64, e.width = (0, m.o_)().width - S, this.sprites.push(e), this.puck.image.src = this.chipImages[this.color];
+                            e.x = .5 * (0, m.o_)().width, e.y = 64, e.width = (0, m.o_)().width - K, this.sprites.push(e), this.puck.image.src = this.chipImages[this.color];
                             const t = (0, m.jy)(this.puck);
                             (0, m.o_)().addEventListener("mouseleave", this.puck.onUp), t.dropped = () => {
                                 const e = (0, m.o_)().width - 64 - 64;
@@ -1529,9 +1850,9 @@
                         }
                     }
                 });
-            var O = (0, h.Z)(T, K, [], !1, null, "5c80288a", null);
-            O.options.__file = "src/games/tjsp/triviadeath2/views/Dropping.vue";
-            const N = O.exports;
+            var N = (0, p.Z)(O, T, [], !1, null, "5c80288a", null);
+            N.options.__file = "src/games/tjsp/triviadeath2/views/Dropping.vue";
+            const k = N.exports;
             var Y = function() {
                 var e = this,
                     t = e.$createElement,
@@ -1594,7 +1915,7 @@
                 }) : e._e()], 2)
             };
             Y._withStripped = !0;
-            var k = function(e, t, s, i) {
+            var P = function(e, t, s, i) {
                 return new(s || (s = Promise))((function(a, r) {
                     function n(e) {
                         try {
@@ -1634,7 +1955,7 @@
                 },
                 methods: {
                     setImages() {
-                        return k(this, void 0, void 0, (function*() {
+                        return P(this, void 0, void 0, (function*() {
                             this.images = {
                                 swordLength2: {
                                     alt: this.$t("ALT.SWORD_2"),
@@ -1659,7 +1980,7 @@
                         return [s]
                     },
                     onSubmit(e, t) {
-                        return k(this, void 0, void 0, (function*() {
+                        return P(this, void 0, void 0, (function*() {
                             this.isSubmitting = !0;
                             try {
                                 yield this.$ecast.updateObject(this.player.responseKey, {
@@ -1676,10 +1997,10 @@
                     }
                 }
             });
-            var D = (0, h.Z)(G, Y, [], !1, null, "36c9dfd6", null);
+            var D = (0, p.Z)(G, Y, [], !1, null, "36c9dfd6", null);
             D.options.__file = "src/games/tjsp/triviadeath2/views/GridSelecting.vue";
-            const P = D.exports;
-            var H = function() {
+            const H = D.exports;
+            var R = function() {
                 var e = this,
                     t = e.$createElement,
                     s = e._self._c || t;
@@ -1691,52 +2012,20 @@
                     }
                 })], 1)
             };
-            H._withStripped = !0;
-            var R = s(13494);
-            const $ = r().extend({
+            R._withStripped = !0;
+            var $ = s(13494);
+            const F = r().extend({
                 components: {
-                    LobbyActions: R.Z
+                    LobbyActions: $.Z
                 },
                 props: {
                     player: Object
                 }
             });
-            var F = (0, h.Z)($, H, [], !1, null, "2f536c28", null);
-            F.options.__file = "src/games/tjsp/triviadeath2/views/Lobby.vue";
-            const M = F.exports;
-            var B = function() {
-                var e = this,
-                    t = e.$createElement,
-                    s = e._self._c || t;
-                return s("div", {
-                    staticClass: "post-game"
-                }, [s("PostGameActions", {
-                    attrs: {
-                        player: e.player
-                    }
-                }), e._v(" "), s("GalleryLink", {
-                    attrs: {
-                        artifact: e.artifact
-                    }
-                })], 1)
-            };
-            B._withStripped = !0;
-            var j = s(56623),
-                z = s(83933);
-            const U = r().extend({
-                components: {
-                    GalleryLink: j.Z,
-                    PostGameActions: z.Z
-                },
-                props: {
-                    artifact: Object,
-                    player: Object
-                }
-            });
-            var W = (0, h.Z)(U, B, [], !1, null, "458a030c", null);
-            W.options.__file = "src/games/tjsp/triviadeath2/views/PostGame.vue";
-            const Z = W.exports;
-            var X = function() {
+            var M = (0, p.Z)(F, R, [], !1, null, "2f536c28", null);
+            M.options.__file = "src/games/tjsp/triviadeath2/views/Lobby.vue";
+            const B = M.exports;
+            var z = function() {
                 var e = this,
                     t = e.$createElement,
                     s = e._self._c || t;
@@ -1753,8 +2042,8 @@
                     }
                 })])
             };
-            X._withStripped = !0;
-            var q = function(e, t, s, i) {
+            z._withStripped = !0;
+            var j = function(e, t, s, i) {
                 return new(s || (s = Promise))((function(a, r) {
                     function n(e) {
                         try {
@@ -1781,7 +2070,7 @@
                     l((i = i.apply(e, t || [])).next())
                 }))
             };
-            const V = r().extend({
+            const U = r().extend({
                 props: {
                     player: Object
                 },
@@ -1838,7 +2127,7 @@
                             }))), e.restore(), (0, m.Sy)().drawImage(this.hiddenCanvas, this.x, this.y))
                         },
                         update() {
-                            return q(this, void 0, void 0, (function*() {
+                            return j(this, void 0, void 0, (function*() {
                                 if (this.lines || (this.lines = []), this.hiddenCanvas.width || (this.hiddenCanvas.width = this.width, this.hiddenCanvas.height = this.height), !this.successImage) {
                                     const e = new Image;
                                     e.src = (yield Promise.resolve().then(s.t.bind(s, 34372, 17))).default, this.successImage = e
@@ -1903,7 +2192,7 @@
                         }))
                     },
                     onReveal(e) {
-                        return q(this, void 0, void 0, (function*() {
+                        return j(this, void 0, void 0, (function*() {
                             try {
                                 yield this.$ecast.updateObject(this.player.responseKey, {
                                     action: "scratch",
@@ -1916,10 +2205,10 @@
                     }
                 }
             });
-            var Q = (0, h.Z)(V, X, [], !1, null, "80719cfc", null);
-            Q.options.__file = "src/games/tjsp/triviadeath2/views/Scratching.vue";
-            const J = Q.exports;
-            var ee = function() {
+            var W = (0, p.Z)(U, z, [], !1, null, "80719cfc", null);
+            W.options.__file = "src/games/tjsp/triviadeath2/views/Scratching.vue";
+            const Z = W.exports;
+            var X = function() {
                     var e = this,
                         t = e.$createElement,
                         s = e._self._c || t;
@@ -1931,7 +2220,7 @@
                         }
                     })], 1)
                 },
-                te = [function() {
+                q = [function() {
                     var e = this.$createElement,
                         t = this._self._c || e;
                     return t("div", {
@@ -1943,10 +2232,10 @@
                         }
                     })])
                 }];
-            ee._withStripped = !0;
-            const se = r().extend({
+            X._withStripped = !0;
+            const V = r().extend({
                 components: {
-                    GalleryLink: j.Z
+                    GalleryLink: c.Z
                 },
                 props: {
                     artifact: Object,
@@ -1956,10 +2245,10 @@
                     messages: o
                 }
             });
-            var ie = (0, h.Z)(se, ee, te, !1, null, "a1636d3a", null);
-            ie.options.__file = "src/games/tjsp/triviadeath2/views/Waiting.vue";
-            const ae = ie.exports;
-            var re = function() {
+            var J = (0, p.Z)(V, X, q, !1, null, "a1636d3a", null);
+            J.options.__file = "src/games/tjsp/triviadeath2/views/Waiting.vue";
+            const Q = J.exports;
+            var ee = function() {
                 var e = this,
                     t = e.$createElement,
                     s = e._self._c || t;
@@ -2057,11 +2346,11 @@
                     staticClass: "submit"
                 }) : e._e()], 1)])
             };
-            re._withStripped = !0;
-            var ne = s(55507),
-                oe = s(6305),
-                le = s(38266),
-                ce = function(e, t, s, i) {
+            ee._withStripped = !0;
+            var te = s(55507),
+                se = s(6305),
+                ie = s(38266),
+                ae = function(e, t, s, i) {
                     return new(s || (s = Promise))((function(a, r) {
                         function n(e) {
                             try {
@@ -2088,10 +2377,10 @@
                         l((i = i.apply(e, t || [])).next())
                     }))
                 };
-            const de = r().extend({
+            const re = r().extend({
                 components: {
-                    Input: oe.Z,
-                    TextArea: le.Z
+                    Input: se.Z,
+                    TextArea: ie.Z
                 },
                 props: {
                     player: Object
@@ -2115,17 +2404,17 @@
                         this.error && (this.error = "")
                     },
                     onInput(e) {
-                        return ce(this, void 0, void 0, (function*() {
+                        return ae(this, void 0, void 0, (function*() {
                             this.resetError();
                             try {
                                 yield this.$ecast.updateText(this.player.textKey, e)
                             } catch (e) {
-                                e instanceof ne.EcastFilterError || this.$handleEcastError(e)
+                                e instanceof te.EcastFilterError || this.$handleEcastError(e)
                             }
                         }))
                     },
                     onSubmit() {
-                        return ce(this, void 0, void 0, (function*() {
+                        return ae(this, void 0, void 0, (function*() {
                             if ("dictation" !== this.player.type) {
                                 this.isSubmitting = !0;
                                 try {
@@ -2133,7 +2422,7 @@
                                         action: "submit"
                                     })
                                 } catch (e) {
-                                    if (e instanceof ne.EcastFilterError) return void(this.error = this.$t("ERROR.TEXT_NAUGHTY"));
+                                    if (e instanceof te.EcastFilterError) return void(this.error = this.$t("ERROR.TEXT_NAUGHTY"));
                                     this.$handleEcastError(e)
                                 } finally {
                                     this.isSubmitting = !1, "password" === this.player.type && (this.currentText = "", this.$nextTick((() => {
@@ -2147,21 +2436,20 @@
                     }
                 }
             });
-            var he = (0, h.Z)(de, re, [], !1, null, "2fa2671c", null);
-            he.options.__file = "src/games/tjsp/triviadeath2/views/Writing.vue";
-            const pe = he.exports,
-                ue = r().extend({
+            var ne = (0, p.Z)(re, ee, [], !1, null, "2fa2671c", null);
+            ne.options.__file = "src/games/tjsp/triviadeath2/views/Writing.vue";
+            const oe = ne.exports,
+                le = r().extend({
                     components: {
-                        Lobby: M,
-                        PostGame: Z,
-                        Choices: u,
-                        Dialing: b,
-                        Drawing: L,
-                        Dropping: N,
-                        GridSelecting: P,
-                        Scratching: J,
-                        Waiting: ae,
-                        Writing: pe
+                        Lobby: B,
+                        Choices: v,
+                        Dialing: C,
+                        Drawing: S,
+                        Dropping: k,
+                        GridSelecting: H,
+                        Scratching: Z,
+                        Waiting: Q,
+                        Writing: oe
                     },
                     ecastKeys: {
                         audience: "audiencePlayer",
@@ -2201,9 +2489,9 @@
                         }
                     }
                 });
-            var ge = (0, h.Z)(ue, i, [], !1, null, null, null);
-            ge.options.__file = "src/games/tjsp/triviadeath2/views/Main.vue";
-            const me = ge.exports
+            var ce = (0, p.Z)(le, i, [], !1, null, null, null);
+            ce.options.__file = "src/games/tjsp/triviadeath2/views/Main.vue";
+            const de = ce.exports
         },
         43195: (e, t, s) => {
             "use strict";
@@ -2479,4 +2767,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/6068.ec98e7883f8e54df45d3.js.map
+//# sourceMappingURL=sourcemaps/3632.456e725f6703348f3c73.js.map

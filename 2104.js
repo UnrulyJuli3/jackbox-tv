@@ -1241,7 +1241,7 @@
                                 })), this.setupI18n(), this.setupSentry(), this.sendScreenView(), this.timerId = window.setInterval(this.sendScreenView.bind(this), 48e4), this.$analytics.setApplication({
                                     appTag: t.room.appTag,
                                     appId: t.room.appId,
-                                    appVersion: "4.2.4"
+                                    appVersion: "4.2.9"
                                 }), this.$storage.isSupported && this.$storage.setTag(`played-${t.room.appTag}`), n()
                             },
                             mounted() {
@@ -1371,4 +1371,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/2104.079634cac8864c1e7b38.js.map
+//# sourceMappingURL=sourcemaps/2104.99bbf64b31f52e3d0f17.js.map
