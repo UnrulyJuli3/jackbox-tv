@@ -3,7 +3,7 @@
         7851: (e, t, s) => {
             "use strict";
             s.r(t), s.d(t, {
-                MainView: () => pA
+                MainView: () => TA
             });
             var i = s(13469),
                 o = s.n(i),
@@ -3700,15 +3700,16 @@
                 lt = He.extend({
                     stepDuration: .5,
                     elements() {
+                        const e = Object.keys(this.imageManifest).map(((e, t) => ({
+                            class: `item-${t}`,
+                            type: "img",
+                            pos: [500, 500],
+                            key: e
+                        })));
                         return [{
                             class: "items-container",
                             type: "container",
-                            children: Object.keys(this.imageManifest).map(((e, t) => ({
-                                class: `item-${t}`,
-                                type: "img",
-                                pos: [500, 500],
-                                key: e
-                            })))
+                            children: e
                         }]
                     },
                     onLoadComplete() {
@@ -3735,15 +3736,16 @@
                 dt = He.extend({
                     stepDuration: .5,
                     elements() {
+                        const e = Object.keys(this.imageManifest).map(((e, t) => ({
+                            class: `item-${t}`,
+                            type: "img",
+                            pos: [0, 0],
+                            key: e
+                        })));
                         return [{
                             class: "items-container",
                             type: "container",
-                            children: Object.keys(this.imageManifest).map(((e, t) => ({
-                                class: `item-${t}`,
-                                type: "img",
-                                pos: [0, 0],
-                                key: e
-                            })))
+                            children: e
                         }]
                     },
                     onDiscreteProgress(e, t, s) {
@@ -28007,89 +28009,7 @@
                     onDiscreteProgress(e) {
                         switch (Math.floor(e)) {
                             case 5:
-                                C.p8.set(".e.music", {
-                                    hidden: !0
-                                }), C.p8.set(".e.music:nth-child(2)", {
-                                    hidden: !1
-                                });
-                                break;
-                            case 10:
-                                C.p8.set(".e.music", {
-                                    hidden: !0
-                                }), C.p8.set(".e.music:nth-child(3)", {
-                                    hidden: !1
-                                });
-                                break;
-                            case 15:
-                                C.p8.set(".e.music", {
-                                    hidden: !0
-                                }), C.p8.set(".e.music:nth-child(4)", {
-                                    hidden: !1
-                                });
-                                break;
-                            case 20:
-                                C.p8.set(".e.music", {
-                                    hidden: !0
-                                }), C.p8.set(".e.music:nth-child(1)", {
-                                    hidden: !1
-                                });
-                                break;
                             case 25:
-                                C.p8.set(".e.music", {
-                                    hidden: !0
-                                }), C.p8.set(".e.music:nth-child(2)", {
-                                    hidden: !1
-                                });
-                                break;
-                            case 30:
-                                C.p8.set(".e.music", {
-                                    hidden: !0
-                                }), C.p8.set(".e.music:nth-child(3)", {
-                                    hidden: !1
-                                });
-                                break;
-                            case 35:
-                                C.p8.set(".e.music", {
-                                    hidden: !0
-                                }), C.p8.set(".e.music:nth-child(4)", {
-                                    hidden: !1
-                                });
-                                break;
-                            case 40:
-                                C.p8.set(".e.music", {
-                                    hidden: !0
-                                }), C.p8.set(".e.music:nth-child(5)", {
-                                    hidden: !1
-                                });
-                                break;
-                            case 45:
-                                C.p8.set(".e.music", {
-                                    hidden: !0
-                                }), C.p8.set(".e.music:nth-child(6)", {
-                                    hidden: !1
-                                });
-                                break;
-                            case 50:
-                                C.p8.set(".e.music", {
-                                    hidden: !0
-                                }), C.p8.set(".e.music:nth-child(5)", {
-                                    hidden: !1
-                                });
-                                break;
-                            case 55:
-                                C.p8.set(".e.music", {
-                                    hidden: !0
-                                }), C.p8.set(".e.music:nth-child(6)", {
-                                    hidden: !1
-                                });
-                                break;
-                            case 60:
-                                C.p8.set(".e.music", {
-                                    hidden: !0
-                                }), C.p8.set(".e.music:nth-child(1)", {
-                                    hidden: !1
-                                });
-                                break;
                             case 65:
                                 C.p8.set(".e.music", {
                                     hidden: !0
@@ -28097,6 +28017,8 @@
                                     hidden: !1
                                 });
                                 break;
+                            case 10:
+                            case 30:
                             case 70:
                                 C.p8.set(".e.music", {
                                     hidden: !0
@@ -28104,6 +28026,8 @@
                                     hidden: !1
                                 });
                                 break;
+                            case 15:
+                            case 35:
                             case 75:
                                 C.p8.set(".e.music", {
                                     hidden: !0
@@ -28111,6 +28035,16 @@
                                     hidden: !1
                                 });
                                 break;
+                            case 20:
+                            case 60:
+                                C.p8.set(".e.music", {
+                                    hidden: !0
+                                }), C.p8.set(".e.music:nth-child(1)", {
+                                    hidden: !1
+                                });
+                                break;
+                            case 40:
+                            case 50:
                             case 80:
                                 C.p8.set(".e.music", {
                                     hidden: !0
@@ -28118,6 +28052,8 @@
                                     hidden: !1
                                 });
                                 break;
+                            case 45:
+                            case 55:
                             case 85:
                                 C.p8.set(".e.music", {
                                     hidden: !0
@@ -48517,7 +48453,421 @@
                         e.name = "image", this.timeline.add(e)
                     }
                 }),
-                OY = {
+                OY = Zo.extend({
+                    imageManifest: {
+                        cookie: Promise.resolve().then(s.t.bind(s, 67351, 17))
+                    }
+                }),
+                BY = ts.extend({
+                    imageManifest: {
+                        cookie: Promise.resolve().then(s.t.bind(s, 67351, 17))
+                    }
+                }),
+                YY = ct.extend({
+                    imageManifest: {
+                        cookie: Promise.resolve().then(s.t.bind(s, 67351, 17))
+                    }
+                }),
+                AY = IY.extend({
+                    imageManifest: {
+                        cookie: Promise.resolve().then(s.t.bind(s, 67351, 17))
+                    }
+                }),
+                HY = po.extend({
+                    imageManifest: {
+                        cookie: Promise.resolve().then(s.t.bind(s, 67351, 17))
+                    }
+                }),
+                GY = mn.extend({
+                    imageManifest: {
+                        cookie: Promise.resolve().then(s.t.bind(s, 67351, 17))
+                    }
+                }),
+                VY = He.extend({
+                    className: "default hold",
+                    bindings: {
+                        ":el": {
+                            classes: {
+                                mistake: "mistake",
+                                complete: "isComplete"
+                            }
+                        }
+                    },
+                    elements: [{
+                        class: "text",
+                        type: "div",
+                        pos: [50, 50],
+                        html: "<span>TAP AND HOLD!</span>"
+                    }],
+                    initializeTimeline() {
+                        const e = this.model.get("durationInMs");
+                        C.p8.set(".e.text", {
+                            rotation: -10
+                        });
+                        const t = C.p8.timeline({
+                            ease: pt.bJ.easeNone,
+                            repeat: e / 2e3
+                        }).to(".e.text", {
+                            x: 1,
+                            y: 1,
+                            rotation: -10
+                        }).to(".e.text", {
+                            x: -1,
+                            y: -1,
+                            rotation: -10
+                        }).to(".e.text", {
+                            x: -1,
+                            y: 0,
+                            rotation: -9
+                        }).to(".e.text", {
+                            x: 1,
+                            y: 1,
+                            rotation: -10
+                        }).to(".e.text", {
+                            x: 1,
+                            y: -1,
+                            rotation: -9
+                        }).to(".e.text", {
+                            x: -1,
+                            y: 1,
+                            rotation: -11
+                        }).to(".e.text", {
+                            x: -1,
+                            y: 1,
+                            rotation: -10
+                        }).to(".e.text", {
+                            x: 1,
+                            y: 1,
+                            rotation: -11
+                        }).to(".e.text", {
+                            x: 1,
+                            y: -1,
+                            rotation: -9
+                        }).to(".e.text", {
+                            x: 1,
+                            y: 1,
+                            rotation: -10
+                        }).to(".e.text", {
+                            x: 1,
+                            y: 1,
+                            rotation: -11
+                        });
+                        t.name = "text", this.timeline.add(t)
+                    }
+                }),
+                EY = He.extend({
+                    className: "instructions",
+                    holdTL: null,
+                    imageManifest: {
+                        battery: Promise.resolve().then(s.t.bind(s, 70378, 17))
+                    },
+                    elements: [{
+                        class: "step step0",
+                        type: "img",
+                        pos: [0, 0],
+                        key: "battery"
+                    }],
+                    resetToStep() {
+                        C.p8.set(".e.step", {
+                            rotation: 0,
+                            x: 0,
+                            y: 0,
+                            opacity: 1
+                        })
+                    },
+                    onTapDown() {
+                        C.p8.to(".e.step", {
+                            duration: .15,
+                            scale: .97,
+                            ease: pt.bJ.easeNone
+                        }), this.holdTL = C.p8.timeline({
+                            ease: pt.bJ.easeNone,
+                            repeat: -1
+                        }).to(".e.step", {
+                            x: 2,
+                            y: 2,
+                            duration: .1
+                        }).to(".e.step", {
+                            x: -2,
+                            y: -2,
+                            duration: .1
+                        }).to(".e.step", {
+                            x: -2,
+                            y: 0,
+                            duration: .1
+                        }).to(".e.step", {
+                            x: 2,
+                            y: 2,
+                            duration: .1
+                        }).to(".e.step", {
+                            x: 2,
+                            y: -2,
+                            duration: .1
+                        }).to(".e.step", {
+                            x: -2,
+                            y: 2,
+                            duration: .1
+                        }).to(".e.step", {
+                            x: -2,
+                            y: 2,
+                            duration: .1
+                        }).to(".e.step", {
+                            x: 2,
+                            y: 2,
+                            duration: .1
+                        }).to(".e.step", {
+                            x: 2,
+                            y: -2,
+                            duration: .1
+                        }).to(".e.step", {
+                            x: 2,
+                            y: 2,
+                            duration: .1
+                        }).to(".e.step", {
+                            x: 2,
+                            y: -2,
+                            duration: .1
+                        })
+                    },
+                    onTapUp() {
+                        C.p8.to(".e.step", {
+                            duration: .15,
+                            scale: 1,
+                            ease: pt.bJ.easeNone
+                        }), this.holdTL.pause(), this.holdTL = null
+                    },
+                    onRotation(e) {
+                        C.p8.set(".e.step", {
+                            rotation: e
+                        })
+                    },
+                    onSwipe(e) {
+                        C.p8.to(".e.step", {
+                            duration: .15,
+                            opacity: 0,
+                            x: 50 * Math.cos(e),
+                            y: 50 * Math.sin(e),
+                            ease: pt.bJ.easeNone
+                        })
+                    }
+                }),
+                qY = He.extend({
+                    className: "default nothing",
+                    usesTimeline: !1,
+                    bindings: {
+                        ":el": {
+                            classes: {
+                                mistake: "mistake",
+                                complete: "isComplete"
+                            }
+                        }
+                    },
+                    elements: [{
+                        class: "text",
+                        type: "div",
+                        pos: [50, 50],
+                        html: '<span class="message">DO NOTHING!</span>'
+                    }],
+                    onLoadComplete() {
+                        C.p8.set(".e.text", {
+                            rotation: -10
+                        }), this.model.setUpdate({
+                            message: "DO NOTHING!"
+                        })
+                    }
+                }),
+                NY = He.extend({
+                    className: "default rotate",
+                    usesTimeline: !1,
+                    bindings: {
+                        ":el": {
+                            classes: {
+                                mistake: "mistake",
+                                complete: "isComplete"
+                            }
+                        },
+                        ".text span": {
+                            observe: "message",
+                            updateMethod: "html"
+                        }
+                    },
+                    elements: [{
+                        class: "text",
+                        type: "div",
+                        pos: [50, 50],
+                        html: "<span>ROTATE!</span>"
+                    }],
+                    onLoadComplete() {
+                        const e = this.model.get("direction");
+                        let t = "ROTATE!";
+                        e && "clockwise" === e.toLowerCase() && (t = "ROTATE<br/>CLOCKWISE!"), e && "counter" === e.toLowerCase() && (t = "ROTATE<br/>COUNTER!"), this.model.setUpdate({
+                            message: t
+                        })
+                    },
+                    onProgress() {
+                        const e = this.model.get("degreesRotated");
+                        C.p8.set(".e.text", {
+                            rotation: e - 10
+                        })
+                    }
+                }),
+                XY = He.extend({
+                    className: "default scrub",
+                    elements: [{
+                        class: "text background",
+                        type: "div",
+                        pos: [50, 50],
+                        html: "<span>SCRUB!</span>"
+                    }, {
+                        class: "text foreground",
+                        type: "div",
+                        pos: [50, 50],
+                        html: "<span>SCRUB!</span>"
+                    }],
+                    initializeTimeline() {
+                        C.p8.set(".e.foreground", {
+                            rotation: -10
+                        }), C.p8.set(".e.background", {
+                            rotation: -10,
+                            opacity: 0
+                        });
+                        const e = C.p8.timeline().to(".e.foreground", {
+                            opacity: 0,
+                            ease: pt.Lp.easeOut
+                        });
+                        e.name = "foreground", this.timeline.add(e);
+                        const t = C.p8.timeline().to(".e.background", {
+                            opacity: 1,
+                            ease: pt.Lp.easeOut
+                        });
+                        t.name = "background", this.timeline.add(t, "-=0.25")
+                    }
+                }),
+                WY = He.extend({
+                    className: "default swipe",
+                    usesTimeline: !1,
+                    bindings: {
+                        ":el": {
+                            classes: {
+                                mistake: "mistake",
+                                complete: "isComplete"
+                            }
+                        },
+                        ".text span": "infoText"
+                    },
+                    imageManifest: {
+                        arrow: Promise.resolve().then(s.t.bind(s, 3036, 17))
+                    },
+                    elements: [{
+                        class: "text move",
+                        type: "div",
+                        pos: [50, 50],
+                        html: "<span></span>"
+                    }, {
+                        class: "text",
+                        type: "div",
+                        pos: [50, 50],
+                        html: "<span></span>"
+                    }, {
+                        class: "arrow",
+                        type: "img",
+                        pos: [250, 250],
+                        key: "arrow"
+                    }],
+                    onLoadComplete() {
+                        C.p8.set(".e.move", {
+                            opacity: 0
+                        }), C.p8.set(".e.arrow", {
+                            opacity: 0,
+                            scale: .5
+                        })
+                    },
+                    onDiscreteProgress(e, t, s) {
+                        const i = s.radians;
+                        C.p8.set(".e.move", {
+                            opacity: 1
+                        }), C.p8.to(".e.move", {
+                            opacity: 0,
+                            x: 50 * Math.cos(i),
+                            y: 50 * Math.sin(i),
+                            onComplete() {
+                                C.p8.set(this.targets()[0], {
+                                    x: 0,
+                                    y: 0
+                                })
+                            }
+                        })
+                    },
+                    onMistake(e) {
+                        C.p8.set(".e.arrow", {
+                            rotation: -e
+                        }), C.p8.to(".e.arrow", {
+                            opacity: 1,
+                            scale: 1,
+                            duration: .25
+                        }), setTimeout((() => {
+                            C.p8.set(".e.arrow", {
+                                opacity: 0,
+                                scale: .5
+                            })
+                        }), 500)
+                    }
+                }),
+                UY = He.extend({
+                    className: "default tap",
+                    usesTimeline: !1,
+                    bindings: {
+                        ":el": {
+                            classes: {
+                                complete: "isComplete",
+                                waiting: "isWaiting"
+                            }
+                        },
+                        ".text span": {
+                            observe: "isWaiting",
+                            onGet: e => e ? "WAIT!" : "TAP!"
+                        }
+                    },
+                    elements: [{
+                        class: "text",
+                        type: "div",
+                        pos: [50, 50],
+                        html: "<span>TAP!</span>"
+                    }]
+                }),
+                $Y = He.extend({
+                    className: "default",
+                    usesTimeline: !1,
+                    bindings: {
+                        ":el": {
+                            classes: {
+                                mistake: "mistake",
+                                complete: "isComplete",
+                                waiting: "isWaiting"
+                            }
+                        },
+                        ".text span": {
+                            observe: "progress",
+                            onGet: e => Math.round(e)
+                        }
+                    },
+                    elements: [{
+                        class: "text",
+                        type: "div",
+                        pos: [50, 50],
+                        html: "<span></span>"
+                    }],
+                    onMistake() {
+                        this.model.setUpdate({
+                            mistake: !0
+                        }), setTimeout((() => {
+                            this.model.setUpdate({
+                                mistake: !1
+                            })
+                        }), 500)
+                    }
+                }),
+                jY = {
                     Stir: Ve,
                     EatBreakfast: Ee,
                     EatLunch: qe,
@@ -50069,429 +50419,29 @@
                     CancelerAdult: zY,
                     CancelerChild: LY,
                     CancelerTeen: RY,
-                    HoldTest: Zo.extend({
-                        imageManifest: {
-                            cookie: Promise.resolve().then(s.t.bind(s, 67351, 17))
-                        }
-                    }),
-                    NothingTest: ts.extend({
-                        imageManifest: {
-                            cookie: Promise.resolve().then(s.t.bind(s, 67351, 17))
-                        }
-                    }),
-                    RotateTest: ct.extend({
-                        imageManifest: {
-                            cookie: Promise.resolve().then(s.t.bind(s, 67351, 17))
-                        }
-                    }),
-                    ScrubTest: IY.extend({
-                        imageManifest: {
-                            cookie: Promise.resolve().then(s.t.bind(s, 67351, 17))
-                        }
-                    }),
-                    SwipeTest: po.extend({
-                        imageManifest: {
-                            cookie: Promise.resolve().then(s.t.bind(s, 67351, 17))
-                        }
-                    }),
-                    TapTest: mn.extend({
-                        imageManifest: {
-                            cookie: Promise.resolve().then(s.t.bind(s, 67351, 17))
-                        }
-                    }),
-                    HoldDefault: He.extend({
-                        className: "default hold",
-                        bindings: {
-                            ":el": {
-                                classes: {
-                                    mistake: "mistake",
-                                    complete: "isComplete"
-                                }
-                            }
-                        },
-                        elements: [{
-                            class: "text",
-                            type: "div",
-                            pos: [50, 50],
-                            html: "<span>TAP AND HOLD!</span>"
-                        }],
-                        initializeTimeline() {
-                            const e = this.model.get("durationInMs");
-                            C.p8.set(".e.text", {
-                                rotation: -10
-                            });
-                            const t = C.p8.timeline({
-                                ease: pt.bJ.easeNone,
-                                repeat: e / 2e3
-                            }).to(".e.text", {
-                                x: 1,
-                                y: 1,
-                                rotation: -10
-                            }).to(".e.text", {
-                                x: -1,
-                                y: -1,
-                                rotation: -10
-                            }).to(".e.text", {
-                                x: -1,
-                                y: 0,
-                                rotation: -9
-                            }).to(".e.text", {
-                                x: 1,
-                                y: 1,
-                                rotation: -10
-                            }).to(".e.text", {
-                                x: 1,
-                                y: -1,
-                                rotation: -9
-                            }).to(".e.text", {
-                                x: -1,
-                                y: 1,
-                                rotation: -11
-                            }).to(".e.text", {
-                                x: -1,
-                                y: 1,
-                                rotation: -10
-                            }).to(".e.text", {
-                                x: 1,
-                                y: 1,
-                                rotation: -11
-                            }).to(".e.text", {
-                                x: 1,
-                                y: -1,
-                                rotation: -9
-                            }).to(".e.text", {
-                                x: 1,
-                                y: 1,
-                                rotation: -10
-                            }).to(".e.text", {
-                                x: 1,
-                                y: 1,
-                                rotation: -11
-                            });
-                            t.name = "text", this.timeline.add(t)
-                        }
-                    }),
-                    InstructionsDefault: He.extend({
-                        className: "instructions",
-                        holdTL: null,
-                        imageManifest: {
-                            battery: Promise.resolve().then(s.t.bind(s, 70378, 17))
-                        },
-                        elements: [{
-                            class: "step step0",
-                            type: "img",
-                            pos: [0, 0],
-                            key: "battery"
-                        }],
-                        resetToStep() {
-                            C.p8.set(".e.step", {
-                                rotation: 0,
-                                x: 0,
-                                y: 0,
-                                opacity: 1
-                            })
-                        },
-                        onTapDown() {
-                            C.p8.to(".e.step", {
-                                duration: .15,
-                                scale: .97,
-                                ease: pt.bJ.easeNone
-                            }), this.holdTL = C.p8.timeline({
-                                ease: pt.bJ.easeNone,
-                                repeat: -1
-                            }).to(".e.step", {
-                                x: 2,
-                                y: 2,
-                                duration: .1
-                            }).to(".e.step", {
-                                x: -2,
-                                y: -2,
-                                duration: .1
-                            }).to(".e.step", {
-                                x: -2,
-                                y: 0,
-                                duration: .1
-                            }).to(".e.step", {
-                                x: 2,
-                                y: 2,
-                                duration: .1
-                            }).to(".e.step", {
-                                x: 2,
-                                y: -2,
-                                duration: .1
-                            }).to(".e.step", {
-                                x: -2,
-                                y: 2,
-                                duration: .1
-                            }).to(".e.step", {
-                                x: -2,
-                                y: 2,
-                                duration: .1
-                            }).to(".e.step", {
-                                x: 2,
-                                y: 2,
-                                duration: .1
-                            }).to(".e.step", {
-                                x: 2,
-                                y: -2,
-                                duration: .1
-                            }).to(".e.step", {
-                                x: 2,
-                                y: 2,
-                                duration: .1
-                            }).to(".e.step", {
-                                x: 2,
-                                y: -2,
-                                duration: .1
-                            })
-                        },
-                        onTapUp() {
-                            C.p8.to(".e.step", {
-                                duration: .15,
-                                scale: 1,
-                                ease: pt.bJ.easeNone
-                            }), this.holdTL.pause(), this.holdTL = null
-                        },
-                        onRotation(e) {
-                            C.p8.set(".e.step", {
-                                rotation: e
-                            })
-                        },
-                        onSwipe(e) {
-                            C.p8.to(".e.step", {
-                                duration: .15,
-                                opacity: 0,
-                                x: 50 * Math.cos(e),
-                                y: 50 * Math.sin(e),
-                                ease: pt.bJ.easeNone
-                            })
-                        }
-                    }),
-                    NothingDefault: He.extend({
-                        className: "default nothing",
-                        usesTimeline: !1,
-                        bindings: {
-                            ":el": {
-                                classes: {
-                                    mistake: "mistake",
-                                    complete: "isComplete"
-                                }
-                            }
-                        },
-                        elements: [{
-                            class: "text",
-                            type: "div",
-                            pos: [50, 50],
-                            html: '<span class="message">DO NOTHING!</span>'
-                        }],
-                        onLoadComplete() {
-                            C.p8.set(".e.text", {
-                                rotation: -10
-                            }), this.model.setUpdate({
-                                message: "DO NOTHING!"
-                            })
-                        }
-                    }),
-                    RotateDefault: He.extend({
-                        className: "default rotate",
-                        usesTimeline: !1,
-                        bindings: {
-                            ":el": {
-                                classes: {
-                                    mistake: "mistake",
-                                    complete: "isComplete"
-                                }
-                            },
-                            ".text span": {
-                                observe: "message",
-                                updateMethod: "html"
-                            }
-                        },
-                        elements: [{
-                            class: "text",
-                            type: "div",
-                            pos: [50, 50],
-                            html: "<span>ROTATE!</span>"
-                        }],
-                        onLoadComplete() {
-                            const e = this.model.get("direction");
-                            let t = "ROTATE!";
-                            e && "clockwise" === e.toLowerCase() && (t = "ROTATE<br/>CLOCKWISE!"), e && "counter" === e.toLowerCase() && (t = "ROTATE<br/>COUNTER!"), this.model.setUpdate({
-                                message: t
-                            })
-                        },
-                        onProgress() {
-                            const e = this.model.get("degreesRotated");
-                            C.p8.set(".e.text", {
-                                rotation: e - 10
-                            })
-                        }
-                    }),
-                    ScrubDefault: He.extend({
-                        className: "default scrub",
-                        elements: [{
-                            class: "text background",
-                            type: "div",
-                            pos: [50, 50],
-                            html: "<span>SCRUB!</span>"
-                        }, {
-                            class: "text foreground",
-                            type: "div",
-                            pos: [50, 50],
-                            html: "<span>SCRUB!</span>"
-                        }],
-                        initializeTimeline() {
-                            C.p8.set(".e.foreground", {
-                                rotation: -10
-                            }), C.p8.set(".e.background", {
-                                rotation: -10,
-                                opacity: 0
-                            });
-                            const e = C.p8.timeline().to(".e.foreground", {
-                                opacity: 0,
-                                ease: pt.Lp.easeOut
-                            });
-                            e.name = "foreground", this.timeline.add(e);
-                            const t = C.p8.timeline().to(".e.background", {
-                                opacity: 1,
-                                ease: pt.Lp.easeOut
-                            });
-                            t.name = "background", this.timeline.add(t, "-=0.25")
-                        }
-                    }),
-                    SwipeDefault: He.extend({
-                        className: "default swipe",
-                        usesTimeline: !1,
-                        bindings: {
-                            ":el": {
-                                classes: {
-                                    mistake: "mistake",
-                                    complete: "isComplete"
-                                }
-                            },
-                            ".text span": "infoText"
-                        },
-                        imageManifest: {
-                            arrow: Promise.resolve().then(s.t.bind(s, 3036, 17))
-                        },
-                        elements: [{
-                            class: "text move",
-                            type: "div",
-                            pos: [50, 50],
-                            html: "<span></span>"
-                        }, {
-                            class: "text",
-                            type: "div",
-                            pos: [50, 50],
-                            html: "<span></span>"
-                        }, {
-                            class: "arrow",
-                            type: "img",
-                            pos: [250, 250],
-                            key: "arrow"
-                        }],
-                        onLoadComplete() {
-                            C.p8.set(".e.move", {
-                                opacity: 0
-                            }), C.p8.set(".e.arrow", {
-                                opacity: 0,
-                                scale: .5
-                            })
-                        },
-                        onDiscreteProgress(e, t, s) {
-                            const i = s.radians;
-                            C.p8.set(".e.move", {
-                                opacity: 1
-                            }), C.p8.to(".e.move", {
-                                opacity: 0,
-                                x: 50 * Math.cos(i),
-                                y: 50 * Math.sin(i),
-                                onComplete() {
-                                    C.p8.set(this.targets()[0], {
-                                        x: 0,
-                                        y: 0
-                                    })
-                                }
-                            })
-                        },
-                        onMistake(e) {
-                            C.p8.set(".e.arrow", {
-                                rotation: -e
-                            }), C.p8.to(".e.arrow", {
-                                opacity: 1,
-                                scale: 1,
-                                duration: .25
-                            }), setTimeout((() => {
-                                C.p8.set(".e.arrow", {
-                                    opacity: 0,
-                                    scale: .5
-                                })
-                            }), 500)
-                        }
-                    }),
-                    TapDefault: He.extend({
-                        className: "default tap",
-                        usesTimeline: !1,
-                        bindings: {
-                            ":el": {
-                                classes: {
-                                    complete: "isComplete",
-                                    waiting: "isWaiting"
-                                }
-                            },
-                            ".text span": {
-                                observe: "isWaiting",
-                                onGet: e => e ? "WAIT!" : "TAP!"
-                            }
-                        },
-                        elements: [{
-                            class: "text",
-                            type: "div",
-                            pos: [50, 50],
-                            html: "<span>TAP!</span>"
-                        }]
-                    }),
-                    Default: He.extend({
-                        className: "default",
-                        usesTimeline: !1,
-                        bindings: {
-                            ":el": {
-                                classes: {
-                                    mistake: "mistake",
-                                    complete: "isComplete",
-                                    waiting: "isWaiting"
-                                }
-                            },
-                            ".text span": {
-                                observe: "progress",
-                                onGet: e => Math.round(e)
-                            }
-                        },
-                        elements: [{
-                            class: "text",
-                            type: "div",
-                            pos: [50, 50],
-                            html: "<span></span>"
-                        }],
-                        onMistake() {
-                            this.model.setUpdate({
-                                mistake: !0
-                            }), setTimeout((() => {
-                                this.model.setUpdate({
-                                    mistake: !1
-                                })
-                            }), 500)
-                        }
-                    })
+                    HoldTest: OY,
+                    NothingTest: BY,
+                    RotateTest: YY,
+                    ScrubTest: AY,
+                    SwipeTest: HY,
+                    TapTest: GY,
+                    HoldDefault: VY,
+                    InstructionsDefault: EY,
+                    NothingDefault: qY,
+                    RotateDefault: NY,
+                    ScrubDefault: XY,
+                    SwipeDefault: WY,
+                    TapDefault: UY,
+                    Default: $Y
                 },
-                BY = g.S.extend({
+                KY = g.S.extend({
                     defaults: {
                         scene: null
                     }
                 }),
-                YY = p().View.extend({
+                ZY = p().View.extend({
                     template: o().template('<div id="gesture-ui" class="gestures scene-box-wrapper"> <div id="scene-region" class="scene scene-box"></div> <div id="target-ui" class="target"></div> </div> <div class="progress"> <div class="progress-bar"></div> </div> <svg class="pie" viewBox="0 0 28 28"> <circle r="25%" cx="50%" cy="50%"></circle> </svg> <div class="info"></div> <div class="demo-finger"></div> <button class="leave"></button> <div class="instructions-container"> <p class="instructions"></p> </div> <p class="score"></p>'),
-                    model: new BY,
+                    model: new KY,
                     progressType: "auto",
                     useGestures: !1,
                     useTaps: !1,
@@ -50617,44 +50567,44 @@
                                 const t = e.get("scene"),
                                     s = e.get("deed"),
                                     i = e.get("state");
-                                if (t && OY[t]) return new OY[t]({
+                                if (t && jY[t]) return new jY[t]({
                                     model: e
                                 });
-                                if (s && OY[s]) return new OY[s]({
+                                if (s && jY[s]) return new jY[s]({
                                     model: e
                                 });
                                 switch (i) {
                                     case "HoldMechanic":
-                                        return new OY.HoldDefault({
+                                        return new jY.HoldDefault({
                                             model: e
                                         });
                                     case "InstructionsMechanicCaptain":
-                                        return new OY.InstructionsDefault({
+                                        return new jY.InstructionsDefault({
                                             model: e
                                         });
                                     case "NothingMechanic":
-                                        return new OY.NothingDefault({
+                                        return new jY.NothingDefault({
                                             model: e
                                         });
                                     case "SwipeMechanic":
-                                        return new OY.SwipeDefault({
+                                        return new jY.SwipeDefault({
                                             model: e
                                         });
                                     case "TapMechanic":
                                     case "TapResultingMechanic":
-                                        return new OY.TapDefault({
+                                        return new jY.TapDefault({
                                             model: e
                                         });
                                     case "RotateMechanic":
-                                        return new OY.RotateDefault({
+                                        return new jY.RotateDefault({
                                             model: e
                                         });
                                     case "ScrubMechanic":
-                                        return new OY.ScrubDefault({
+                                        return new jY.ScrubDefault({
                                             model: e
                                         });
                                     default:
-                                        return new OY.Default({
+                                        return new jY.Default({
                                             model: e
                                         })
                                 }
@@ -50732,7 +50682,7 @@
                         }), Te.app.storage.set(`datd:demos:${this.demoKey}`, !0))
                     }
                 }),
-                AY = g.S.extend({
+                JY = g.S.extend({
                     defaults: {
                         infoText: "",
                         isComplete: !1,
@@ -50755,10 +50705,10 @@
                         return this.get("distanceScrubbed") > 500
                     }
                 }),
-                HY = YY.extend({
+                _Y = ZY.extend({
                     className: "mechanic gesture instructions captain",
                     template: o().template('<div id="gesture-ui" class="gestures scene-box-wrapper"> <div id="scene-region" class="scene scene-box"></div> <div id="target-ui" class="target"></div> </div> <div class="clamp"> <div class="ask"></div> <div class="info"></div> </div> <button class="leave"></button> <div class="instructions-container"> <p class="instructions"></p> </div> <p class="score"></p> '),
-                    model: new AY,
+                    model: new JY,
                     useGestures: !0,
                     useTaps: !1,
                     tapTimeout: null,
@@ -50970,7 +50920,7 @@
                         })
                     }
                 }),
-                GY = p().View.extend({
+                QY = p().View.extend({
                     className: "mechanic instructions participant",
                     template: o().template('<div class="scrollable"> <div class="clamp"> <div class="info"></div> <div class="steps"></div> </div> </div> <button class="leave"></button> <div class="instructions-container"> <p class="instructions"></p> </div> <p class="score"></p>'),
                     model: new g.S,
@@ -51044,7 +50994,7 @@
                         })
                     }
                 }),
-                VY = p().View.extend({
+                eA = p().View.extend({
                     tagName: "button",
                     className: "button location",
                     template: o().template('<div class="name"></div>'),
@@ -51062,13 +51012,13 @@
                         this.triggerMethod("button:select", this.model)
                     }
                 }),
-                EY = p().CollectionView.extend({
+                tA = p().CollectionView.extend({
                     tagName: "div",
                     className: "locations",
-                    childView: VY,
+                    childView: eA,
                     collection: new(l().Collection)
                 }),
-                qY = YY.extend({
+                sA = ZY.extend({
                     className: "mechanic gesture scrub",
                     progressType: "interactive",
                     demoKey: "scrub",
@@ -51130,7 +51080,7 @@
                         }), 1e3 * e)
                     }
                 }),
-                NY = qY.extend({
+                iA = sA.extend({
                     className: "gesture scrub",
                     template: o().template('\n    <div id="gesture-ui" class="gestures scene-box-wrapper">\n        <div id="scene-region" class="scene scene-box"></div>\n        <div id="target-ui" class="target"></div>\n    </div>\n    <div class="progress">\n        <div class="progress-bar"></div>\n    </div>\n    <div class="info">SCRUB TO SEARCH</div>\n'),
                     initialize(e) {
@@ -51138,7 +51088,7 @@
                             distance: "xshort",
                             scene: "Search",
                             category: "none"
-                        }), qY.prototype.initialize.apply(this, [e])
+                        }), sA.prototype.initialize.apply(this, [e])
                     },
                     onMistake() {
                         this.sceneView.model.set({
@@ -51149,16 +51099,16 @@
                         this.triggerMethod("search:complete", this.model)
                     }
                 }),
-                XY = g.S.extend({
+                oA = g.S.extend({
                     selectedLocation() {
                         const e = this.get("searching");
                         return e ? this.get("locations").find((t => t.id === e)) : null
                     }
                 }),
-                WY = p().View.extend({
+                nA = p().View.extend({
                     className: "mechanic search",
                     template: o().template('<div class="scrollable"> <div class="clamp"> <div class="wrapper"> <div class="info"></div> <div id="locations-region"></div> </div> </div> </div> <div id="searching-region"></div> <button class="leave"></button> <div class="instructions-container"> <p class="instructions"></p> </div> <p class="score"></p> '),
-                    model: new XY,
+                    model: new oA,
                     locationsView: null,
                     searchingView: null,
                     regions: {
@@ -51201,7 +51151,7 @@
                         this.model.setUpdate({
                             searching: null,
                             isRevealing: !1
-                        }), this.locationsView = new EY, this.listenTo(this.model, "change", this.update, this), this.listenTo(this.model, "change:mistakeCheck", this.onMistakeCheck)
+                        }), this.locationsView = new tA, this.listenTo(this.model, "change", this.update, this), this.listenTo(this.model, "change:mistakeCheck", this.onMistakeCheck)
                     },
                     update() {
                         const e = this.model.get("locations");
@@ -51238,7 +51188,7 @@
                         })
                     },
                     onChildviewChildviewButtonSelect(e) {
-                        this.model.get("searching") || (this.searchingView = new NY, this.showChildView("searching", this.searchingView), this.model.setUpdate({
+                        this.model.get("searching") || (this.searchingView = new iA, this.showChildView("searching", this.searchingView), this.model.setUpdate({
                             searching: e.get("id")
                         }), this.searchingView.sceneView.model.set({
                             isMistake: !1
@@ -51247,7 +51197,7 @@
                         }))
                     }
                 }),
-                UY = p().View.extend({
+                aA = p().View.extend({
                     className: "mechanic text captain",
                     template: o().template('<div class="clamp"> <div class="info"></div> <div class="word"></div> </div> <button class="leave"></button> <div class="instructions-container"> <p class="instructions"></p> </div> <p class="score"></p>'),
                     model: new g.S,
@@ -51285,7 +51235,7 @@
                         })
                     }
                 }),
-                $Y = p().View.extend({
+                rA = p().View.extend({
                     className: "mechanic text participant",
                     template: o().template('<div class="clamp"> <div class="info"></div> <form> <input type="text" name="word" placeholder="ENTER WORD" maxlength="40" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/> <button type="submit" class="button submit">SUBMIT</button> </form> </div> <button class="leave"></button> <div class="instructions-container"> <p class="instructions"></p> </div> <p class="score"></p>'),
                     model: new g.S,
@@ -51362,7 +51312,7 @@
                         })
                     }
                 }),
-                jY = {
+                lA = {
                     wo: {
                         point: {
                             x: 1096.98,
@@ -54203,16 +54153,16 @@
                         }]
                     }
                 },
-                KY = g.S.extend({
+                dA = g.S.extend({
                     defaults: {
                         disabled: !1
                     }
                 });
             C.p8.registerPlugin(vt.X);
-            const ZY = p().View.extend({
+            const pA = p().View.extend({
                     className: "mechanic travel captain",
                     template: o().template('<div class="clamp"> <div class="info"></div> </div> <div class="scene-box-wrapper"> <div class="controls scene-box"> <button class="move forward"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 356 300" xml:space="preserve"> <path d="M21.83,300c43.08-33.67,97.28-53.74,156.17-53.74c58.89,0,113.09,20.07,156.17,53.74C334,299.32,356,276.28,356,276.28\n\t\tL178,25L0,276.28C0,276.28,22,299.32,21.83,300z"/> </svg> </button> <button class="move left"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 356 300" xml:space="preserve"> <path d="M21.83,300c43.08-33.67,97.28-53.74,156.17-53.74c58.89,0,113.09,20.07,156.17,53.74C334,299.32,356,276.28,356,276.28\n\t\tL178,25L0,276.28C0,276.28,22,299.32,21.83,300z"/> </svg> </button> <button class="move right"> <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 356 300" xml:space="preserve"> <path d="M21.83,300c43.08-33.67,97.28-53.74,156.17-53.74c58.89,0,113.09,20.07,156.17,53.74C334,299.32,356,276.28,356,276.28\n\t\tL178,25L0,276.28C0,276.28,22,299.32,21.83,300z"/> </svg> </button> <div class="map-container"> <div class="frame"> <div class="map"> <div class="destination"><p></p></div> </div> </div> <div class="car"></div> </div> </div> </div> <button class="leave"></button> <div class="instructions-container"> <p class="instructions"></p> </div> <p class="score"></p> '),
-                    model: new KY,
+                    model: new dA,
                     boundOnKeyDown: null,
                     directions: {
                         n: 0,
@@ -54339,7 +54289,7 @@
                             i = null;
                         const o = e.get("locationId").toLowerCase(),
                             n = e.get("direction").toLowerCase(),
-                            a = jY[o].point;
+                            a = lA[o].point;
                         if (!a) throw Error("Unknown to point", o);
                         t = {
                             id: o,
@@ -54349,13 +54299,13 @@
                         let r = e.previous("locationId");
                         if (r && (r = r.toLowerCase()), r && r !== t.id) {
                             const o = e.previous("direction").toLowerCase(),
-                                n = jY[r].point;
+                                n = lA[r].point;
                             if (!n) throw Error("Unknown from point", r);
                             if (s = {
                                     id: r,
                                     direction: o,
                                     point: n
-                                }, i = jY[t.id].connections.find((e => e.to === s.id)), !i) return [t, null, null]
+                                }, i = lA[t.id].connections.find((e => e.to === s.id)), !i) return [t, null, null]
                         }
                         return [t, s, i]
                     },
@@ -54389,7 +54339,7 @@
                     updateButtons(e) {
                         const t = e.get("locationId").toLowerCase(),
                             s = e.get("direction").toLowerCase(),
-                            i = jY[t].connections;
+                            i = lA[t].connections;
                         if (!i) throw Error("Unknown to point", t);
                         const o = {};
                         let n = [];
@@ -54446,12 +54396,12 @@
                         })
                     },
                     getDestinationStyles(e) {
-                        const t = jY[e.locationId.toLowerCase()].point;
+                        const t = lA[e.locationId.toLowerCase()].point;
                         if (!t) throw new Error("Unknown Destination Point");
                         return `transform: translate(${1480-t.x}px, ${2280-t.y}px);`
                     }
                 }),
-                JY = {
+                cA = {
                     wo: {
                         point: {
                             x: 191.51,
@@ -57293,7 +57243,7 @@
                     }
                 };
             C.p8.registerPlugin(vt.X);
-            const _Y = p().View.extend({
+            const mA = p().View.extend({
                     className: "mechanic travel participant",
                     template: o().template('<div class="frame"> <div class="map"> <div class="car"></div> <div class="destination"><p></p></div> <div class="temp"></div> </div> <div class="frame-center"></div> </div> <div class="indicator">N</div> <button class="leave"></button> <div class="instructions-container"> <p class="instructions"></p> </div> <p class="score"></p> '),
                     model: new g.S,
@@ -57398,7 +57348,7 @@
                             i = null;
                         const o = e.get("locationId").toLowerCase(),
                             n = e.get("direction").toLowerCase(),
-                            a = JY[o].point;
+                            a = cA[o].point;
                         if (!a) throw Error("Unknown to point", o);
                         t = {
                             id: o,
@@ -57408,13 +57358,13 @@
                         let r = e.previous("locationId");
                         if (r && (r = r.toLowerCase()), r && r !== t.id) {
                             const o = e.previous("direction").toLowerCase(),
-                                n = JY[r].point;
+                                n = cA[r].point;
                             if (!n) throw Error("Unknown from point", r);
                             if (s = {
                                     id: r,
                                     direction: o,
                                     point: n
-                                }, i = JY[t.id].connections.find((e => e.to === s.id)), !i) return [t, null, null]
+                                }, i = cA[t.id].connections.find((e => e.to === s.id)), !i) return [t, null, null]
                         }
                         return [t, s, i]
                     },
@@ -57446,12 +57396,12 @@
                         }), this.centerAndScale(o)
                     },
                     getDestinationStyles(e) {
-                        const t = JY[e.locationId.toLowerCase()].point;
+                        const t = cA[e.locationId.toLowerCase()].point;
                         if (!t) throw new Error("Unknown Destination Point");
                         return `transform: translate(${t.x}px, ${t.y}px);`
                     },
                     getDestinationClasses(e) {
-                        const t = JY[e.locationId.toLowerCase()].point;
+                        const t = cA[e.locationId.toLowerCase()].point;
                         if (!t) throw new Error("Unknown Destination Point");
                         let s = "";
                         return t.x > 490 && (s += "left"), t.y < 150 && (s += " bottom"), s
@@ -57462,8 +57412,8 @@
                             s = this.$frame.innerHeight(),
                             i = this.model.get("destination"),
                             o = this.model.get("locationId"),
-                            n = JY[o.toLowerCase()].point,
-                            a = JY[i.locationId.toLowerCase()].point,
+                            n = cA[o.toLowerCase()].point,
+                            a = cA[i.locationId.toLowerCase()].point,
                             r = t / 2 - (n.x + a.x) / 2,
                             l = s / 2 - (n.y + a.y) / 2,
                             d = t > s ? 600 : 400,
@@ -57487,7 +57437,7 @@
                         })
                     }
                 }),
-                QY = YY.extend({
+                hA = ZY.extend({
                     className: "mechanic gesture hold",
                     progressType: "auto",
                     demoKey: "hold",
@@ -57544,15 +57494,15 @@
                         })
                     }
                 });
-            var eA = s(89446);
-            const tA = YY.extend({
+            var uA = s(89446);
+            const gA = ZY.extend({
                     className: "mechanic gesture nothing",
                     progressType: "auto",
                     demoKey: "nothing",
                     useGestures: !0,
                     useTaps: !0,
                     boundOnKeyDown: null,
-                    events: Object.assign(YY.prototype.events, {
+                    events: Object.assign(ZY.prototype.events, {
                         "mousemove .target": "onMouseMove"
                     }),
                     setup() {
@@ -57608,12 +57558,12 @@
                         }))
                     }), 500, !0),
                     onTimeBasedSuccess() {
-                        eA.c.queryParam("auto") && this.triggerMethod("client:message", {
+                        uA.c.queryParam("auto") && this.triggerMethod("client:message", {
                             action: "test"
                         })
                     }
                 }),
-                sA = YY.extend({
+                yA = ZY.extend({
                     className: "mechanic gesture rotate",
                     progressType: "interactive",
                     demoKey: "rotate",
@@ -57683,7 +57633,7 @@
                         })
                     }
                 }),
-                iA = YY.extend({
+                bA = ZY.extend({
                     className: "mechanic gesture swipe",
                     progressType: "discrete",
                     demoKey: "swipe",
@@ -57778,7 +57728,7 @@
                         }), 500)
                     }
                 }),
-                oA = YY.extend({
+                xA = ZY.extend({
                     className: "mechanic gesture tap",
                     progressType: "discrete",
                     demoKey: "tap",
@@ -57838,7 +57788,7 @@
                         }), 1e3 * r)
                     }
                 }),
-                nA = YY.extend({
+                fA = ZY.extend({
                     className: "mechanic gesture tap",
                     progressType: "discrete",
                     useGestures: !1,
@@ -57896,7 +57846,7 @@
                     }
                 });
 
-            function aA(e, t) {
+            function vA(e, t) {
                 var s = Object.keys(e);
                 if (Object.getOwnPropertySymbols) {
                     var i = Object.getOwnPropertySymbols(e);
@@ -57907,19 +57857,19 @@
                 return s
             }
 
-            function rA(e) {
+            function kA(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var s = null != arguments[t] ? arguments[t] : {};
-                    t % 2 ? aA(Object(s), !0).forEach((function(t) {
-                        lA(e, t, s[t])
-                    })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(s)) : aA(Object(s)).forEach((function(t) {
+                    t % 2 ? vA(Object(s), !0).forEach((function(t) {
+                        PA(e, t, s[t])
+                    })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(s)) : vA(Object(s)).forEach((function(t) {
                         Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(s, t))
                     }))
                 }
                 return e
             }
 
-            function lA(e, t, s) {
+            function PA(e, t, s) {
                 return t in e ? Object.defineProperty(e, t, {
                     value: s,
                     enumerable: !0,
@@ -57927,16 +57877,16 @@
                     writable: !0
                 }) : e[t] = s, e
             }
-            const dA = `${a.Z}\n    <div id="result-region"></div>\n    <div class="paused-overlay">\n        <div class="scene-box-wrapper">\n            <div class="scene-box">\n                <div class="hand"></div>\n                <p>LOOK UP AND LISTEN</p>\n            </div>\n        </div>\n        <div class="doh"></div>\n    </div>\n`,
-                pA = n.v.extend({
+            const wA = `${a.Z}\n    <div id="result-region"></div>\n    <div class="paused-overlay">\n        <div class="scene-box-wrapper">\n            <div class="scene-box">\n                <div class="hand"></div>\n                <p>LOOK UP AND LISTEN</p>\n            </div>\n        </div>\n        <div class="doh"></div>\n    </div>\n`,
+                TA = n.v.extend({
                     sessionModulePrefix: "Everyday",
-                    template: o().template(dA),
+                    template: o().template(wA),
                     resultView: null,
-                    regions: rA(rA({}, n.v.prototype.regions), {}, {
+                    regions: kA(kA({}, n.v.prototype.regions), {}, {
                         result: "#result-region"
                     }),
-                    bindings: rA(rA({}, n.v.prototype.bindings), {}, {
-                        ":el": rA(rA({}, n.v.prototype.bindings[":el"]), {}, {
+                    bindings: kA(kA({}, n.v.prototype.bindings), {}, {
+                        ":el": kA(kA({}, n.v.prototype.bindings[":el"]), {}, {
                             classes: {
                                 paused: {
                                     observe: "player",
@@ -57986,34 +57936,34 @@
                             case "GatherMechanicParticipant":
                                 return this.setLayout(Fe);
                             case "InstructionsMechanicCaptain":
-                                return this.setLayout(HY);
+                                return this.setLayout(_Y);
                             case "InstructionsMechanicParticipant":
-                                return this.setLayout(GY);
+                                return this.setLayout(QY);
                             case "SearchMechanicCaptain":
                             case "SearchMechanicParticipant":
-                                return this.setLayout(WY);
-                            case "TextMechanicCaptain":
-                                return this.setLayout(UY);
-                            case "TextMechanicParticipant":
-                                return this.setLayout($Y);
-                            case "TravelMechanicCaptain":
-                                return this.setLayout(ZY);
-                            case "TravelMechanicParticipant":
-                                return this.setLayout(_Y);
-                            case "HoldMechanic":
-                                return this.setLayout(QY);
-                            case "NothingMechanic":
-                                return this.setLayout(tA);
-                            case "RotateMechanic":
-                                return this.setLayout(sA);
-                            case "ScrubMechanic":
-                                return this.setLayout(qY);
-                            case "SwipeMechanic":
-                                return this.setLayout(iA);
-                            case "TapMechanic":
-                                return this.setLayout(oA);
-                            case "TapResultingMechanic":
                                 return this.setLayout(nA);
+                            case "TextMechanicCaptain":
+                                return this.setLayout(aA);
+                            case "TextMechanicParticipant":
+                                return this.setLayout(rA);
+                            case "TravelMechanicCaptain":
+                                return this.setLayout(pA);
+                            case "TravelMechanicParticipant":
+                                return this.setLayout(mA);
+                            case "HoldMechanic":
+                                return this.setLayout(hA);
+                            case "NothingMechanic":
+                                return this.setLayout(gA);
+                            case "RotateMechanic":
+                                return this.setLayout(yA);
+                            case "ScrubMechanic":
+                                return this.setLayout(sA);
+                            case "SwipeMechanic":
+                                return this.setLayout(bA);
+                            case "TapMechanic":
+                                return this.setLayout(xA);
+                            case "TapResultingMechanic":
+                                return this.setLayout(fA);
                             default:
                                 return -1
                         }
@@ -58042,7 +57992,7 @@
                         })))
                     },
                     parseCanceler(e) {
-                        const t = rA({}, F[e.playerInfo.role.id]);
+                        const t = kA({}, F[e.playerInfo.role.id]);
                         let s = "SELFISH";
                         e.cancels && e.cancels.captain && (s = e.cancels.captain.name), t.instructions = t.instructions.replace("<NAME>", s), Object.keys(t).forEach((s => {
                             e[s] = t[s]
@@ -65058,4 +65008,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/9725.e12e744ac64bd6eafa54.js.map
+//# sourceMappingURL=sourcemaps/9725.fb132c9202ad8807a66d.js.map

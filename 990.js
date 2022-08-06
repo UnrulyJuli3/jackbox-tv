@@ -1,4 +1,4 @@
-/*! For license information please see 990.6d57f4c313c0c58d00d7.js.LICENSE.txt */
+/*! For license information please see 990.7e0e2830658a2a9178fb.js.LICENSE.txt */
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     [990], {
         3682: (t, e, n) => {
@@ -131,11 +131,11 @@
             "use strict";
 
             function o(t) {
-                return (o = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t) {
+                return o = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t) {
                     return typeof t
                 } : function(t) {
                     return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t
-                })(t)
+                }, o(t)
             }
 
             function i(t, e, n) {
@@ -148,13 +148,13 @@
             }
 
             function r() {
-                return (r = Object.assign || function(t) {
+                return r = Object.assign || function(t) {
                     for (var e = 1; e < arguments.length; e++) {
                         var n = arguments[e];
                         for (var o in n) Object.prototype.hasOwnProperty.call(n, o) && (t[o] = n[o])
                     }
                     return t
-                }).apply(this, arguments)
+                }, r.apply(this, arguments)
             }
 
             function a(t) {
@@ -994,7 +994,7 @@
                                     T = i ? "top" : "left",
                                     C = M(l, "top", "top") || M(G, "top", "top"),
                                     x = C ? C.scrollTop : void 0;
-                                if (ht !== l && (b = n[T], yt = !1, wt = !S && s.invertSwap || E), 0 !== (m = function(t, e, n, o, i, r, a, l) {
+                                if (ht !== l && (b = n[T], yt = !1, wt = !S && s.invertSwap || E), m = function(t, e, n, o, i, r, a, l) {
                                         var s = o ? t.clientY : t.clientX,
                                             c = o ? n.height : n.width,
                                             u = o ? n.top : n.left,
@@ -1008,7 +1008,7 @@
                                             return I(G) < I(t) ? 1 : -1
                                         }(e);
                                         return (h = h || a) && (s < u + c * r / 2 || s > d - c * r / 2) ? s > u + c / 2 ? 1 : -1 : 0
-                                    }(t, l, n, i, S ? 1 : s.swapThreshold, null == s.invertedSwapThreshold ? s.swapThreshold : s.invertedSwapThreshold, wt, ht === l))) {
+                                    }(t, l, n, i, S ? 1 : s.swapThreshold, null == s.invertedSwapThreshold ? s.swapThreshold : s.invertedSwapThreshold, wt, ht === l), 0 !== m) {
                                     var O = I(G);
                                     do {
                                         O -= m, y = U.children[O]
@@ -1388,4 +1388,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/990.6d57f4c313c0c58d00d7.js.map
+//# sourceMappingURL=sourcemaps/990.7e0e2830658a2a9178fb.js.map

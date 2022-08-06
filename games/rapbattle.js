@@ -10,9 +10,9 @@
                 o = s(13469),
                 c = s.n(o),
                 l = s(52650),
-                r = s(79023);
-            const p = l.W.extend({
-                    template: c().template(`${r.Z}<div class="mech"></div>`)
+                p = s(79023);
+            const r = l.W.extend({
+                    template: c().template(`${p.Z}<div class="mech"></div>`)
                 }),
                 n = a.v.extend({
                     sessionModulePrefix: "RapBattle",
@@ -34,15 +34,10 @@
                     },
                     formatSessionMessage: e => e,
                     getGameLayout(e) {
-                        switch (e) {
-                            case "Lobby":
-                                return this.setLayout(p);
-                            default:
-                                return -1
-                        }
+                        return "Lobby" === e ? this.setLayout(r) : -1
                     }
                 })
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/6244.d0d8480c801e1082b7bd.js.map
+//# sourceMappingURL=sourcemaps/6244.682e01ca5a9ade03a6e6.js.map

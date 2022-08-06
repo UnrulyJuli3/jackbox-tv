@@ -72,15 +72,10 @@
                     return e.artifact && (e.artifact.artifactId !== this.artifactId && (this.shouldHideArtifact = !1, this.artifactId = e.artifact.artifactId), "Lobby" !== e.state && "Logo" !== e.state && (this.shouldHideArtifact = !0), this.shouldHideArtifact && delete e.artifact), e.censorablePlayers && delete e.censorablePlayers, e
                 },
                 getGameLayout(e) {
-                    switch (e) {
-                        case "MakeSingleChoice":
-                            return this.setLayout(o);
-                        default:
-                            return -1
-                    }
+                    return "MakeSingleChoice" === e ? this.setLayout(o) : -1
                 }
             })
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/5863.64a8c2bdcbfe25aa47aa.js.map
+//# sourceMappingURL=sourcemaps/5863.1d65eb55aab7cf939e78.js.map

@@ -1227,7 +1227,7 @@
                     messages: U
                 },
                 data: () => ({
-                    version: "4.2.9"
+                    version: "4.2.10"
                 }),
                 computed: {
                     isTwitchAuthenticated() {
@@ -2301,4 +2301,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/4948.4c0a117e9491731eb82c.js.map
+//# sourceMappingURL=sourcemaps/4948.dfd3194b05ee1d71d42f.js.map

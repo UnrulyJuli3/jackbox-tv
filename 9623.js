@@ -1,4 +1,4 @@
-/*! For license information please see 9623.e9d2ff246e09733d2594.js.LICENSE.txt */
+/*! For license information please see 9623.ae8ac9fcaef7bd56a320.js.LICENSE.txt */
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     [9623], {
         96486: function(n, t, r) {
@@ -1329,28 +1329,30 @@
                                     } : n
                                 })) : [ia];
                                 var e = -1;
-                                return t = Ot(t, qt(oi())),
-                                    function(n, t) {
-                                        var e = n.length;
-                                        for (n.sort((function(n, t) {
-                                                return function(n, t, r) {
-                                                    for (var e = -1, u = n.criteria, i = t.criteria, o = u.length, f = r.length; ++e < o;) {
-                                                        var a = Au(u[e], i[e]);
-                                                        if (a) return e >= f ? a : a * ("desc" == r[e] ? -1 : 1)
-                                                    }
-                                                    return n.index - t.index
-                                                }(n, t, r)
-                                            })); e--;) n[e] = n[e].value;
-                                        return n
-                                    }(Te(n, (function(n, r, u) {
-                                        return {
-                                            criteria: Ot(t, (function(t) {
-                                                return t(n)
-                                            })),
-                                            index: ++e,
-                                            value: n
-                                        }
-                                    })))
+                                t = Ot(t, qt(oi()));
+                                var u = Te(n, (function(n, r, u) {
+                                    var i = Ot(t, (function(t) {
+                                        return t(n)
+                                    }));
+                                    return {
+                                        criteria: i,
+                                        index: ++e,
+                                        value: n
+                                    }
+                                }));
+                                return function(n, t) {
+                                    var e = n.length;
+                                    for (n.sort((function(n, t) {
+                                            return function(n, t, r) {
+                                                for (var e = -1, u = n.criteria, i = t.criteria, o = u.length, f = r.length; ++e < o;) {
+                                                    var a = Au(u[e], i[e]);
+                                                    if (a) return e >= f ? a : a * ("desc" == r[e] ? -1 : 1)
+                                                }
+                                                return n.index - t.index
+                                            }(n, t, r)
+                                        })); e--;) n[e] = n[e].value;
+                                    return n
+                                }(u)
                             }
 
                             function Pe(n, t, r) {
@@ -3719,10 +3721,10 @@
                 function f(n, t, r) {
                     if (n.length <= 2) return n;
                     var e = void 0 !== t ? t * t : 1;
-                    return o(n = r ? n : function(n, t) {
+                    return n = r ? n : function(n, t) {
                         for (var r, e, u, i, o, f = n[0], a = [f], c = 1, l = n.length; c < l; c++) u = f, void 0, void 0, (i = (e = r = n[c]).x - u.x) * i + (o = e.y - u.y) * o > t && (a.push(r), f = r);
                         return f !== r && a.push(r), a
-                    }(n, e), e)
+                    }(n, e), o(n, e)
                 }
                 void 0 === (e = function() {
                     return f
@@ -3731,4 +3733,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/9623.e9d2ff246e09733d2594.js.map
+//# sourceMappingURL=sourcemaps/9623.ae8ac9fcaef7bd56a320.js.map

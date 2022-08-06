@@ -34,10 +34,10 @@
                 function o(e, t, a) {
                     if (e.length <= 2) return e;
                     var s = void 0 !== t ? t * t : 1;
-                    return r(e = a ? e : function(e, t) {
+                    return e = a ? e : function(e, t) {
                         for (var a, s, i, n, r, o = e[0], l = [o], c = 1, d = e.length; c < d; c++) i = o, void 0, void 0, (n = (s = a = e[c]).x - i.x) * n + (r = s.y - i.y) * r > t && (l.push(a), o = a);
                         return o !== a && l.push(a), l
-                    }(e, s), s)
+                    }(e, s), r(e, s)
                 }
                 void 0 === (s = function() {
                     return o
@@ -3145,4 +3145,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/2659.a13083534e886e9e810f.js.map
+//# sourceMappingURL=sourcemaps/2659.8defe5b27eb3df485953.js.map

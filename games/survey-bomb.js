@@ -1374,7 +1374,7 @@
             var L = (0, u.Z)(M, _, [], !1, null, "6f411366", null);
             L.options.__file = "src/games/pp8/survey-bomb/views/Lobby.vue";
             const B = L.exports;
-            var G = function() {
+            var D = function() {
                 var e = this,
                     t = e.$createElement,
                     a = e._self._c || t;
@@ -1411,8 +1411,8 @@
                     })
                 }))], 2) : e._e()], 2)
             };
-            G._withStripped = !0;
-            const D = i().extend({
+            D._withStripped = !0;
+            const G = i().extend({
                 props: {
                     name: String,
                     teamIndex: Number,
@@ -1431,7 +1431,7 @@
                 },
                 themeColor: "#000"
             });
-            var F = (0, u.Z)(D, G, [], !1, null, "5c609c11", null);
+            var F = (0, u.Z)(G, D, [], !1, null, "5c609c11", null);
             F.options.__file = "src/games/pp8/survey-bomb/views/NameHeader.vue";
             const U = F.exports;
             var j = function() {
@@ -2082,7 +2082,6 @@
                             case "survey":
                             case "waiting":
                                 return "bg-game";
-                            case "postGame":
                             default:
                                 return "bg-fallback"
                         }
@@ -2212,7 +2211,6 @@
                             case "waiting":
                                 this.$setThemeColor("#5f2d60");
                                 break;
-                            case "postGame":
                             default:
                                 this.$setThemeColor("#0e5767")
                         }
@@ -2395,4 +2393,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/1988.330932b7753193086f8b.js.map
+//# sourceMappingURL=sourcemaps/1988.b3e1de23d3cb12925177.js.map

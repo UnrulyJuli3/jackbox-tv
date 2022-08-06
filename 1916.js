@@ -1,4 +1,4 @@
-/*! For license information please see 1916.7355acd5f5cd895479d1.js.LICENSE.txt */
+/*! For license information please see 1916.5bfee64ba38ad80c6bb1.js.LICENSE.txt */
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     [1916], {
         31807: t => {
@@ -47,7 +47,7 @@
                     return e
                 },
                 bytesToWords: function(t) {
-                    for (var e = [], i = 0, s = 0; i < t.length; i++, s += 8) e[s >>> 5] |= t[i] << 24 - s % 32;
+                    for (var e = [], i = 0, r = 0; i < t.length; i++, r += 8) e[r >>> 5] |= t[i] << 24 - r % 32;
                     return e
                 },
                 wordsToBytes: function(t) {
@@ -63,13 +63,13 @@
                     return e
                 },
                 bytesToBase64: function(t) {
-                    for (var i = [], s = 0; s < t.length; s += 3)
-                        for (var r = t[s] << 16 | t[s + 1] << 8 | t[s + 2], n = 0; n < 4; n++) 8 * s + 6 * n <= 8 * t.length ? i.push(e.charAt(r >>> 6 * (3 - n) & 63)) : i.push("=");
+                    for (var i = [], r = 0; r < t.length; r += 3)
+                        for (var s = t[r] << 16 | t[r + 1] << 8 | t[r + 2], n = 0; n < 4; n++) 8 * r + 6 * n <= 8 * t.length ? i.push(e.charAt(s >>> 6 * (3 - n) & 63)) : i.push("=");
                     return i.join("")
                 },
                 base64ToBytes: function(t) {
                     t = t.replace(/[^A-Z0-9+\/]/gi, "");
-                    for (var i = [], s = 0, r = 0; s < t.length; r = ++s % 4) 0 != r && i.push((e.indexOf(t.charAt(s - 1)) & Math.pow(2, -2 * r + 8) - 1) << 2 * r | e.indexOf(t.charAt(s)) >>> 6 - 2 * r);
+                    for (var i = [], r = 0, s = 0; r < t.length; s = ++r % 4) 0 != s && i.push((e.indexOf(t.charAt(r - 1)) & Math.pow(2, -2 * s + 8) - 1) << 2 * s | e.indexOf(t.charAt(r)) >>> 6 - 2 * s);
                     return i
                 }
             }, t.exports = i
@@ -85,8 +85,8 @@
             }
         },
         91296: (t, e, i) => {
-            var s = /^\s+|\s+$/g,
-                r = /^[-+]0x[0-9a-f]+$/i,
+            var r = /^\s+|\s+$/g,
+                s = /^[-+]0x[0-9a-f]+$/i,
                 n = /^0b[01]+$/i,
                 o = /^0o[0-7]+$/i,
                 a = parseInt,
@@ -117,21 +117,21 @@
                     t = v(e) ? e + "" : e
                 }
                 if ("string" != typeof t) return 0 === t ? t : +t;
-                t = t.replace(s, "");
+                t = t.replace(r, "");
                 var i = n.test(t);
-                return i || o.test(t) ? a(t.slice(2), i ? 2 : 8) : r.test(t) ? NaN : +t
+                return i || o.test(t) ? a(t.slice(2), i ? 2 : 8) : s.test(t) ? NaN : +t
             }
             t.exports = function(t, e, i) {
-                var s, r, n, o, a, l, c = 0,
+                var r, s, n, o, a, l, c = 0,
                     h = !1,
                     u = !1,
                     m = !0;
                 if ("function" != typeof t) throw new TypeError("Expected a function");
 
                 function g(e) {
-                    var i = s,
-                        n = r;
-                    return s = r = void 0, c = e, o = t.apply(n, i)
+                    var i = r,
+                        n = s;
+                    return r = s = void 0, c = e, o = t.apply(n, i)
                 }
 
                 function y(t) {
@@ -153,27 +153,27 @@
                 }
 
                 function w(t) {
-                    return a = void 0, m && s ? g(t) : (s = r = void 0, o)
+                    return a = void 0, m && r ? g(t) : (r = s = void 0, o)
                 }
 
                 function _() {
                     var t = p(),
                         i = x(t);
-                    if (s = arguments, r = this, l = t, i) {
+                    if (r = arguments, s = this, l = t, i) {
                         if (void 0 === a) return y(l);
                         if (u) return a = setTimeout(E, e), g(l)
                     }
                     return void 0 === a && (a = setTimeout(E, e)), o
                 }
                 return e = b(e) || 0, v(i) && (h = !!i.leading, n = (u = "maxWait" in i) ? f(b(i.maxWait) || 0, e) : n, m = "trailing" in i ? !!i.trailing : m), _.cancel = function() {
-                    void 0 !== a && clearTimeout(a), c = 0, s = l = r = a = void 0
+                    void 0 !== a && clearTimeout(a), c = 0, r = l = s = a = void 0
                 }, _.flush = function() {
                     return void 0 === a ? o : w(p())
                 }, _
             }
         },
         20773: (t, e, i) => {
-            var s, r = "__lodash_hash_undefined__",
+            var r, s = "__lodash_hash_undefined__",
                 n = /^\[object .+?Constructor\]$/,
                 o = "object" == typeof i.g && i.g && i.g.Object === Object && i.g,
                 a = "object" == typeof self && self && self.Object === Object && self,
@@ -182,7 +182,7 @@
                 h = Function.prototype,
                 u = Object.prototype,
                 f = l["__core-js_shared__"],
-                d = (s = /[^.]+$/.exec(f && f.keys && f.keys.IE_PROTO || "")) ? "Symbol(src)_1." + s : "",
+                d = (r = /[^.]+$/.exec(f && f.keys && f.keys.IE_PROTO || "")) ? "Symbol(src)_1." + r : "",
                 p = h.toString,
                 v = u.hasOwnProperty,
                 b = u.toString,
@@ -195,8 +195,8 @@
                 var e = -1,
                     i = t ? t.length : 0;
                 for (this.clear(); ++e < i;) {
-                    var s = t[e];
-                    this.set(s[0], s[1])
+                    var r = t[e];
+                    this.set(r[0], r[1])
                 }
             }
 
@@ -204,8 +204,8 @@
                 var e = -1,
                     i = t ? t.length : 0;
                 for (this.clear(); ++e < i;) {
-                    var s = t[e];
-                    this.set(s[0], s[1])
+                    var r = t[e];
+                    this.set(r[0], r[1])
                 }
             }
 
@@ -213,20 +213,20 @@
                 var e = -1,
                     i = t ? t.length : 0;
                 for (this.clear(); ++e < i;) {
-                    var s = t[e];
-                    this.set(s[0], s[1])
+                    var r = t[e];
+                    this.set(r[0], r[1])
                 }
             }
 
             function O(t, e) {
-                for (var i, s, r = t.length; r--;)
-                    if ((i = t[r][0]) === (s = e) || i != i && s != s) return r;
+                for (var i, r, s = t.length; s--;)
+                    if ((i = t[s][0]) === (r = e) || i != i && r != r) return s;
                 return -1
             }
 
             function S(t, e) {
-                var i, s, r = t.__data__;
-                return ("string" == (s = typeof(i = e)) || "number" == s || "symbol" == s || "boolean" == s ? "__proto__" !== i : null === i) ? r["string" == typeof e ? "string" : "hash"] : r.map
+                var i, r, s = t.__data__;
+                return ("string" == (r = typeof(i = e)) || "number" == r || "symbol" == r || "boolean" == r ? "__proto__" !== i : null === i) ? s["string" == typeof e ? "string" : "hash"] : s.map
             }
 
             function k(t, e) {
@@ -234,7 +234,8 @@
                     return null == t ? void 0 : t[e]
                 }(t, e);
                 return function(t) {
-                    return !(!M(t) || (e = t, d && d in e)) && (function(t) {
+                    if (!M(t) || d && d in t) return !1;
+                    var e = function(t) {
                         var e = M(t) ? b.call(t) : "";
                         return "[object Function]" == e || "[object GeneratorFunction]" == e
                     }(t) || function(t) {
@@ -243,7 +244,8 @@
                             e = !!(t + "")
                         } catch (t) {}
                         return e
-                    }(t) ? m : n).test(function(t) {
+                    }(t) ? m : n;
+                    return e.test(function(t) {
                         if (null != t) {
                             try {
                                 return p.call(t)
@@ -253,20 +255,19 @@
                             } catch (t) {}
                         }
                         return ""
-                    }(t));
-                    var e
+                    }(t))
                 }(i) ? i : void 0
             }
 
             function A(t, e) {
                 if ("function" != typeof t || e && "function" != typeof e) throw new TypeError("Expected a function");
                 var i = function() {
-                    var s = arguments,
-                        r = e ? e.apply(this, s) : s[0],
+                    var r = arguments,
+                        s = e ? e.apply(this, r) : r[0],
                         n = i.cache;
-                    if (n.has(r)) return n.get(r);
-                    var o = t.apply(this, s);
-                    return i.cache = n.set(r, o), o
+                    if (n.has(s)) return n.get(s);
+                    var o = t.apply(this, r);
+                    return i.cache = n.set(s, o), o
                 };
                 return i.cache = new(A.Cache || _), i
             }
@@ -283,14 +284,14 @@
                 var e = this.__data__;
                 if (x) {
                     var i = e[t];
-                    return i === r ? void 0 : i
+                    return i === s ? void 0 : i
                 }
                 return v.call(e, t) ? e[t] : void 0
             }, E.prototype.has = function(t) {
                 var e = this.__data__;
                 return x ? void 0 !== e[t] : v.call(e, t)
             }, E.prototype.set = function(t, e) {
-                return this.__data__[t] = x && void 0 === e ? r : e, this
+                return this.__data__[t] = x && void 0 === e ? s : e, this
             }, w.prototype.clear = function() {
                 this.__data__ = []
             }, w.prototype.delete = function(t) {
@@ -305,8 +306,8 @@
                 return O(this.__data__, t) > -1
             }, w.prototype.set = function(t, e) {
                 var i = this.__data__,
-                    s = O(i, t);
-                return s < 0 ? i.push([t, e]) : i[s][1] = e, this
+                    r = O(i, t);
+                return r < 0 ? i.push([t, e]) : i[r][1] = e, this
             }, _.prototype.clear = function() {
                 this.__data__ = {
                     hash: new E,
@@ -324,8 +325,8 @@
             }, A.Cache = _, t.exports = A
         },
         93096: (t, e, i) => {
-            var s = "Expected a function",
-                r = /^\s+|\s+$/g,
+            var r = "Expected a function",
+                s = /^\s+|\s+$/g,
                 n = /^[-+]0x[0-9a-f]+$/i,
                 o = /^0b[01]+$/i,
                 a = /^0o[0-7]+$/i,
@@ -357,26 +358,26 @@
                     t = b(e) ? e + "" : e
                 }
                 if ("string" != typeof t) return 0 === t ? t : +t;
-                t = t.replace(r, "");
+                t = t.replace(s, "");
                 var i = o.test(t);
                 return i || a.test(t) ? l(t.slice(2), i ? 2 : 8) : n.test(t) ? NaN : +t
             }
             t.exports = function(t, e, i) {
-                var r = !0,
+                var s = !0,
                     n = !0;
-                if ("function" != typeof t) throw new TypeError(s);
-                return b(i) && (r = "leading" in i ? !!i.leading : r, n = "trailing" in i ? !!i.trailing : n),
+                if ("function" != typeof t) throw new TypeError(r);
+                return b(i) && (s = "leading" in i ? !!i.leading : s, n = "trailing" in i ? !!i.trailing : n),
                     function(t, e, i) {
-                        var r, n, o, a, l, c, h = 0,
+                        var s, n, o, a, l, c, h = 0,
                             u = !1,
                             f = !1,
                             g = !0;
-                        if ("function" != typeof t) throw new TypeError(s);
+                        if ("function" != typeof t) throw new TypeError(r);
 
                         function y(e) {
-                            var i = r,
-                                s = n;
-                            return r = n = void 0, h = e, a = t.apply(s, i)
+                            var i = s,
+                                r = n;
+                            return s = n = void 0, h = e, a = t.apply(r, i)
                         }
 
                         function x(t) {
@@ -398,35 +399,35 @@
                         }
 
                         function _(t) {
-                            return l = void 0, g && r ? y(t) : (r = n = void 0, a)
+                            return l = void 0, g && s ? y(t) : (s = n = void 0, a)
                         }
 
                         function O() {
                             var t = v(),
                                 i = E(t);
-                            if (r = arguments, n = this, c = t, i) {
+                            if (s = arguments, n = this, c = t, i) {
                                 if (void 0 === l) return x(c);
                                 if (f) return l = setTimeout(w, e), y(c)
                             }
                             return void 0 === l && (l = setTimeout(w, e)), a
                         }
                         return e = m(e) || 0, b(i) && (u = !!i.leading, o = (f = "maxWait" in i) ? d(m(i.maxWait) || 0, e) : o, g = "trailing" in i ? !!i.trailing : g), O.cancel = function() {
-                            void 0 !== l && clearTimeout(l), h = 0, r = c = n = l = void 0
+                            void 0 !== l && clearTimeout(l), h = 0, s = c = n = l = void 0
                         }, O.flush = function() {
                             return void 0 === l ? a : _(v())
                         }, O
                     }(t, e, {
-                        leading: r,
+                        leading: s,
                         maxWait: e,
                         trailing: n
                     })
             }
         },
         2568: (t, e, i) => {
-            var s, r, n, o, a;
-            s = i(71012), r = i(40487).utf8, n = i(48738), o = i(40487).bin, (a = function(t, e) {
-                t.constructor == String ? t = e && "binary" === e.encoding ? o.stringToBytes(t) : r.stringToBytes(t) : n(t) ? t = Array.prototype.slice.call(t, 0) : Array.isArray(t) || t.constructor === Uint8Array || (t = t.toString());
-                for (var i = s.bytesToWords(t), l = 8 * t.length, c = 1732584193, h = -271733879, u = -1732584194, f = 271733878, d = 0; d < i.length; d++) i[d] = 16711935 & (i[d] << 8 | i[d] >>> 24) | 4278255360 & (i[d] << 24 | i[d] >>> 8);
+            var r, s, n, o, a;
+            r = i(71012), s = i(40487).utf8, n = i(48738), o = i(40487).bin, (a = function(t, e) {
+                t.constructor == String ? t = e && "binary" === e.encoding ? o.stringToBytes(t) : s.stringToBytes(t) : n(t) ? t = Array.prototype.slice.call(t, 0) : Array.isArray(t) || t.constructor === Uint8Array || (t = t.toString());
+                for (var i = r.bytesToWords(t), l = 8 * t.length, c = 1732584193, h = -271733879, u = -1732584194, f = 271733878, d = 0; d < i.length; d++) i[d] = 16711935 & (i[d] << 8 | i[d] >>> 24) | 4278255360 & (i[d] << 24 | i[d] >>> 8);
                 i[l >>> 5] |= 128 << l % 32, i[14 + (l + 64 >>> 9 << 4)] = l;
                 var p = a._ff,
                     v = a._gg,
@@ -439,23 +440,23 @@
                         E = f;
                     c = p(c, h, u, f, i[d + 0], 7, -680876936), f = p(f, c, h, u, i[d + 1], 12, -389564586), u = p(u, f, c, h, i[d + 2], 17, 606105819), h = p(h, u, f, c, i[d + 3], 22, -1044525330), c = p(c, h, u, f, i[d + 4], 7, -176418897), f = p(f, c, h, u, i[d + 5], 12, 1200080426), u = p(u, f, c, h, i[d + 6], 17, -1473231341), h = p(h, u, f, c, i[d + 7], 22, -45705983), c = p(c, h, u, f, i[d + 8], 7, 1770035416), f = p(f, c, h, u, i[d + 9], 12, -1958414417), u = p(u, f, c, h, i[d + 10], 17, -42063), h = p(h, u, f, c, i[d + 11], 22, -1990404162), c = p(c, h, u, f, i[d + 12], 7, 1804603682), f = p(f, c, h, u, i[d + 13], 12, -40341101), u = p(u, f, c, h, i[d + 14], 17, -1502002290), c = v(c, h = p(h, u, f, c, i[d + 15], 22, 1236535329), u, f, i[d + 1], 5, -165796510), f = v(f, c, h, u, i[d + 6], 9, -1069501632), u = v(u, f, c, h, i[d + 11], 14, 643717713), h = v(h, u, f, c, i[d + 0], 20, -373897302), c = v(c, h, u, f, i[d + 5], 5, -701558691), f = v(f, c, h, u, i[d + 10], 9, 38016083), u = v(u, f, c, h, i[d + 15], 14, -660478335), h = v(h, u, f, c, i[d + 4], 20, -405537848), c = v(c, h, u, f, i[d + 9], 5, 568446438), f = v(f, c, h, u, i[d + 14], 9, -1019803690), u = v(u, f, c, h, i[d + 3], 14, -187363961), h = v(h, u, f, c, i[d + 8], 20, 1163531501), c = v(c, h, u, f, i[d + 13], 5, -1444681467), f = v(f, c, h, u, i[d + 2], 9, -51403784), u = v(u, f, c, h, i[d + 7], 14, 1735328473), c = b(c, h = v(h, u, f, c, i[d + 12], 20, -1926607734), u, f, i[d + 5], 4, -378558), f = b(f, c, h, u, i[d + 8], 11, -2022574463), u = b(u, f, c, h, i[d + 11], 16, 1839030562), h = b(h, u, f, c, i[d + 14], 23, -35309556), c = b(c, h, u, f, i[d + 1], 4, -1530992060), f = b(f, c, h, u, i[d + 4], 11, 1272893353), u = b(u, f, c, h, i[d + 7], 16, -155497632), h = b(h, u, f, c, i[d + 10], 23, -1094730640), c = b(c, h, u, f, i[d + 13], 4, 681279174), f = b(f, c, h, u, i[d + 0], 11, -358537222), u = b(u, f, c, h, i[d + 3], 16, -722521979), h = b(h, u, f, c, i[d + 6], 23, 76029189), c = b(c, h, u, f, i[d + 9], 4, -640364487), f = b(f, c, h, u, i[d + 12], 11, -421815835), u = b(u, f, c, h, i[d + 15], 16, 530742520), c = m(c, h = b(h, u, f, c, i[d + 2], 23, -995338651), u, f, i[d + 0], 6, -198630844), f = m(f, c, h, u, i[d + 7], 10, 1126891415), u = m(u, f, c, h, i[d + 14], 15, -1416354905), h = m(h, u, f, c, i[d + 5], 21, -57434055), c = m(c, h, u, f, i[d + 12], 6, 1700485571), f = m(f, c, h, u, i[d + 3], 10, -1894986606), u = m(u, f, c, h, i[d + 10], 15, -1051523), h = m(h, u, f, c, i[d + 1], 21, -2054922799), c = m(c, h, u, f, i[d + 8], 6, 1873313359), f = m(f, c, h, u, i[d + 15], 10, -30611744), u = m(u, f, c, h, i[d + 6], 15, -1560198380), h = m(h, u, f, c, i[d + 13], 21, 1309151649), c = m(c, h, u, f, i[d + 4], 6, -145523070), f = m(f, c, h, u, i[d + 11], 10, -1120210379), u = m(u, f, c, h, i[d + 2], 15, 718787259), h = m(h, u, f, c, i[d + 9], 21, -343485551), c = c + g >>> 0, h = h + y >>> 0, u = u + x >>> 0, f = f + E >>> 0
                 }
-                return s.endian([c, h, u, f])
-            })._ff = function(t, e, i, s, r, n, o) {
-                var a = t + (e & i | ~e & s) + (r >>> 0) + o;
+                return r.endian([c, h, u, f])
+            })._ff = function(t, e, i, r, s, n, o) {
+                var a = t + (e & i | ~e & r) + (s >>> 0) + o;
                 return (a << n | a >>> 32 - n) + e
-            }, a._gg = function(t, e, i, s, r, n, o) {
-                var a = t + (e & s | i & ~s) + (r >>> 0) + o;
+            }, a._gg = function(t, e, i, r, s, n, o) {
+                var a = t + (e & r | i & ~r) + (s >>> 0) + o;
                 return (a << n | a >>> 32 - n) + e
-            }, a._hh = function(t, e, i, s, r, n, o) {
-                var a = t + (e ^ i ^ s) + (r >>> 0) + o;
+            }, a._hh = function(t, e, i, r, s, n, o) {
+                var a = t + (e ^ i ^ r) + (s >>> 0) + o;
                 return (a << n | a >>> 32 - n) + e
-            }, a._ii = function(t, e, i, s, r, n, o) {
-                var a = t + (i ^ (e | ~s)) + (r >>> 0) + o;
+            }, a._ii = function(t, e, i, r, s, n, o) {
+                var a = t + (i ^ (e | ~r)) + (s >>> 0) + o;
                 return (a << n | a >>> 32 - n) + e
             }, a._blocksize = 16, a._digestsize = 16, t.exports = function(t, e) {
                 if (null == t) throw new Error("Illegal argument " + t);
-                var i = s.wordsToBytes(a(t, e));
-                return e && e.asBytes ? i : e && e.asString ? o.bytesToString(i) : s.bytesToHex(i)
+                var i = r.wordsToBytes(a(t, e));
+                return e && e.asBytes ? i : e && e.asString ? o.bytesToString(i) : r.bytesToHex(i)
             }
         },
         56884: (t, e, i) => {
@@ -463,8 +464,8 @@
             i.d(e, {
                 Z: () => V
             }), i(89554), i(54747);
-            var s = i(31807),
-                r = i.n(s),
+            var r = i(31807),
+                s = i.n(r),
                 n = (i(57327), i(66992), i(19601), i(41539), i(91058), i(78783), i(4129), i(33948), i(93096)),
                 o = i.n(n),
                 a = i(91296),
@@ -476,8 +477,8 @@
 
                     function t(t, e) {
                         var i = -1;
-                        return t.some((function(t, s) {
-                            return t[0] === e && (i = s, !0)
+                        return t.some((function(t, r) {
+                            return t[0] === e && (i = r, !0)
                         })), i
                     }
                     return function() {
@@ -492,24 +493,24 @@
                             configurable: !0
                         }), e.prototype.get = function(e) {
                             var i = t(this.__entries__, e),
-                                s = this.__entries__[i];
-                            return s && s[1]
+                                r = this.__entries__[i];
+                            return r && r[1]
                         }, e.prototype.set = function(e, i) {
-                            var s = t(this.__entries__, e);
-                            ~s ? this.__entries__[s][1] = i : this.__entries__.push([e, i])
+                            var r = t(this.__entries__, e);
+                            ~r ? this.__entries__[r][1] = i : this.__entries__.push([e, i])
                         }, e.prototype.delete = function(e) {
                             var i = this.__entries__,
-                                s = t(i, e);
-                            ~s && i.splice(s, 1)
+                                r = t(i, e);
+                            ~r && i.splice(r, 1)
                         }, e.prototype.has = function(e) {
                             return !!~t(this.__entries__, e)
                         }, e.prototype.clear = function() {
                             this.__entries__.splice(0)
                         }, e.prototype.forEach = function(t, e) {
                             void 0 === e && (e = null);
-                            for (var i = 0, s = this.__entries__; i < s.length; i++) {
-                                var r = s[i];
-                                t.call(e, r[1], r[0])
+                            for (var i = 0, r = this.__entries__; i < r.length; i++) {
+                                var s = r[i];
+                                t.call(e, s[1], s[0])
                             }
                         }, e
                     }()
@@ -527,11 +528,11 @@
                     function t() {
                         this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(t, e) {
                             var i = !1,
-                                s = !1,
-                                r = 0;
+                                r = !1,
+                                s = 0;
 
                             function n() {
-                                i && (i = !1, t()), s && a()
+                                i && (i = !1, t()), r && a()
                             }
 
                             function o() {
@@ -541,10 +542,10 @@
                             function a() {
                                 var t = Date.now();
                                 if (i) {
-                                    if (t - r < 2) return;
-                                    s = !0
-                                } else i = !0, s = !1, setTimeout(o, 20);
-                                r = t
+                                    if (t - s < 2) return;
+                                    r = !0
+                                } else i = !0, r = !1, setTimeout(o, 20);
+                                s = t
                             }
                             return a
                         }(this.refresh.bind(this))
@@ -584,10 +585,10 @@
                     }, t.instance_ = null, t
                 }(),
                 g = function(t, e) {
-                    for (var i = 0, s = Object.keys(e); i < s.length; i++) {
-                        var r = s[i];
-                        Object.defineProperty(t, r, {
-                            value: e[r],
+                    for (var i = 0, r = Object.keys(e); i < r.length; i++) {
+                        var s = r[i];
+                        Object.defineProperty(t, s, {
+                            value: e[s],
                             enumerable: !1,
                             writable: !1,
                             configurable: !0
@@ -624,36 +625,36 @@
                     var e = t.clientWidth,
                         i = t.clientHeight;
                     if (!e && !i) return x;
-                    var s = y(t).getComputedStyle(t),
-                        r = function(t) {
-                            for (var e = {}, i = 0, s = ["top", "right", "bottom", "left"]; i < s.length; i++) {
-                                var r = s[i],
-                                    n = t["padding-" + r];
-                                e[r] = E(n)
+                    var r = y(t).getComputedStyle(t),
+                        s = function(t) {
+                            for (var e = {}, i = 0, r = ["top", "right", "bottom", "left"]; i < r.length; i++) {
+                                var s = r[i],
+                                    n = t["padding-" + s];
+                                e[s] = E(n)
                             }
                             return e
-                        }(s),
-                        n = r.left + r.right,
-                        o = r.top + r.bottom,
-                        a = E(s.width),
-                        l = E(s.height);
-                    if ("border-box" === s.boxSizing && (Math.round(a + n) !== e && (a -= w(s, "left", "right") + n), Math.round(l + o) !== i && (l -= w(s, "top", "bottom") + o)), ! function(t) {
+                        }(r),
+                        n = s.left + s.right,
+                        o = s.top + s.bottom,
+                        a = E(r.width),
+                        l = E(r.height);
+                    if ("border-box" === r.boxSizing && (Math.round(a + n) !== e && (a -= w(r, "left", "right") + n), Math.round(l + o) !== i && (l -= w(r, "top", "bottom") + o)), ! function(t) {
                             return t === y(t).document.documentElement
                         }(t)) {
                         var c = Math.round(a + n) - e,
                             h = Math.round(l + o) - i;
                         1 !== Math.abs(c) && (a -= c), 1 !== Math.abs(h) && (l -= h)
                     }
-                    return S(r.left, r.top, a, l)
+                    return S(s.left, s.top, a, l)
                 }(t) : x
             }
 
-            function S(t, e, i, s) {
+            function S(t, e, i, r) {
                 return {
                     x: t,
                     y: e,
                     width: i,
-                    height: s
+                    height: r
                 }
             }
             var k = function() {
@@ -669,15 +670,15 @@
                     }, t
                 }(),
                 A = function(t, e) {
-                    var i, s, r, n, o, a, l, c = (s = (i = e).x, r = i.y, n = i.width, o = i.height, a = "undefined" != typeof DOMRectReadOnly ? DOMRectReadOnly : Object, l = Object.create(a.prototype), g(l, {
-                        x: s,
-                        y: r,
+                    var i, r, s, n, o, a, l, c = (r = (i = e).x, s = i.y, n = i.width, o = i.height, a = "undefined" != typeof DOMRectReadOnly ? DOMRectReadOnly : Object, l = Object.create(a.prototype), g(l, {
+                        x: r,
+                        y: s,
                         width: n,
                         height: o,
-                        top: r,
-                        right: s + n,
-                        bottom: o + r,
-                        left: s
+                        top: s,
+                        right: r + n,
+                        bottom: o + s,
+                        left: r
                     }), l);
                     g(this, {
                         target: t,
@@ -729,8 +730,8 @@
                     if (!(this instanceof t)) throw new TypeError("Cannot call a class as a function.");
                     if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
                     var i = m.getInstance(),
-                        s = new M(e, i, this);
-                    L.set(this, s)
+                        r = new M(e, i, this);
+                    L.set(this, r)
                 };
             ["observe", "unobserve", "disconnect"].forEach((function(t) {
                 W.prototype[t] = function() {
@@ -744,21 +745,21 @@
                 return Array.prototype.reduce.call(t, (function(t, e) {
                     var i = e.name.match(/data-simplebar-(.+)/);
                     if (i) {
-                        var s = i[1].replace(/\W+(.)/g, (function(t, e) {
+                        var r = i[1].replace(/\W+(.)/g, (function(t, e) {
                             return e.toUpperCase()
                         }));
                         switch (e.value) {
                             case "true":
-                                t[s] = !0;
+                                t[r] = !0;
                                 break;
                             case "false":
-                                t[s] = !1;
+                                t[r] = !1;
                                 break;
                             case void 0:
-                                t[s] = !0;
+                                t[r] = !0;
                                 break;
                             default:
-                                t[s] = e.value
+                                t[r] = e.value
                         }
                     }
                     return t
@@ -780,53 +781,53 @@
                     var e = z(t);
                     if (void 0 === e) return R = 0;
                     var i = e.body,
-                        s = e.createElement("div");
-                    s.classList.add("simplebar-hide-scrollbar"), i.appendChild(s);
-                    var r = s.getBoundingClientRect().right;
-                    i.removeChild(s), R = r
+                        r = e.createElement("div");
+                    r.classList.add("simplebar-hide-scrollbar"), i.appendChild(r);
+                    var s = r.getBoundingClientRect().right;
+                    i.removeChild(r), R = s
                 }
                 return R
             }
-            r() && window.addEventListener("resize", (function() {
+            s() && window.addEventListener("resize", (function() {
                 j !== window.devicePixelRatio && (j = window.devicePixelRatio, R = null)
             }));
             var D = function() {
                 function t(e, i) {
-                    var s = this;
+                    var r = this;
                     this.onScroll = function() {
-                        var t = N(s.el);
-                        s.scrollXTicking || (t.requestAnimationFrame(s.scrollX), s.scrollXTicking = !0), s.scrollYTicking || (t.requestAnimationFrame(s.scrollY), s.scrollYTicking = !0)
+                        var t = N(r.el);
+                        r.scrollXTicking || (t.requestAnimationFrame(r.scrollX), r.scrollXTicking = !0), r.scrollYTicking || (t.requestAnimationFrame(r.scrollY), r.scrollYTicking = !0)
                     }, this.scrollX = function() {
-                        s.axis.x.isOverflowing && (s.showScrollbar("x"), s.positionScrollbar("x")), s.scrollXTicking = !1
+                        r.axis.x.isOverflowing && (r.showScrollbar("x"), r.positionScrollbar("x")), r.scrollXTicking = !1
                     }, this.scrollY = function() {
-                        s.axis.y.isOverflowing && (s.showScrollbar("y"), s.positionScrollbar("y")), s.scrollYTicking = !1
+                        r.axis.y.isOverflowing && (r.showScrollbar("y"), r.positionScrollbar("y")), r.scrollYTicking = !1
                     }, this.onMouseEnter = function() {
-                        s.showScrollbar("x"), s.showScrollbar("y")
+                        r.showScrollbar("x"), r.showScrollbar("y")
                     }, this.onMouseMove = function(t) {
-                        s.mouseX = t.clientX, s.mouseY = t.clientY, (s.axis.x.isOverflowing || s.axis.x.forceVisible) && s.onMouseMoveForAxis("x"), (s.axis.y.isOverflowing || s.axis.y.forceVisible) && s.onMouseMoveForAxis("y")
+                        r.mouseX = t.clientX, r.mouseY = t.clientY, (r.axis.x.isOverflowing || r.axis.x.forceVisible) && r.onMouseMoveForAxis("x"), (r.axis.y.isOverflowing || r.axis.y.forceVisible) && r.onMouseMoveForAxis("y")
                     }, this.onMouseLeave = function() {
-                        s.onMouseMove.cancel(), (s.axis.x.isOverflowing || s.axis.x.forceVisible) && s.onMouseLeaveForAxis("x"), (s.axis.y.isOverflowing || s.axis.y.forceVisible) && s.onMouseLeaveForAxis("y"), s.mouseX = -1, s.mouseY = -1
+                        r.onMouseMove.cancel(), (r.axis.x.isOverflowing || r.axis.x.forceVisible) && r.onMouseLeaveForAxis("x"), (r.axis.y.isOverflowing || r.axis.y.forceVisible) && r.onMouseLeaveForAxis("y"), r.mouseX = -1, r.mouseY = -1
                     }, this.onWindowResize = function() {
-                        s.scrollbarWidth = s.getScrollbarWidth(), s.hideNativeScrollbar()
+                        r.scrollbarWidth = r.getScrollbarWidth(), r.hideNativeScrollbar()
                     }, this.hideScrollbars = function() {
-                        s.axis.x.track.rect = s.axis.x.track.el.getBoundingClientRect(), s.axis.y.track.rect = s.axis.y.track.el.getBoundingClientRect(), s.isWithinBounds(s.axis.y.track.rect) || (s.axis.y.scrollbar.el.classList.remove(s.classNames.visible), s.axis.y.isVisible = !1), s.isWithinBounds(s.axis.x.track.rect) || (s.axis.x.scrollbar.el.classList.remove(s.classNames.visible), s.axis.x.isVisible = !1)
+                        r.axis.x.track.rect = r.axis.x.track.el.getBoundingClientRect(), r.axis.y.track.rect = r.axis.y.track.el.getBoundingClientRect(), r.isWithinBounds(r.axis.y.track.rect) || (r.axis.y.scrollbar.el.classList.remove(r.classNames.visible), r.axis.y.isVisible = !1), r.isWithinBounds(r.axis.x.track.rect) || (r.axis.x.scrollbar.el.classList.remove(r.classNames.visible), r.axis.x.isVisible = !1)
                     }, this.onPointerEvent = function(t) {
                         var e, i;
-                        s.axis.x.track.rect = s.axis.x.track.el.getBoundingClientRect(), s.axis.y.track.rect = s.axis.y.track.el.getBoundingClientRect(), (s.axis.x.isOverflowing || s.axis.x.forceVisible) && (e = s.isWithinBounds(s.axis.x.track.rect)), (s.axis.y.isOverflowing || s.axis.y.forceVisible) && (i = s.isWithinBounds(s.axis.y.track.rect)), (e || i) && (t.preventDefault(), t.stopPropagation(), "mousedown" === t.type && (e && (s.axis.x.scrollbar.rect = s.axis.x.scrollbar.el.getBoundingClientRect(), s.isWithinBounds(s.axis.x.scrollbar.rect) ? s.onDragStart(t, "x") : s.onTrackClick(t, "x")), i && (s.axis.y.scrollbar.rect = s.axis.y.scrollbar.el.getBoundingClientRect(), s.isWithinBounds(s.axis.y.scrollbar.rect) ? s.onDragStart(t, "y") : s.onTrackClick(t, "y"))))
+                        r.axis.x.track.rect = r.axis.x.track.el.getBoundingClientRect(), r.axis.y.track.rect = r.axis.y.track.el.getBoundingClientRect(), (r.axis.x.isOverflowing || r.axis.x.forceVisible) && (e = r.isWithinBounds(r.axis.x.track.rect)), (r.axis.y.isOverflowing || r.axis.y.forceVisible) && (i = r.isWithinBounds(r.axis.y.track.rect)), (e || i) && (t.preventDefault(), t.stopPropagation(), "mousedown" === t.type && (e && (r.axis.x.scrollbar.rect = r.axis.x.scrollbar.el.getBoundingClientRect(), r.isWithinBounds(r.axis.x.scrollbar.rect) ? r.onDragStart(t, "x") : r.onTrackClick(t, "x")), i && (r.axis.y.scrollbar.rect = r.axis.y.scrollbar.el.getBoundingClientRect(), r.isWithinBounds(r.axis.y.scrollbar.rect) ? r.onDragStart(t, "y") : r.onTrackClick(t, "y"))))
                     }, this.drag = function(e) {
-                        var i = s.axis[s.draggedAxis].track,
-                            r = i.rect[s.axis[s.draggedAxis].sizeAttr],
-                            n = s.axis[s.draggedAxis].scrollbar,
-                            o = s.contentWrapperEl[s.axis[s.draggedAxis].scrollSizeAttr],
-                            a = parseInt(s.elStyles[s.axis[s.draggedAxis].sizeAttr], 10);
+                        var i = r.axis[r.draggedAxis].track,
+                            s = i.rect[r.axis[r.draggedAxis].sizeAttr],
+                            n = r.axis[r.draggedAxis].scrollbar,
+                            o = r.contentWrapperEl[r.axis[r.draggedAxis].scrollSizeAttr],
+                            a = parseInt(r.elStyles[r.axis[r.draggedAxis].sizeAttr], 10);
                         e.preventDefault(), e.stopPropagation();
-                        var l = (("y" === s.draggedAxis ? e.pageY : e.pageX) - i.rect[s.axis[s.draggedAxis].offsetAttr] - s.axis[s.draggedAxis].dragOffset) / (r - n.size) * (o - a);
-                        "x" === s.draggedAxis && (l = s.isRtl && t.getRtlHelpers().isRtlScrollbarInverted ? l - (r + n.size) : l, l = s.isRtl && t.getRtlHelpers().isRtlScrollingInverted ? -l : l), s.contentWrapperEl[s.axis[s.draggedAxis].scrollOffsetAttr] = l
+                        var l = (("y" === r.draggedAxis ? e.pageY : e.pageX) - i.rect[r.axis[r.draggedAxis].offsetAttr] - r.axis[r.draggedAxis].dragOffset) / (s - n.size) * (o - a);
+                        "x" === r.draggedAxis && (l = r.isRtl && t.getRtlHelpers().isRtlScrollbarInverted ? l - (s + n.size) : l, l = r.isRtl && t.getRtlHelpers().isRtlScrollingInverted ? -l : l), r.contentWrapperEl[r.axis[r.draggedAxis].scrollOffsetAttr] = l
                     }, this.onEndDrag = function(t) {
-                        var e = z(s.el),
-                            i = N(s.el);
-                        t.preventDefault(), t.stopPropagation(), s.el.classList.remove(s.classNames.dragging), e.removeEventListener("mousemove", s.drag, !0), e.removeEventListener("mouseup", s.onEndDrag, !0), s.removePreventClickId = i.setTimeout((function() {
-                            e.removeEventListener("click", s.preventClick, !0), e.removeEventListener("dblclick", s.preventClick, !0), s.removePreventClickId = null
+                        var e = z(r.el),
+                            i = N(r.el);
+                        t.preventDefault(), t.stopPropagation(), r.el.classList.remove(r.classNames.dragging), e.removeEventListener("mousemove", r.drag, !0), e.removeEventListener("mouseup", r.onEndDrag, !0), r.removePreventClickId = i.setTimeout((function() {
+                            e.removeEventListener("click", r.preventClick, !0), e.removeEventListener("dblclick", r.preventClick, !0), r.removePreventClickId = null
                         }))
                     }, this.preventClick = function(t) {
                         t.preventDefault(), t.stopPropagation()
@@ -868,28 +869,28 @@
                     e.innerHTML = '<div class="hs-dummy-scrollbar-size"><div style="height: 200%; width: 200%; margin: 10px 0;"></div></div>';
                     var i = e.firstElementChild;
                     document.body.appendChild(i);
-                    var s = i.firstElementChild;
+                    var r = i.firstElementChild;
                     i.scrollLeft = 0;
-                    var r = t.getOffset(i),
-                        n = t.getOffset(s);
+                    var s = t.getOffset(i),
+                        n = t.getOffset(r);
                     i.scrollLeft = 999;
-                    var o = t.getOffset(s);
+                    var o = t.getOffset(r);
                     return {
-                        isRtlScrollingInverted: r.left !== n.left && n.left - o.left != 0,
-                        isRtlScrollbarInverted: r.left !== n.left
+                        isRtlScrollingInverted: s.left !== n.left && n.left - o.left != 0,
+                        isRtlScrollbarInverted: s.left !== n.left
                     }
                 }, t.getOffset = function(t) {
                     var e = t.getBoundingClientRect(),
                         i = z(t),
-                        s = N(t);
+                        r = N(t);
                     return {
-                        top: e.top + (s.pageYOffset || i.documentElement.scrollTop),
-                        left: e.left + (s.pageXOffset || i.documentElement.scrollLeft)
+                        top: e.top + (r.pageYOffset || i.documentElement.scrollTop),
+                        left: e.left + (r.pageXOffset || i.documentElement.scrollLeft)
                     }
                 };
                 var e = t.prototype;
                 return e.init = function() {
-                    t.instances.set(this.el, this), r() && (this.initDOM(), this.scrollbarWidth = this.getScrollbarWidth(), this.recalculate(), this.initListeners())
+                    t.instances.set(this.el, this), s() && (this.initDOM(), this.scrollbarWidth = this.getScrollbarWidth(), this.recalculate(), this.initListeners())
                 }, e.initDOM = function() {
                     var t = this;
                     if (Array.prototype.filter.call(this.el.children, (function(e) {
@@ -917,8 +918,8 @@
                         })
                     })), this.el.addEventListener("mousemove", this.onMouseMove), this.el.addEventListener("mouseleave", this.onMouseLeave), this.contentWrapperEl.addEventListener("scroll", this.onScroll), e.addEventListener("resize", this.onWindowResize);
                     var i = !1,
-                        s = e.ResizeObserver || T;
-                    this.resizeObserver = new s((function() {
+                        r = e.ResizeObserver || T;
+                    this.resizeObserver = new r((function() {
                         i && t.recalculate()
                     })), this.resizeObserver.observe(this.el), this.resizeObserver.observe(this.contentEl), e.requestAnimationFrame((function() {
                         i = !0
@@ -932,35 +933,35 @@
                     this.elStyles = t.getComputedStyle(this.el), this.isRtl = "rtl" === this.elStyles.direction;
                     var e = this.heightAutoObserverEl.offsetHeight <= 1,
                         i = this.heightAutoObserverEl.offsetWidth <= 1,
-                        s = this.contentEl.offsetWidth,
-                        r = this.contentWrapperEl.offsetWidth,
+                        r = this.contentEl.offsetWidth,
+                        s = this.contentWrapperEl.offsetWidth,
                         n = this.elStyles.overflowX,
                         o = this.elStyles.overflowY;
                     this.contentEl.style.padding = this.elStyles.paddingTop + " " + this.elStyles.paddingRight + " " + this.elStyles.paddingBottom + " " + this.elStyles.paddingLeft, this.wrapperEl.style.margin = "-" + this.elStyles.paddingTop + " -" + this.elStyles.paddingRight + " -" + this.elStyles.paddingBottom + " -" + this.elStyles.paddingLeft;
                     var a = this.contentEl.scrollHeight,
                         l = this.contentEl.scrollWidth;
-                    this.contentWrapperEl.style.height = e ? "auto" : "100%", this.placeholderEl.style.width = i ? s + "px" : "auto", this.placeholderEl.style.height = a + "px";
+                    this.contentWrapperEl.style.height = e ? "auto" : "100%", this.placeholderEl.style.width = i ? r + "px" : "auto", this.placeholderEl.style.height = a + "px";
                     var c = this.contentWrapperEl.offsetHeight;
-                    this.axis.x.isOverflowing = l > s, this.axis.y.isOverflowing = a > c, this.axis.x.isOverflowing = "hidden" !== n && this.axis.x.isOverflowing, this.axis.y.isOverflowing = "hidden" !== o && this.axis.y.isOverflowing, this.axis.x.forceVisible = "x" === this.options.forceVisible || !0 === this.options.forceVisible, this.axis.y.forceVisible = "y" === this.options.forceVisible || !0 === this.options.forceVisible, this.hideNativeScrollbar();
+                    this.axis.x.isOverflowing = l > r, this.axis.y.isOverflowing = a > c, this.axis.x.isOverflowing = "hidden" !== n && this.axis.x.isOverflowing, this.axis.y.isOverflowing = "hidden" !== o && this.axis.y.isOverflowing, this.axis.x.forceVisible = "x" === this.options.forceVisible || !0 === this.options.forceVisible, this.axis.y.forceVisible = "y" === this.options.forceVisible || !0 === this.options.forceVisible, this.hideNativeScrollbar();
                     var h = this.axis.x.isOverflowing ? this.scrollbarWidth : 0,
                         u = this.axis.y.isOverflowing ? this.scrollbarWidth : 0;
-                    this.axis.x.isOverflowing = this.axis.x.isOverflowing && l > r - u, this.axis.y.isOverflowing = this.axis.y.isOverflowing && a > c - h, this.axis.x.scrollbar.size = this.getScrollbarSize("x"), this.axis.y.scrollbar.size = this.getScrollbarSize("y"), this.axis.x.scrollbar.el.style.width = this.axis.x.scrollbar.size + "px", this.axis.y.scrollbar.el.style.height = this.axis.y.scrollbar.size + "px", this.positionScrollbar("x"), this.positionScrollbar("y"), this.toggleTrackVisibility("x"), this.toggleTrackVisibility("y")
+                    this.axis.x.isOverflowing = this.axis.x.isOverflowing && l > s - u, this.axis.y.isOverflowing = this.axis.y.isOverflowing && a > c - h, this.axis.x.scrollbar.size = this.getScrollbarSize("x"), this.axis.y.scrollbar.size = this.getScrollbarSize("y"), this.axis.x.scrollbar.el.style.width = this.axis.x.scrollbar.size + "px", this.axis.y.scrollbar.el.style.height = this.axis.y.scrollbar.size + "px", this.positionScrollbar("x"), this.positionScrollbar("y"), this.toggleTrackVisibility("x"), this.toggleTrackVisibility("y")
                 }, e.getScrollbarSize = function(t) {
                     if (void 0 === t && (t = "y"), !this.axis[t].isOverflowing) return 0;
                     var e, i = this.contentEl[this.axis[t].scrollSizeAttr],
-                        s = this.axis[t].track.el[this.axis[t].offsetSizeAttr],
-                        r = s / i;
-                    return e = Math.max(~~(r * s), this.options.scrollbarMinSize), this.options.scrollbarMaxSize && (e = Math.min(e, this.options.scrollbarMaxSize)), e
+                        r = this.axis[t].track.el[this.axis[t].offsetSizeAttr],
+                        s = r / i;
+                    return e = Math.max(~~(s * r), this.options.scrollbarMinSize), this.options.scrollbarMaxSize && (e = Math.min(e, this.options.scrollbarMaxSize)), e
                 }, e.positionScrollbar = function(e) {
                     if (void 0 === e && (e = "y"), this.axis[e].isOverflowing) {
                         var i = this.contentWrapperEl[this.axis[e].scrollSizeAttr],
-                            s = this.axis[e].track.el[this.axis[e].offsetSizeAttr],
-                            r = parseInt(this.elStyles[this.axis[e].sizeAttr], 10),
+                            r = this.axis[e].track.el[this.axis[e].offsetSizeAttr],
+                            s = parseInt(this.elStyles[this.axis[e].sizeAttr], 10),
                             n = this.axis[e].scrollbar,
                             o = this.contentWrapperEl[this.axis[e].scrollOffsetAttr],
-                            a = (o = "x" === e && this.isRtl && t.getRtlHelpers().isRtlScrollingInverted ? -o : o) / (i - r),
-                            l = ~~((s - n.size) * a);
-                        l = "x" === e && this.isRtl && t.getRtlHelpers().isRtlScrollbarInverted ? l + (s - n.size) : l, n.el.style.transform = "x" === e ? "translate3d(" + l + "px, 0, 0)" : "translate3d(0, " + l + "px, 0)"
+                            a = (o = "x" === e && this.isRtl && t.getRtlHelpers().isRtlScrollingInverted ? -o : o) / (i - s),
+                            l = ~~((r - n.size) * a);
+                        l = "x" === e && this.isRtl && t.getRtlHelpers().isRtlScrollbarInverted ? l + (r - n.size) : l, n.el.style.transform = "x" === e ? "translate3d(" + l + "px, 0, 0)" : "translate3d(0, " + l + "px, 0)"
                     }
                 }, e.toggleTrackVisibility = function(t) {
                     void 0 === t && (t = "y");
@@ -980,22 +981,22 @@
                 }, e.onDragStart = function(t, e) {
                     void 0 === e && (e = "y");
                     var i = z(this.el),
-                        s = N(this.el),
-                        r = this.axis[e].scrollbar,
+                        r = N(this.el),
+                        s = this.axis[e].scrollbar,
                         n = "y" === e ? t.pageY : t.pageX;
-                    this.axis[e].dragOffset = n - r.rect[this.axis[e].offsetAttr], this.draggedAxis = e, this.el.classList.add(this.classNames.dragging), i.addEventListener("mousemove", this.drag, !0), i.addEventListener("mouseup", this.onEndDrag, !0), null === this.removePreventClickId ? (i.addEventListener("click", this.preventClick, !0), i.addEventListener("dblclick", this.preventClick, !0)) : (s.clearTimeout(this.removePreventClickId), this.removePreventClickId = null)
+                    this.axis[e].dragOffset = n - s.rect[this.axis[e].offsetAttr], this.draggedAxis = e, this.el.classList.add(this.classNames.dragging), i.addEventListener("mousemove", this.drag, !0), i.addEventListener("mouseup", this.onEndDrag, !0), null === this.removePreventClickId ? (i.addEventListener("click", this.preventClick, !0), i.addEventListener("dblclick", this.preventClick, !0)) : (r.clearTimeout(this.removePreventClickId), this.removePreventClickId = null)
                 }, e.onTrackClick = function(t, e) {
                     var i = this;
                     if (void 0 === e && (e = "y"), this.options.clickOnTrack) {
-                        var s = N(this.el);
+                        var r = N(this.el);
                         this.axis[e].scrollbar.rect = this.axis[e].scrollbar.el.getBoundingClientRect();
-                        var r = this.axis[e].scrollbar.rect[this.axis[e].offsetAttr],
+                        var s = this.axis[e].scrollbar.rect[this.axis[e].offsetAttr],
                             n = parseInt(this.elStyles[this.axis[e].sizeAttr], 10),
                             o = this.contentWrapperEl[this.axis[e].scrollOffsetAttr],
-                            a = ("y" === e ? this.mouseY - r : this.mouseX - r) < 0 ? -1 : 1,
+                            a = ("y" === e ? this.mouseY - s : this.mouseX - s) < 0 ? -1 : 1,
                             l = -1 === a ? o - n : o + n;
                         ! function t() {
-                            var r, n; - 1 === a ? o > l && (o -= i.options.clickOnTrackSpeed, i.contentWrapperEl.scrollTo(((r = {})[i.axis[e].offsetAttr] = o, r)), s.requestAnimationFrame(t)) : o < l && (o += i.options.clickOnTrackSpeed, i.contentWrapperEl.scrollTo(((n = {})[i.axis[e].offsetAttr] = o, n)), s.requestAnimationFrame(t))
+                            var s, n; - 1 === a ? o > l && (o -= i.options.clickOnTrackSpeed, i.contentWrapperEl.scrollTo(((s = {})[i.axis[e].offsetAttr] = o, s)), r.requestAnimationFrame(t)) : o < l && (o += i.options.clickOnTrackSpeed, i.contentWrapperEl.scrollTo(((n = {})[i.axis[e].offsetAttr] = o, n)), r.requestAnimationFrame(t))
                         }()
                     }
                 }, e.getContentElement = function() {
@@ -1078,9 +1079,9 @@
                         })))
                     }))
                 }))
-            }, D.getOptions = C, r() && D.initHtmlApi();
+            }, D.getOptions = C, s() && D.initHtmlApi();
             const V = D
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/1916.7355acd5f5cd895479d1.js.map
+//# sourceMappingURL=sourcemaps/1916.5bfee64ba38ad80c6bb1.js.map

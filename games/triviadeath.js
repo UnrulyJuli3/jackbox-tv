@@ -176,7 +176,7 @@
             const w = h().View.extend({
                 appId: "legacymain",
                 appTag: "legacymain",
-                appVersion: "4.2.9",
+                appVersion: "4.2.10",
                 template: null,
                 initialize(t) {
                     this.mergeOptions(t, ["appId", "appTag"]), d.app.analytics.setApplication({
@@ -550,29 +550,29 @@
                         if ("GameLocked" !== i) {
                             if ("Lobby" === n) {
                                 if (this.hideLobbyButtons(), !e.isAllowedToStartGame) return s()("#lobby-text").html("Sit back and relax!"), this.showScreen("#state-lobby"), void this.setupWithDollInfo(e.dollInfo);
-                                const i = t.lobbyState;
-                                "WaitingForMore" === i ? s()("#lobby-text").html("Waiting for all players to join") : "CanStart" === i ? (s()("#lobby-text").html("Press this button when everybody has joined"), s()("#button-startgame").show()) : "Countdown" === i ? (s()("#lobby-text").html("Press this button to cancel game start"), s()("#button-stopcountdown").show()) : "PostGame" === i && (s()("#lobby-text").html("What do you want to do?"), s()(".button-endbuttons").show()), this.showScreen("#state-lobby")
+                                const o = t.lobbyState;
+                                "WaitingForMore" === o ? s()("#lobby-text").html("Waiting for all players to join") : "CanStart" === o ? (s()("#lobby-text").html("Press this button when everybody has joined"), s()("#button-startgame").show()) : "Countdown" === o ? (s()("#lobby-text").html("Press this button to cancel game start"), s()("#button-stopcountdown").show()) : "PostGame" === o && (s()("#lobby-text").html("What do you want to do?"), s()(".button-endbuttons").show()), this.showScreen("#state-lobby")
                             } else if ("Gameplay" === n)
                                 if ("MakeSingleChoice" === i) {
-                                    const t = null === e.chosen || void 0 === e.chosen,
-                                        i = e.text,
-                                        n = e.choices;
-                                    if (t) {
-                                        s()("#make-single-choice-text").html(`<p>${i}</p>`);
-                                        let t = "";
-                                        for (let e = 0; e < n.length; e++) t += `<button data-choice="${e}" class="${n[e].disabled?`background-finger background-finger-${e}`:""} light-text button-choice button-game button-large btn" ${n[e].disabled?"disabled":""}>${n[e].disabled?"&zwnj;":n[e].text}</button>`;
-                                        s()("#make-single-choice-choices").html(t)
+                                    const a = null === e.chosen || void 0 === e.chosen,
+                                        c = e.text,
+                                        l = e.choices;
+                                    if (a) {
+                                        s()("#make-single-choice-text").html(`<p>${c}</p>`);
+                                        let h = "";
+                                        for (let g = 0; g < l.length; g++) h += `<button data-choice="${g}" class="${l[g].disabled?`background-finger background-finger-${g}`:""} light-text button-choice button-game button-large btn" ${l[g].disabled?"disabled":""}>${l[g].disabled?"&zwnj;":l[g].text}</button>`;
+                                        s()("#make-single-choice-choices").html(h)
                                     } else s()("#make-single-choice-text").html("<p>Thanks.</p>"), s()("#make-single-choice-choices").html("");
                                     this.showScreen("#state-make-single-choice")
                                 } else if ("MakeManyChoices" === i) {
-                                const t = null === e.chosen || void 0 === e.chosen,
-                                    i = e.text,
-                                    n = e.choices;
-                                if (t) {
-                                    s()("#make-many-choices-text").html(`<p id='many-text'>${i}</p>`), s()("#make-many-choices-sub-text").html("<p id='many-sub-text'>Tap any items below that fit this category.</p>");
-                                    let t = "";
-                                    for (let e = 0; e < n.length; e++) t += '<div class="col-xs-10">', t += `<button data-choice="${e}" id="make-many-choices-button-${e}" class="light-text make-many-choices-button button-game button-large pure-button pure-input-1">${n[e].text}</button>`, t += '</div><div class="col-xs-2">', t += `<i data-choice="${e}" id="make-many-choices-checkbox-${e}" class="checkbox box-unchecked make-many-choices-checkbox"></i>`, t += "</div>";
-                                    s()("#make-many-choices-choices").html(t), s()("#make-many-choices-submit-button-container").show()
+                                const p = null === e.chosen || void 0 === e.chosen,
+                                    m = e.text,
+                                    b = e.choices;
+                                if (p) {
+                                    s()("#make-many-choices-text").html(`<p id='many-text'>${m}</p>`), s()("#make-many-choices-sub-text").html("<p id='many-sub-text'>Tap any items below that fit this category.</p>");
+                                    let w = "";
+                                    for (let v = 0; v < b.length; v++) w += '<div class="col-xs-10">', w += `<button data-choice="${v}" id="make-many-choices-button-${v}" class="light-text make-many-choices-button button-game button-large pure-button pure-input-1">${b[v].text}</button>`, w += '</div><div class="col-xs-2">', w += `<i data-choice="${v}" id="make-many-choices-checkbox-${v}" class="checkbox box-unchecked make-many-choices-checkbox"></i>`, w += "</div>";
+                                    s()("#make-many-choices-choices").html(w), s()("#make-many-choices-submit-button-container").show()
                                 } else s()("#make-many-choices-text").html("<p>Thanks.</p>"), s()("#make-many-choices-sub-text").html(""), s()("#make-many-choices-choices").html(""), s()("#make-many-choices-submit-button-container").hide();
                                 this.showScreen("#state-make-many-choices")
                             } else if ("EnterSingleText" === i) e.entry ? this.showScreen("#state-logo") : (e.error ? (s()("#enter-single-text-error").html(`<p>${e.error}</p>`), s()("#enter-single-text-error").show()) : s()("#enter-single-text-error").hide(), "#state-enter-single-text" !== this.activeScreen && (s()("#enter-single-text-input").val(""), s()("#enter-single-text-input").prop("type", e.inputType), s()("#enter-single-text-field").show(), s()("#state-enter-single-text #enter-single-text-text-container").html(`<span class="container-text">${e.text}</span>`)), this.showScreen("#state-enter-single-text"));
@@ -580,60 +580,60 @@
                                 if (e.entry) this.showScreen("#state-logo");
                                 else {
                                     s()("#enter-single-drawing-text-container").html(`<p>Please Draw :<br>${e.text}</p>`), this.showScreen("#state-enter-single-drawing");
-                                    const t = this.$el.find("#sketchpad")[0],
-                                        i = t.getContext("2d"),
-                                        n = this.$el.find("#player").outerHeight() + this.$el.find("#enter-single-drawing-text-container").outerHeight() + this.$el.find("#enter-single-drawing-submit-container").outerHeight();
-                                    this.currentCanvas = new d(t, i, 30, n, 0)
+                                    const f = this.$el.find("#sketchpad")[0],
+                                        y = f.getContext("2d"),
+                                        x = this.$el.find("#player").outerHeight() + this.$el.find("#enter-single-drawing-text-container").outerHeight() + this.$el.find("#enter-single-drawing-submit-container").outerHeight();
+                                    this.currentCanvas = new d(f, y, 30, x, 0)
                                 }
                             else if ("Grid" === i) {
                                 if (e.entry) return void this.showScreen("#state-logo");
                                 if (!e.grid) return void this.showScreen("#state-logo");
-                                const t = e.text;
-                                s()("#grid-text").html(`<p>${t}</p>`);
-                                const i = e.grid.length,
-                                    n = e.grid.length > 0 ? e.grid[0].length : 0,
-                                    c = e.mode || "rewind",
-                                    r = [];
+                                const k = e.text;
+                                s()("#grid-text").html(`<p>${k}</p>`);
+                                const C = e.grid.length,
+                                    S = e.grid.length > 0 ? e.grid[0].length : 0,
+                                    T = e.mode || "rewind",
+                                    $ = [];
                                 this.grid && (this.grid.reset(), this.grid = null);
-                                const l = new u;
+                                const D = new u;
 
-                                function o(t, e) {
-                                    for (let i = 0; i < r.length; i++)
-                                        if (r[i].r === t && r[i].c === e) return i;
+                                function E(t, e) {
+                                    for (let i = 0; i < $.length; i++)
+                                        if ($[i].r === t && $[i].c === e) return i;
                                     return -1
                                 }
 
-                                function a() {
-                                    for (let t = 0; t < i; t++)
-                                        for (let i = 0; i < n; i++) {
-                                            const n = l.getCell(t, i);
-                                            o(t, i) >= 0 ? (n.addClass(`${e.skin}-selected`), n.removeClass(`${e.skin}-unselected`)) : (n.addClass(`${e.skin}-unselected`), n.removeClass(`${e.skin}-selected`))
+                                function R() {
+                                    for (let t = 0; t < C; t++)
+                                        for (let i = 0; i < S; i++) {
+                                            const n = D.getCell(t, i);
+                                            E(t, i) >= 0 ? (n.addClass(`${e.skin}-selected`), n.removeClass(`${e.skin}-unselected`)) : (n.addClass(`${e.skin}-unselected`), n.removeClass(`${e.skin}-selected`))
                                         }
                                     if (e.showProgress) {
                                         let t = "";
-                                        for (let i = 0; i < r.length; i++) t += e.grid[r[i].r][r[i].c];
+                                        for (let i = 0; i < $.length; i++) t += e.grid[$[i].r][$[i].c];
                                         s()("#grid-submit").text("Submit" + (t.length > 0 ? ` "${t}"` : ""))
                                     } else s()("#grid-submit").text("Submit");
-                                    s()("#grid-submit").data("entry", r)
+                                    s()("#grid-submit").data("entry", $)
                                 }
-                                l.numRows = i, l.numCols = n, l.windowDiffFn = () => {
+                                D.numRows = C, D.numCols = S, D.windowDiffFn = () => {
                                     let t = 0;
                                     return t += this.$el.find("#player").outerHeight() || 0, t += this.$el.find("#grid-text").outerHeight() || 0, t += this.$el.find("#grid-progress").outerHeight() || 0, {
                                         width: 0,
                                         height: t
                                     }
-                                }, l.getDataFn = function(t, i) {
+                                }, D.getDataFn = function(t, i) {
                                     return e.grid[t][i]
-                                }, l.parentSelector = "#grid-main", s()(l).on("cellTouched", ((t, e, i) => {
-                                    const n = o(e, i);
-                                    "normal" === c ? n >= 0 ? r.splice(n, 1) : r.push({
+                                }, D.parentSelector = "#grid-main", s()(D).on("cellTouched", ((t, e, i) => {
+                                    const n = E(e, i);
+                                    "normal" === T ? n >= 0 ? $.splice(n, 1) : $.push({
                                         r: e,
                                         c: i
-                                    }) : "rewind" === c && (n >= 0 ? r.splice(n + (n === r.length - 1 ? 0 : 1)) : r.push({
+                                    }) : "rewind" === T && (n >= 0 ? $.splice(n + (n === $.length - 1 ? 0 : 1)) : $.push({
                                         r: e,
                                         c: i
-                                    })), a()
-                                })), l.generate(), this.grid = l, a(), this.showScreen("#state-grid")
+                                    })), R()
+                                })), D.generate(), this.grid = D, R(), this.showScreen("#state-grid")
                             } else this.showScreen("#state-logo");
                             else this.showScreen("#state-logo");
                             this.setupWithDollInfo(e.dollInfo)
@@ -765,4 +765,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/7342.9b107183632ee523594c.js.map
+//# sourceMappingURL=sourcemaps/7342.9cc465a05978c3fff83e.js.map

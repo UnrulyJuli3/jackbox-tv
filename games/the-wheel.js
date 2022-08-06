@@ -2657,6 +2657,7 @@
                             case "audience":
                                 return this.parseAudience(t);
                             case "bad":
+                            default:
                                 return this.parseBad(t);
                             case "bonus":
                                 return this.parseBonus(t);
@@ -2675,9 +2676,7 @@
                             case "reserved":
                                 return this.parseReserved(t);
                             case "winner":
-                                return this.parseWinner(t);
-                            default:
-                                return this.parseBad(t)
+                                return this.parseWinner(t)
                         }
                     }))
                 }
@@ -7168,4 +7167,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/1057.13174ac8f8c473e7e750.js.map
+//# sourceMappingURL=sourcemaps/1057.576df366bb476c72b4d4.js.map

@@ -1,4 +1,4 @@
-/*! For license information please see 1978.eea835c18a16bd2a0798.js.LICENSE.txt */
+/*! For license information please see 1978.fc7599aa7cb67039beeb.js.LICENSE.txt */
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     [1978], {
         7310: (t, e, r) => {
@@ -1221,7 +1221,7 @@
                                             if (!n._dur && "isPause" === n.data && n._start < e) return n;
                                             n = n._prev
                                         }
-                            }(this, Pt(g), Pt(n))) && (y -= n - (n = l._start)), this._tTime = y, this._time = n, this._act = !f, this._initted || (this._onUpdate = this.vars.onUpdate, this._initted = 1, this._zTime = t, g = 0), !g && n && !e && (ye(this, "onStart"), this._tTime !== y)) return this;
+                            }(this, Pt(g), Pt(n)), l && (y -= n - (n = l._start))), this._tTime = y, this._time = n, this._act = !f, this._initted || (this._onUpdate = this.vars.onUpdate, this._initted = 1, this._zTime = t, g = 0), !g && n && !e && (ye(this, "onStart"), this._tTime !== y)) return this;
                         if (n >= g && t >= 0)
                             for (i = this._first; i;) {
                                 if (s = i._next, (i._act || n >= i._start) && i._ts && l !== i) {
@@ -2653,4 +2653,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/1978.eea835c18a16bd2a0798.js.map
+//# sourceMappingURL=sourcemaps/1978.fc7599aa7cb67039beeb.js.map

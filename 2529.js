@@ -1864,7 +1864,7 @@
                                     !f(J, t) || e && !f(q, t) || r.push(J[t])
                                 })), r
                             };
-                        c || (j((X = function() {
+                        c || (X = function() {
                             if (this instanceof X) throw TypeError("Symbol is not a constructor");
                             var t = arguments.length && void 0 !== arguments[0] ? String(arguments[0]) : void 0,
                                 e = $(t),
@@ -1875,7 +1875,7 @@
                                 configurable: !0,
                                 set: n
                             }), ot(e, t)
-                        }).prototype, "toString", (function() {
+                        }, j(X.prototype, "toString", (function() {
                             return B(this).tag
                         })), j(X, "withoutSetter", (function(t) {
                             return ot($(t), t)
@@ -2399,7 +2399,8 @@
                                     return null == t ? void 0 : t[e]
                                 }(t, e);
                                 return function(t) {
-                                    return !(!W(t) || (e = t, b && b in e)) && (function(t) {
+                                    if (!W(t) || b && b in t) return !1;
+                                    var e = function(t) {
                                         var e = W(t) ? S.call(t) : "";
                                         return "[object Function]" == e || "[object GeneratorFunction]" == e
                                     }(t) || function(t) {
@@ -2408,7 +2409,8 @@
                                             e = !!(t + "")
                                         } catch (t) {}
                                         return e
-                                    }(t) ? w : u).test(function(t) {
+                                    }(t) ? w : u;
+                                    return e.test(function(t) {
                                         if (null != t) {
                                             try {
                                                 return g.call(t)
@@ -2418,8 +2420,7 @@
                                             } catch (t) {}
                                         }
                                         return ""
-                                    }(t));
-                                    var e
+                                    }(t))
                                 }(n) ? n : void 0
                             }
                             j.prototype.clear = function() {
@@ -2516,11 +2517,13 @@
                             }
                             t.exports = function(t, e, n) {
                                 var r = null == t ? void 0 : function(t, e) {
-                                    for (var n, r = 0, a = (e = function(t, e) {
-                                            if (z(t)) return !1;
-                                            var n = typeof t;
-                                            return !("number" != n && "symbol" != n && "boolean" != n && null != t && !N(t)) || o.test(t) || !i.test(t) || null != e && t in Object(e)
-                                        }(e, t) ? [e] : z(n = e) ? n : M(n)).length; null != t && r < a;) t = t[R(e[r++])];
+                                    var n;
+                                    e = function(t, e) {
+                                        if (z(t)) return !1;
+                                        var n = typeof t;
+                                        return !("number" != n && "symbol" != n && "boolean" != n && null != t && !N(t)) || o.test(t) || !i.test(t) || null != e && t in Object(e)
+                                    }(e, t) ? [e] : z(n = e) ? n : M(n);
+                                    for (var r = 0, a = e.length; null != t && r < a;) t = t[R(e[r++])];
                                     return r && r == a ? t : void 0
                                 }(t, e);
                                 return void 0 === r ? n : r
@@ -3695,11 +3698,11 @@
                         }
 
                         function K(t) {
-                            return (K = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t) {
+                            return K = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t) {
                                 return typeof t
                             } : function(t) {
                                 return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t
-                            })(t)
+                            }, K(t)
                         }
                         Object.keys(U).reduce((function(t, e) {
                             return t[e] = U[e].type, t
@@ -3813,27 +3816,28 @@
                                     }, [e])
                                 }
                             },
-                            rt = (n("6ea2"), u(nt, void 0, void 0, !1, null, "e4caeaf8", null).exports);
+                            rt = nt,
+                            it = (n("6ea2"), u(rt, void 0, void 0, !1, null, "e4caeaf8", null).exports);
 
-                        function it(t, e) {
+                        function ot(t, e) {
                             (null == e || e > t.length) && (e = t.length);
                             for (var n = 0, r = new Array(e); n < e; n++) r[n] = t[n];
                             return r
                         }
                         n("b0c0"), n("25f0");
-                        var ot, at = {
+                        var at, st = {
                                 name: "SliderArrow",
-                                props: [].concat((ot = z.ARROW, function(t) {
-                                    if (Array.isArray(t)) return it(t)
-                                }(ot) || function(t) {
+                                props: [].concat((at = z.ARROW, function(t) {
+                                    if (Array.isArray(t)) return ot(t)
+                                }(at) || function(t) {
                                     if ("undefined" != typeof Symbol && Symbol.iterator in Object(t)) return Array.from(t)
-                                }(ot) || function(t, e) {
+                                }(at) || function(t, e) {
                                     if (t) {
-                                        if ("string" == typeof t) return it(t, e);
+                                        if ("string" == typeof t) return ot(t, e);
                                         var n = Object.prototype.toString.call(t).slice(8, -1);
-                                        return "Object" === n && t.constructor && (n = t.constructor.name), "Map" === n || "Set" === n ? Array.from(n) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? it(t, e) : void 0
+                                        return "Object" === n && t.constructor && (n = t.constructor.name), "Map" === n || "Set" === n ? Array.from(n) : "Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? ot(t, e) : void 0
                                     }
-                                }(ot) || function() {
+                                }(at) || function() {
                                     throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                                 }()), ["type"]),
                                 render: function() {
@@ -3868,17 +3872,18 @@
                                     }), t
                                 }
                             },
-                            st = (n("f013"), u(at, void 0, void 0, !1, null, "21137603", null).exports),
-                            ct = (n("1276"), function(t) {
+                            ct = st,
+                            ut = (n("f013"), u(ct, void 0, void 0, !1, null, "21137603", null).exports),
+                            lt = (n("1276"), function(t) {
                                 return t.infinite ? Math.ceil(t.slideCount / t.slidesToScroll) : Math.ceil((t.slideCount - t.slidesToShow) / t.slidesToScroll) + 1
                             }),
-                            ut = u({
+                            ft = {
                                 name: "SliderDots",
                                 props: z.DOT,
                                 render: function() {
                                     var t = this,
                                         e = arguments[0],
-                                        n = ct({
+                                        n = lt({
                                             slideCount: this.slideCount,
                                             slidesToScroll: this.slidesToScroll,
                                             slidesToShow: this.slidesToShow,
@@ -3916,8 +3921,9 @@
                                         class: a
                                     }, [r])
                                 }
-                            }, void 0, void 0, !1, null, null, null).exports,
-                            lt = {
+                            },
+                            dt = u(ft, void 0, void 0, !1, null, null, null).exports,
+                            ht = {
                                 animating: !1,
                                 autoplaying: null,
                                 currentDirection: 0,
@@ -3945,12 +3951,12 @@
                                 trackStyle: {},
                                 trackWidth: 0
                             },
-                            ft = {
+                            pt = {
                                 name: "InnerSlider",
                                 components: {
-                                    SliderTrack: rt,
-                                    SliderArrow: st,
-                                    SliderDots: ut
+                                    SliderTrack: it,
+                                    SliderArrow: ut,
+                                    SliderDots: dt
                                 },
                                 mixins: [l],
                                 inheritAttrs: !1,
@@ -3964,7 +3970,7 @@
                                     customPaging: Function
                                 }),
                                 data: function() {
-                                    return a({}, lt, {
+                                    return a({}, ht, {
                                         currentSlide: this.initialSlide
                                     })
                                 },
@@ -4450,7 +4456,7 @@
                                                 mouseover: l ? this.onDotsOver : void 0,
                                                 mouseleave: l ? this.onDotsLeave : void 0
                                             });
-                                        r = t(ut, {
+                                        r = t(dt, {
                                             props: a({}, u),
                                             nativeOn: a({}, f),
                                             on: {
@@ -4459,14 +4465,14 @@
                                         })
                                     }
                                     var d = I(this.spec, z.ARROW);
-                                    this.arrows && (i = t(st, {
+                                    this.arrows && (i = t(ut, {
                                         props: a({}, a({}, d, {
                                             type: "previous"
                                         })),
                                         on: {
                                             arrowClicked: this.changeSlide
                                         }
-                                    }), o = t(st, {
+                                    }), o = t(ut, {
                                         props: a({}, a({}, d, {
                                             type: "next"
                                         })),
@@ -4511,7 +4517,7 @@
                                         class: "slick-list",
                                         on: a({}, m),
                                         style: v
-                                    }, [t(rt, {
+                                    }, [t(it, {
                                         ref: "track",
                                         props: a({}, n),
                                         nativeOn: a({}, c),
@@ -4521,12 +4527,13 @@
                                     }, [this.$slots.default])]), this.unslick ? "" : o, this.unslick ? "" : r])
                                 }
                             },
-                            dt = (n("eaf9"), u(ft, void 0, void 0, !1, null, "3d1a4f76", null).exports),
-                            ht = O() && n("8e95"),
-                            pt = u({
+                            vt = pt,
+                            yt = (n("eaf9"), u(vt, void 0, void 0, !1, null, "3d1a4f76", null).exports),
+                            bt = O() && n("8e95"),
+                            gt = {
                                 name: "VueSlickCarousel",
                                 components: {
-                                    InnerSlider: dt
+                                    InnerSlider: yt
                                 },
                                 mixins: [l],
                                 inheritAttrs: !1,
@@ -4573,11 +4580,11 @@
                                     },
                                     clearBreakpoints: function() {
                                         this.responsiveMediaHandlers.forEach((function(t) {
-                                            return ht.unregister(t.query, t.handler)
+                                            return bt.unregister(t.query, t.handler)
                                         })), this.responsiveMediaHandlers = []
                                     },
                                     media: function(t, e) {
-                                        O() && (ht.register(t, e), this.responsiveMediaHandlers.push({
+                                        O() && (bt.register(t, e), this.responsiveMediaHandlers.push({
                                             query: t,
                                             handler: e
                                         }))
@@ -4642,14 +4649,15 @@
                                             key: o
                                         }, [s]))
                                     }
-                                    return r.length <= e.slidesToShow && (e.unslick = !0), t(dt, {
+                                    return r.length <= e.slidesToShow && (e.unslick = !0), t(yt, {
                                         ref: "innerSlider",
                                         props: a({}, e),
                                         key: Object.values(e).join("")
                                     }, [r])
                                 }
-                            }, void 0, void 0, !1, null, null, null).exports;
-                        e.default = pt
+                            },
+                            mt = u(gt, void 0, void 0, !1, null, null, null).exports;
+                        e.default = mt
                     },
                     fb6a: function(t, e, n) {
                         "use strict";
@@ -4740,4 +4748,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/2529.18b5d2c0a0903bc58e40.js.map
+//# sourceMappingURL=sourcemaps/2529.5e664aa33067b6792200.js.map

@@ -124,11 +124,11 @@
             "use strict";
 
             function r(e) {
-                return (r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
+                return r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(e) {
                     return typeof e
                 } : function(e) {
                     return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
-                })(e)
+                }, r(e)
             }
 
             function o(e, t, n) {
@@ -380,12 +380,13 @@
             function S(e, t, n) {
                 var r;
                 r = Array.isArray(t) ? function(e) {
-                    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b;
-                    return w(e.map((function(e) {
-                        return e instanceof RegExp ? e : "string" == typeof e ? e.split("") : null
-                    })).filter(Boolean).reduce((function(e, t) {
-                        return e.concat(t)
-                    }), []), t)
+                    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b,
+                        n = e.map((function(e) {
+                            return e instanceof RegExp ? e : "string" == typeof e ? e.split("") : null
+                        })).filter(Boolean).reduce((function(e, t) {
+                            return e.concat(t)
+                        }), []);
+                    return w(n, t)
                 }(t, n) : k(t) ? t : T(t) && t.length > 0 ? E(t, n) : t, x.partiallyUpdate(e, {
                     mask: r
                 })
@@ -606,4 +607,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/7611.9adaad213db43a3256d2.js.map
+//# sourceMappingURL=sourcemaps/7611.ad4f472cfdc50a1ee8f7.js.map

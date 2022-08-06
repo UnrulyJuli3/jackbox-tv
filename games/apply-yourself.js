@@ -1115,16 +1115,13 @@
                                         heart: s(82787), duck: s(70200), owl: s(91801), shirt: s(13301), dode: s(75082), poop: s(16588), bomb: s(96414), skull: s(78894), faker: s(87866), jack: s(43135), robot: s(22786), wampus: s(36817), screw: s(90666), moon: s(83394)
                                     };
                                 case "#78786A":
+                                default:
                                     return {
                                         heart: s(25204), duck: s(41910), owl: s(34821), shirt: s(36989), dode: s(58813), poop: s(14142), bomb: s(59369), skull: s(5634), faker: s(46052), jack: s(96846), robot: s(42542), wampus: s(53375), screw: s(35258), moon: s(33663)
                                     };
                                 case "#FF9999":
                                     return {
                                         heart: s(57246), duck: s(95627), owl: s(29255), shirt: s(51948), dode: s(31939), poop: s(23552), bomb: s(53937), skull: s(86748), faker: s(6418), jack: s(3196), robot: s(73768), wampus: s(27887), screw: s(35356), moon: s(32416)
-                                    };
-                                default:
-                                    return {
-                                        heart: s(25204), duck: s(41910), owl: s(34821), shirt: s(36989), dode: s(58813), poop: s(14142), bomb: s(59369), skull: s(5634), faker: s(46052), jack: s(96846), robot: s(42542), wampus: s(53375), screw: s(35258), moon: s(33663)
                                     }
                             }
                         })()), {
@@ -3752,4 +3749,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/4872.9d6d0518f4ea486c2af6.js.map
+//# sourceMappingURL=sourcemaps/4872.f757179f5b37a84d1c3a.js.map

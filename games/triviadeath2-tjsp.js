@@ -34,10 +34,10 @@
                 function o(e, t, s) {
                     if (e.length <= 2) return e;
                     var i = void 0 !== t ? t * t : 1;
-                    return n(e = s ? e : function(e, t) {
+                    return e = s ? e : function(e, t) {
                         for (var s, i, a, r, n, o = e[0], l = [o], c = 1, d = e.length; c < d; c++) a = o, void 0, void 0, (r = (i = s = e[c]).x - a.x) * r + (n = i.y - a.y) * n > t && (l.push(s), o = s);
                         return o !== s && l.push(s), l
-                    }(e, i), i)
+                    }(e, i), n(e, i)
                 }
                 void 0 === (i = function() {
                     return o
@@ -1116,10 +1116,10 @@
                             let s;
                             this.player.hasSubmit ? -1 === t ? (this.selected.push(e), s = "select") : (this.selected.splice(t, 1), s = "unselect") : (this.selected.push(e), s = "submit"), this.isSubmitting = !0;
                             try {
-                                "player" === this.$ecast.role ? yield this.$ecast.updateObject(this.player.responseKey, {
+                                "player" === this.$ecast.role ? (yield this.$ecast.updateObject(this.player.responseKey, {
                                     action: s,
                                     choice: e
-                                }): "audience" === this.$ecast.role && "submit" === s && (yield this.$ecast.incrementCountGroupCounter(this.player.countGroupKey, String(e))), this.player.category && (this.hasSubmitted = !0)
+                                }), this.player.category && (this.hasSubmitted = !0)) : "audience" === this.$ecast.role && "submit" === s && (yield this.$ecast.incrementCountGroupCounter(this.player.countGroupKey, String(e)), this.hasSubmitted = !0)
                             } catch (e) {
                                 this.$handleEcastError(e)
                             } finally {
@@ -2767,4 +2767,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/3632.456e725f6703348f3c73.js.map
+//# sourceMappingURL=sourcemaps/3632.1e2737535123a2b1796a.js.map

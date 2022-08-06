@@ -429,7 +429,7 @@ canvas {
 }
 
 #page-quiplash .background-yellow {
-    background-image: url("quiplash2/#page-quiplash_background-yellow.png");
+    background-image: url("quiplash2/page-quiplash_background-yellow.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover
@@ -437,7 +437,7 @@ canvas {
 
 #page-quiplash .quiplash2-logo-image {
     background-color: #4c4267;
-    background-image: url("quiplash2/#page-quiplash_quiplash2-logo-image.png"), url("quiplash2/#page-quiplash_quiplash2-logo-image_2.png");
+    background-image: url("quiplash2/page-quiplash_quiplash2-logo-image.png"), url("quiplash2/page-quiplash_quiplash2-logo-image_2.png");
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
     background-size: contain, cover;
@@ -458,15 +458,15 @@ canvas {
 }
 
 #page-quiplash .quiplash2-round-image.quiplash2-round-0 {
-    background-image: url("quiplash2/#page-quiplash_quiplash2-round-image_quiplash2-round-0.png")
+    background-image: url("quiplash2/page-quiplash_quiplash2-round-image_quiplash2-round-0.png")
 }
 
 #page-quiplash .quiplash2-round-image.quiplash2-round-1 {
-    background-image: url("quiplash2/#page-quiplash_quiplash2-round-image_quiplash2-round-1.png")
+    background-image: url("quiplash2/page-quiplash_quiplash2-round-image_quiplash2-round-1.png")
 }
 
 #page-quiplash .quiplash2-round-image.quiplash2-round-2 {
-    background-image: url("quiplash2/#page-quiplash_quiplash2-round-image_quiplash2-round-2.png")
+    background-image: url("quiplash2/page-quiplash_quiplash2-round-image_quiplash2-round-2.png")
 }
 
 #page-quiplash #quiplash-lobby-text {
@@ -608,7 +608,7 @@ canvas {
 }
 
 #page-quiplash .quiplash2-button-loading {
-    background: #fff url("quiplash2/#page-quiplash_quiplash2-button-loading.gif") no-repeat center;
+    background: #fff url("quiplash2/page-quiplash_quiplash2-button-loading.gif") no-repeat center;
     background-size: contain;
     color: rgba(0, 0, 0, 0);
     width: 32px;
@@ -712,7 +712,7 @@ canvas {
 #page-quiplash .quiplash-image-screen {
     width: 64px;
     height: 64px;
-    background: url("quiplash2/#page-quiplash_quiplash-image-screen.png");
+    background: url("quiplash2/page-quiplash_quiplash-image-screen.png");
     background-repeat: no-repeat;
     background-position: top;
     background-origin: border-box;
@@ -730,7 +730,7 @@ canvas {
 #page-quiplash .quiplash-image-controller {
     width: 64px;
     height: 64px;
-    background: url("quiplash2/#page-quiplash_quiplash-image-controller.png");
+    background: url("quiplash2/page-quiplash_quiplash-image-controller.png");
     background-repeat: no-repeat;
     background-position: top;
     background-origin: border-box;
@@ -759,7 +759,7 @@ canvas {
 #page-quiplash .ugc-remove-x {
     width: 30px;
     height: 30px;
-    background: #000 url("quiplash2/#page-quiplash_ugc-remove-x.png") 0px 0px/100% 200% no-repeat;
+    background: #000 url("quiplash2/page-quiplash_ugc-remove-x.png") 0px 0px/100% 200% no-repeat;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;

@@ -1,4 +1,4 @@
-/*! For license information please see 9023.b5d52f1914cb7a648896.js.LICENSE.txt */
+/*! For license information please see 9023.413effb274df5f4b9048.js.LICENSE.txt */
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     [9023], {
         9855: (t, e, n) => {
@@ -3017,10 +3017,11 @@
                         })), {
                             dispatch: function(t, e) {
                                 return (0, r.mG)(this, void 0, void 0, (function() {
-                                    return (0, r.Jh)(this, (function(t) {
-                                        return a.push(e), [2, a.length >= c || function(t) {
+                                    var t;
+                                    return (0, r.Jh)(this, (function(n) {
+                                        return a.push(e), t = a.length >= c || function(t) {
                                             return ct(t) >= 450
-                                        }(a) || s ? p() : void(i || (i = setTimeout((function() {
+                                        }(a), [2, t || s ? p() : void(i || (i = setTimeout((function() {
                                             i = void 0, p().catch(console.error)
                                         }), u)))]
                                     }))
@@ -3396,100 +3397,101 @@
         99306: (t, e, n) => {
             "use strict";
             n.d(e, {
-                _: () => d,
-                Y: () => h
+                _: () => v,
+                Y: () => d
             });
             var r = n(33805),
                 o = n(74521),
                 i = n(3489);
             const a = function() {
-                    function t() {
-                        var t = this;
-                        this._logs = [], this.log = function(e, n, r) {
-                            var o = new Date;
-                            t._logs.push({
-                                level: e,
-                                message: n,
-                                time: o,
-                                extras: r
-                            })
-                        }
-                    }
-                    return Object.defineProperty(t.prototype, "logs", {
-                        get: function() {
-                            return this._logs
-                        },
-                        enumerable: !1,
-                        configurable: !0
-                    }), t.prototype.flush = function() {
-                        if (this.logs.length > 1) {
-                            var t = this._logs.reduce((function(t, e) {
-                                var n, r, o, a = (0, i.pi)((0, i.pi)({}, e), {
-                                    json: JSON.stringify(e.extras, null, " "),
-                                    extras: e.extras
-                                });
-                                delete a.time;
-                                var s = null !== (o = null === (r = e.time) || void 0 === r ? void 0 : r.toISOString()) && void 0 !== o ? o : "";
-                                return t[s] && (s = "".concat(s, "-").concat(Math.random())), (0, i.pi)((0, i.pi)({}, t), ((n = {})[s] = a, n))
-                            }), {});
-                            console.table ? console.table(t) : console.log(t)
-                        } else this.logs.forEach((function(t) {
-                            var e = t.level,
-                                n = t.message,
-                                r = t.extras;
-                            "info" === e || "debug" === e ? console.log(n, null != r ? r : "") : console[e](n, null != r ? r : "")
-                        }));
-                        this._logs = []
-                    }, t
-                }(),
-                s = function() {
-                    function t(t) {
-                        this.metrics = [], this.remoteMetrics = t
-                    }
-                    return t.prototype.increment = function(t, e, n) {
-                        var r;
-                        void 0 === e && (e = 1), this.metrics.push({
-                            metric: t,
-                            value: e,
-                            tags: null != n ? n : [],
-                            type: "counter",
-                            timestamp: Date.now()
-                        }), null === (r = this.remoteMetrics) || void 0 === r || r.increment(t, null != n ? n : [])
-                    }, t.prototype.gauge = function(t, e, n) {
-                        this.metrics.push({
-                            metric: t,
-                            value: e,
-                            tags: null != n ? n : [],
-                            type: "gauge",
-                            timestamp: Date.now()
+                function t() {
+                    var t = this;
+                    this._logs = [], this.log = function(e, n, r) {
+                        var o = new Date;
+                        t._logs.push({
+                            level: e,
+                            message: n,
+                            time: o,
+                            extras: r
                         })
-                    }, t.prototype.flush = function() {
-                        var t = this.metrics.map((function(t) {
-                            return (0, i.pi)((0, i.pi)({}, t), {
-                                tags: t.tags.join(",")
-                            })
-                        }));
-                        console.table ? console.table(t) : console.log(t), this.metrics = []
-                    }, t.prototype.serialize = function() {
-                        return this.metrics.map((function(t) {
-                            return {
-                                m: t.metric,
-                                v: t.value,
-                                t: t.tags,
-                                k: (e = t.type, {
-                                    gauge: "g",
-                                    counter: "c"
-                                } [e]),
-                                e: t.timestamp
-                            };
-                            var e
-                        }))
-                    }, t
-                }();
-            var c, u = n(25869),
-                l = n(39821),
-                p = n(10788),
-                f = function() {
+                    }
+                }
+                return Object.defineProperty(t.prototype, "logs", {
+                    get: function() {
+                        return this._logs
+                    },
+                    enumerable: !1,
+                    configurable: !0
+                }), t.prototype.flush = function() {
+                    if (this.logs.length > 1) {
+                        var t = this._logs.reduce((function(t, e) {
+                            var n, r, o, a = (0, i.pi)((0, i.pi)({}, e), {
+                                json: JSON.stringify(e.extras, null, " "),
+                                extras: e.extras
+                            });
+                            delete a.time;
+                            var s = null !== (o = null === (r = e.time) || void 0 === r ? void 0 : r.toISOString()) && void 0 !== o ? o : "";
+                            return t[s] && (s = "".concat(s, "-").concat(Math.random())), (0, i.pi)((0, i.pi)({}, t), ((n = {})[s] = a, n))
+                        }), {});
+                        console.table ? console.table(t) : console.log(t)
+                    } else this.logs.forEach((function(t) {
+                        var e = t.level,
+                            n = t.message,
+                            r = t.extras;
+                        "info" === e || "debug" === e ? console.log(n, null != r ? r : "") : console[e](n, null != r ? r : "")
+                    }));
+                    this._logs = []
+                }, t
+            }();
+            var s = function() {
+                function t(t) {
+                    this.metrics = [], this.remoteMetrics = t
+                }
+                return t.prototype.increment = function(t, e, n) {
+                    var r;
+                    void 0 === e && (e = 1), this.metrics.push({
+                        metric: t,
+                        value: e,
+                        tags: null != n ? n : [],
+                        type: "counter",
+                        timestamp: Date.now()
+                    }), null === (r = this.remoteMetrics) || void 0 === r || r.increment(t, null != n ? n : [])
+                }, t.prototype.gauge = function(t, e, n) {
+                    this.metrics.push({
+                        metric: t,
+                        value: e,
+                        tags: null != n ? n : [],
+                        type: "gauge",
+                        timestamp: Date.now()
+                    })
+                }, t.prototype.flush = function() {
+                    var t = this.metrics.map((function(t) {
+                        return (0, i.pi)((0, i.pi)({}, t), {
+                            tags: t.tags.join(",")
+                        })
+                    }));
+                    console.table ? console.table(t) : console.log(t), this.metrics = []
+                }, t.prototype.serialize = function() {
+                    return this.metrics.map((function(t) {
+                        return {
+                            m: t.metric,
+                            v: t.value,
+                            t: t.tags,
+                            k: (e = t.type, {
+                                gauge: "g",
+                                counter: "c"
+                            } [e]),
+                            e: t.timestamp
+                        };
+                        var e
+                    }))
+                }, t
+            }();
+            const c = s;
+            var u, l = n(25869),
+                p = n(39821),
+                f = n(10788),
+                h = function() {
                     function t(t) {
                         var e, n, r, o, i = this;
                         if (this.host = null !== (e = null == t ? void 0 : t.host) && void 0 !== e ? e : "api.segment.io/v1", this.sampleRate = null !== (n = null == t ? void 0 : t.sampleRate) && void 0 !== n ? n : 1, this.flushTimer = null !== (r = null == t ? void 0 : t.flushTimer) && void 0 !== r ? r : 3e4, this.maxQueueSize = null !== (o = null == t ? void 0 : t.maxQueueSize) && void 0 !== o ? o : 20, this.queue = [], this.sampleRate > 0) {
@@ -3511,8 +3513,8 @@
                                 return t[r] = o, t
                             }), {});
                             n.library = "analytics.js";
-                            var r = (0, p.Bz)();
-                            n.library_version = "web" === r ? "next-".concat(l.i) : "npm:next-".concat(l.i), this.queue.push({
+                            var r = (0, f.Bz)();
+                            n.library_version = "web" === r ? "next-".concat(p.i) : "npm:next-".concat(p.i), this.queue.push({
                                 type: "Counter",
                                 metric: t,
                                 value: 1,
@@ -3543,7 +3545,7 @@
                                     series: this.queue
                                 }, this.queue = [], e = {
                                     "Content-Type": "text/plain"
-                                }, n = "https://".concat(this.host, "/m"), [2, (0, u.Z)(n, {
+                                }, n = "https://".concat(this.host, "/m"), [2, (0, l.Z)(n, {
                                     headers: e,
                                     body: JSON.stringify(t),
                                     method: "POST"
@@ -3552,21 +3554,21 @@
                         }))
                     }, t
                 }(),
-                h = function(t) {
+                d = function(t) {
                     var e, n, r;
                     this.retry = null === (e = t.retry) || void 0 === e || e, this.type = null !== (n = t.type) && void 0 !== n ? n : "plugin Error", this.reason = null !== (r = t.reason) && void 0 !== r ? r : ""
                 },
-                d = function() {
+                v = function() {
                     function t(t, e) {
                         this.logger = new a, this.cancel = function(t) {
                             if (t) throw t;
-                            throw new h({
+                            throw new d({
                                 reason: "Context Cancel"
                             })
-                        }, this._attempts = 0, this._event = t, this._id = null != e ? e : (0, r.v4)(), this.stats = new s(c)
+                        }, this._attempts = 0, this._event = t, this._id = null != e ? e : (0, r.v4)(), this.stats = new c(u)
                     }
                     return t.initMetrics = function(t) {
-                        c = new f(t)
+                        u = new h(t)
                     }, t.system = function() {
                         return new t({
                             type: "track",
@@ -3842,7 +3844,7 @@
                     return (0, r.mG)(void 0, void 0, void 0, (function() {
                         var n;
                         return (0, r.Jh)(this, (function(o) {
-                            return [2, (n = function(o) {
+                            return n = function(o) {
                                 return (0, r.mG)(void 0, void 0, void 0, (function() {
                                     var i;
                                     return (0, r.Jh)(this, (function(r) {
@@ -3856,7 +3858,7 @@
                                         }
                                     }))
                                 }))
-                            })(void 0)]
+                            }, [2, n(void 0)]
                         }))
                     }))
                 }
@@ -3873,12 +3875,14 @@
                     window.analytics && (window.analytics._cdn = t), r = t
                 },
                 a = function() {
-                    var t, e, n = null != r ? r : null === (t = window.analytics) || void 0 === t ? void 0 : t._cdn;
-                    return n || ((Array.prototype.slice.call(document.querySelectorAll("script")).forEach((function(t) {
-                        var n, r = null !== (n = t.getAttribute("src")) && void 0 !== n ? n : "",
+                    var t, e = null != r ? r : null === (t = window.analytics) || void 0 === t ? void 0 : t._cdn;
+                    if (e) return e;
+                    var n, i = (Array.prototype.slice.call(document.querySelectorAll("script")).forEach((function(t) {
+                        var e, r = null !== (e = t.getAttribute("src")) && void 0 !== e ? e : "",
                             i = o.exec(r);
-                        i && i[1] && (e = i[1])
-                    })), e) || "https://cdn.segment.com")
+                        i && i[1] && (n = i[1])
+                    })), n);
+                    return i || "https://cdn.segment.com"
                 },
                 s = function() {
                     var t = a();
@@ -4179,14 +4183,14 @@
                 ev: () => u
             });
             var r = function(t, e) {
-                return (r = Object.setPrototypeOf || {
-                        __proto__: []
-                    }
-                    instanceof Array && function(t, e) {
-                        t.__proto__ = e
-                    } || function(t, e) {
-                        for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n])
-                    })(t, e)
+                return r = Object.setPrototypeOf || {
+                    __proto__: []
+                }
+                instanceof Array && function(t, e) {
+                    t.__proto__ = e
+                } || function(t, e) {
+                    for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n])
+                }, r(t, e)
             };
 
             function o(t, e) {
@@ -4198,11 +4202,11 @@
                 r(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
             }
             var i = function() {
-                return (i = Object.assign || function(t) {
+                return i = Object.assign || function(t) {
                     for (var e, n = 1, r = arguments.length; n < r; n++)
                         for (var o in e = arguments[n]) Object.prototype.hasOwnProperty.call(e, o) && (t[o] = e[o]);
                     return t
-                }).apply(this, arguments)
+                }, i.apply(this, arguments)
             };
 
             function a(t, e) {
@@ -4643,11 +4647,11 @@
         49969: function(t, e, n) {
             "use strict";
             var r = this && this.__assign || function() {
-                return (r = Object.assign || function(t) {
+                return r = Object.assign || function(t) {
                     for (var e, n = 1, r = arguments.length; n < r; n++)
                         for (var o in e = arguments[n]) Object.prototype.hasOwnProperty.call(e, o) && (t[o] = e[o]);
                     return t
-                }).apply(this, arguments)
+                }, r.apply(this, arguments)
             };
             Object.defineProperty(e, "__esModule", {
                 value: !0
@@ -4968,7 +4972,15 @@
                                 var l = o.getIntegration(t);
                                 if (l) {
                                     var p = o.getClient(),
-                                        h = p ? p.getOptions() : {};
+                                        h = p ? p.getOptions() : {},
+                                        d = function(t, e) {
+                                            return void 0 === t && (t = {}), void 0 === e && (e = {}), {
+                                                allowUrls: (0, r.fl)(t.whitelistUrls || [], t.allowUrls || [], e.whitelistUrls || [], e.allowUrls || []),
+                                                denyUrls: (0, r.fl)(t.blacklistUrls || [], t.denyUrls || [], e.blacklistUrls || [], e.denyUrls || []),
+                                                ignoreErrors: (0, r.fl)(t.ignoreErrors || [], e.ignoreErrors || [], u),
+                                                ignoreInternal: void 0 === t.ignoreInternal || t.ignoreInternal
+                                            }
+                                        }(l._options, h);
                                     return function(t, e) {
                                         return e.ignoreInternal && function(t) {
                                             try {
@@ -5007,14 +5019,7 @@
                                                 return (0, c.zC)(n, t)
                                             }))
                                         }(t, e.allowUrls) && (a && i.kg.warn("Event dropped due to not being matched by `allowUrls` option.\nEvent: " + (0, s.jH)(t) + ".\nUrl: " + f(t)), !0)
-                                    }(e, function(t, e) {
-                                        return void 0 === t && (t = {}), void 0 === e && (e = {}), {
-                                            allowUrls: (0, r.fl)(t.whitelistUrls || [], t.allowUrls || [], e.whitelistUrls || [], e.allowUrls || []),
-                                            denyUrls: (0, r.fl)(t.blacklistUrls || [], t.denyUrls || [], e.blacklistUrls || [], e.denyUrls || []),
-                                            ignoreErrors: (0, r.fl)(t.ignoreErrors || [], e.ignoreErrors || [], u),
-                                            ignoreInternal: void 0 === t.ignoreInternal || t.ignoreInternal
-                                        }
-                                    }(l._options, h)) ? null : e
+                                    }(e, d) ? null : e
                                 }
                             }
                             return e
@@ -7104,7 +7109,7 @@
                     r = Ie(e);
                 if (!n && !r) return !0;
                 if (n && !r || !n && r) return !1;
-                if (n = n, (r = r).length !== n.length) return !1;
+                if (r.length !== n.length) return !1;
                 for (var o = 0; o < r.length; o++) {
                     var i = r[o],
                         a = n[o];
@@ -7118,7 +7123,6 @@
                     r = e.fingerprint;
                 if (!n && !r) return !0;
                 if (n && !r || !n && r) return !1;
-                n = n, r = r;
                 try {
                     return !(n.join("") !== r.join(""))
                 } catch (t) {
@@ -7579,7 +7583,7 @@
                             var n = e(this);
                             return n instanceof t ? n : this
                         }
-                        return e instanceof t ? (this._tags = (0, r.pi)((0, r.pi)({}, this._tags), e._tags), this._extra = (0, r.pi)((0, r.pi)({}, this._extra), e._extra), this._contexts = (0, r.pi)((0, r.pi)({}, this._contexts), e._contexts), e._user && Object.keys(e._user).length && (this._user = e._user), e._level && (this._level = e._level), e._fingerprint && (this._fingerprint = e._fingerprint), e._requestSession && (this._requestSession = e._requestSession)) : (0, o.PO)(e) && (e = e, this._tags = (0, r.pi)((0, r.pi)({}, this._tags), e.tags), this._extra = (0, r.pi)((0, r.pi)({}, this._extra), e.extra), this._contexts = (0, r.pi)((0, r.pi)({}, this._contexts), e.contexts), e.user && (this._user = e.user), e.level && (this._level = e.level), e.fingerprint && (this._fingerprint = e.fingerprint), e.requestSession && (this._requestSession = e.requestSession)), this
+                        return e instanceof t ? (this._tags = (0, r.pi)((0, r.pi)({}, this._tags), e._tags), this._extra = (0, r.pi)((0, r.pi)({}, this._extra), e._extra), this._contexts = (0, r.pi)((0, r.pi)({}, this._contexts), e._contexts), e._user && Object.keys(e._user).length && (this._user = e._user), e._level && (this._level = e._level), e._fingerprint && (this._fingerprint = e._fingerprint), e._requestSession && (this._requestSession = e._requestSession)) : (0, o.PO)(e) && (this._tags = (0, r.pi)((0, r.pi)({}, this._tags), e.tags), this._extra = (0, r.pi)((0, r.pi)({}, this._extra), e.extra), this._contexts = (0, r.pi)((0, r.pi)({}, this._contexts), e.contexts), e.user && (this._user = e.user), e.level && (this._level = e.level), e.fingerprint && (this._fingerprint = e.fingerprint), e.requestSession && (this._requestSession = e.requestSession)), this
                     }, t.prototype.clear = function() {
                         return this._breadcrumbs = [], this._tags = {}, this._extra = {}, this._user = {}, this._contexts = {}, this._level = void 0, this._transactionName = void 0, this._fingerprint = void 0, this._requestSession = void 0, this._span = void 0, this._session = void 0, this._notifyScopeListeners(), this
                     }, t.prototype.addBreadcrumb = function(t, e) {
@@ -8387,12 +8391,13 @@
                                         }
                                         o.push(t), t = t.$parent
                                     }
-                                    return "\n\nfound in\n\n" + o.map((function(t, e) {
+                                    var s = o.map((function(t, e) {
                                         return "" + ((0 === e ? "---\x3e " : function(t, e) {
                                             for (var n = ""; e;) e % 2 == 1 && (n += t), e > 1 && (t += t), e >>= 1;
                                             return n
                                         }(" ", 5 + 2 * e)) + (Array.isArray(t) ? f(t[0]) + "... (" + t[1] + " recursive calls)" : f(t)))
-                                    })).join("\n")
+                                    })).join("\n");
+                                    return "\n\nfound in\n\n" + s
                                 }
                                 return "\n\n(found in " + f(t) + ")"
                             }(a) : "",
@@ -10071,14 +10076,13 @@
                     case "[object Uint32Array]":
                         return s(t, n);
                     case "[object Map]":
+                    case "[object Set]":
                         return new c;
                     case "[object Number]":
                     case "[object String]":
                         return new c(t);
                     case "[object RegExp]":
                         return i(t);
-                    case "[object Set]":
-                        return new c;
                     case "[object Symbol]":
                         return a(t)
                 }
@@ -11568,14 +11572,14 @@
                 fl: () => c
             });
             var r = function(t, e) {
-                return (r = Object.setPrototypeOf || {
-                        __proto__: []
-                    }
-                    instanceof Array && function(t, e) {
-                        t.__proto__ = e
-                    } || function(t, e) {
-                        for (var n in e) e.hasOwnProperty(n) && (t[n] = e[n])
-                    })(t, e)
+                return r = Object.setPrototypeOf || {
+                    __proto__: []
+                }
+                instanceof Array && function(t, e) {
+                    t.__proto__ = e
+                } || function(t, e) {
+                    for (var n in e) e.hasOwnProperty(n) && (t[n] = e[n])
+                }, r(t, e)
             };
 
             function o(t, e) {
@@ -11585,11 +11589,11 @@
                 r(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
             }
             var i = function() {
-                return (i = Object.assign || function(t) {
+                return i = Object.assign || function(t) {
                     for (var e, n = 1, r = arguments.length; n < r; n++)
                         for (var o in e = arguments[n]) Object.prototype.hasOwnProperty.call(e, o) && (t[o] = e[o]);
                     return t
-                }).apply(this, arguments)
+                }, i.apply(this, arguments)
             };
 
             function a(t) {
@@ -17992,4 +17996,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/9023.b5d52f1914cb7a648896.js.map
+//# sourceMappingURL=sourcemaps/9023.413effb274df5f4b9048.js.map

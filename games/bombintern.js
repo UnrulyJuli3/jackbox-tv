@@ -176,7 +176,7 @@
             const f = l().View.extend({
                 appId: "legacymain",
                 appTag: "legacymain",
-                appVersion: "4.2.9",
+                appVersion: "4.2.10",
                 template: null,
                 initialize(e) {
                     this.mergeOptions(e, ["appId", "appTag"]), p.app.analytics.setApplication({
@@ -498,13 +498,7 @@
                                 }
                                 break;
                             case "DayEnd":
-                                switch (a) {
-                                    case "DayEndDecision":
-                                        e.$el.find("#bombintern-dayend-text").html("Day Complete!"), e.showScreen(".state-dayend");
-                                        break;
-                                    default:
-                                        e.$el.find("#bombintern-message-text").html("Day Complete!"), e.showScreen(".state-message")
-                                }
+                                "DayEndDecision" === a ? (e.$el.find("#bombintern-dayend-text").html("Day Complete!"), e.showScreen(".state-dayend")) : (e.$el.find("#bombintern-message-text").html("Day Complete!"), e.showScreen(".state-message"));
                                 break;
                             case "GameOver":
                                 switch (a) {
@@ -600,11 +594,6 @@
                                     break;
                                 case "WiredBomb":
                                 case "CoffeeBomb":
-                                    s += "<span>FOLLOW THE INSTRUCTIONS</span>";
-                                    break;
-                                case "FilingBomb":
-                                case "CopierBomb":
-                                    break;
                                 case "KeypadBomb":
                                     s += "<span>FOLLOW THE INSTRUCTIONS</span>"
                             }
@@ -830,4 +819,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/3191.8e4469083b2747848475.js.map
+//# sourceMappingURL=sourcemaps/3191.bad1f4537db7942185fa.js.map

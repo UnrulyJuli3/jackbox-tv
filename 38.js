@@ -1,4 +1,4 @@
-/*! For license information please see 38.6ab163f8816a2d0d257d.js.LICENSE.txt */
+/*! For license information please see 38.41734e6dbb3cd025023c.js.LICENSE.txt */
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     [38], {
         76056: (e, t, n) => {
@@ -884,7 +884,6 @@
                                     case "PointerEvent":
                                         n(e, this, e.pointerId, t);
                                         break;
-                                    case "MouseEvent":
                                     default:
                                         n(e, this, 0, t)
                                 }
@@ -921,33 +920,34 @@
                     value: !0
                 });
                 var r = function(e) {
-                    function t(e) {
-                        ! function(e, t) {
-                            if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
-                        }(this, t);
-                        var n = function(e, t) {
-                            if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                            return !t || "object" != typeof t && "function" != typeof t ? e : t
-                        }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
-                        return n.type = "expand", n
-                    }
-                    return function(e, t) {
-                        if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
-                        e.prototype = Object.create(t && t.prototype, {
-                            constructor: {
-                                value: e,
-                                enumerable: !1,
-                                writable: !0,
-                                configurable: !0
-                            }
-                        }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-                    }(t, e), t
-                }(function(e) {
-                    return e && e.__esModule ? e : {
-                        default: e
-                    }
-                }(n(11)).default);
-                t.default = r
+                        return e && e.__esModule ? e : {
+                            default: e
+                        }
+                    }(n(11)),
+                    i = function(e) {
+                        function t(e) {
+                            ! function(e, t) {
+                                if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+                            }(this, t);
+                            var n = function(e, t) {
+                                if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                return !t || "object" != typeof t && "function" != typeof t ? e : t
+                            }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this, e));
+                            return n.type = "expand", n
+                        }
+                        return function(e, t) {
+                            if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t);
+                            e.prototype = Object.create(t && t.prototype, {
+                                constructor: {
+                                    value: e,
+                                    enumerable: !1,
+                                    writable: !0,
+                                    configurable: !0
+                                }
+                            }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
+                        }(t, e), t
+                    }(r.default);
+                t.default = i
             }, function(e, t, n) {
                 "use strict";
 
@@ -1519,4 +1519,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/38.6ab163f8816a2d0d257d.js.map
+//# sourceMappingURL=sourcemaps/38.41734e6dbb3cd025023c.js.map

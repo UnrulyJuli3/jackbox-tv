@@ -1,8 +1,8 @@
 (self.webpackChunkjackbox_tv = self.webpackChunkjackbox_tv || []).push([
     [972], {
         16671: (e, t, n) => {
-            var i, o, r;
-            o = [n(19755)], void 0 === (r = "function" == typeof(i = function(e) {
+            var i, o;
+            i = [n(19755)], void 0 === (o = function(e) {
                 var t, n = navigator.userAgent,
                     i = /iphone/i.test(n),
                     o = /chrome/i.test(n),
@@ -161,7 +161,7 @@
                         }))
                     }
                 })
-            }) ? i.apply(t, o) : i) || (e.exports = r)
+            }.apply(t, i)) || (e.exports = o)
         },
         40543: (e, t, n) => {
             "use strict";
@@ -705,4 +705,4 @@
         }
     }
 ]);
-//# sourceMappingURL=sourcemaps/972.95dac8993bf14ef71634.js.map
+//# sourceMappingURL=sourcemaps/972.ef78c76662803b4cad84.js.map
