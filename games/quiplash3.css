@@ -601,7 +601,7 @@ button {
 }
 
 .quiplash3 .UGC #promptsRegion .button-group button::after {
-    background: url("quiplash3/quiplash3_UGC_#promptsRegion_button-group_button_after.png") 0px 0px/100% 200% no-repeat;
+    background: url("quiplash3/quiplash3_UGC__promptsRegion_button-group_button_after.png") 0px 0px/100% 200% no-repeat;
     content: "";
     position: absolute;
     top: calc(50% - 17px);
@@ -615,7 +615,7 @@ button {
 }
 
 .quiplash3 .UGC #promptsRegion .button-group.thriplash button::before {
-    background: #000 url("quiplash3/quiplash3_UGC_#promptsRegion_button-group_thriplash_button_before.png") 0px 0px/100% 100% no-repeat;
+    background: #000 url("quiplash3/quiplash3_UGC__promptsRegion_button-group_thriplash_button_before.png") 0px 0px/100% 100% no-repeat;
     content: "";
     position: absolute;
     top: 4px;

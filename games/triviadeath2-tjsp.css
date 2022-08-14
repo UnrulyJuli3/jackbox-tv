@@ -267,13 +267,13 @@
 }
 
 .drawing #stage #doodle.mirror {
-    background-image: url("triviadeath2-tjsp/drawing_#stage_#doodle_mirror.jpg")
+    background-image: url("triviadeath2-tjsp/drawing__stage__doodle_mirror.jpg")
 }
 
 .drawing #stage #doodle.tattoo {
     width: clamp(200px, min(90vw, 64vh), 512px);
     height: clamp(250px, min(112.5vw, 80vh), 640px);
-    background-image: url("triviadeath2-tjsp/drawing_#stage_#doodle_tattoo.jpg")
+    background-image: url("triviadeath2-tjsp/drawing__stage__doodle_tattoo.jpg")
 }
 
 .drawing #stage #doodle.tattoo canvas {

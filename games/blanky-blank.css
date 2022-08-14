@@ -1410,7 +1410,7 @@ button {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    background-image: url("blanky-blank/blanky-blank_MakeSentence_Sentence_#choices_sentence-choices_choices_nth-child(1)_button-group_selected_button_before.svg");
+    background-image: url("blanky-blank/blanky-blank_MakeSentence_Sentence__choices_sentence-choices_choices_nth-child(1)_button-group_selected_button_before.svg");
     height: 5vw;
     width: 5vw
 }
@@ -1456,7 +1456,7 @@ button {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    background-image: url("blanky-blank/blanky-blank_MakeSentence_Sentence_#choices_sentence-choices_choices_nth-child(1)_button-group_selected_button_before.svg");
+    background-image: url("blanky-blank/blanky-blank_MakeSentence_Sentence__choices_sentence-choices_choices_nth-child(1)_button-group_selected_button_before.svg");
     height: 5vw;
     width: 5vw
 }

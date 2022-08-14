@@ -365,7 +365,7 @@ canvas {
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    border-image: url("drawful2/player.png") 7 repeat;
+    border-image: url("drawful2/_player.png") 7 repeat;
     border-style: solid;
     border-width: 0px 0px 7px 0px
 }
@@ -424,7 +424,7 @@ span {
 }
 
 #page-drawful {
-    background-image: url("drawful2/page-drawful.png");
+    background-image: url("drawful2/_page-drawful.png");
     font-family: "Cutive", serif;
     font-size: 1.2em
 }
@@ -589,7 +589,7 @@ a.gallery-link img {
 }
 
 #page-drawful .pure-form input.jbg-input[type=text] {
-    border-image: url("drawful2/page-drawful_pure-form_input_jbg-input[type=text].png") 8 repeat;
+    border-image: url("drawful2/_page-drawful_pure-form_input_jbg-input[type=text].png") 8 repeat;
     border-width: 8px;
     border-style: solid;
     -webkit-background-clip: padding-box;

@@ -2729,7 +2729,7 @@ li>a.button-color.active[data-color="#000000"] {
     width: 50px;
     height: 50px;
     margin: -25px 0 0 -25px;
-    background-image: url("everyday/everyday_gestures_#scene-region_loading.png");
+    background-image: url("everyday/everyday_gestures__scene-region_loading.png");
     background-size: contain
 }
 
@@ -3131,7 +3131,7 @@ li>a.button-color.active[data-color="#000000"] {
     left: 0;
     width: 100%;
     height: 10%;
-    background-image: url("everyday/everyday_#scene-region_flood-emergency_water_before.png");
+    background-image: url("everyday/everyday__scene-region_flood-emergency_water_before.png");
     background-size: contain;
     background-position: center bottom;
     background-repeat: repeat-x
@@ -3176,7 +3176,7 @@ li>a.button-color.active[data-color="#000000"] {
 .everyday #scene-region .power-emergency .background {
     width: 11000px;
     height: 11000px;
-    background: url("everyday/everyday_#scene-region_power-emergency_background.png");
+    background: url("everyday/everyday__scene-region_power-emergency_background.png");
     background-size: cover;
     opacity: 0
 }
@@ -3243,7 +3243,7 @@ li>a.button-color.active[data-color="#000000"] {
     left: 0;
     width: 100%;
     height: 10%;
-    background-image: url("everyday/everyday_#scene-region_termite-emergency_smoke_before.png");
+    background-image: url("everyday/everyday__scene-region_termite-emergency_smoke_before.png");
     background-size: contain;
     background-position: center bottom;
     background-repeat: repeat-x
@@ -3252,7 +3252,7 @@ li>a.button-color.active[data-color="#000000"] {
 .everyday #scene-region .termite-emergency .termite {
     width: 60px;
     height: 50px;
-    background-image: url("everyday/everyday_#scene-region_termite-emergency_termite.png");
+    background-image: url("everyday/everyday__scene-region_termite-emergency_termite.png");
     background-size: 200% 100%
 }
 
@@ -3273,7 +3273,7 @@ li>a.button-color.active[data-color="#000000"] {
 .everyday #scene-region .door-emergency .house {
     width: 11000px;
     height: 6000px;
-    background: url("everyday/everyday_#scene-region_door-emergency_house.png");
+    background: url("everyday/everyday__scene-region_door-emergency_house.png");
     background-position: center center
 }
 
@@ -3287,7 +3287,7 @@ li>a.button-color.active[data-color="#000000"] {
 .everyday #scene-region .door-emergency .cracks {
     width: 440px;
     height: 700px;
-    background: url("everyday/everyday_#scene-region_door-emergency_cracks.png");
+    background: url("everyday/everyday__scene-region_door-emergency_cracks.png");
     background-size: 1200% 100%;
     background-position: 0% 0%
 }

@@ -558,12 +558,12 @@ th,
 
 #state-shirt .awshirt-slider-controls .awshirt-slider-right {
     right: 20%;
-    background-image: url("awshirt/state-shirt_awshirt-slider-controls_awshirt-slider-right.png")
+    background-image: url("awshirt/_state-shirt_awshirt-slider-controls_awshirt-slider-right.png")
 }
 
 #state-shirt .awshirt-slider-controls .awshirt-slider-left {
     left: 18%;
-    background-image: url("awshirt/state-shirt_awshirt-slider-controls_awshirt-slider-left.png")
+    background-image: url("awshirt/_state-shirt_awshirt-slider-controls_awshirt-slider-left.png")
 }
 
 #state-shirt .glide__bullets {
